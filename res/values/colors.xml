@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <color name="fahrplan_background">#003339</color>
+    <color name="fahrplan_background">#643600</color>
     <color name="lightgray">#505050</color>
     <color name="alarm_list_icon_default_fill_color">#ddd</color>
-    <color name="alarm_list_icon_default_stroke_color">#003339</color>
+    <color name="alarm_list_icon_default_stroke_color">@color/fahrplan_background</color>
     <color name="lecture_detailbar_background">#eee</color>
     <color name="lecture_detailbar_text">#999</color>
 
