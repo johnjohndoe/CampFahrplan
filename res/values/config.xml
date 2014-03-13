@@ -8,6 +8,6 @@
     <string name="schedule_part">/konferenz/2014/programm</string>
 
     <!-- /events/5622.html -->
-    <string name="schedule_event_part">/events/%1$s.html</string>
+    <string name="schedule_event_part">/events/%1$s.de.html</string>
 
 </resources>
