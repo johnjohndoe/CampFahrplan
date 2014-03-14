@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-	<string name="app_name">FOSSGIS 2014 Schedule</string>
+	<string name="app_name">FOSSGIS 2014 Programm</string>
 	<string name="OK">OK</string>
 	<string name="dlg_certificate_message_fmt">Aufbau einer gesicherten Verbindung nicht
 		möglich.\n(%s)</string>
@@ -19,13 +19,13 @@
 	<string name="dlg_err_failed_parse_failure">Kann Antwort nicht dekodieren.</string>
 	<string name="dlg_err_failed_ssl_failure">SSL Fehler</string>
 	<string name="refresh">Aktualisieren</string>
-	<string name="progress_loading_data">Hole Fahrplan...</string>
-	<string name="progress_processing_data">Verarbeite Fahrplan...</string>
+	<string name="progress_loading_data">Hole Programm...</string>
+	<string name="progress_processing_data">Verarbeite Programm...</string>
 	<string name="load_data">Laden</string>
 	<string name="choose_day">Tag wählen</string>
 	<string name="day">Tag</string>
 	<string name="about">Info</string>
-	<string name="fahrplan">Fahrplan</string>
+	<string name="fahrplan">Programm</string>
 	<string name="appVersion">App Version </string>
 	<string name="aktualisiert_auf">Aktualisiert auf %s</string>
 	<string name="settings">Einstellungen</string>
@@ -58,13 +58,13 @@
 	<string name="share">Teilen</string>
 	<string name="flag_as_favorite">Als wichtig markieren</string>
 	<string name="unflag_as_favorite">Wichtig Markierung entfernen</string>
-	<string name="uptodate">Fahrplan ist aktuell.</string>
+	<string name="uptodate">Programm ist aktuell.</string>
 	<string name="close_detail">Detailansicht schließen</string>
 	<string name="pref_auto_download">Automatische Updates</string>
-	<string name="parsing_error_generic">Unbekannter Fehler beim Parsen des Fahrplans</string>
-	<string name="parsing_error_with_version">Fehler beim Parsen der Fahrplan-Version %s</string>
+	<string name="parsing_error_generic">Unbekannter Fehler beim Parsen des Programms</string>
+	<string name="parsing_error_with_version">Fehler beim Parsen der Programm-Version %s</string>
 	<string name="alarms_empty">
-		Aktuell sind keine Erinnerungen gespeichert. Im Fahrplan
+		Aktuell sind keine Erinnerungen gespeichert. Im Programm
 		kannst du über das entsprechende Symbol in der ActionBar
 		für jeden Eintrag eine individuelle Erinnerung festlegen.
 	</string>
