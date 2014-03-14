@@ -125,6 +125,16 @@ public class FahrplanFragment extends SherlockFragment implements OnClickListene
 		trackColors.put("Security & Safety", R.drawable.event_border_default_security_safety);
 		trackColors.put("", R.drawable.event_border_default);
 
+		// FOSSGIS track specifiers
+		trackColors.put("", R.drawable.event_border_default_other);
+		trackColors.put("Allgemeines", R.drawable.event_border_default_entertainment);
+		trackColors.put("Anwendertreffen", R.drawable.event_border_default_security_safety);
+		trackColors.put("Lightning Talks (OSM)", R.drawable.event_border_default_science_engineering);
+		trackColors.put("Vorträge (GIS)", R.drawable.event_border_default_ccc);
+		trackColors.put("Vorträge (OSM)", R.drawable.event_border_default_hardware_making);
+		trackColors.put("Workshops (bezahlt)", R.drawable.event_border_default_ethics_society_politics);
+
+
 		trackColorsHi = new HashMap<String, Integer>();
 		trackColorsHi.put("Art & Beauty", R.drawable.event_border_highlight_art_beauty);
 		trackColorsHi.put("CCC", R.drawable.event_border_highlight_ccc);
@@ -135,6 +145,15 @@ public class FahrplanFragment extends SherlockFragment implements OnClickListene
 		trackColorsHi.put("Science & Engineering", R.drawable.event_border_highlight_science_engineering);
 		trackColorsHi.put("Security & Safety", R.drawable.event_border_highlight_security_safety);
 		trackColorsHi.put("", R.drawable.event_border_highlight);
+
+		// FOSSGIS track specifiers
+		trackColorsHi.put("", R.drawable.event_border_highlight_other);
+		trackColorsHi.put("Allgemeines", R.drawable.event_border_highlight_entertainment);
+		trackColorsHi.put("Anwendertreffen", R.drawable.event_border_highlight_security_safety);
+		trackColorsHi.put("Lightning Talks (OSM)", R.drawable.event_border_highlight_science_engineering);
+		trackColorsHi.put("Vorträge (GIS)", R.drawable.event_border_highlight_ccc);
+		trackColorsHi.put("Vorträge (OSM)", R.drawable.event_border_highlight_hardware_making);
+		trackColorsHi.put("Workshops (bezahlt)", R.drawable.event_border_highlight_ethics_society_politics);
 
 		SharedPreferences prefs = getSherlockActivity().getSharedPreferences(PREFS_NAME, 0);
 		mDay = prefs.getInt("displayDay", 1);
