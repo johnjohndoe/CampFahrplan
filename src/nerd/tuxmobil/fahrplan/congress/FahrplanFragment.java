@@ -737,8 +737,8 @@ public class FahrplanFragment extends SherlockFragment implements OnClickListene
 
 		hCursor.moveToFirst();
 		while (!hCursor.isAfterLast()) {
-			String lecture_id = hCursor.getString(cursor.getColumnIndex(HighlightsTable.Columns.EVENT_ID));
-			int highlightState = hCursor.getInt(cursor.getColumnIndex(HighlightsTable.Columns.HIGHLIGHT));
+			String lecture_id = hCursor.getString(hCursor.getColumnIndex(HighlightsTable.Columns.EVENT_ID));
+			int highlightState = hCursor.getInt(hCursor.getColumnIndex(HighlightsTable.Columns.HIGHLIGHT));
 			MyApp.LogDebug(LOG_TAG, "lecture "+lecture_id+" is hightlighted:" + highlightState);
 
 			for (Lecture lecture : MyApp.lectureList) {
