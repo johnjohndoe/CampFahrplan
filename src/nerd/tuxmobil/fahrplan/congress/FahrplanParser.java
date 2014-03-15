@@ -1,10 +1,7 @@
 package nerd.tuxmobil.fahrplan.congress;
 
 import java.io.StringReader;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.HashMap;
 
 import nerd.tuxmobil.fahrplan.congress.FahrplanContract.LecturesTable;
@@ -19,7 +16,6 @@ import android.content.Context;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.AsyncTask;
-import android.text.format.Time;
 import android.util.Xml;
 
 interface OnParseCompleteListener
