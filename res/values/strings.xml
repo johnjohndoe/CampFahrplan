@@ -51,6 +51,9 @@
 	<string name="insistent_alarm">Insistent Alarm</string>
 	<string name="usage">Note:\n\nLong-Press on a Lecture to set an alarm.</string>
 	<string name="set_alarm">Set alarm</string>
+	<string name="conference_url">
+		<![CDATA[<a href="http://www.fossgis.de/konferenz/2014/">www.fossgis.de/konferenz/2014</a>]]>
+	</string>
 	<string name="libraries">
 		This application uses the following libraries: ActionBarSherlock,
 		Google Support Library v4

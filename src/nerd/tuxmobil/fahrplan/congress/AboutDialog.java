@@ -46,6 +46,10 @@ public class AboutDialog extends SherlockDialogFragment {
 			text.setText("");
 		}
 
+		TextView conferenceUrl = (TextView)view.findViewById(R.id.conference_url);
+		conferenceUrl.setText(Html.fromHtml(getString(R.string.conference_url)));
+		conferenceUrl.setMovementMethod(LinkMovementMethod.getInstance());
+
 		TextView sourceCode = (TextView)view.findViewById(R.id.source_code);
 		sourceCode.setText(Html.fromHtml(getString(R.string.source_code)));
 		sourceCode.setMovementMethod(LinkMovementMethod.getInstance());
