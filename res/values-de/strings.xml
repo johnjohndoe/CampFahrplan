@@ -52,6 +52,10 @@
 	<string name="insistent_alarm">Dauerhafter Alarm</string>
 	<string name="usage">Hinweis:\n\nLange auf Vortrag tippen um Erinnerung einzustellen.</string>
 	<string name="set_alarm">Alarm setzen</string>
+	<string name="libraries">
+		Die Anwendung nutzt folgende Bibliotheken: ActionBarSherlock,
+		Google Support Library v4
+	</string>
 	<string name="copyright_notes">Copyright 2014 Daniel Dorau.\nCopyright 2014 SubOptimal, entropynil, johnjohndoe.\nPortions Copyright 2008-2011 The K-9 Dog Walkers and 2006-2013 the Android Open Source Project.</string>
 	<string name="source_code">
 		<![CDATA[<a href="http://github.com/johnjohndoe/CampFahrplan/tree/fossgis-2014">Quellcode</a>]]>
