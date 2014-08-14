@@ -118,7 +118,7 @@ class fetcher extends AsyncTask<String, Void, HTTP_STATUS> {
 			return HTTP_STATUS.HTTP_SSL_SETUP_FAILURE;
 		}
 
-		String address = "https://" + addr + arg;
+		String address = "http://" + addr + arg;
 
 		MyApp.LogDebug("Fetch", address);
 		MyApp.LogDebug("Fetch", "ETag: "+eTag);
