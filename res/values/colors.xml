@@ -9,15 +9,18 @@
     <color name="lecture_detailbar_text">#999</color>
 
     <!-- Default state -->
-    <color name="event_border_default">#ddd</color>
-    <color name="event_border_default_art_beauty">#FF61FF</color>
-    <color name="event_border_default_ccc">#5E71FF</color>
-    <color name="event_border_default_entertainment">#DDDDDD</color>
-    <color name="event_border_default_ethics_society_politics">#5EFD7B</color>
-    <color name="event_border_default_hardware_making">#E9FF7B</color>
-    <color name="event_border_default_other">#FE5F64</color>
-    <color name="event_border_default_science_engineering">#FEAD6F</color>
-    <color name="event_border_default_security_safety">#60FBFF</color>
+    <color name="event_border_default">#FF6666</color> <!-- redfrogconf-ruby -->
+    <color name="event_border_default_art_beauty">#C0C0C0</color> <!-- javascript -->
+    <color name="event_border_default_ccc">#87CEFA</color> <!-- system-administration -->
+    <color name="event_border_default_entertainment">#FEFD7F</color> <!--  -->
+    <color name="event_border_default_ethics_society_politics">#FF0000</color> <!-- security -->
+    <color name="event_border_default_hardware_making">#3C6EB4</color> <!-- monitoring -->
+    <color name="event_border_default_other">#3CB371</color> <!-- development -->
+    <color name="event_border_default_science_engineering">#B0C4DE</color> <!-- culture -->
+    <color name="event_border_default_security_safety">#137A07</color> <!-- hardware -->
+    <color name="event_border_default_development">#BC8F8F</color> <!-- systems-management -->
+    <color name="event_border_default_web_development">#F0E68C</color> <!-- web-development -->
+    <color name="event_border_default_virtualization">#99C</color> <!-- virtualization -->
 
     <!-- Highlight state -->
     <color name="event_border_highlight">@color/event_border_default</color>
@@ -29,5 +32,8 @@
     <color name="event_border_highlight_other">@color/event_border_default_other</color>
     <color name="event_border_highlight_science_engineering">@color/event_border_default_science_engineering</color>
     <color name="event_border_highlight_security_safety">@color/event_border_default_security_safety</color>
+    <color name="event_border_highlight_development">@color/event_border_default_development</color>
+    <color name="event_border_highlight_web_development">@color/event_border_default_web_development</color>
+    <color name="event_border_highlight_virtualization">@color/event_border_default_virtualization</color>
 
 </resources>
