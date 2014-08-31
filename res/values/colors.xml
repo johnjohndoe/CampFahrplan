@@ -9,7 +9,7 @@
     <color name="lecture_detailbar_text">#999</color>
 
     <!-- Default state -->
-    <color name="event_border_default">#ddd</color>
+    <color name="event_border_default">#e1e1e1</color>
     <color name="event_border_default_art_beauty">#FF61FF</color>
     <color name="event_border_default_ccc">#5E71FF</color>
     <color name="event_border_default_entertainment">#DDDDDD</color>
