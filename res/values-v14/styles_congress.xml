@@ -30,6 +30,7 @@
         <item name="android:actionModeSplitBackground">@drawable/cab_background_bottom_congress</item>
         <item name="android:actionModeCloseButtonStyle">@style/ActionButton.CloseMode.Congress</item>
         <item name="android:listChoiceIndicatorMultiple">@drawable/congress_btn_check_holo_light</item>
+        <item name="android:textColorLink">@color/text_link_color</item>
     </style>
 
     <style name="ActionBar.Solid.Congress" parent="@style/Widget.Sherlock.ActionBar.Solid">
@@ -51,6 +52,7 @@
         <item name="android:popupMenuStyle">@style/PopupMenu.Congress</item>
         <item name="android:dropDownListViewStyle">@style/DropDownListView.Congress</item>
         <item name="android:listChoiceIndicatorMultiple">@drawable/congress_btn_check_holo_light</item>
+        <item name="android:textColorLink">@color/text_link_color</item>
     </style>
 
     <style name="ActivityIndicator" parent="@android:style/Widget.Holo.ProgressBar">

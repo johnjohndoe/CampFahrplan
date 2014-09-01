@@ -30,6 +30,7 @@
         <item name="actionModeSplitBackground">@drawable/cab_background_bottom_congress</item>
         <item name="actionModeCloseButtonStyle">@style/ActionButton.CloseMode.Congress</item>
         <item name="android:checkboxStyle">@style/CheckBoxCongress</item>
+        <item name="android:textColorLink">@color/text_link_color</item>
     </style>
 
     <style name="ActionBar.Solid.Congress" parent="@style/Widget.Sherlock.ActionBar.Solid">
@@ -76,12 +77,17 @@
         <item name="android:button">@drawable/congress_btn_check_holo_light</item>
     </style>
 
+    <style name="TextViewLinks">
+        <item name="android:textColorLink">@color/text_link_color</item>
+    </style>
+
     
     <!-- this style is only referenced in a Light.DarkActionBar based theme -->
     <style name="Theme.Congress.Widget" parent="@style/Theme.Sherlock">
         <item name="popupMenuStyle">@style/PopupMenu.Congress</item>
         <item name="dropDownListViewStyle">@style/DropDownListView.Congress</item>
         <item name="android:checkboxStyle">@style/CheckBoxCongress</item>
+        <item name="android:textColorLink">@color/text_link_color</item>
     </style>
 
     <style name="AlarmList.Icon" parent="@android:style/TextAppearance.Medium">

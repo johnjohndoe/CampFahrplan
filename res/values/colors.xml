@@ -2,6 +2,7 @@
 <resources>
 
     <color name="fahrplan_background">#bd0a26</color>
+    <color name="text_link_color">#df0c2d</color>
     <color name="lightgray">#505050</color>
     <color name="alarm_list_icon_default_fill_color">#ddd</color>
     <color name="alarm_list_icon_default_stroke_color">#bd0a26</color>
