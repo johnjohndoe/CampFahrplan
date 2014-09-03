@@ -85,4 +85,9 @@
 		Just press the alarm icon in the action bar.
 	</string>
 	<string name="add_to_calendar_failed">Adding event to calendar failed.</string>
+	<string name="app_disclaimer">
+		This application is based on the source code of the &#8220;Schedule&#8221; app.
+		Visitors of the annual congress and camp hosted by the Chaos Computer Club
+		use the app to keep track of the event program.
+	</string>
 </resources>
