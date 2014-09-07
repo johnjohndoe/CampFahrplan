@@ -21,9 +21,9 @@ public class MyApp extends Application {
 	public static DateInfos dateInfos = null;
 	public static FetchFahrplan fetcher = null;
 	public static FahrplanParser parser = null;
-	public static String schedulePath = "/congress/2013/Fahrplan/schedule.xml";
-	public static long first_day_start = getMilliseconds("Europe/Paris", 2013, 12, 27);
-	public static long last_day_end = getMilliseconds("Europe/Paris", 2013, 12, 31);
+	public static String schedulePath = "/2014/fahrplan/schedule.xml";
+	public static long first_day_start = getMilliseconds("Europe/Paris", 2014, 9, 13);
+	public static long last_day_end = getMilliseconds("Europe/Paris", 2014, 9, 14);
 	public static int room_count = 0;
 	public static HashMap<String, Integer> roomsMap = new HashMap<String, Integer>();
 
