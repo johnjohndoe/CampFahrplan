@@ -40,7 +40,7 @@ public class AboutDialog extends SherlockDialogFragment {
 					.setText(getString(R.string.appVersion)
 							+ " "
 							+ getSherlockActivity().getPackageManager()
-									.getPackageInfo("nerd.tuxmobil.fahrplan.congress", 0).versionName);
+									.getPackageInfo("info.metadude.android.datenspuren.schedule", 0).versionName);
 		} catch (NameNotFoundException e) {
 			e.printStackTrace();
 			text.setText("");
