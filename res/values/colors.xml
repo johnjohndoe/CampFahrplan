@@ -6,7 +6,7 @@
     <color name="lightgray">#505050</color>
     <color name="alarm_list_icon_default_fill_color">#ddd</color>
     <color name="alarm_list_icon_default_stroke_color">#9a3324</color>
-    <color name="lecture_background">#ffffff</color>
+    <color name="lecture_background">@color/fahrplan_background</color>
     <color name="lecture_detailbar_background">#eee</color>
     <color name="lecture_detailbar_text">#999</color>
 
