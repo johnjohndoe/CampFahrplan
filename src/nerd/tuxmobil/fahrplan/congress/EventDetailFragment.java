@@ -37,7 +37,7 @@ public class EventDetailFragment extends SherlockFragment {
 	private final String LOG_TAG = "Detail";
 	private String event_id;
 	private String title;
-	private static String feedbackURL = "https://frab.cccv.de/en/30C3/public/events/%s/feedback/new";
+	private static String feedbackURL = "https://frab.cccv.de/en/DS2014/public/events/%s/feedback/new";
 	private Locale locale;
 	private Typeface boldCondensed;
 	private Typeface black;
