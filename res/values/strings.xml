@@ -52,7 +52,7 @@
 	<string name="usage">Note:\n\nLong-Press on a Lecture to set an alarm.</string>
 	<string name="set_alarm">Set alarm</string>
 	<string name="conference_url">
-		<![CDATA[<a href="http://events.ccc.de/congress/2013/">http://events.ccc.de/congress/2013/</a>]]>
+		<![CDATA[<a href="http://vcfb.de/2014/">http://vcfb.de/2014/</a>]]>
 	</string>
 	<string name="libraries">
 		This application uses the following libraries: ActionBarSherlock,
