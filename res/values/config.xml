@@ -4,10 +4,10 @@
     tools:ignore="MissingTranslation">
 
     <!-- http://events.ccc.de -->
-    <string name="schedule_domain_part">http://events.ccc.de</string>
+    <string name="schedule_domain_part">http://vcfb.de</string>
 
     <!-- /congress/2013/Fahrplan -->
-    <string name="schedule_part">/congress/2013/Fahrplan</string>
+    <string name="schedule_part">/2014</string>
 
     <!-- /events/5622.html -->
     <string name="schedule_event_part">/events/%1$s.html</string>
