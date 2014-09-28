@@ -86,4 +86,9 @@
 		für jeden Eintrag eine individuelle Erinnerung festlegen.
 	</string>
 	<string name="add_to_calendar_failed">Hinzufügen zu Kalendar fehlgeschlagen.</string>
+	<string name="app_disclaimer">
+		Diese Anwendung basiert auf dem Quellcode der &#8220;Fahrplan&#8221; App.
+		Besucher des Jahreskongress und des Camps des Chaos Computer Clubs
+		nutzen die App, um das jeweilige Veranstaltungsprogramm im Auge zu behalten.
+	</string>
 </resources>
