@@ -146,13 +146,8 @@ public class FahrplanMisc {
 	}
 
 	public static String getEventUrl(final Context context, final String eventId) {
-		StringBuilder sb = new StringBuilder();
-		sb.append(context.getString(R.string.schedule_domain_part));
-		sb.append(context.getString(R.string.schedule_part));
-		// TODO The event url can be localized by providing individual values
-		// for `schedule_event_part` in `values` and `values-de`.
-		sb.append(context.getString(R.string.schedule_event_part, eventId));
-		return sb.toString();
+		// NOTE: VCFB does not provide individual event pages.
+		return "http://vcfb.de/2014/vortraege_workshops.html";
 	}
 
 	public static String getCalendarDescription(final Context context, final Lecture lecture) {
