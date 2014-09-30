@@ -51,7 +51,6 @@
     </style>
 	
     <style name="DropDownNav.Congress" parent="@style/Widget.Sherlock.Spinner.DropDown.ActionBar">
-        <item name="android:background">@drawable/spinner_background_ab_congress</item>
         <item name="android:popupBackground">@drawable/menu_dropdown_panel_congress</item>
         <item name="android:dropDownSelector">@drawable/selectable_background_congress</item>
     </style>
