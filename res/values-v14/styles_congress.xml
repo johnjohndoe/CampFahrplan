@@ -25,6 +25,7 @@
         <item name="android:actionBarTabStyle">@style/ActionBarTabStyle.Congress</item>
         <item name="android:actionDropDownStyle">@style/DropDownNav.Congress</item>
         <item name="android:actionBarStyle">@style/ActionBar.Solid.Congress</item>
+        <item name="android:listChoiceIndicatorMultiple">@drawable/congress_btn_check_holo_light</item>
         <item name="android:textColorLink">@color/text_link_color</item>
     </style>
 
@@ -42,6 +43,7 @@
     <style name="Theme.Congress.Widget" parent="@style/Theme.Sherlock">
         <item name="android:popupMenuStyle">@style/PopupMenu.Congress</item>
         <item name="android:dropDownListViewStyle">@style/DropDownListView.Congress</item>
+        <item name="android:listChoiceIndicatorMultiple">@drawable/congress_btn_check_holo_light</item>
         <item name="android:textColorLink">@color/text_link_color</item>
     </style>
 
