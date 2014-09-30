@@ -35,13 +35,6 @@
         android:visible="false">
     </item>
     <item
-        android:id="@+id/item_feedback"
-        android:icon="@drawable/ic_action_feedback"
-        android:showAsAction="ifRoom"
-        android:title="@string/feedback"
-        android:titleCondensed="@string/feedback">
-    </item>
-    <item
         android:id="@+id/item_add_to_calendar"
         android:icon="@drawable/ic_action_add_to_calendar_dark"
         android:showAsAction="ifRoom"
