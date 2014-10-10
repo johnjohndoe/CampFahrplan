@@ -118,7 +118,7 @@ public class CustomHttpClient {
 	}
 
 	public static String getAddr() {
-		return "events.ccc.de";
+		return "hackover.de";
 	}
 
 	public static String normalize_addr(String addr) {
