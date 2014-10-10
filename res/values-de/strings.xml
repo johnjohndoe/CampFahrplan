@@ -53,7 +53,7 @@
 	<string name="usage">Hinweis:\n\nLange auf Vortrag tippen um Erinnerung einzustellen.</string>
 	<string name="set_alarm">Alarm setzen</string>
 	<string name="conference_url">
-		<![CDATA[<a href="http://events.ccc.de/congress/2013/">http://events.ccc.de/congress/2013/</a>]]>
+		<![CDATA[<a href="https://hackover.de">https://hackover.de</a>]]>
 	</string>
 	<string name="libraries">
 		Die Anwendung nutzt folgende Bibliotheken: ActionBarSherlock,
