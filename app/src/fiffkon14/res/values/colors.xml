@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="fahrplan_background">#162b7c</color>
+    <color name="text_link_color">#54639e</color>
+    <color name="lightgray">#505050</color>
+    <color name="alarm_list_icon_default_fill_color">#283a82</color>
+    <color name="alarm_list_icon_default_stroke_color">#fff</color>
+    <color name="alarm_list_icon_text_color">#fff</color>
+    <color name="lecture_background">#ffffff</color>
+    <color name="lecture_detailbar_background">#eee</color>
+    <color name="lecture_detailbar_text">#999</color>
+
+    <!-- Default state -->
+    <color name="event_border_default_pause">#629e63</color>
+    <color name="event_border_default_event">#c7b668</color>
+    <color name="event_border_default_talk">#75a9cc</color>
+    <color name="event_border_default_workshop">#e57f61</color>
+
+    <!-- Highlight state -->
+    <color name="event_border_highlight_pause">
+        @color/event_border_default_pause
+    </color>
+    <color name="event_border_highlight_event">
+        @color/event_border_default_event
+    </color>
+    <color name="event_border_highlight_talk">
+        @color/event_border_default_talk
+    </color>
+    <color name="event_border_highlight_workshop">
+        @color/event_border_default_workshop
+    </color>
+
+</resources>

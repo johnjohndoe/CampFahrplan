@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">FIfFKon 2014 Schedule</string>
+    <string name="conference_url">
+        <![CDATA[<a href="https://fiffkon.de">https://fiffkon.de</a>]]>
+    </string>
+    <string name="source_code">
+        <![CDATA[<a href="https://github.com/johnjohndoe/CampFahrplan/tree/fiffkon-2014">Source code</a>]]>
+    </string>
+    <string name="google_play_store">
+        <![CDATA[<a href="https://play.google.com/store/apps/details?id=info.metadude.android.fiffkon.schedule">Google PlayStore listing</a>]]>
+	</string>
+</resources>

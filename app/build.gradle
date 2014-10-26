@@ -54,6 +54,12 @@ android {
             keyAlias props['signing.ccc30c3-release.keyAlias']
             keyPassword props['signing.ccc30c3-release.keyPassword']
         }
+        fiffkon14 {
+            storeFile file(props['signing.fiffkon-release.keystoreFilePath'])
+            storePassword props['signing.fiffkon-release.keystorePassword']
+            keyAlias props['signing.fiffkon-release.keyAlias']
+            keyPassword props['signing.fiffkon-release.keyPassword']
+        }
     }
 
     productFlavors {
@@ -72,6 +78,22 @@ android {
             buildConfigField "int", "SCHEDULE_LAST_DAY_END_MONTH", "12"
             buildConfigField "int", "SCHEDULE_LAST_DAY_END_DAY", "31"
             buildConfigField "boolean", "SCHEDULE_SUPPORTS_HTTPS", "true"
+        }
+        fiffkon14 {
+            applicationId "info.metadude.android.fiffkon.schedule"
+            signingConfig signingConfigs.fiffkon14
+            buildConfigField "String", "SCHEDULE_DOMAIN", '"fiffkon.de"'
+            buildConfigField "String", "SCHEDULE_DOMAIN_PART", '"https://fiffkon.de"'
+            buildConfigField "String", "SCHEDULE_EVENT_PART", '"/events/%1$s.html"'
+            buildConfigField "String", "SCHEDULE_PART", '"/app"'
+            buildConfigField "String", "SCHEDULE_PATH", '"/app/schedule.xml"'
+            buildConfigField "int", "SCHEDULE_FIRST_DAY_START_YEAR", "2014"
+            buildConfigField "int", "SCHEDULE_FIRST_DAY_START_MONTH", "11"
+            buildConfigField "int", "SCHEDULE_FIRST_DAY_START_DAY", "7"
+            buildConfigField "int", "SCHEDULE_LAST_DAY_END_YEAR", "2014"
+            buildConfigField "int", "SCHEDULE_LAST_DAY_END_MONTH", "11"
+            buildConfigField "int", "SCHEDULE_LAST_DAY_END_DAY", "9"
+            buildConfigField "boolean", "SCHEDULE_SUPPORTS_HTTPS", "false"
         }
     }
 }

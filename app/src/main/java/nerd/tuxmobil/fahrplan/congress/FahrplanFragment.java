@@ -170,6 +170,14 @@ public class FahrplanFragment extends SherlockFragment implements
                 R.drawable.event_border_default_security_safety);
         trackColors.put("",
                 R.drawable.event_border_default);
+        trackColors.put("Pause",
+                R.drawable.event_border_default_pause);
+        trackColors.put("Veranstaltung",
+                R.drawable.event_border_default_event);
+        trackColors.put("Vortrag",
+                R.drawable.event_border_default_talk);
+        trackColors.put("Workshop",
+                R.drawable.event_border_default_workshop);
 
         trackColorsHi = new HashMap<String, Integer>();
         trackColorsHi.put("Art & Beauty",
@@ -190,6 +198,14 @@ public class FahrplanFragment extends SherlockFragment implements
                 R.drawable.event_border_highlight_security_safety);
         trackColorsHi.put("",
                 R.drawable.event_border_highlight);
+        trackColorsHi.put("Pause",
+                R.drawable.event_border_highlight_pause);
+        trackColorsHi.put("Veranstaltung",
+                R.drawable.event_border_highlight_event);
+        trackColorsHi.put("Vortrag",
+                R.drawable.event_border_highlight_talk);
+        trackColorsHi.put("Workshop",
+                R.drawable.event_border_highlight_workshop);
 
         SharedPreferences prefs = getSherlockActivity().getSharedPreferences(PREFS_NAME, 0);
         mDay = prefs.getInt("displayDay", 1);
