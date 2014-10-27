@@ -82,6 +82,8 @@ android {
         fiffkon14 {
             applicationId "info.metadude.android.fiffkon.schedule"
             signingConfig signingConfigs.fiffkon14
+            versionCode 29
+            versionName "1.29.5 (FIfFKon Release)"
             buildConfigField "String", "SCHEDULE_DOMAIN", '"fiffkon.de"'
             buildConfigField "String", "SCHEDULE_DOMAIN_PART", '"https://fiffkon.de"'
             buildConfigField "String", "SCHEDULE_EVENT_PART", '"/events/%1$s.html"'
