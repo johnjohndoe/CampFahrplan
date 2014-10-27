@@ -41,9 +41,6 @@ public class EventDetailFragment extends SherlockFragment {
 
     private String title;
 
-    private static String feedbackURL
-            = "https://frab.cccv.de/en/30C3/public/events/%s/feedback/new";
-
     private Locale locale;
 
     private Typeface boldCondensed;
@@ -300,11 +297,6 @@ public class EventDetailFragment extends SherlockFragment {
     public boolean onOptionsItemSelected(MenuItem item) {
         Lecture l;
         switch (item.getItemId()) {
-            case R.id.item_feedback:
-                Uri uri = Uri.parse(String.format(feedbackURL, event_id));
-                Intent intent = new Intent(Intent.ACTION_VIEW, uri);
-                startActivity(intent);
-                return true;
             case R.id.item_share:
                 l = eventid2Lecture(event_id);
                 if (l != null) {
