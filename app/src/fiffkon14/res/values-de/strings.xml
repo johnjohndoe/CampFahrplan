@@ -10,4 +10,9 @@
     <string name="google_play_store">
         <![CDATA[<a href="https://play.google.com/store/apps/details?id=info.metadude.android.fiffkon.schedule">Eintrag im Google PlayStore</a>]]>
     </string>
+    <string name="app_disclaimer">
+        Diese Anwendung basiert auf dem Quellcode der &#8220;Fahrplan&#8221; App.
+        Besucher des Jahreskongress und des Camps des Chaos Computer Clubs
+        nutzen die App, um das jeweilige Veranstaltungsprogramm im Auge zu behalten.
+    </string>
 </resources>
