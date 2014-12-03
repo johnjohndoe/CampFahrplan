@@ -7,7 +7,7 @@
     <string name="schedule_domain_part">https://hackover.de</string>
 
     <!-- /congress/2013/Fahrplan -->
-    <string name="schedule_part">/fahrplan</string>
+    <string name="schedule_part">/fahrplan/2014</string>
 
     <!-- /events/5622.html -->
     <string name="schedule_event_part">/events/%1$s.html</string>
