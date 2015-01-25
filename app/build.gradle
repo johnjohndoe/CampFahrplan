@@ -48,18 +48,18 @@ android {
     }
 
     signingConfigs {
-        ccc31c3 {
-            storeFile file(props['signing.ccc31c3-release.keystoreFilePath'])
-            storePassword props['signing.ccc31c3-release.keystorePassword']
-            keyAlias props['signing.ccc31c3-release.keyAlias']
-            keyPassword props['signing.ccc31c3-release.keyPassword']
+        fosdem {
+            storeFile file(props['signing.fosdem-release.keystoreFilePath'])
+            storePassword props['signing.fosdem-release.keystorePassword']
+            keyAlias props['signing.fosdem-release.keyAlias']
+            keyPassword props['signing.fosdem-release.keyPassword']
         }
     }
 
     productFlavors {
         ccc31c3 {
             applicationId "nerd.tuxmobil.fahrplan.congress"
-            signingConfig signingConfigs.ccc31c3
+            //signingConfig signingConfigs.ccc31c3
             buildConfigField "String", "SCHEDULE_DOMAIN", '"events.ccc.de"'
             buildConfigField "String", "SCHEDULE_DOMAIN_PART", '"http://events.ccc.de"'
             buildConfigField "String", "SCHEDULE_EVENT_PART", '"/events/%1$s.html"'
@@ -72,6 +72,23 @@ android {
             buildConfigField "int", "SCHEDULE_LAST_DAY_END_MONTH", "12"
             buildConfigField "int", "SCHEDULE_LAST_DAY_END_DAY", "31"
             buildConfigField "boolean", "SCHEDULE_SUPPORTS_HTTPS", "true"
+            buildConfigField "String", "SCHEDULE_FEEDBACK_URL", '"https://frab.cccv.de/en/31C3/public/events/%s/feedback/new"'
+        }
+        fosdem {
+            applicationId "info.metadude.android.fosdem.schedule"
+            signingConfig signingConfigs.fosdem
+            buildConfigField "String", "SCHEDULE_DOMAIN", '"avp-ptr.de"'
+            buildConfigField "String", "SCHEDULE_DOMAIN_PART", '"https://avp-ptr.de"'
+            buildConfigField "String", "SCHEDULE_EVENT_PART", '"/events/%1$s.html"'
+            buildConfigField "String", "SCHEDULE_PART", '"/fosdem/schedule.xml"'
+            buildConfigField "String", "SCHEDULE_PATH", '"/fosdem/schedule.xml"'
+            buildConfigField "int", "SCHEDULE_FIRST_DAY_START_YEAR", "2015"
+            buildConfigField "int", "SCHEDULE_FIRST_DAY_START_MONTH", "1"
+            buildConfigField "int", "SCHEDULE_FIRST_DAY_START_DAY", "31"
+            buildConfigField "int", "SCHEDULE_LAST_DAY_END_YEAR", "2015"
+            buildConfigField "int", "SCHEDULE_LAST_DAY_END_MONTH", "2"
+            buildConfigField "int", "SCHEDULE_LAST_DAY_END_DAY", "1"
+            buildConfigField "boolean", "SCHEDULE_SUPPORTS_HTTPS", "false"
             buildConfigField "String", "SCHEDULE_FEEDBACK_URL", '"https://frab.cccv.de/en/31C3/public/events/%s/feedback/new"'
         }
     }

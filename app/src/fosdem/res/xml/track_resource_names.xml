@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<map linked="true">
+
+    <entry key=""></entry>
+    <entry key="Keynotes">keynotes</entry>
+    <entry key="Miscellaneous">miscellaneous</entry>
+    <entry key="Hardware">hardware</entry>
+    <entry key="Lightning talks">lightning_talks</entry>
+    <entry key="Embedded">embedded</entry>
+    <entry key="Python">python</entry>
+    <entry key="Java">java</entry>
+    <entry key="MySQL and friends">mysql_and_friends</entry>
+    <entry key="Valgrind">valgrind</entry>
+    <entry key="Ada">ada</entry>
+    <entry key="BSD">bsd</entry>
+    <entry key="Perl">perl</entry>
+    <entry key="Graphics">graphics</entry>
+    <entry key="Security">security</entry>
+    <entry key="Virtualisation">virtualisation</entry>
+    <entry key="Infrastructure as a service">infrastructure_as_a_service</entry>
+    <entry key="Distributions">distributions</entry>
+    <entry key="PostgreSQL">postgresql</entry>
+    <entry key="Smalltalk">smalltalk</entry>
+    <entry key="Desktops">desktops</entry>
+    <entry key="Configuration management">configuration_management</entry>
+    <entry key="Legal and policy issues">legal_and_policy_issues</entry>
+    <entry key="Open Document editors">open_document_editors</entry>
+    <entry key="Certification">certification</entry>
+    <entry key="Mozilla">mozilla</entry>
+    <entry key="LLVM toolchain">llvm_toolchain</entry>
+    <entry key="Go">go</entry>
+    <entry key="Graph processing">graph_processing</entry>
+    <entry key="Performance">performance</entry>
+    <entry key="Security devroom">security_devroom</entry>
+    <entry key="Geospatial">geospatial</entry>
+    <entry key="Electronic design automation">electronic_design_automation</entry>
+    <entry key="Software defined radio">software_defined_radio</entry>
+    <entry key="Open source design">open_source_design</entry>
+    <entry key="Lisp">lisp</entry>
+    <entry key="Open media">open_media</entry>
+    <entry key="Network management and SDN">network_management_and_sdn</entry>
+    <entry key="Open source search">open_source_search</entry>
+    <entry key="Microkernels">microkernels</entry>
+    <entry key="Testing and automation">testing_and_automation</entry>
+    <entry key="Typesetting">typesetting</entry>
+    <entry key="Languages">languages</entry>
+    <entry key="Ruby">ruby</entry>
+    <entry key="PHP and friends">php_and_friends</entry>
+    <entry key="Internet of things">internet_of_things</entry>
+    <entry key="Time">time</entry>
+
+</map>
