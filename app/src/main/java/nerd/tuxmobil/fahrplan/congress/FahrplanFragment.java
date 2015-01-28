@@ -621,11 +621,16 @@ public class FahrplanFragment extends Fragment implements
             subtitle.setTextColor(getResources().getColor(R.color.event_title));
             speakers.setTextColor(getResources().getColor(R.color.event_title));
         }
+        int eventTitleColor;
         if (color == null) {
-            track.setTextColor(getResources().getColor(R.color.event_title));
+            eventTitleColor = getResources().getColor(R.color.event_title);
         } else {
-            track.setTextColor(getResources().getColor(color));
+            // Dear friend. If you stop here because the resource cannot be found
+            // there is probably a typo in the name of the color resource.
+            // Good luck when searching for it.
+            eventTitleColor = getResources().getColor(color);
         }
+        track.setTextColor(eventTitleColor);
     }
 
     private void fillRoom(ViewGroup root, int roomIdx) {
