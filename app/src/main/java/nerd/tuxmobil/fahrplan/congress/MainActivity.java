@@ -56,7 +56,6 @@ public class MainActivity extends ActionBarActivity
         getSupportActionBar().setTitle(R.string.fahrplan);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
         getSupportActionBar().setDisplayUseLogoEnabled(true);
-        getSupportActionBar().setLogo(R.drawable.ic_actionbar_logo);
         if (MyApp.fetcher == null) {
             fetcher = new FetchFahrplan();
         } else {
