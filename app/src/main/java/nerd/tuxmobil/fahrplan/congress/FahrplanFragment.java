@@ -8,6 +8,7 @@ import android.content.res.Resources;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteException;
+import android.graphics.Color;
 import android.graphics.Typeface;
 import android.os.Build;
 import android.os.Bundle;
@@ -597,6 +598,7 @@ public class FahrplanFragment extends Fragment implements
         if (lecture.highlight) {
             Integer backgroundColorResourceId = trackBackgroundsHi.get(trackName);
             int backgroundColor = resources.getColor(backgroundColorResourceId);
+            backgroundColor = getModifiedColor(backgroundColor, 0, 0.2f, -0.2f);
             if (useAlternativeHighlight) {
                 int strokeColor = resources.getColor(R.color.event_item_selection_stroke);
                 float eventStrokeWidthInPixels = resources.getDimensionPixelSize(
@@ -656,7 +658,27 @@ public class FahrplanFragment extends Fragment implements
             // Good luck when searching for it.
             eventTitleColor = getResources().getColor(color);
         }
+        if (color != null) {
+            eventTitleColor = getModifiedColor(eventTitleColor, 0, 0, -0.2f);
+        }
         track.setTextColor(eventTitleColor);
+    }
+
+
+    // Use a negative lightnessDelta to decrease or a
+    // positive lightnessDelta to increase the lightness.
+    // Use a negative saturationDelta to decrease or a
+    // positive saturationDelta to increase the lightness.
+    private int getModifiedColor(int color,
+            float hueDelta,
+            float saturationDelta,
+            float lightnessDelta) {
+        float[] hsv = new float[3];
+        Color.colorToHSV(color, hsv);
+        hsv[0] += hueDelta; // Hue [0-360]
+        hsv[1] += saturationDelta; // Saturation [0-1]
+        hsv[2] += lightnessDelta; // Lightness value [0-1]
+        return Color.HSVToColor(hsv);
     }
 
     private void fillRoom(ViewGroup root, int roomIdx) {
