@@ -158,7 +158,7 @@ public class FahrplanFragment extends Fragment implements
         }
 
         trackBackgrounds = TrackBackgrounds.getTrackBackgroundNormal(getActivity());
-        trackBackgroundsHi = TrackBackgrounds.getTrackBackgroundHighLight(getActivity());
+        //trackBackgroundsHi = TrackBackgrounds.getTrackBackgroundHighLight(getActivity());
         trackAccentColors = TrackBackgrounds.getTrackAccentColorNormal(getActivity());
         trackAccentColorsHighlight = TrackBackgrounds.getTrackAccentColorHighlight(getActivity());
 
@@ -570,7 +570,7 @@ public class FahrplanFragment extends Fragment implements
         float eventCornerRadiusInPixels = resources.getDimensionPixelSize(
                 R.dimen.event_item_corner_radius);
         if (lecture.highlight) {
-            Integer backgroundColorResourceId = trackBackgroundsHi.get(trackName);
+            Integer backgroundColorResourceId = trackBackgrounds.get(trackName);
             int backgroundColor = resources.getColor(backgroundColorResourceId);
             backgroundColor = getModifiedColor(backgroundColor, 0, 0.2f, -0.2f);
             if (useAlternativeHighlight) {
