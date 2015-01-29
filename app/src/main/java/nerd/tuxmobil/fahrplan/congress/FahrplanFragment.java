@@ -632,7 +632,7 @@ public class FahrplanFragment extends Fragment implements
             // Good luck when searching for it.
             eventTitleColor = getResources().getColor(color);
         }
-        if (color != null) {
+        if (color != null && !lecture.highlight) {
             eventTitleColor = getModifiedColor(eventTitleColor, 0, 0, -0.2f);
         }
         track.setTextColor(eventTitleColor);
