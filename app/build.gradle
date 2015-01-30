@@ -76,6 +76,7 @@ android {
         }
         fosdem {
             applicationId "info.metadude.android.fosdem.schedule"
+            versionName "1.30.4 (FOSDEM Edition)"
             signingConfig signingConfigs.fosdem
             buildConfigField "String", "SCHEDULE_DOMAIN", '"avp-ptr.de"'
             buildConfigField "String", "SCHEDULE_DOMAIN_PART", '"https://avp-ptr.de"'
