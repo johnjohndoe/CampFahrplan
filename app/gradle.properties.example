@@ -2,3 +2,8 @@ signing.ccc31c3-release.keystoreFilePath=/home/USERNAME/.android/ccc31c3-release
 signing.ccc31c3-release.keystorePassword="PASSWORD"
 signing.ccc31c3-release.keyAlias="ccc31c3"
 signing.ccc31c3-release.keyPassword="ANOTHERPASSWORD"
+
+signing.fosdem-release.keystoreFilePath=/home/USERNAME/.android/fosdem-release-key.keystore
+signing.fosdem-release.keystorePassword="PASSWORD"
+signing.fosdem-release.keyAlias="fosdem"
+signing.fosdem-release.keyPassword="ANOTHERPASSWORD"
