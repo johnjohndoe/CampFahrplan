@@ -9,6 +9,7 @@ import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.AsyncTask;
 import android.preference.PreferenceManager;
+import android.text.format.Time;
 import android.util.Xml;
 
 import java.io.StringReader;
@@ -409,6 +410,11 @@ class parser extends AsyncTask<String, Void, Boolean> {
                                                 }
                                                 eventType = parser.next();
                                             }
+                                        } else {
+                                            // Fallback when there is no "date" node for an "event".
+                                            // Applies to schedule.xml delivered by Pentabarf
+                                            Time dateTime = lecture.getTime();
+                                            lecture.dateUTC = dateTime.normalize(true);
                                         }
                                         break;
                                 }
