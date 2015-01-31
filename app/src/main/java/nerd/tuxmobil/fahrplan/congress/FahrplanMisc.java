@@ -152,20 +152,20 @@ public class FahrplanMisc {
                 .getDateTimeInstance(SimpleDateFormat.FULL, SimpleDateFormat.SHORT)
                 .format(new Date(time.toMillis(true))));
         sb.append(", ").append(l.room).append("\n\n");
-        final String eventUrl = getEventUrl(context, l.lecture_id);
+        final String eventUrl = getEventUrl(context, l.slug);
         sb.append(eventUrl);
         sendIntent.putExtra(Intent.EXTRA_TEXT, sb.toString());
         sendIntent.setType("text/plain");
         context.startActivity(sendIntent);
     }
 
-    public static String getEventUrl(final Context context, final String eventId) {
+    public static String getEventUrl(final Context context, final String slug) {
         StringBuilder sb = new StringBuilder();
         sb.append(BuildConfig.SCHEDULE_DOMAIN_PART);
         sb.append(BuildConfig.SCHEDULE_PART);
         // TODO The event url can be localized by providing individual values
         // for `schedule_event_part` in `values` and `values-de`.
-        String eventPart = String.format(BuildConfig.SCHEDULE_EVENT_PART, eventId);
+        String eventPart = String.format(BuildConfig.SCHEDULE_EVENT_PART, slug);
         sb.append(eventPart);
         return sb.toString();
     }
@@ -176,7 +176,7 @@ public class FahrplanMisc {
         sb.append("\n\n");
         final String eventOnline = context.getString(R.string.event_online);
         sb.append(eventOnline + ": ");
-        sb.append(getEventUrl(context, lecture.lecture_id));
+        sb.append(getEventUrl(context, lecture.slug));
         return sb.toString();
     }
 
@@ -525,6 +525,8 @@ public class FahrplanMisc {
                     cursor.getColumnIndex(LecturesTable.Columns.DAY));
             lecture.room = cursor.getString(
                     cursor.getColumnIndex(LecturesTable.Columns.ROOM));
+            lecture.slug = cursor.getString(
+                    cursor.getColumnIndex(LecturesTable.Columns.SLUG));
             lecture.startTime = cursor.getInt(
                     cursor.getColumnIndex(LecturesTable.Columns.START));
             lecture.duration = cursor.getInt(

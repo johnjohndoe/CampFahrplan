@@ -31,6 +31,7 @@ public class EventDetail extends AppCompatActivity {
         intent.putExtra(BundleKeys.EVENT_TIME, lecture.startTime);
         intent.putExtra(BundleKeys.EVENT_DAY, lectureDay);
         intent.putExtra(BundleKeys.EVENT_ROOM, lecture.room);
+        intent.putExtra(BundleKeys.EVENT_SLUG, lecture.slug);
         activity.startActivityForResult(intent, MyApp.EVENTVIEW);
     }
 
@@ -65,6 +66,8 @@ public class EventDetail extends AppCompatActivity {
             args.putInt(BundleKeys.EVENT_TIME, intent.getIntExtra(BundleKeys.EVENT_TIME, 0));
             args.putInt(BundleKeys.EVENT_DAY, intent.getIntExtra(BundleKeys.EVENT_DAY, 0));
             args.putString(BundleKeys.EVENT_ROOM, intent.getStringExtra(BundleKeys.EVENT_ROOM));
+            args.putString(BundleKeys.EVENT_SLUG,
+                    intent.getStringExtra(BundleKeys.EVENT_SLUG));
             ev.setArguments(args);
             fragmentTransaction.replace(R.id.detail, ev, FragmentTags.DETAIL);
             fragmentTransaction.commit();
