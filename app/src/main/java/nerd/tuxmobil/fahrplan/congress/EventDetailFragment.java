@@ -11,6 +11,8 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.text.Html;
+import android.text.TextUtils;
+import android.text.format.Time;
 import android.text.method.LinkMovementMethod;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -133,6 +135,20 @@ public class EventDetailFragment extends Fragment {
                 DateFormat df = SimpleDateFormat
                         .getDateTimeInstance(SimpleDateFormat.SHORT, SimpleDateFormat.SHORT);
                 t.setText(df.format(new Date(lecture.dateUTC)) + " - " + room);
+            } else if ((lecture != null) &&
+                    (lecture.date != null && !TextUtils.isEmpty(lecture.date))) {
+                // TODO: Clear code duplication in FahrplanMisc.addAlarm()
+                Time time;
+                long startTime;
+                long startTimeInSeconds = lecture.dateUTC;
+                if (startTimeInSeconds > 0) {
+                    startTime = startTimeInSeconds;
+                } else {
+                    time = lecture.getTime();
+                    startTime = time.normalize(true);
+                }
+                String formattedDateTime = DateHelper.getFormattedTime(startTime, "%Y-%m-%d %H:%M");
+                t.setText(formattedDateTime + " - " + room);
             } else {
                 t.setText("");
             }
