@@ -17,12 +17,14 @@
     <item
             android:id="@+id/item_alarms"
             android:icon="@drawable/ic_menu_alarmclock"
+            app:showAsAction="ifRoom"
             android:title="@string/alarms"
             android:titleCondensed="@string/alarms">
     </item>
     <item
         android:id="@+id/item_changes"
         android:icon="@drawable/ic_action_changes"
+        app:showAsAction="ifRoom"
         android:title="@string/schedule_changes"
         android:titleCondensed="@string/schedule_changes">
     </item>
