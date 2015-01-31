@@ -22,6 +22,7 @@
     </item>
     <item
         android:id="@+id/item_changes"
+        android:icon="@drawable/ic_action_changes"
         android:title="@string/schedule_changes"
         android:titleCondensed="@string/schedule_changes">
     </item>
