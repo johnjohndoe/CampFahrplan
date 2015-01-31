@@ -79,9 +79,9 @@ android {
             versionName "1.30.5 (FOSDEM Edition)"
             signingConfig signingConfigs.fosdem
             buildConfigField "String", "SCHEDULE_DOMAIN", '"avp-ptr.de"'
-            buildConfigField "String", "SCHEDULE_DOMAIN_PART", '"https://avp-ptr.de"'
-            buildConfigField "String", "SCHEDULE_EVENT_PART", '"/events/%1$s.html"'
-            buildConfigField "String", "SCHEDULE_PART", '"/fosdem/schedule.xml"'
+            buildConfigField "String", "SCHEDULE_DOMAIN_PART", '"https://fosdem.org"'
+            buildConfigField "String", "SCHEDULE_EVENT_PART", '"/event/%1$s/"'
+            buildConfigField "String", "SCHEDULE_PART", '"/2015/schedule"'
             buildConfigField "String", "SCHEDULE_PATH", '"/fosdem/schedule.xml"'
             buildConfigField "int", "SCHEDULE_FIRST_DAY_START_YEAR", "2015"
             buildConfigField "int", "SCHEDULE_FIRST_DAY_START_MONTH", "1"

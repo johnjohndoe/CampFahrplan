@@ -39,6 +39,7 @@ public class StarredListActivity extends ActionBarActivity implements AbstractLi
             intent.putExtra(BundleKeys.EVENT_TIME, lecture.startTime);
             intent.putExtra(BundleKeys.EVENT_DAY, lecture.day);
             intent.putExtra(BundleKeys.EVENT_ROOM, lecture.room);
+            intent.putExtra(BundleKeys.EVENT_SLUG, lecture.slug);
             startActivityForResult(intent, MyApp.EVENTVIEW);
         }
     }

@@ -386,6 +386,7 @@ public class MainActivity extends ActionBarActivity
             args.putInt(BundleKeys.EVENT_TIME, lecture.startTime);
             args.putInt(BundleKeys.EVENT_DAY, mDay);
             args.putString(BundleKeys.EVENT_ROOM, lecture.room);
+            args.putString(BundleKeys.EVENT_SLUG, lecture.slug);
             args.putBoolean(BundleKeys.SIDEPANE, true);
             ev.setArguments(args);
             fragmentTransaction.replace(R.id.detail, ev, FragmentTags.DETAIL);
@@ -403,6 +404,7 @@ public class MainActivity extends ActionBarActivity
             intent.putExtra(BundleKeys.EVENT_TIME, lecture.startTime);
             intent.putExtra(BundleKeys.EVENT_DAY, mDay);
             intent.putExtra(BundleKeys.EVENT_ROOM, lecture.room);
+            intent.putExtra(BundleKeys.EVENT_SLUG, lecture.slug);
             startActivityForResult(intent, MyApp.EVENTVIEW);
         }
     }

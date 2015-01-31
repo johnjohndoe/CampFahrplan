@@ -33,6 +33,8 @@ public interface BundleKeys {
             "nerd.tuxmobil.fahrplan.congress.EVENT_DAY";
     public static final String EVENT_ROOM =
             "nerd.tuxmobil.fahrplan.congress.EVENT_ROOM";
+    public static final String EVENT_SLUG =
+            "nerd.tuxmobil.fahrplan.congress.EVENT_SLUG";
 
     // Side pane
     public static final String SIDEPANE =
