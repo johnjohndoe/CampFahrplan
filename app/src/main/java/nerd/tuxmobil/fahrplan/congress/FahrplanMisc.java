@@ -147,13 +147,13 @@ public class FahrplanMisc {
         metaDB.close();
     }
 
-    public static String getEventUrl(final String eventId) {
+    public static String getEventUrl(final String slug) {
         StringBuilder sb = new StringBuilder();
         sb.append(BuildConfig.SCHEDULE_DOMAIN_PART);
         sb.append(BuildConfig.SCHEDULE_PART);
         // TODO The event url can be localized by providing individual values
         // for `schedule_event_part` in `values` and `values-de`.
-        String eventPart = String.format(BuildConfig.SCHEDULE_EVENT_PART, eventId);
+        String eventPart = String.format(BuildConfig.SCHEDULE_EVENT_PART, slug);
         sb.append(eventPart);
         return sb.toString();
     }
@@ -164,7 +164,7 @@ public class FahrplanMisc {
         sb.append("\n\n");
         final String eventOnline = context.getString(R.string.event_online);
         sb.append(eventOnline + ": ");
-        sb.append(getEventUrl(lecture.lecture_id));
+        sb.append(getEventUrl(lecture.slug));
         return sb.toString();
     }
 
@@ -508,6 +508,8 @@ public class FahrplanMisc {
                     cursor.getColumnIndex(LecturesTable.Columns.DAY));
             lecture.room = cursor.getString(
                     cursor.getColumnIndex(LecturesTable.Columns.ROOM));
+            lecture.slug = cursor.getString(
+                    cursor.getColumnIndex(LecturesTable.Columns.SLUG));
             lecture.startTime = cursor.getInt(
                     cursor.getColumnIndex(LecturesTable.Columns.START));
             lecture.duration = cursor.getInt(
