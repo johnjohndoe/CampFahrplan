@@ -17,8 +17,8 @@ android {
     buildToolsVersion "21.1.1"
 
     defaultConfig {
-        versionCode 36
-        versionName "1.30.6"
+        versionCode 37
+        versionName "1.30.7"
         minSdkVersion 14
         targetSdkVersion 21
         project.ext.set("archivesBaseName", "Fahrplan");
@@ -76,7 +76,7 @@ android {
         }
         fosdem {
             applicationId "info.metadude.android.fosdem.schedule"
-            versionName "1.30.6 (FOSDEM Edition)"
+            versionName "1.30.7 (FOSDEM Edition)"
             signingConfig signingConfigs.fosdem
             buildConfigField "String", "SCHEDULE_DOMAIN", '"avp-ptr.de"'
             buildConfigField "String", "SCHEDULE_DOMAIN_PART", '"https://fosdem.org"'
