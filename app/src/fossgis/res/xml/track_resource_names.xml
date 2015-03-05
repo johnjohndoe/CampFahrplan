@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<map linked="true">
+    <entry key="Vortr&#228;ge (OSM)">lectures_osm</entry>
+    <entry key="Vortr&#228;ge (GIS)">lectures_gis</entry>
+    <entry key="Workshops (bezahlt)">workshops_paid</entry>
+    <entry key="Lightning Talks (OSM)">lightning_talks_osm</entry>
+    <entry key=""></entry>
+</map>
