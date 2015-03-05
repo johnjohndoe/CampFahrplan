@@ -54,6 +54,12 @@ android {
             keyAlias props['signing.ccc31c3-release.keyAlias']
             keyPassword props['signing.ccc31c3-release.keyPassword']
         }
+        fossgis {
+            storeFile file(props['signing.fossgis-release.keystoreFilePath'])
+            storePassword props['signing.fossgis-release.keystorePassword']
+            keyAlias props['signing.fossgis-release.keyAlias']
+            keyPassword props['signing.fossgis-release.keyPassword']
+        }
     }
 
     productFlavors {
@@ -71,6 +77,23 @@ android {
             buildConfigField "int", "SCHEDULE_LAST_DAY_END_YEAR", "2014"
             buildConfigField "int", "SCHEDULE_LAST_DAY_END_MONTH", "12"
             buildConfigField "int", "SCHEDULE_LAST_DAY_END_DAY", "31"
+            buildConfigField "boolean", "SCHEDULE_SUPPORTS_HTTPS", "true"
+            buildConfigField "String", "SCHEDULE_FEEDBACK_URL", '"https://frab.cccv.de/en/31C3/public/events/%s/feedback/new"'
+        }
+        fossgis {
+            applicationId "info.metadude.android.fossgis.schedule"
+            signingConfig signingConfigs.fossgis
+            buildConfigField "String", "SCHEDULE_DOMAIN", '"www.fossgis.de"'
+            buildConfigField "String", "SCHEDULE_DOMAIN_PART", '"http://www.fossgis.de"'
+            buildConfigField "String", "SCHEDULE_EVENT_PART", '"/events/%1$s.de.html"'
+            buildConfigField "String", "SCHEDULE_PART", '"/konferenz/2015/programm"'
+            buildConfigField "String", "SCHEDULE_PATH", '"/konferenz/2015/programm/schedule.de.xml"'
+            buildConfigField "int", "SCHEDULE_FIRST_DAY_START_YEAR", "2015"
+            buildConfigField "int", "SCHEDULE_FIRST_DAY_START_MONTH", "3"
+            buildConfigField "int", "SCHEDULE_FIRST_DAY_START_DAY", "11"
+            buildConfigField "int", "SCHEDULE_LAST_DAY_END_YEAR", "2015"
+            buildConfigField "int", "SCHEDULE_LAST_DAY_END_MONTH", "3"
+            buildConfigField "int", "SCHEDULE_LAST_DAY_END_DAY", "13"
             buildConfigField "boolean", "SCHEDULE_SUPPORTS_HTTPS", "true"
             buildConfigField "String", "SCHEDULE_FEEDBACK_URL", '"https://frab.cccv.de/en/31C3/public/events/%s/feedback/new"'
         }
