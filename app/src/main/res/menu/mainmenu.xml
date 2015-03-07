@@ -21,9 +21,11 @@
             android:titleCondensed="@string/alarms">
     </item>
     <item
-        android:id="@+id/item_changes"
-        android:title="@string/schedule_changes"
-        android:titleCondensed="@string/schedule_changes">
+            android:id="@+id/item_changes"
+            android:icon="@drawable/ic_healing_white_24dp"
+            app:showAsAction="ifRoom"
+            android:title="@string/schedule_changes"
+            android:titleCondensed="@string/schedule_changes">
     </item>
     <item
             android:id="@+id/item_settings"
