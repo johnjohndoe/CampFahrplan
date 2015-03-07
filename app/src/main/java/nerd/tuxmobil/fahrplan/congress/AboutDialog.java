@@ -36,11 +36,6 @@ public class AboutDialog extends DialogFragment {
         String appVersionText = getString(R.string.appVersion, BuildConfig.VERSION_NAME);
         text.setText(appVersionText);
 
-        TextView logo_copyright = (TextView) view.findViewById(R.id.copyright_logo);
-        logo_copyright.setText(Html.fromHtml(getString(R.string.copyright_logo)));
-        logo_copyright.setLinkTextColor(getResources().getColor(R.color.text_link_color_dark));
-        logo_copyright.setMovementMethod(LinkMovementMethod.getInstance());
-
         TextView conferenceUrl = (TextView) view.findViewById(R.id.conference_url);
         conferenceUrl.setText(Html.fromHtml(getString(R.string.conference_url)));
         conferenceUrl.setMovementMethod(LinkMovementMethod.getInstance());
