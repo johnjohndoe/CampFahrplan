@@ -101,6 +101,6 @@ android {
 }
 
 dependencies {
-    compile "com.android.support:appcompat-v7:21.0.+"
+    compile "com.android.support:appcompat-v7:21.0.3"
     compile 'com.afollestad:material-dialogs:0.4.6'
 }
