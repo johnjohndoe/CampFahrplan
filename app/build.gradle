@@ -17,8 +17,8 @@ android {
     buildToolsVersion "21.1.2"
 
     defaultConfig {
-        versionCode 36
-        versionName "1.31.1"
+        versionCode 37
+        versionName "1.31.2"
         minSdkVersion 14
         targetSdkVersion 21
         project.ext.set("archivesBaseName", "Fahrplan");
@@ -65,7 +65,7 @@ android {
     productFlavors {
         ccc31c3 {
             applicationId "nerd.tuxmobil.fahrplan.congress"
-            versionName "1.31.1 (FOSSGIS-Edition)"
+            versionName "1.31.2 (FOSSGIS-Edition)"
             signingConfig signingConfigs.ccc31c3
             buildConfigField "String", "SCHEDULE_DOMAIN", '"events.ccc.de"'
             buildConfigField "String", "SCHEDULE_DOMAIN_PART", '"http://events.ccc.de"'
