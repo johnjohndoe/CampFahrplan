@@ -1013,6 +1013,7 @@ public class FahrplanFragment extends Fragment implements
                                 MyApp.LogDebug(LOG_TAG, "alarm chosen: " + alarm);
                                 FahrplanMisc.addAlarm(getActivity(), lecture, alarm);
                                 setBell(lecture);
+                                updateMenuItems();
                             }
                         }).setNegativeButton(android.R.string.cancel, null)
                 .create().show();
@@ -1040,6 +1041,7 @@ public class FahrplanFragment extends Fragment implements
                 if (main != null) {
                     main.refreshFavoriteList();
                 }
+                updateMenuItems();
                 break;
             case 1:
                 getAlarmTimeDialog(lecture);
@@ -1047,6 +1049,7 @@ public class FahrplanFragment extends Fragment implements
             case 2:
                 FahrplanMisc.deleteAlarm(getActivity(), lecture);
                 setBell(lecture);
+                updateMenuItems();
                 break;
             case 3:
                 FahrplanMisc.addToCalender(getActivity(), lecture);
@@ -1056,6 +1059,12 @@ public class FahrplanFragment extends Fragment implements
                 break;
         }
         return true;
+    }
+
+    private void updateMenuItems() {
+        // Toggles the icon for "add/delete favorite" or "add/delete alarm".
+        // Triggers EventDetailFragment.onPrepareOptionsMenu to be called
+        getActivity().supportInvalidateOptionsMenu();
     }
 
     public void onCreateContextMenu(ContextMenu menu, View v,
