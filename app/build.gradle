@@ -13,14 +13,14 @@ props.load(new FileInputStream(gradlePropertiesFile))
 
 
 android {
-    compileSdkVersion 21
+    compileSdkVersion 22
     buildToolsVersion "22.0.1"
 
     defaultConfig {
         versionCode 34
         versionName "1.30.4"
         minSdkVersion 14
-        targetSdkVersion 21
+        targetSdkVersion 22
         project.ext.set("archivesBaseName", "Fahrplan");
     }
 
@@ -101,6 +101,6 @@ android {
 }
 
 dependencies {
-    compile "com.android.support:appcompat-v7:21.0.+"
+    compile "com.android.support:appcompat-v7:22.0.0"
     compile 'com.afollestad:material-dialogs:0.4.6'
 }
