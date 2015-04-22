@@ -29,9 +29,9 @@ public class AboutDialog extends DialogFragment {
         TextView text = (TextView) view.findViewById(R.id.eventVersion);
         text.setText(getString(R.string.fahrplan) + " " + MyApp.version);
         text = (TextView) view.findViewById(R.id.eventTitle);
-        text.setText(MyApp.title);
+        text.setText("taz.lab 2015 — Was wirklich zählt");
         text = (TextView) view.findViewById(R.id.eventSubtitle);
-        text.setText(MyApp.subtitle);
+        text.setText("Der Gedöns-Kongress der taz im Haus der Kulturen der Welt in Berlin am 25.04.2015");
         text = (TextView) view.findViewById(R.id.appVersion);
         String appVersionText = getString(R.string.appVersion, BuildConfig.VERSION_NAME);
         text.setText(appVersionText);
