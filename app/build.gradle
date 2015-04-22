@@ -17,8 +17,8 @@ android {
     buildToolsVersion "22.0.1"
 
     defaultConfig {
-        versionCode 34
-        versionName "1.30.4"
+        versionCode 35
+        versionName "1.31.0"
         minSdkVersion 14
         targetSdkVersion 22
         project.ext.set("archivesBaseName", "Fahrplan");
@@ -82,6 +82,7 @@ android {
         }
         tazlab {
             applicationId "info.metadude.android.tazlab.schedule"
+            versionName "1.31.0 (taz.lab-Edition)"
             signingConfig signingConfigs.tazlab
             buildConfigField "String", "SCHEDULE_DOMAIN", '"www.taz.de"'
             buildConfigField "String", "SCHEDULE_DOMAIN_PART", '"http://www.taz.de"'
