@@ -10,7 +10,10 @@
     <string name="google_play_store">
         <![CDATA[<a href="https://play.google.com/store/apps/details?id=info.metadude.android.tazlab.schedule">Eintrag im Google PlayStore</a>]]>
     </string>
-    <string name="copyright_logo">31C3-Artwork von
-        <![CDATA[<a href="http://http://graphorama.de/">Sven Sedivy</a>]]>
+    <string name="copyright_logo">
+        Der Name taz.lab und das Tatze-Logo sind registrierte Markenzeichen der taz.
+        Diese Anwendung wurde weder durch die taz erstellt, beauftragt noch finanziert.
+        Der Inhalt des Konferenzprogramms verantwortet die taz. Dieser wird unverändert
+        von dieser Anwendung dargestellt.
     </string>
 </resources>
