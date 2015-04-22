@@ -452,7 +452,7 @@ public class MainActivity extends ActionBarActivity
                 }
                 break;
             case MyApp.SETTINGS:
-                if ((resultCode == ActionBarActivity.RESULT_OK) && (intent.getBooleanExtra(BundleKeys.PREFS_ALTERNATIVE_HIGHLIGHT, false))) {
+                if ((resultCode == ActionBarActivity.RESULT_OK) && (intent.getBooleanExtra(BundleKeys.PREFS_ALTERNATIVE_HIGHLIGHT, true))) {
                     if (findViewById(R.id.schedule) != null) {
                         FragmentManager fm = getSupportFragmentManager();
                         FragmentTransaction fragmentTransaction = fm.beginTransaction();
