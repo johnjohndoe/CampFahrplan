@@ -563,7 +563,7 @@ public class FahrplanFragment extends Fragment implements
         Resources resources = activity.getResources();
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(activity);
         boolean useAlternativeHighlight = prefs.getBoolean(
-                BundleKeys.PREFS_ALTERNATIVE_HIGHLIGHT, false);
+                BundleKeys.PREFS_ALTERNATIVE_HIGHLIGHT, true);
 
         EventDrawable eventDrawable = null;
         final String trackName = lecture.track;
