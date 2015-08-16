@@ -61,6 +61,12 @@ android {
             keyAlias props['signing.camp2015-release.keyAlias']
             keyPassword props['signing.camp2015-release.keyPassword']
         }
+        froscon2015 {
+            storeFile file(props['signing.froscon-release.keystoreFilePath'])
+            storePassword props['signing.froscon-release.keystorePassword']
+            keyAlias props['signing.froscon-release.keyAlias']
+            keyPassword props['signing.froscon-release.keyPassword']
+        }
     }
 
     productFlavors {
@@ -97,6 +103,23 @@ android {
             buildConfigField "int", "SCHEDULE_LAST_DAY_END_DAY", "17"
             buildConfigField "boolean", "SCHEDULE_SUPPORTS_HTTPS", "true"
             buildConfigField "String", "SCHEDULE_FEEDBACK_URL", '"https://frab.cccv.de/en/camp2015/public/events/%s/feedback/new"'
+        }
+        froscon2015 {
+            applicationId "info.metadude.android.froscon.schedule"
+            signingConfig signingConfigs.froscon2015
+            buildConfigField "String", "SCHEDULE_DOMAIN", '"programm.froscon.de"'
+            buildConfigField "String", "SCHEDULE_DOMAIN_PART", '"http://programm.froscon.de"'
+            buildConfigField "String", "SCHEDULE_EVENT_PART", '"/events/%1$s.html"'
+            buildConfigField "String", "SCHEDULE_PART", '"/2015"'
+            buildConfigField "String", "SCHEDULE_PATH", '"/2015/schedule.xml"'
+            buildConfigField "int", "SCHEDULE_FIRST_DAY_START_YEAR", "2015"
+            buildConfigField "int", "SCHEDULE_FIRST_DAY_START_MONTH", "8"
+            buildConfigField "int", "SCHEDULE_FIRST_DAY_START_DAY", "22"
+            buildConfigField "int", "SCHEDULE_LAST_DAY_END_YEAR", "2015"
+            buildConfigField "int", "SCHEDULE_LAST_DAY_END_MONTH", "8"
+            buildConfigField "int", "SCHEDULE_LAST_DAY_END_DAY", "23"
+            buildConfigField "boolean", "SCHEDULE_SUPPORTS_HTTPS", "false"
+            buildConfigField "String", "SCHEDULE_FEEDBACK_URL", '"https://frab.froscon.de/en/froscon2014/events/%s/feedback/new"'
         }
     }
 }

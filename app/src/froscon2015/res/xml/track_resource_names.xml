@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<map linked="true">
+	<entry key="'(quasiconf 2015) [Devroom]">quasiconf</entry>
+	<entry key="A decade of Free and Open Source Software">decade_of_foss</entry>
+	<entry key="Acknowledging Contributions">acknowledging_contributions</entry>
+	<entry key="Cloud">cloud</entry>
+	<entry key="Cologne.js [Devroom]">colognejs</entry>
+	<entry key="Culture">culture</entry>
+	<entry key="Databases">databases</entry>
+	<entry key="Deutscher Kernel Gipfel">deutscher_kernel_gipfel</entry>
+	<entry key="Development">development</entry>
+	<entry key="Java [Devroom]">java</entry>
+	<entry key="Lightning Talk">lightning_talks</entry>
+	<entry key="Media">media</entry>
+	<entry key="Monitoring">monitoring</entry>
+	<entry key="New Kids On The Net">new_kids_on_the_net</entry>
+	<entry key="Open Source to go">open_source_to_go</entry>
+	<entry key="other">other</entry>
+	<entry key="PHP [Devroom]">php</entry>
+	<entry key="Python [Devroom]">python</entry>
+	<entry key="Security">security</entry>
+	<entry key="System Administration">system_administration</entry>
+	<entry key="Web Development">web_development</entry>
+    <entry key="">other</entry>
+</map>
+
+
