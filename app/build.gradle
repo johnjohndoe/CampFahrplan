@@ -106,6 +106,7 @@ android {
         }
         froscon2015 {
             applicationId "info.metadude.android.froscon.schedule"
+            versionName "1.31.1 (FrOSCon-Edition)"
             signingConfig signingConfigs.froscon2015
             buildConfigField "String", "SCHEDULE_DOMAIN", '"programm.froscon.de"'
             buildConfigField "String", "SCHEDULE_DOMAIN_PART", '"http://programm.froscon.de"'
