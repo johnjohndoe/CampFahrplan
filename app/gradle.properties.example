@@ -1,5 +1,4 @@
-signing.PRODUCTFLAVOR-release.keystoreFilePath=/home/USERNAME/.android/PRODUCTFLAVOR-release-key.keystore
-signing.PRODUCTFLAVOR-release.keystorePassword=PASSWORD
-signing.PRODUCTFLAVOR-release.keyAlias=PRODUCTFLAVOR
-signing.PRODUCTFLAVOR-release.keyPassword=ANOTHERPASSWORD
-
+signing.froscon-release.keystoreFilePath=/home/USERNAME/.android/froscon-release-key.keystore
+signing.froscon-release.keystorePassword="PASSWORD"
+signing.froscon-release.keyAlias="froscon"
+signing.froscon-release.keyPassword="ANOTHERPASSWORD"
