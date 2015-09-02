@@ -43,6 +43,7 @@
     <color name="event_border_default_security">#fefd7f</color>
     <color name="event_border_default_system_administration">#7ea3fc</color>
     <color name="event_border_default_web_development">#7efcd0</color>
+    <color name="event_border_default_wordpress_meetup_koln_devroom">#3bf57f</color>
 
     <!--Accent color-->
     <color name="event_border_accent">#888</color>
@@ -67,6 +68,7 @@
     <color name="event_border_accent_security">#fefd7f</color>
     <color name="event_border_accent_system_administration">#7ea3fc</color>
     <color name="event_border_accent_web_development">#7efcd0</color>
+    <color name="event_border_accent_wordpress_meetup_koln_devroom">#3bf57f</color>
 
     <!--Accent color highlight-->
     <color name="event_border_accent_highlight">#888</color>
@@ -91,6 +93,7 @@
     <color name="event_border_accent_highlight_security">#fefd7f</color>
     <color name="event_border_accent_highlight_system_administration">#7ea3fc</color>
     <color name="event_border_accent_highlight_web_development">#7efcd0</color>
+    <color name="event_border_accent_highlight_wordpress_meetup_koln_devroom">#3bf57f</color>
 
     <!--Title color-->
     <color name="event_title">#a0000000</color>
