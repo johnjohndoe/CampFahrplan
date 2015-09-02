@@ -565,15 +565,29 @@ public class FahrplanFragment extends Fragment implements
         boolean useAlternativeHighlight = prefs.getBoolean(
                 BundleKeys.PREFS_ALTERNATIVE_HIGHLIGHT, false);
 
-        EventDrawable eventDrawable = null;
+        EventDrawable eventDrawable;
         final String trackName = lecture.track;
         float eventCornerRadiusInPixels = resources.getDimensionPixelSize(
                 R.dimen.event_item_corner_radius);
+        String undefinedTrackNameMessage =
+                "Using default color for undefined track: '" + trackName +
+                        "' of '" + lecture.lecture_id + ": " + lecture.title +
+                        "', schedule version = '" + MyApp.version + "'.";
+        // An undefined track name appears when a new <track></track> value is introduced
+        // to the 'schedule.xml' file after the app has been released.
+        // Such a track name is then missing in 'track_resource_names.xml' of the app.
+
         if (lecture.highlight) {
+            // With highlight
             Integer backgroundColorResourceId = trackBackgrounds.get(trackName);
+            if (backgroundColorResourceId == null) {
+                MyApp.LogDebug(getClass().getName(), "With highlight: " + undefinedTrackNameMessage);
+                backgroundColorResourceId = R.color.event_border_accent_highlight;
+            }
             int backgroundColor = resources.getColor(backgroundColorResourceId);
             backgroundColor = getModifiedColor(backgroundColor, 0, 0.2f, -0.2f);
             if (useAlternativeHighlight) {
+                // Alternative highlighting
                 int strokeColor = resources.getColor(R.color.event_item_selection_stroke);
                 float eventStrokeWidthInPixels = resources.getDimensionPixelSize(
                         R.dimen.event_item_selection_stroke_width);
@@ -581,27 +595,25 @@ public class FahrplanFragment extends Fragment implements
                         backgroundColor, strokeColor, eventStrokeWidthInPixels,
                         eventCornerRadiusInPixels);
             } else {
+                // Traditional highlighting
                 eventDrawable = new EventDrawable(backgroundColor, eventCornerRadiusInPixels);
             }
-            // Without highlight
         } else {
+            // Without highlight
             Integer backgroundColorResourceId = trackBackgrounds.get(trackName);
-            if (backgroundColorResourceId != null) {
-                int backgroundColor = resources.getColor(backgroundColorResourceId);
-                eventDrawable = new EventDrawable(backgroundColor, eventCornerRadiusInPixels);
-            } else {
-                MyApp.LogDebug(getClass().getName(),
-                        "There is no color defined for track: " + trackName);
+            if (backgroundColorResourceId == null) {
+                MyApp.LogDebug(getClass().getName(), "Without highlight: " + undefinedTrackNameMessage);
+                backgroundColorResourceId = R.color.event_border_default;
             }
+            int backgroundColor = resources.getColor(backgroundColorResourceId);
+            eventDrawable = new EventDrawable(backgroundColor, eventCornerRadiusInPixels);
         }
 
-        if (eventDrawable != null) {
-            if (Build.VERSION.SDK_INT < Build.VERSION_CODES.JELLY_BEAN) {
-                //noinspection deprecation
-                view.setBackgroundDrawable(eventDrawable);
-            } else {
-                view.setBackground(eventDrawable);
-            }
+        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.JELLY_BEAN) {
+            //noinspection deprecation
+            view.setBackgroundDrawable(eventDrawable);
+        } else {
+            view.setBackground(eventDrawable);
         }
         view.setPadding(padding, padding, padding, padding);
     }
