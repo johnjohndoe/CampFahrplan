@@ -1,5 +1,4 @@
-signing.PRODUCTFLAVOR-release.keystoreFilePath=/home/USERNAME/.android/PRODUCTFLAVOR-release-key.keystore
-signing.PRODUCTFLAVOR-release.keystorePassword=PASSWORD
-signing.PRODUCTFLAVOR-release.keyAlias=PRODUCTFLAVOR
-signing.PRODUCTFLAVOR-release.keyPassword=ANOTHERPASSWORD
-
+signing.mrmcd-release.keystoreFilePath=/home/USERNAME/.android/mrmcd-release-key.keystore
+signing.mrmcd-release.keystorePassword="PASSWORD"
+signing.mrmcd-release.keyAlias="mrmcd"
+signing.mrmcd-release.keyPassword="ANOTHERPASSWORD"
