@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MRMCD15 Fahrplan</string>
+    <string name="conference_url">
+        <![CDATA[<a href="https://mrmcd.net/2015/">https://mrmcd.net/2015/</a>]]>
+    </string>
+    <string name="source_code">
+        <![CDATA[<a href="https://github.com/johnjohndoe/CampFahrplan/tree/mrmcd-2015">Source code</a>]]>
+    </string>
+    <string name="google_play_store">
+        <![CDATA[<a href="https://play.google.com/store/apps/details?id=info.metadude.android.mrmcd.schedule">Google PlayStore listing</a>]]>
+    </string>
+    <string name="copyright_logo">
+        Design of the MRMCD15 artwork: Alexander Brock and Raphael Michel
+    </string>
+</resources>

@@ -61,6 +61,12 @@ android {
             keyAlias props['signing.camp2015-release.keyAlias']
             keyPassword props['signing.camp2015-release.keyPassword']
         }
+        mrmcd2015 {
+            storeFile file(props['signing.mrmcd-release.keystoreFilePath'])
+            storePassword props['signing.mrmcd-release.keystorePassword']
+            keyAlias props['signing.mrmcd-release.keyAlias']
+            keyPassword props['signing.mrmcd-release.keyPassword']
+        }
     }
 
     productFlavors {
@@ -97,6 +103,24 @@ android {
             buildConfigField "int", "SCHEDULE_LAST_DAY_END_DAY", "17"
             buildConfigField "boolean", "SCHEDULE_SUPPORTS_HTTPS", "true"
             buildConfigField "String", "SCHEDULE_FEEDBACK_URL", '"https://frab.cccv.de/en/camp2015/public/events/%s/feedback/new"'
+        }
+        mrmcd2015 {
+            applicationId "info.metadude.android.mrmcd.schedule"
+            versionName "1.31.1 (MRMCD-Edition)"
+            signingConfig signingConfigs.mrmcd2015
+            buildConfigField "String", "SCHEDULE_DOMAIN", '"mrmcd.net"'
+            buildConfigField "String", "SCHEDULE_DOMAIN_PART", '"https://mrmcd.net"'
+            buildConfigField "String", "SCHEDULE_EVENT_PART", '"/events/%1$s.html"'
+            buildConfigField "String", "SCHEDULE_PART", '"/2015/fahrplan/"'
+            buildConfigField "String", "SCHEDULE_PATH", '"/2015/fahrplan/schedule.xml"'
+            buildConfigField "int", "SCHEDULE_FIRST_DAY_START_YEAR", "2015"
+            buildConfigField "int", "SCHEDULE_FIRST_DAY_START_MONTH", "9"
+            buildConfigField "int", "SCHEDULE_FIRST_DAY_START_DAY", "4"
+            buildConfigField "int", "SCHEDULE_LAST_DAY_END_YEAR", "2015"
+            buildConfigField "int", "SCHEDULE_LAST_DAY_END_MONTH", "9"
+            buildConfigField "int", "SCHEDULE_LAST_DAY_END_DAY", "6"
+            buildConfigField "boolean", "SCHEDULE_SUPPORTS_HTTPS", "true"
+            buildConfigField "String", "SCHEDULE_FEEDBACK_URL", '"https://frab.cccv.de/de/MRMCD15/public/events/%s/feedback/new"'
         }
     }
 }

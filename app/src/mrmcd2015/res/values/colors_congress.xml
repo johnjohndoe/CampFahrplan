@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?><!-- File created by the Android Action Bar Style Generator
+
+     Copyright (C) 2011 The Android Open Source Project
+     Copyright (C) 2012 readyState Software Ltd
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<resources>
+    <color name="pressed_congress">#CC0099AB</color>
+
+    <!-- Default state -->
+    <color name="event_border_default">#808080</color>
+    <color name="event_border_default_challenges">#df0024</color>
+    <color name="event_border_default_talks">#009f3d</color>
+    <color name="event_border_default_workshops">#0085c7</color>
+
+    <!--Accent color-->
+    <color name="event_border_accent">#888</color>
+    <color name="event_border_accent_challenges">
+        @color/event_border_default_challenges
+    </color>
+    <color name="event_border_accent_talks">
+        @color/event_border_default_talks
+    </color>
+    <color name="event_border_accent_workshops">
+        @color/event_border_default_workshops
+    </color>
+
+    <!--Accent color highlight-->
+    <color name="event_border_accent_highlight">
+        @color/event_border_accent
+    </color>
+    <color name="event_border_accent_highlight_challenges">
+        @color/event_border_default_challenges
+    </color>
+    <color name="event_border_accent_highlight_talks">
+        @color/event_border_default_talks
+    </color>
+    <color name="event_border_accent_highlight_workshops">
+        @color/event_border_default_workshops
+    </color>
+
+    <!--Title color-->
+    <color name="event_title">#a0000000</color>
+    <color name="event_title_highlight">#000</color>
+</resources>

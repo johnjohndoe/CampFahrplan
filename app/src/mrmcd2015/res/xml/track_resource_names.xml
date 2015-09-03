@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<map linked="true">
+	<entry key="Challenges">challenges</entry>
+	<entry key="Talks">talks</entry>
+	<entry key="Workshops">workshops</entry>
+    <entry key="">other</entry>
+</map>
+
+
