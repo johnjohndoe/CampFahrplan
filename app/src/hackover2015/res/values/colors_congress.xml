@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?><!-- File created by the Android Action Bar Style Generator
+
+     Copyright (C) 2011 The Android Open Source Project
+     Copyright (C) 2012 readyState Software Ltd
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<resources>
+    <color name="pressed_congress">#cccc0000</color>
+
+    <!-- Default state -->
+    <color name="event_border_default">#808080</color>
+    <color name="event_border_default_gesellschaft_politik">#cc6600</color>
+    <color name="event_border_default_freifunk">#cccc00</color>
+    <color name="event_border_default_art">#66cc00</color>
+
+    <!--Accent color-->
+    <color name="event_border_accent">#888</color>
+    <color name="event_border_accent_gesellschaft_politik">
+        @color/event_border_default_gesellschaft_politik
+    </color>
+    <color name="event_border_accent_freifunk">
+        @color/event_border_default_freifunk
+    </color>
+    <color name="event_border_accent_art">
+        @color/event_border_default_art
+    </color>
+
+    <!--Accent color highlight-->
+    <color name="event_border_accent_highlight">
+        @color/event_border_accent
+    </color>
+    <color name="event_border_accent_highlight_gesellschaft_politik">
+        @color/event_border_default_gesellschaft_politik
+    </color>
+    <color name="event_border_accent_highlight_freifunk">
+        @color/event_border_default_freifunk
+    </color>
+    <color name="event_border_accent_highlight_art">
+        @color/event_border_default_art
+    </color>
+
+    <!--Title color-->
+    <color name="event_title">#a0000000</color>
+    <color name="event_title_highlight">#000</color>
+</resources>
