@@ -14,6 +14,7 @@
     <!-- Alarm dialogs -->
     <color name="alert_dialog_title">@color/colorAccent</color>
     <color name="alert_dialog_button_text">@color/colorPrimary</color>
+    <color name="alert_dialog_background">@color/fahrplan_background</color>
 
     <!-- Schedule changes -->
     <color name="schedule_change">#ff0000</color>

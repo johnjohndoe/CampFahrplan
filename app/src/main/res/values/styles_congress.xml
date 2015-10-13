@@ -59,6 +59,7 @@
         <item name="colorAccent">@color/alert_dialog_button_text</item>
         <item name="android:textColor">@color/alert_dialog_title</item>
         <item name="android:textAppearance">@style/TextAppearance.AppCompat.Title</item>
+        <item name="android:background">@color/alert_dialog_background</item>
     </style>
 
     <style name="MyActionDropDownStyle" parent="Widget.AppCompat.Spinner.DropDown.ActionBar">
