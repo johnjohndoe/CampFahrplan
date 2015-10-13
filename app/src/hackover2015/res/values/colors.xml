@@ -22,4 +22,6 @@
     <color name="schedule_list_header_text">#eee</color>
     <color name="event_item_selection_stroke">@android:color/white</color>
 
+    <color name="alert_dialog_button_text">@color/colorPrimaryDark</color>
+
 </resources>
