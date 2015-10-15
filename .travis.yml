@@ -38,4 +38,4 @@ before_script:
   - mv app/gradle.properties.example app/gradle.properties
 
 script:
-  - ./gradlew clean assembleDebug
+  - ./gradlew clean assembleHackover2015Debug
