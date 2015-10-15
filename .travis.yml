@@ -15,6 +15,7 @@ android:
 
     # The libraries we can't get from Maven Central or similar
     - extra-android-support
+    - extra-android-m2repository
 
 
 notifications:
@@ -37,4 +38,4 @@ before_script:
   - mv app/gradle.properties.example app/gradle.properties
 
 script:
-  - ./gradlew clean assembleDebug
+  - ./gradlew clean assembleHackover2015Debug
