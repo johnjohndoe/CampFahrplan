@@ -1,5 +1,4 @@
-signing.PRODUCTFLAVOR-release.keystoreFilePath=/home/USERNAME/.android/PRODUCTFLAVOR-release-key.keystore
-signing.PRODUCTFLAVOR-release.keystorePassword=PASSWORD
-signing.PRODUCTFLAVOR-release.keyAlias=PRODUCTFLAVOR
-signing.PRODUCTFLAVOR-release.keyPassword=ANOTHERPASSWORD
-
+signing.hackover-release.keystoreFilePath=/home/USERNAME/.android/hackover-release-key.keystore
+signing.hackover-release.keystorePassword="PASSWORD"
+signing.hackover-release.keyAlias="hackover"
+signing.hackover-release.keyPassword="ANOTHERPASSWORD"
