@@ -33,4 +33,8 @@
     <dimen name="event_item_right_offset">1dp</dimen>
     <dimen name="event_item_selection_stroke_width">2dp</dimen>
 
+    <!-- Event detail white space -->
+    <dimen name="event_detail_section_margin_bottom">8dp</dimen>
+    <dimen name="event_detail_section_margin_top">16dp</dimen>
+
 </resources>
