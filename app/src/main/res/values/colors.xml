@@ -16,6 +16,9 @@
     <color name="schedule_change_canceled">#808080</color>
 
     <!-- Event detail -->
+    <color name="event_detail_background">
+        @color/lecture_background
+    </color>
     <color name="event_detail_text">
         @android:color/black
     </color>
