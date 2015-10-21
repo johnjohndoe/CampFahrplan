@@ -33,6 +33,17 @@
     <dimen name="event_item_right_offset">1dp</dimen>
     <dimen name="event_item_selection_stroke_width">2dp</dimen>
 
+    <!-- Event detail white space -->
+    <dimen name="event_detail_section_margin_bottom">8dp</dimen>
+    <dimen name="event_detail_section_margin_top">16dp</dimen>
+    <item name="event_detail_line_spacing_multiplier" format="float" type="dimen">1.1</item>
+
+    <!-- Event detail text sizes -->
+    <dimen name="event_detail_text">16sp</dimen>
+    <dimen name="event_detail_title">24sp</dimen>
+    <dimen name="event_detail_subtitle">16sp</dimen>
+    <dimen name="event_detail_speakers">13sp</dimen>
+
     <!-- Alert dialogs -->
     <!-- See: https://www.google.de/design/spec/components/dialogs.html#dialogs-specs -->
     <dimen name="alert_dialog_content_margin">24dp</dimen>
