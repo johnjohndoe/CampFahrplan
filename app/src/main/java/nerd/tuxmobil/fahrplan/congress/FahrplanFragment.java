@@ -174,7 +174,7 @@ public class FahrplanFragment extends Fragment implements
             MyApp.LogDebug(LOG_TAG, "day " + mDay);
         }
 
-        if (MyApp.numdays > 0) {
+        if (MyApp.numdays > 1) {
             build_navigation_menu();
         }
 
@@ -249,7 +249,7 @@ public class FahrplanFragment extends Fragment implements
         }
         scrollToCurrent(mDay);
         ActionBar actionbar = ((ActionBarActivity)getActivity()).getSupportActionBar();
-        if (actionbar != null) {
+        if (actionbar != null && actionbar.getNavigationMode() == ActionBar.NAVIGATION_MODE_LIST) {
             actionbar.setSelectedNavigationItem(mDay - 1);
         }
     }
@@ -955,7 +955,9 @@ public class FahrplanFragment extends Fragment implements
             if ((MyApp.numdays == 0) || (!version.equals(MyApp.version))) {
                 FahrplanMisc.loadMeta(getActivity());
                 FahrplanMisc.loadDays(getActivity());
-                build_navigation_menu();
+                if (MyApp.numdays > 1) {
+                    build_navigation_menu();
+                }
                 SharedPreferences prefs = getActivity().getSharedPreferences(PREFS_NAME, 0);
                 mDay = prefs.getInt("displayDay", 1);
                 if (mDay > MyApp.numdays) {
