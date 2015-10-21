@@ -6,14 +6,17 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
+import android.content.res.Resources;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteException;
+import android.graphics.Color;
 import android.graphics.Typeface;
 import android.os.Build;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentActivity;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
 import android.text.format.Time;
@@ -88,8 +91,6 @@ public class FahrplanFragment extends Fragment implements
             "Lounge"
     };
 
-    private HashMap<String, Integer> trackBackgroundsHi;
-
     public static final String PREFS_NAME = "settings";
 
     private int screenWidth = 0;
@@ -154,19 +155,11 @@ public class FahrplanFragment extends Fragment implements
             });
         }
 
-        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(getActivity());
         trackBackgrounds = TrackBackgrounds.getTrackBackgroundNormal(getActivity());
-        if (prefs.getBoolean(BundleKeys.PREFS_ALTERNATIVE_HIGHLIGHT, false)) {
-            MyApp.LogDebug(LOG_TAG, "alternative highlight");
-            trackBackgroundsHi = TrackBackgrounds.getTrackBackgroundHighLightAlternative(getActivity());
-        } else {
-            MyApp.LogDebug(LOG_TAG, "normal highlight");
-            trackBackgroundsHi = TrackBackgrounds.getTrackBackgroundHighLight(getActivity());
-        }
         trackAccentColors = TrackBackgrounds.getTrackAccentColorNormal(getActivity());
         trackAccentColorsHighlight = TrackBackgrounds.getTrackAccentColorHighlight(getActivity());
 
-        prefs = getActivity().getSharedPreferences(PREFS_NAME, 0);
+        SharedPreferences prefs = getActivity().getSharedPreferences(PREFS_NAME, 0);
         mDay = prefs.getInt("displayDay", 1);
 
         inflater = (LayoutInflater) getActivity()
@@ -560,6 +553,68 @@ public class FahrplanFragment extends Fragment implements
         return padding;
     }
 
+    private void setLectureBackground(Lecture lecture, View view) {
+        int padding = getEventPadding();
+
+        FragmentActivity activity = getActivity();
+        Resources resources = activity.getResources();
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(activity);
+        boolean useAlternativeHighlight = prefs.getBoolean(
+                BundleKeys.PREFS_ALTERNATIVE_HIGHLIGHT, false);
+
+        EventDrawable eventDrawable;
+        final String trackName = lecture.track;
+        float eventCornerRadiusInPixels = resources.getDimensionPixelSize(
+                R.dimen.event_item_corner_radius);
+        String undefinedTrackNameMessage =
+                "Using default color for undefined track: '" + trackName +
+                        "' of '" + lecture.lecture_id + ": " + lecture.title +
+                        "', schedule version = '" + MyApp.version + "'.";
+        // An undefined track name appears when a new <track></track> value is introduced
+        // to the 'schedule.xml' file after the app has been released.
+        // Such a track name is then missing in 'track_resource_names.xml' of the app.
+
+        if (lecture.highlight) {
+            // With highlight
+            Integer backgroundColorResourceId = trackBackgrounds.get(trackName);
+            if (backgroundColorResourceId == null) {
+                MyApp.LogDebug(getClass().getName(), "With highlight: " + undefinedTrackNameMessage);
+                backgroundColorResourceId = R.color.event_border_accent_highlight;
+            }
+            int backgroundColor = resources.getColor(backgroundColorResourceId);
+            backgroundColor = getModifiedColor(backgroundColor, 0, 0.2f, -0.2f);
+            if (useAlternativeHighlight) {
+                // Alternative highlighting
+                int strokeColor = resources.getColor(R.color.event_item_selection_stroke);
+                float eventStrokeWidthInPixels = resources.getDimensionPixelSize(
+                        R.dimen.event_item_selection_stroke_width);
+                eventDrawable = new EventDrawable(
+                        backgroundColor, strokeColor, eventStrokeWidthInPixels,
+                        eventCornerRadiusInPixels);
+            } else {
+                // Traditional highlighting
+                eventDrawable = new EventDrawable(backgroundColor, eventCornerRadiusInPixels);
+            }
+        } else {
+            // Without highlight
+            Integer backgroundColorResourceId = trackBackgrounds.get(trackName);
+            if (backgroundColorResourceId == null) {
+                MyApp.LogDebug(getClass().getName(), "Without highlight: " + undefinedTrackNameMessage);
+                backgroundColorResourceId = R.color.event_border_default;
+            }
+            int backgroundColor = resources.getColor(backgroundColorResourceId);
+            eventDrawable = new EventDrawable(backgroundColor, eventCornerRadiusInPixels);
+        }
+
+        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.JELLY_BEAN) {
+            //noinspection deprecation
+            view.setBackgroundDrawable(eventDrawable);
+        } else {
+            view.setBackground(eventDrawable);
+        }
+        view.setPadding(padding, padding, padding, padding);
+    }
+
     private void setLectureTextColor(Lecture lecture, View view) {
         TextView track = (TextView) view.findViewById(R.id.event_track);
         TextView title = (TextView) view.findViewById(R.id.event_title);
@@ -577,25 +632,36 @@ public class FahrplanFragment extends Fragment implements
             subtitle.setTextColor(getResources().getColor(R.color.event_title));
             speakers.setTextColor(getResources().getColor(R.color.event_title));
         }
+        int eventTitleColor;
         if (color == null) {
-            track.setTextColor(getResources().getColor(R.color.event_title));
+            eventTitleColor = getResources().getColor(R.color.event_title);
         } else {
-            track.setTextColor(getResources().getColor(color));
+            // Dear friend. If you stop here because the resource cannot be found
+            // there is probably a typo in the name of the color resource.
+            // Good luck when searching for it.
+            eventTitleColor = getResources().getColor(color);
         }
+        if (color != null && !lecture.highlight) {
+            eventTitleColor = getModifiedColor(eventTitleColor, 0, 0, -0.2f);
+        }
+        track.setTextColor(eventTitleColor);
     }
 
-    private void setLectureBackground(Lecture lecture, View view) {
-        Integer drawable;
-        int padding = getEventPadding();
-        if (lecture.highlight) {
-            drawable = trackBackgroundsHi.get(lecture.track);
-        } else {
-            drawable = trackBackgrounds.get(lecture.track);
-        }
-        if (drawable != null) {
-            view.setBackgroundResource(drawable);
-            view.setPadding(padding, padding, padding, padding);
-        }
+
+    // Use a negative lightnessDelta to decrease or a
+    // positive lightnessDelta to increase the lightness.
+    // Use a negative saturationDelta to decrease or a
+    // positive saturationDelta to increase the lightness.
+    private int getModifiedColor(int color,
+            float hueDelta,
+            float saturationDelta,
+            float lightnessDelta) {
+        float[] hsv = new float[3];
+        Color.colorToHSV(color, hsv);
+        hsv[0] += hueDelta; // Hue [0-360]
+        hsv[1] += saturationDelta; // Saturation [0-1]
+        hsv[2] += lightnessDelta; // Lightness value [0-1]
+        return Color.HSVToColor(hsv);
     }
 
     private void fillRoom(ViewGroup root, int roomIdx) {
