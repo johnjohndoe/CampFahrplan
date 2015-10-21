@@ -61,6 +61,12 @@ android {
             keyAlias props['signing.camp2015-release.keyAlias']
             keyPassword props['signing.camp2015-release.keyPassword']
         }
+        datenspuren2015 {
+            storeFile file(props['signing.datenspuren-release.keystoreFilePath'])
+            storePassword props['signing.datenspuren-release.keystorePassword']
+            keyAlias props['signing.datenspuren-release.keyAlias']
+            keyPassword props['signing.datenspuren-release.keyPassword']
+        }
     }
 
     productFlavors {
@@ -97,6 +103,24 @@ android {
             buildConfigField "int", "SCHEDULE_LAST_DAY_END_DAY", "17"
             buildConfigField "boolean", "SCHEDULE_SUPPORTS_HTTPS", "true"
             buildConfigField "String", "SCHEDULE_FEEDBACK_URL", '"https://frab.cccv.de/en/camp2015/public/events/%s/feedback/new"'
+        }
+        datenspuren2015 {
+            applicationId "info.metadude.android.datenspuren.schedule"
+            versionName "1.31.1 (Datenspuren-Edition)"
+            signingConfig signingConfigs.datenspuren2015
+            buildConfigField "String", "SCHEDULE_DOMAIN", '"datenspuren.de"'
+            buildConfigField "String", "SCHEDULE_DOMAIN_PART", '"https://datenspuren.de"'
+            buildConfigField "String", "SCHEDULE_EVENT_PART", '"/events/%1$s.html"'
+            buildConfigField "String", "SCHEDULE_PART", '"/2015/fahrplan"'
+            buildConfigField "String", "SCHEDULE_PATH", '"/2015/fahrplan/schedule.xml"'
+            buildConfigField "int", "SCHEDULE_FIRST_DAY_START_YEAR", "2015"
+            buildConfigField "int", "SCHEDULE_FIRST_DAY_START_MONTH", "10"
+            buildConfigField "int", "SCHEDULE_FIRST_DAY_START_DAY", "24"
+            buildConfigField "int", "SCHEDULE_LAST_DAY_END_YEAR", "2015"
+            buildConfigField "int", "SCHEDULE_LAST_DAY_END_MONTH", "10"
+            buildConfigField "int", "SCHEDULE_LAST_DAY_END_DAY", "25"
+            buildConfigField "boolean", "SCHEDULE_SUPPORTS_HTTPS", "false"
+            buildConfigField "String", "SCHEDULE_FEEDBACK_URL", '"https://frab.cccv.de/en/DS2015/public/events/%s/feedback/new"'
         }
     }
 }
