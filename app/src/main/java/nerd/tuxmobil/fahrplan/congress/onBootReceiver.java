@@ -5,12 +5,10 @@ import android.app.PendingIntent;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteException;
 import android.net.Uri;
-import android.preference.PreferenceManager;
 import android.text.format.Time;
 
 import nerd.tuxmobil.fahrplan.congress.FahrplanContract.AlarmsTable;
@@ -93,10 +91,11 @@ public final class onBootReceiver extends BroadcastReceiver {
         }
 
         // start auto updates
-        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
-        boolean do_auto_updates = prefs.getBoolean("auto_update", false);
-        if (do_auto_updates) {
-            long last_fetch = prefs.getLong("last_fetch", 0);
+        MyApp application = (MyApp) context.getApplicationContext();
+        PreferencesHelper preferencesHelper = application.getPreferencesHelper();
+        boolean doAutoUpdate = preferencesHelper.autoUpdatePreference.get();
+        if (doAutoUpdate) {
+            long last_fetch = preferencesHelper.lastFetchPreferences.get();
             long now_millis;
             now.setToNow();
             now_millis = now.toMillis(true);

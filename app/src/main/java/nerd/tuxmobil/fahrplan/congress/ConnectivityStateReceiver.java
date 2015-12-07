@@ -4,11 +4,9 @@ import android.content.BroadcastReceiver;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
-import android.preference.PreferenceManager;
 
 public class ConnectivityStateReceiver extends BroadcastReceiver {
 
@@ -25,9 +23,9 @@ public class ConnectivityStateReceiver extends BroadcastReceiver {
             MyApp.LogDebug(LOG_TAG, "is connected");
 
             disableReceiver(context);
-            SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
-            boolean do_auto_updates = prefs.getBoolean("auto_update", false);
-            if (do_auto_updates) {
+            MyApp application = (MyApp) context.getApplicationContext();
+            boolean doAutoUpdates = application.getPreferencesHelper().autoUpdatePreference.get();
+            if (doAutoUpdates) {
                 Intent updateIntent = new Intent(context, UpdateService.class);
                 context.startService(updateIntent);
             }
