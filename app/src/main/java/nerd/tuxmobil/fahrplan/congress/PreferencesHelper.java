@@ -5,6 +5,7 @@ import android.content.SharedPreferences;
 import android.support.annotation.NonNull;
 
 import info.metadude.android.typedpreferences.BooleanPreference;
+import info.metadude.android.typedpreferences.IntPreference;
 import info.metadude.android.typedpreferences.LongPreference;
 import info.metadude.android.typedpreferences.StringPreference;
 
@@ -30,6 +31,8 @@ public class PreferencesHelper {
 
     protected final BooleanPreference changesSeenPreference;
 
+    protected final IntPreference displayDayPreference;
+
     protected final BooleanPreference insistentAlarmPreference;
 
     protected final LongPreference lastFetchPreferences;
@@ -49,6 +52,8 @@ public class PreferencesHelper {
                 sharedPreferences, "auto_update", false);
         changesSeenPreference = new BooleanPreference(
                 sharedPreferences, PREFS_CHANGES_SEEN, true);
+        displayDayPreference = new IntPreference(
+                sharedPreferences, "displayDay", 1);
         insistentAlarmPreference = new BooleanPreference(
                 sharedPreferences, "insistent", false);
         lastFetchPreferences = new LongPreference(
