@@ -19,12 +19,17 @@ android {
         versionName "1.32.2"
         minSdkVersion 14
         targetSdkVersion 22
-
         archivesBaseName = "Fahrplan-$versionName"
 
         // Build information
         buildConfigField "String", "BUILD_TIME", "\"${buildTime()}\""
         buildConfigField "String", "GIT_SHA", "\"${gitSha()}\""
+
+        // Streaming media API configuration
+        buildConfigField "String", "STREAMING_API_BASE_URL_DEBUG",
+                "\"https://gist.githubusercontent.com\""
+        buildConfigField "String", "STREAMING_API_OFFERS_PATH_DEBUG",
+                "\"/johnjohndoe/7c84b77fdbcaa332e4d8/raw/5c0b0f4edfc8e939029b1e539a2ef5757601b205/streams-v1.json\""
     }
 
     buildTypes {
@@ -119,14 +124,20 @@ android {
     }
 }
 
+ext {
+    okHttpVersion = "2.7.0"
+}
+
 dependencies {
     compile "com.android.support:appcompat-v7:23.1.1"
     compile 'com.squareup.okhttp:okhttp:2.7.0'
+    compile "com.squareup.okhttp:okhttp:${okHttpVersion}"
+    compile "com.squareup.okhttp:logging-interceptor:${okHttpVersion}"
+    compile "com.github.johnjohndoe:Brockman:06e68903ab79aaa30c050b222d46a19fa0a5defd"
 
     testCompile 'junit:junit:4.12'
     testCompile 'com.squareup.assertj:assertj-android:1.1.1'
     testCompile 'com.android.support:support-annotations:23.1.1'
-
 }
 
 def gitSha() {

@@ -8,6 +8,8 @@ import android.content.SharedPreferences.Editor;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
+import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
 import android.support.v4.app.DialogFragment;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -23,9 +25,23 @@ import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.ProgressBar;
 
+import com.squareup.okhttp.Cache;
+import com.squareup.okhttp.OkHttpClient;
+import com.squareup.okhttp.logging.HttpLoggingInterceptor;
+
+import java.io.File;
+import java.util.List;
+
+import info.metadude.java.library.brockman.ApiModule;
+import info.metadude.java.library.brockman.StreamsService;
+import info.metadude.java.library.brockman.models.Offer;
 import nerd.tuxmobil.fahrplan.congress.CustomHttpClient.HTTP_STATUS;
 import nerd.tuxmobil.fahrplan.congress.FahrplanContract.FragmentTags;
 import nerd.tuxmobil.fahrplan.congress.MyApp.TASKS;
+import retrofit.Call;
+import retrofit.Callback;
+import retrofit.Response;
+import retrofit.Retrofit;
 
 public class MainActivity extends AppCompatActivity implements
         OnParseCompleteListener,
@@ -38,6 +54,8 @@ public class MainActivity extends AppCompatActivity implements
         ConfirmationDialog.OnConfirmationDialogClicked {
 
     private static final String LOG_TAG = "MainActivity";
+
+    private static final int STREAMING_OFFERS_HTTP_RESPONSE_DISK_CACHE_MAX_SIZE = 1024;
 
     private FetchFahrplan fetcher;
 
@@ -99,6 +117,7 @@ public class MainActivity extends AppCompatActivity implements
                 if ((MyApp.numdays == 0) && (savedInstanceState == null)) {
                     MyApp.LogDebug(LOG_TAG, "fetch in onCreate bc. numdays==0");
                     fetchFahrplan(this);
+                    fetchStreamingOffers();
                 }
                 break;
         }
@@ -258,6 +277,56 @@ public class MainActivity extends AppCompatActivity implements
         }
     }
 
+    private void fetchStreamingOffers() {
+        OkHttpClient okHttpClient = ((MyApp)getApplication()).getOkHttpClient();
+        final File cacheBaseDir = getCacheDir();
+        if (cacheBaseDir != null) {
+            File streamingOffersCacheDir = new File(cacheBaseDir, "StreamingOffersResponseCache");
+            Cache cache = new Cache(streamingOffersCacheDir,
+                    STREAMING_OFFERS_HTTP_RESPONSE_DISK_CACHE_MAX_SIZE);
+            okHttpClient.setCache(cache);
+        }
+        if (BuildConfig.DEBUG) {
+            MyApp.HTTP_LOGGING_INTERCEPTOR.setLevel(HttpLoggingInterceptor.Level.HEADERS);
+            okHttpClient.interceptors().add(MyApp.HTTP_LOGGING_INTERCEPTOR);
+        }
+        StreamsService streamsService = ApiModule.provideStreamsService(
+                BuildConfig.STREAMING_API_BASE_URL_DEBUG, okHttpClient);
+        final Call<List<Offer>> offersCall = streamsService.getOffers(
+                BuildConfig.STREAMING_API_OFFERS_PATH_DEBUG);
+        offersCall.enqueue(new Callback<List<Offer>>() {
+            @Override
+            public void onResponse(Response<List<Offer>> response, Retrofit retrofit) {
+                if (response.isSuccess()) {
+                    onGetOffersResponseSuccess(response.body());
+                } else {
+                    com.squareup.okhttp.Response raw = response.raw();
+                    onGetOffersResponseFailure("HTTP " + raw.code() + ":" + raw.message());
+                }
+            }
+
+            @Override
+            public void onFailure(Throwable t) {
+                MyApp.LogDebug(LOG_TAG, "Fetching streaming offers failed: " + t.getMessage());
+                t.printStackTrace();
+            }
+        });
+    }
+
+    private void onGetOffersResponseSuccess(@Nullable List<Offer> offers) {
+        if (offers != null) {
+            MyApp.LogDebug(LOG_TAG, "Fetching streaming offers succeeded: " +
+                    offers.size() + " offers.");
+            // TODO Process offers
+        } else {
+            MyApp.LogDebug(LOG_TAG, "Fetching streaming offers failed. Offers is null.");
+        }
+    }
+
+    private void onGetOffersResponseFailure(@NonNull String message) {
+        MyApp.LogDebug(LOG_TAG, message);
+    }
+
     @Override
     protected void onDestroy() {
         super.onDestroy();
@@ -334,6 +403,7 @@ public class MainActivity extends AppCompatActivity implements
         switch (item.getItemId()) {
             case R.id.item_refresh:
                 fetchFahrplan(this);
+                fetchStreamingOffers();
                 return true;
             case R.id.item_about:
                 aboutDialog();
@@ -458,6 +528,7 @@ public class MainActivity extends AppCompatActivity implements
     public void cert_accepted() {
         MyApp.LogDebug(LOG_TAG, "fetch on cert accepted.");
         fetchFahrplan(MainActivity.this);
+        fetchStreamingOffers();
     }
 
     @Override

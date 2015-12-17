@@ -1,8 +1,12 @@
 package nerd.tuxmobil.fahrplan.congress;
 
 import android.app.Application;
+import android.support.annotation.NonNull;
 import android.util.Log;
 import android.util.SparseIntArray;
+
+import com.squareup.okhttp.OkHttpClient;
+import com.squareup.okhttp.logging.HttpLoggingInterceptor;
 
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -74,12 +78,26 @@ public class MyApp extends Application {
 
     public static SparseIntArray roomList = new SparseIntArray();
 
+    public static final HttpLoggingInterceptor HTTP_LOGGING_INTERCEPTOR =
+            BuildConfig.DEBUG ? new HttpLoggingInterceptor() : null;
+
+    protected OkHttpClient okHttpClient;
+
     @Override
     public void onCreate() {
         super.onCreate();
         app = this;
         task_running = TASKS.NONE;
         lectureList = null;
+    }
+
+    public
+    @NonNull
+    OkHttpClient getOkHttpClient() {
+        if (okHttpClient == null) {
+            okHttpClient = new OkHttpClient();
+        }
+        return okHttpClient;
     }
 
     private static long getMilliseconds(String timeZoneId, int year, int month, int day) {
