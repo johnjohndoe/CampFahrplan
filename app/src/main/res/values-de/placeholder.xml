@@ -52,6 +52,9 @@
     <string name="placeholder_event_links">
         OCTO der Künstlergruppe Telekommunisten\nTelekommunisten workshop
     </string>
+    <string name="placeholder_event_streams">
+        Saal 1 FullHD Video (WebM)\nSaal 1 FullHD Video (HLS)
+    </string>
     <string name="placeholder_event_online">
         https://events.ccc.de/congress/2013/Fahrplan/events/5610.html
     </string>

@@ -40,6 +40,16 @@
         tools:text="@string/placeholder_event_links"/>
 
     <TextView
+        android:id="@+id/streamsSection"
+        style="@style/EventDetailSection.Header"
+        android:text="@string/event_detail_section_title_streams"/>
+
+    <TextView
+        android:id="@+id/streams"
+        style="@style/EventDetailSection"
+        tools:text="@string/placeholder_event_streams"/>
+
+    <TextView
         android:id="@+id/eventOnlineSection"
         style="@style/EventDetailSection.Header"
         android:text="@string/event_online"/>

@@ -9,6 +9,7 @@ import android.support.v4.app.DialogFragment;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.text.Html;
+import android.text.TextUtils;
 import android.text.method.LinkMovementMethod;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -20,8 +21,13 @@ import android.widget.TextView;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 import java.util.Locale;
+
+import info.metadude.java.library.brockman.models.Stream;
+import info.metadude.java.library.brockman.models.Url;
 
 interface OnCloseDetailListener {
 
@@ -186,6 +192,33 @@ public class EventDetailFragment extends Fragment {
                 l.setVisibility(View.GONE);
                 t.setVisibility(View.GONE);
             }
+
+            // Media streams (optional)
+
+            l = (TextView) view.findViewById(R.id.streamsSection);
+            l.setTypeface(bold);
+            t = (TextView) view.findViewById(R.id.streams);
+            t.setTypeface(regular);
+
+            String joinedStreamLinks = null;
+            if (MyApp.offers != null && lecture.room != null) {
+                List<Stream> streamsForLectureRoom = MediaStreamsHelper.
+                        getStreamsForLectureRoom(MyApp.offers, lecture.room);
+                joinedStreamLinks = MediaStreamsHelper
+                        .getJoinedStreamLinks(streamsForLectureRoom);
+            }
+            if (joinedStreamLinks == null) {
+                l.setVisibility(View.GONE);
+                t.setVisibility(View.GONE);
+            } else {
+                t.setText(Html.fromHtml(joinedStreamLinks), TextView.BufferType.SPANNABLE);
+                t.setLinkTextColor(getResources().getColor(R.color.text_link_color));
+                t.setMovementMethod(new LinkMovementMethod());
+                l.setVisibility(View.VISIBLE);
+                t.setVisibility(View.VISIBLE);
+            }
+
+            // Event online
 
             final TextView eventOnlineSection = (TextView) view
                     .findViewById(R.id.eventOnlineSection);

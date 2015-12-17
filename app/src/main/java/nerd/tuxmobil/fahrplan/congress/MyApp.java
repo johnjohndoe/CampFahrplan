@@ -12,7 +12,10 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
 import java.util.HashMap;
+import java.util.List;
 import java.util.TimeZone;
+
+import info.metadude.java.library.brockman.models.Offer;
 
 public class MyApp extends Application {
 
@@ -21,6 +24,8 @@ public class MyApp extends Application {
     public static boolean DEBUG = false;
 
     public static LectureList lectureList = null;
+
+    public static List<Offer> offers = null;
 
     public static int numdays;
 
