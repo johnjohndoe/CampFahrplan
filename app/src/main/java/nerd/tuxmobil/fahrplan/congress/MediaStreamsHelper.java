@@ -22,7 +22,17 @@ public abstract class MediaStreamsHelper {
         List<Stream> filteredStreams = new ArrayList<Stream>(8);
         for (Offer offer : offers) {
             for (Room room : offer.rooms) {
-                if (lectureRoom.equalsIgnoreCase(room.schedulename)) {
+                String roomName = room.schedulename;
+                // TODO Remove this hack when production URL has been published
+                if (BuildConfig.DEBUG && BuildConfig.FLAVOR.equals("ccc32c3")) {
+                    if (roomName.equals("Saal 1") ||
+                            roomName.equals("Saal 2") ||
+                            roomName.equals("Saal G") ||
+                            roomName.equals("Saal 6")) {
+                        roomName = roomName.replace("Saal", "Hall");
+                    }
+                }
+                if (lectureRoom.equalsIgnoreCase(roomName)) {
                     filteredStreams.addAll(room.streams);
                 }
             }
