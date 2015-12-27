@@ -291,9 +291,9 @@ public class MainActivity extends AppCompatActivity implements
             okHttpClient.interceptors().add(MyApp.HTTP_LOGGING_INTERCEPTOR);
         }
         StreamsService streamsService = ApiModule.provideStreamsService(
-                BuildConfig.STREAMING_API_BASE_URL_DEBUG, okHttpClient);
+                BuildConfig.DEBUG ? BuildConfig.STREAMING_API_BASE_URL_DEBUG : BuildConfig.STREAMING_API_BASE_URL, okHttpClient);
         final Call<List<Offer>> offersCall = streamsService.getOffers(
-                BuildConfig.STREAMING_API_OFFERS_PATH_DEBUG);
+                BuildConfig.DEBUG ? BuildConfig.STREAMING_API_OFFERS_PATH_DEBUG : BuildConfig.STREAMING_API_BASE_URL);
         offersCall.enqueue(new Callback<List<Offer>>() {
             @Override
             public void onResponse(Response<List<Offer>> response, Retrofit retrofit) {

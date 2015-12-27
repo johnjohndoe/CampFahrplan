@@ -30,6 +30,10 @@ android {
                 "\"https://gist.githubusercontent.com\""
         buildConfigField "String", "STREAMING_API_OFFERS_PATH_DEBUG",
                 "\"/johnjohndoe/7c84b77fdbcaa332e4d8/raw/5c0b0f4edfc8e939029b1e539a2ef5757601b205/streams-v1.json\""
+        buildConfigField "String", "STREAMING_API_BASE_URL",
+                "\"https://streaming.media.ccc.de\""
+        buildConfigField "String", "STREAMING_API_OFFERS_PATH",
+                "\"/streams/v1.json\""
     }
 
     buildTypes {
