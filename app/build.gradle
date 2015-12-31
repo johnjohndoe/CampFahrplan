@@ -41,6 +41,10 @@ android {
         }
     }
 
+    tasks.matching {it instanceof Test}.all {
+        testLogging.events = ["failed", "passed", "skipped"]
+    }
+
     signingConfigs {
         ccc31c3 {
             storeFile file(props['signing.ccc31c3-release.keystoreFilePath'])
