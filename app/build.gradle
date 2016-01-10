@@ -64,6 +64,12 @@ android {
             keyAlias props['signing.ccc32c3-release.keyAlias']
             keyPassword props['signing.ccc32c3-release.keyPassword']
         }
+        fosdem {
+            storeFile file(props['signing.fosdem-release.keystoreFilePath'])
+            storePassword props['signing.fosdem-release.keystorePassword']
+            keyAlias props['signing.fosdem-release.keyAlias']
+            keyPassword props['signing.fosdem-release.keyPassword']
+        }
     }
 
     productFlavors {
@@ -114,6 +120,23 @@ android {
             buildConfigField "int", "SCHEDULE_LAST_DAY_END_MONTH", "12"
             buildConfigField "int", "SCHEDULE_LAST_DAY_END_DAY", "31"
             buildConfigField "String", "SCHEDULE_FEEDBACK_URL", '"https://frab.cccv.de/en/32C3/public/events/%s/feedback/new"'
+        }
+        fosdem {
+            applicationId "info.metadude.android.fosdem.schedule"
+            versionName "1.32.2 (FOSDEM Edition)"
+            signingConfig signingConfigs.fosdem
+            buildConfigField "String", "SCHEDULE_URL", '"http://avp-ptr.de/fosdem2016/schedule.xml"'
+            buildConfigField "String", "SCHEDULE_DOMAIN_PART", '"https://fosdem.org"'
+            buildConfigField "String", "SCHEDULE_EVENT_PART", '"/event/%1$s/"'
+            buildConfigField "String", "SCHEDULE_PART", '"/2016/schedule"'
+            buildConfigField "String", "VENUE", '"ulb"'
+            buildConfigField "int", "SCHEDULE_FIRST_DAY_START_YEAR", "2016"
+            buildConfigField "int", "SCHEDULE_FIRST_DAY_START_MONTH", "1"
+            buildConfigField "int", "SCHEDULE_FIRST_DAY_START_DAY", "30"
+            buildConfigField "int", "SCHEDULE_LAST_DAY_END_YEAR", "2016"
+            buildConfigField "int", "SCHEDULE_LAST_DAY_END_MONTH", "1"
+            buildConfigField "int", "SCHEDULE_LAST_DAY_END_DAY", "31"
+            buildConfigField "String", "SCHEDULE_FEEDBACK_URL", '""'
         }
     }
 

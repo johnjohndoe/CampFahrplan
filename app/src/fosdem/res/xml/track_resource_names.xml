@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<map linked="true">
+
+    <entry key=""></entry>
+    <entry key="BSD">bsd</entry>
+    <entry key="Certification">certification</entry>
+    <entry key="Coding for Language Communities">coding_for_language_communities</entry>
+    <entry key="Communications">communications</entry>
+    <entry key="Configuration Management">configuration_management</entry>
+    <entry key="Containers and Process Isolation">containers_and_process_isolation</entry>
+    <entry key="Desktops">desktops</entry>
+    <entry key="Distributions">distributions</entry>
+    <entry key="Distros">distros</entry>
+    <entry key="EDA">eda</entry>
+    <entry key="Embedded, Mobile and Automotive">embedded_mobile_and_automotive</entry>
+    <entry key="Enterprise">enterprise</entry>
+    <entry key="Free Java">free_java</entry>
+    <entry key="Geospatial">geospatial</entry>
+    <entry key="GNU Guile">gnu_guile</entry>
+    <entry key="Go">go</entry>
+    <entry key="Graph Processing">graph_processing</entry>
+    <entry key="Graphics">graphics</entry>
+    <entry key="Hardware">hardware</entry>
+    <entry key="HPC, Big Data and Data Science">hpc_big_data_and_data_science</entry>
+    <entry key="IoT">iot</entry>
+    <entry key="Keynotes">keynotes</entry>
+    <entry key="Legal and Policy Issues">legal_and_policy_issues</entry>
+    <entry key="Lightning Talks">lightning_talks</entry>
+    <entry key="LLVM Toolchain">llvm_toolchain</entry>
+    <entry key="Lua">lua</entry>
+    <entry key="Microkernels">microkernels</entry>
+    <entry key="Miscellaneous">miscellaneous</entry>
+    <entry key="Mozilla">mozilla</entry>
+    <entry key="MySQL and Friends">mysql_and_friends</entry>
+    <entry key="Office">office</entry>
+    <entry key="Open Document Editors">open_document_editors</entry>
+    <entry key="Open Game Development">open_game_development</entry>
+    <entry key="Open Media">open_media</entry>
+    <entry key="Open Source Design">open_source_design</entry>
+    <entry key="PHP and Friends">php_and_friends</entry>
+    <entry key="Perl">perl</entry>
+    <entry key="PostgreSQL">postgresql</entry>
+    <entry key="Python">python</entry>
+    <entry key="Real Time">real_time</entry>
+    <entry key="Ruby">ruby</entry>
+    <entry key="SDN and NFV">sdn_and_nfv</entry>
+    <entry key="Security">security</entry>
+    <entry key="Software Defined Radio">software_defined_radio</entry>
+    <entry key="Systems Administration">systems_administration</entry>
+    <entry key="Testing and Automation">testing_and_automation</entry>
+    <entry key="Virtualisation and IaaS">virtualisation_and_iaas</entry>
+    <entry key="Virtualisation">virtualisation</entry>
+
+</map>

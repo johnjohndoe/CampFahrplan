@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">FOSDEM 2016 Fahrplan</string>
+    <string name="conference_url">
+        <![CDATA[<a href="https://fosdem.org/2016">https://fosdem.org/2016</a>]]>
+    </string>
+    <string name="source_code">
+        <![CDATA[<a href="https://github.com/johnjohndoe/CampFahrplan/tree/fosdem-2016">Quellcode</a>]]>
+    </string>
+    <string name="google_play_store">
+        <![CDATA[<a href="https://play.google.com/store/apps/details?id=info.metadude.android.fosdem.schedule">Eintrag im Google PlayStore</a>]]>
+    </string>
+    <string name="copyright_logo">
+        Der Name FOSDEM und das Zahnrad-Logo sind registrierte Markenzeichen der
+        FOSDEM VZW. Nutung erfolgt mit Erlaubnis.
+    </string>
+</resources>
