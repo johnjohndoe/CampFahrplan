@@ -2,7 +2,6 @@ package nerd.tuxmobil.fahrplan.congress;
 
 import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.database.Cursor;
@@ -12,7 +11,6 @@ import android.graphics.Color;
 import android.graphics.Typeface;
 import android.os.Build;
 import android.os.Bundle;
-import android.preference.PreferenceManager;
 import android.support.v4.app.DialogFragment;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
@@ -61,6 +59,8 @@ public class FahrplanFragment extends Fragment implements
 
     private MyApp global;
 
+    protected PreferencesHelper preferencesHelper;
+
     private static String LOG_TAG = "Fahrplan";
 
     public static final String FRAGMENT_TAG = "schedule";
@@ -91,8 +91,6 @@ public class FahrplanFragment extends Fragment implements
             "Saal 17",
             "Lounge"
     };
-
-    public static final String PREFS_NAME = "settings";
 
     private int screenWidth = 0;
 
@@ -133,6 +131,7 @@ public class FahrplanFragment extends Fragment implements
         super.onViewCreated(view, savedInstanceState);
 
         global = (MyApp) getActivity().getApplicationContext();
+        preferencesHelper = global.getPreferencesHelper();
         scale = getResources().getDisplayMetrics().density;
         screenWidth = getResources().getDisplayMetrics().widthPixels;
         MyApp.LogDebug(LOG_TAG, "screen width = " + screenWidth);
@@ -162,8 +161,7 @@ public class FahrplanFragment extends Fragment implements
         trackAccentColors = TrackBackgrounds.getTrackAccentColorNormal(getActivity());
         trackAccentColorsHighlight = TrackBackgrounds.getTrackAccentColorHighlight(getActivity());
 
-        SharedPreferences prefs = getActivity().getSharedPreferences(PREFS_NAME, 0);
-        mDay = prefs.getInt("displayDay", 1);
+        mDay = preferencesHelper.displayDayPreference.get();
 
         inflater = (LayoutInflater) getActivity()
                 .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
@@ -195,10 +193,7 @@ public class FahrplanFragment extends Fragment implements
     }
 
     private void saveCurrentDay(int day) {
-        SharedPreferences settings = getActivity().getSharedPreferences(PREFS_NAME, 0);
-        SharedPreferences.Editor editor = settings.edit();
-        editor.putInt("displayDay", day);
-        editor.apply();
+        preferencesHelper.displayDayPreference.set(day);
     }
 
     @Override
@@ -586,9 +581,7 @@ public class FahrplanFragment extends Fragment implements
 
         FragmentActivity activity = getActivity();
         Resources resources = activity.getResources();
-        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(activity);
-        boolean useAlternativeHighlight = prefs.getBoolean(
-                BundleKeys.PREFS_ALTERNATIVE_HIGHLIGHT, true);
+        boolean useAlternativeHighlight = preferencesHelper.alternativeHighlightPreference.get();
 
         EventDrawable eventDrawable;
         final String trackName = lecture.track;
@@ -986,8 +979,7 @@ public class FahrplanFragment extends Fragment implements
                 if (MyApp.numdays > 1) {
                     build_navigation_menu();
                 }
-                SharedPreferences prefs = getActivity().getSharedPreferences(PREFS_NAME, 0);
-                mDay = prefs.getInt("displayDay", 1);
+                mDay = preferencesHelper.displayDayPreference.get();
                 if (mDay > MyApp.numdays) {
                     mDay = 1;
                 }

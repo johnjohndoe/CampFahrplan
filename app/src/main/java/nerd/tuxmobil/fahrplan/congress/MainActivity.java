@@ -3,11 +3,8 @@ package nerd.tuxmobil.fahrplan.congress;
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Intent;
-import android.content.SharedPreferences;
-import android.content.SharedPreferences.Editor;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
-import android.preference.PreferenceManager;
 import android.support.v4.app.DialogFragment;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -48,6 +45,8 @@ public class MainActivity extends BaseActivity implements
     private boolean showUpdateAction = true;
     private static MainActivity instance;
 
+    protected PreferencesHelper preferencesHelper;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -56,6 +55,8 @@ public class MainActivity extends BaseActivity implements
 
         MyApp.LogDebug(LOG_TAG, "onCreate");
         setContentView(R.layout.main_layout);
+        MyApp application = (MyApp) getApplication();
+        preferencesHelper = application.getPreferencesHelper();
         Toolbar toolbar = (Toolbar)findViewById(R.id.toolbar);
         progressBar = (ProgressBar)findViewById(R.id.progress);
         setSupportActionBar(toolbar);
@@ -137,13 +138,10 @@ public class MainActivity extends BaseActivity implements
             }
         }
         if ((status == HTTP_STATUS.HTTP_OK) || (status == HTTP_STATUS.HTTP_NOT_MODIFIED)) {
-            SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
             Time now = new Time();
             now.setToNow();
             long millis = now.toMillis(true);
-            Editor edit = prefs.edit();
-            edit.putLong("last_fetch", millis);
-            edit.commit();
+            preferencesHelper.lastFetchPreferences.set(millis);
         }
         if (status != HTTP_STATUS.HTTP_OK) {
             switch (status) {
@@ -194,8 +192,10 @@ public class MainActivity extends BaseActivity implements
             ((ChangeListFragment) fragment).onRefresh();
         }
 
-        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
-        if (prefs.getBoolean(BundleKeys.PREFS_CHANGES_SEEN, true) == false) changesDialog();
+        boolean changesSeen = preferencesHelper.changesSeenPreference.get();
+        if (!changesSeen) {
+            changesDialog();
+        }
     }
 
     public void showFetchingStatus() {
@@ -227,8 +227,7 @@ public class MainActivity extends BaseActivity implements
 
     public void fetchFahrplan(OnDownloadCompleteListener completeListener) {
         if (MyApp.task_running == TASKS.NONE) {
-            SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
-            String alternateURL = prefs.getString(BundleKeys.PREFS_SCHEDULE_URL, null);
+            String alternateURL = preferencesHelper.scheduleUrlPreference.get();
             String url;
             if (!TextUtils.isEmpty(alternateURL)) {
                 url = alternateURL;
@@ -274,8 +273,11 @@ public class MainActivity extends BaseActivity implements
         if (MyApp.parser != null) {
             MyApp.parser.setListener(this);
         }
-        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
-        if (prefs.getBoolean(BundleKeys.PREFS_CHANGES_SEEN, true) == false) changesDialog();
+
+        boolean changesSeen = preferencesHelper.changesSeenPreference.get();
+        if (!changesSeen) {
+            changesDialog();
+        }
     }
 
     @Override
@@ -414,7 +416,8 @@ public class MainActivity extends BaseActivity implements
                 }
                 break;
             case MyApp.SETTINGS:
-                if ((resultCode == Activity.RESULT_OK) && (intent.getBooleanExtra(BundleKeys.PREFS_ALTERNATIVE_HIGHLIGHT, true))) {
+                if ((resultCode == Activity.RESULT_OK) && (intent.getBooleanExtra(BundleKeys.REDRAW_SCHEDULE, false))) {
+
                     if (findViewById(R.id.schedule) != null) {
                         replaceFragment(R.id.schedule, new FahrplanFragment(),
                                 FahrplanFragment.FRAGMENT_TAG);
