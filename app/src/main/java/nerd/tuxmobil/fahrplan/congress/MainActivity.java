@@ -387,6 +387,7 @@ public class MainActivity extends AppCompatActivity implements
             args.putInt(BundleKeys.EVENT_TIME, lecture.startTime);
             args.putInt(BundleKeys.EVENT_DAY, mDay);
             args.putString(BundleKeys.EVENT_ROOM, lecture.room);
+            args.putString(BundleKeys.EVENT_SLUG, lecture.slug);
             args.putBoolean(BundleKeys.SIDEPANE, true);
             ev.setArguments(args);
             fragmentTransaction.replace(R.id.detail, ev, FragmentTags.DETAIL);

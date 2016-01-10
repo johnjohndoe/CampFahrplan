@@ -71,6 +71,8 @@ public class EventDetailFragment extends Fragment {
 
     private String room;
 
+    private String slug;
+
     private Boolean sidePane = false;
 
     private boolean hasArguments = false;
@@ -104,6 +106,7 @@ public class EventDetailFragment extends Fragment {
         descr = args.getString(BundleKeys.EVENT_DESCRIPTION);
         links = args.getString(BundleKeys.EVENT_LINKS);
         room = args.getString(BundleKeys.EVENT_ROOM);
+        slug = args.getString(BundleKeys.EVENT_SLUG);
         sidePane = args.getBoolean(BundleKeys.SIDEPANE, false);
         hasArguments = true;
     }
@@ -206,7 +209,7 @@ public class EventDetailFragment extends Fragment {
                     .findViewById(R.id.eventOnlineSection);
             eventOnlineSection.setTypeface(bold);
             final TextView eventOnlineLink = (TextView) view.findViewById(R.id.eventOnline);
-            final String eventUrl = FahrplanMisc.getEventUrl(activity, event_id);
+            final String eventUrl = FahrplanMisc.getEventUrl(getActivity(), slug);
             final String eventLink = "<a href=\"" + eventUrl + "\">" + eventUrl + "</a>";
             setUpHtmlTextView(eventOnlineLink, regular, eventLink);
 

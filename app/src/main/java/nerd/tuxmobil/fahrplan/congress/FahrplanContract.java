@@ -129,6 +129,7 @@ public interface FahrplanContract {
             public static final String CHANGED_TIME = "changed_time";                       // 29
             public static final String CHANGED_DURATION = "changed_duration";               // 30
             public static final String CHANGED_IS_CANCELED = "changed_is_canceled" ;        // 31
+            public static final String SLUG = "slug"; // 32
         }
 
         public interface Defaults {
