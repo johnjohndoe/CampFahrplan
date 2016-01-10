@@ -13,9 +13,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import nerd.tuxmobil.fahrplan.congress.FahrplanContract.FragmentTags;
-
-public class EventDetail extends AppCompatActivity {
+public class EventDetail extends BaseActivity {
 
     public static void startForResult(@NonNull Activity activity,
                                       @NonNull Lecture lecture,
@@ -47,12 +45,11 @@ public class EventDetail extends AppCompatActivity {
             finish();
         }
 
-        if (findViewById(R.id.detail) != null) {
-            FragmentManager fm = getSupportFragmentManager();
-            FragmentTransaction fragmentTransaction = fm.beginTransaction();
-            EventDetailFragment ev = new EventDetailFragment();
+        if (intent != null && findViewById(R.id.detail) != null) {
+            EventDetailFragment eventDetailFragment = new EventDetailFragment();
             Bundle args = new Bundle();
-            args.putString(BundleKeys.EVENT_TITLE, intent.getStringExtra(BundleKeys.EVENT_TITLE));
+            args.putString(BundleKeys.EVENT_TITLE,
+                    intent.getStringExtra(BundleKeys.EVENT_TITLE));
             args.putString(BundleKeys.EVENT_SUBTITLE,
                     intent.getStringExtra(BundleKeys.EVENT_SUBTITLE));
             args.putString(BundleKeys.EVENT_ABSTRACT,
@@ -61,16 +58,21 @@ public class EventDetail extends AppCompatActivity {
                     intent.getStringExtra(BundleKeys.EVENT_DESCRIPTION));
             args.putString(BundleKeys.EVENT_SPEAKERS,
                     intent.getStringExtra(BundleKeys.EVENT_SPEAKERS));
-            args.putString(BundleKeys.EVENT_LINKS, intent.getStringExtra(BundleKeys.EVENT_LINKS));
-            args.putString(BundleKeys.EVENT_ID, intent.getStringExtra(BundleKeys.EVENT_ID));
-            args.putInt(BundleKeys.EVENT_TIME, intent.getIntExtra(BundleKeys.EVENT_TIME, 0));
-            args.putInt(BundleKeys.EVENT_DAY, intent.getIntExtra(BundleKeys.EVENT_DAY, 0));
-            args.putString(BundleKeys.EVENT_ROOM, intent.getStringExtra(BundleKeys.EVENT_ROOM));
+            args.putString(BundleKeys.EVENT_LINKS,
+                    intent.getStringExtra(BundleKeys.EVENT_LINKS));
+            args.putString(BundleKeys.EVENT_ID,
+                    intent.getStringExtra(BundleKeys.EVENT_ID));
+            args.putInt(BundleKeys.EVENT_TIME,
+                    intent.getIntExtra(BundleKeys.EVENT_TIME, 0));
+            args.putInt(BundleKeys.EVENT_DAY,
+                    intent.getIntExtra(BundleKeys.EVENT_DAY, 0));
+            args.putString(BundleKeys.EVENT_ROOM,
+                    intent.getStringExtra(BundleKeys.EVENT_ROOM));
             args.putString(BundleKeys.EVENT_SLUG,
                     intent.getStringExtra(BundleKeys.EVENT_SLUG));
-            ev.setArguments(args);
-            fragmentTransaction.replace(R.id.detail, ev, FragmentTags.DETAIL);
-            fragmentTransaction.commit();
+            eventDetailFragment.setArguments(args);
+            replaceFragment(R.id.detail, eventDetailFragment,
+                    EventDetailFragment.FRAGMENT_TAG);
         }
     }
 
@@ -83,9 +85,6 @@ public class EventDetail extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
-            case android.R.id.home:
-                return ActivityHelper.navigateUp(this);
-
             case R.id.item_nav:
                 final Intent intent = new Intent(Intent.ACTION_VIEW);
                 intent.setData(Uri.parse("https://c3nav.de/?d=" + getRoomConvertedForC3Nav()));
