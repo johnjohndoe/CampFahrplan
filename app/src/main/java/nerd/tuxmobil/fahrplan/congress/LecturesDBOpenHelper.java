@@ -11,7 +11,7 @@ import nerd.tuxmobil.fahrplan.congress.FahrplanContract.LecturesTable.Values;
 
 public class LecturesDBOpenHelper extends SQLiteOpenHelper {
 
-    private static final int DATABASE_VERSION = 6;
+    private static final int DATABASE_VERSION = 7;
 
     private static final String LECTURES_TABLE_CREATE =
             "CREATE TABLE " + LecturesTable.NAME + " (" +
@@ -129,6 +129,11 @@ public class LecturesDBOpenHelper extends SQLiteOpenHelper {
         }
         if ((oldVersion < 6) && (newVersion >= 6)) {
             db.execSQL("ALTER TABLE " + LecturesTable.NAME + " ADD COLUMN " + Columns.SLUG + " STRING DEFAULT ''");
+        }
+        if (oldVersion < 7) {
+            // Clear database from FOSDEM 2015
+            db.execSQL("DROP TABLE IF EXISTS " + LecturesTable.NAME);
+            onCreate(db);
         }
     }
 }
