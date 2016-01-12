@@ -148,7 +148,7 @@ android {
 
 dependencies {
     compile "com.android.support:appcompat-v7:23.1.1"
-    compile "com.squareup.okhttp:okhttp:2.7.1"
+    compile "com.squareup.okhttp:okhttp:2.7.2"
     compile "info.metadude.android:typed-preferences:2.1.0"
 
     testCompile 'junit:junit:4.12'
