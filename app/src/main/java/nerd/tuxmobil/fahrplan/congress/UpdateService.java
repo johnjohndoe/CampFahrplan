@@ -23,8 +23,6 @@ public class UpdateService extends IntentService
 
     public UpdateService() {
         super("UpdateService");
-        MyApp application = (MyApp) getApplication();
-        preferencesHelper = application.getPreferencesHelper();
     }
 
     final String LOG_TAG = "UpdateService";
@@ -32,6 +30,13 @@ public class UpdateService extends IntentService
     private FetchFahrplan fetcher;
 
     private FahrplanParser parser;
+
+    @Override
+    public void onCreate() {
+        super.onCreate();
+        MyApp application = (MyApp) getApplication();
+        preferencesHelper = application.getPreferencesHelper();
+    }
 
     @Override
     public void onParseDone(Boolean result, String version) {
