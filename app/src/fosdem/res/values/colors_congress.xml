@@ -4,6 +4,7 @@
 
     <!-- Default state -->
     <color name="event_border_default">#622562</color>
+    <color name="event_border_default_ada">#a79474</color>
     <color name="event_border_default_bsd">#69d2e7</color>
     <color name="event_border_default_certification">#a7dbd8</color>
     <color name="event_border_default_coding_for_language_communities">#e0e4cc</color>
@@ -26,6 +27,7 @@
     <color name="event_border_default_hpc_big_data_and_data_science">#a7dbd8</color>
     <color name="event_border_default_iot">#e0e4cc</color>
     <color name="event_border_default_keynotes">#f38630</color>
+    <color name="event_border_default_keysigning">#a79474</color>
     <color name="event_border_default_legal_and_policy_issues">#ea813d</color>
     <color name="event_border_default_lightning_talks">#e7a350</color>
     <color name="event_border_default_llvm_toolchain">#fcc777</color>
@@ -60,6 +62,7 @@
 
     <!-- Accent color -->
     <color name="event_border_accent">#622562</color>
+    <color name="event_border_accent_ada">#a79474</color>
     <color name="event_border_accent_bsd">#69d2e7</color>
     <color name="event_border_accent_certification">#a7dbd8</color>
     <color name="event_border_accent_coding_for_language_communities">#e0e4cc</color>
@@ -82,6 +85,7 @@
     <color name="event_border_accent_hpc_big_data_and_data_science">#a7dbd8</color>
     <color name="event_border_accent_iot">#e0e4cc</color>
     <color name="event_border_accent_keynotes">#f38630</color>
+    <color name="event_border_accent_keysigning">#a79474</color>
     <color name="event_border_accent_legal_and_policy_issues">#ea813d</color>
     <color name="event_border_accent_lightning_talks">#e7a350</color>
     <color name="event_border_accent_llvm_toolchain">#fcc777</color>
@@ -112,6 +116,7 @@
 
     <!-- Accent color highlight -->
     <color name="event_border_accent_highlight">#622562</color>
+    <color name="event_border_accent_highlight_ada">#a79474</color>
     <color name="event_border_accent_highlight_bsd">#69d2e7</color>
     <color name="event_border_accent_highlight_certification">#a7dbd8</color>
     <color name="event_border_accent_highlight_coding_for_language_communities">#e0e4cc</color>
@@ -134,6 +139,7 @@
     <color name="event_border_accent_highlight_hpc_big_data_and_data_science">#a7dbd8</color>
     <color name="event_border_accent_highlight_iot">#e0e4cc</color>
     <color name="event_border_accent_highlight_keynotes">#f38630</color>
+    <color name="event_border_accent_highlight_keysigning">#a79474</color>
     <color name="event_border_accent_highlight_legal_and_policy_issues">#ea813d</color>
     <color name="event_border_accent_highlight_lightning_talks">#e7a350</color>
     <color name="event_border_accent_highlight_llvm_toolchain">#fcc777</color>

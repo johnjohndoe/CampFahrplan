@@ -2,6 +2,7 @@
 <map linked="true">
 
     <entry key=""></entry>
+    <entry key="Ada">ada</entry>
     <entry key="BSD">bsd</entry>
     <entry key="Certification">certification</entry>
     <entry key="Coding for Language Communities">coding_for_language_communities</entry>
@@ -24,6 +25,7 @@
     <entry key="HPC, Big Data and Data Science">hpc_big_data_and_data_science</entry>
     <entry key="IoT">iot</entry>
     <entry key="Keynotes">keynotes</entry>
+    <entry key="Keysigning">keysigning</entry>
     <entry key="Legal and Policy Issues">legal_and_policy_issues</entry>
     <entry key="Lightning Talks">lightning_talks</entry>
     <entry key="LLVM Toolchain">llvm_toolchain</entry>
