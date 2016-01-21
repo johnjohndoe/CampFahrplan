@@ -1,80 +1,73 @@
 package nerd.tuxmobil.fahrplan.congress;
 
+import android.content.res.ColorStateList;
+import android.graphics.Color;
 import android.graphics.RectF;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.LayerDrawable;
+import android.graphics.drawable.RippleDrawable;
 import android.graphics.drawable.ShapeDrawable;
 import android.graphics.drawable.shapes.RoundRectShape;
-import android.graphics.drawable.shapes.Shape;
+import android.os.Build;
+import android.support.annotation.ColorInt;
+
+import java.util.Arrays;
 
 public class EventDrawable extends LayerDrawable {
 
+    public final static int BACKGROUND_LAYER_INDEX = 0;
 
-    public EventDrawable(int backgroundColor, float cornerRadius) {
-        super(initialize(backgroundColor, cornerRadius));
+    public final static int STROKE_LAYER_INDEX = 1;
+
+    public EventDrawable(@ColorInt int backgroundColor, float cornerRadius,
+                         @ColorInt int rippleColor) {
+        this(backgroundColor, cornerRadius,
+                rippleColor,
+                Color.TRANSPARENT, 0);
     }
 
-    public EventDrawable(
-            int backgroundColor,
-            int strokeColor,
-            float strokeWidth,
-            float cornerRadius) {
-        super(initialize(backgroundColor, strokeColor, strokeWidth, cornerRadius));
+    public EventDrawable(@ColorInt int backgroundColor, float cornerRadius,
+                         @ColorInt int rippleColor,
+                         @ColorInt int strokeColor, float strokeWidth) {
+        super(setupLayers(backgroundColor, cornerRadius,
+                rippleColor,
+                strokeColor, strokeWidth));
     }
 
-    private static Drawable[] initialize(int backgroundColor, float cornerRadius) {
+    private static Drawable[] setupLayers(
+            @ColorInt int backgroundColor, float cornerRadius,
+            @ColorInt int rippleColor,
+            @ColorInt int strokeColor, float strokeWidth) {
 
-        final float[] RADII = {
-                cornerRadius, cornerRadius,
-                cornerRadius, cornerRadius,
-                cornerRadius, cornerRadius,
-                cornerRadius, cornerRadius
-        };
-        Drawable[] layers = new Drawable[1];
-        ShapeDrawable backgroundShapeDrawable = getBackgroundShapeDrawable(backgroundColor, RADII);
-        layers[0] = backgroundShapeDrawable;
-        return layers;
-    }
-
-    private static Drawable[] initialize(
-            int backgroundColor,
-            int strokeColor,
-            float strokeWidth,
-            float cornerRadius) {
-
-        Drawable[] layers = new Drawable[2];
-
-        final float[] RADII = {
-                cornerRadius, cornerRadius,
-                cornerRadius, cornerRadius,
-                cornerRadius, cornerRadius,
-                cornerRadius, cornerRadius
-        };
+        float[] radii = new float[8];
+        Arrays.fill(radii, cornerRadius);
 
         // Background
-        ShapeDrawable backgroundShapeDrawable = getBackgroundShapeDrawable(backgroundColor, RADII);
-        layers[0] = backgroundShapeDrawable;
+        RoundRectShape backgroundShape = new RoundRectShape(radii, null, null);
+        ShapeDrawable backgroundDrawable = new ShapeDrawable(backgroundShape);
+        backgroundDrawable.getPaint().setColor(backgroundColor);
 
-        final RectF INSET = new RectF(
-                strokeWidth,
-                strokeWidth,
-                strokeWidth,
-                strokeWidth);
+        // Stroke
+        //noinspection SuspiciousNameCombination
+        RectF strokeInset = new RectF(strokeWidth, strokeWidth, strokeWidth, strokeWidth);
+        RoundRectShape strokeShape = new RoundRectShape(radii, strokeInset, radii);
+        ShapeDrawable strokeDrawable = new ShapeDrawable(strokeShape);
+        strokeDrawable.getPaint().setColor(strokeColor);
 
-        // Stroke aka. border
-        Shape strokeShape = new RoundRectShape(RADII, INSET, RADII);
-        ShapeDrawable strokeShapeDrawable = new ShapeDrawable(strokeShape);
-        strokeShapeDrawable.getPaint().setColor(strokeColor);
-        layers[1] = strokeShapeDrawable;
+        // Ripples
+        Drawable backgroundRippleDrawable;
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            backgroundRippleDrawable = new RippleDrawable(
+                    ColorStateList.valueOf(rippleColor), backgroundDrawable, backgroundDrawable);
+        } else {
+            backgroundRippleDrawable = backgroundDrawable;
+        }
 
+        // Layers
+        Drawable[] layers = new Drawable[2];
+        layers[BACKGROUND_LAYER_INDEX] = backgroundRippleDrawable;
+        layers[STROKE_LAYER_INDEX] = strokeDrawable;
         return layers;
-    }
-
-    private static ShapeDrawable getBackgroundShapeDrawable(int backgroundColor, float[] RADII) {
-        Shape backgroundShape = new RoundRectShape(RADII, null, null);
-        ShapeDrawable backgroundShapeDrawable = new ShapeDrawable(backgroundShape);
-        backgroundShapeDrawable.getPaint().setColor(backgroundColor);
-        return backgroundShapeDrawable;
     }
 
 }

@@ -11,9 +11,11 @@ import android.graphics.Color;
 import android.graphics.Typeface;
 import android.os.Build;
 import android.os.Bundle;
+import android.support.annotation.ColorInt;
+import android.support.annotation.ColorRes;
 import android.support.v4.app.DialogFragment;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentActivity;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.text.format.Time;
@@ -75,7 +77,7 @@ public class FahrplanFragment extends Fragment implements
 
     private int lastLectureEnd = 0;
 
-    private HashMap<String, Integer> trackBackgrounds;
+    private HashMap<String, Integer> trackNameBackgroundColorDefaultPairs;
 
     private int mDay = 1;
 
@@ -98,6 +100,24 @@ public class FahrplanFragment extends Fragment implements
 
     private Typeface light;
 
+    private int eventDrawableInsetTop;
+
+    private int eventDrawableInsetLeft;
+
+    private int eventDrawableInsetRight;
+
+    private float eventDrawableCornerRadius;
+
+    private float eventDrawableStrokeWidth;
+
+    private
+    @ColorInt
+    int eventDrawableStrokeColor;
+
+    private
+    @ColorInt
+    int eventDrawableRippleColor;
+
     private View contextMenuView;
 
     private int columnWidth;
@@ -118,6 +138,21 @@ public class FahrplanFragment extends Fragment implements
         light = Typeface.createFromAsset(
                 getActivity().getAssets(), "Roboto-Light.ttf");
         context = getActivity();
+        Resources resources = getResources();
+        eventDrawableInsetTop = resources.getDimensionPixelSize(
+                R.dimen.event_drawable_inset_top);
+        eventDrawableInsetLeft = resources.getDimensionPixelSize(
+                R.dimen.event_drawable_inset_left);
+        eventDrawableInsetRight = resources.getDimensionPixelSize(
+                R.dimen.event_drawable_inset_right);
+        eventDrawableCornerRadius = resources.getDimensionPixelSize(
+                R.dimen.event_drawable_corner_radius);
+        eventDrawableStrokeWidth = resources.getDimensionPixelSize(
+                R.dimen.event_drawable_selection_stroke_width);
+        eventDrawableStrokeColor = ContextCompat.getColor(
+                context, R.color.event_drawable_selection_stroke);
+        eventDrawableRippleColor = ContextCompat.getColor(
+                context, R.color.event_drawable_ripple);
     }
 
     @Override
@@ -157,10 +192,9 @@ public class FahrplanFragment extends Fragment implements
             });
         }
 
-        trackBackgrounds = TrackBackgrounds.getTrackBackgroundNormal(getActivity());
         trackAccentColors = TrackBackgrounds.getTrackAccentColorNormal(getActivity());
         trackAccentColorsHighlight = TrackBackgrounds.getTrackAccentColorHighlight(getActivity());
-
+        trackNameBackgroundColorDefaultPairs = TrackBackgrounds.getTrackNameBackgroundColorDefaultPairs(getActivity());
         mDay = preferencesHelper.displayDayPreference.get();
 
         inflater = (LayoutInflater) getActivity()
@@ -576,64 +610,42 @@ public class FahrplanFragment extends Fragment implements
         return padding;
     }
 
-    private void setLectureBackground(Lecture lecture, View view) {
-        int padding = getEventPadding();
-
-        FragmentActivity activity = getActivity();
-        Resources resources = activity.getResources();
-        boolean useAlternativeHighlight = preferencesHelper.alternativeHighlightPreference.get();
-
-        EventDrawable eventDrawable;
-        final String trackName = lecture.track;
-        float eventCornerRadiusInPixels = resources.getDimensionPixelSize(
-                R.dimen.event_item_corner_radius);
-        String undefinedTrackNameMessage =
-                "Using default color for undefined track: '" + trackName +
-                        "' of '" + lecture.lecture_id + ": " + lecture.title +
-                        "', schedule version = '" + MyApp.version + "'.";
-        // An undefined track name appears when a new <track></track> value is introduced
-        // to the 'schedule.xml' file after the app has been released.
-        // Such a track name is then missing in 'track_resource_names.xml' of the app.
-
-        if (lecture.highlight) {
-            // With highlight
-            Integer backgroundColorResourceId = trackBackgrounds.get(trackName);
-            if (backgroundColorResourceId == null) {
-                MyApp.LogDebug(getClass().getName(), "With highlight: " + undefinedTrackNameMessage);
-                backgroundColorResourceId = R.color.event_border_accent_highlight;
-            }
-            int backgroundColor = resources.getColor(backgroundColorResourceId);
+    private void setLectureBackground(Lecture event, View eventView) {
+        boolean alternativeHighlightingIsEnabled = preferencesHelper.alternativeHighlightPreference.get();
+        boolean eventIsFavored = event.highlight;
+        Integer colorResId = trackNameBackgroundColorDefaultPairs.get(event.track);
+        @ColorRes int backgroundColorResId = colorResId == null ? R.color.event_border_default : colorResId;
+        @ColorInt int backgroundColor = ContextCompat.getColor(getContext(), backgroundColorResId);
+        if (eventIsFavored) {
             backgroundColor = getModifiedColor(backgroundColor, 0, 0.2f, -0.2f);
-            if (useAlternativeHighlight) {
-                // Alternative highlighting
-                int strokeColor = resources.getColor(R.color.event_item_selection_stroke);
-                float eventStrokeWidthInPixels = resources.getDimensionPixelSize(
-                        R.dimen.event_item_selection_stroke_width);
-                eventDrawable = new EventDrawable(
-                        backgroundColor, strokeColor, eventStrokeWidthInPixels,
-                        eventCornerRadiusInPixels);
-            } else {
-                // Traditional highlighting
-                eventDrawable = new EventDrawable(backgroundColor, eventCornerRadiusInPixels);
-            }
-        } else {
-            // Without highlight
-            Integer backgroundColorResourceId = trackBackgrounds.get(trackName);
-            if (backgroundColorResourceId == null) {
-                MyApp.LogDebug(getClass().getName(), "Without highlight: " + undefinedTrackNameMessage);
-                backgroundColorResourceId = R.color.event_border_default;
-            }
-            int backgroundColor = resources.getColor(backgroundColorResourceId);
-            eventDrawable = new EventDrawable(backgroundColor, eventCornerRadiusInPixels);
         }
-
-        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.JELLY_BEAN) {
-            //noinspection deprecation
-            view.setBackgroundDrawable(eventDrawable);
+        EventDrawable eventDrawable;
+        if (eventIsFavored && alternativeHighlightingIsEnabled) {
+            eventDrawable = new EventDrawable(
+                    backgroundColor,
+                    eventDrawableCornerRadius,
+                    eventDrawableRippleColor,
+                    eventDrawableStrokeColor,
+                    eventDrawableStrokeWidth);
         } else {
-            view.setBackground(eventDrawable);
+            eventDrawable = new EventDrawable(
+                    backgroundColor,
+                    eventDrawableCornerRadius,
+                    eventDrawableRippleColor);
         }
-        view.setPadding(padding, padding, padding, padding);
+        eventDrawable.setLayerInset(EventDrawable.BACKGROUND_LAYER_INDEX,
+                eventDrawableInsetLeft,
+                eventDrawableInsetTop,
+                eventDrawableInsetRight,
+                0);
+        eventDrawable.setLayerInset(EventDrawable.STROKE_LAYER_INDEX,
+                eventDrawableInsetLeft,
+                eventDrawableInsetTop,
+                eventDrawableInsetRight,
+                0);
+        eventView.setBackgroundDrawable(eventDrawable);
+        int padding = getEventPadding();
+        eventView.setPadding(padding, padding, padding, padding);
     }
 
     private void setLectureTextColor(Lecture lecture, View view) {
@@ -673,7 +685,7 @@ public class FahrplanFragment extends Fragment implements
     // positive lightnessDelta to increase the lightness.
     // Use a negative saturationDelta to decrease or a
     // positive saturationDelta to increase the lightness.
-    private int getModifiedColor(int color,
+    private @ColorInt int getModifiedColor(@ColorInt int color,
             float hueDelta,
             float saturationDelta,
             float lightnessDelta) {
