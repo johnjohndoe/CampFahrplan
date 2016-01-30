@@ -15,8 +15,8 @@ android {
     buildToolsVersion "23.0.2"
 
     defaultConfig {
-        versionCode 41
-        versionName "1.32.4"
+        versionCode 42
+        versionName "1.32.5"
         minSdkVersion 14
         targetSdkVersion 22
 
@@ -123,7 +123,7 @@ android {
         }
         fosdem {
             applicationId "info.metadude.android.fosdem.schedule"
-            versionName "1.32.4 (FOSDEM Edition)"
+            versionName "1.32.5 (FOSDEM Edition)"
             signingConfig signingConfigs.fosdem
             buildConfigField "String", "SCHEDULE_URL", '"http://avp-ptr.de/fosdem2016/schedule.xml"'
             buildConfigField "String", "SCHEDULE_DOMAIN_PART", '"https://fosdem.org"'
