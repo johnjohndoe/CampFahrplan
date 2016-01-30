@@ -20,6 +20,12 @@ public class PreferencesHelper {
     public static final String PREFS_CHANGES_SEEN =
             "nerd.tuxmobil.fahrplan.congress.Prefs.CHANGES_SEEN";
 
+    public static final String PREFS_INSISTENT_ALARM =
+            "insistentAlarm";
+
+    public static final String PREFS_REMINDER_TONE_URI_STRING =
+            "reminder_tone";
+
     public static final String PREFS_SCHEDULE_URL =
             "nerd.tuxmobil.fahrplan.congress.Prefs.SCHEDULE_URL";
 
@@ -55,11 +61,11 @@ public class PreferencesHelper {
         displayDayPreference = new IntPreference(
                 sharedPreferences, "displayDay", 1);
         insistentAlarmPreference = new BooleanPreference(
-                sharedPreferences, "insistent", false);
+                sharedPreferences, PREFS_INSISTENT_ALARM, false);
         lastFetchPreferences = new LongPreference(
                 sharedPreferences, "last_fetch", 0);
         reminderTonePreference = new StringPreference(
-                sharedPreferences, "reminder_tone", "");
+                sharedPreferences, PREFS_REMINDER_TONE_URI_STRING, "");
         scheduleUrlPreference = new StringPreference(
                 sharedPreferences, PREFS_SCHEDULE_URL, null);
     }

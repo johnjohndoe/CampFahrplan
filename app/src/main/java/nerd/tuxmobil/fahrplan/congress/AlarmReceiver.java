@@ -6,8 +6,10 @@ import android.app.PendingIntent;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.database.sqlite.SQLiteDatabase;
 import android.net.Uri;
+import android.preference.PreferenceManager;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.NotificationCompat;
@@ -40,9 +42,8 @@ public final class AlarmReceiver extends BroadcastReceiver {
                     .getSystemService(Context.NOTIFICATION_SERVICE);
             Notification notify = new Notification();
 
-            MyApp application = (MyApp) context.getApplicationContext();
-            PreferencesHelper preferencesHelper = application.preferencesHelper;
-            boolean insistent = preferencesHelper.insistentAlarmPreference.get();
+            SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
+            boolean insistent = prefs.getBoolean(PreferencesHelper.PREFS_INSISTENT_ALARM, false);
 
             Intent notificationIntent = new Intent(context, MainActivity.class);
             notificationIntent.putExtra("lecture_id", lecture_id);
@@ -53,7 +54,7 @@ public final class AlarmReceiver extends BroadcastReceiver {
                     .getActivity(context, lid, notificationIntent, PendingIntent.FLAG_ONE_SHOT);
 
             NotificationCompat.Builder builder = new NotificationCompat.Builder(context);
-            String reminderToneUriString = preferencesHelper.reminderTonePreference.get();
+            String reminderToneUriString = prefs.getString(PreferencesHelper.PREFS_REMINDER_TONE_URI_STRING, "");
             Uri reminderToneUri = Uri.parse(reminderToneUriString);
             notify = builder.setSound(reminderToneUri)
                     .setAutoCancel(true)
