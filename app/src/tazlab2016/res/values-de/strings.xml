@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">taz.lab 2016 Fahrplan</string>
+    <string name="fahrplan">taz.lab Fahrplan</string>
     <string name="conference_url">
         <![CDATA[<a href="http://www.taz.de/!p4982/">http://www.taz.de/!p4982/</a>]]>
     </string>
