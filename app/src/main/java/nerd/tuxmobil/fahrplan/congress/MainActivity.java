@@ -355,7 +355,8 @@ public class MainActivity extends BaseActivity implements
         FrameLayout sidePane = (FrameLayout) findViewById(R.id.detail);
         MyApp.LogDebug(LOG_TAG, "openLectureDetail sidePane=" + sidePane);
         if (sidePane != null) {
-            sidePane.setVisibility(View.VISIBLE);
+            FragmentManager fm = getSupportFragmentManager();
+            fm.popBackStack(EventDetailFragment.FRAGMENT_TAG, FragmentManager.POP_BACK_STACK_INCLUSIVE);
             EventDetailFragment eventDetailFragment = new EventDetailFragment();
             Bundle args = new Bundle();
             args.putString(BundleKeys.EVENT_TITLE, lecture.title);
@@ -437,11 +438,10 @@ public class MainActivity extends BaseActivity implements
     public void onBackStackChanged() {
         FragmentManager fm = getSupportFragmentManager();
         Fragment pane = fm.findFragmentById(R.id.detail);
-        if (pane == null) {
-            View sidePane = findViewById(R.id.detail);
-            if (sidePane != null)  {
-                sidePane.setVisibility(View.GONE);
-            }
+        boolean paneVisible = pane != null;
+        View sidePane = findViewById(R.id.detail);
+        if (sidePane != null) {
+            sidePane.setVisibility(paneVisible ? View.VISIBLE : View.GONE);
         }
         supportInvalidateOptionsMenu();
     }
