@@ -26,6 +26,9 @@
     <dimen name="activity_padding">16dp</dimen>
     <dimen name="header_height">0dp</dimen>
 
+    <!-- About -->
+    <dimen name="about_horizontal_line_height">1dp</dimen>
+
     <!-- Tool bar -->
     <dimen name="tool_bar_content_inset_start">24dp</dimen>
     <dimen name="tool_bar_elevation">8dp</dimen>
