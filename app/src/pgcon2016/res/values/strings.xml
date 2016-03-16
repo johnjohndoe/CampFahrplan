@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">PGCon 2016 Schedule</string>
+    <string name="fahrplan">PGCon 2016 Schedule</string>
     <string name="conference_url">
         <![CDATA[<a href="http://www.pgcon.org/2016/">http://www.pgcon.org/2016/</a>]]>
     </string>
