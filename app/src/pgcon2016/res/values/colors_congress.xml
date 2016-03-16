@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="pressed_congress">#CCa80a1a</color>
+
+    <!-- Default state -->
+    <color name="event_border_default">#ffa6600c</color>
+    <color name="event_border_default_nine_six_features">#F8F8F8</color>
+    <color name="event_border_default_applications">#BC8F8F</color>
+    <color name="event_border_default_case_studies">#FFE4B5</color>
+    <color name="event_border_default_dba">#876187</color>
+    <color name="event_border_default_developer_unconference">#A78A5E</color>
+    <color name="event_border_default_hacking">#90EE90</color>
+    <color name="event_border_default_performance">#DDA0DD</color>
+    <color name="event_border_default_plenary">#FA8072</color>
+    <color name="event_border_default_scaling_out">#d18604</color>
+    <color name="event_border_default_social">#d5d5d5</color>
+    <color name="event_border_default_tutorial">#A78A5E</color>
+    <color name="event_border_default_user_unconference">#A78A5E</color>
+
+    <!-- Accent color -->
+    <color name="event_border_accent">#fffac07d</color>
+    <color name="event_border_accent_nine_six_features">#F8F8F8</color>
+    <color name="event_border_accent_applications">#BC8F8F</color>
+    <color name="event_border_accent_case_studies">#FFE4B5</color>
+    <color name="event_border_accent_dba">#876187</color>
+    <color name="event_border_accent_developer_unconference">#A78A5E</color>
+    <color name="event_border_accent_hacking">#90EE90</color>
+    <color name="event_border_accent_performance">#DDA0DD</color>
+    <color name="event_border_accent_plenary">#FA8072</color>
+    <color name="event_border_accent_scaling_out">#d18604</color>
+    <color name="event_border_accent_social">#d5d5d5</color>
+    <color name="event_border_accent_tutorial">#A78A5E</color>
+    <color name="event_border_accent_user_unconference">#A78A5E</color>
+
+    <!-- Highlight state -->
+    <color name="event_border_highlight">#ff9412</color>
+    <color name="event_border_highlight_nine_six_features">#ffffff</color>
+    <color name="event_border_highlight_applications">#e3acac</color>
+    <color name="event_border_highlight_case_studies">#ffeac6</color>
+    <color name="event_border_highlight_dba">#ad7dad</color>
+    <color name="event_border_highlight_developer_unconference">#cca872</color>
+    <color name="event_border_highlight_hacking">#b4edb4</color>
+    <color name="event_border_highlight_performance">#deb6de</color>
+    <color name="event_border_highlight_plenary">#faa096</color>
+    <color name="event_border_highlight_scaling_out">#d19124</color>
+    <color name="event_border_highlight_social">#ededed</color>
+    <color name="event_border_highlight_tutorial">#cca872</color>
+    <color name="event_border_highlight_user_unconference">#cca872</color>
+
+    <!-- Accent color highlight -->
+    <color name="event_border_accent_highlight">#ff9412</color>
+    <color name="event_border_accent_highlight_nine_six_features">#ffffff</color>
+    <color name="event_border_accent_highlight_applications">#e3acac</color>
+    <color name="event_border_accent_highlight_case_studies">#ffeac6</color>
+    <color name="event_border_accent_highlight_dba">#ad7dad</color>
+    <color name="event_border_accent_highlight_developer_unconference">#cca872</color>
+    <color name="event_border_accent_highlight_hacking">#b4edb4</color>
+    <color name="event_border_accent_highlight_performance">#deb6de</color>
+    <color name="event_border_accent_highlight_plenary">#faa096</color>
+    <color name="event_border_accent_highlight_scaling_out">#d19124</color>
+    <color name="event_border_accent_highlight_social">#ededed</color>
+    <color name="event_border_accent_highlight_tutorial">#cca872</color>
+    <color name="event_border_accent_highlight_user_unconference">#cca872</color>
+
+    <!-- Title color -->
+    <color name="event_title">#a0000000</color>
+    <color name="event_title_highlight">#000000</color>
+
+</resources>
