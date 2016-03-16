@@ -29,7 +29,7 @@ public class AboutDialog extends DialogFragment {
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         TextView text = (TextView) view.findViewById(R.id.eventVersion);
-        text.setText(getString(R.string.fahrplan) + " " + MyApp.version);
+        text.setText(getString(R.string.app_name) + " " + MyApp.version);
         text = (TextView) view.findViewById(R.id.eventTitle);
         text.setText(MyApp.title);
         text = (TextView) view.findViewById(R.id.eventSubtitle);
