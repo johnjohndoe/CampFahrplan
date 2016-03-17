@@ -320,8 +320,8 @@ public class FahrplanMisc {
         intent.setData(Uri.parse("alarm://" + lecture.lecture_id));
 
         AlarmManager alarmManager = (AlarmManager) context.getSystemService(Context.ALARM_SERVICE);
-        PendingIntent pendingintent = PendingIntent
-                .getBroadcast(context, Integer.parseInt(lecture.lecture_id), intent, 0);
+        int lectureId = Integer.parseInt(lecture.lecture_id);
+        PendingIntent pendingintent = PendingIntent.getBroadcast(context, lectureId, intent, 0);
 
         // Cancel any existing alarms for this lecture
         alarmManager.cancel(pendingintent);
@@ -345,7 +345,7 @@ public class FahrplanMisc {
 
             ContentValues values = new ContentValues();
 
-            values.put(AlarmsTable.Columns.EVENT_ID, Integer.parseInt(lecture.lecture_id));
+            values.put(AlarmsTable.Columns.EVENT_ID, lectureId);
             values.put(AlarmsTable.Columns.EVENT_TITLE, lecture.title);
             values.put(AlarmsTable.Columns.ALARM_TIME_IN_MIN, alarmTimeInMin);
             values.put(AlarmsTable.Columns.TIME, when);
