@@ -64,6 +64,12 @@ android {
             keyAlias props['signing.ccc32c3-release.keyAlias']
             keyPassword props['signing.ccc32c3-release.keyPassword']
         }
+        tazlab2016 {
+            storeFile file(props['signing.tazlab-release.keystoreFilePath'])
+            storePassword props['signing.tazlab-release.keystorePassword']
+            keyAlias props['signing.tazlab-release.keyAlias']
+            keyPassword props['signing.tazlab-release.keyPassword']
+        }
     }
 
     productFlavors {
@@ -111,6 +117,21 @@ android {
             buildConfigField "int", "SCHEDULE_LAST_DAY_END_YEAR", "2015"
             buildConfigField "int", "SCHEDULE_LAST_DAY_END_MONTH", "12"
             buildConfigField "int", "SCHEDULE_LAST_DAY_END_DAY", "31"
+        }
+        tazlab2016 {
+            applicationId "info.metadude.android.tazlab.schedule"
+            signingConfig signingConfigs.tazlab2016
+            buildConfigField "String", "SCHEDULE_URL", '"http://www.taz.de/programm/2016/FremdeFreunde2016/de/schedule.xml"'
+            buildConfigField "String", "SCHEDULE_DOMAIN_PART", '"http://www.taz.de"'
+            buildConfigField "String", "SCHEDULE_EVENT_PART", '"/events/%1$s.html"'
+            buildConfigField "String", "SCHEDULE_PART", '"/programm/2016/FremdeFreunde2016/de"'
+            buildConfigField "String", "VENUE", '"hdkw"'
+            buildConfigField "int", "SCHEDULE_FIRST_DAY_START_YEAR", "2016"
+            buildConfigField "int", "SCHEDULE_FIRST_DAY_START_MONTH", "4"
+            buildConfigField "int", "SCHEDULE_FIRST_DAY_START_DAY", "2"
+            buildConfigField "int", "SCHEDULE_LAST_DAY_END_YEAR", "2016"
+            buildConfigField "int", "SCHEDULE_LAST_DAY_END_MONTH", "4"
+            buildConfigField "int", "SCHEDULE_LAST_DAY_END_DAY", "2"
         }
     }
 
