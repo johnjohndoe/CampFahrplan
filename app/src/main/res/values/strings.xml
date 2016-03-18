@@ -49,7 +49,7 @@
     <string name="set_alarm">Set alarm</string>
 	<string name="libraries">
 		This application uses the following libraries:
-		Google Support Library v4, Google AppCompat Library v7
+		Google Support Library v4, Google AppCompat Library v7, Email Intent Builder, TraceDroid
 	</string>
     <string name="copyright_notes">Copyright 2016 Daniel Dorau.\nCopyright 2016 SubOptimal, entropynil, johnjohndoe.\nPortions Copyright 2008-2011 The K-9 Dog Walkers and 2006-2013 the Android Open Source Project.</string>
     <string name="copyright_logo">30C3 artwork by <![CDATA[<a href="http://evelynschubert.com/">Evelyn Schubert</a>]]> licensed under <![CDATA[<a href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US">CC BY-SA 3.0</a>]]></string>
@@ -117,6 +117,36 @@
     </string>
     <string name="build_info_hash">
         Version hash: <xliff:g id="build_hash" example="e1f2g3h-dirty">%s</xliff:g>
+    </string>
+
+    <!-- TraceDroid configuration -->
+    <string name="config_trace_droid_email_address" translatable="false">
+        ENTER_EMAIL_ADDRESS_HERE
+    </string>
+
+    <!-- TraceDroid -->
+    <string name="trace_droid_dialog_title">
+        Send taz.lab crash report &#8230;
+    </string>
+    <string name="trace_droid_dialog_message">
+        A problem with the taz.lab app has been detected.
+        It would be helpful if you could submit a crash report
+        so the source of the problem can be identified.
+    </string>
+    <string name="trace_droid_button_title_send">
+        Open email
+    </string>
+    <string name="trace_droid_no_email_app">
+        No compatible email app installed.
+    </string>
+    <string name="trace_droid_button_title_no">
+        No
+    </string>
+    <string name="trace_droid_button_title_later">
+        Maybe later
+    </string>
+    <string name="trace_droid_app_chooser_title">
+        Open draft with &#8230;
     </string>
 
 </resources>

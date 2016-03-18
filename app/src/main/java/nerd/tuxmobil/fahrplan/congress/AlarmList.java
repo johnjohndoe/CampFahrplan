@@ -20,6 +20,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 
+import org.ligi.tracedroid.logging.Log;
+
 import nerd.tuxmobil.fahrplan.congress.FahrplanContract.AlarmsTable;
 import nerd.tuxmobil.fahrplan.congress.FahrplanContract.AlarmsTable.Columns;
 
@@ -101,6 +103,7 @@ public class AlarmList extends ActionBarListActivity {
         Intent intent = new Intent(this, AlarmReceiver.class);
 
         String lecture_id = cursor.getString(cursor.getColumnIndex(AlarmsTable.Columns.EVENT_ID));
+        Log.d(getClass().getName(), "delete_alarm: lecture: " + lecture_id);
         intent.putExtra(BundleKeys.ALARM_LECTURE_ID, lecture_id);
         int day = cursor.getInt(cursor.getColumnIndex(AlarmsTable.Columns.DAY));
         intent.putExtra(BundleKeys.ALARM_DAY, day);

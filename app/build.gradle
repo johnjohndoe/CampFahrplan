@@ -149,6 +149,8 @@ ext {
 dependencies {
     compile "com.android.support:appcompat-v7:${supportLibVersion}"
     compile "com.squareup.okhttp:okhttp:2.7.5"
+    compile "de.cketti.mailto:email-intent-builder:1.0.0"
+    compile files("libs/TraceDroid-1.1.jar")
 
     testCompile "junit:junit:4.12"
     testCompile "com.squareup.assertj:assertj-android:1.1.1"
