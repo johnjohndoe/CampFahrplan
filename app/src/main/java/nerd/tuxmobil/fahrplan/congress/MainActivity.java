@@ -67,6 +67,8 @@ public class MainActivity extends BaseActivity implements
         int actionBarColor = ContextCompat.getColor(this, R.color.colorActionBar);
         getSupportActionBar().setBackgroundDrawable(new ColorDrawable(actionBarColor));
 
+        TraceDroidEmailSender.sendStackTraces(this);
+
         if (MyApp.fetcher == null) {
             fetcher = new FetchFahrplan();
         } else {
