@@ -120,6 +120,7 @@ android {
         }
         tazlab2016 {
             applicationId "info.metadude.android.tazlab.schedule"
+            versionName "1.32.2 (taz.lab-Edition)"
             signingConfig signingConfigs.tazlab2016
             buildConfigField "String", "SCHEDULE_URL", '"http://www.taz.de/programm/2016/FremdeFreunde2016/de/schedule.xml"'
             buildConfigField "String", "SCHEDULE_DOMAIN_PART", '"http://www.taz.de"'
