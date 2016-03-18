@@ -4,6 +4,8 @@ import android.app.Application;
 import android.util.Log;
 import android.util.SparseIntArray;
 
+import org.ligi.tracedroid.TraceDroid;
+
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
@@ -80,6 +82,7 @@ public class MyApp extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
+        TraceDroid.init(this);
         app = this;
         task_running = TASKS.NONE;
         lectureList = null;
