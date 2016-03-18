@@ -13,6 +13,8 @@ import android.net.Uri;
 import android.preference.PreferenceManager;
 import android.text.format.Time;
 
+import org.ligi.tracedroid.logging.Log;
+
 import nerd.tuxmobil.fahrplan.congress.FahrplanContract.AlarmsTable;
 
 public final class onBootReceiver extends BroadcastReceiver {
@@ -53,6 +55,7 @@ public final class onBootReceiver extends BroadcastReceiver {
                 // set alarm
                 String lecture_id = cursor
                         .getString(cursor.getColumnIndex(AlarmsTable.Columns.EVENT_ID));
+                Log.d(getClass().getName(), "Set alarm for lecture: " + lecture_id);
                 int day = cursor.getInt(cursor.getColumnIndex(AlarmsTable.Columns.DAY));
                 String title = cursor
                         .getString(cursor.getColumnIndex(AlarmsTable.Columns.EVENT_TITLE));
