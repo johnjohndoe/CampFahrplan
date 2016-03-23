@@ -13,7 +13,7 @@ signing.camp2015-release.keystorePassword="PASSWORD"
 signing.camp2015-release.keyAlias="camp2015"
 signing.camp2015-release.keyPassword="ANOTHERPASSWORD"
 
-signing.tazlab2016-release.keystoreFilePath=/home/USERNAME/.android/tazlab-release-key.keystore
-signing.tazlab2016-release.keystorePassword="PASSWORD"
-signing.tazlab2016-release.keyAlias="tazlab"
-signing.tazlab2016-release.keyPassword="ANOTHERPASSWORD"
+signing.tazlab-release.keystoreFilePath=/home/USERNAME/.android/tazlab-release-key.keystore
+signing.tazlab-release.keystorePassword="PASSWORD"
+signing.tazlab-release.keyAlias="tazlab"
+signing.tazlab-release.keyPassword="ANOTHERPASSWORD"
