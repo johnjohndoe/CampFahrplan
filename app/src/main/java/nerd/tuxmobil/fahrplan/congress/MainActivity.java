@@ -416,7 +416,7 @@ public class MainActivity extends BaseActivity implements
                 }
                 break;
             case MyApp.SETTINGS:
-                if ((resultCode == Activity.RESULT_OK) && (intent.getBooleanExtra(BundleKeys.PREFS_ALTERNATIVE_HIGHLIGHT, false))) {
+                if ((resultCode == Activity.RESULT_OK) && (intent.getBooleanExtra(BundleKeys.PREFS_ALTERNATIVE_HIGHLIGHT, true))) {
                     if (findViewById(R.id.schedule) != null) {
                         replaceFragment(R.id.schedule, new FahrplanFragment(),
                                 FahrplanFragment.FRAGMENT_TAG);
