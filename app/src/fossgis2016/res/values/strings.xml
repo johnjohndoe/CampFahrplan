@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">FOSSGIS 2016 Schedule</string>
+    <string name="conference_url">
+        <![CDATA[<a href="http://www.fossgis-konferenz.de/2016/">http://www.fossgis-konferenz.de/2016/</a>]]>
+    </string>
+    <string name="source_code">
+        <![CDATA[<a href="https://github.com/johnjohndoe/CampFahrplan/tree/fossgis-2016">Source code</a>]]>
+    </string>
+    <string name="google_play_store">
+        <![CDATA[<a href="https://play.google.com/store/apps/details?id=info.metadude.android.fossgis.schedule">Google PlayStore listing</a>]]>
+    </string>
+    <string name="copyright_logo">
+    </string>
+</resources>

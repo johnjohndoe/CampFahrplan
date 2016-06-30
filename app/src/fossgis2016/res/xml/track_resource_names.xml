@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<map linked="true">
+    <entry key="Freie Daten">free_data</entry>
+    <entry key="Freie Software">free_software</entry>
+    <entry key="Meeting">meeting</entry>
+    <entry key="Workshop (bezahlt)">workshop_paid</entry>
+    <entry key=""></entry>
+</map>
