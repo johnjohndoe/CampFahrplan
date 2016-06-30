@@ -33,7 +33,7 @@ public class AboutDialog extends DialogFragment {
         text = (TextView) view.findViewById(R.id.eventTitle);
         text.setText(MyApp.title);
         text = (TextView) view.findViewById(R.id.eventSubtitle);
-        text.setText(MyApp.subtitle);
+        text.setText("Konferenz für Freie und Open Source Software Geo-Software und OpenStreetMap, 22.-25. März 2017, Universität Passau");
         text = (TextView) view.findViewById(R.id.appVersion);
         String appVersionText = getString(R.string.appVersion, BuildConfig.VERSION_NAME);
         text.setText(appVersionText);
