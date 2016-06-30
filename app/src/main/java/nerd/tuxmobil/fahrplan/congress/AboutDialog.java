@@ -40,11 +40,6 @@ public class AboutDialog extends DialogFragment {
 
         Context context = getContext();
 
-        TextView logo_copyright = (TextView) view.findViewById(R.id.copyright_logo);
-        logo_copyright.setText(Html.fromHtml(getString(R.string.copyright_logo)));
-        logo_copyright.setLinkTextColor(ContextCompat.getColor(context, R.color.text_link_color_dark));
-        logo_copyright.setMovementMethod(LinkMovementMethod.getInstance());
-
         TextView conferenceUrl = (TextView) view.findViewById(R.id.conference_url);
         conferenceUrl.setText(Html.fromHtml(getString(R.string.conference_url)));
         conferenceUrl.setMovementMethod(LinkMovementMethod.getInstance());
