@@ -74,6 +74,7 @@ android {
     productFlavors {
         fossgis2016 {
             applicationId "info.metadude.android.fossgis.schedule"
+            versionName "1.32.2 (FOSSGIS-Edition)"
             signingConfig signingConfigs.fossgis2016
             buildConfigField "String", "SCHEDULE_URL", '"http://frab.fossgis-konferenz.de/de/2016/public/schedule.xml"'
             buildConfigField "String", "SCHEDULE_DOMAIN_PART", '"http://frab.fossgis-konferenz.de/de"'
