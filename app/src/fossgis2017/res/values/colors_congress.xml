@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="pressed_congress">#CCeb7f00</color>
+
+    <!-- Default state -->
+    <color name="event_border_default">#E4E4E4</color>
+    <color name="event_border_default_free_data">#F3FFE7</color>
+    <color name="event_border_default_free_software">#FFFCEA</color>
+    <color name="event_border_default_sonstiges">#8AC09D</color>
+    <color name="event_border_default_workshop_paid">#D6DBFF</color>
+
+    <!-- Accent color -->
+    <color name="event_border_accent">#E4E4E4</color>
+    <color name="event_border_accent_free_data">#F3FFE7</color>
+    <color name="event_border_accent_free_software">#FFFCEA</color>
+    <color name="event_border_accent_sonstiges">#8AC09D</color>
+    <color name="event_border_accent_workshop_paid">#D6DBFF</color>
+
+    <!-- Highlight state -->
+    <color name="event_border_highlight">#999999</color>
+    <color name="event_border_highlight_free_data">#E3FFC5</color>
+    <color name="event_border_highlight_free_software">#FEF5C0</color>
+    <color name="event_border_highlight_sonstiges">#0E7D35</color>
+    <color name="event_border_highlight_workshop_paid">#C0C7FF</color>
+
+    <!-- Accent color highlight -->
+    <color name="event_border_accent_highlight">#999999</color>
+    <color name="event_border_accent_highlight_free_data">#E3FFC5</color>
+    <color name="event_border_accent_highlight_free_software">#FEF5C0</color>
+    <color name="event_border_accent_highlight_sonstiges">#0E7D35</color>
+    <color name="event_border_accent_highlight_workshop_paid">#C0C7FF</color>
+
+    <!-- Title color -->
+    <color name="event_title">#a0000000</color>
+    <color name="event_title_highlight">@android:color/black</color>
+
+    <color name="event_drawable_selection_stroke">@color/colorPrimary</color>
+
+</resources>
