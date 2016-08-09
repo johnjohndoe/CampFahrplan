@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="pressed_congress">#CC0099AB</color>
+
+    <!-- Default state -->
+    <color name="event_border_default">#E4E4E4</color>
+    <color name="event_border_default_culture">#0043FF</color>
+    <color name="event_border_default_databases">#00FF00</color>
+    <color name="event_border_default_development">#0000FF</color>
+    <color name="event_border_default_froscon_meets_science">#FFFF00</color>
+    <color name="event_border_default_getting_to_the_source">#880000</color>
+    <color name="event_border_default_hardware">#000088</color>
+    <color name="event_border_default_iot">#888800</color>
+    <color name="event_border_default_real_life">#FEFD7F</color>
+    <color name="event_border_default_keynote">#E0FFFF</color>
+    <color name="event_border_default_monitoring">#008888</color>
+    <color name="event_border_default_other">#FF6666</color>
+    <color name="event_border_default_putting_open_data_on_the_map">#FF4D00</color>
+    <color name="event_border_default_security">#880088</color>
+    <color name="event_border_default_system_administration">#87CEFA</color>
+    <color name="event_border_default_web_development">#BC8F8F</color>
+
+    <!-- Accent color -->
+    <color name="event_border_accent">#5e5e5e</color>
+    <color name="event_border_accent_culture">#6b92ff</color>
+    <color name="event_border_accent_databases">#00b300</color>
+    <color name="event_border_accent_development">#70a5ff</color>
+    <color name="event_border_accent_froscon_meets_science">#8f860b</color>
+    <color name="event_border_accent_getting_to_the_source">#cc0000</color>
+    <color name="event_border_accent_hardware">#0745a1</color>
+    <color name="event_border_accent_iot">#cccc00</color>
+    <color name="event_border_accent_real_life">#b3b359</color>
+    <color name="event_border_accent_keynote">#9db3b3</color>
+    <color name="event_border_accent_monitoring">#00cccc</color>
+    <color name="event_border_accent_other">#b34747</color>
+    <color name="event_border_accent_putting_open_data_on_the_map">#a1380b</color>
+    <color name="event_border_accent_security">#cc00cc</color>
+    <color name="event_border_accent_system_administration">#5e8fad</color>
+    <color name="event_border_accent_web_development">#ffc2c2</color>
+
+    <!-- Highlight state -->
+    <color name="event_border_highlight">@color/event_border_accent</color>
+    <color name="event_border_highlight_culture">@color/event_border_accent_culture</color>
+    <color name="event_border_highlight_databases">@color/event_border_accent_databases</color>
+    <color name="event_border_highlight_development">@color/event_border_accent_development</color>
+    <color name="event_border_highlight_froscon_meets_science">@color/event_border_accent_froscon_meets_science</color>
+    <color name="event_border_highlight_getting_to_the_source">@color/event_border_accent_getting_to_the_source</color>
+    <color name="event_border_highlight_hardware">@color/event_border_accent_hardware</color>
+    <color name="event_border_highlight_iot">@color/event_border_accent_iot</color>
+    <color name="event_border_highlight_real_life">@color/event_border_accent_real_life</color>
+    <color name="event_border_highlight_keynote">@color/event_border_accent_keynote</color>
+    <color name="event_border_highlight_monitoring">@color/event_border_accent_monitoring</color>
+    <color name="event_border_highlight_other">@color/event_border_accent_other</color>
+    <color name="event_border_highlight_putting_open_data_on_the_map">@color/event_border_accent_putting_open_data_on_the_map</color>
+    <color name="event_border_highlight_security">@color/event_border_accent_security</color>
+    <color name="event_border_highlight_system_administration">@color/event_border_accent_system_administration</color>
+    <color name="event_border_highlight_web_development">@color/event_border_accent_web_development</color>
+
+    <!-- Accent color highlight -->
+    <color name="event_border_accent_highlight">@color/event_border_default</color>
+    <color name="event_border_accent_highlight_culture">@color/event_border_default_culture</color>
+    <color name="event_border_accent_highlight_databases">@color/event_border_default_databases</color>
+    <color name="event_border_accent_highlight_development">@color/event_border_default_development</color>
+    <color name="event_border_accent_highlight_froscon_meets_science">@color/event_border_default_froscon_meets_science</color>
+    <color name="event_border_accent_highlight_getting_to_the_source">@color/event_border_default_getting_to_the_source</color>
+    <color name="event_border_accent_highlight_hardware">@color/event_border_default_hardware</color>
+    <color name="event_border_accent_highlight_iot">@color/event_border_default_iot</color>
+    <color name="event_border_accent_highlight_real_life">@color/event_border_default_real_life</color>
+    <color name="event_border_accent_highlight_keynote">@color/event_border_default_keynote</color>
+    <color name="event_border_accent_highlight_monitoring">@color/event_border_default_monitoring</color>
+    <color name="event_border_accent_highlight_other">@color/event_border_default_other</color>
+    <color name="event_border_accent_highlight_putting_open_data_on_the_map">@color/event_border_default_putting_open_data_on_the_map</color>
+    <color name="event_border_accent_highlight_security">@color/event_border_default_security</color>
+    <color name="event_border_accent_highlight_system_administration">@color/event_border_default_system_administration</color>
+    <color name="event_border_accent_highlight_web_development">@color/event_border_accent_web_development</color>
+
+    <!-- Title color -->
+    <color name="event_title">#a0000000</color>
+    <color name="event_title_highlight">@android:color/black</color>
+
+    <color name="event_drawable_selection_stroke">@color/colorPrimary</color>
+
+</resources>

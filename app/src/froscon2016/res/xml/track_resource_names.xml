@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<map linked="true">
+    <entry key="Culture">culture</entry>
+    <entry key="Databases">databases</entry>
+    <entry key="Development">development</entry>
+    <entry key="FrOSCon meets Science">froscon_meets_science</entry>
+    <entry key="Getting to the source">getting_to_the_source</entry>
+    <entry key="Hardware">hardware</entry>
+    <entry key="Internet of Things">iot</entry>
+    <entry key="Is this the real life, is this just fantasy?">real_life</entry>
+    <entry key="Keynote">keynote</entry>
+    <entry key="Monitoring">monitoring</entry>
+    <entry key="other">other</entry>
+    <entry key="Putting Open Data on the map">putting_open_data_on_the_map</entry>
+    <entry key="Security">security</entry>
+    <entry key="System Administration">system_administration</entry>
+    <entry key="Web Development">web_development</entry>
+    <entry key=""></entry>
+</map>
