@@ -45,6 +45,12 @@ android {
     }
 
     signingConfigs {
+        froscon2016 {
+            storeFile file(props['signing.froscon-release.keystoreFilePath'])
+            storePassword props['signing.froscon-release.keystorePassword']
+            keyAlias props['signing.froscon-release.keyAlias']
+            keyPassword props['signing.froscon-release.keyPassword']
+        }
         ccc31c3 {
             storeFile file(props['signing.ccc31c3-release.keystoreFilePath'])
             storePassword props['signing.ccc31c3-release.keystorePassword']
@@ -66,6 +72,21 @@ android {
     }
 
     productFlavors {
+        froscon2016 {
+            applicationId "info.metadude.android.froscon.schedule"
+            signingConfig signingConfigs.froscon2016
+            buildConfigField "String", "SCHEDULE_URL", '"https://programm.froscon.de/2016/schedule.xml"'
+            buildConfigField "String", "SCHEDULE_DOMAIN_PART", '"https://programm.froscon.de"'
+            buildConfigField "String", "SCHEDULE_EVENT_PART", '"/events/%1$s.html"'
+            buildConfigField "String", "SCHEDULE_PART", '"/2016"'
+            buildConfigField "String", "VENUE", '"hs-bonn-rhein-sieg"'
+            buildConfigField "int", "SCHEDULE_FIRST_DAY_START_YEAR", "2016"
+            buildConfigField "int", "SCHEDULE_FIRST_DAY_START_MONTH", "8"
+            buildConfigField "int", "SCHEDULE_FIRST_DAY_START_DAY", "20"
+            buildConfigField "int", "SCHEDULE_LAST_DAY_END_YEAR", "2016"
+            buildConfigField "int", "SCHEDULE_LAST_DAY_END_MONTH", "8"
+            buildConfigField "int", "SCHEDULE_LAST_DAY_END_DAY", "21"
+        }
         ccc31c3 {
             applicationId "nerd.tuxmobil.fahrplan.congress"
             signingConfig signingConfigs.ccc31c3
