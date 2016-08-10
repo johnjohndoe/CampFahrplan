@@ -35,7 +35,7 @@ public class AboutDialog extends DialogFragment {
         text = (TextView) view.findViewById(R.id.eventTitle);
         text.setText(MyApp.title);
         text = (TextView) view.findViewById(R.id.eventSubtitle);
-        text.setText(MyApp.subtitle);
+        text.setText("Free and Open Source Software Conference");
         text = (TextView) view.findViewById(R.id.appVersion);
         String appVersionText = getString(R.string.appVersion, BuildConfig.VERSION_NAME);
         text.setText(appVersionText);
