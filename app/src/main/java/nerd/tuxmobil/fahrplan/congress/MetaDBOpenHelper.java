@@ -10,7 +10,7 @@ import nerd.tuxmobil.fahrplan.congress.FahrplanContract.MetasTable.Defaults;
 
 public class MetaDBOpenHelper extends SQLiteOpenHelper {
 
-    private static final int DATABASE_VERSION = 3;
+    private static final int DATABASE_VERSION = 6;
 
     private static final String META_TABLE_CREATE =
             "CREATE TABLE " + MetasTable.NAME + " (" +
@@ -55,6 +55,11 @@ public class MetaDBOpenHelper extends SQLiteOpenHelper {
         if ((oldVersion < 3) && (newVersion >= 3)) {
             db.execSQL("ALTER TABLE " + MetasTable.NAME + " ADD COLUMN " +
                     Columns.ETAG + " TEXT DEFAULT " + Defaults.ETAG_DEFAULT);
+        }
+        if (oldVersion < 6) {
+            // Clear database from FrOSCon 2016
+            db.execSQL("DROP TABLE IF EXISTS " + MetasTable.NAME);
+            onCreate(db);
         }
     }
 }
