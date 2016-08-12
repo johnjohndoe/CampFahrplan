@@ -6,18 +6,38 @@
     <!-- Default state -->
     <color name="event_border_default">#afc1c1</color>
     <color name="event_border_default_track_1">#fefd7f</color>
+    <color name="event_border_default_bof_session">#bfff80</color>
+    <color name="event_border_default_introduction">#9cf7ff</color>
+    <color name="event_border_default_keynote">#FF9B9B</color>
+    <color name="event_border_default_lightning_talks">#ffbf80</color>
+    <color name="event_border_default_topic_talk">#ff9cf7</color>
 
     <!-- Accent color -->
     <color name="event_border_accent">#8ac2c2</color>
     <color name="event_border_accent_track_1">#cccc66</color>
+    <color name="event_border_accent_bof_session">#99cc66</color>
+    <color name="event_border_accent_introduction">#7cc5cc</color>
+    <color name="event_border_accent_keynote">#cc7c7c</color>
+    <color name="event_border_accent_lightning_talks">#cc9966</color>
+    <color name="event_border_accent_topic_talk">#cc7cc5</color>
 
     <!-- Highlight state -->
     <color name="event_border_highlight">#dff5f5</color>
     <color name="event_border_highlight_track_1">#ffff4d</color>
+    <color name="event_border_highlight_bof_session">#a6ff4d</color>
+    <color name="event_border_highlight_introduction">#69f2ff</color>
+    <color name="event_border_highlight_keynote">#ff6969</color>
+    <color name="event_border_highlight_lightning_talks">#ffa64d</color>
+    <color name="event_border_highlight_topic_talk">#ff69f2</color>
 
     <!-- Accent color highlight -->
     <color name="event_border_accent_highlight">#aef5f5</color>
     <color name="event_border_accent_highlight_track_1">#cccc3d</color>
+    <color name="event_border_accent_highlight_bof_session">#85cc3d</color>
+    <color name="event_border_accent_highlight_introduction">#54c2cc</color>
+    <color name="event_border_accent_highlight_keynote">#cc5454</color>
+    <color name="event_border_accent_highlight_lightning_talks">#cc853d</color>
+    <color name="event_border_accent_highlight_topic_talk">#cc54c2</color>
 
     <!-- Title color -->
     <color name="event_title">#a0000000</color>

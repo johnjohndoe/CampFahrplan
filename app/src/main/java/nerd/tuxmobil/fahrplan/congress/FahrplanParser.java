@@ -412,6 +412,7 @@ class parser extends AsyncTask<String, Void, Boolean> {
                                 if (lecture_done) {
                                     break;
                                 }
+                                Foss4gTrackClassifier.customizeTrack(lecture);
                                 eventType = parser.next();
                             }
                         } else if (name.equalsIgnoreCase("conference")) {

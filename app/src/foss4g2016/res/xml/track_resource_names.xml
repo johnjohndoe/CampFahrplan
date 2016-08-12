@@ -4,4 +4,11 @@
     <entry key="Track 1">track_1</entry>
     <entry key=""></entry>
 
+    <!-- Custom tracks -->
+    <entry key="BoF Session">bof_session</entry>
+    <entry key="Introduction">introduction</entry>
+    <entry key="Keynote">keynote</entry>
+    <entry key="Lightning Talks">lightning_talks</entry>
+    <entry key="Topic Talk">topic_talk</entry>
+
 </map>

@@ -13,6 +13,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteException;
 import android.provider.CalendarContract;
 import android.support.annotation.NonNull;
+import android.text.TextUtils;
 import android.support.v4.app.FragmentActivity;
 import android.text.format.Time;
 import android.widget.Toast;
@@ -163,14 +164,11 @@ public class FahrplanMisc {
     }
 
     public static String getEventUrl(final Context context, final String eventId) {
-        StringBuilder sb = new StringBuilder();
-        sb.append(BuildConfig.SCHEDULE_DOMAIN_PART);
-        sb.append(BuildConfig.SCHEDULE_PART);
-        // TODO The event url can be localized by providing individual values
-        // for `schedule_event_part` in `values` and `values-de`.
-        String eventPart = String.format(BuildConfig.SCHEDULE_EVENT_PART, eventId);
-        sb.append(eventPart);
-        return sb.toString();
+        String foss4gEventUrl = Foss4gEventUrlGenerator.getEventUrl(eventId);
+        if (TextUtils.isEmpty(foss4gEventUrl)) {
+            foss4gEventUrl = "http://2016.foss4g.org/programme.html#conference-programme";
+        }
+        return foss4gEventUrl;
     }
 
     public static String getCalendarDescription(final Context context, final Lecture lecture) {

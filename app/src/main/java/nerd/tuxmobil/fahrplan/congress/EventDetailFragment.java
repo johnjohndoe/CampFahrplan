@@ -208,10 +208,18 @@ public class EventDetailFragment extends Fragment {
                     .findViewById(R.id.eventOnlineSection);
             eventOnlineSection.setTypeface(bold);
             final TextView eventOnlineLink = (TextView) view.findViewById(R.id.eventOnline);
-            final String eventUrl = FahrplanMisc.getEventUrl(activity, event_id);
-            final String eventLink = "<a href=\"" + eventUrl + "\">" + eventUrl + "</a>";
-            setUpHtmlTextView(eventOnlineLink, regular, eventLink);
-
+            if (TextUtils.isEmpty(event_id)) {
+                throw new NullPointerException("No eventId for " + title);
+            }
+            final String eventUrl = Foss4gEventUrlGenerator.getEventUrl(event_id);
+            if (TextUtils.isEmpty(eventUrl)) {
+                eventOnlineSection.setVisibility(View.GONE);
+                eventOnlineLink.setVisibility(View.GONE);
+            } else {
+                String eventLink = "<a href=\"" + eventUrl + "\">" + eventUrl + "</a>";
+                eventOnlineSection.setVisibility(View.VISIBLE);
+                setUpHtmlTextView(eventOnlineLink, regular, eventLink);
+            }
             activity.supportInvalidateOptionsMenu();
         }
         activity.setResult(FragmentActivity.RESULT_CANCELED);
