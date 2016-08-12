@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">FOSS4G 2016 Program</string>
+    <string name="conference_url">
+        <![CDATA[<a href="http://2016.foss4g.org">http://2016.foss4g.org</a>]]>
+    </string>
+    <string name="source_code">
+        <![CDATA[<a href="https://github.com/johnjohndoe/CampFahrplan/tree/foss4g-2016">Source code</a>]]>
+    </string>
+    <string name="google_play_store">
+        <![CDATA[<a href="https://play.google.com/store/apps/details?id=info.metadude.android.foss4g.schedule">Google PlayStore listing</a>]]>
+    </string>
+    <string name="copyright_logo">
+        <![CDATA[The name FOSS4G is a registered trademarks of
+        <a href="https://www.froscon.de">LOC der FOSS4G 2016 / FOSSGIS e.V.</a> The FOSS4G
+        2016 logo has been created by <a href="https://kuestenschmiede.de">Küstenschmiede</a>.
+        Used with permission.]]>
+    </string>
+</resources>

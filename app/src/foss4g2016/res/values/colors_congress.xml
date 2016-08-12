@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="pressed_congress">#CC0099AB</color>
+
+    <!-- Default state -->
+    <color name="event_border_default">#afc1c1</color>
+    <color name="event_border_default_track_1">#fefd7f</color>
+
+    <!-- Accent color -->
+    <color name="event_border_accent">#8ac2c2</color>
+    <color name="event_border_accent_track_1">#cccc66</color>
+
+    <!-- Highlight state -->
+    <color name="event_border_highlight">#dff5f5</color>
+    <color name="event_border_highlight_track_1">#ffff4d</color>
+
+    <!-- Accent color highlight -->
+    <color name="event_border_accent_highlight">#aef5f5</color>
+    <color name="event_border_accent_highlight_track_1">#cccc3d</color>
+
+    <!-- Title color -->
+    <color name="event_title">#a0000000</color>
+    <color name="event_title_highlight">@android:color/black</color>
+
+    <color name="event_drawable_selection_stroke">@android:color/white</color>
+
+</resources>
