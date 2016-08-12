@@ -75,6 +75,7 @@ android {
         foss4g2016 {
             applicationId "info.metadude.android.foss4g.schedule"
             signingConfig signingConfigs.foss4g2016
+            versionName "1.32.2 (FOSS4G-Edition)"
             buildConfigField "String", "SCHEDULE_URL", '"http://frab.fossgis-konferenz.de/en/foss4g-2016/public/schedule.xml"'
             buildConfigField "String", "SCHEDULE_DOMAIN_PART", '"http://frab.fossgis-konferenz.de"'
             buildConfigField "String", "SCHEDULE_EVENT_PART", '"/events/%1$s.html"'
