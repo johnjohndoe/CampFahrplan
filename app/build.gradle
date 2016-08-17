@@ -18,8 +18,8 @@ android {
     buildToolsVersion "23.0.3"
 
     defaultConfig {
-        versionCode 39
-        versionName "1.32.2"
+        versionCode 40
+        versionName "1.32.3"
         minSdkVersion 14
         targetSdkVersion 22
 
@@ -75,7 +75,7 @@ android {
         froscon2016 {
             applicationId "info.metadude.android.froscon.schedule"
             signingConfig signingConfigs.froscon2016
-            versionName "1.32.2 (FrOSCon-Edition)"
+            versionName "1.32.3 (FrOSCon-Edition)"
             buildConfigField "String", "SCHEDULE_URL", '"https://programm.froscon.de/2016/schedule.xml"'
             buildConfigField "String", "SCHEDULE_DOMAIN_PART", '"https://programm.froscon.de"'
             buildConfigField "String", "SCHEDULE_EVENT_PART", '"/events/%1$s.html"'
