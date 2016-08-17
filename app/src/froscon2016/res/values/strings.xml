@@ -11,6 +11,6 @@
         <![CDATA[<a href="https://play.google.com/store/apps/details?id=info.metadude.android.froscon.schedule">Google PlayStore listing</a>]]>
     </string>
     <string name="copyright_logo">
-        <![CDATA[<a href="https://www.froscon.de">The FrOSCon logo is published under the Creative Commons License.]]>
+        <![CDATA[The <a href="https://www.froscon.de">FrOSCon logo</a> is published under the Creative Commons License.]]>
     </string>
 </resources>
