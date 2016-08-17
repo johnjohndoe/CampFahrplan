@@ -40,7 +40,7 @@
     <color name="event_border_accent_web_development">#ffc2c2</color>
 
     <!-- Highlight state -->
-    <color name="event_border_highlight">@color/event_border_accent</color>
+    <color name="event_border_highlight">#fafafa</color>
     <color name="event_border_highlight_culture">@color/event_border_accent_culture</color>
     <color name="event_border_highlight_databases">@color/event_border_accent_databases</color>
     <color name="event_border_highlight_development">@color/event_border_accent_development</color>
@@ -58,7 +58,7 @@
     <color name="event_border_highlight_web_development">@color/event_border_accent_web_development</color>
 
     <!-- Accent color highlight -->
-    <color name="event_border_accent_highlight">@color/event_border_default</color>
+    <color name="event_border_accent_highlight">#5e5e5e</color>
     <color name="event_border_accent_highlight_culture">@color/event_border_default_culture</color>
     <color name="event_border_accent_highlight_databases">@color/event_border_default_databases</color>
     <color name="event_border_accent_highlight_development">@color/event_border_default_development</color>
