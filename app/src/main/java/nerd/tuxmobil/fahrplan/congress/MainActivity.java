@@ -61,7 +61,7 @@ public class MainActivity extends BaseActivity implements
         progressBar = (ProgressBar)findViewById(R.id.progress);
         setSupportActionBar(toolbar);
 
-        getSupportActionBar().setTitle(R.string.fahrplan);
+        getSupportActionBar().setTitle("FOSS4G");
         getSupportActionBar().setDisplayShowHomeEnabled(true);
         getSupportActionBar().setDefaultDisplayHomeAsUpEnabled(true);
         int actionBarColor = ContextCompat.getColor(this, R.color.colorActionBar);
