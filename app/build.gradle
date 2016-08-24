@@ -86,6 +86,7 @@ android {
             buildConfigField "int", "SCHEDULE_LAST_DAY_END_YEAR", "2016"
             buildConfigField "int", "SCHEDULE_LAST_DAY_END_MONTH", "9"
             buildConfigField "int", "SCHEDULE_LAST_DAY_END_DAY", "5"
+            buildConfigField "String", "SCHEDULE_FEEDBACK_URL", '"https://frab.cccv.de/de/MRMCD16/public/events/%s/feedback/new"'
         }
         ccc31c3 {
             applicationId "nerd.tuxmobil.fahrplan.congress"

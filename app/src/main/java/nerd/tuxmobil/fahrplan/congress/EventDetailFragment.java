@@ -45,6 +45,8 @@ public class EventDetailFragment extends Fragment {
 
     private String title;
 
+    private static String feedbackURL = BuildConfig.SCHEDULE_FEEDBACK_URL;
+
     private Locale locale;
 
     private Typeface boldCondensed;
@@ -337,6 +339,11 @@ public class EventDetailFragment extends Fragment {
     public boolean onOptionsItemSelected(MenuItem item) {
         Lecture l;
         switch (item.getItemId()) {
+            case R.id.item_feedback:
+                Uri uri = Uri.parse(String.format(feedbackURL, event_id));
+                Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                startActivity(intent);
+                return true;
             case R.id.item_share:
                 l = eventid2Lecture(event_id);
                 if (l != null) {
