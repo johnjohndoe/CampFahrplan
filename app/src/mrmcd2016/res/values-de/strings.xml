@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MRMCD 2016 Fahrplan</string>
+    <string name="conference_url">
+        <![CDATA[<a href="https://2016.mrmcd.net">https://2016.mrmcd.net</a>]]>
+    </string>
+    <string name="source_code">
+        <![CDATA[<a href="https://github.com/johnjohndoe/CampFahrplan/tree/mrmcd-2016">Quellcode</a>]]>
+    </string>
+    <string name="google_play_store">
+        <![CDATA[<a href="https://play.google.com/store/apps/details?id=info.metadude.android.mrmcd.schedule">Eintrag im Google PlayStore</a>]]>
+    </string>
+    <string name="copyright_logo">
+        <![CDATA[Der Name MRMCD ist ein registriertes Markenzeichen des
+        <a href="https://2016.mrmcd.net">MRMCD e.V.</a> Das Design zur MRMCD 2016
+        wurde von Nathalie Groll, MRMCD e.V. gestaltet.
+        Die Nutzung erfolgt mit Erlaubnis.]]>
+    </string>
+</resources>

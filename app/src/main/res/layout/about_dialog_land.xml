@@ -124,6 +124,9 @@
                 android:linksClickable="true"
                 android:text=""/>
 
+        <include
+                layout="@layout/horizontal_line"/>
+
         <TextView
                 android:id="@+id/source_code"
                 android:layout_width="wrap_content"

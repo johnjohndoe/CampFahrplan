@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="pressed_congress">#CC0099AB</color>
+
+    <!-- Default state -->
+    <color name="event_border_default">#50ABE4</color>
+    <color name="event_border_default_talks">#5FB9A9</color>
+
+    <!-- Accent color -->
+    <color name="event_border_accent">#93c5e4</color>
+    <color name="event_border_accent_talks">#ADDBCE</color>
+
+    <!-- Highlight state -->
+    <color name="event_border_highlight">#3fb4fc</color>
+    <color name="event_border_highlight_talks">#79edd8</color>
+
+    <!-- Accent color highlight -->
+    <color name="event_border_accent_highlight">#9ad7fd</color>
+    <color name="event_border_accent_highlight_talks">#dff1eb</color>
+
+    <!-- Title color -->
+    <color name="event_title">#a0000000</color>
+    <color name="event_title_highlight">@android:color/black</color>
+
+    <color name="event_drawable_selection_stroke">@color/colorAccent</color>
+
+</resources>
