@@ -75,6 +75,7 @@ android {
         mrmcd2016 {
             applicationId "info.metadude.android.mrmcd.schedule"
             signingConfig signingConfigs.mrmcd2016
+            versionName "1.32.2 (MRMCD-Edition)"
             buildConfigField "String", "SCHEDULE_URL", '"https://2016.mrmcd.net/fahrplan/schedule.xml"'
             buildConfigField "String", "SCHEDULE_DOMAIN_PART", '"https://2016.mrmcd.net"'
             buildConfigField "String", "SCHEDULE_EVENT_PART", '"/events/%1$s.html"'
