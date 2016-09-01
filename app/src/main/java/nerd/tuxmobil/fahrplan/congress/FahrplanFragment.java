@@ -1074,7 +1074,11 @@ public class FahrplanFragment extends Fragment implements
                 FahrplanMisc.addToCalender(getActivity(), lecture);
                 break;
             case 4:
-                FahrplanMisc.share(getActivity(), lecture);
+                String formattedLecture = SimpleLectureFormat.format(lecture);
+                Context context = getContext();
+                if (!LectureSharer.shareSimple(context, formattedLecture)) {
+                    Toast.makeText(context, R.string.share_error_activity_not_found, Toast.LENGTH_SHORT).show();
+                }
                 break;
         }
         return true;
