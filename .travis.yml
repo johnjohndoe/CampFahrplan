@@ -34,7 +34,7 @@ before_script:
   - mv app/gradle.properties.example app/gradle.properties
 
 script:
-  - ./gradlew clean test assembleMrmcd2016Debug
+  - ./gradlew clean testMrmcd2016Debug assembleMrmcd2016Debug
 
 addons:
   # Fix OpenJDK builds
