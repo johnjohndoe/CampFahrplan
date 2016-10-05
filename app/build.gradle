@@ -75,6 +75,7 @@ android {
         hackover2016 {
             applicationId "info.metadude.android.hackover.schedule"
             signingConfig signingConfigs.hackover2016
+            versionName "1.32.2 (Hackover-Edition)"
             buildConfigField "String", "SCHEDULE_URL", '"https://hackover.de/fahrplan/2016/schedule.xml"'
             buildConfigField "String", "SCHEDULE_DOMAIN_PART", '"https://hackover.de"'
             buildConfigField "String", "SCHEDULE_EVENT_PART", '"/events/%1$s.html"'
