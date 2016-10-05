@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Hackover 2017 Schedule</string>
+    <string name="conference_url">
+        <![CDATA[<a href="https://hackover.de">https://hackover.de</a>]]>
+    </string>
+    <string name="source_code">
+        <![CDATA[<a href="https://github.com/johnjohndoe/CampFahrplan/tree/hackover-2017">Source code</a>]]>
+    </string>
+    <string name="google_play_store">
+        <![CDATA[<a href="https://play.google.com/store/apps/details?id=info.metadude.android.hackover.schedule">Google PlayStore listing</a>]]>
+    </string>
+    <string name="copyright_logo">
+        Design of the Hackover logo: Jedi
+    </string>
+</resources>
