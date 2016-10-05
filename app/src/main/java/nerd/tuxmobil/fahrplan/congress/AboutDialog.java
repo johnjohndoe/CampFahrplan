@@ -33,7 +33,7 @@ public class AboutDialog extends DialogFragment {
         text = (TextView) view.findViewById(R.id.eventTitle);
         text.setText(MyApp.title);
         text = (TextView) view.findViewById(R.id.eventSubtitle);
-        text.setText(MyApp.subtitle);
+        text.setText("50. Hackover, ein Geekend für Erfas, ChaosTreffs und Hackspaces sowie chaosnahen Menschen");
         text = (TextView) view.findViewById(R.id.appVersion);
         String appVersionText = getString(R.string.appVersion, BuildConfig.VERSION_NAME);
         text.setText(appVersionText);
