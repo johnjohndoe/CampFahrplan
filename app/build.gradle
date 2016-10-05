@@ -45,6 +45,12 @@ android {
     }
 
     signingConfigs {
+        hackover2016 {
+            storeFile file(props['signing.hackover-release.keystoreFilePath'])
+            storePassword props['signing.hackover-release.keystorePassword']
+            keyAlias props['signing.hackover-release.keyAlias']
+            keyPassword props['signing.hackover-release.keyPassword']
+        }
         ccc31c3 {
             storeFile file(props['signing.ccc31c3-release.keystoreFilePath'])
             storePassword props['signing.ccc31c3-release.keystorePassword']
@@ -66,6 +72,21 @@ android {
     }
 
     productFlavors {
+        hackover2016 {
+            applicationId "info.metadude.android.hackover.schedule"
+            signingConfig signingConfigs.hackover2016
+            buildConfigField "String", "SCHEDULE_URL", '"https://hackover.de/fahrplan/2016/schedule.xml"'
+            buildConfigField "String", "SCHEDULE_DOMAIN_PART", '"https://hackover.de"'
+            buildConfigField "String", "SCHEDULE_EVENT_PART", '"/events/%1$s.html"'
+            buildConfigField "String", "SCHEDULE_PART", '"/fahrplan/2016"'
+            buildConfigField "String", "VENUE", '"hochschule darmstadt"'
+            buildConfigField "int", "SCHEDULE_FIRST_DAY_START_YEAR", "2016"
+            buildConfigField "int", "SCHEDULE_FIRST_DAY_START_MONTH", "10"
+            buildConfigField "int", "SCHEDULE_FIRST_DAY_START_DAY", "7"
+            buildConfigField "int", "SCHEDULE_LAST_DAY_END_YEAR", "2016"
+            buildConfigField "int", "SCHEDULE_LAST_DAY_END_MONTH", "10"
+            buildConfigField "int", "SCHEDULE_LAST_DAY_END_DAY", "10"
+        }
         ccc31c3 {
             applicationId "nerd.tuxmobil.fahrplan.congress"
             signingConfig signingConfigs.ccc31c3
