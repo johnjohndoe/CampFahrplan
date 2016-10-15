@@ -75,6 +75,7 @@ android {
         datenspuren2016 {
             applicationId "info.metadude.android.datenspuren.schedule"
             signingConfig signingConfigs.datenspuren2016
+            versionName "1.32.2 (Datenspuren-Edition)"
             buildConfigField "String", "SCHEDULE_URL", '"https://datenspuren.de/2016/fahrplan/schedule.xml"'
             buildConfigField "String", "SCHEDULE_DOMAIN_PART", '"https://datenspuren.de"'
             buildConfigField "String", "SCHEDULE_EVENT_PART", '"/events/%1$s.html"'
