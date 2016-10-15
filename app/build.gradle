@@ -45,6 +45,12 @@ android {
     }
 
     signingConfigs {
+        datenspuren2016 {
+            storeFile file(props['signing.datenspuren-release.keystoreFilePath'])
+            storePassword props['signing.datenspuren-release.keystorePassword']
+            keyAlias props['signing.datenspuren-release.keyAlias']
+            keyPassword props['signing.datenspuren-release.keyPassword']
+        }
         ccc31c3 {
             storeFile file(props['signing.ccc31c3-release.keystoreFilePath'])
             storePassword props['signing.ccc31c3-release.keystorePassword']
@@ -66,6 +72,21 @@ android {
     }
 
     productFlavors {
+        datenspuren2016 {
+            applicationId "info.metadude.android.datenspuren.schedule"
+            signingConfig signingConfigs.datenspuren2016
+            buildConfigField "String", "SCHEDULE_URL", '"https://datenspuren.de/2016/fahrplan/schedule.xml"'
+            buildConfigField "String", "SCHEDULE_DOMAIN_PART", '"https://datenspuren.de"'
+            buildConfigField "String", "SCHEDULE_EVENT_PART", '"/events/%1$s.html"'
+            buildConfigField "String", "SCHEDULE_PART", '"/2016/fahrplan"'
+            buildConfigField "String", "VENUE", '"Technische Sammlungen"'
+            buildConfigField "int", "SCHEDULE_FIRST_DAY_START_YEAR", "2016"
+            buildConfigField "int", "SCHEDULE_FIRST_DAY_START_MONTH", "10"
+            buildConfigField "int", "SCHEDULE_FIRST_DAY_START_DAY", "22"
+            buildConfigField "int", "SCHEDULE_LAST_DAY_END_YEAR", "2016"
+            buildConfigField "int", "SCHEDULE_LAST_DAY_END_MONTH", "10"
+            buildConfigField "int", "SCHEDULE_LAST_DAY_END_DAY", "24"
+        }
         ccc31c3 {
             applicationId "nerd.tuxmobil.fahrplan.congress"
             signingConfig signingConfigs.ccc31c3

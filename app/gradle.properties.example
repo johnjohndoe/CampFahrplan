@@ -12,3 +12,8 @@ signing.camp2015-release.keystoreFilePath=/home/USERNAME/.android/camp2015-relea
 signing.camp2015-release.keystorePassword="PASSWORD"
 signing.camp2015-release.keyAlias="camp2015"
 signing.camp2015-release.keyPassword="ANOTHERPASSWORD"
+
+signing.datenspuren-release.keystoreFilePath=/home/USERNAME/.android/datenspuren-release-key.keystore
+signing.datenspuren-release.keystorePassword="PASSWORD"
+signing.datenspuren-release.keyAlias="datenspuren"
+signing.datenspuren-release.keyPassword="ANOTHERPASSWORD"
