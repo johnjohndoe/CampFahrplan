@@ -219,6 +219,10 @@ public class FahrplanFragment extends Fragment implements
         if (MyApp.numdays > 1) {
             build_navigation_menu();
         }
+
+        if (mDay != 1) {
+            viewDay(false);
+        }
     }
 
     @Override
