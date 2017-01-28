@@ -18,8 +18,8 @@ android {
     buildToolsVersion "26.0.1"
 
     defaultConfig {
-        versionCode 39
-        versionName "1.32.2"
+        versionCode 41
+        versionName "1.33.0"
         minSdkVersion 14
         targetSdkVersion 22
 
@@ -57,6 +57,12 @@ android {
             keyAlias props['signing.ccc32c3-release.keyAlias']
             keyPassword props['signing.ccc32c3-release.keyPassword']
         }
+        froscon2017 {
+            storeFile file(props['signing.froscon-release.keystoreFilePath'])
+            storePassword props['signing.froscon-release.keystorePassword']
+            keyAlias props['signing.froscon-release.keyAlias']
+            keyPassword props['signing.froscon-release.keyPassword']
+        }
     }
 
     productFlavors {
@@ -93,6 +99,24 @@ android {
             buildConfigField "int", "SCHEDULE_LAST_DAY_END_DAY", "31"
             buildConfigField "boolean", "SHOW_APP_DISCLAIMER", "false"
             buildConfigField "String", "TRACE_DROID_EMAIL_ADDRESS", '"ENTER_EMAIL_ADDRESS_HERE"'
+        }
+        froscon2017 {
+            applicationId "info.metadude.android.froscon.schedule"
+            versionName "1.33.0 (FrOSCon Edition)"
+            signingConfig signingConfigs.froscon2017
+            buildConfigField "String", "SCHEDULE_URL", '"https://programm.froscon.de/2017/schedule.xml"'
+            buildConfigField "String", "SCHEDULE_DOMAIN_PART", '"https://programm.froscon.de"'
+            buildConfigField "String", "SCHEDULE_EVENT_PART", '"/events/%1$s.html"'
+            buildConfigField "String", "SCHEDULE_PART", '"/2017"'
+            buildConfigField "String", "VENUE", '"hochschule-bonn-rhein-sieg"'
+            buildConfigField "int", "SCHEDULE_FIRST_DAY_START_YEAR", "2017"
+            buildConfigField "int", "SCHEDULE_FIRST_DAY_START_MONTH", "8"
+            buildConfigField "int", "SCHEDULE_FIRST_DAY_START_DAY", "19"
+            buildConfigField "int", "SCHEDULE_LAST_DAY_END_YEAR", "2017"
+            buildConfigField "int", "SCHEDULE_LAST_DAY_END_MONTH", "8"
+            buildConfigField "int", "SCHEDULE_LAST_DAY_END_DAY", "21"
+            buildConfigField "boolean", "SHOW_APP_DISCLAIMER", "true"
+            buildConfigField "String", "TRACE_DROID_EMAIL_ADDRESS", '"tobias.preuss+froscon@googlemail.com"'
         }
     }
 
