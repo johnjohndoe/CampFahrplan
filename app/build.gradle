@@ -18,8 +18,8 @@ android {
     buildToolsVersion "25.0.2"
 
     defaultConfig {
-        versionCode 39
-        versionName "1.32.2"
+        versionCode 40
+        versionName "1.33.0"
         minSdkVersion 14
         targetSdkVersion 22
 
@@ -62,6 +62,12 @@ android {
             storePassword props['signing.ccc32c3-release.keystorePassword']
             keyAlias props['signing.ccc32c3-release.keyAlias']
             keyPassword props['signing.ccc32c3-release.keyPassword']
+        }
+        fossgis2017 {
+            storeFile file(props['signing.fossgis-release.keystoreFilePath'])
+            storePassword props['signing.fossgis-release.keystorePassword']
+            keyAlias props['signing.fossgis-release.keyAlias']
+            keyPassword props['signing.fossgis-release.keyPassword']
         }
     }
 
@@ -110,6 +116,22 @@ android {
             buildConfigField "int", "SCHEDULE_LAST_DAY_END_YEAR", "2015"
             buildConfigField "int", "SCHEDULE_LAST_DAY_END_MONTH", "12"
             buildConfigField "int", "SCHEDULE_LAST_DAY_END_DAY", "31"
+        }
+        fossgis2017 {
+            applicationId "info.metadude.android.fossgis.schedule"
+            versionName "1.33.0 (FOSSGIS Edition)"
+            signingConfig signingConfigs.fossgis2017
+            buildConfigField "String", "SCHEDULE_URL", '"https://frab.fossgis-konferenz.de/de/2017/public/schedule.xml"'
+            buildConfigField "String", "SCHEDULE_DOMAIN_PART", '"http://frab.fossgis-konferenz.de/de"'
+            buildConfigField "String", "SCHEDULE_EVENT_PART", '"/events/%1$s.html"'
+            buildConfigField "String", "SCHEDULE_PART", '"/2017/public"'
+            buildConfigField "String", "VENUE", '"ulb"'
+            buildConfigField "int", "SCHEDULE_FIRST_DAY_START_YEAR", "2017"
+            buildConfigField "int", "SCHEDULE_FIRST_DAY_START_MONTH", "3"
+            buildConfigField "int", "SCHEDULE_FIRST_DAY_START_DAY", "22"
+            buildConfigField "int", "SCHEDULE_LAST_DAY_END_YEAR", "2017"
+            buildConfigField "int", "SCHEDULE_LAST_DAY_END_MONTH", "3"
+            buildConfigField "int", "SCHEDULE_LAST_DAY_END_DAY", "26"
         }
     }
 
