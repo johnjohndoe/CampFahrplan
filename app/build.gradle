@@ -18,8 +18,8 @@ android {
     buildToolsVersion "25.0.3"
 
     defaultConfig {
-        versionCode 39
-        versionName "1.32.2"
+        versionCode 41
+        versionName "1.33.0"
         minSdkVersion 14
         targetSdkVersion 22
 
@@ -62,6 +62,12 @@ android {
             storePassword props['signing.ccc32c3-release.keystorePassword']
             keyAlias props['signing.ccc32c3-release.keyAlias']
             keyPassword props['signing.ccc32c3-release.keyPassword']
+        }
+        pgcon2017 {
+            storeFile file(props['signing.pgcon-release.keystoreFilePath'])
+            storePassword props['signing.pgcon-release.keystorePassword']
+            keyAlias props['signing.pgcon-release.keyAlias']
+            keyPassword props['signing.pgcon-release.keyPassword']
         }
     }
 
@@ -110,6 +116,22 @@ android {
             buildConfigField "int", "SCHEDULE_LAST_DAY_END_YEAR", "2015"
             buildConfigField "int", "SCHEDULE_LAST_DAY_END_MONTH", "12"
             buildConfigField "int", "SCHEDULE_LAST_DAY_END_DAY", "31"
+        }
+        pgcon2017 {
+            applicationId "info.metadude.android.pgcon.schedule"
+            versionName "1.33.0 (PGCon Edition)"
+            signingConfig signingConfigs.pgcon2017
+            buildConfigField "String", "SCHEDULE_URL", '"http://opentree.cygnus.uberspace.de/pgcon2017/schedule.xml"'
+            buildConfigField "String", "SCHEDULE_DOMAIN_PART", '"http://www.pgcon.org"'
+            buildConfigField "String", "SCHEDULE_EVENT_PART", '"/events/%1$s.en.html"'
+            buildConfigField "String", "SCHEDULE_PART", '"/2017/schedule"'
+            buildConfigField "String", "VENUE", '"uottawa"'
+            buildConfigField "int", "SCHEDULE_FIRST_DAY_START_YEAR", "2017"
+            buildConfigField "int", "SCHEDULE_FIRST_DAY_START_MONTH", "5"
+            buildConfigField "int", "SCHEDULE_FIRST_DAY_START_DAY", "23"
+            buildConfigField "int", "SCHEDULE_LAST_DAY_END_YEAR", "2017"
+            buildConfigField "int", "SCHEDULE_LAST_DAY_END_MONTH", "5"
+            buildConfigField "int", "SCHEDULE_LAST_DAY_END_DAY", "27"
         }
     }
 
