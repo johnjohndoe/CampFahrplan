@@ -1,0 +1,452 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="pressed_congress">#CC0099AB</color>
+
+    <!-- Default state -->
+    <color name="event_border_default">@color/colorPrimary</color>
+    <color name="event_border_default_architectures">#69d2e7</color>
+    <color name="event_border_default_backup_and_disaster_recovery">#e7a350</color>
+    <color name="event_border_default_bofs_prescheduled">#e0e4cc</color>
+    <color name="event_border_default_bofs_lastminute">#e0e4cc</color>
+    <color name="event_border_default_bsd">#f38630</color>
+    <color name="event_border_default_building">#ea813d</color>
+    <color name="event_border_default_certification">#e7a350</color>
+    <color name="event_border_default_cloud">#fcc777</color>
+    <color name="event_border_default_community">#fcc777</color>
+    <color name="event_border_default_config_management">#a79474</color>
+    <color name="event_border_default_decentralised_internet">#69d2e7</color>
+    <color name="event_border_default_desktops">#a7dbd8</color>
+    <color name="event_border_default_distributions">#e0e4cc</color>
+    <color name="event_border_default_documentation">#a79474</color>
+    <color name="event_border_default_eda">#f38630</color>
+    <color name="event_border_default_embedded_mobile_automotive">#ea813d</color>
+    <color name="event_border_default_free_java">#e7a350</color>
+    <color name="event_border_default_geospatial">#fcc777</color>
+    <color name="event_border_default_gnu_guile">#c3dbb9</color>
+    <color name="event_border_default_go">#a79474</color>
+    <color name="event_border_default_graph">#69d2e7</color>
+    <color name="event_border_default_hpc_big_data_data_science">#a7dbd8</color>
+    <color name="event_border_default_iot">#e0e4cc</color>
+    <color name="event_border_default_keynotes">#a79474</color>
+    <color name="event_border_default_keysigning">#a7dbd8</color>
+    <color name="event_border_default_legal_policy_issues">#ea813d</color>
+    <color name="event_border_default_lightning_talks">#e7a350</color>
+    <color name="event_border_default_linux_containers_microservices">#fcc777</color>
+    <color name="event_border_default_llvm_toolchain">#c3dbb9</color>
+    <color name="event_border_default_lua">#a79474</color>
+    <color name="event_border_default_microkernels_component_based_os">#69d2e7</color>
+    <color name="event_border_default_miscellaneous">#a7dbd8</color>
+    <color name="event_border_default_monitoring_cloud">#a7dbd8</color>
+    <color name="event_border_default_mozilla">#a79474</color>
+    <color name="event_border_default_mysql_friends">#f38630</color>
+    <color name="event_border_default_open_document_editors">#69d2e7</color>
+    <color name="event_border_default_open_game_development">#e7a350</color>
+    <color name="event_border_default_open_media">#fcc777</color>
+    <color name="event_border_default_open_source_design">#c3dbb9</color>
+    <color name="event_border_default_perl">#a79474</color>
+    <color name="event_border_default_php_friends">#69d2e7</color>
+    <color name="event_border_default_postgresql">#a7dbd8</color>
+    <color name="event_border_default_python">#e0e4cc</color>
+    <color name="event_border_default_real_time_communications">#a7dbd8</color>
+    <color name="event_border_default_ruby">#f38630</color>
+    <color name="event_border_default_sdn_nfv">#ea813d</color>
+    <color name="event_border_default_security_encryption">#e7a350</color>
+    <color name="event_border_default_security">#fcc777</color>
+    <color name="event_border_default_sdr">#c3dbb9</color>
+    <color name="event_border_default_sds">#a79474</color>
+    <color name="event_border_default_testing_automation">#69d2e7</color>
+    <color name="event_border_default_valgrind">#a7dbd8</color>
+    <color name="event_border_default_virtualisation_iaas">#e0e4cc</color>
+
+
+    <!-- Highlight state -->
+    <color name="event_border_highlight">@color/colorPrimaryDark</color>
+    <color name="event_border_highlight_architectures">#1b9bb5</color>
+    <color name="event_border_highlight_backup_and_disaster_recovery">#b5701b</color>
+    <color name="event_border_highlight_bofs_prescheduled">#939680</color>
+    <color name="event_border_highlight_bofs_lastminute">#939680</color>
+    <color name="event_border_highlight_bsd">#bf5300</color>
+    <color name="event_border_highlight_building">#b8500b</color>
+    <color name="event_border_highlight_certification">#b5701b</color>
+    <color name="event_border_highlight_cloud">#c98f36</color>
+    <color name="event_border_highlight_community">#c98f36</color>
+    <color name="event_border_highlight_config_management">#735d38</color>
+    <color name="event_border_highlight_decentralised_internet">#1b9bb5</color>
+    <color name="event_border_highlight_desktops">#4da8a4</color>
+    <color name="event_border_highlight_distributions">#939680</color>
+    <color name="event_border_highlight_documentation">#735d38</color>
+    <color name="event_border_highlight_eda">#bf5300</color>
+    <color name="event_border_highlight_embedded_mobile_automotive">#b8500b</color>
+    <color name="event_border_highlight_free_java">#b5701b</color>
+    <color name="event_border_highlight_geospatial">#c98f36</color>
+    <color name="event_border_highlight_gnu_guile">#7ea86c</color>
+    <color name="event_border_highlight_go">#735d38</color>
+    <color name="event_border_highlight_graph">#1b9bb5</color>
+    <color name="event_border_highlight_hpc_big_data_data_science">#4da8a4</color>
+    <color name="event_border_highlight_iot">#939680</color>
+    <color name="event_border_highlight_keynotes">#735d38</color>
+    <color name="event_border_highlight_keysigning">#1b9bb5</color>
+    <color name="event_border_highlight_legal_policy_issues">#b8500b</color>
+    <color name="event_border_highlight_lightning_talks">#b5701b</color>
+    <color name="event_border_highlight_linux_containers_microservices">#c98f36</color>
+    <color name="event_border_highlight_llvm_toolchain">#7ea86c</color>
+    <color name="event_border_highlight_lua">#735d38</color>
+    <color name="event_border_highlight_microkernels_component_based_os">#1b9bb5</color>
+    <color name="event_border_highlight_miscellaneous">#4da8a4</color>
+    <color name="event_border_highlight_monitoring_cloud">#4da8a4</color>
+    <color name="event_border_highlight_mozilla">#735d38</color>
+    <color name="event_border_highlight_mysql_friends">#bf5300</color>
+    <color name="event_border_highlight_open_document_editors">#1b9bb5</color>
+    <color name="event_border_highlight_open_game_development">#b5701b</color>
+    <color name="event_border_highlight_open_media">#c98f36</color>
+    <color name="event_border_highlight_open_source_design">#7ea86c</color>
+    <color name="event_border_highlight_perl">#735d38</color>
+    <color name="event_border_highlight_php_friends">#1b9bb5</color>
+    <color name="event_border_highlight_postgresql">#4da8a4</color>
+    <color name="event_border_highlight_python">#939680</color>
+    <color name="event_border_highlight_real_time_communications">#4da8a4</color>
+    <color name="event_border_highlight_ruby">#bf5300</color>
+    <color name="event_border_highlight_sdn_nfv">#b8500b</color>
+    <color name="event_border_highlight_security_encryption">#b5701b</color>
+    <color name="event_border_highlight_security">#c98f36</color>
+    <color name="event_border_highlight_sdr">#7ea86c</color>
+    <color name="event_border_highlight_sds">#735d38</color>
+    <color name="event_border_highlight_testing_automation">#1b9bb5</color>
+    <color name="event_border_highlight_valgrind">#4da8a4</color>
+    <color name="event_border_highlight_virtualisation_iaas">#939680</color>
+
+    <!-- Accent color -->
+    <color name="event_border_accent">
+        @color/event_border_highlight
+    </color>
+    <color name="event_border_accent_architectures">
+        @color/event_border_highlight_architectures
+    </color>
+    <color name="event_border_accent_backup_and_disaster_recovery">
+        @color/event_border_highlight_backup_and_disaster_recovery
+    </color>
+    <color name="event_border_accent_bofs_prescheduled">
+        @color/event_border_highlight_bofs_prescheduled
+    </color>
+    <color name="event_border_accent_bofs_lastminute">
+        @color/event_border_highlight_bofs_lastminute
+    </color>
+    <color name="event_border_accent_bsd">
+        @color/event_border_highlight_bsd
+    </color>
+    <color name="event_border_accent_building">
+        @color/event_border_highlight_building
+    </color>
+    <color name="event_border_accent_certification">
+        @color/event_border_highlight_certification
+    </color>
+    <color name="event_border_accent_cloud">
+        @color/event_border_highlight_cloud
+    </color>
+    <color name="event_border_accent_community">
+        @color/event_border_highlight_community
+    </color>
+    <color name="event_border_accent_config_management">
+        @color/event_border_highlight_config_management
+    </color>
+    <color name="event_border_accent_decentralised_internet">
+        @color/event_border_highlight_decentralised_internet
+    </color>
+    <color name="event_border_accent_desktops">
+        @color/event_border_highlight_desktops
+    </color>
+    <color name="event_border_accent_distributions">
+        @color/event_border_highlight_distributions
+    </color>
+    <color name="event_border_accent_documentation">
+        @color/event_border_highlight_documentation
+    </color>
+    <color name="event_border_accent_eda">
+        @color/event_border_highlight_eda
+    </color>
+    <color name="event_border_accent_embedded_mobile_automotive">
+        @color/event_border_highlight_embedded_mobile_automotive
+    </color>
+    <color name="event_border_accent_free_java">
+        @color/event_border_highlight_free_java
+    </color>
+    <color name="event_border_accent_geospatial">
+        @color/event_border_highlight_geospatial
+    </color>
+    <color name="event_border_accent_gnu_guile">
+        @color/event_border_highlight_gnu_guile
+    </color>
+    <color name="event_border_accent_go">
+        @color/event_border_highlight_go
+    </color>
+    <color name="event_border_accent_graph">
+        @color/event_border_highlight_graph
+    </color>
+    <color name="event_border_accent_hpc_big_data_data_science">
+        @color/event_border_highlight_hpc_big_data_data_science
+    </color>
+    <color name="event_border_accent_iot">
+        @color/event_border_highlight_iot
+    </color>
+    <color name="event_border_accent_keynotes">
+        @color/event_border_highlight_keynotes
+    </color>
+    <color name="event_border_accent_keysigning">
+        @color/event_border_highlight_keysigning
+    </color>
+    <color name="event_border_accent_legal_policy_issues">
+        @color/event_border_highlight_legal_policy_issues
+    </color>
+    <color name="event_border_accent_lightning_talks">
+        @color/event_border_highlight_lightning_talks
+    </color>
+    <color name="event_border_accent_linux_containers_microservices">
+        @color/event_border_highlight_linux_containers_microservices
+    </color>
+    <color name="event_border_accent_llvm_toolchain">
+        @color/event_border_highlight_llvm_toolchain
+    </color>
+    <color name="event_border_accent_lua">
+        @color/event_border_highlight_lua
+    </color>
+    <color name="event_border_accent_microkernels_component_based_os">
+        @color/event_border_highlight_microkernels_component_based_os
+    </color>
+    <color name="event_border_accent_miscellaneous">
+        @color/event_border_highlight_miscellaneous
+    </color>
+    <color name="event_border_accent_monitoring_cloud">
+        @color/event_border_highlight_monitoring_cloud
+    </color>
+    <color name="event_border_accent_mozilla">
+        @color/event_border_highlight_mozilla
+    </color>
+    <color name="event_border_accent_mysql_friends">
+        @color/event_border_highlight_mysql_friends
+    </color>
+    <color name="event_border_accent_open_document_editors">
+        @color/event_border_highlight_open_document_editors
+    </color>
+    <color name="event_border_accent_open_game_development">
+        @color/event_border_highlight_open_game_development
+    </color>
+    <color name="event_border_accent_open_media">
+        @color/event_border_highlight_open_media
+    </color>
+    <color name="event_border_accent_open_source_design">
+        @color/event_border_highlight_open_source_design
+    </color>
+    <color name="event_border_accent_perl">
+        @color/event_border_highlight_perl
+    </color>
+    <color name="event_border_accent_php_friends">
+        @color/event_border_highlight_php_friends
+    </color>
+    <color name="event_border_accent_postgresql">
+        @color/event_border_highlight_postgresql
+    </color>
+    <color name="event_border_accent_python">
+        @color/event_border_highlight_python
+    </color>
+    <color name="event_border_accent_real_time_communications">
+        @color/event_border_highlight_real_time_communications
+    </color>
+    <color name="event_border_accent_ruby">
+        @color/event_border_highlight_ruby
+    </color>
+    <color name="event_border_accent_sdn_nfv">
+        @color/event_border_highlight_sdn_nfv
+    </color>
+    <color name="event_border_accent_security_encryption">
+        @color/event_border_highlight_security_encryption
+    </color>
+    <color name="event_border_accent_security">
+        @color/event_border_highlight_security
+    </color>
+    <color name="event_border_accent_sdr">
+        @color/event_border_highlight_sdr
+    </color>
+    <color name="event_border_accent_sds">
+        @color/event_border_highlight_sds
+    </color>
+    <color name="event_border_accent_testing_automation">
+        @color/event_border_highlight_testing_automation
+    </color>
+    <color name="event_border_accent_valgrind">
+        @color/event_border_highlight_valgrind
+    </color>
+    <color name="event_border_accent_virtualisation_iaas">
+        @color/event_border_highlight_virtualisation_iaas
+    </color>
+
+
+    <!-- Accent color highlight -->
+    <color name="event_border_accent_highlight">
+        @color/event_border_default
+    </color>
+    <color name="event_border_accent_highlight_architectures">
+        @color/event_border_default_architectures
+    </color>
+    <color name="event_border_accent_highlight_backup_and_disaster_recovery">
+        @color/event_border_default_backup_and_disaster_recovery
+    </color>
+    <color name="event_border_accent_highlight_bofs_prescheduled">
+        @color/event_border_default_bofs_prescheduled
+    </color>
+    <color name="event_border_accent_highlight_bofs_lastminute">
+        @color/event_border_default_bofs_lastminute
+    </color>
+    <color name="event_border_accent_highlight_bsd">
+        @color/event_border_default_bsd
+    </color>
+    <color name="event_border_accent_highlight_building">
+        @color/event_border_default_building
+    </color>
+    <color name="event_border_accent_highlight_certification">
+        @color/event_border_default_certification
+    </color>
+    <color name="event_border_accent_highlight_cloud">
+        @color/event_border_default_cloud
+    </color>
+    <color name="event_border_accent_highlight_community">
+        @color/event_border_default_community
+    </color>
+    <color name="event_border_accent_highlight_config_management">
+        @color/event_border_default_config_management
+    </color>
+    <color name="event_border_accent_highlight_decentralised_internet">
+        @color/event_border_default_decentralised_internet
+    </color>
+    <color name="event_border_accent_highlight_desktops">
+        @color/event_border_default_desktops
+    </color>
+    <color name="event_border_accent_highlight_distributions">
+        @color/event_border_default_distributions
+    </color>
+    <color name="event_border_accent_highlight_documentation">
+        @color/event_border_default_documentation
+    </color>
+    <color name="event_border_accent_highlight_eda">
+        @color/event_border_default_eda
+    </color>
+    <color name="event_border_accent_highlight_embedded_mobile_automotive">
+        @color/event_border_default_embedded_mobile_automotive
+    </color>
+    <color name="event_border_accent_highlight_free_java">
+        @color/event_border_default_free_java
+    </color>
+    <color name="event_border_accent_highlight_geospatial">
+        @color/event_border_default_geospatial
+    </color>
+    <color name="event_border_accent_highlight_gnu_guile">
+        @color/event_border_default_gnu_guile
+    </color>
+    <color name="event_border_accent_highlight_go">
+        @color/event_border_default_go
+    </color>
+    <color name="event_border_accent_highlight_graph">
+        @color/event_border_default_graph
+    </color>
+    <color name="event_border_accent_highlight_hpc_big_data_data_science">
+        @color/event_border_default_hpc_big_data_data_science
+    </color>
+    <color name="event_border_accent_highlight_iot">
+        @color/event_border_default_iot
+    </color>
+    <color name="event_border_accent_highlight_keynotes">
+        @color/event_border_default_keynotes
+    </color>
+    <color name="event_border_accent_highlight_keysigning">
+        @color/event_border_default_keysigning
+    </color>
+    <color name="event_border_accent_highlight_legal_policy_issues">
+        @color/event_border_default_legal_policy_issues
+    </color>
+    <color name="event_border_accent_highlight_lightning_talks">
+        @color/event_border_default_lightning_talks
+    </color>
+    <color name="event_border_accent_highlight_linux_containers_microservices">
+        @color/event_border_default_linux_containers_microservices
+    </color>
+    <color name="event_border_accent_highlight_llvm_toolchain">
+        @color/event_border_default_llvm_toolchain
+    </color>
+    <color name="event_border_accent_highlight_lua">
+        @color/event_border_default_lua
+    </color>
+    <color name="event_border_accent_highlight_microkernels_component_based_os">
+        @color/event_border_default_microkernels_component_based_os
+    </color>
+    <color name="event_border_accent_highlight_miscellaneous">
+        @color/event_border_default_miscellaneous
+    </color>
+    <color name="event_border_accent_highlight_monitoring_cloud">
+        @color/event_border_default_monitoring_cloud
+    </color>
+    <color name="event_border_accent_highlight_mozilla">
+        @color/event_border_default_mozilla
+    </color>
+    <color name="event_border_accent_highlight_mysql_friends">
+        @color/event_border_default_mysql_friends
+    </color>
+    <color name="event_border_accent_highlight_open_document_editors">
+        @color/event_border_default_open_document_editors
+    </color>
+    <color name="event_border_accent_highlight_open_game_development">
+        @color/event_border_default_open_game_development
+    </color>
+    <color name="event_border_accent_highlight_open_media">
+        @color/event_border_default_open_media
+    </color>
+    <color name="event_border_accent_highlight_open_source_design">
+        @color/event_border_default_open_source_design
+    </color>
+    <color name="event_border_accent_highlight_perl">
+        @color/event_border_default_perl
+    </color>
+    <color name="event_border_accent_highlight_php_friends">
+        @color/event_border_default_php_friends
+    </color>
+    <color name="event_border_accent_highlight_postgresql">
+        @color/event_border_default_postgresql
+    </color>
+    <color name="event_border_accent_highlight_python">
+        @color/event_border_default_python
+    </color>
+    <color name="event_border_accent_highlight_real_time_communications">
+        @color/event_border_default_real_time_communications
+    </color>
+    <color name="event_border_accent_highlight_ruby">
+        @color/event_border_default_ruby
+    </color>
+    <color name="event_border_accent_highlight_sdn_nfv">
+        @color/event_border_default_sdn_nfv
+    </color>
+    <color name="event_border_accent_highlight_security_encryption">
+        @color/event_border_default_security_encryption
+    </color>
+    <color name="event_border_accent_highlight_security">
+        @color/event_border_default_security
+    </color>
+    <color name="event_border_accent_highlight_sdr">
+        @color/event_border_default_sdr
+    </color>
+    <color name="event_border_accent_highlight_sds">
+        @color/event_border_default_sds
+    </color>
+    <color name="event_border_accent_highlight_testing_automation">
+        @color/event_border_default_testing_automation
+    </color>
+    <color name="event_border_accent_highlight_valgrind">
+        @color/event_border_default_valgrind
+    </color>
+    <color name="event_border_accent_highlight_virtualisation_iaas">
+        @color/event_border_default_virtualisation_iaas
+    </color>
+
+
+    <!--Title color-->
+    <color name="event_title">#a0000000</color>
+    <color name="event_title_highlight">#000</color>
+
+</resources>
