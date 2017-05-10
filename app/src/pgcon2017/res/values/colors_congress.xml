@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="pressed_congress">#CCa80a1a</color>
+
+    <!-- Default state -->
+    <color name="event_border_default">#ffa6600c</color>
+    <color name="event_border_default_applications">#BC8F8F</color>
+    <color name="event_border_default_case_studies">#FFE4B5</color>
+    <color name="event_border_default_dba">#876187</color>
+    <color name="event_border_default_developer_unconference">#A78A5E</color>
+    <color name="event_border_default_hacking">#90EE90</color>
+    <color name="event_border_default_new_features">#F8F8F8</color>
+    <color name="event_border_default_performance">#DDA0DD</color>
+    <color name="event_border_default_plenary">#FA8072</color>
+    <color name="event_border_default_scaling_out">#d18604</color>
+    <color name="event_border_default_social">#d5d5d5</color>
+    <color name="event_border_default_tutorial">#A78A5E</color>
+    <color name="event_border_default_unconference">#A78A5E</color>
+
+    <!-- Accent color -->
+    <color name="event_border_accent">#ff9412</color>
+    <color name="event_border_accent_applications">#e3acac</color>
+    <color name="event_border_accent_case_studies">#c49a53</color>
+    <color name="event_border_accent_dba">#ad7dad</color>
+    <color name="event_border_accent_developer_unconference">#cca872</color>
+    <color name="event_border_accent_hacking">#3ca33c</color>
+    <color name="event_border_accent_new_features">#bababa</color>
+    <color name="event_border_accent_performance">#de73de</color>
+    <color name="event_border_accent_plenary">#faa096</color>
+    <color name="event_border_accent_scaling_out">#845707</color>
+    <color name="event_border_accent_social">#ededed</color>
+    <color name="event_border_accent_tutorial">#cca872</color>
+    <color name="event_border_accent_unconference">#cca872</color>
+
+    <!-- Highlight state -->
+    <color name="event_border_highlight">@color/event_border_accent</color>
+    <color name="event_border_highlight_applications">@color/event_border_accent_applications</color>
+    <color name="event_border_highlight_case_studies">@color/event_border_accent_case_studies</color>
+    <color name="event_border_highlight_dba">@color/event_border_accent_dba</color>
+    <color name="event_border_highlight_developer_unconference">@color/event_border_accent_developer_unconference</color>
+    <color name="event_border_highlight_hacking">@color/event_border_accent_hacking</color>
+    <color name="event_border_highlight_new_features">@color/event_border_accent_new_features</color>
+    <color name="event_border_highlight_performance">@color/event_border_accent_performance</color>
+    <color name="event_border_highlight_plenary">@color/event_border_accent_plenary</color>
+    <color name="event_border_highlight_scaling_out">@color/event_border_accent_scaling_out</color>
+    <color name="event_border_highlight_social">@color/event_border_accent_social</color>
+    <color name="event_border_highlight_tutorial">@color/event_border_accent_tutorial</color>
+    <color name="event_border_highlight_unconference">@color/event_border_accent_unconference</color>
+
+    <!-- Accent color highlight -->
+    <color name="event_border_accent_highlight">@color/event_border_default</color>
+    <color name="event_border_accent_highlight_applications">@color/event_border_default_applications</color>
+    <color name="event_border_accent_highlight_case_studies">@color/event_border_default_case_studies</color>
+    <color name="event_border_accent_highlight_dba">@color/event_border_default_dba</color>
+    <color name="event_border_accent_highlight_developer_unconference">@color/event_border_default_developer_unconference</color>
+    <color name="event_border_accent_highlight_hacking">@color/event_border_default_hacking</color>
+    <color name="event_border_accent_highlight_new_features">@color/event_border_default_new_features</color>
+    <color name="event_border_accent_highlight_performance">@color/event_border_default_performance</color>
+    <color name="event_border_accent_highlight_plenary">@color/event_border_default_plenary</color>
+    <color name="event_border_accent_highlight_scaling_out">@color/event_border_default_scaling_out</color>
+    <color name="event_border_accent_highlight_social">@color/event_border_default_social</color>
+    <color name="event_border_accent_highlight_tutorial">@color/event_border_default_tutorial</color>
+    <color name="event_border_accent_highlight_unconference">@color/event_border_default_unconference</color>
+
+    <!-- Title color -->
+    <color name="event_title">#a0000000</color>
+    <color name="event_title_highlight">#000000</color>
+
+</resources>
