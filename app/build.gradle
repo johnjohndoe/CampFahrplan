@@ -18,8 +18,8 @@ android {
     buildToolsVersion "25.0.3"
 
     defaultConfig {
-        versionCode 41
-        versionName "1.33.0"
+        versionCode 42
+        versionName "1.33.1"
         minSdkVersion 14
         targetSdkVersion 22
 
@@ -119,7 +119,7 @@ android {
         }
         pgcon2017 {
             applicationId "info.metadude.android.pgcon.schedule"
-            versionName "1.33.0 (PGCon Edition)"
+            versionName "1.33.1 (PGCon Edition)"
             signingConfig signingConfigs.pgcon2017
             buildConfigField "String", "SCHEDULE_URL", '"http://opentree.cygnus.uberspace.de/pgcon2017/schedule.xml"'
             buildConfigField "String", "SCHEDULE_DOMAIN_PART", '"http://www.pgcon.org"'
