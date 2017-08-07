@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="pressed_congress">#CC0099AB</color>
+
+    <!-- Default state -->
+    <color name="event_border_default">#E4E4E4</color>
+    <color name="event_border_default_bots">#0036cc</color>
+    <color name="event_border_default_culture">#0036cc</color>
+    <color name="event_border_default_databases">#00cc00</color>
+    <color name="event_border_default_development">#cccc00</color>
+    <color name="event_border_default_froscon_meets_science">#540000</color>
+    <color name="event_border_default_hardware">#000088</color>
+    <color name="event_border_default_keynote">#0083a1</color>
+    <color name="event_border_default_monitoring">#545400</color>
+    <color name="event_border_default_osgeo_osm">#005454</color>
+    <color name="event_border_default_other">#cc5252</color>
+    <color name="event_border_default_persistent_migration">#cc3d00</color>
+    <color name="event_border_default_security">#540054</color>
+    <color name="event_border_default_system_administration">#6ba4c7</color>
+    <color name="event_border_default_the_days_of_plenty_are_over">#8a6969</color>
+    <color name="event_border_default_machine_learning">#817e8f</color>
+    <color name="event_border_default_web_development">#1b1b70</color>
+
+    <!-- Accent color -->
+    <color name="event_border_accent">#5e5e5e</color>
+    <color name="event_border_accent_bots">#0043FF</color>
+    <color name="event_border_accent_culture">#0043FF</color>
+    <color name="event_border_accent_databases">#00FF00</color>
+    <color name="event_border_accent_development">#FFFF00</color>
+    <color name="event_border_accent_froscon_meets_science">#880000</color>
+    <color name="event_border_accent_hardware">#0000d4</color>
+    <color name="event_border_accent_keynote">#00ACD3</color>
+    <color name="event_border_accent_monitoring">#888800</color>
+    <color name="event_border_accent_osgeo_osm">#008888</color>
+    <color name="event_border_accent_other">#FF6666</color>
+    <color name="event_border_accent_persistent_migration">#FF4D00</color>
+    <color name="event_border_accent_security">#880088</color>
+    <color name="event_border_accent_system_administration">#87CEFA</color>
+    <color name="event_border_accent_the_days_of_plenty_are_over">#BC8F8F</color>
+    <color name="event_border_accent_machine_learning">#B0ABC3</color>
+    <color name="event_border_accent_web_development">#2727A4</color>
+
+    <!-- Highlight state -->
+    <color name="event_border_highlight">@color/event_border_accent</color>
+    <color name="event_border_highlight_bots">@color/event_border_accent_culture</color>
+    <color name="event_border_highlight_culture">@color/event_border_accent_culture</color>
+    <color name="event_border_highlight_databases">@color/event_border_accent_databases</color>
+    <color name="event_border_highlight_development">@color/event_border_accent_development</color>
+    <color name="event_border_highlight_froscon_meets_science">
+        @color/event_border_accent_froscon_meets_science
+    </color>
+    <color name="event_border_highlight_hardware">@color/event_border_accent_hardware</color>
+    <color name="event_border_highlight_keynote">@color/event_border_accent_keynote</color>
+    <color name="event_border_highlight_monitoring">@color/event_border_accent_monitoring</color>
+    <color name="event_border_highlight_osgeo_osm">@color/event_border_accent_monitoring</color>
+    <color name="event_border_highlight_other">@color/event_border_accent_other</color>
+    <color name="event_border_highlight_persistent_migration">
+        @color/event_border_accent_persistent_migration
+    </color>
+    <color name="event_border_highlight_security">@color/event_border_accent_security</color>
+    <color name="event_border_highlight_system_administration">
+        @color/event_border_accent_system_administration
+    </color>
+    <color name="event_border_highlight_the_days_of_plenty_are_over">
+        @color/event_border_accent_the_days_of_plenty_are_over
+    </color>
+    <color name="event_border_highlight_machine_learning">
+        @color/event_border_accent_machine_learning
+    </color>
+    <color name="event_border_highlight_web_development">
+        @color/event_border_accent_web_development
+    </color>
+
+    <!-- Accent color highlight -->
+    <color name="event_border_accent_highlight">@color/event_border_default</color>
+    <color name="event_border_accent_highlight_bots">@color/event_border_default_culture</color>
+    <color name="event_border_accent_highlight_culture">@color/event_border_default_culture</color>
+    <color name="event_border_accent_highlight_databases">@color/event_border_default_databases
+    </color>
+    <color name="event_border_accent_highlight_development">
+        @color/event_border_default_development
+    </color>
+    <color name="event_border_accent_highlight_froscon_meets_science">
+        @color/event_border_default_froscon_meets_science
+    </color>
+    <color name="event_border_accent_highlight_hardware">@color/event_border_default_hardware
+    </color>
+    <color name="event_border_accent_highlight_keynote">@color/event_border_default_keynote</color>
+    <color name="event_border_accent_highlight_monitoring">@color/event_border_default_monitoring
+    </color>
+    <color name="event_border_accent_highlight_osgeo_osm">@color/event_border_default_monitoring
+    </color>
+    <color name="event_border_accent_highlight_other">@color/event_border_default_other</color>
+    <color name="event_border_accent_highlight_persistent_migration">
+        @color/event_border_default_persistent_migration
+    </color>
+    <color name="event_border_accent_highlight_security">@color/event_border_default_security
+    </color>
+    <color name="event_border_accent_highlight_system_administration">
+        @color/event_border_default_system_administration
+    </color>
+    <color name="event_border_accent_highlight_the_days_of_plenty_are_over">
+        @color/event_border_default_the_days_of_plenty_are_over
+    </color>
+    <color name="event_border_accent_highlight_machine_learning">
+        @color/event_border_default_machine_learning
+    </color>
+    <color name="event_border_accent_highlight_web_development">
+        @color/event_border_accent_web_development
+    </color>
+
+    <!-- Title color -->
+    <color name="event_title">#a0000000</color>
+    <color name="event_title_highlight">@android:color/black</color>
+
+    <color name="event_drawable_selection_stroke">@android:color/white</color>
+
+</resources>
