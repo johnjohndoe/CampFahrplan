@@ -18,8 +18,8 @@ android {
     buildToolsVersion "26.0.1"
 
     defaultConfig {
-        versionCode 39
-        versionName "1.32.2"
+        versionCode 41
+        versionName "1.33.0"
         minSdkVersion 14
         targetSdkVersion 22
 
@@ -57,6 +57,12 @@ android {
             keyAlias props['signing.ccc32c3-release.keyAlias']
             keyPassword props['signing.ccc32c3-release.keyPassword']
         }
+        mrmcd2017 {
+            storeFile file(props['signing.mrmcd-release.keystoreFilePath'])
+            storePassword props['signing.mrmcd-release.keystorePassword']
+            keyAlias props['signing.mrmcd-release.keyAlias']
+            keyPassword props['signing.mrmcd-release.keyPassword']
+        }
     }
 
     productFlavors {
@@ -93,6 +99,24 @@ android {
             buildConfigField "int", "SCHEDULE_LAST_DAY_END_DAY", "31"
             buildConfigField "boolean", "SHOW_APP_DISCLAIMER", "false"
             buildConfigField "String", "TRACE_DROID_EMAIL_ADDRESS", '"ENTER_EMAIL_ADDRESS_HERE"'
+        }
+        mrmcd2017 {
+            applicationId "info.metadude.android.mrmcd.schedule"
+            versionName "1.33.0 (MRMCD Edition)"
+            signingConfig signingConfigs.mrmcd2017
+            buildConfigField "String", "SCHEDULE_URL", '"https://cfp.mrmcd.net/2017/schedule.xml"'
+            buildConfigField "String", "SCHEDULE_DOMAIN_PART", '"https://cfp.mrmcd.net"'
+            buildConfigField "String", "SCHEDULE_EVENT_PART", '"/talk/%1$s"'
+            buildConfigField "String", "SCHEDULE_PART", '"/2017"'
+            buildConfigField "String", "VENUE", '"tu-darmstadt"'
+            buildConfigField "int", "SCHEDULE_FIRST_DAY_START_YEAR", "2017"
+            buildConfigField "int", "SCHEDULE_FIRST_DAY_START_MONTH", "9"
+            buildConfigField "int", "SCHEDULE_FIRST_DAY_START_DAY", "1"
+            buildConfigField "int", "SCHEDULE_LAST_DAY_END_YEAR", "2017"
+            buildConfigField "int", "SCHEDULE_LAST_DAY_END_MONTH", "9"
+            buildConfigField "int", "SCHEDULE_LAST_DAY_END_DAY", "3"
+            buildConfigField "boolean", "SHOW_APP_DISCLAIMER", "true"
+            buildConfigField "String", "TRACE_DROID_EMAIL_ADDRESS", '"tobias.preuss+mrmcd@googlemail.com"'
         }
     }
 
