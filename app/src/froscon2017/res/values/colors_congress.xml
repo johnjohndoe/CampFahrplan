@@ -43,7 +43,7 @@
 
     <!-- Highlight state -->
     <color name="event_border_highlight">@color/event_border_accent</color>
-    <color name="event_border_highlight_bots">@color/event_border_accent_culture</color>
+    <color name="event_border_highlight_bots">@color/event_border_accent_bots</color>
     <color name="event_border_highlight_culture">@color/event_border_accent_culture</color>
     <color name="event_border_highlight_databases">@color/event_border_accent_databases</color>
     <color name="event_border_highlight_development">@color/event_border_accent_development</color>
@@ -53,7 +53,7 @@
     <color name="event_border_highlight_hardware">@color/event_border_accent_hardware</color>
     <color name="event_border_highlight_keynote">@color/event_border_accent_keynote</color>
     <color name="event_border_highlight_monitoring">@color/event_border_accent_monitoring</color>
-    <color name="event_border_highlight_osgeo_osm">@color/event_border_accent_monitoring</color>
+    <color name="event_border_highlight_osgeo_osm">@color/event_border_accent_osgeo_osm</color>
     <color name="event_border_highlight_other">@color/event_border_accent_other</color>
     <color name="event_border_highlight_persistent_migration">
         @color/event_border_accent_persistent_migration
@@ -74,7 +74,7 @@
 
     <!-- Accent color highlight -->
     <color name="event_border_accent_highlight">@color/event_border_default</color>
-    <color name="event_border_accent_highlight_bots">@color/event_border_default_culture</color>
+    <color name="event_border_accent_highlight_bots">@color/event_border_default_bots</color>
     <color name="event_border_accent_highlight_culture">@color/event_border_default_culture</color>
     <color name="event_border_accent_highlight_databases">@color/event_border_default_databases
     </color>
@@ -89,7 +89,7 @@
     <color name="event_border_accent_highlight_keynote">@color/event_border_default_keynote</color>
     <color name="event_border_accent_highlight_monitoring">@color/event_border_default_monitoring
     </color>
-    <color name="event_border_accent_highlight_osgeo_osm">@color/event_border_default_monitoring
+    <color name="event_border_accent_highlight_osgeo_osm">@color/event_border_default_osgeo_osm
     </color>
     <color name="event_border_accent_highlight_other">@color/event_border_default_other</color>
     <color name="event_border_accent_highlight_persistent_migration">
@@ -107,7 +107,7 @@
         @color/event_border_default_machine_learning
     </color>
     <color name="event_border_accent_highlight_web_development">
-        @color/event_border_accent_web_development
+        @color/event_border_default_web_development
     </color>
 
     <!-- Title color -->
