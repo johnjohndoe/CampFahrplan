@@ -5,31 +5,31 @@
 
     <!-- Default state -->
     <color name="event_border_default">#E4E4E4</color>
-    <color name="event_border_default_bots">#0036cc</color>
+    <color name="event_border_default_bots">#00998f</color>
     <color name="event_border_default_culture">#0036cc</color>
-    <color name="event_border_default_databases">#00cc00</color>
-    <color name="event_border_default_development">#cccc00</color>
-    <color name="event_border_default_froscon_meets_science">#540000</color>
-    <color name="event_border_default_hardware">#000088</color>
+    <color name="event_border_default_databases">#00b300</color>
+    <color name="event_border_default_development">#a6a600</color>
+    <color name="event_border_default_froscon_meets_science">#6e0000</color>
+    <color name="event_border_default_hardware">#49228f</color>
     <color name="event_border_default_keynote">#0083a1</color>
     <color name="event_border_default_monitoring">#545400</color>
     <color name="event_border_default_osgeo_osm">#005454</color>
-    <color name="event_border_default_other">#cc5252</color>
-    <color name="event_border_default_persistent_migration">#cc3d00</color>
+    <color name="event_border_default_other">#bf4c4c</color>
+    <color name="event_border_default_persistent_migration">#b33600</color>
     <color name="event_border_default_security">#540054</color>
     <color name="event_border_default_system_administration">#6ba4c7</color>
     <color name="event_border_default_the_days_of_plenty_are_over">#8a6969</color>
     <color name="event_border_default_machine_learning">#817e8f</color>
-    <color name="event_border_default_web_development">#1b1b70</color>
+    <color name="event_border_default_web_development">#183d66</color>
 
     <!-- Accent color -->
     <color name="event_border_accent">#5e5e5e</color>
-    <color name="event_border_accent_bots">#0043FF</color>
-    <color name="event_border_accent_culture">#0043FF</color>
-    <color name="event_border_accent_databases">#00FF00</color>
-    <color name="event_border_accent_development">#FFFF00</color>
-    <color name="event_border_accent_froscon_meets_science">#880000</color>
-    <color name="event_border_accent_hardware">#0000d4</color>
+    <color name="event_border_accent_bots">#00ccbe</color>
+    <color name="event_border_accent_culture">#285df1</color>
+    <color name="event_border_accent_databases">#00e600</color>
+    <color name="event_border_accent_development">#e6e600</color>
+    <color name="event_border_accent_froscon_meets_science">#b30000</color>
+    <color name="event_border_accent_hardware">#6731cc</color>
     <color name="event_border_accent_keynote">#00ACD3</color>
     <color name="event_border_accent_monitoring">#888800</color>
     <color name="event_border_accent_osgeo_osm">#008888</color>
@@ -39,7 +39,7 @@
     <color name="event_border_accent_system_administration">#87CEFA</color>
     <color name="event_border_accent_the_days_of_plenty_are_over">#BC8F8F</color>
     <color name="event_border_accent_machine_learning">#B0ABC3</color>
-    <color name="event_border_accent_web_development">#2727A4</color>
+    <color name="event_border_accent_web_development">#2761a3</color>
 
     <!-- Highlight state -->
     <color name="event_border_highlight">@color/event_border_accent</color>
