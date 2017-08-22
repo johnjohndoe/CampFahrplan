@@ -12,6 +12,7 @@
     <color name="event_border_default_froscon_meets_science">#6e0000</color>
     <color name="event_border_default_hardware">#49228f</color>
     <color name="event_border_default_keynote">#0083a1</color>
+    <color name="event_border_default_lightning_talks">#cccc66</color>
     <color name="event_border_default_monitoring">#545400</color>
     <color name="event_border_default_osgeo_osm">#005454</color>
     <color name="event_border_default_other">#bf4c4c</color>
@@ -31,6 +32,7 @@
     <color name="event_border_accent_froscon_meets_science">#b30000</color>
     <color name="event_border_accent_hardware">#6731cc</color>
     <color name="event_border_accent_keynote">#00ACD3</color>
+    <color name="event_border_accent_lightning_talks">#FEFD7F</color>
     <color name="event_border_accent_monitoring">#888800</color>
     <color name="event_border_accent_osgeo_osm">#008888</color>
     <color name="event_border_accent_other">#FF6666</color>
@@ -52,6 +54,7 @@
     </color>
     <color name="event_border_highlight_hardware">@color/event_border_accent_hardware</color>
     <color name="event_border_highlight_keynote">@color/event_border_accent_keynote</color>
+    <color name="event_border_highlight_lightning_talks">@color/event_border_accent_lightning_talks</color>
     <color name="event_border_highlight_monitoring">@color/event_border_accent_monitoring</color>
     <color name="event_border_highlight_osgeo_osm">@color/event_border_accent_osgeo_osm</color>
     <color name="event_border_highlight_other">@color/event_border_accent_other</color>
@@ -87,6 +90,7 @@
     <color name="event_border_accent_highlight_hardware">@color/event_border_default_hardware
     </color>
     <color name="event_border_accent_highlight_keynote">@color/event_border_default_keynote</color>
+    <color name="event_border_accent_highlight_lightning_talks">@color/event_border_default_lightning_talks</color>
     <color name="event_border_accent_highlight_monitoring">@color/event_border_default_monitoring
     </color>
     <color name="event_border_accent_highlight_osgeo_osm">@color/event_border_default_osgeo_osm
