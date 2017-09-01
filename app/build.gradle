@@ -18,8 +18,8 @@ android {
     buildToolsVersion "26.0.1"
 
     defaultConfig {
-        versionCode 41
-        versionName "1.33.0"
+        versionCode 42
+        versionName "1.33.1"
         minSdkVersion 14
         targetSdkVersion 22
 
@@ -102,7 +102,7 @@ android {
         }
         mrmcd2017 {
             applicationId "info.metadude.android.mrmcd.schedule"
-            versionName "1.33.0 (MRMCD Edition)"
+            versionName "1.33.1 (MRMCD Edition)"
             signingConfig signingConfigs.mrmcd2017
             buildConfigField "String", "SCHEDULE_URL", '"https://cfp.mrmcd.net/2017/schedule.xml"'
             buildConfigField "String", "SCHEDULE_DOMAIN_PART", '"https://cfp.mrmcd.net"'
