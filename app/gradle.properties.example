@@ -7,3 +7,8 @@ signing.camp2015-release.keystoreFilePath=/home/USERNAME/.android/camp2015-relea
 signing.camp2015-release.keystorePassword="PASSWORD"
 signing.camp2015-release.keyAlias="camp2015"
 signing.camp2015-release.keyPassword="ANOTHERPASSWORD"
+
+signing.hackover-release.keystoreFilePath=/home/USERNAME/.android/hackover-release-key.keystore
+signing.hackover-release.keystorePassword="PASSWORD"
+signing.hackover-release.keyAlias="hackover"
+signing.hackover-release.keyPassword="ANOTHERPASSWORD"
