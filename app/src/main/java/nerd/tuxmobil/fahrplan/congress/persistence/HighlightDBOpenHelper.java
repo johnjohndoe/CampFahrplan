@@ -9,7 +9,7 @@ import nerd.tuxmobil.fahrplan.congress.persistence.FahrplanContract.HighlightsTa
 
 public class HighlightDBOpenHelper extends SQLiteOpenHelper {
 
-    private static final int DATABASE_VERSION = 1;
+    private static final int DATABASE_VERSION = 4;
 
     private static final String HIGHLIGHT_TABLE_CREATE =
             "CREATE TABLE " + HighlightsTable.NAME + " (" +

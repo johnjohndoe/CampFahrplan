@@ -11,7 +11,7 @@ import nerd.tuxmobil.fahrplan.congress.persistence.FahrplanContract.LecturesTabl
 
 public class LecturesDBOpenHelper extends SQLiteOpenHelper {
 
-    private static final int DATABASE_VERSION = 5;
+    private static final int DATABASE_VERSION = 8;
 
     private static final String LECTURES_TABLE_CREATE =
             "CREATE TABLE " + LecturesTable.NAME + " (" +
@@ -124,6 +124,11 @@ public class LecturesDBOpenHelper extends SQLiteOpenHelper {
             db.execSQL("ALTER TABLE " + LecturesTable.NAME + " ADD COLUMN " + Columns.CHANGED_TIME + " INTEGER DEFAULT " + 0);
             db.execSQL("ALTER TABLE " + LecturesTable.NAME + " ADD COLUMN " + Columns.CHANGED_DURATION + " INTEGER DEFAULT " + 0);
             db.execSQL("ALTER TABLE " + LecturesTable.NAME + " ADD COLUMN " + Columns.CHANGED_IS_CANCELED + " INTEGER DEFAULT " + 0);
+        }
+        if (oldVersion < 8) {
+            // Clear database from Hackover 2016
+            db.execSQL("DROP TABLE IF EXISTS " + LecturesTable.NAME);
+            onCreate(db);
         }
     }
 }
