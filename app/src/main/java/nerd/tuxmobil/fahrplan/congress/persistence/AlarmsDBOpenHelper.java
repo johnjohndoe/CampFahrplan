@@ -8,7 +8,7 @@ import nerd.tuxmobil.fahrplan.congress.persistence.FahrplanContract.AlarmsTable;
 
 public class AlarmsDBOpenHelper extends SQLiteOpenHelper {
 
-    private static final int DATABASE_VERSION = 2;
+    private static final int DATABASE_VERSION = 5;
 
     private static final String ALARMS_TABLE_CREATE =
             "CREATE TABLE " + AlarmsTable.NAME + " (" +
@@ -49,5 +49,11 @@ public class AlarmsDBOpenHelper extends SQLiteOpenHelper {
                     AlarmsTable.Columns.ALARM_TIME_IN_MIN + " INTEGER DEFAULT" +
                     AlarmsTable.Defaults.ALARM_TIME_IN_MIN_DEFAULT);
         }
+        if (oldVersion < 5) {
+            // Clear database from Datenspuren 2016.
+            db.execSQL("DROP TABLE IF EXISTS " + AlarmsTable.NAME);
+            onCreate(db);
+        }
     }
+
 }
