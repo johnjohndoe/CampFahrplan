@@ -18,8 +18,8 @@ android {
     buildToolsVersion "26.0.2"
 
     defaultConfig {
-        versionCode 39
-        versionName "1.32.2"
+        versionCode 40
+        versionName "1.33.0"
         minSdkVersion 14
         targetSdkVersion 22
 
@@ -57,6 +57,12 @@ android {
             keyAlias props['signing.ccc32c3-release.keyAlias']
             keyPassword props['signing.ccc32c3-release.keyPassword']
         }
+        datenspuren2017 {
+            storeFile file(props['signing.datenspuren-release.keystoreFilePath'])
+            storePassword props['signing.datenspuren-release.keystorePassword']
+            keyAlias props['signing.datenspuren-release.keyAlias']
+            keyPassword props['signing.datenspuren-release.keyPassword']
+        }
     }
 
     productFlavors {
@@ -93,6 +99,24 @@ android {
             buildConfigField "int", "SCHEDULE_LAST_DAY_END_DAY", "31"
             buildConfigField "boolean", "SHOW_APP_DISCLAIMER", "false"
             buildConfigField "String", "TRACE_DROID_EMAIL_ADDRESS", '"ENTER_EMAIL_ADDRESS_HERE"'
+        }
+        datenspuren2017 {
+            applicationId "info.metadude.android.datenspuren.schedule"
+            versionName "1.33.0 (Datenspuren Edition)"
+            signingConfig signingConfigs.datenspuren2017
+            buildConfigField "String", "SCHEDULE_URL", '"https://datenspuren.de/2017/fahrplan/schedule.xml"'
+            buildConfigField "String", "SCHEDULE_DOMAIN_PART", '"https://datenspuren.de"'
+            buildConfigField "String", "SCHEDULE_EVENT_PART", '"/events/%1$s.html"'
+            buildConfigField "String", "SCHEDULE_PART", '"/2017/fahrplan"'
+            buildConfigField "String", "VENUE", '"Technische Sammlungen"'
+            buildConfigField "int", "SCHEDULE_FIRST_DAY_START_YEAR", "2017"
+            buildConfigField "int", "SCHEDULE_FIRST_DAY_START_MONTH", "10"
+            buildConfigField "int", "SCHEDULE_FIRST_DAY_START_DAY", "21"
+            buildConfigField "int", "SCHEDULE_LAST_DAY_END_YEAR", "2017"
+            buildConfigField "int", "SCHEDULE_LAST_DAY_END_MONTH", "10"
+            buildConfigField "int", "SCHEDULE_LAST_DAY_END_DAY", "23"
+            buildConfigField "boolean", "SHOW_APP_DISCLAIMER", "true"
+            buildConfigField "String", "TRACE_DROID_EMAIL_ADDRESS", '"tobias.preuss+datenspuren@googlemail.com"'
         }
     }
 
