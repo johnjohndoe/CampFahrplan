@@ -1,6 +1,7 @@
 package nerd.tuxmobil.fahrplan.congress.net;
 
 import android.app.Activity;
+import android.os.Build;
 import android.widget.Toast;
 
 import java.security.KeyManagementException;
@@ -49,8 +50,14 @@ public class CustomHttpClient {
             httpLoggingInterceptor.setLevel(Level.HEADERS);
             clientBuilder.addNetworkInterceptor(httpLoggingInterceptor);
         }
+
         X509TrustManager trustManager = TrustManagerFactory.get(host, true);
-        clientBuilder.sslSocketFactory(createSSLSocketFactory(trustManager), trustManager);
+        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.LOLLIPOP) {
+            clientBuilder.sslSocketFactory(new TLSSocketFactory(), trustManager);
+        } else {
+            clientBuilder.sslSocketFactory(createSSLSocketFactory(trustManager), trustManager);
+        }
+
         return clientBuilder.build();
     }
 
