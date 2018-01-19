@@ -63,6 +63,12 @@ android {
             keyAlias props['signing.ccc34c3-release.keyAlias']
             keyPassword props['signing.ccc34c3-release.keyPassword']
         }
+        fosdem {
+            storeFile file(props['signing.fosdem-release.keystoreFilePath'])
+            storePassword props['signing.fosdem-release.keystorePassword']
+            keyAlias props['signing.fosdem-release.keyAlias']
+            keyPassword props['signing.fosdem-release.keyPassword']
+        }
     }
 
     def defaultDimension = "default"
@@ -106,6 +112,27 @@ android {
             buildConfigField "boolean", "SHOW_APP_DISCLAIMER", "false"
             buildConfigField "boolean", "COMPOSE_EVENT_URL_FROM_SLUG", "false"
             buildConfigField "String", "TRACE_DROID_EMAIL_ADDRESS", '"tobias.preuss+34c3@googlemail.com"'
+        }
+        fosdem {
+            dimension defaultDimension
+            applicationId "info.metadude.android.fosdem.schedule"
+            versionName "1.33.4 (FOSDEM Edition)"
+            signingConfig signingConfigs.fosdem
+            buildConfigField "String", "SCHEDULE_URL", '"http://opentree.cygnus.uberspace.de/fosdem2018/schedule.xml"'
+            buildConfigField "String", "SCHEDULE_DOMAIN_PART", '"https://fosdem.org"'
+            buildConfigField "String", "SCHEDULE_EVENT_PART", '"/event/%1$s/"'
+            buildConfigField "String", "SCHEDULE_PART", '"/2018/schedule"'
+            buildConfigField "String", "VENUE", '"ulb"'
+            buildConfigField "int", "SCHEDULE_FIRST_DAY_START_YEAR", "2018"
+            buildConfigField "int", "SCHEDULE_FIRST_DAY_START_MONTH", "2"
+            buildConfigField "int", "SCHEDULE_FIRST_DAY_START_DAY", "3"
+            buildConfigField "int", "SCHEDULE_LAST_DAY_END_YEAR", "2018"
+            buildConfigField "int", "SCHEDULE_LAST_DAY_END_MONTH", "2"
+            buildConfigField "int", "SCHEDULE_LAST_DAY_END_DAY", "5"
+            buildConfigField "boolean", "SHOW_APP_DISCLAIMER", "true"
+            buildConfigField "boolean", "COMPOSE_EVENT_URL_FROM_SLUG", "true"
+            buildConfigField "String", "TRACE_DROID_EMAIL_ADDRESS", '"tobias.preuss+fosdem@googlemail.com"'
+            buildConfigField "String", "SCHEDULE_FEEDBACK_URL", '"https://"'
         }
     }
 
