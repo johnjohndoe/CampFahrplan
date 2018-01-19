@@ -8,7 +8,7 @@ import nerd.tuxmobil.fahrplan.congress.persistence.FahrplanContract.AlarmsTable;
 
 public class AlarmsDBOpenHelper extends SQLiteOpenHelper {
 
-    private static final int DATABASE_VERSION = 2;
+    private static final int DATABASE_VERSION = 5;
 
     private static final String DATABASE_NAME = "alarms";
 
@@ -39,6 +39,11 @@ public class AlarmsDBOpenHelper extends SQLiteOpenHelper {
             db.execSQL("ALTER TABLE " + AlarmsTable.NAME + " ADD " +
                     AlarmsTable.Columns.ALARM_TIME_IN_MIN + " INTEGER DEFAULT" +
                     AlarmsTable.Defaults.ALARM_TIME_IN_MIN_DEFAULT);
+        }
+        if (oldVersion < 5) {
+            // Clear database from FOSDEM 2017
+            db.execSQL("DROP TABLE IF EXISTS " + AlarmsTable.NAME);
+            onCreate(db);
         }
     }
 }
