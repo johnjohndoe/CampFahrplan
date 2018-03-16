@@ -124,7 +124,7 @@ android {
             buildConfigField "String", "SCHEDULE_DOMAIN_PART", '"http://frab.fossgis-konferenz.de/de"'
             buildConfigField "String", "SCHEDULE_EVENT_PART", '"/events/%1$s.html"'
             buildConfigField "String", "SCHEDULE_PART", '"/2018/public"'
-            buildConfigField "String", "VENUE", '"ulb"'
+            buildConfigField "String", "VENUE", '"unibonn"'
             buildConfigField "int", "SCHEDULE_FIRST_DAY_START_YEAR", "2018"
             buildConfigField "int", "SCHEDULE_FIRST_DAY_START_MONTH", "3"
             buildConfigField "int", "SCHEDULE_FIRST_DAY_START_DAY", "21"
