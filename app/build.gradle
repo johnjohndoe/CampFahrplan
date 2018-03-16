@@ -118,7 +118,7 @@ android {
         }
         fossgis2018 {
             applicationId "info.metadude.android.fossgis.schedule"
-            versionName "1.34.4 (FOSSGIS Edition)"
+            versionName "1.33.4 (FOSSGIS Edition)"
             signingConfig signingConfigs.fossgis2018
             buildConfigField "String", "SCHEDULE_URL", '"https://frab.fossgis-konferenz.de/de/2018/public/schedule.xml"'
             buildConfigField "String", "SCHEDULE_DOMAIN_PART", '"http://frab.fossgis-konferenz.de/de"'
