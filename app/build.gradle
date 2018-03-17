@@ -23,8 +23,8 @@ android {
     buildToolsVersion "27.0.2"
 
     defaultConfig {
-        versionCode 44
-        versionName "1.33.4"
+        versionCode 45
+        versionName "1.33.5"
         minSdkVersion 14
         targetSdkVersion 22
 
@@ -118,7 +118,7 @@ android {
         }
         fossgis2018 {
             applicationId "info.metadude.android.fossgis.schedule"
-            versionName "1.33.4 (FOSSGIS Edition)"
+            versionName "1.33.5 (FOSSGIS Edition)"
             signingConfig signingConfigs.fossgis2018
             buildConfigField "String", "SCHEDULE_URL", '"https://frab.fossgis-konferenz.de/de/2018/public/schedule.xml"'
             buildConfigField "String", "SCHEDULE_DOMAIN_PART", '"http://frab.fossgis-konferenz.de/de"'
