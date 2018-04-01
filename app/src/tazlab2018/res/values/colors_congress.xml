@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="pressed_congress">#CCa80a1a</color>
+
+    <!-- Default state -->
+    <color name="event_border_default">#a6600c</color>
+
+    <!-- Accent color -->
+    <color name="event_border_accent">#fac07d</color>
+
+    <!-- Highlight state -->
+    <color name="event_border_highlight">#e68510</color>
+
+    <!-- Accent color highlight -->
+    <color name="event_border_accent_highlight">@color/event_border_default</color>
+
+    <!-- Track color -->
+    <color name="track_name">#beffffff</color>
+
+    <!-- Title color -->
+    <color name="event_title">#a0ffffff</color>
+    <color name="event_title_highlight">#ffffff</color>
+
+</resources>
