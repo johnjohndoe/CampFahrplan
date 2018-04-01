@@ -64,6 +64,12 @@ android {
             keyAlias props['signing.ccc34c3-release.keyAlias']
             keyPassword props['signing.ccc34c3-release.keyPassword']
         }
+        tazlab2018 {
+            storeFile file(props['signing.tazlab-release.keystoreFilePath'])
+            storePassword props['signing.tazlab-release.keystorePassword']
+            keyAlias props['signing.tazlab-release.keyAlias']
+            keyPassword props['signing.tazlab-release.keyPassword']
+        }
     }
 
     def defaultDimension = "default"
@@ -110,6 +116,26 @@ android {
             buildConfigField "boolean", "COMPOSE_EVENT_URL_FROM_SLUG", "false"
             buildConfigField "String", "TRACE_DROID_EMAIL_ADDRESS", '"tobias.preuss+34c3@googlemail.com"'
             buildConfigField "String", "SCHEDULE_FEEDBACK_URL", '"https://frab.cccv.de/en/34C3/public/events/%s/feedback/new"'
+        }
+        tazlab2018 {
+            applicationId "info.metadude.android.tazlab.schedule"
+            versionName "1.33.4 (taz.lab-Edition)"
+            signingConfig signingConfigs.tazlab2018
+            buildConfigField "String", "SCHEDULE_URL", '"https://www.taz.de/programm/2018/Arbeit2018/de/schedule.xml"'
+            buildConfigField "String", "SCHEDULE_DOMAIN_PART", '"https://www.taz.de"'
+            buildConfigField "String", "SCHEDULE_EVENT_PART", '"/events/%1$s.html"'
+            buildConfigField "String", "SCHEDULE_PART", '"/programm/2018/Arbeit2018/de"'
+            buildConfigField "String", "VENUE", '"hdkw"'
+            buildConfigField "int", "SCHEDULE_FIRST_DAY_START_YEAR", "2018"
+            buildConfigField "int", "SCHEDULE_FIRST_DAY_START_MONTH", "4"
+            buildConfigField "int", "SCHEDULE_FIRST_DAY_START_DAY", "21"
+            buildConfigField "int", "SCHEDULE_LAST_DAY_END_YEAR", "2018"
+            buildConfigField "int", "SCHEDULE_LAST_DAY_END_MONTH", "4"
+            buildConfigField "int", "SCHEDULE_LAST_DAY_END_DAY", "22"
+            buildConfigField "boolean", "SHOW_APP_DISCLAIMER", "true"
+            buildConfigField "boolean", "COMPOSE_EVENT_URL_FROM_SLUG", "false"
+            buildConfigField "String", "TRACE_DROID_EMAIL_ADDRESS", '"tobias.preuss+tazlab@googlemail.com"'
+            buildConfigField "String", "SCHEDULE_FEEDBACK_URL", '""'
         }
     }
 
