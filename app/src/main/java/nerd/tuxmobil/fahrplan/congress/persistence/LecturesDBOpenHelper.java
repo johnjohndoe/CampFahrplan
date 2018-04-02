@@ -12,7 +12,7 @@ import nerd.tuxmobil.fahrplan.congress.persistence.FahrplanContract.LecturesTabl
 
 public class LecturesDBOpenHelper extends SQLiteOpenHelper {
 
-    private static final int DATABASE_VERSION = 6;
+    private static final int DATABASE_VERSION = 7;
 
     private static final String DATABASE_NAME = "lectures";
 
@@ -96,6 +96,11 @@ public class LecturesDBOpenHelper extends SQLiteOpenHelper {
         }
         if ((oldVersion < 6) && (newVersion >= 6)) {
             db.execSQL("ALTER TABLE " + LecturesTable.NAME + " ADD COLUMN " + Columns.SLUG + " TEXT DEFAULT ''");
+        }
+        if (oldVersion < 7) {
+            // Clear database from taz.lab 2016
+            db.execSQL("DROP TABLE IF EXISTS " + LecturesTable.NAME);
+            onCreate(db);
         }
     }
 }
