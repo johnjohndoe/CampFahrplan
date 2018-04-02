@@ -37,7 +37,7 @@ public class AboutDialog extends DialogFragment {
         TextView text = view.findViewById(R.id.eventVersion);
         text.setText(getString(R.string.fahrplan) + " " + MyApp.version);
         text = view.findViewById(R.id.eventTitle);
-        text.setText(MyApp.title);
+        text.setText("Wie wir arbeiten wollen. Das #tazlab zur Zukunft der Arbeit");
         text = view.findViewById(R.id.eventSubtitle);
         String subtitle = MyApp.subtitle;
         if (TextUtils.isEmpty(subtitle)) {
