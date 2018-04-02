@@ -2,6 +2,7 @@
 <resources>
     <string name="app_name">taz.lab 2018 Schedule</string>
     <string name="app_hardcoded_subtitle">April 21. 2018, from 08:30 am, Haus der Kulturen der Welt, Berlin</string>
+    <string name="fahrplan">taz.lab schedule</string>
     <string name="conference_url">
         <![CDATA[<a href="http://www.taz.de/!p5143/">http://www.taz.de/!p5143/</a>]]>
     </string>

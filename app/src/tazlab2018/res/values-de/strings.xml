@@ -2,6 +2,7 @@
 <resources>
     <string name="app_name">taz.lab 2018 Fahrplan</string>
     <string name="app_hardcoded_subtitle">21. April 2018, ab 08:30 Uhr, Haus der Kulturen der Welt, Berlin</string>
+    <string name="fahrplan">taz.lab Fahrplan</string>
     <string name="conference_url">
         <![CDATA[<a href="http://www.taz.de/!p5143/">http://www.taz.de/!p5143/</a>]]>
     </string>
