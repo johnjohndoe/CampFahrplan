@@ -49,7 +49,7 @@ public class MetaDBOpenHelper extends SQLiteOpenHelper {
                     Columns.ETAG + " TEXT DEFAULT " + Defaults.ETAG_DEFAULT);
         }
         if (oldVersion < 5) {
-            // Clear database from taz.lab 2016
+            // Clear database from taz lab 2016
             db.execSQL("DROP TABLE IF EXISTS " + MetasTable.NAME);
             onCreate(db);
         }

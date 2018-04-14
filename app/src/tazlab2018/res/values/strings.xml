@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">taz.lab 2018 Schedule</string>
+    <string name="app_name">taz lab 2018 Schedule</string>
     <string name="app_hardcoded_subtitle">April 21. 2018, from 08:30 am, Haus der Kulturen der Welt, Berlin</string>
-    <string name="fahrplan">taz.lab schedule</string>
+    <string name="fahrplan">taz lab schedule</string>
     <string name="conference_url">
         <![CDATA[<a href="http://www.taz.de/!p5143/">http://www.taz.de/!p5143/</a>]]>
     </string>
@@ -13,7 +13,7 @@
         <![CDATA[<a href="https://play.google.com/store/apps/details?id=info.metadude.android.tazlab.schedule">Google PlayStore listing</a>]]>
     </string>
     <string name="copyright_logo">
-        The name taz.lab and the paw logo are registered trademarks of the taz.
+        The name taz lab and the paw logo are registered trademarks of the taz.
         The content of the congress program is authored by the taz and
         shown unmodified by this application.
     </string>

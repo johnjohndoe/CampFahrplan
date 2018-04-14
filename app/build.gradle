@@ -119,7 +119,7 @@ android {
         }
         tazlab2018 {
             applicationId "info.metadude.android.tazlab.schedule"
-            versionName "1.33.4 (taz.lab-Edition)"
+            versionName "1.33.4 (taz lab-Edition)"
             signingConfig signingConfigs.tazlab2018
             buildConfigField "String", "SCHEDULE_URL", '"https://www.taz.de/programm/2018/Arbeit2018/de/schedule.xml"'
             buildConfigField "String", "SCHEDULE_DOMAIN_PART", '"https://www.taz.de"'

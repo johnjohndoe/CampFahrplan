@@ -41,7 +41,7 @@ public class AlarmsDBOpenHelper extends SQLiteOpenHelper {
                     AlarmsTable.Defaults.ALARM_TIME_IN_MIN_DEFAULT);
         }
         if (oldVersion < 4) {
-            // Clear database from taz.lab 2016
+            // Clear database from taz lab 2016
             db.execSQL("DROP TABLE IF EXISTS " + AlarmsTable.NAME);
             onCreate(db);
         }

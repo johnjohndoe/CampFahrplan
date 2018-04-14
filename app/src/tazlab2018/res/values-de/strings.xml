@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">taz.lab 2018 Fahrplan</string>
+    <string name="app_name">taz lab 2018 Fahrplan</string>
     <string name="app_hardcoded_subtitle">21. April 2018, ab 08:30 Uhr, Haus der Kulturen der Welt, Berlin</string>
-    <string name="fahrplan">taz.lab Fahrplan</string>
+    <string name="fahrplan">taz lab Fahrplan</string>
     <string name="conference_url">
         <![CDATA[<a href="http://www.taz.de/!p5143/">http://www.taz.de/!p5143/</a>]]>
     </string>
@@ -13,7 +13,7 @@
         <![CDATA[<a href="https://play.google.com/store/apps/details?id=info.metadude.android.tazlab.schedule">Eintrag im Google PlayStore</a>]]>
     </string>
     <string name="copyright_logo">
-        Der Name taz.lab und das Tatze-Logo sind registrierte Markenzeichen der taz.
+        Der Name taz lab und das Tatze-Logo sind registrierte Markenzeichen der taz.
         Der Inhalt des Konferenzprogramms verantwortet die taz. Dieser wird unverändert
         von dieser Anwendung dargestellt.
     </string>

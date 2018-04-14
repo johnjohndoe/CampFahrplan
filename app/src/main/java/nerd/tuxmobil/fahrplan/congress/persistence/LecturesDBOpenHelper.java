@@ -98,7 +98,7 @@ public class LecturesDBOpenHelper extends SQLiteOpenHelper {
             db.execSQL("ALTER TABLE " + LecturesTable.NAME + " ADD COLUMN " + Columns.SLUG + " TEXT DEFAULT ''");
         }
         if (oldVersion < 7) {
-            // Clear database from taz.lab 2016
+            // Clear database from taz lab 2016
             db.execSQL("DROP TABLE IF EXISTS " + LecturesTable.NAME);
             onCreate(db);
         }
