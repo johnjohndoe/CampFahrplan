@@ -64,6 +64,12 @@ android {
             keyAlias props['signing.ccc34c3-release.keyAlias']
             keyPassword props['signing.ccc34c3-release.keyPassword']
         }
+        gpn2018 {
+            storeFile file(props['signing.gpn-release.keystoreFilePath'])
+            storePassword props['signing.gpn-release.keystorePassword']
+            keyAlias props['signing.gpn-release.keyAlias']
+            keyPassword props['signing.gpn-release.keyPassword']
+        }
     }
 
     def defaultDimension = "default"
@@ -110,6 +116,26 @@ android {
             buildConfigField "boolean", "COMPOSE_EVENT_URL_FROM_SLUG", "false"
             buildConfigField "String", "TRACE_DROID_EMAIL_ADDRESS", '"tobias.preuss+34c3@googlemail.com"'
             buildConfigField "String", "SCHEDULE_FEEDBACK_URL", '"https://frab.cccv.de/en/34C3/public/events/%s/feedback/new"'
+        }
+        gpn2018 {
+            applicationId "info.metadude.android.gpn.schedule"
+            versionName "1.33.4 (GPN-Edition)"
+            signingConfig signingConfigs.gpn2018
+            buildConfigField "String", "SCHEDULE_URL", '"https://pretalx.entropia.de/gpn18/schedule/export?exporter=core-frab-xml"'
+            buildConfigField "String", "SCHEDULE_DOMAIN_PART", '"https://pretalx.entropia.de"'
+            buildConfigField "String", "SCHEDULE_EVENT_PART", '"/talk/%1$s"'
+            buildConfigField "String", "SCHEDULE_PART", '"/gpn18"'
+            buildConfigField "String", "VENUE", '"hfg"'
+            buildConfigField "int", "SCHEDULE_FIRST_DAY_START_YEAR", "2018"
+            buildConfigField "int", "SCHEDULE_FIRST_DAY_START_MONTH", "5"
+            buildConfigField "int", "SCHEDULE_FIRST_DAY_START_DAY", "14"
+            buildConfigField "int", "SCHEDULE_LAST_DAY_END_YEAR", "2018"
+            buildConfigField "int", "SCHEDULE_LAST_DAY_END_MONTH", "5"
+            buildConfigField "int", "SCHEDULE_LAST_DAY_END_DAY", "10"
+            buildConfigField "boolean", "SHOW_APP_DISCLAIMER", "true"
+            buildConfigField "boolean", "COMPOSE_EVENT_URL_FROM_SLUG", "false"
+            buildConfigField "String", "TRACE_DROID_EMAIL_ADDRESS", '"tobias.preuss+gpn@googlemail.com"'
+            buildConfigField "String", "SCHEDULE_FEEDBACK_URL", '""'
         }
     }
 

@@ -7,3 +7,8 @@ signing.ccc34c3-release.keystoreFilePath=/home/USERNAME/.android/ccc34c3-release
 signing.ccc34c3-release.keystorePassword="PASSWORD"
 signing.ccc34c3-release.keyAlias="ccc34c3"
 signing.ccc34c3-release.keyPassword="ANOTHERPASSWORD"
+
+signing.gpn-release.keystoreFilePath=/home/USERNAME/.android/gpn-release-key.keystore
+signing.gpn-release.keystorePassword="PASSWORD"
+signing.gpn-release.keyAlias="gpn"
+signing.gpn-release.keyPassword="ANOTHERPASSWORD"
