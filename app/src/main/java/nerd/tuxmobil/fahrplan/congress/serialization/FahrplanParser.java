@@ -364,7 +364,15 @@ class ParserTask extends AsyncTask<String, Void, Boolean> {
                                             lecture.duration = Lecture.parseDuration(getSanitizedText(parser));
                                         } else if (name.equals("date")) {
                                             parser.next();
-                                            lecture.dateUTC = DateHelper.getDateTime(getSanitizedText(parser));
+                                            String text = parser.getText();
+                                            if (text == null || text.isEmpty()) {
+                                                text = "";
+                                            } else {
+                                                if (text.contains("T00:00:00")) {
+                                                    text = text.replace("T00:00:00", "T00:15:00");
+                                                }
+                                            }
+                                            lecture.dateUTC = DateHelper.getDateTime(text);
                                         } else if (name.equals("recording")) {
                                             eventType = parser.next();
                                             boolean recording_done = false;
