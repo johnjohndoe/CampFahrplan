@@ -24,8 +24,8 @@ android {
     buildToolsVersion "27.0.3"
 
     defaultConfig {
-        versionCode 44
-        versionName "1.33.4"
+        versionCode 45
+        versionName "1.33.5"
         minSdkVersion 14
         targetSdkVersion 22
 
@@ -119,7 +119,7 @@ android {
         }
         gpn2018 {
             applicationId "info.metadude.android.gpn.schedule"
-            versionName "1.33.4 (GPN-Edition)"
+            versionName "1.33.5 (GPN-Edition)"
             signingConfig signingConfigs.gpn2018
             buildConfigField "String", "SCHEDULE_URL", '"https://pretalx.entropia.de/gpn18/schedule/export?exporter=core-frab-xml"'
             buildConfigField "String", "SCHEDULE_DOMAIN_PART", '"https://pretalx.entropia.de"'
