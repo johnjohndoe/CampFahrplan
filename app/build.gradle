@@ -64,6 +64,12 @@ android {
             keyAlias props['signing.ccc34c3-release.keyAlias']
             keyPassword props['signing.ccc34c3-release.keyPassword']
         }
+        pgcon2018 {
+            storeFile file(props['signing.pgcon-release.keystoreFilePath'])
+            storePassword props['signing.pgcon-release.keystorePassword']
+            keyAlias props['signing.pgcon-release.keyAlias']
+            keyPassword props['signing.pgcon-release.keyPassword']
+        }
     }
 
     def defaultDimension = "default"
@@ -110,6 +116,26 @@ android {
             buildConfigField "boolean", "COMPOSE_EVENT_URL_FROM_SLUG", "false"
             buildConfigField "String", "TRACE_DROID_EMAIL_ADDRESS", '"tobias.preuss+34c3@googlemail.com"'
             buildConfigField "String", "SCHEDULE_FEEDBACK_URL", '"https://frab.cccv.de/en/34C3/public/events/%s/feedback/new"'
+        }
+        pgcon2018 {
+            applicationId "info.metadude.android.pgcon.schedule"
+            versionName "1.33.4 (PGCon-Edition)"
+            signingConfig signingConfigs.pgcon2018
+            buildConfigField "String", "SCHEDULE_URL", '"http://opentree.cygnus.uberspace.de/pgcon2018/schedule.xml"'
+            buildConfigField "String", "SCHEDULE_DOMAIN_PART", '"http://www.pgcon.org"'
+            buildConfigField "String", "SCHEDULE_EVENT_PART", '"/events/%1$s.en.html"'
+            buildConfigField "String", "SCHEDULE_PART", '"/2018/schedule"'
+            buildConfigField "String", "VENUE", '"uottawa"'
+            buildConfigField "int", "SCHEDULE_FIRST_DAY_START_YEAR", "2018"
+            buildConfigField "int", "SCHEDULE_FIRST_DAY_START_MONTH", "5"
+            buildConfigField "int", "SCHEDULE_FIRST_DAY_START_DAY", "29"
+            buildConfigField "int", "SCHEDULE_LAST_DAY_END_YEAR", "2018"
+            buildConfigField "int", "SCHEDULE_LAST_DAY_END_MONTH", "6"
+            buildConfigField "int", "SCHEDULE_LAST_DAY_END_DAY", "2"
+            buildConfigField "boolean", "SHOW_APP_DISCLAIMER", "true"
+            buildConfigField "boolean", "COMPOSE_EVENT_URL_FROM_SLUG", "false"
+            buildConfigField "String", "TRACE_DROID_EMAIL_ADDRESS", '"tobias.preuss+pgcon@googlemail.com"'
+            buildConfigField "String", "SCHEDULE_FEEDBACK_URL", '""'
         }
     }
 

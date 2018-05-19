@@ -7,3 +7,8 @@ signing.ccc34c3-release.keystoreFilePath=/home/USERNAME/.android/ccc34c3-release
 signing.ccc34c3-release.keystorePassword="PASSWORD"
 signing.ccc34c3-release.keyAlias="ccc34c3"
 signing.ccc34c3-release.keyPassword="ANOTHERPASSWORD"
+
+signing.pgcon-release.keystoreFilePath=/home/USERNAME/.android/pgcon-release-key.keystore
+signing.pgcon-release.keystorePassword="PASSWORD"
+signing.pgcon-release.keyAlias="pgcon"
+signing.pgcon-release.keyPassword="ANOTHERPASSWORD"
