@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<map linked="true">
+    <entry key="Applications">applications</entry>
+    <entry key="Case Studies">case_studies</entry>
+    <entry key="Community">community</entry>
+    <entry key="DBA">dba</entry>
+    <entry key="Developer Unconference">developer_unconference</entry>
+    <entry key="Hacking">hacking</entry>
+    <entry key="New Features">new_features</entry>
+    <entry key="Performance">performance</entry>
+    <entry key="Plenary">plenary</entry>
+    <entry key="Scaling Out">scaling_out</entry>
+    <entry key="Social">social</entry>
+    <entry key="Tutorial">tutorial</entry>
+    <entry key="Unconference">unconference</entry>
+    <entry key=""></entry>
+</map>
