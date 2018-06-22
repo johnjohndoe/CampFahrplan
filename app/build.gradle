@@ -64,6 +64,12 @@ android {
             keyAlias props['signing.ccc34c3-release.keyAlias']
             keyPassword props['signing.ccc34c3-release.keyPassword']
         }
+        droidconberlin {
+            storeFile file(props['signing.droidconberlin-release.keystoreFilePath'])
+            storePassword props['signing.droidconberlin-release.keystorePassword']
+            keyAlias props['signing.droidconberlin-release.keyAlias']
+            keyPassword props['signing.droidconberlin-release.keyPassword']
+        }
     }
 
     def defaultDimension = "default"
@@ -89,7 +95,7 @@ android {
             buildConfigField "boolean", "COMPOSE_EVENT_URL_FROM_SLUG", "false"
             buildConfigField "String", "TRACE_DROID_EMAIL_ADDRESS", '"ENTER_EMAIL_ADDRESS_HERE"'
             buildConfigField "String", "SCHEDULE_FEEDBACK_URL", '"https://frab.cccv.de/en/camp2015/public/events/%s/feedback/new"'
-
+            buildConfigField "String", "DROIDCON_BASE_URL", '""'
         }
         ccc34c3 {
             dimension defaultDimension
@@ -110,6 +116,28 @@ android {
             buildConfigField "boolean", "COMPOSE_EVENT_URL_FROM_SLUG", "false"
             buildConfigField "String", "TRACE_DROID_EMAIL_ADDRESS", '"tobias.preuss+34c3@googlemail.com"'
             buildConfigField "String", "SCHEDULE_FEEDBACK_URL", '"https://frab.cccv.de/en/34C3/public/events/%s/feedback/new"'
+            buildConfigField "String", "DROIDCON_BASE_URL", '""'
+        }
+        droidconberlin2018 {
+            dimension defaultDimension
+            applicationId "info.metadude.android.droidconberlin.schedule"
+            signingConfig signingConfigs.droidconberlin
+            buildConfigField "String", "SCHEDULE_URL", '""'
+            buildConfigField "String", "SCHEDULE_DOMAIN_PART", '""'
+            buildConfigField "String", "SCHEDULE_EVENT_PART", '""'
+            buildConfigField "String", "SCHEDULE_PART", '""'
+            buildConfigField "String", "VENUE", '"citycube"'
+            buildConfigField "int", "SCHEDULE_FIRST_DAY_START_YEAR", "2018"
+            buildConfigField "int", "SCHEDULE_FIRST_DAY_START_MONTH", "6"
+            buildConfigField "int", "SCHEDULE_FIRST_DAY_START_DAY", "25"
+            buildConfigField "int", "SCHEDULE_LAST_DAY_END_YEAR", "2018"
+            buildConfigField "int", "SCHEDULE_LAST_DAY_END_MONTH", "6"
+            buildConfigField "int", "SCHEDULE_LAST_DAY_END_DAY", "28"
+            buildConfigField "boolean", "SHOW_APP_DISCLAIMER", "true"
+            buildConfigField "boolean", "COMPOSE_EVENT_URL_FROM_SLUG", "false"
+            buildConfigField "String", "TRACE_DROID_EMAIL_ADDRESS", '"tobias.preuss+droidconberlin@googlemail.com"'
+            buildConfigField "String", "SCHEDULE_FEEDBACK_URL", '""'
+            buildConfigField "String", "DROIDCON_BASE_URL", '"https://cfp.droidcon.de"'
         }
     }
 
