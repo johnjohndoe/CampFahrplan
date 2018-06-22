@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<map linked="true">
+    <entry key="Architecture">architecture</entry>
+    <entry key="Games / VR">games_vr</entry>
+    <entry key="APIs">apis</entry>
+    <entry key="Best Practices">best_practices</entry>
+    <entry key="X-Platform">x_platform</entry>
+    <entry key="UI/UX">ui_ux</entry>
+    <entry key="Enterprise">enterprise</entry>
+    <entry key="IOT">iot</entry>
+    <entry key="Languages">languages</entry>
+    <entry key="Open Source">open_source</entry>
+    <entry key=""></entry>
+</map>

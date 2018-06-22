@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="pressed_congress">#CCa80a1a</color>
+
+    <!-- Default state -->
+    <color name="event_border_default">#3b614b</color>
+    <color name="event_border_default_architecture">#3b615e</color>
+    <color name="event_border_default_games_vr">#3e613b</color>
+    <color name="event_border_default_apis">#615e3b</color>
+    <color name="event_border_default_best_practices">#613f3b</color>
+    <color name="event_border_default_x_platform">#61523b</color>
+    <color name="event_border_default_ui_ux">#3b5161</color>
+    <color name="event_border_default_enterprise">#3f3b61</color>
+    <color name="event_border_default_iot">#593b61</color>
+    <color name="event_border_default_languages">#57613b</color>
+    <color name="event_border_default_open_source">#613b5e</color>
+
+    <!-- Highlight state -->
+    <color name="event_border_highlight">#7bc89c</color>
+    <color name="event_border_highlight_architecture">#6aada9</color>
+    <color name="event_border_highlight_games_vr">#6ead6a</color>
+    <color name="event_border_highlight_apis">#ada96a</color>
+    <color name="event_border_highlight_best_practices">#ad716a</color>
+    <color name="event_border_highlight_x_platform">#ad926a</color>
+    <color name="event_border_highlight_ui_ux">#6a90ad</color>
+    <color name="event_border_highlight_enterprise">#716aad</color>
+    <color name="event_border_highlight_iot">#9e6aad</color>
+    <color name="event_border_highlight_languages">#9bad6a</color>
+    <color name="event_border_highlight_open_source">#ad6aa7</color>
+
+    <!-- Accent color -->
+    <color name="event_border_accent">
+        @color/event_border_highlight
+    </color>
+    <color name="event_border_accent_architecture">
+        @color/event_border_highlight_architecture
+    </color>
+    <color name="event_border_accent_games_vr">
+        @color/event_border_highlight_games_vr
+    </color>
+    <color name="event_border_accent_apis">
+        @color/event_border_highlight_apis
+    </color>
+    <color name="event_border_accent_best_practices">
+        @color/event_border_highlight_best_practices
+    </color>
+    <color name="event_border_accent_x_platform">
+        @color/event_border_highlight_x_platform
+    </color>
+    <color name="event_border_accent_ui_ux">
+        @color/event_border_highlight_ui_ux
+    </color>
+    <color name="event_border_accent_enterprise">
+        @color/event_border_highlight_enterprise
+    </color>
+    <color name="event_border_accent_iot">
+        @color/event_border_highlight_iot
+    </color>
+    <color name="event_border_accent_languages">
+        @color/event_border_highlight_languages
+    </color>
+    <color name="event_border_accent_open_source">
+        @color/event_border_highlight_open_source
+    </color>
+
+    <!-- Accent color highlight -->
+    <color name="event_border_accent_highlight">
+        @color/event_border_default
+    </color>
+    <color name="event_border_accent_highlight_architecture">
+        @color/event_border_default_architecture
+    </color>
+    <color name="event_border_accent_highlight_games_vr">
+        @color/event_border_default_games_vr
+    </color>
+    <color name="event_border_accent_highlight_apis">
+        @color/event_border_default_apis
+    </color>
+    <color name="event_border_accent_highlight_best_practices">
+        @color/event_border_default_best_practices
+    </color>
+    <color name="event_border_accent_highlight_x_platform">
+        @color/event_border_default_x_platform
+    </color>
+    <color name="event_border_accent_highlight_ui_ux">
+        @color/event_border_default_ui_ux
+    </color>
+    <color name="event_border_accent_highlight_enterprise">
+        @color/event_border_default_enterprise
+    </color>
+    <color name="event_border_accent_highlight_iot">
+        @color/event_border_default_iot
+    </color>
+    <color name="event_border_accent_highlight_languages">
+        @color/event_border_default_languages
+    </color>
+    <color name="event_border_accent_highlight_open_source">
+        @color/event_border_default_open_source
+    </color>
+    <!-- Track color -->
+    <color name="track_name">#beffffff</color>
+
+    <!-- Title color -->
+    <color name="event_title">#a0ffffff</color>
+    <color name="event_title_highlight">#ffffff</color>
+
+</resources>

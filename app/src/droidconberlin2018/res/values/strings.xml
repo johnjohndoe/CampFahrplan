@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Droidcon Berlin 2018 Schedule</string>
+    <string name="app_hardcoded_subtitle">Android talks and workshops, Citycube Berlin</string>
+    <string name="conference_url">
+        <![CDATA[<a href="https://www.de.droidcon.com">https://www.de.droidcon.com</a>]]>
+    </string>
+    <string name="source_code">
+        <![CDATA[<a href="https://github.com/johnjohndoe/CampFahrplan/tree/droidconberlin-2018">Source code</a>]]>
+    </string>
+    <string name="google_play_store">
+        <![CDATA[<a href="https://play.google.com/store/apps/details?id=info.metadude.android.droidconberlin.schedule">Google PlayStore listing</a>]]>
+    </string>
+    <string name="copyright_logo">
+        Droidcon is a registered trademark of Mobile Seasons GmbH
+    </string>
+</resources>
