@@ -1,0 +1,18 @@
+import nerd.tuxmobil.fahrplan.congress.Libs
+
+apply plugin: "java-library"
+apply plugin: "kotlin"
+
+kotlin {
+    experimental {
+        coroutines "enable"
+    }
+}
+
+dependencies {
+    api Libs.droidconBerlinBase
+    api Libs.kotlinCoroutinesRetrofit
+}
+
+sourceCompatibility = JavaVersion.VERSION_1_8
+targetCompatibility = JavaVersion.VERSION_1_8

@@ -19,6 +19,12 @@ if (!gradlePropertiesFile.exists()) {
 }
 props.load(new FileInputStream(gradlePropertiesFile))
 
+kotlin {
+    experimental {
+        coroutines "enable"
+    }
+}
+
 android {
     compileSdkVersion 26
     buildToolsVersion "27.0.3"
@@ -168,6 +174,7 @@ tasks.withType(Test) {
 
 dependencies {
     implementation project(":database")
+    implementation project(":network")
 
     implementation Libs.kotlinStdlib
     implementation Libs.supportLibraryAppcompatV7
