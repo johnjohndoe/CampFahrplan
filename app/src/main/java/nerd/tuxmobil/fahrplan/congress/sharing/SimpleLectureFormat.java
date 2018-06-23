@@ -59,8 +59,7 @@ public class SimpleLectureFormat {
         if (!WikiEventUtils.linksContainWikiLink(lecture.getLinks())) {
             builder.append(LINE_BREAK);
             builder.append(LINE_BREAK);
-            String eventUrlPart = COMPOSE_EVENT_URL_FROM_SLUG ? lecture.slug : lecture.lecture_id;
-            String eventUrl = FahrplanMisc.getEventUrl(eventUrlPart);
+            String eventUrl = lecture.slug;
             builder.append(eventUrl);
         }
     }

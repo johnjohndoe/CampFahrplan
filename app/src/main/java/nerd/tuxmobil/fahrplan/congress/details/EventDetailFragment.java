@@ -47,8 +47,6 @@ import nerd.tuxmobil.fahrplan.congress.utils.FahrplanMisc;
 import nerd.tuxmobil.fahrplan.congress.utils.StringUtils;
 import nerd.tuxmobil.fahrplan.congress.wiki.WikiEventUtils;
 
-import static nerd.tuxmobil.fahrplan.congress.BuildConfig.COMPOSE_EVENT_URL_FROM_SLUG;
-
 public class EventDetailFragment extends Fragment {
 
     private final String LOG_TAG = "Detail";
@@ -237,8 +235,7 @@ public class EventDetailFragment extends Fragment {
             } else {
                 eventOnlineSection.setVisibility(View.VISIBLE);
                 eventOnlineLink.setVisibility(View.VISIBLE);
-                String eventUrlPart = COMPOSE_EVENT_URL_FROM_SLUG ? slug : event_id;
-                final String eventUrl = FahrplanMisc.getEventUrl(eventUrlPart);
+                final String eventUrl = slug;
                 final String eventLink = "<a href=\"" + eventUrl + "\">" + eventUrl + "</a>";
                 setUpHtmlTextView(eventOnlineLink, regular, eventLink);
             }
