@@ -49,7 +49,7 @@ public class CustomHttpClient {
 
         X509TrustManager trustManager = TrustManagerFactory.get(host, true);
         SSLSocketFactory factory = SslSocketFactory.createSSLSocketFactory(trustManager);
-        return clientBuilder.sslSocketFactory(factory, trustManager).build();
+        return clientBuilder.build();
     }
 
     public static void setSSLException(SSLException e) {
