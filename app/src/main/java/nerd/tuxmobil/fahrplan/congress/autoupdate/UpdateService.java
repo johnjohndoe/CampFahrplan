@@ -22,11 +22,9 @@ import org.ligi.tracedroid.logging.Log;
 
 import java.util.List;
 
-import nerd.tuxmobil.fahrplan.congress.BuildConfig;
 import nerd.tuxmobil.fahrplan.congress.MyApp;
 import nerd.tuxmobil.fahrplan.congress.MyApp.TASKS;
 import nerd.tuxmobil.fahrplan.congress.R;
-import nerd.tuxmobil.fahrplan.congress.contract.BundleKeys;
 import nerd.tuxmobil.fahrplan.congress.extensions.Contexts;
 import nerd.tuxmobil.fahrplan.congress.models.Lecture;
 import nerd.tuxmobil.fahrplan.congress.net.ConnectivityStateReceiver;
@@ -46,8 +44,6 @@ public class UpdateService extends IntentService implements
     }
 
     final String LOG_TAG = "UpdateService";
-
-    private FetchFahrplan fetcher;
 
     private FahrplanParser parser;
 
@@ -135,20 +131,14 @@ public class UpdateService extends IntentService implements
         parseFahrplan();
     }
 
-    private void fetchFahrplan(FetchFahrplan.OnDownloadCompleteListener completeListener) {
+    private void fetchFahrplan() {
         if (MyApp.task_running == TASKS.NONE) {
-            SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
-            String alternateURL = prefs.getString(BundleKeys.PREFS_SCHEDULE_URL, null);
-            String url;
-            if (TextUtils.isEmpty(alternateURL)) {
-                url = BuildConfig.SCHEDULE_URL;
-            } else {
-                url = alternateURL;
-            }
-
             MyApp.task_running = TASKS.FETCH;
-            fetcher.setListener(completeListener);
-            fetcher.fetch(url, MyApp.meta.getETag());
+            // Bypass legacy data loading!
+            AppRepository.Companion.getInstance(this).loadSessions(() -> {
+                onParseDone(true, "foobar");
+                return null;
+            });
         } else {
             MyApp.LogDebug(LOG_TAG, "fetch already in progress");
         }
@@ -170,14 +160,9 @@ public class UpdateService extends IntentService implements
         AppRepository appRepository = AppRepository.Companion.getInstance(getApplicationContext());
         MyApp.meta = appRepository.readMeta(); // to load eTag
 
-        if (MyApp.fetcher == null) {
-            fetcher = new FetchFahrplan();
-        } else {
-            fetcher = MyApp.fetcher;
-        }
         MyApp.LogDebug(LOG_TAG, "going to fetch schedule");
         FahrplanMisc.setUpdateAlarm(this, false);
-        fetchFahrplan(this);
+        fetchFahrplan();
     }
 
     public static void start(@NonNull Context context) {
