@@ -5,6 +5,7 @@ import info.metadude.kotlin.library.droidconberlin.models.Session
 import ru.gildor.coroutines.retrofit.Result
 import ru.gildor.coroutines.retrofit.awaitResult
 import ru.gildor.coroutines.retrofit.getOrDefault
+import java.net.UnknownHostException
 
 class DroidconBerlinNetworkRepository(
 
@@ -14,13 +15,20 @@ class DroidconBerlinNetworkRepository(
 
     suspend fun loadSessions(onSessionsLoad: (sessionizeResult: DroidconBerlinResult) -> Unit) {
         val call = service.getSessions()
-        val result: Result<List<Session>> = call.awaitResult()
-        val droidconBerlinResult = when (result) {
-            is Result.Ok -> {
-                DroidconBerlinResult.Values(result.getOrDefault(emptyList()))
+        val result: Result<List<Session>>
+        var droidconBerlinResult: DroidconBerlinResult
+        try {
+            result = call.awaitResult()
+            droidconBerlinResult = when (result) {
+                is Result.Ok -> {
+                    DroidconBerlinResult.Values(result.getOrDefault(emptyList()))
+                }
+                is Result.Error -> DroidconBerlinResult.Error("")
+                is Result.Exception -> DroidconBerlinResult.Exception(result.exception)
             }
-            is Result.Error -> DroidconBerlinResult.Error("")
-            is Result.Exception -> DroidconBerlinResult.Exception(result.exception)
+        } catch (e: UnknownHostException) {
+            // Being offline
+            droidconBerlinResult = DroidconBerlinResult.Exception(e)
         }
         onSessionsLoad(droidconBerlinResult)
     }

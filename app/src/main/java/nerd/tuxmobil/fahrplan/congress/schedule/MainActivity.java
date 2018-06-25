@@ -24,6 +24,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.ProgressBar;
+import android.widget.Toast;
 
 import org.ligi.snackengage.SnackEngage;
 import org.ligi.snackengage.SnackEngageBuilder;
@@ -222,13 +223,13 @@ public class MainActivity extends BaseActivity implements
                     break;
             }
             CustomHttpClient.showHttpError(this, global, status, host);
-            progressBar.setVisibility(View.INVISIBLE);
+            hideProgress();
             showUpdateAction = true;
             supportInvalidateOptionsMenu();
             return;
         }
         MyApp.LogDebug(LOG_TAG, "yehhahh");
-        progressBar.setVisibility(View.INVISIBLE);
+        hideProgress();
         showUpdateAction = true;
         supportInvalidateOptionsMenu();
 
@@ -246,7 +247,7 @@ public class MainActivity extends BaseActivity implements
         if (MyApp.meta.getNumDays() == 0) {
             dismissProgress();
         }
-        progressBar.setVisibility(View.INVISIBLE);
+        hideProgress();
         showUpdateAction = true;
         supportInvalidateOptionsMenu();
         Fragment fragment = findFragment(FahrplanFragment.FRAGMENT_TAG);
@@ -296,8 +297,18 @@ public class MainActivity extends BaseActivity implements
             MyApp.task_running = TASKS.FETCH;
             showFetchingStatus();
             // Bypass legacy data loading!
-            AppRepository.Companion.getInstance(this).loadSessions(() -> {
-                runOnUiThread(() -> onParseDone(true, "foobar"));
+            AppRepository.Companion.getInstance(this).loadSessions((message) -> {
+                runOnUiThread(() -> {
+                    if (message.isEmpty()) {
+                        onParseDone(true, "foobar");
+                    } else {
+                        Toast.makeText(this, message, Toast.LENGTH_LONG).show();
+                        hideProgress();
+                        showUpdateAction = true;
+                        supportInvalidateOptionsMenu();
+                        dismissProgress();
+                    }
+                });
                 return null;
             });
         } else {
@@ -495,6 +506,10 @@ public class MainActivity extends BaseActivity implements
         int detailView = R.id.detail;
         toggleSidePaneVisibility(manager, detailView);
         supportInvalidateOptionsMenu();
+    }
+
+    private void hideProgress() {
+        progressBar.setVisibility(View.INVISIBLE);
     }
 
     private void dismissProgress() {

@@ -24,6 +24,7 @@ import nerd.tuxmobil.fahrplan.congress.models.Lecture
 import nerd.tuxmobil.fahrplan.congress.models.Meta
 import nerd.tuxmobil.fahrplan.congress.net.CustomHttpClient
 import okhttp3.OkHttpClient
+import java.net.UnknownHostException
 
 class AppRepository private constructor(context: Context) {
 
@@ -49,8 +50,9 @@ class AppRepository private constructor(context: Context) {
         return CustomHttpClient.createHttpClient(baseUrl)
     }
 
-    fun loadSessions(onDone: () -> Unit) {
+    fun loadSessions(onDone: (message: String) -> Unit) {
         launch(CommonPool) {
+            var onDoneMessage = ""
             droidconBerlinNetworkRepository.loadSessions { result ->
                 when (result) {
                     is DroidconBerlinResult.Values -> {
@@ -59,10 +61,17 @@ class AppRepository private constructor(context: Context) {
                         updateLecturesWithSessions(sessions)
                     }
                     is DroidconBerlinResult.Error -> Log.e(javaClass.name, result.text)
-                    is DroidconBerlinResult.Exception -> throw result.throwable
+                    is DroidconBerlinResult.Exception -> {
+                        if (result.throwable is UnknownHostException) {
+                            onDoneMessage = result.throwable.message!!
+                        } else {
+                            throw result.throwable
+                        }
+                    }
+
                 }
             }
-            onDone.invoke()
+            onDone.invoke(onDoneMessage)
         }
     }
 

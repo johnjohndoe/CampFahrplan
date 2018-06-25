@@ -17,6 +17,7 @@ import android.support.v4.app.NotificationCompat;
 import android.support.v4.content.ContextCompat;
 import android.text.TextUtils;
 import android.text.format.Time;
+import android.widget.Toast;
 
 import org.ligi.tracedroid.logging.Log;
 
@@ -135,8 +136,12 @@ public class UpdateService extends IntentService implements
         if (MyApp.task_running == TASKS.NONE) {
             MyApp.task_running = TASKS.FETCH;
             // Bypass legacy data loading!
-            AppRepository.Companion.getInstance(this).loadSessions(() -> {
-                onParseDone(true, "foobar");
+            AppRepository.Companion.getInstance(this).loadSessions((message) -> {
+                if (message.isEmpty()) {
+                    onParseDone(true, "foobar");
+                } else {
+                    Toast.makeText(this, message, Toast.LENGTH_LONG).show();
+                }
                 return null;
             });
         } else {
