@@ -17,7 +17,6 @@ import android.support.v4.app.NotificationCompat;
 import android.support.v4.content.ContextCompat;
 import android.text.TextUtils;
 import android.text.format.Time;
-import android.widget.Toast;
 
 import org.ligi.tracedroid.logging.Log;
 
@@ -140,7 +139,8 @@ public class UpdateService extends IntentService implements
                 if (message.isEmpty()) {
                     onParseDone(true, "foobar");
                 } else {
-                    Toast.makeText(this, message, Toast.LENGTH_LONG).show();
+                    // Fail silenty: don't fetch.
+                    Log.e(getClass().getName(), message);
                 }
                 return null;
             });
