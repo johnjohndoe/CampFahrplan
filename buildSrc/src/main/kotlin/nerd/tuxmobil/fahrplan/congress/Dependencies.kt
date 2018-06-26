@@ -5,7 +5,7 @@ package nerd.tuxmobil.fahrplan.congress
 object Versions {
     val androidGradle = "3.1.0"
     val assertjAndroid = "1.2.0"
-    val droidconBerlinBase = "v.1.0.0"
+    val droidconBerlinBase = "1.0.0"
     val emailIntentBuilder = "1.0.0"
     val espresso = "3.0.2"
     val gradleVersions = "0.18.0"
@@ -30,7 +30,7 @@ object GradlePlugins {
 
 object Libs {
     val assertjAndroid = "com.squareup.assertj:assertj-android:${Versions.assertjAndroid}"
-    val droidconBerlinBase = "com.github.johnjohndoe:droidconberlin-base:${Versions.droidconBerlinBase}"
+    val droidconBerlinBase = "info.metadude.kotlin.library.droidconberlin:droidconberlin-base:${Versions.droidconBerlinBase}"
     val emailIntentBuilder = "de.cketti.mailto:email-intent-builder:${Versions.emailIntentBuilder}"
     val espresso = "com.android.support.test.espresso:espresso-core:${Versions.espresso}"
     val junit = "junit:junit:${Versions.junit}"
