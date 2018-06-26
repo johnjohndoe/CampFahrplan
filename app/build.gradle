@@ -30,8 +30,8 @@ android {
     buildToolsVersion "27.0.3"
 
     defaultConfig {
-        versionCode 47
-        versionName "1.33.7"
+        versionCode 48
+        versionName "1.33.8"
         minSdkVersion 14
         targetSdkVersion 22
 
@@ -127,7 +127,7 @@ android {
         droidconberlin2018 {
             dimension defaultDimension
             applicationId "info.metadude.android.droidconberlin.schedule"
-            versionName "1.33.7 (Droidcon-Berlin-Edition)"
+            versionName "1.33.8 (Droidcon-Berlin-Edition)"
             signingConfig signingConfigs.droidconberlin
             buildConfigField "String", "SCHEDULE_URL", '""'
             buildConfigField "String", "SCHEDULE_DOMAIN_PART", '""'
