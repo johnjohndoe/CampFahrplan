@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<map linked="true">
+
+    <entry key="Blessed by the algorithm">blessed_by_the_algorithm</entry>
+    <entry key="Cloud">cloud</entry>
+    <entry key="Culture">culture</entry>
+    <entry key="Databases">databases</entry>
+    <entry key="de-RSE">de_rse</entry>
+    <entry key="Development">development</entry>
+    <entry key="FrOSCon meets Science">froscon_meets_science</entry>
+    <entry key="Hardware">hardware</entry>
+    <entry key="Lightning Talks">lightning_talks</entry>
+    <entry key="Monitoring">monitoring</entry>
+    <entry key="Network Track">network_track</entry>
+    <entry key="other">other</entry>
+    <entry key="Security">security</entry>
+    <entry key="System Administration">system_administration</entry>
+    <entry key="The crossroads of privacy">the_crossroads_of_privacy</entry>
+    <entry key="The Spectre of hardware bugs">the_spectre_of_hardware_bugs</entry>
+    <entry key="There’s a Tux in your window">there_is_a_tux_in_your_window</entry>
+    <entry key="Web Development">web_development</entry>
+    <entry key=""></entry>
+
+</map>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="pressed_congress">#CC0099AB</color>
+
+    <!-- Default state -->
+    <color name="event_border_default">#7d7d7d</color>
+    <color name="event_border_default_blessed_by_the_algorithm">#b33600</color>
+    <color name="event_border_default_cloud">#005454</color>
+    <color name="event_border_default_culture">#0036cc</color>
+    <color name="event_border_default_databases">#00b300</color>
+    <color name="event_border_default_de_rse">#51822c</color>
+    <color name="event_border_default_development">#a6a600</color>
+    <color name="event_border_default_froscon_meets_science">#a60000</color>
+    <color name="event_border_default_hardware">#49228f</color>
+    <color name="event_border_default_lightning_talks">#998c4d</color>
+    <color name="event_border_default_monitoring">#545400</color>
+    <color name="event_border_default_network_track">#5f0087</color>
+    <color name="event_border_default_other">#bf4c4c</color>
+    <color name="event_border_default_security">#a600a6</color>
+    <color name="event_border_default_system_administration">#6ba4c7</color>
+    <color name="event_border_default_the_crossroads_of_privacy">#99994d</color>
+    <color name="event_border_default_the_spectre_of_hardware_bugs">#8a6969</color>
+    <color name="event_border_default_there_is_a_tux_in_your_window">#817e8f</color>
+    <color name="event_border_default_web_development">#1f4c80</color>
+
+    <!-- Accent color -->
+    <color name="event_border_accent">#b0b0b0</color>
+    <color name="event_border_accent_blessed_by_the_algorithm">#FF4D00</color>
+    <color name="event_border_accent_cloud">#008888</color>
+    <color name="event_border_accent_culture">#285df1</color>
+    <color name="event_border_accent_databases">#00e600</color>
+    <color name="event_border_accent_de_rse">#82cf47</color>
+    <color name="event_border_accent_development">#bebe05</color>
+    <color name="event_border_accent_froscon_meets_science">#d90000</color>
+    <color name="event_border_accent_hardware">#6731cc</color>
+    <color name="event_border_accent_lightning_talks">#ccbb66</color>
+    <color name="event_border_accent_monitoring">#888800</color>
+    <color name="event_border_accent_network_track">#9400d3</color>
+    <color name="event_border_accent_other">#FF6666</color>
+    <color name="event_border_accent_security">#d900d9</color>
+    <color name="event_border_accent_system_administration">#87CEFA</color>
+    <color name="event_border_accent_the_crossroads_of_privacy">#cccc66</color>
+    <color name="event_border_accent_the_spectre_of_hardware_bugs">#BC8F8F</color>
+    <color name="event_border_accent_there_is_a_tux_in_your_window">#B0ABC3</color>
+    <color name="event_border_accent_web_development">#2b6ab3</color>
+
+    <!-- Highlight state -->
+    <color name="event_border_highlight">@color/event_border_accent</color>
+    <color name="event_border_highlight_blessed_by_the_algorithm">@color/event_border_accent_blessed_by_the_algorithm</color>
+    <color name="event_border_highlight_cloud">@color/event_border_accent_cloud</color>
+    <color name="event_border_highlight_culture">@color/event_border_accent_culture</color>
+    <color name="event_border_highlight_databases">@color/event_border_accent_databases</color>
+    <color name="event_border_highlight_de_rse">@color/event_border_accent_de_rse</color>
+    <color name="event_border_highlight_development">@color/event_border_accent_development</color>
+    <color name="event_border_highlight_froscon_meets_science">@color/event_border_accent_froscon_meets_science</color>
+    <color name="event_border_highlight_hardware">@color/event_border_accent_hardware</color>
+    <color name="event_border_highlight_lightning_talks">@color/event_border_accent_lightning_talks</color>
+    <color name="event_border_highlight_monitoring">@color/event_border_accent_monitoring</color>
+    <color name="event_border_highlight_network_track">@color/event_border_accent_network_track</color>
+    <color name="event_border_highlight_other">@color/event_border_accent_other</color>
+    <color name="event_border_highlight_security">@color/event_border_accent_security</color>
+    <color name="event_border_highlight_system_administration">@color/event_border_accent_system_administration</color>
+    <color name="event_border_highlight_the_crossroads_of_privacy">@color/event_border_accent_the_crossroads_of_privacy</color>
+    <color name="event_border_highlight_the_spectre_of_hardware_bugs">@color/event_border_accent_the_spectre_of_hardware_bugs</color>
+    <color name="event_border_highlight_there_is_a_tux_in_your_window">@color/event_border_accent_there_is_a_tux_in_your_window</color>
+    <color name="event_border_highlight_web_development">@color/event_border_accent_web_development</color>
+
+    <!-- Accent color highlight -->
+    <color name="event_border_accent_highlight">@color/event_border_default</color>
+    <color name="event_border_accent_highlight_blessed_by_the_algorithm">@color/event_border_default_blessed_by_the_algorithm</color>
+    <color name="event_border_accent_highlight_cloud">@color/event_border_default_cloud</color>
+    <color name="event_border_accent_highlight_culture">@color/event_border_default_culture</color>
+    <color name="event_border_accent_highlight_databases">@color/event_border_default_databases</color>
+    <color name="event_border_accent_highlight_de_rse">@color/event_border_default_de_rse</color>
+    <color name="event_border_accent_highlight_development">@color/event_border_default_development</color>
+    <color name="event_border_accent_highlight_froscon_meets_science">@color/event_border_default_froscon_meets_science</color>
+    <color name="event_border_accent_highlight_hardware">@color/event_border_default_hardware</color>
+    <color name="event_border_accent_highlight_lightning_talks">@color/event_border_default_lightning_talks</color>
+    <color name="event_border_accent_highlight_monitoring">@color/event_border_default_monitoring</color>
+    <color name="event_border_accent_highlight_network_track">@color/event_border_default_network_track</color>
+    <color name="event_border_accent_highlight_other">@color/event_border_default_other</color>
+    <color name="event_border_accent_highlight_security">@color/event_border_default_security</color>
+    <color name="event_border_accent_highlight_system_administration">@color/event_border_default_system_administration</color>
+    <color name="event_border_accent_highlight_the_crossroads_of_privacy">@color/event_border_default_the_crossroads_of_privacy</color>
+    <color name="event_border_accent_highlight_the_spectre_of_hardware_bugs">@color/event_border_default_the_spectre_of_hardware_bugs</color>
+    <color name="event_border_accent_highlight_there_is_a_tux_in_your_window">@color/event_border_default_there_is_a_tux_in_your_window</color>
+    <color name="event_border_accent_highlight_web_development">@color/event_border_default_web_development</color>
+
+    <!-- Track color -->
+    <color name="track_name">#beffffff</color>
+
+    <!-- Title color -->
+    <color name="event_title">#a0ffffff</color>
+    <color name="event_title_highlight">#fff</color>
+
+    <color name="event_drawable_selection_stroke">@android:color/white</color>
+
+</resources>
