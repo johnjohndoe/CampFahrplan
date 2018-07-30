@@ -68,6 +68,12 @@ android {
             keyAlias props['signing.ccc34c3-release.keyAlias']
             keyPassword props['signing.ccc34c3-release.keyPassword']
         }
+        froscon2018 {
+            storeFile file(props['signing.froscon-release.keystoreFilePath'])
+            storePassword props['signing.froscon-release.keystorePassword']
+            keyAlias props['signing.froscon-release.keyAlias']
+            keyPassword props['signing.froscon-release.keyPassword']
+        }
     }
 
     def defaultDimension = "default"
@@ -114,6 +120,26 @@ android {
             buildConfigField "boolean", "COMPOSE_EVENT_URL_FROM_SLUG", "false"
             buildConfigField "String", "TRACE_DROID_EMAIL_ADDRESS", '"tobias.preuss+34c3@googlemail.com"'
             buildConfigField "String", "SCHEDULE_FEEDBACK_URL", '"https://frab.cccv.de/en/34C3/public/events/%s/feedback/new"'
+        }
+        froscon2018 {
+            applicationId "info.metadude.android.froscon.schedule"
+            versionName "1.34.0 (FrOSCon Edition)"
+            signingConfig signingConfigs.froscon2018
+            buildConfigField "String", "SCHEDULE_URL", '"https://programm.froscon.de/2018/schedule.xml"'
+            buildConfigField "String", "SCHEDULE_DOMAIN_PART", '"https://programm.froscon.de"'
+            buildConfigField "String", "SCHEDULE_EVENT_PART", '"/events/%1$s.html"'
+            buildConfigField "String", "SCHEDULE_PART", '"/2018"'
+            buildConfigField "String", "VENUE", '"hochschule-bonn-rhein-sieg"'
+            buildConfigField "int", "SCHEDULE_FIRST_DAY_START_YEAR", "2018"
+            buildConfigField "int", "SCHEDULE_FIRST_DAY_START_MONTH", "8"
+            buildConfigField "int", "SCHEDULE_FIRST_DAY_START_DAY", "25"
+            buildConfigField "int", "SCHEDULE_LAST_DAY_END_YEAR", "2018"
+            buildConfigField "int", "SCHEDULE_LAST_DAY_END_MONTH", "8"
+            buildConfigField "int", "SCHEDULE_LAST_DAY_END_DAY", "27"
+            buildConfigField "boolean", "SHOW_APP_DISCLAIMER", "true"
+            buildConfigField "boolean", "COMPOSE_EVENT_URL_FROM_SLUG", "false"
+            buildConfigField "String", "TRACE_DROID_EMAIL_ADDRESS", '"tobias.preuss+froscon@googlemail.com"'
+            buildConfigField "String", "SCHEDULE_FEEDBACK_URL", '""'
         }
     }
 
