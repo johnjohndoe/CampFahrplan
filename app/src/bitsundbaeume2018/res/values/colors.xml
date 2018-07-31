@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorPrimary">#9cc646</color>
+    <color name="colorPrimaryDark">#78a931</color>
+    <color name="colorAccent">#8e8663</color>
+    <color name="colorActionBar">@color/colorPrimary</color>
+    <color name="windowBackground">#414141</color>
+    <color name="fahrplan_background">#000</color>
+    <color name="text_link_color">#48571E</color>
+    <color name="multi_choice_background">@color/colorAccent</color>
+    <color name="text_link_color_dark">@color/colorPrimary</color>
+    <color name="lightgray">#505050</color>
+    <color name="alarm_list_icon_default_fill_color">#ddd</color>
+    <color name="alarm_list_icon_default_stroke_color">@color/colorPrimary</color>
+    <color name="alarm_list_icon_text_color">#000000</color>
+    <color name="lecture_background">#ffffff</color>
+    <color name="lecture_detailbar_background">#eee</color>
+    <color name="lecture_detailbar_text">#999</color>
+    <color name="schedule_change">@color/colorPrimary</color>
+    <color name="schedule_change_new">@color/colorPrimary</color>
+    <color name="schedule_change_canceled">#808080</color>
+    <color name="schedule_list_header_background">#eee</color>
+    <color name="schedule_list_header_text">#eee</color>
+    <color name="event_item_selection_stroke">@android:color/white</color>
+
+    <color name="alert_dialog_button_text">@color/colorAccent</color>
+
+</resources>
