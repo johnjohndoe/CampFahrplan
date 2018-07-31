@@ -68,6 +68,12 @@ android {
             keyAlias props['signing.ccc34c3-release.keyAlias']
             keyPassword props['signing.ccc34c3-release.keyPassword']
         }
+        kotlinconf2018 {
+            storeFile file(props['signing.kotlinconf-release.keystoreFilePath'])
+            storePassword props['signing.kotlinconf-release.keystorePassword']
+            keyAlias props['signing.kotlinconf-release.keyAlias']
+            keyPassword props['signing.kotlinconf-release.keyPassword']
+        }
     }
 
     def defaultDimension = "default"
@@ -114,6 +120,26 @@ android {
             buildConfigField "boolean", "COMPOSE_EVENT_URL_FROM_SLUG", "false"
             buildConfigField "String", "TRACE_DROID_EMAIL_ADDRESS", '"tobias.preuss+34c3@googlemail.com"'
             buildConfigField "String", "SCHEDULE_FEEDBACK_URL", '"https://frab.cccv.de/en/34C3/public/events/%s/feedback/new"'
+        }
+        kotlinconf2018 {
+            applicationId "info.metadude.android.kotlinconf.schedule"
+            versionName "1.34.0 (KotlinConf Edition)"
+            signingConfig signingConfigs.kotlinconf2018
+            buildConfigField "String", "SCHEDULE_URL", '"https://kotlinconf.com/2018/talks/"'
+            buildConfigField "String", "SCHEDULE_DOMAIN_PART", '"https://kotlinconf.com"'
+            buildConfigField "String", "SCHEDULE_EVENT_PART", '"/events/%1$s.html"'
+            buildConfigField "String", "SCHEDULE_PART", '"/2018"'
+            buildConfigField "String", "VENUE", '"beurs-van-berlage"'
+            buildConfigField "int", "SCHEDULE_FIRST_DAY_START_YEAR", "2018"
+            buildConfigField "int", "SCHEDULE_FIRST_DAY_START_MONTH", "10"
+            buildConfigField "int", "SCHEDULE_FIRST_DAY_START_DAY", "4"
+            buildConfigField "int", "SCHEDULE_LAST_DAY_END_YEAR", "2018"
+            buildConfigField "int", "SCHEDULE_LAST_DAY_END_MONTH", "10"
+            buildConfigField "int", "SCHEDULE_LAST_DAY_END_DAY", "6"
+            buildConfigField "boolean", "SHOW_APP_DISCLAIMER", "true"
+            buildConfigField "boolean", "COMPOSE_EVENT_URL_FROM_SLUG", "false"
+            buildConfigField "String", "TRACE_DROID_EMAIL_ADDRESS", '"tobias.preuss+kotlinconf@googlemail.com"'
+            buildConfigField "String", "SCHEDULE_FEEDBACK_URL", '""'
         }
     }
 
