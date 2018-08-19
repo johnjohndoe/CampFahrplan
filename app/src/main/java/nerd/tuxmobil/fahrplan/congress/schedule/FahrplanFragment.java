@@ -53,7 +53,6 @@ import nerd.tuxmobil.fahrplan.congress.models.Alarm;
 import nerd.tuxmobil.fahrplan.congress.models.DateInfo;
 import nerd.tuxmobil.fahrplan.congress.models.Lecture;
 import nerd.tuxmobil.fahrplan.congress.repositories.AppRepository;
-import nerd.tuxmobil.fahrplan.congress.serialization.FahrplanParser;
 import nerd.tuxmobil.fahrplan.congress.sharing.LectureSharer;
 import nerd.tuxmobil.fahrplan.congress.sharing.SimpleLectureFormat;
 import nerd.tuxmobil.fahrplan.congress.utils.FahrplanMisc;
@@ -61,9 +60,7 @@ import nerd.tuxmobil.fahrplan.congress.utils.LectureUtils;
 
 import static nerd.tuxmobil.fahrplan.congress.extensions.Resource.getNormalizedBoxHeight;
 
-public class FahrplanFragment extends Fragment implements
-        OnClickListener,
-        FahrplanParser.OnParseCompleteListener {
+public class FahrplanFragment extends Fragment implements OnClickListener {
 
     public interface OnRefreshEventMarkers {
 
@@ -228,18 +225,6 @@ public class FahrplanFragment extends Fragment implements
 
         if (MyApp.meta.getNumDays() > 1) {
             buildNavigationMenu();
-        }
-    }
-
-    @Override
-    public void onDestroy() {
-        MyApp.LogDebug(LOG_TAG, "onDestroy");
-        super.onDestroy();
-        if (MyApp.fetcher != null) {
-            MyApp.fetcher.setListener(null);
-        }
-        if (MyApp.parser != null) {
-            MyApp.parser.setListener(null);
         }
     }
 
@@ -591,8 +576,9 @@ public class FahrplanFragment extends Fragment implements
 
     private void setLectureBackground(Lecture event, View eventView) {
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(getActivity());
+        boolean defaultValue = getResources().getBoolean(R.bool.preferences_alternative_highlight_enabled_default_value);
         boolean alternativeHighlightingIsEnabled = prefs.getBoolean(
-                BundleKeys.PREFS_ALTERNATIVE_HIGHLIGHT, true);
+                BundleKeys.PREFS_ALTERNATIVE_HIGHLIGHT, defaultValue);
         boolean eventIsFavored = event.highlight;
         @ColorRes int backgroundColorResId;
         if (eventIsFavored) {

@@ -9,28 +9,28 @@ import android.content.pm.PackageManager;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.preference.PreferenceManager;
+import android.util.Log;
 
-import nerd.tuxmobil.fahrplan.congress.MyApp;
+import nerd.tuxmobil.fahrplan.congress.R;
 import nerd.tuxmobil.fahrplan.congress.autoupdate.UpdateService;
 import nerd.tuxmobil.fahrplan.congress.extensions.Contexts;
 
 public class ConnectivityStateReceiver extends BroadcastReceiver {
 
-    private static final String LOG_TAG = "ConnectivityStateReceiver";
-
     @Override
     public void onReceive(Context context, Intent intent) {
-        MyApp.LogDebug(LOG_TAG, "got Conn State event");
+        Log.d(getClass().getName(), "got Conn State event");
 
         ConnectivityManager cm = Contexts.getConnectivityManager(context);
         NetworkInfo networkInfo = cm.getActiveNetworkInfo();
         if ((networkInfo != null) && (networkInfo.isConnected())) {
-            MyApp.LogDebug(LOG_TAG, "is connected");
+            Log.d(getClass().getName(), "is connected");
 
             disableReceiver(context);
             SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
-            boolean do_auto_updates = prefs.getBoolean("auto_update", false);
-            if (do_auto_updates) {
+            boolean defaultValue = context.getResources().getBoolean(R.bool.preferences_auto_update_enabled_default_value);
+            boolean doAutoUpdates = prefs.getBoolean("auto_update", defaultValue);
+            if (doAutoUpdates) {
                 UpdateService.start(context);
             }
         }
