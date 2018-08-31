@@ -7,3 +7,8 @@ signing.ccc34c3-release.keystoreFilePath=/home/USERNAME/.android/ccc34c3-release
 signing.ccc34c3-release.keystorePassword="PASSWORD"
 signing.ccc34c3-release.keyAlias="ccc34c3"
 signing.ccc34c3-release.keyPassword="ANOTHERPASSWORD"
+
+signing.mrmcd-release.keystoreFilePath=/home/USERNAME/.android/mrmcd-release-key.keystore
+signing.mrmcd-release.keystorePassword="PASSWORD"
+signing.mrmcd-release.keyAlias="mrmcd"
+signing.mrmcd-release.keyPassword="ANOTHERPASSWORD"
