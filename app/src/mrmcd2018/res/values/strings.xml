@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MRMCD 2018 Schedule</string>
+    <string name="app_hardcoded_subtitle">September 7&#8211;9, 2018, Darmstadt</string>
+    <string name="conference_url">
+        <![CDATA[<a href="https://2018.mrmcd.net">https://2018.mrmcd.net</a>]]>
+    </string>
+    <string name="source_code">
+        <![CDATA[<a href="https://github.com/johnjohndoe/CampFahrplan/tree/mrmcd-2018">Source code</a>]]>
+    </string>
+    <string name="google_play_store">
+        <![CDATA[<a href="https://play.google.com/store/apps/details?id=info.metadude.android.mrmcd.schedule">Google PlayStore listing</a>]]>
+    </string>
+    <string name="copyright_logo">
+        <![CDATA[The name MRMCD is a registered trademark of
+        <a href="https://2018.mrmcd.net">MRMCD e.V.</a> The MRMCD 2018 design was crafted by
+        Nathalie Groll, MRMCD e.V. Used with permission.]]>
+    </string>
+</resources>
