@@ -67,6 +67,12 @@ android {
             keyAlias props['signing.ccc34c3-release.keyAlias']
             keyPassword props['signing.ccc34c3-release.keyPassword']
         }
+        datenspuren2018 {
+            storeFile file(props['signing.datenspuren-release.keystoreFilePath'])
+            storePassword props['signing.datenspuren-release.keystorePassword']
+            keyAlias props['signing.datenspuren-release.keyAlias']
+            keyPassword props['signing.datenspuren-release.keyPassword']
+        }
     }
 
     def defaultDimension = "default"
@@ -109,6 +115,24 @@ android {
             buildConfigField "boolean", "SHOW_APP_DISCLAIMER", "false"
             buildConfigField "String", "TRACE_DROID_EMAIL_ADDRESS", '"tobias.preuss+34c3@googlemail.com"'
             buildConfigField "String", "SCHEDULE_FEEDBACK_URL", '"https://frab.cccv.de/en/34C3/public/events/%s/feedback/new"'
+        }
+        datenspuren2018 {
+            applicationId "info.metadude.android.datenspuren.schedule"
+            versionName "1.36.0 (Datenspuren Edition)"
+            signingConfig signingConfigs.datenspuren2018
+            buildConfigField "String", "SCHEDULE_URL", '"https://datenspuren.de/2018/fahrplan/schedule.xml"'
+            buildConfigField "String", "EVENT_URL", '"https://datenspuren.de/2018/fahrplan/events/%1$s.html"'
+            buildConfigField "String", "SERVER_BACKEND_TYPE", '"frab"'
+            buildConfigField "String", "VENUE", '"Zentralwerk"'
+            buildConfigField "int", "SCHEDULE_FIRST_DAY_START_YEAR", "2018"
+            buildConfigField "int", "SCHEDULE_FIRST_DAY_START_MONTH", "9"
+            buildConfigField "int", "SCHEDULE_FIRST_DAY_START_DAY", "22"
+            buildConfigField "int", "SCHEDULE_LAST_DAY_END_YEAR", "2017"
+            buildConfigField "int", "SCHEDULE_LAST_DAY_END_MONTH", "9"
+            buildConfigField "int", "SCHEDULE_LAST_DAY_END_DAY", "24"
+            buildConfigField "boolean", "SHOW_APP_DISCLAIMER", "true"
+            buildConfigField "String", "TRACE_DROID_EMAIL_ADDRESS", '"tobias.preuss+datenspuren@googlemail.com"'
+            buildConfigField "String", "SCHEDULE_FEEDBACK_URL", '""'
         }
     }
 
