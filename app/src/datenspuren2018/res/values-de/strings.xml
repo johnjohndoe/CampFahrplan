@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Datenspuren 2018 Fahrplan</string>
+    <string name="app_hardcoded_subtitle">15. Symposium, 22.-23. September 2018, Zentralwerk, Dresden</string>
+    <string name="conference_url">
+        <![CDATA[<a href="https://datenspuren.de">https://datenspuren.de</a>]]>
+    </string>
+    <string name="source_code">
+        <![CDATA[<a href="https://github.com/johnjohndoe/CampFahrplan/tree/datenspuren-2018">Quellcode</a>]]>
+    </string>
+    <string name="google_play_store">
+        <![CDATA[<a href="https://play.google.com/store/apps/details?id=info.metadude.android.datenspuren.schedule">Eintrag im Google PlayStore</a>]]>
+    </string>
+    <string name="copyright_logo">
+        Gestaltung des Datenspuren-Logos: Annett Gerlach und nek0 und dodo
+    </string>
+</resources>
