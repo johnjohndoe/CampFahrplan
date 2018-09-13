@@ -67,6 +67,12 @@ android {
             keyAlias props['signing.ccc34c3-release.keyAlias']
             keyPassword props['signing.ccc34c3-release.keyPassword']
         }
+        fiffkon2018 {
+            storeFile file(props['signing.fiffkon-release.keystoreFilePath'])
+            storePassword props['signing.fiffkon-release.keystorePassword']
+            keyAlias props['signing.fiffkon-release.keyAlias']
+            keyPassword props['signing.fiffkon-release.keyPassword']
+        }
     }
 
     def defaultDimension = "default"
@@ -109,6 +115,24 @@ android {
             buildConfigField "boolean", "SHOW_APP_DISCLAIMER", "false"
             buildConfigField "String", "TRACE_DROID_EMAIL_ADDRESS", '"tobias.preuss+34c3@googlemail.com"'
             buildConfigField "String", "SCHEDULE_FEEDBACK_URL", '"https://frab.cccv.de/en/34C3/public/events/%s/feedback/new"'
+        }
+        fiffkon2018 {
+            applicationId "info.metadude.android.fiffkon.schedule"
+            versionName "1.36.0 (FIfFKon Edition)"
+            signingConfig signingConfigs.fiffkon2018
+            buildConfigField "String", "SCHEDULE_URL", '"https://2018.fiffkon.de/schedule.xml"'
+            buildConfigField "String", "EVENT_URL", '"https://2018.fiffkon.de/fahrplan/events/%1$s.html"'
+            buildConfigField "String", "SERVER_BACKEND_TYPE", '"frab"'
+            buildConfigField "String", "VENUE", '"tu-berlin"'
+            buildConfigField "int", "SCHEDULE_FIRST_DAY_START_YEAR", "2018"
+            buildConfigField "int", "SCHEDULE_FIRST_DAY_START_MONTH", "9"
+            buildConfigField "int", "SCHEDULE_FIRST_DAY_START_DAY", "28"
+            buildConfigField "int", "SCHEDULE_LAST_DAY_END_YEAR", "2018"
+            buildConfigField "int", "SCHEDULE_LAST_DAY_END_MONTH", "10"
+            buildConfigField "int", "SCHEDULE_LAST_DAY_END_DAY", "1"
+            buildConfigField "boolean", "SHOW_APP_DISCLAIMER", "true"
+            buildConfigField "String", "TRACE_DROID_EMAIL_ADDRESS", '"tobias.preuss+fiffkon@googlemail.com"'
+            buildConfigField "String", "SCHEDULE_FEEDBACK_URL", '""'
         }
     }
 

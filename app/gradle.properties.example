@@ -7,3 +7,8 @@ signing.ccc34c3-release.keystoreFilePath=/home/USERNAME/.android/ccc34c3-release
 signing.ccc34c3-release.keystorePassword="PASSWORD"
 signing.ccc34c3-release.keyAlias="ccc34c3"
 signing.ccc34c3-release.keyPassword="ANOTHERPASSWORD"
+
+signing.fiffkon-release.keystoreFilePath=/home/USERNAME/.android/fiffkon-release-key.keystore
+signing.fiffkon-release.keystorePassword="PASSWORD"
+signing.fiffkon-release.keyAlias="fiffkon"
+signing.fiffkon-release.keyPassword="ANOTHERPASSWORD"
