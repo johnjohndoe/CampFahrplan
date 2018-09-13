@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="pressed_congress">#CC480202</color>
+
+    <!-- Default state -->
+    <color name="event_border_default">#8c8c8c</color>
+    <color name="event_border_default_fiff">#278e9c</color>
+    <color name="event_border_default_party">#279c82</color>
+    <color name="event_border_default_pause">#679c27</color>
+    <color name="event_border_default_podiumsdiskussion">#8e9c27</color>
+    <color name="event_border_default_vortrag">#9c8227</color>
+    <color name="event_border_default_workshop">#9c5b27</color>
+
+    <!-- Accent color -->
+    <color name="event_border_accent">#cccccc</color>
+    <color name="event_border_accent_fiff">#34bccf</color>
+    <color name="event_border_accent_party">#34cfad</color>
+    <color name="event_border_accent_pause">#89cf34</color>
+    <color name="event_border_accent_podiumsdiskussion">#bccf34</color>
+    <color name="event_border_accent_vortrag">#cfad34</color>
+    <color name="event_border_accent_workshop">#cf7934</color>
+
+    <!-- Highlight state -->
+    <color name="event_border_highlight_fiff">
+        @color/event_border_accent_fiff
+    </color>
+    <color name="event_border_highlight_party">
+        @color/event_border_accent_party
+    </color>
+    <color name="event_border_highlight_pause">
+        @color/event_border_accent_pause
+    </color>
+    <color name="event_border_highlight_podiumsdiskussion">
+        @color/event_border_accent_podiumsdiskussion
+    </color>
+    <color name="event_border_highlight_vortrag">
+        @color/event_border_accent_vortrag
+    </color>
+    <color name="event_border_highlight_workshop">
+        @color/event_border_accent_workshop
+    </color>
+    <color name="event_border_highlight">
+        @color/event_border_accent
+    </color>
+
+    <!-- Accent color highlight -->
+    <color name="event_border_accent_highlight_fiff">
+        @color/event_border_default_fiff
+    </color>
+    <color name="event_border_accent_highlight_party">
+        @color/event_border_default_party
+    </color>
+    <color name="event_border_accent_highlight_pause">
+        @color/event_border_default_pause
+    </color>
+    <color name="event_border_accent_highlight_podiumsdiskussion">
+        @color/event_border_default_podiumsdiskussion
+    </color>
+    <color name="event_border_accent_highlight_vortrag">
+        @color/event_border_default_vortrag
+    </color>
+    <color name="event_border_accent_highlight_workshop">
+        @color/event_border_default_workshop
+    </color>
+    <color name="event_border_accent_highlight">
+        @color/event_border_default
+    </color>
+
+    <!-- Track color -->
+    <color name="track_name">#be000000</color>
+
+    <!-- Title color -->
+    <color name="event_title">#a0000000</color>
+    <color name="event_title_highlight">@android:color/black</color>
+
+    <color name="event_drawable_selection_stroke">@android:color/white</color>
+
+</resources>

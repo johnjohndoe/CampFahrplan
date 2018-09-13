@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">FIfFKon 2018 Fahrplan</string>
+    <string name="app_hardcoded_subtitle">28.-30. September 2018, Technische Universität, Berlin</string>
+    <string name="conference_url">
+        <![CDATA[<a href="https://2018.fiffkon.de">https://2018.fiffkon.de</a>]]>
+    </string>
+    <string name="source_code">
+        <![CDATA[<a href="https://github.com/johnjohndoe/CampFahrplan/tree/fiffkon-2018">Quellcode</a>]]>
+    </string>
+    <string name="google_play_store">
+        <![CDATA[<a href="https://play.google.com/store/apps/details?id=info.metadude.android.fiffkon.schedule">Eintrag im Google PlayStore</a>]]>
+    </string>
+    <string name="copyright_logo">
+        FIfFKon-Design: Benjamin Kees + Alexander Heim
+    </string>
+</resources>
