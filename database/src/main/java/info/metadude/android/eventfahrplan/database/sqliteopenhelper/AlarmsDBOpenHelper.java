@@ -8,7 +8,7 @@ import info.metadude.android.eventfahrplan.database.contract.FahrplanContract.Al
 
 public class AlarmsDBOpenHelper extends SQLiteOpenHelper {
 
-    private static final int DATABASE_VERSION = 2;
+    private static final int DATABASE_VERSION = 3;
 
     private static final String DATABASE_NAME = "alarms";
 
@@ -40,5 +40,11 @@ public class AlarmsDBOpenHelper extends SQLiteOpenHelper {
                     AlarmsTable.Columns.ALARM_TIME_IN_MIN + " INTEGER DEFAULT" +
                     AlarmsTable.Defaults.ALARM_TIME_IN_MIN_DEFAULT);
         }
+        if (oldVersion < 3) {
+            // Clear database from FIfFKon 2014.
+            db.execSQL("DROP TABLE IF EXISTS " + AlarmsTable.NAME);
+            onCreate(db);
+        }
     }
+
 }
