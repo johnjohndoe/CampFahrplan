@@ -14,7 +14,6 @@ class EventUrlComposer(private val event: Event) {
         else -> throw NotImplementedError("Unknown server backend type: '$SERVER_BACKEND_TYPE'")
     }
 
-    private fun getComposedEventUrl(eventIdentifier: String) =
-            String.format(EVENT_URL, eventIdentifier)
+    private fun getComposedEventUrl(eventIdentifier: String) = EVENT_URL
 
 }

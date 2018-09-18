@@ -121,7 +121,7 @@ android {
             versionName "1.36.0 (FIfFKon Edition)"
             signingConfig signingConfigs.fiffkon2018
             buildConfigField "String", "SCHEDULE_URL", '"https://2018.fiffkon.de/schedule.xml"'
-            buildConfigField "String", "EVENT_URL", '"https://2018.fiffkon.de/fahrplan/events/%1$s.html"'
+            buildConfigField "String", "EVENT_URL", '"https://2018.fiffkon.de"'
             buildConfigField "String", "SERVER_BACKEND_TYPE", '"frab"'
             buildConfigField "String", "VENUE", '"tu-berlin"'
             buildConfigField "int", "SCHEDULE_FIRST_DAY_START_YEAR", "2018"
