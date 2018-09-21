@@ -25,8 +25,8 @@ android {
     buildToolsVersion Android.buildToolsVersion
 
     defaultConfig {
-        versionCode 49
-        versionName "1.36.1"
+        versionCode 50
+        versionName "1.36.2"
         minSdkVersion Android.minSdkVersion
         targetSdkVersion Android.targetSdkVersion
         archivesBaseName = "Fahrplan-$versionName"
@@ -118,7 +118,7 @@ android {
         }
         datenspuren2018 {
             applicationId "info.metadude.android.datenspuren.schedule"
-            versionName "1.36.1 (Datenspuren Edition)"
+            versionName "1.36.2 (Datenspuren Edition)"
             signingConfig signingConfigs.datenspuren2018
             buildConfigField "String", "SCHEDULE_URL", '"https://datenspuren.de/2018/fahrplan/schedule.xml"'
             buildConfigField "String", "EVENT_URL", '"https://datenspuren.de/2018/fahrplan/events/%1$s.html"'
