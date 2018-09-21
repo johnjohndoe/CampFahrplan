@@ -150,6 +150,8 @@ public class EventDetailFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         FragmentActivity activity = getActivity();
+        Log.d(getClass().getName(), "activity: " + activity);
+        Log.d(getClass().getName(), "eventId: " + event_id);
         if (hasArguments) {
             AssetManager assetManager = activity.getAssets();
             boldCondensed = Typeface.createFromAsset(assetManager, "Roboto-BoldCondensed.ttf");
