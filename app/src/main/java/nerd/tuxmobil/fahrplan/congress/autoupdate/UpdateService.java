@@ -100,8 +100,7 @@ public class UpdateService extends IntentService {
         if (MyApp.task_running == TASKS.NONE) {
             MyApp.task_running = TASKS.FETCH;
             AppRepository appRepository = AppRepository.Companion.getInstance(this);
-            String url = appRepository.readScheduleUrl();
-            appRepository.loadSchedule(url, MyApp.meta.getETag(), fetchScheduleResult -> {
+            appRepository.loadSchedule(fetchScheduleResult -> {
                 onGotResponse(fetchScheduleResult);
                 return null;
             }, (result, version) -> {

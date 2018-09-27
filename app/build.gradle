@@ -139,6 +139,12 @@ android {
         }
     }
 
+    kotlin {
+        experimental {
+            coroutines "enable"
+        }
+    }
+
     lintOptions {
         // for okio - https://github.com/square/okio/issues/58
         warning "InvalidPackage"
@@ -167,6 +173,7 @@ tasks.withType(Test) {
 dependencies {
     implementation project(":database")
     implementation project(":network")
+    implementation project(":sessionize")
 
     implementation Libs.kotlinStdlib
     implementation Libs.supportLibraryAppcompatV7

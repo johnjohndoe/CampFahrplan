@@ -72,7 +72,7 @@
 	<string name="libraries">
 		Die Anwendung nutzt folgende Bibliotheken:
 		Kotlin, Google Support Library v4, Google AppCompat Library v7, Email Intent Builder,
-		Espresso, OkHttp, SnackEngage, TraceDroid
+		Espresso, Kotlin Coroutines for Retrofit, OkHttp, Sessionize, SnackEngage, TraceDroid
 	</string>
 	<string name="about_data_privacy_statement">
         <![CDATA[<a href="https://github.com/EventFahrplan/EventFahrplan/blob/master/DATA-PRIVACY-DE.md">Datenschutzerklärung</a>]]>
