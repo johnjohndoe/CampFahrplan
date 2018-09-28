@@ -44,10 +44,6 @@ class LecturesDatabaseRepository(
                 orderBy = DATE_UTC)
     }
 
-    fun queryLecturesOrderedByDate() = query {
-        read(LecturesTable.NAME, orderBy = DATE)
-    }
-
     fun queryLecturesOrderedByDateUtc() = query {
         read(LecturesTable.NAME, orderBy = DATE_UTC)
     }
@@ -94,6 +90,7 @@ class LecturesDatabaseRepository(
             lecture = lecture.copy(title = cursor.getString(cursor.getColumnIndex(TITLE)))
             lecture = lecture.copy(track = cursor.getString(cursor.getColumnIndex(TRACK)))
             lecture = lecture.copy(type = cursor.getString(cursor.getColumnIndex(TYPE)))
+            lecture = lecture.copy(url = cursor.getString(cursor.getColumnIndex(URL)))
             val recordingOptOut =
                     if (cursor.getInt(cursor.getColumnIndex(REC_OPTOUT)) == REC_OPT_OUT_OFF)
                         Lecture.RECORDING_OPT_OUT_OFF
