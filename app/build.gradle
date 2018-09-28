@@ -25,8 +25,8 @@ android {
     buildToolsVersion Android.buildToolsVersion
 
     defaultConfig {
-        versionCode 48
-        versionName "1.36.0"
+        versionCode 49
+        versionName "1.36.1"
         minSdkVersion Android.minSdkVersion
         targetSdkVersion Android.targetSdkVersion
         archivesBaseName = "Fahrplan-$versionName"
@@ -118,7 +118,7 @@ android {
         }
         fiffkon2018 {
             applicationId "info.metadude.android.fiffkon.schedule"
-            versionName "1.36.0 (FIfFKon Edition)"
+            versionName "1.36.1 (FIfFKon Edition)"
             signingConfig signingConfigs.fiffkon2018
             buildConfigField "String", "SCHEDULE_URL", '"https://2018.fiffkon.de/schedule.xml"'
             buildConfigField "String", "EVENT_URL", '"https://2018.fiffkon.de"'
