@@ -83,7 +83,11 @@ class AppRepository private constructor(val context: Context) {
                 when (result) {
                     is SessionizeResult.Values -> {
                         storeConferenceDays(result.conferenceDays)
-                        onFetchingDone(FetchScheduleResult(httpStatus = HttpStatus.HTTP_OK, hostName = hostName))
+                        onFetchingDone(
+                                FetchScheduleResult(
+                                        httpStatus = HttpStatus.HTTP_OK,
+                                        hostName = hostName
+                                ))
                         onParsingDone(true, "1.0.0")
                     }
                     is SessionizeResult.Error -> {
