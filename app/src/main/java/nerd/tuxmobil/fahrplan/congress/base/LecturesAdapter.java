@@ -4,7 +4,6 @@ import android.content.Context;
 import android.support.annotation.LayoutRes;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
-import android.support.v4.content.ContextCompat;
 import android.view.ContextThemeWrapper;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -132,10 +131,6 @@ public abstract class LecturesAdapter extends ArrayAdapter<Lecture> {
 
     protected void resetTextStyle(TextView textView, int style) {
         textView.setTextAppearance(context, style);
-    }
-
-    protected void setTextStyleCanceled(TextView textView) {
-        textView.setTextColor(ContextCompat.getColor(context, R.color.schedule_change_canceled));
     }
 
     protected abstract void initViewSetup();
