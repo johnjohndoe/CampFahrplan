@@ -66,10 +66,10 @@ class AppRepository private constructor(val context: Context) {
             try {
                 okHttpClient = CustomHttpClient.createHttpClient(hostName)
             } catch (e: KeyManagementException) {
-                onFetchingDone(FetchScheduleResult(httpStatus = HttpStatus.HTTP_SSL_SETUP_FAILURE, hostName = hostName))
+                onFetchingDone(FetchScheduleResult(httpStatus = e.toHttpStatus(), hostName = hostName))
                 return
             } catch (e: NoSuchAlgorithmException) {
-                onFetchingDone(FetchScheduleResult(httpStatus = HttpStatus.HTTP_SSL_SETUP_FAILURE, hostName = hostName))
+                onFetchingDone(FetchScheduleResult(httpStatus = e.toHttpStatus(), hostName = hostName))
                 return
             }
 
@@ -98,7 +98,16 @@ class AppRepository private constructor(val context: Context) {
                                         hostName = hostName
                                 ))
                     }
-                    is SessionizeResult.Exception -> throw result.throwable
+                    is SessionizeResult.Exception -> {
+                        Log.e(javaClass.name, result.toString())
+                        result.throwable.printStackTrace()
+                        onFetchingDone(
+                                FetchScheduleResult(
+                                        httpStatus = result.throwable.toHttpStatus(),
+                                        hostName = hostName,
+                                        exceptionMessage = result.throwable.message ?: ""
+                                ))
+                    }
                 }
             }
         }
