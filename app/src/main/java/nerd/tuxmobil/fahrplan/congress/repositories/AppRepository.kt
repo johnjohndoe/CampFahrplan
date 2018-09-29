@@ -91,8 +91,12 @@ class AppRepository private constructor(val context: Context) {
                         onParsingDone(true, "1.0.0")
                     }
                     is SessionizeResult.Error -> {
-                        onFetchingDone(FetchScheduleResult(httpStatus = HttpStatus.HTTP_CANCELLED, hostName = hostName))
                         Log.e(javaClass.name, result.toString())
+                        onFetchingDone(
+                                FetchScheduleResult(
+                                        httpStatus = result.httpStatus,
+                                        hostName = hostName
+                                ))
                     }
                     is SessionizeResult.Exception -> throw result.throwable
                 }
