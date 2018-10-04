@@ -126,7 +126,7 @@ android {
             buildConfigField "String", "VENUE", '"beurs-van-berlage"'
             buildConfigField "int", "SCHEDULE_FIRST_DAY_START_YEAR", "2018"
             buildConfigField "int", "SCHEDULE_FIRST_DAY_START_MONTH", "10"
-            buildConfigField "int", "SCHEDULE_FIRST_DAY_START_DAY", "4"
+            buildConfigField "int", "SCHEDULE_FIRST_DAY_START_DAY", "3"
             buildConfigField "int", "SCHEDULE_LAST_DAY_END_YEAR", "2018"
             buildConfigField "int", "SCHEDULE_LAST_DAY_END_MONTH", "10"
             buildConfigField "int", "SCHEDULE_LAST_DAY_END_DAY", "6"
