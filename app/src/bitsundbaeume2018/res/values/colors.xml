@@ -7,7 +7,7 @@
     <color name="colorActionBar">@color/colorPrimary</color>
     <color name="windowBackground">#414141</color>
     <color name="fahrplan_background">#000</color>
-    <color name="text_link_color">#48571E</color>
+    <color name="text_link_color">@color/colorPrimaryDark</color>
     <color name="multi_choice_background">@color/colorAccent</color>
     <color name="text_link_color_dark">@color/colorPrimary</color>
     <color name="lightgray">#505050</color>

@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <map linked="true">
 
+    <entry key="Alternatives Wirtschaften">alternatives_wirtschaften</entry>
+    <entry key="Bits &amp; Bäume">bits_und_baeume</entry>
+    <entry key="Daten und Umwelt">daten_und_umwelt</entry>
+    <entry key="Die ganz großen Fragen">grosse_fragen</entry>
+    <entry key="Die materielle Basis">materielle_basis</entry>
+    <entry key="Digitaler Kapitalismus">digitaler_kapitalismus</entry>
+    <entry key="Reclaim Smart City!">reclaim_smart_city</entry>
+    <entry key="Zivilgesellschaft &amp; Communities">zivilgesellschaft_und_communities</entry>
     <entry key=""></entry>
 
 </map>

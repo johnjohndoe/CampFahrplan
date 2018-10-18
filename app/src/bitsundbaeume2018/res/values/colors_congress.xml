@@ -4,21 +4,53 @@
     <color name="pressed_congress">#CC9cc646</color>
 
     <!-- Default state -->
-    <color name="event_border_default">#d2dfe9</color>
+    <color name="event_border_default">#B5C0C9</color>
+    <color name="event_border_default_alternatives_wirtschaften">#CCA845</color>
+    <color name="event_border_default_bits_und_baeume">#508F4C</color>
+    <color name="event_border_default_daten_und_umwelt">#65C9A6</color>
+    <color name="event_border_default_grosse_fragen">#C763C2</color>
+    <color name="event_border_default_materielle_basis">#B0C965</color>
+    <color name="event_border_default_digitaler_kapitalismus">#C96565</color>
+    <color name="event_border_default_reclaim_smart_city">#636AC7</color>
+    <color name="event_border_default_zivilgesellschaft_und_communities">#9765C9</color>
 
     <!--Accent color-->
-    <color name="event_border_accent">#cbd8e2</color>
+    <color name="event_border_accent">#E3F2FC</color>
+    <color name="event_border_accent_alternatives_wirtschaften">#ffd257</color>
+    <color name="event_border_accent_bits_und_baeume">#6dc267</color>
+    <color name="event_border_accent_daten_und_umwelt">#7efcd0</color>
+    <color name="event_border_accent_grosse_fragen">#fa7df4</color>
+    <color name="event_border_accent_materielle_basis">#dcfc7e</color>
+    <color name="event_border_accent_digitaler_kapitalismus">#fc7e7e</color>
+    <color name="event_border_accent_reclaim_smart_city">#7d85fa</color>
+    <color name="event_border_accent_zivilgesellschaft_und_communities">#bd7efc</color>
 
     <!-- Highlight state -->
     <color name="event_border_highlight">@color/event_border_accent</color>
+    <color name="event_border_highlight_alternatives_wirtschaften">@color/event_border_accent_alternatives_wirtschaften</color>
+    <color name="event_border_highlight_bits_und_baeume">@color/event_border_accent_bits_und_baeume</color>
+    <color name="event_border_highlight_daten_und_umwelt">@color/event_border_accent_daten_und_umwelt</color>
+    <color name="event_border_highlight_grosse_fragen">@color/event_border_accent_grosse_fragen</color>
+    <color name="event_border_highlight_materielle_basis">@color/event_border_accent_materielle_basis</color>
+    <color name="event_border_highlight_digitaler_kapitalismus">@color/event_border_accent_digitaler_kapitalismus</color>
+    <color name="event_border_highlight_reclaim_smart_city">@color/event_border_accent_reclaim_smart_city</color>
+    <color name="event_border_highlight_zivilgesellschaft_und_communities">@color/event_border_accent_zivilgesellschaft_und_communities</color>
 
     <!--Accent color highlight-->
     <color name="event_border_accent_highlight">@color/event_border_default</color>
+    <color name="event_border_accent_highlight_alternatives_wirtschaften">@color/event_border_default_alternatives_wirtschaften</color>
+    <color name="event_border_accent_highlight_bits_und_baeume">@color/event_border_default_bits_und_baeume</color>
+    <color name="event_border_accent_highlight_daten_und_umwelt">@color/event_border_default_daten_und_umwelt</color>
+    <color name="event_border_accent_highlight_grosse_fragen">@color/event_border_default_grosse_fragen</color>
+    <color name="event_border_accent_highlight_materielle_basis">@color/event_border_default_materielle_basis</color>
+    <color name="event_border_accent_highlight_digitaler_kapitalismus">@color/event_border_default_digitaler_kapitalismus</color>
+    <color name="event_border_accent_highlight_reclaim_smart_city">@color/event_border_default_reclaim_smart_city</color>
+    <color name="event_border_accent_highlight_zivilgesellschaft_und_communities">@color/event_border_default_zivilgesellschaft_und_communities</color>
 
     <!-- Track color -->
-    <color name="track_name">#c8ffffff</color>
+    <color name="track_name">#c8000000</color>
 
     <!--Title color-->
-    <color name="event_title">#a0ffffff</color>
-    <color name="event_title_highlight">#fff</color>
+    <color name="event_title">#a0000000</color>
+    <color name="event_title_highlight">#000</color>
 </resources>
