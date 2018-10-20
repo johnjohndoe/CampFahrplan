@@ -26,4 +26,7 @@
 
     <color name="alert_dialog_button_text">@color/colorAccent</color>
 
+    <!-- Launcher icon -->
+    <color name="launcher_background">@color/colorAccent</color>
+
 </resources>
