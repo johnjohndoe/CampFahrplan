@@ -1,32 +1,69 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <!-- Menu items -->
+    <string name="menu_item_title_about">Info</string>
+    <string name="menu_item_title_add_to_calendar">Zum Kalender hinzufügen</string>
+    <string name="menu_item_title_alarms">Alarme</string>
+    <string name="menu_item_title_close_event_details">Detailansicht schließen</string>
+    <string name="menu_item_title_flag_as_favorite">Zu Favoriten hinzufügen</string>
+    <string name="menu_item_title_unflag_as_favorite">Aus Favoriten entfernen</string>
+    <string name="menu_item_title_delete_favorite">Löschen</string>
+    <string name="menu_item_title_set_alarm">Alarm setzen</string>
+    <string name="menu_item_title_delete_alarm">Alarm löschen</string>
+    <string name="menu_item_title_delete_all">Alle löschen</string>
+    <string name="menu_item_title_favorites">Favoriten</string>
+    <string name="menu_item_title_feedback">Feedback</string>
+    <string name="menu_item_title_navigate">Navigiere</string>
+    <string name="menu_item_title_refresh">Aktualisieren</string>
+    <string name="menu_item_title_schedule_changes">@string/schedule_changes</string>
+    <string name="menu_item_title_settings">@string/settings</string>
+    <string name="menu_item_title_share_event">Vortrag teilen</string>
+    <string name="menu_item_title_share_favorites">Favoriten teilen</string>
+
+    <!-- AlertDialogHelper -->
     <string name="OK">OK</string>
-	<string name="dlg_certificate_message_fmt">
+
+    <!-- CertificateDialog -->
+    <string name="dlg_certificate_message_fmt">
         Aufbau einer gesicherten Verbindung nicht möglich.\n
         (<xliff:g id="error" example="Unbekannter Fehler">%s</xliff:g>)
     </string>
     <string name="dlg_invalid_certificate_title">Unbekanntem Zertifikat vertrauen?</string>
-    <string name="dlg_invalid_certificate_accept">Akzeptieren</string>
-    <string name="dlg_invalid_certificate_reject">Ablehnen</string>
     <string name="dlg_invalid_certificate_could_not_apply">Zertifikat konnte nicht übernommen werden.</string>
+
+    <!-- CustomHttpClient -->
     <string name="dlg_err_connection_failed">Verbindungsfehler</string>
-    <string name="dlg_err_failed_wrong_password">Das Kennwort ist falsch.</string>
     <string name="dlg_err_failed_unknown_host">Unbekannte Adresse:\n%s</string>
-    <string name="dlg_err_failed_wrong_http_credentials">Ungültige HTTP Authentisierung</string>
-	<string name="dlg_err_failed_timeout">Server antwortet nicht (Zeitüberschreitung).
-	</string>
+    <string name="dlg_err_failed_wrong_http_credentials">Ungültige HTTP Authentifizierung</string>
+    <string name="dlg_err_failed_timeout">Server antwortet nicht (Zeitüberschreitung).</string>
     <string name="dlg_err_failed_connect_failure">Unbekannter Verbindungsfehler</string>
     <string name="dlg_err_failed_not_found">Ungültige Fahrplan-Adresse</string>
-    <string name="dlg_err_failed_encoding_failure">Encodingfehler</string>
     <string name="dlg_err_failed_parse_failure">Kann Antwort nicht dekodieren.</string>
     <string name="dlg_err_failed_ssl_failure">SSL Fehler</string>
-    <string name="refresh">Aktualisieren</string>
+    <string name="uptodate">Fahrplan ist aktuell.</string>
+
+    <!-- Schedule changes dialog -->
+    <string name="schedule_changes_dialog_title">Fahrplanaktualisierung</string>
+    <string name="schedule_changes_dialog_updated_to_text">Der Fahrplan wurde auf Version\u0020</string>
+    <string name="schedule_changes_dialog_changed_new_cancelled_text">\u0020aktualisiert. Es gibt Änderungen in <xliff:g id="num_changes" example="3 Vorträgen">%1$s</xliff:g>, <xliff:g id="num_new" example="2 sind">%2$s</xliff:g> neu, <xliff:g id="num_canceled" example="1 ist">%3$s</xliff:g> gestrichen.</string>
+    <string name="schedule_changes_dialog_affected_text">Die Änderungen betreffen <xliff:g id="num_marked" example="2">%1$d</xliff:g> der favorisierten Vorträge.</string>
+    <plurals name="schedule_changes_dialog_number_of_lectures">
+        <item quantity="one">%d Vortrag</item>
+        <item quantity="other">%d Vorträgen</item>
+    </plurals>
+    <plurals name="schedule_changes_dialog_being">
+        <item quantity="one">%d ist</item>
+        <item quantity="other">%d sind</item>
+    </plurals>
+    <string name="schedule_changes_dialog_browse">Ansehen</string>
+    <string name="schedule_changes_dialog_later">Später</string>
+
     <string name="progress_loading_data">Hole Fahrplan &#8230;</string>
     <string name="progress_processing_data">Verarbeite Fahrplan &#8230;</string>
     <string name="load_data">Laden</string>
     <string name="choose_day">Tag wählen</string>
     <string name="day">Tag</string>
-    <string name="about">Info</string>
     <string name="fahrplan">Fahrplan</string>
     <string name="appVersion">App Version %s</string>
     <string name="schedule_updated_to">
@@ -36,8 +73,6 @@
         Der Fahrplan wurde aktualisiert.
     </string>
     <string name="settings">Einstellungen</string>
-    <string name="alarms">Alarme</string>
-    <string name="delete">Löschen</string>
     <string name="event_online">Event online</string>
     <string name="event_detail_section_title_links">Links</string>
     <string name="alarm_prompt">Alarm</string>
@@ -45,12 +80,9 @@
     <string name="default_alarm_time_title">Wähle eine Standard-Alarmzeit</string>
     <string name="default_alarm_time_dialog_title">Standard-Alarmzeit</string>
     <string name="reminders">Alarme</string>
-    <string name="feedback">Feedback</string>
-    <string name="delete_all">Alle löschen</string>
     <string name="reminder_ringtone">Alarmton</string>
     <string name="insistent_alarm">Dauerhafter Alarm</string>
     <string name="usage">Hinweis:\n\nLange auf Vortrag tippen, um einen Alarm einzustellen.</string>
-    <string name="set_alarm">Alarm setzen</string>
 	<string name="libraries">
 		Die Anwendung nutzt folgende Bibliotheken:
 		Kotlin, Google Support Library v4, Google AppCompat Library v7, Email Intent Builder,
@@ -62,15 +94,8 @@
 	<string name="issues">
 		<![CDATA[<a href="https://github.com/EventFahrplan/EventFahrplan/issues">Fehlermeldungen und Wünsche</a>]]>
 	</string>
-    <string name="delete_alarm">Alarm löschen</string>
     <string name="today">heute</string>
-    <string name="addToCalendar">Zum Kalender hinzufügen</string>
-    <string name="share">Teilen</string>
-    <string name="flag_as_favorite">Zu Favoriten hinzufügen</string>
-    <string name="unflag_as_favorite">Aus Favoriten entfernen</string>
-    <string name="uptodate">Fahrplan ist aktuell.</string>
-    <string name="event_details_close">Detailansicht schließen</string>
-    <string name="pref_auto_download">Automatische Updates</string>
+    <string name="pref_auto_download">Automatische Aktualisierung</string>
     <string name="parsing_error_generic">Unbekannter Fehler beim Parsen des Fahrplans</string>
     <string name="parsing_error_with_version">Fehler beim Parsen der Fahrplan-Version %s</string>
 	<string name="alarms_empty">
@@ -78,24 +103,11 @@
 		kannst du über das entsprechende Symbol in der ActionBar
 		für jeden Eintrag einen individuellen Alarm festlegen.
 	</string>
-    <string name="add_to_calendar_failed">Hinzufügen zu Kalendar fehlgeschlagen.</string>
+    <string name="add_to_calendar_failed">Hinzufügen zum Kalendar fehlgeschlagen.</string>
     <string name="no_changes">Keine Fahrplanänderungen</string>
     <string name="schedule_changes">Fahrplanänderungen</string>
-    <string name="changes_dlg_text1">Der Fahrplan wurde aktualisiert auf Version</string>
-    <string name="changes_dlg_text2">. Es gibt Änderungen in <xliff:g id="num_changes" example="3 Vorträgen">%2$s</xliff:g>, <xliff:g id="num_new" example="2 sind">%3$s</xliff:g> neu, <xliff:g id="num_canceled" example="1 ist">%4$s</xliff:g> gestrichen.</string>
-    <string name="changes_dlg_text3">Die Änderungen betreffen <xliff:g id="num_marked" example="2">%1$d</xliff:g> der markierten Vorträge.</string>
 
-    <plurals name="numberOfLectures">
-        <item quantity="one">%d Vortrag</item>
-        <item quantity="other">%d Vorträgen</item>
-    </plurals>
-    <plurals name="being">
-        <item quantity="one">%d ist</item>
-        <item quantity="other">%d sind</item>
-    </plurals>
     <string name="general_settings">Allgemein</string>
-    <string name="schedule_udpate">Fahrplanaktualisierung</string>
-    <string name="action_show_starred_lectures">Zeige Favoriten</string>
     <string name="starred_lectures">Favoriten</string>
     <string name="schedule_url">Alternative Fahrplan URL</string>
     <string name="invalid_url">Ungültige URL</string>
@@ -103,12 +115,9 @@
     <string name="choose_to_delete">Wähle Vorträge</string>
     <string name="day_separator">Tag <xliff:g id="day_of_congress" example="2">%1$d</xliff:g> - <xliff:g id="date_of_congress_day" example="29.12.2014">%2$s</xliff:g></string>
     <string name="event_duration"><xliff:g id="duration" example="45">%1$d</xliff:g> min.</string>
-    <string name="btn_dlg_browse">Ansehen</string>
-    <string name="btn_dlg_later">Später</string>
     <string name="alternative_highlight">Alternative Hervorhebung</string>
     <string name="dlg_delete_all_favorites">Alle Favoriten löschen?</string>
     <string name="dlg_delete_all_favorites_delete_all">Alle löschen</string>
-    <string name="navigate">Navigiere</string>
 
     <string name="share_error_activity_not_found">Keine passende App installiert.</string>
 

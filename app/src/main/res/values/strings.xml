@@ -1,32 +1,69 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <!-- Menu items -->
+    <string name="menu_item_title_about">Info</string>
+    <string name="menu_item_title_add_to_calendar">Add to calendar</string>
+    <string name="menu_item_title_alarms">Alarms</string>
+    <string name="menu_item_title_close_event_details">Close event details</string>
+    <string name="menu_item_title_flag_as_favorite">Add to favorites</string>
+    <string name="menu_item_title_unflag_as_favorite">Remove from favorites</string>
+    <string name="menu_item_title_delete_favorite">Delete</string>
+    <string name="menu_item_title_set_alarm">Set alarm</string>
+    <string name="menu_item_title_delete_alarm">Clear alarm</string>
+    <string name="menu_item_title_delete_all">Delete all</string>
+    <string name="menu_item_title_favorites">Favorites</string>
+    <string name="menu_item_title_feedback">Feedback</string>
+    <string name="menu_item_title_navigate">Navigate</string>
+    <string name="menu_item_title_refresh">Refresh</string>
+    <string name="menu_item_title_schedule_changes">@string/schedule_changes</string>
+    <string name="menu_item_title_settings">@string/settings</string>
+    <string name="menu_item_title_share_event">Share event</string>
+    <string name="menu_item_title_share_favorites">Share favorites</string>
+
+    <!-- AlertDialogHelper -->
     <string name="OK">OK</string>
+
+    <!-- CertificateDialog -->
     <string name="dlg_certificate_message_fmt">
         Failed to establish secure connection.\n
         (<xliff:g id="error" example="Unknown Error">%s</xliff:g>)
     </string>
     <string name="dlg_invalid_certificate_title">Trust unknown certificate?</string>
-    <string name="dlg_invalid_certificate_accept">Accept </string>
-    <string name="dlg_invalid_certificate_reject">Deny </string>
     <string name="dlg_invalid_certificate_could_not_apply">Certificate could not be added.</string>
+
+    <!-- CustomHttpClient -->
     <string name="dlg_err_connection_failed">Connection failure</string>
-    <string name="dlg_err_failed_wrong_password">Wrong password</string>
     <string name="dlg_err_failed_unknown_host">Unknown address:\n%s</string>
     <string name="dlg_err_failed_wrong_http_credentials">Invalid HTTP Authentication</string>
-	<string name="dlg_err_failed_timeout">Server doesn\'t respond (Timeout).
-	</string>
+    <string name="dlg_err_failed_timeout">Server doesn\'t respond (Timeout).</string>
     <string name="dlg_err_failed_connect_failure">Unknown connection failure</string>
     <string name="dlg_err_failed_not_found">Invalid schedule URL</string>
-    <string name="dlg_err_failed_encoding_failure">Encoding failure</string>
     <string name="dlg_err_failed_parse_failure">Couldn\'t parse response</string>
     <string name="dlg_err_failed_ssl_failure">SSL failure</string>
-    <string name="refresh">Refresh</string>
+    <string name="uptodate">Schedule is up to date.</string>
+
+    <!-- Schedule changes dialog -->
+    <string name="schedule_changes_dialog_title">Schedule update</string>
+    <string name="schedule_changes_dialog_updated_to_text">The schedule has been updated to\u0020</string>
+    <string name="schedule_changes_dialog_changed_new_cancelled_text">. There are changes in <xliff:g id="num_changes" example="3 lectures">%1$s</xliff:g>, <xliff:g id="num_new" example="2 are">%2$s</xliff:g> new, <xliff:g id="num_canceled" example="1 is">%3$s</xliff:g> cancelled.</string>
+    <string name="schedule_changes_dialog_affected_text">The changes affect <xliff:g id="num_marked" example="2">%1$d</xliff:g> of your favored lectures.</string>
+    <plurals name="schedule_changes_dialog_number_of_lectures">
+        <item quantity="one">%d lecture</item>
+        <item quantity="other">%d lectures</item>
+    </plurals>
+    <plurals name="schedule_changes_dialog_being">
+        <item quantity="one">%d is</item>
+        <item quantity="other">%d are</item>
+    </plurals>
+    <string name="schedule_changes_dialog_browse">Browse</string>
+    <string name="schedule_changes_dialog_later">Later</string>
+
     <string name="progress_loading_data">Get schedule &#8230;</string>
     <string name="progress_processing_data">Processing schedule &#8230;</string>
     <string name="load_data">Load</string>
     <string name="choose_day">Choose day</string>
     <string name="day">Day</string>
-    <string name="about">Info</string>
     <string name="fahrplan">Schedule</string>
     <string name="appVersion">App Version %s</string>
     <string name="schedule_updated_to">
@@ -36,8 +73,6 @@
         The schedule has been updated.
     </string>
     <string name="settings">Settings</string>
-    <string name="alarms">Alarms</string>
-    <string name="delete">Delete</string>
     <string name="event_online">Event online</string>
     <string name="event_detail_section_title_links">Links</string>
     <string name="alarm_prompt">Alarm</string>
@@ -47,12 +82,9 @@
     <!-- Synchronize with @integers/default_alarm_time_index and string-array/alarm_time_values -->
     <string name="default_alarm_time_value" translatable="false">10</string>
     <string name="reminders">Alarms</string>
-    <string name="feedback">Feedback</string>
-    <string name="delete_all">Delete all</string>
     <string name="reminder_ringtone">Alarm tone</string>
     <string name="insistent_alarm">Insistent alarm</string>
     <string name="usage">Note:\n\nLong-press on a lecture to set an alarm.</string>
-    <string name="set_alarm">Set alarm</string>
 	<string name="libraries">
 		This application uses the following libraries:
 		Kotlin, Google Support Library v4, Google AppCompat Library v7, Email Intent Builder,
@@ -64,21 +96,13 @@
     <string name="copyright_notes" translatable="false">
         Copyright 2013-2018 johnjohndoe.
         \nCopyright 2011-2015 Daniel Dorau.
-        \nContributions from Andreas Schildbach, bjoernb, cketti, codingcatgirl, entropynil, ligi, MichaelRocks, Poschi, SubOptimal, Torsten Grote.
+        \nContributions from Andreas Schildbach, bjoernb, cketti, codingcatgirl, entropynil, ligi, MichaelRocks, Poschi, Stefan Medack, SubOptimal, Torsten Grote.
         \nPortions Copyright 2008-2011 The K-9 Dog Walkers and 2006-2013 the Android Open Source Project.
     </string>
 	<string name="issues">
 		<![CDATA[<a href="https://github.com/EventFahrplan/EventFahrplan/issues">Issues or feature requests</a>]]>
 	</string>
-    <string name="delete_alarm">Clear alarm</string>
     <string name="today">today</string>
-    <string name="addToCalendar">Add to calendar</string>
-    <string name="share">Share</string>
-    <string name="flag_as_favorite">Add to favorites</string>
-    <string name="navigate">Navigate</string>
-    <string name="unflag_as_favorite">Remove from favorites</string>
-    <string name="uptodate">Schedule is up to date.</string>
-    <string name="event_details_close">Close event details</string>
     <string name="pref_auto_download">Automatic updates</string>
     <string name="parsing_error_generic">Unknown error while parsing schedule</string>
     <string name="parsing_error_with_version">Parsing error for schedule version %s</string>
@@ -91,30 +115,15 @@
     <string name="no_changes">No schedule changes</string>
     <string name="no_favorites">No favorite lectures</string>
     <string name="schedule_changes">Schedule changes</string>
-    <string name="changes_dlg_text1">The schedule has been updated to</string>
-    <string name="changes_dlg_text2">. There are changes in <xliff:g id="num_changes" example="3 lectures">%2$s</xliff:g>, <xliff:g id="num_new" example="2 are">%3$s</xliff:g> new, <xliff:g id="num_canceled" example="1 is">%4$s</xliff:g> cancelled.</string>
-    <string name="changes_dlg_text3">The changes affect <xliff:g id="num_marked" example="2">%1$d</xliff:g> of your marked lectures.</string>
 
-    <plurals name="numberOfLectures">
-        <item quantity="one">%d lecture</item>
-        <item quantity="other">%d lectures</item>
-    </plurals>
-    <plurals name="being">
-        <item quantity="one">%d is</item>
-        <item quantity="other">%d are</item>
-    </plurals>
     <string name="dash" translatable="false"><xliff:g id="dash">—</xliff:g></string>
     <string name="general_settings">General</string>
-    <string name="schedule_udpate">Schedule update</string>
-    <string name="action_show_starred_lectures">Show favorites</string>
     <string name="starred_lectures">Favorites</string>
     <string name="schedule_url">Alternative schedule URL</string>
     <string name="invalid_url">Invalid URL</string>
     <string name="choose_to_delete">Select lectures</string>
     <string name="day_separator">Day <xliff:g id="day_of_congress" example="2">%1$d</xliff:g> - <xliff:g id="date_of_congress_day" example="29.12.2014">%2$s</xliff:g></string>
     <string name="event_duration"><xliff:g id="duration" example="45">%1$d</xliff:g> min.</string>
-    <string name="btn_dlg_browse">Browse</string>
-    <string name="btn_dlg_later">Later</string>
     <string name="alternative_highlight">Alternative highlighting</string>
     <string name="dlg_delete_all_favorites">Delete all favorites?</string>
     <string name="dlg_delete_all_favorites_delete_all">Delete all</string>
@@ -190,5 +199,9 @@
         <item quantity="one"><xliff:g id="count" example="1">%d</xliff:g> lecture has changed.</item>
         <item quantity="other"><xliff:g id="count" example="3">%d</xliff:g> lectures have been changed.</item>
     </plurals>
+
+    <!-- Preferences -->
+    <string name="preferences_reminder_tone_default_value" translatable="false"/>
+    <string name="preferences_schedule_url_default_value" translatable="false"/>
 
 </resources>

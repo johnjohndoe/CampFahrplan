@@ -12,13 +12,13 @@ import org.ligi.tracedroid.logging.Log;
 import java.util.List;
 
 import nerd.tuxmobil.fahrplan.congress.MyApp;
+import nerd.tuxmobil.fahrplan.congress.R;
 import nerd.tuxmobil.fahrplan.congress.alarms.AlarmReceiver;
 import nerd.tuxmobil.fahrplan.congress.alarms.AlarmServices;
 import nerd.tuxmobil.fahrplan.congress.autoupdate.UpdateService;
 import nerd.tuxmobil.fahrplan.congress.dataconverters.AlarmExtensions;
 import nerd.tuxmobil.fahrplan.congress.models.Alarm;
 import nerd.tuxmobil.fahrplan.congress.models.SchedulableAlarm;
-import nerd.tuxmobil.fahrplan.congress.net.ConnectivityStateReceiver;
 import nerd.tuxmobil.fahrplan.congress.repositories.AppRepository;
 import nerd.tuxmobil.fahrplan.congress.utils.FahrplanMisc;
 
@@ -61,13 +61,10 @@ public final class OnBootReceiver extends BroadcastReceiver {
             }
         }
 
-        if (ConnectivityStateReceiver.isEnabled(context)) {
-            ConnectivityStateReceiver.disableReceiver(context);
-        }
-
         // start auto updates
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
-        boolean doAutoUpdates = prefs.getBoolean("auto_update", false);
+        boolean defaultValue = context.getResources().getBoolean(R.bool.preferences_auto_update_enabled_default_value);
+        boolean doAutoUpdates = prefs.getBoolean("auto_update", defaultValue);
         if (doAutoUpdates) {
             long lastFetch = prefs.getLong("last_fetch", 0);
             long nowMillis;

@@ -25,11 +25,10 @@ android {
     buildToolsVersion Android.buildToolsVersion
 
     defaultConfig {
-        versionCode 45
-        versionName "1.34.0"
+        versionCode 48
+        versionName "1.36.0"
         minSdkVersion Android.minSdkVersion
         targetSdkVersion Android.targetSdkVersion
-
         archivesBaseName = "Fahrplan-$versionName"
 
         // Build information
@@ -85,9 +84,8 @@ android {
             applicationId "nerd.tuxmobil.fahrplan.camp"
             signingConfig signingConfigs.camp2015
             buildConfigField "String", "SCHEDULE_URL", '"https://events.ccc.de/camp/2015/Fahrplan/schedule.xml"'
-            buildConfigField "String", "SCHEDULE_DOMAIN_PART", '"http://events.ccc.de"'
-            buildConfigField "String", "SCHEDULE_EVENT_PART", '"/events/%1$s.html"'
-            buildConfigField "String", "SCHEDULE_PART", '"/camp/2015/Fahrplan"'
+            buildConfigField "String", "EVENT_URL", '"http://events.ccc.de/camp/2015/Fahrplan/events/%1$s.html"'
+            buildConfigField "String", "SERVER_BACKEND_TYPE", '"frab"'
             buildConfigField "String", "VENUE", '"mildenberg"'
             buildConfigField "int", "SCHEDULE_FIRST_DAY_START_YEAR", "2015"
             buildConfigField "int", "SCHEDULE_FIRST_DAY_START_MONTH", "8"
@@ -96,7 +94,6 @@ android {
             buildConfigField "int", "SCHEDULE_LAST_DAY_END_MONTH", "8"
             buildConfigField "int", "SCHEDULE_LAST_DAY_END_DAY", "17"
             buildConfigField "boolean", "SHOW_APP_DISCLAIMER", "false"
-            buildConfigField "boolean", "COMPOSE_EVENT_URL_FROM_SLUG", "false"
             buildConfigField "String", "TRACE_DROID_EMAIL_ADDRESS", '"ENTER_EMAIL_ADDRESS_HERE"'
             buildConfigField "String", "SCHEDULE_FEEDBACK_URL", '"https://frab.cccv.de/en/camp2015/public/events/%s/feedback/new"'
 
@@ -106,9 +103,8 @@ android {
             applicationId "info.metadude.android.congress.schedule"
             signingConfig signingConfigs.ccc34c3
             buildConfigField "String", "SCHEDULE_URL", '"https://raw.githubusercontent.com/voc/34C3_schedule/master/everything.schedule.xml"'
-            buildConfigField "String", "SCHEDULE_DOMAIN_PART", '"https://events.ccc.de"'
-            buildConfigField "String", "SCHEDULE_EVENT_PART", '"/events/%1$s.html"'
-            buildConfigField "String", "SCHEDULE_PART", '"/congress/2017/Fahrplan"'
+            buildConfigField "String", "EVENT_URL", '"https://events.ccc.de/congress/2017/Fahrplan/events/%1$s.html"'
+            buildConfigField "String", "SERVER_BACKEND_TYPE", '"frab"'
             buildConfigField "String", "VENUE", '"leipzig-messe"'
             buildConfigField "int", "SCHEDULE_FIRST_DAY_START_YEAR", "2017"
             buildConfigField "int", "SCHEDULE_FIRST_DAY_START_MONTH", "12"
@@ -117,18 +113,16 @@ android {
             buildConfigField "int", "SCHEDULE_LAST_DAY_END_MONTH", "12"
             buildConfigField "int", "SCHEDULE_LAST_DAY_END_DAY", "31"
             buildConfigField "boolean", "SHOW_APP_DISCLAIMER", "false"
-            buildConfigField "boolean", "COMPOSE_EVENT_URL_FROM_SLUG", "false"
             buildConfigField "String", "TRACE_DROID_EMAIL_ADDRESS", '"tobias.preuss+34c3@googlemail.com"'
             buildConfigField "String", "SCHEDULE_FEEDBACK_URL", '"https://frab.cccv.de/en/34C3/public/events/%s/feedback/new"'
         }
         bitsundbaeume2018 {
             applicationId "info.metadude.android.bitsundbaeume.schedule"
-            versionName "1.34.0 (Bits \\u0026 Bäume Edition)"
+            versionName "1.36.0 (Bits \\u0026 Bäume Edition)"
             signingConfig signingConfigs.bitsundbaeume2018
             buildConfigField "String", "SCHEDULE_URL", '"https://fahrplan.bits-und-baeume.org/schedule.xml"'
-            buildConfigField "String", "SCHEDULE_DOMAIN_PART", '"https://fahrplan.bits-und-baeume.org"'
-            buildConfigField "String", "SCHEDULE_EVENT_PART", '"/events/%1$s.html"'
-            buildConfigField "String", "SCHEDULE_PART", '""'
+            buildConfigField "String", "EVENT_URL", '"https://fahrplan.bits-und-baeume.org/events/%1$s.html"'
+            buildConfigField "String", "SERVER_BACKEND_TYPE", '"frab"'
             buildConfigField "String", "VENUE", '"tu-berlin"'
             buildConfigField "int", "SCHEDULE_FIRST_DAY_START_YEAR", "2018"
             buildConfigField "int", "SCHEDULE_FIRST_DAY_START_MONTH", "11"
@@ -137,7 +131,6 @@ android {
             buildConfigField "int", "SCHEDULE_LAST_DAY_END_MONTH", "11"
             buildConfigField "int", "SCHEDULE_LAST_DAY_END_DAY", "19"
             buildConfigField "boolean", "SHOW_APP_DISCLAIMER", "true"
-            buildConfigField "boolean", "COMPOSE_EVENT_URL_FROM_SLUG", "false"
             buildConfigField "String", "TRACE_DROID_EMAIL_ADDRESS", '"tobias.preuss+bitsundbaeume@googlemail.com"'
             buildConfigField "String", "SCHEDULE_FEEDBACK_URL", '"https://frab.bits-und-baeume.org/de/bub2018/public/events/%s/feedback/new"'
         }
@@ -170,6 +163,7 @@ tasks.withType(Test) {
 
 dependencies {
     implementation project(":database")
+    implementation project(":network")
 
     implementation Libs.kotlinStdlib
     implementation Libs.supportLibraryAppcompatV7
@@ -184,6 +178,7 @@ dependencies {
     testImplementation Libs.assertjAndroid
     testImplementation Libs.supportLibraryAnnotations
     testImplementation Libs.mockitoCore
+    testImplementation Libs.threeTenBp
 }
 
 def gitSha() {

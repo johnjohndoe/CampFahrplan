@@ -10,20 +10,21 @@ object Versions {
     val gradleVersions = "0.20.0"
     val junit = "4.12"
     val kotlin = "1.2.51"
-    val mockito = "2.20.0"
+    val mockito = "2.22.0"
     val okhttp = "3.11.0"
     val snackengage = "0.15"
     val sonarQubeGradle = "2.6.2"
     val supportLibrary = "26.1.0"
     val testRules = "1.0.2"
+    val threeTenBp = "1.3.7"
     val tracedroid = "1.4"
 }
 
 object Android {
-    val buildToolsVersion = "28.0.1"
+    val buildToolsVersion = "28.0.3"
     val compileSdkVersion = 26
     val minSdkVersion = 14
-    val targetSdkVersion = 23
+    val targetSdkVersion = 25
 }
 
 object GradlePlugins {
@@ -47,5 +48,6 @@ object Libs {
     val supportLibraryAppcompatV7 = "com.android.support:appcompat-v7:${Versions.supportLibrary}"
     val supportLibraryDesign = "com.android.support:design:${Versions.supportLibrary}"
     val testRules = "com.android.support.test:rules:${Versions.testRules}"
+    val threeTenBp = "org.threeten:threetenbp:${Versions.threeTenBp}"
     val tracedroid = "org.ligi:tracedroid:${Versions.tracedroid}"
 }

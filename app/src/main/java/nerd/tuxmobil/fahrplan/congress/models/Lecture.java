@@ -1,6 +1,7 @@
 package nerd.tuxmobil.fahrplan.congress.models;
 
 import android.support.annotation.NonNull;
+import android.text.TextUtils;
 import android.text.format.Time;
 
 public class Lecture {
@@ -14,6 +15,8 @@ public class Lecture {
     public String room;
 
     public String slug;
+
+    public String url;
 
     public int startTime;                // minutes since day start
 
@@ -111,16 +114,6 @@ public class Lecture {
         return links == null ? "" : links;
     }
 
-    public static int parseStartTime(String text) {
-        String time[] = text.split(":");
-        return Integer.parseInt(time[0]) * 60 + Integer.parseInt(time[1]);
-    }
-
-    public static int parseDuration(String text) {
-        String time[] = text.split(":");
-        return Integer.parseInt(time[0]) * 60 + Integer.parseInt(time[1]);
-    }
-
     public Time getTime() {
         Time t = new Time();
         String[] splitDate = date.split("-");
@@ -208,6 +201,15 @@ public class Lecture {
 
     public String getFormattedSpeakers() {
         return speakers.replaceAll(";", ", ");
+    }
+
+    public String getFormattedTrackText() {
+        StringBuilder builder = new StringBuilder();
+        builder.append(track);
+        if (!TextUtils.isEmpty(lang)) {
+            builder.append(" [").append(lang).append("]");
+        }
+        return builder.toString();
     }
 
 }
