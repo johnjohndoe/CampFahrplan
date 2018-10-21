@@ -26,7 +26,7 @@ android {
 
     defaultConfig {
         versionCode 48
-        versionName "1.36.0"
+        versionName "1.37.0"
         minSdkVersion Android.minSdkVersion
         targetSdkVersion Android.targetSdkVersion
         archivesBaseName = "Fahrplan-$versionName"
@@ -118,7 +118,7 @@ android {
         }
         bitsundbaeume2018 {
             applicationId "info.metadude.android.bitsundbaeume.schedule"
-            versionName "1.36.0 (Bits \\u0026 Bäume Edition)"
+            versionName "1.37.0 (Bits \\u0026 Bäume Edition)"
             signingConfig signingConfigs.bitsundbaeume2018
             buildConfigField "String", "SCHEDULE_URL", '"https://fahrplan.bits-und-baeume.org/schedule.xml"'
             buildConfigField "String", "EVENT_URL", '"https://fahrplan.bits-und-baeume.org/events/%1$s.html"'
