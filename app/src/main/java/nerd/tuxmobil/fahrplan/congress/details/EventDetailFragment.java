@@ -135,6 +135,7 @@ public class EventDetailFragment extends Fragment {
     public void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
         outState.putString(BundleKeys.EVENT_ID, event_id);
+        outState.putInt(BundleKeys.EVENT_DAY, day);
     }
 
     @Override
@@ -142,6 +143,7 @@ public class EventDetailFragment extends Fragment {
         super.onActivityCreated(savedInstanceState);
         if (savedInstanceState != null) {
             event_id = savedInstanceState.getString(BundleKeys.EVENT_ID);
+            day = savedInstanceState.getInt(BundleKeys.EVENT_DAY);
         }
     }
 
@@ -152,6 +154,7 @@ public class EventDetailFragment extends Fragment {
         FragmentActivity activity = getActivity();
         Log.d(getClass().getName(), "activity: " + activity);
         Log.d(getClass().getName(), "eventId: " + event_id);
+        Log.d(getClass().getName(), "day: " + day);
         if (hasArguments) {
             AssetManager assetManager = activity.getAssets();
             boldCondensed = Typeface.createFromAsset(assetManager, "Roboto-BoldCondensed.ttf");
@@ -346,14 +349,17 @@ public class EventDetailFragment extends Fragment {
 
     private Lecture eventIdToLecture(String eventId) {
         if (MyApp.lectureList == null) {
-            return null;
+            FahrplanFragment.loadLectureList(getActivity(), day, false);
+        }
+        if (MyApp.lectureList == null) {
+            throw new NullPointerException("Lecture list is null.");
         }
         for (Lecture lecture : MyApp.lectureList) {
             if (lecture.lecture_id.equals(eventId)) {
                 return lecture;
             }
         }
-        return null;
+        throw new IllegalStateException("Lecture list does not contain eventId: " + eventId);
     }
 
     @Override
