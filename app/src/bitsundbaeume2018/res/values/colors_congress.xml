@@ -11,7 +11,9 @@
     <color name="event_border_default_grosse_fragen">#C763C2</color>
     <color name="event_border_default_materielle_basis">#B0C965</color>
     <color name="event_border_default_digitaler_kapitalismus">#C96565</color>
-    <color name="event_border_default_reclaim_smart_city">#636AC7</color>
+    <color name="event_border_default_pause">#A6A6A6</color>
+    <color name="event_border_default_reclaim_smart_city">#6AC763</color>
+    <color name="event_border_default_stadt_land_smart">#636AC7</color>
     <color name="event_border_default_zivilgesellschaft_und_communities">#9765C9</color>
 
     <!--Accent color-->
@@ -22,7 +24,9 @@
     <color name="event_border_accent_grosse_fragen">#fa7df4</color>
     <color name="event_border_accent_materielle_basis">#dcfc7e</color>
     <color name="event_border_accent_digitaler_kapitalismus">#fc7e7e</color>
-    <color name="event_border_accent_reclaim_smart_city">#7d85fa</color>
+    <color name="event_border_accent_pause">#e6e6e6</color>
+    <color name="event_border_accent_reclaim_smart_city">#85fa7d</color>
+    <color name="event_border_accent_stadt_land_smart">#7d85fa</color>
     <color name="event_border_accent_zivilgesellschaft_und_communities">#bd7efc</color>
 
     <!-- Highlight state -->
@@ -33,7 +37,9 @@
     <color name="event_border_highlight_grosse_fragen">@color/event_border_accent_grosse_fragen</color>
     <color name="event_border_highlight_materielle_basis">@color/event_border_accent_materielle_basis</color>
     <color name="event_border_highlight_digitaler_kapitalismus">@color/event_border_accent_digitaler_kapitalismus</color>
+    <color name="event_border_highlight_pause">@color/event_border_accent_pause</color>
     <color name="event_border_highlight_reclaim_smart_city">@color/event_border_accent_reclaim_smart_city</color>
+    <color name="event_border_highlight_stadt_land_smart">@color/event_border_accent_stadt_land_smart</color>
     <color name="event_border_highlight_zivilgesellschaft_und_communities">@color/event_border_accent_zivilgesellschaft_und_communities</color>
 
     <!--Accent color highlight-->
@@ -44,7 +50,9 @@
     <color name="event_border_accent_highlight_grosse_fragen">@color/event_border_default_grosse_fragen</color>
     <color name="event_border_accent_highlight_materielle_basis">@color/event_border_default_materielle_basis</color>
     <color name="event_border_accent_highlight_digitaler_kapitalismus">@color/event_border_default_digitaler_kapitalismus</color>
+    <color name="event_border_accent_highlight_pause">@color/event_border_default_pause</color>
     <color name="event_border_accent_highlight_reclaim_smart_city">@color/event_border_default_reclaim_smart_city</color>
+    <color name="event_border_accent_highlight_stadt_land_smart">@color/event_border_default_stadt_land_smart</color>
     <color name="event_border_accent_highlight_zivilgesellschaft_und_communities">@color/event_border_default_zivilgesellschaft_und_communities</color>
 
     <!-- Track color -->
