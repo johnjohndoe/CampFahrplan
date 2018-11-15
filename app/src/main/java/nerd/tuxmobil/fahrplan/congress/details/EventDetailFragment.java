@@ -95,6 +95,8 @@ public class EventDetailFragment extends Fragment {
 
     private Boolean sidePane = false;
 
+    private boolean requiresScheduleReload = false;
+
     private boolean hasArguments = false;
 
     @Override
@@ -128,6 +130,7 @@ public class EventDetailFragment extends Fragment {
         links = args.getString(BundleKeys.EVENT_LINKS);
         room = args.getString(BundleKeys.EVENT_ROOM);
         sidePane = args.getBoolean(BundleKeys.SIDEPANE, false);
+        requiresScheduleReload = args.getBoolean(BundleKeys.REQUIRES_SCHEDULE_RELOAD, false);
         hasArguments = true;
     }
 
@@ -165,7 +168,7 @@ public class EventDetailFragment extends Fragment {
 
             locale = getResources().getConfiguration().locale;
 
-            FahrplanFragment.loadLectureList(activity, day, false);
+            FahrplanFragment.loadLectureList(activity, day, requiresScheduleReload);
             lecture = eventIdToLecture(event_id);
 
             TextView t;
@@ -348,9 +351,6 @@ public class EventDetailFragment extends Fragment {
     }
 
     private Lecture eventIdToLecture(String eventId) {
-        if (MyApp.lectureList == null) {
-            FahrplanFragment.loadLectureList(getActivity(), day, false);
-        }
         if (MyApp.lectureList == null) {
             throw new NullPointerException("Lecture list is null.");
         }
