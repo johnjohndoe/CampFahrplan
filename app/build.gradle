@@ -67,6 +67,12 @@ android {
             keyAlias props['signing.ccc35c3-release.keyAlias']
             keyPassword props['signing.ccc35c3-release.keyPassword']
         }
+        fosdem {
+            storeFile file(props['signing.fosdem-release.keystoreFilePath'])
+            storePassword props['signing.fosdem-release.keystorePassword']
+            keyAlias props['signing.fosdem-release.keyAlias']
+            keyPassword props['signing.fosdem-release.keyPassword']
+        }
     }
 
     def defaultDimension = "default"
@@ -113,6 +119,27 @@ android {
             buildConfigField "boolean", "ENGAGE_GOOGLE_PLAY_RATING", "true"
             buildConfigField "String", "TRACE_DROID_EMAIL_ADDRESS", '"tobias.preuss+35c3@googlemail.com"'
             buildConfigField "String", "SCHEDULE_FEEDBACK_URL", '"https://frab.cccv.de/en/35C3/public/events/%s/feedback/new"'
+        }
+        fosdem {
+            dimension defaultDimension
+            applicationId "info.metadude.android.fosdem.schedule"
+            versionName "1.38.5 (FOSDEM Edition)"
+            signingConfig signingConfigs.fosdem
+            buildConfigField "String", "SCHEDULE_URL", '"http://opentree.cygnus.uberspace.de/fosdem2019/schedule.xml"'
+            buildConfigField "String", "EVENT_URL", '"https://fosdem.org/2019/schedule/event/%1$s/"'
+            buildConfigField "String", "SERVER_BACKEND_TYPE", '"pentabarf"'
+            buildConfigField "int", "SCHEDULE_FIRST_DAY_START_YEAR", "2019"
+            buildConfigField "int", "SCHEDULE_FIRST_DAY_START_MONTH", "2"
+            buildConfigField "int", "SCHEDULE_FIRST_DAY_START_DAY", "2"
+            buildConfigField "int", "SCHEDULE_LAST_DAY_END_YEAR", "2019"
+            buildConfigField "int", "SCHEDULE_LAST_DAY_END_MONTH", "2"
+            buildConfigField "int", "SCHEDULE_LAST_DAY_END_DAY", "4"
+            buildConfigField "boolean", "SHOW_APP_DISCLAIMER", "true"
+            buildConfigField "boolean", "ENGAGE_C3NAV_APP_INSTALLATION", "false"
+            buildConfigField "boolean", "ENGAGE_GOOGLE_BETA_TESTING", "true"
+            buildConfigField "boolean", "ENGAGE_GOOGLE_PLAY_RATING", "true"
+            buildConfigField "String", "TRACE_DROID_EMAIL_ADDRESS", '"tobias.preuss+fosdem@googlemail.com"'
+            buildConfigField "String", "SCHEDULE_FEEDBACK_URL", '"https://submission.fosdem.org/feedback/%1$s.php"'
         }
     }
 
