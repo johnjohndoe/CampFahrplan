@@ -10,28 +10,23 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class RoomForC3NavConverterTest {
 
     @Test
-    public void convertWithAdams() {
-        assertThat(RoomForC3NavConverter.convert("Adams")).isEqualTo("hall-a");
+    public void convertWithAW1120() {
+        assertThat(RoomForC3NavConverter.convert("AW1.120")).isEqualTo("aw1-120");
     }
 
     @Test
-    public void convertWithBorg() {
-        assertThat(RoomForC3NavConverter.convert("Borg")).isEqualTo("hall-b");
+    public void convertWithH1301Cornil() {
+        assertThat(RoomForC3NavConverter.convert("H.1301 (Cornil)")).isEqualTo("h1301");
     }
 
     @Test
-    public void convertWithClarke() {
-        assertThat(RoomForC3NavConverter.convert("Clarke")).isEqualTo("hall-c");
+    public void convertWithJanson() {
+        assertThat(RoomForC3NavConverter.convert("Janson")).isEqualTo("j-main");
     }
 
     @Test
-    public void convertWithDijkstra() {
-        assertThat(RoomForC3NavConverter.convert("Dijkstra")).isEqualTo("hall-d");
-    }
-
-    @Test
-    public void convertWithEliza() {
-        assertThat(RoomForC3NavConverter.convert("Eliza")).isEqualTo("hall-e");
+    public void convertWithUD2Corridor() {
+        assertThat(RoomForC3NavConverter.convert("UD2.Corridor")).isEqualTo("545fe4c1e56d7");
     }
 
     @Test
