@@ -12,6 +12,7 @@
     <string name="menu_item_title_set_alarm">Alarm setzen</string>
     <string name="menu_item_title_delete_alarm">Alarm löschen</string>
     <string name="menu_item_title_delete_all">Alle löschen</string>
+    <string name="menu_item_title_map">Umgebungskarte</string>
     <string name="menu_item_title_favorites">Favoriten</string>
     <string name="menu_item_title_feedback">Feedback</string>
     <string name="menu_item_title_navigate">Navigiere</string>
@@ -86,7 +87,7 @@
 	<string name="libraries">
 		Die Anwendung nutzt folgende Bibliotheken:
 		Kotlin, Google Support Library v4, Google AppCompat Library v7, Email Intent Builder,
-		Espresso, OkHttp, SnackEngage, TraceDroid
+		Espresso, OkHttp, PhotoView, SnackEngage, TraceDroid
 	</string>
 	<string name="about_data_privacy_statement">
         <![CDATA[<a href="https://github.com/EventFahrplan/EventFahrplan/blob/master/DATA-PRIVACY-DE.md">Datenschutzerklärung</a>]]>
@@ -146,6 +147,9 @@
     <string name="snack_engage_google_play_beta_testing_action">Werde Beta-Tester</string>
     <string name="snack_engage_c3nav_title">Indoor-Navigation auf dem 35C3! Mit der c3nav-App</string>
     <string name="snack_engage_c3nav_action">Jetzt installieren!</string>
+
+    <!-- Map -->
+    <string name="map_title">Umgebungskarte</string>
 
     <!-- TraceDroid -->
     <string name="trace_droid_dialog_title">

@@ -46,6 +46,15 @@
                     android:name="android.support.PARENT_ACTIVITY"
                     android:value="nerd.tuxmobil.fahrplan.congress.schedule.MainActivity"/>
         </activity>
+        <activity
+            android:name=".navigation.MapActivity"
+            android:label="@string/map_title"
+            android:resizeableActivity="true"
+            android:parentActivityName="nerd.tuxmobil.fahrplan.congress.schedule.MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="nerd.tuxmobil.fahrplan.congress.schedule.MainActivity"/>
+        </activity>
 
         <receiver android:name=".alarms.AlarmReceiver">
         </receiver>

@@ -50,6 +50,8 @@ import nerd.tuxmobil.fahrplan.congress.favorites.StarredListActivity;
 import nerd.tuxmobil.fahrplan.congress.favorites.StarredListFragment;
 import nerd.tuxmobil.fahrplan.congress.models.Lecture;
 import nerd.tuxmobil.fahrplan.congress.models.Meta;
+import nerd.tuxmobil.fahrplan.congress.navigation.MapActivity;
+import nerd.tuxmobil.fahrplan.congress.navigation.MapFragment;
 import nerd.tuxmobil.fahrplan.congress.net.CertificateDialogFragment;
 import nerd.tuxmobil.fahrplan.congress.net.CustomHttpClient;
 import nerd.tuxmobil.fahrplan.congress.net.FetchScheduleResult;
@@ -336,6 +338,9 @@ public class MainActivity extends BaseActivity implements
             case R.id.menu_item_favorites:
                 openFavorites();
                 return true;
+            case R.id.menu_item_map:
+                openMap();
+                return true;
             default:
         }
         return super.onOptionsItemSelected(item);
@@ -485,6 +490,18 @@ public class MainActivity extends BaseActivity implements
             sidePane.setVisibility(View.VISIBLE);
             replaceFragment(R.id.detail, StarredListFragment.newInstance(true),
                     StarredListFragment.FRAGMENT_TAG, StarredListFragment.FRAGMENT_TAG);
+        }
+    }
+
+    private void openMap() {
+        FrameLayout sidePane = findViewById(R.id.detail);
+        if (sidePane == null) {
+            Intent intent = new Intent(this, MapActivity.class);
+            startActivityForResult(intent, MyApp.MAP);
+        } else {
+            sidePane.setVisibility(View.VISIBLE);
+            replaceFragment(R.id.detail, MapFragment.newInstance(),
+                    MapFragment.FRAGMENT_TAG, MapFragment.FRAGMENT_TAG);
         }
     }
 

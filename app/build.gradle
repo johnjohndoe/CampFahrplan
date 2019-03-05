@@ -177,6 +177,7 @@ dependencies {
     implementation Libs.supportLibraryDesign
     implementation Libs.okhttp
     implementation Libs.okhttpLoggingInterceptor
+    implementation Libs.photoView
     implementation Libs.snackengagePlayrate
     implementation Libs.emailIntentBuilder
     implementation Libs.tracedroid

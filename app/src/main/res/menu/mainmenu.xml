@@ -9,6 +9,13 @@
             android:title="@string/menu_item_title_refresh">
     </item>
     <item
+            android:id="@+id/menu_item_map"
+            android:icon="@drawable/ic_action_map_white_24px"
+            app:showAsAction="ifRoom"
+            android:title="@string/menu_item_title_map"
+            android:titleCondensed="@string/menu_item_title_map">
+    </item>
+    <item
             android:id="@+id/menu_item_favorites"
             android:icon="@drawable/ic_action_star_list_white_24px"
             app:showAsAction="ifRoom"

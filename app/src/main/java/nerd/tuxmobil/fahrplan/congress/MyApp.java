@@ -59,6 +59,7 @@ public class MyApp extends Application {
     final public static int CHANGELOG = 3;
     final public static int STARRED = 4;
     final public static int SETTINGS = 5;
+    final public static int MAP = 6;
 
     public static TASKS task_running = TASKS.NONE;
 
