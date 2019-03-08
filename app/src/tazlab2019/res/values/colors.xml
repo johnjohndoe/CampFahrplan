@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorPrimary">#a80a1a</color>
+    <color name="colorPrimaryDark">#890a17</color>
+    <color name="colorAccent">#ff0a1b</color>
+    <color name="colorActionBar">@color/colorPrimary</color>
+    <color name="windowBackground">#666666</color>
+    <color name="fahrplan_background">#1a1a1a</color>
+    <color name="text_link_color">@color/colorPrimary</color>
+    <color name="multi_choice_background">#402424b3</color>
+    <color name="text_link_color_dark">@color/colorAccent</color>
+    <color name="alarm_list_icon_default_fill_color">@color/colorPrimary</color>
+    <color name="alarm_list_icon_default_stroke_color">#ddd</color>
+    <color name="alarm_list_icon_text_color">#fff</color>
+    <color name="lecture_background">#ffffff</color>
+    <color name="lecture_detailbar_background">#eee</color>
+    <color name="lecture_detailbar_text">#999</color>
+    <color name="schedule_list_header_background">#eee</color>
+    <color name="schedule_list_header_text">@color/colorPrimary</color>
+    <color name="event_item_selection_stroke">#fff</color>
+
+</resources>
