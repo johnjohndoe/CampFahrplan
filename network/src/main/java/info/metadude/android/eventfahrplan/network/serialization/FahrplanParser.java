@@ -152,6 +152,9 @@ class ParserTask extends AsyncTask<String, Void, Boolean> {
                             if (end == null) {
                                 throw new MissingXmlAttributeException("day", "end");
                             }
+                            if (!end.endsWith("+01:00")) {
+                                end = end + "+01:00";
+                            }
                             dayChangeTime = DateHelper.getDayChange(end);
                             if (day > numdays) {
                                 numdays = day;
