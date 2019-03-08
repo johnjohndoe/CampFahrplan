@@ -34,7 +34,7 @@ before_script:
   - mv app/gradle.properties.example app/gradle.properties
 
 script:
-  - ./gradlew clean test assembleDebug
+  - ./gradlew clean testFossgisDebugUnitTest assembleFossgisDebug
 
 addons:
   # Fix OpenJDK builds
