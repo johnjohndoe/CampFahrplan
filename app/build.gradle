@@ -67,6 +67,12 @@ android {
             keyAlias props['signing.ccc35c3-release.keyAlias']
             keyPassword props['signing.ccc35c3-release.keyPassword']
         }
+        fossgis2019 {
+            storeFile file(props['signing.fossgis-release.keystoreFilePath'])
+            storePassword props['signing.fossgis-release.keystorePassword']
+            keyAlias props['signing.fossgis-release.keyAlias']
+            keyPassword props['signing.fossgis-release.keyPassword']
+        }
     }
 
     def defaultDimension = "default"
@@ -113,6 +119,26 @@ android {
             buildConfigField "boolean", "ENGAGE_GOOGLE_PLAY_RATING", "true"
             buildConfigField "String", "TRACE_DROID_EMAIL_ADDRESS", '"tobias.preuss+35c3@googlemail.com"'
             buildConfigField "String", "SCHEDULE_FEEDBACK_URL", '"https://frab.cccv.de/en/35C3/public/events/%s/feedback/new"'
+        }
+        fossgis2019 {
+            applicationId "info.metadude.android.fossgis.schedule"
+            versionName "1.38.5 (FOSSGIS Edition)"
+            signingConfig signingConfigs.fossgis2019
+            buildConfigField "String", "SCHEDULE_URL", '"https://pretalx.com/fossgis2019/schedule/export/schedule.xml"'
+            buildConfigField "String", "EVENT_URL", '"https://pretalx.com/fossgis2019/talk/%1$s"'
+            buildConfigField "String", "SERVER_BACKEND_TYPE", '"pretalx"'
+            buildConfigField "int", "SCHEDULE_FIRST_DAY_START_YEAR", "2019"
+            buildConfigField "int", "SCHEDULE_FIRST_DAY_START_MONTH", "3"
+            buildConfigField "int", "SCHEDULE_FIRST_DAY_START_DAY", "13"
+            buildConfigField "int", "SCHEDULE_LAST_DAY_END_YEAR", "2019"
+            buildConfigField "int", "SCHEDULE_LAST_DAY_END_MONTH", "3"
+            buildConfigField "int", "SCHEDULE_LAST_DAY_END_DAY", "17"
+            buildConfigField "boolean", "SHOW_APP_DISCLAIMER", "true"
+            buildConfigField "boolean", "ENGAGE_C3NAV_APP_INSTALLATION", "false"
+            buildConfigField "boolean", "ENGAGE_GOOGLE_BETA_TESTING", "true"
+            buildConfigField "boolean", "ENGAGE_GOOGLE_PLAY_RATING", "true"
+            buildConfigField "String", "TRACE_DROID_EMAIL_ADDRESS", '"tobias.preuss+fossgis@googlemail.com"'
+            buildConfigField "String", "SCHEDULE_FEEDBACK_URL", '""'
         }
     }
 

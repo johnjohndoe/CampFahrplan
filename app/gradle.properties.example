@@ -7,3 +7,8 @@ signing.ccc35c3-release.keystoreFilePath=/home/USERNAME/.android/ccc35c3-release
 signing.ccc35c3-release.keystorePassword="PASSWORD"
 signing.ccc35c3-release.keyAlias="ccc35c3"
 signing.ccc35c3-release.keyPassword="ANOTHERPASSWORD"
+
+signing.fossgis-release.keystoreFilePath=/home/USERNAME/.android/fossgis-release-key.keystore
+signing.fossgis-release.keystorePassword="PASSWORD"
+signing.fossgis-release.keyAlias="fossgis"
+signing.fossgis-release.keyPassword="ANOTHERPASSWORD"
