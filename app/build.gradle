@@ -67,6 +67,12 @@ android {
             keyAlias props['signing.ccc35c3-release.keyAlias']
             keyPassword props['signing.ccc35c3-release.keyPassword']
         }
+        tazlab2019 {
+            storeFile file(props['signing.tazlab-release.keystoreFilePath'])
+            storePassword props['signing.tazlab-release.keystorePassword']
+            keyAlias props['signing.tazlab-release.keyAlias']
+            keyPassword props['signing.tazlab-release.keyPassword']
+        }
     }
 
     def defaultDimension = "default"
@@ -113,6 +119,26 @@ android {
             buildConfigField "boolean", "ENGAGE_GOOGLE_PLAY_RATING", "true"
             buildConfigField "String", "TRACE_DROID_EMAIL_ADDRESS", '"tobias.preuss+35c3@googlemail.com"'
             buildConfigField "String", "SCHEDULE_FEEDBACK_URL", '"https://frab.cccv.de/en/35C3/public/events/%s/feedback/new"'
+        }
+        tazlab2019 {
+            applicationId "info.metadude.android.tazlab.schedule"
+            versionName "1.39.0 (taz lab-Edition)"
+            signingConfig signingConfigs.tazlab2019
+            buildConfigField "String", "SCHEDULE_URL", '"https://www.taz.de/programm/2019/HeimatEuropa/de/schedule.xml"'
+            buildConfigField "String", "EVENT_URL", '"https://www.taz.de/programm/2019/HeimatEuropa/de/events/%1$s.html"'
+            buildConfigField "String", "SERVER_BACKEND_TYPE", '"frab"'
+            buildConfigField "int", "SCHEDULE_FIRST_DAY_START_YEAR", "2019"
+            buildConfigField "int", "SCHEDULE_FIRST_DAY_START_MONTH", "4"
+            buildConfigField "int", "SCHEDULE_FIRST_DAY_START_DAY", "6"
+            buildConfigField "int", "SCHEDULE_LAST_DAY_END_YEAR", "2019"
+            buildConfigField "int", "SCHEDULE_LAST_DAY_END_MONTH", "4"
+            buildConfigField "int", "SCHEDULE_LAST_DAY_END_DAY", "7"
+            buildConfigField "boolean", "SHOW_APP_DISCLAIMER", "true"
+            buildConfigField "boolean", "ENGAGE_C3NAV_APP_INSTALLATION", "false"
+            buildConfigField "boolean", "ENGAGE_GOOGLE_BETA_TESTING", "true"
+            buildConfigField "boolean", "ENGAGE_GOOGLE_PLAY_RATING", "true"
+            buildConfigField "String", "TRACE_DROID_EMAIL_ADDRESS", '"tobias.preuss+tazlab@googlemail.com"'
+            buildConfigField "String", "SCHEDULE_FEEDBACK_URL", '""'
         }
     }
 

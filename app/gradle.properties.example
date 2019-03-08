@@ -7,3 +7,8 @@ signing.ccc35c3-release.keystoreFilePath=/home/USERNAME/.android/ccc35c3-release
 signing.ccc35c3-release.keystorePassword="PASSWORD"
 signing.ccc35c3-release.keyAlias="ccc35c3"
 signing.ccc35c3-release.keyPassword="ANOTHERPASSWORD"
+
+signing.tazlab-release.keystoreFilePath=/home/USERNAME/.android/tazlab-release-key.keystore
+signing.tazlab-release.keystorePassword="PASSWORD"
+signing.tazlab-release.keyAlias="tazlab"
+signing.tazlab-release.keyPassword="ANOTHERPASSWORD"
