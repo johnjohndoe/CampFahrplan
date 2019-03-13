@@ -3,7 +3,7 @@
 package nerd.tuxmobil.fahrplan.congress
 
 object Versions {
-    val androidGradle = "3.2.1"
+    val androidGradle = "3.3.2"
     val assertjAndroid = "1.2.0"
     val emailIntentBuilder = "1.0.0"
     val espresso = "3.0.2"
@@ -13,9 +13,9 @@ object Versions {
     val mockito = "2.25.0"
     val mockitoKotlin = "2.1.0"
     val okhttp = "3.12.1"
-    val snackengage = "0.18"
+    val snackengage = "0.19"
     val sonarQubeGradle = "2.7"
-    val supportLibrary = "26.1.0"
+    val supportLibrary = "27.1.1"
     val testRules = "1.0.2"
     val threeTenBp = "1.3.8"
     val tracedroid = "1.4"
@@ -23,9 +23,9 @@ object Versions {
 
 object Android {
     val buildToolsVersion = "28.0.3"
-    val compileSdkVersion = 26
+    val compileSdkVersion = 27
     val minSdkVersion = 14
-    val targetSdkVersion = 26
+    val targetSdkVersion = 27
 }
 
 object GradlePlugins {

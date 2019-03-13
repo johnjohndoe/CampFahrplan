@@ -2,7 +2,7 @@ package nerd.tuxmobil.fahrplan.congress.changes;
 
 import android.content.Context;
 import android.os.Bundle;
-import android.support.v4.app.FragmentActivity;
+import android.support.annotation.Nullable;
 import android.view.ContextThemeWrapper;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -67,7 +67,7 @@ public class ChangeListFragment extends AbstractListFragment {
     }
 
     @Override
-    public void onCreate(Bundle savedInstanceState) {
+    public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         Bundle args = getArguments();
@@ -76,11 +76,11 @@ public class ChangeListFragment extends AbstractListFragment {
             requiresScheduleReload = args.getBoolean(BundleKeys.REQUIRES_SCHEDULE_RELOAD);
         }
 
-        FragmentActivity activity = getActivity();
-        AppRepository appRepository = AppRepository.Companion.getInstance(activity);
+        Context context = requireContext();
+        AppRepository appRepository = AppRepository.Companion.getInstance(context);
         changesList = FahrplanMisc.readChanges(appRepository);
         Meta meta = appRepository.readMeta();
-        mAdapter = new LectureChangesArrayAdapter(activity, changesList, meta.getNumDays());
+        mAdapter = new LectureChangesArrayAdapter(context, changesList, meta.getNumDays());
         MyApp.LogDebug(LOG_TAG, "onCreate, " + changesList.size() + " changes");
     }
 
@@ -88,7 +88,7 @@ public class ChangeListFragment extends AbstractListFragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        final Context contextThemeWrapper = new ContextThemeWrapper(getActivity(),
+        final Context contextThemeWrapper = new ContextThemeWrapper(requireContext(),
                 R.style.Theme_AppCompat_Light);
 
         LayoutInflater localInflater = inflater.cloneInContext(contextThemeWrapper);
@@ -129,7 +129,7 @@ public class ChangeListFragment extends AbstractListFragment {
     }
 
     public void onRefresh() {
-        AppRepository appRepository = AppRepository.Companion.getInstance(getActivity());
+        AppRepository appRepository = AppRepository.Companion.getInstance(requireContext());
         List<Lecture> updatedChanges = FahrplanMisc.readChanges(appRepository);
         if (changesList != null) {
             changesList.clear();

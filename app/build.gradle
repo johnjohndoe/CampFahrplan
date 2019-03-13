@@ -25,8 +25,8 @@ android {
     buildToolsVersion Android.buildToolsVersion
 
     defaultConfig {
-        versionCode 56
-        versionName "1.38.5"
+        versionCode 57
+        versionName "1.39.0"
         minSdkVersion Android.minSdkVersion
         targetSdkVersion Android.targetSdkVersion
         archivesBaseName = "Fahrplan-$versionName"
@@ -122,7 +122,7 @@ android {
         }
         fossgis2019 {
             applicationId "info.metadude.android.fossgis.schedule"
-            versionName "1.38.5 (FOSSGIS Edition)"
+            versionName "1.39.0 (FOSSGIS Edition)"
             signingConfig signingConfigs.fossgis2019
             buildConfigField "String", "SCHEDULE_URL", '"https://pretalx.com/fossgis2019/schedule/export/schedule.xml"'
             buildConfigField "String", "EVENT_URL", '"https://pretalx.com/fossgis2019/talk/%1$s"'
