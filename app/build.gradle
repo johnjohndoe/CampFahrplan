@@ -67,6 +67,12 @@ android {
             keyAlias props['signing.ccc35c3-release.keyAlias']
             keyPassword props['signing.ccc35c3-release.keyPassword']
         }
+        gpn2019 {
+            storeFile file(props['signing.gpn-release.keystoreFilePath'])
+            storePassword props['signing.gpn-release.keystorePassword']
+            keyAlias props['signing.gpn-release.keyAlias']
+            keyPassword props['signing.gpn-release.keyPassword']
+        }
     }
 
     def defaultDimension = "default"
@@ -113,6 +119,26 @@ android {
             buildConfigField "boolean", "ENGAGE_GOOGLE_PLAY_RATING", "true"
             buildConfigField "String", "TRACE_DROID_EMAIL_ADDRESS", '"tobias.preuss+35c3@googlemail.com"'
             buildConfigField "String", "SCHEDULE_FEEDBACK_URL", '"https://frab.cccv.de/en/35C3/public/events/%s/feedback/new"'
+        }
+        gpn2019 {
+            applicationId "info.metadude.android.gpn.schedule"
+            versionName "1.39.0 (GPN-Edition)"
+            signingConfig signingConfigs.gpn2019
+            buildConfigField "String", "SCHEDULE_URL", '"https://pretalx.entropia.de/gpn19/schedule/export/schedule.xml"'
+            buildConfigField "String", "EVENT_URL", '"https://pretalx.entropia.de/gpn19/talk/%1$s"'
+            buildConfigField "String", "SERVER_BACKEND_TYPE", '"pretalx"'
+            buildConfigField "int", "SCHEDULE_FIRST_DAY_START_YEAR", "2019"
+            buildConfigField "int", "SCHEDULE_FIRST_DAY_START_MONTH", "5"
+            buildConfigField "int", "SCHEDULE_FIRST_DAY_START_DAY", "30"
+            buildConfigField "int", "SCHEDULE_LAST_DAY_END_YEAR", "2019"
+            buildConfigField "int", "SCHEDULE_LAST_DAY_END_MONTH", "6"
+            buildConfigField "int", "SCHEDULE_LAST_DAY_END_DAY", "3"
+            buildConfigField "boolean", "SHOW_APP_DISCLAIMER", "true"
+            buildConfigField "boolean", "ENGAGE_C3NAV_APP_INSTALLATION", "false"
+            buildConfigField "boolean", "ENGAGE_GOOGLE_BETA_TESTING", "true"
+            buildConfigField "boolean", "ENGAGE_GOOGLE_PLAY_RATING", "true"
+            buildConfigField "String", "TRACE_DROID_EMAIL_ADDRESS", '"tobias.preuss+gpn@googlemail.com"'
+            buildConfigField "String", "SCHEDULE_FEEDBACK_URL", '""'
         }
     }
 
