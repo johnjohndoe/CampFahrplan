@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">GPN 2019 Schedule</string>
+    <string name="app_hardcoded_subtitle">May 30 - June 2, 2019 &#8211; Staatliche Hochschule für Gestaltung (HfG), Karlsruhe</string>
+    <string name="conference_url">
+        <![CDATA[<a href="https://entropia.de/GPN19">https://entropia.de/GPN19</a>]]>
+    </string>
+    <string name="source_code">
+        <![CDATA[<a href="https://github.com/johnjohndoe/CampFahrplan/tree/gpn-2019">Quellcode</a>]]>
+    </string>
+    <string name="google_play_store">
+        <![CDATA[<a href="https://play.google.com/store/apps/details?id=info.metadude.android.gpn.schedule">Google PlayStore listing</a>]]>
+    </string>
+    <string name="copyright_logo">
+        Design of the GPN logo: Carolin Lebek
+    </string>
+</resources>
