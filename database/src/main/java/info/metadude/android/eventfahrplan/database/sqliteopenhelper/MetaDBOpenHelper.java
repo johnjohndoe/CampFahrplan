@@ -49,7 +49,7 @@ public class MetaDBOpenHelper extends SQLiteOpenHelper {
                     Columns.ETAG + " TEXT DEFAULT " + Defaults.ETAG_DEFAULT);
         }
         if (oldVersion < 4) {
-            // Clear database from 34C3.
+            // Clear database from 34C3 or GPN 2018.
             db.execSQL("DROP TABLE IF EXISTS " + MetasTable.NAME);
             onCreate(db);
         }
