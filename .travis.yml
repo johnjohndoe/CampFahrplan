@@ -37,7 +37,7 @@ before_script:
   - echo "org.gradle.jvmargs=-Xmx2048m -Xms512m -XX:MaxPermSize=768m" >> gradle.properties
 
 script:
-  - ./gradlew clean test assembleDebug
+  - ./gradlew clean testGpn2019DebugUnitTest assembleGpn2019Debug
 
 addons:
   # Fix OpenJDK builds
