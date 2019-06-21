@@ -115,7 +115,7 @@ class AppRepository private constructor(val context: Context) {
 
     private fun storeConferenceDays(conferenceDays: List<ConferenceDay>) {
         val metaAppModel = conferenceDays.toMetaAppModel()
-        updateMeta(metaAppModel)
+        updateMeta(metaAppModel.copy(version = "1.0.0"))
         val eventAppModels = conferenceDays.toEventAppModels()
         val oldLectures = FahrplanMisc.loadLecturesForAllDays(this)
         val hasChanged = ScheduleChanges.hasScheduleChanged(eventAppModels, oldLectures)
