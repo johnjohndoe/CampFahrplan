@@ -242,12 +242,11 @@ public class MainActivity extends BaseActivity implements
             MyApp.task_running = TASKS.FETCH;
             showFetchingStatus();
             AppRepository appRepository = AppRepository.Companion.getInstance(this);
-            String url = appRepository.readScheduleUrl();
-            appRepository.loadSchedule(url, MyApp.meta.getETag(), fetchScheduleResult -> {
-                onGotResponse(fetchScheduleResult);
+            appRepository.loadSchedule(fetchScheduleResult -> {
+                runOnUiThread(() -> onGotResponse(fetchScheduleResult));
                 return null;
             }, (result, version) -> {
-                onParseDone(result, version);
+                runOnUiThread(() -> onParseDone(result, version));
                 return null;
             });
         } else {

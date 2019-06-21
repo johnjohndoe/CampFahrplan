@@ -173,7 +173,10 @@ tasks.withType(Test) {
 dependencies {
     implementation project(":database")
     implementation project(":network")
+    implementation project(":sessionize")
 
+    implementation Libs.kotlinCoroutinesAndroid
+    implementation Libs.kotlinCoroutinesCore
     implementation Libs.kotlinStdlib
     implementation Libs.supportLibraryAppcompatV7
     implementation Libs.supportLibraryDesign

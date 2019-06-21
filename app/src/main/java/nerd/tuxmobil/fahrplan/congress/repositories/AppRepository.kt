@@ -12,6 +12,13 @@ import info.metadude.android.eventfahrplan.database.sqliteopenhelper.HighlightDB
 import info.metadude.android.eventfahrplan.database.sqliteopenhelper.LecturesDBOpenHelper
 import info.metadude.android.eventfahrplan.database.sqliteopenhelper.MetaDBOpenHelper
 import info.metadude.android.eventfahrplan.network.repositories.ScheduleNetworkRepository
+import info.metadude.android.eventfahrplan.sessionize.SessionizeNetworkRepository
+import info.metadude.android.eventfahrplan.sessionize.SessionizeResult
+import info.metadude.kotlin.library.sessionize.ApiModule
+import info.metadude.kotlin.library.sessionize.gridtable.models.ConferenceDay
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.launch
 import nerd.tuxmobil.fahrplan.congress.BuildConfig
 import nerd.tuxmobil.fahrplan.congress.dataconverters.*
 import nerd.tuxmobil.fahrplan.congress.models.Alarm
@@ -24,6 +31,7 @@ import nerd.tuxmobil.fahrplan.congress.preferences.SharedPreferencesRepository
 import nerd.tuxmobil.fahrplan.congress.serialization.ScheduleChanges
 import nerd.tuxmobil.fahrplan.congress.utils.FahrplanMisc
 import okhttp3.OkHttpClient
+import org.ligi.tracedroid.logging.Log
 import java.security.KeyManagementException
 import java.security.NoSuchAlgorithmException
 
@@ -43,9 +51,80 @@ class AppRepository private constructor(val context: Context) {
     private val metaDBOpenHelper = MetaDBOpenHelper(context)
     private val metaDatabaseRepository = MetaDatabaseRepository(metaDBOpenHelper)
 
+    private var sessionizeNetworkRepository: SessionizeNetworkRepository? = null
+
     private val scheduleNetworkRepository = ScheduleNetworkRepository()
 
     private val sharedPreferencesRepository = SharedPreferencesRepository(context)
+
+    fun loadSchedule(onFetchingDone: (fetchScheduleResult: FetchScheduleResult) -> Unit,
+                     onParsingDone: (result: Boolean, version: String) -> Unit) {
+
+        val hostName = BuildConfig.SESSIONIZE_HOST
+        if (sessionizeNetworkRepository == null) {
+            val okHttpClient: OkHttpClient?
+            try {
+                okHttpClient = CustomHttpClient.createHttpClient(hostName)
+            } catch (e: KeyManagementException) {
+                onFetchingDone(FetchScheduleResult(httpStatus = e.toHttpStatus(), hostName = hostName))
+                return
+            } catch (e: NoSuchAlgorithmException) {
+                onFetchingDone(FetchScheduleResult(httpStatus = e.toHttpStatus(), hostName = hostName))
+                return
+            }
+
+            val sessionizeService = ApiModule.provideSessionizeService(hostName, okHttpClient)
+            sessionizeNetworkRepository = SessionizeNetworkRepository(
+                    sessionizeService, BuildConfig.SESSIONIZE_API_KEY)
+        }
+
+        GlobalScope.launch {
+            sessionizeNetworkRepository?.loadConferenceDays { result ->
+                when (result) {
+                    is SessionizeResult.Values -> {
+                        storeConferenceDays(result.conferenceDays)
+                        onFetchingDone(
+                                FetchScheduleResult(
+                                        httpStatus = HttpStatus.HTTP_OK,
+                                        hostName = hostName
+                                ))
+                        onParsingDone(true, "1.0.0")
+                    }
+                    is SessionizeResult.Error -> {
+                        Log.e(javaClass.name, result.toString())
+                        onFetchingDone(
+                                FetchScheduleResult(
+                                        httpStatus = result.httpStatus,
+                                        hostName = hostName
+                                ))
+                    }
+                    is SessionizeResult.Exception -> {
+                        Log.e(javaClass.name, result.toString())
+                        result.throwable.printStackTrace()
+                        onFetchingDone(
+                                FetchScheduleResult(
+                                        httpStatus = result.throwable.toHttpStatus(),
+                                        hostName = hostName,
+                                        exceptionMessage = result.throwable.message ?: ""
+                                ))
+                    }
+                }
+            }
+        }
+    }
+
+    private fun storeConferenceDays(conferenceDays: List<ConferenceDay>) {
+        val metaAppModel = conferenceDays.toMetaAppModel()
+        updateMeta(metaAppModel)
+        val eventAppModels = conferenceDays.toEventAppModels()
+        val oldLectures = FahrplanMisc.loadLecturesForAllDays(this)
+        val hasChanged = ScheduleChanges.hasScheduleChanged(eventAppModels, oldLectures)
+        if (hasChanged) {
+            resetChangesSeenFlag()
+        }
+        updateLectures(eventAppModels)
+    }
+
 
     fun loadSchedule(url: String,
                      eTag: String,
