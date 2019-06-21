@@ -36,8 +36,14 @@ public class AboutDialog extends DialogFragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        String scheduleVersion = MyApp.meta.getVersion();
         TextView text = view.findViewById(R.id.eventVersion);
-        text.setText(getString(R.string.fahrplan) + " " + MyApp.meta.getVersion());
+        if (TextUtils.isEmpty(scheduleVersion)) {
+            text.setVisibility(View.GONE);
+        } else {
+            text.setText(getString(R.string.fahrplan) + " " + scheduleVersion);
+            text.setVisibility(View.VISIBLE);
+        }
         text = view.findViewById(R.id.eventTitle);
         String title = MyApp.meta.getTitle();
         if (TextUtils.isEmpty(title)) {
