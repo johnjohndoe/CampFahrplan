@@ -67,6 +67,12 @@ android {
             keyAlias props['signing.ccc35c3-release.keyAlias']
             keyPassword props['signing.ccc35c3-release.keyPassword']
         }
+        droidconberlin2019 {
+            storeFile file(props['signing.droidconberlin-release.keystoreFilePath'])
+            storePassword props['signing.droidconberlin-release.keystorePassword']
+            keyAlias props['signing.droidconberlin-release.keyAlias']
+            keyPassword props['signing.droidconberlin-release.keyPassword']
+        }
     }
 
     def defaultDimension = "default"
@@ -113,6 +119,28 @@ android {
             buildConfigField "boolean", "ENGAGE_GOOGLE_PLAY_RATING", "true"
             buildConfigField "String", "TRACE_DROID_EMAIL_ADDRESS", '"tobias.preuss+35c3@googlemail.com"'
             buildConfigField "String", "SCHEDULE_FEEDBACK_URL", '"https://frab.cccv.de/en/35C3/public/events/%s/feedback/new"'
+        }
+        droidconberlin2019 {
+            applicationId "info.metadude.android.droidconberlin.schedule"
+            versionName "1.39.0 (Droidcon-Berlin-Edition)"
+            signingConfig signingConfigs.droidconberlin2019
+            buildConfigField "String", "SCHEDULE_URL", '""'
+            buildConfigField "String", "EVENT_URL", '"https://www.droidcon.de/schedule"'
+            buildConfigField "String", "SERVER_BACKEND_TYPE", '""'
+            buildConfigField "int", "SCHEDULE_FIRST_DAY_START_YEAR", "2019"
+            buildConfigField "int", "SCHEDULE_FIRST_DAY_START_MONTH", "7"
+            buildConfigField "int", "SCHEDULE_FIRST_DAY_START_DAY", "1"
+            buildConfigField "int", "SCHEDULE_LAST_DAY_END_YEAR", "2019"
+            buildConfigField "int", "SCHEDULE_LAST_DAY_END_MONTH", "7"
+            buildConfigField "int", "SCHEDULE_LAST_DAY_END_DAY", "4"
+            buildConfigField "boolean", "SHOW_APP_DISCLAIMER", "true"
+            buildConfigField "boolean", "ENGAGE_C3NAV_APP_INSTALLATION", "false"
+            buildConfigField "boolean", "ENGAGE_GOOGLE_BETA_TESTING", "true"
+            buildConfigField "boolean", "ENGAGE_GOOGLE_PLAY_RATING", "true"
+            buildConfigField "String", "TRACE_DROID_EMAIL_ADDRESS", '"tobias.preuss+droidconberlin@googlemail.com"'
+            buildConfigField "String", "SCHEDULE_FEEDBACK_URL", '""'
+            buildConfigField "String", "SESSIONIZE_HOST", '"http://sessionize.com"'
+            buildConfigField "String", "SESSIONIZE_API_KEY", '"eh8k1018"'
         }
     }
 
