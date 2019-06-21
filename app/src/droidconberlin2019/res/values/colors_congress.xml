@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="pressed_congress">#CCa80a1a</color>
+
+    <!-- Default state -->
+    <color name="event_border_default">#3b614b</color>
+    <color name="event_border_default_keynote">#615e3b</color>
+    <color name="event_border_default_orga_team">#61523b</color>
+    <color name="event_border_default_break">#3b5161</color>
+    <color name="event_border_default_party">#613f3b</color>
+    <color name="event_border_default_registration">#613b5e</color>
+    <color name="event_border_default_tba">#1C2E2C</color>
+
+    <!-- Highlight state -->
+    <color name="event_border_highlight">#7bc89c</color>
+    <color name="event_border_highlight_keynote">#ada96a</color>
+    <color name="event_border_highlight_orga_team">#ad926a</color>
+    <color name="event_border_highlight_break">#6a90ad</color>
+    <color name="event_border_highlight_party">#ad716a</color>
+    <color name="event_border_highlight_registration">#ad6aa7</color>
+    <color name="event_border_highlight_tba">#3B615E</color>
+
+    <!-- Accent color -->
+    <color name="event_border_accent">
+        @color/event_border_highlight
+    </color>
+    <color name="event_border_accent_keynote">
+        @color/event_border_highlight_keynote
+    </color>
+    <color name="event_border_accent_orga_team">
+        @color/event_border_highlight_orga_team
+    </color>
+    <color name="event_border_accent_break">
+        @color/event_border_highlight_break
+    </color>
+    <color name="event_border_accent_party">
+        @color/event_border_highlight_party
+    </color>
+    <color name="event_border_accent_registration">
+        @color/event_border_highlight_registration
+    </color>
+    <color name="event_border_accent_tba">
+        @color/event_border_highlight_tba
+    </color>
+
+    <!-- Accent color highlight -->
+    <color name="event_border_accent_highlight">
+        @color/event_border_default
+    </color>
+    <color name="event_border_accent_highlight_keynote">
+        @color/event_border_default_keynote
+    </color>
+    <color name="event_border_accent_highlight_orga_team">
+        @color/event_border_default_orga_team
+    </color>
+    <color name="event_border_accent_highlight_break">
+        @color/event_border_default_break
+    </color>
+    <color name="event_border_accent_highlight_party">
+        @color/event_border_default_party
+    </color>
+    <color name="event_border_accent_highlight_registration">
+        @color/event_border_default_registration
+    </color>
+    <color name="event_border_accent_highlight_tba">
+        @color/event_border_default_tba
+    </color>
+
+    <!-- Fahrplan -->
+    <color name="event_drawable_selection_stroke">#ff9c7d</color>
+
+    <!-- Track color -->
+    <color name="track_name">#beffffff</color>
+
+    <!-- Title color -->
+    <color name="event_title">#a0ffffff</color>
+    <color name="event_title_highlight">#ffffff</color>
+
+</resources>
