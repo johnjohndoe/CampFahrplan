@@ -41,7 +41,7 @@ public class AlarmsDBOpenHelper extends SQLiteOpenHelper {
                     AlarmsTable.Defaults.ALARM_TIME_IN_MIN_DEFAULT);
         }
         if (oldVersion < 3) {
-            // Clear database from 34C3.
+            // Clear database from 34C3 or Droidcon Berlin 2018.
             db.execSQL("DROP TABLE IF EXISTS " + AlarmsTable.NAME);
             onCreate(db);
         }
