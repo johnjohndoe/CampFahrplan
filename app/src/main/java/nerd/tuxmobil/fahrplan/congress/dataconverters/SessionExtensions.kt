@@ -70,10 +70,12 @@ private val Session.trackName: String
         titleSanitized == "lunch" -> "Break"
         titleSanitized.contains("keynote") -> "Keynote"
         titleSanitized.startsWith("welcome and") -> "Keynote"
+        titleSanitized.startsWith("designing for sustainable") -> "Keynote"
         titleSanitized.contains("closed session") -> "Orga-Team"
         titleSanitized.contains("general party") -> "Party"
         titleSanitized.contains("registration") -> "Registration"
         titleSanitized.contains("min") && titleSanitized.endsWith("session") -> "tba."
+        roomName.trim() == "Google Booth" -> "Google Booth"
         else -> categories
                 .filter { it.name != "Tags" }
                 .flatMap { it.categoryItems }

@@ -5,6 +5,7 @@
 
     <!-- Default state -->
     <color name="event_border_default">#3b614b</color>
+    <color name="event_border_default_booth">#3B6061</color>
     <color name="event_border_default_keynote">#615e3b</color>
     <color name="event_border_default_orga_team">#61523b</color>
     <color name="event_border_default_break">#3b5161</color>
@@ -14,6 +15,7 @@
 
     <!-- Highlight state -->
     <color name="event_border_highlight">#7bc89c</color>
+    <color name="event_border_highlight_booth">#6AADAD</color>
     <color name="event_border_highlight_keynote">#ada96a</color>
     <color name="event_border_highlight_orga_team">#ad926a</color>
     <color name="event_border_highlight_break">#6a90ad</color>
@@ -24,6 +26,9 @@
     <!-- Accent color -->
     <color name="event_border_accent">
         @color/event_border_highlight
+    </color>
+    <color name="event_border_accent_booth">
+        @color/event_border_highlight_booth
     </color>
     <color name="event_border_accent_keynote">
         @color/event_border_highlight_keynote
@@ -47,6 +52,9 @@
     <!-- Accent color highlight -->
     <color name="event_border_accent_highlight">
         @color/event_border_default
+    </color>
+    <color name="event_border_accent_highlight_booth">
+        @color/event_border_default_booth
     </color>
     <color name="event_border_accent_highlight_keynote">
         @color/event_border_default_keynote

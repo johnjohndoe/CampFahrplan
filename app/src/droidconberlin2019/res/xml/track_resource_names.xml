@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <map linked="true">
+    <entry key="Google Booth">booth</entry>
     <entry key="Keynote">keynote</entry>
     <entry key="Orga-Team">orga_team</entry>
     <entry key="Break">break</entry>
