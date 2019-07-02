@@ -21,6 +21,8 @@ import android.widget.AbsListView;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import org.ligi.tracedroid.logging.Log;
+
 import java.util.List;
 
 import nerd.tuxmobil.fahrplan.congress.MyApp;
@@ -130,6 +132,7 @@ public class StarredListFragment extends AbstractListFragment implements AbsList
         Context context = requireContext();
         AppRepository appRepository = AppRepository.Companion.getInstance(context);
         starredList = FahrplanMisc.getStarredLectures(appRepository);
+        Log.d(LOG_TAG, "StarredListFragment#initStarredList");
         Meta meta = appRepository.readMeta();
         mAdapter = new LectureArrayAdapter(context, starredList, meta.getNumDays());
         MyApp.LogDebug(LOG_TAG, "initStarredList: " + starredList.size() + " favorites");

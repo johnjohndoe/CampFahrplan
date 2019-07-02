@@ -102,6 +102,7 @@ public class MainActivity extends BaseActivity implements
         resetProgressDialog();
 
         AppRepository appRepository = AppRepository.Companion.getInstance(this);
+        Log.d(LOG_TAG, "MainActivity#onParseDone");
         MyApp.meta = appRepository.readMeta();
         FahrplanMisc.loadDays(this);
 
@@ -242,6 +243,7 @@ public class MainActivity extends BaseActivity implements
             MyApp.task_running = TASKS.FETCH;
             showFetchingStatus();
             AppRepository appRepository = AppRepository.Companion.getInstance(this);
+            Log.d(getClass().getName(), "MainActivity#fetchFahrplan");
             appRepository.loadSchedule(fetchScheduleResult -> {
                 runOnUiThread(() -> onGotResponse(fetchScheduleResult));
                 return null;
@@ -287,6 +289,7 @@ public class MainActivity extends BaseActivity implements
             requiresScheduleReload = true;
             AppRepository appRepository = AppRepository.Companion.getInstance(this);
             List<Lecture> changedLectures = FahrplanMisc.readChanges(appRepository);
+            Log.d(LOG_TAG, "MainActivity#showChangesDialog");
             Meta meta = appRepository.readMeta();
             String scheduleVersion = meta.getVersion();
             DialogFragment changesDialog = ChangesDialog.newInstance(

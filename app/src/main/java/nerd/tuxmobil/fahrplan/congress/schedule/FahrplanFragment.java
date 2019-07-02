@@ -811,6 +811,7 @@ public class FahrplanFragment extends Fragment implements OnClickListener {
         if (result) {
             if (MyApp.meta.getNumDays() == 0 || !version.equals(MyApp.meta.getVersion())) {
                 AppRepository appRepository = AppRepository.Companion.getInstance(activity);
+                Log.d(LOG_TAG, "FahrplanFragment#onParseDone");
                 MyApp.meta = appRepository.readMeta();
                 FahrplanMisc.loadDays(activity);
                 if (MyApp.meta.getNumDays() > 1) {

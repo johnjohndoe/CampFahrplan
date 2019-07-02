@@ -9,6 +9,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
 
+import org.ligi.tracedroid.logging.Log;
+
 import java.util.List;
 
 import nerd.tuxmobil.fahrplan.congress.MyApp;
@@ -79,6 +81,7 @@ public class ChangeListFragment extends AbstractListFragment {
         Context context = requireContext();
         AppRepository appRepository = AppRepository.Companion.getInstance(context);
         changesList = FahrplanMisc.readChanges(appRepository);
+        Log.d(LOG_TAG, "ChangeListFragment#onCreate");
         Meta meta = appRepository.readMeta();
         mAdapter = new LectureChangesArrayAdapter(context, changesList, meta.getNumDays());
         MyApp.LogDebug(LOG_TAG, "onCreate, " + changesList.size() + " changes");

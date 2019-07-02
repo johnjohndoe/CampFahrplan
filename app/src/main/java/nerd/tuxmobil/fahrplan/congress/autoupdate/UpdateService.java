@@ -13,6 +13,8 @@ import android.support.v4.app.NotificationCompat;
 import android.text.TextUtils;
 import android.text.format.Time;
 
+import org.ligi.tracedroid.logging.Log;
+
 import java.util.List;
 
 import nerd.tuxmobil.fahrplan.congress.MyApp;
@@ -99,6 +101,7 @@ public class UpdateService extends JobIntentService {
         if (MyApp.task_running == TASKS.NONE) {
             MyApp.task_running = TASKS.FETCH;
             AppRepository appRepository = AppRepository.Companion.getInstance(this);
+            Log.d(getClass().getName(), "UpdateService#fetchFahrplan");
             appRepository.loadSchedule(fetchScheduleResult -> {
                 onGotResponse(fetchScheduleResult);
                 return null;
@@ -120,6 +123,7 @@ public class UpdateService extends JobIntentService {
         }
 
         AppRepository appRepository = AppRepository.Companion.getInstance(getApplicationContext());
+        Log.d(LOG_TAG, "UpdateService#onHandleWork");
         MyApp.meta = appRepository.readMeta(); // to load eTag
         MyApp.LogDebug(LOG_TAG, "Fetching schedule ...");
         FahrplanMisc.setUpdateAlarm(this, false);
