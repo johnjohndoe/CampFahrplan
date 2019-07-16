@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<map linked="true">
+
+    <entry key="Cloud">cloud</entry>
+    <entry key="Culture">culture</entry>
+    <entry key="Databases">databases</entry>
+    <entry key="Development">development</entry>
+    <entry key="IOT - The S stands for security">iot_the_s_stands_for_security</entry>
+    <entry key="Network and Automation Track">network_and_automation_track</entry>
+    <entry key="New horizons">new_horizons</entry>
+    <entry key="Security">security</entry>
+    <entry key="Smart Home">smart_home</entry>
+    <entry key="Software Defined Anything">software_defined_anything</entry>
+    <entry key="System Administration">system_administration</entry>
+    <entry key="Web Development">web_development</entry>
+    <entry key="other">other</entry>
+    <entry key=""></entry>
+
+</map>

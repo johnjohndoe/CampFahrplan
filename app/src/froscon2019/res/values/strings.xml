@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">FrOSCon 2019 Schedule</string>
+    <string name="app_hardcoded_subtitle">Free and Open Source Software Conference</string>
+    <string name="conference_url">
+        <![CDATA[<a href="https://www.froscon.de">https://www.froscon.de</a>]]>
+    </string>
+    <string name="source_code">
+        <![CDATA[<a href="https://github.com/johnjohndoe/CampFahrplan/tree/froscon-2019">Source code</a>]]>
+    </string>
+    <string name="google_play_store">
+        <![CDATA[<a href="https://play.google.com/store/apps/details?id=info.metadude.android.froscon.schedule">Google PlayStore listing</a>]]>
+    </string>
+    <string name="copyright_logo">
+        <![CDATA[<a href="https://www.froscon.de">The FrOSCon logo is published under the Creative Commons License.]]>
+    </string>
+</resources>

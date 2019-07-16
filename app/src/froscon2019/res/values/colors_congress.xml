@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="pressed_congress">#CC0099AB</color>
+
+    <!-- Default state -->
+    <color name="event_border_default">#7d7d7d</color>
+    <color name="event_border_default_cloud">#005454</color>
+    <color name="event_border_default_culture">#0036cc</color>
+    <color name="event_border_default_databases">#00b300</color>
+    <color name="event_border_default_development">#a6a600</color>
+    <color name="event_border_default_iot_the_s_stands_for_security">#49228f</color>
+    <color name="event_border_default_network_and_automation_track">#5f0087</color>
+    <color name="event_border_default_new_horizons">#545400</color>
+    <color name="event_border_default_security">#a600a6</color>
+    <color name="event_border_default_smart_home">#99994d</color>
+    <color name="event_border_default_software_defined_anything">#8a6969</color>
+    <color name="event_border_default_system_administration">#6ba4c7</color>
+    <color name="event_border_default_web_development">#1f4c80</color>
+    <color name="event_border_default_other">#bf4c4c</color>
+
+    <!-- Accent color -->
+    <color name="event_border_accent">#b0b0b0</color>
+    <color name="event_border_accent_cloud">#008888</color>
+    <color name="event_border_accent_culture">#285df1</color>
+    <color name="event_border_accent_databases">#00e600</color>
+    <color name="event_border_accent_development">#bebe05</color>
+    <color name="event_border_accent_iot_the_s_stands_for_security">#6731cc</color>
+    <color name="event_border_accent_network_and_automation_track">#9400d3</color>
+    <color name="event_border_accent_new_horizons">#888800</color>
+    <color name="event_border_accent_security">#d900d9</color>
+    <color name="event_border_accent_smart_home">#cccc66</color>
+    <color name="event_border_accent_software_defined_anything">#bc8f8f</color>
+    <color name="event_border_accent_system_administration">#87CEFA</color>
+    <color name="event_border_accent_web_development">#2b6ab3</color>
+    <color name="event_border_accent_other">#FF6666</color>
+
+    <!-- Highlight state -->
+    <color name="event_border_highlight">@color/event_border_accent</color>
+    <color name="event_border_highlight_cloud">@color/event_border_accent_cloud</color>
+    <color name="event_border_highlight_culture">@color/event_border_accent_culture</color>
+    <color name="event_border_highlight_databases">@color/event_border_accent_databases</color>
+    <color name="event_border_highlight_development">@color/event_border_accent_development</color>
+    <color name="event_border_highlight_iot_the_s_stands_for_security">@color/event_border_accent_iot_the_s_stands_for_security</color>
+    <color name="event_border_highlight_network_and_automation_track">@color/event_border_accent_network_and_automation_track</color>
+    <color name="event_border_highlight_new_horizons">@color/event_border_accent_new_horizons</color>
+    <color name="event_border_highlight_security">@color/event_border_accent_security</color>
+    <color name="event_border_highlight_smart_home">@color/event_border_accent_smart_home</color>
+    <color name="event_border_highlight_software_defined_anything">@color/event_border_accent_software_defined_anything</color>
+    <color name="event_border_highlight_system_administration">@color/event_border_accent_system_administration</color>
+    <color name="event_border_highlight_web_development">@color/event_border_accent_web_development</color>
+    <color name="event_border_highlight_other">@color/event_border_accent_other</color>
+
+    <!-- Accent color highlight -->
+    <color name="event_border_accent_highlight">@color/event_border_default</color>
+    <color name="event_border_accent_highlight_cloud">@color/event_border_default_cloud</color>
+    <color name="event_border_accent_highlight_culture">@color/event_border_default_culture</color>
+    <color name="event_border_accent_highlight_databases">@color/event_border_default_databases</color>
+    <color name="event_border_accent_highlight_development">@color/event_border_default_development</color>
+    <color name="event_border_accent_highlight_iot_the_s_stands_for_security">@color/event_border_default_iot_the_s_stands_for_security</color>
+    <color name="event_border_accent_highlight_network_and_automation_track">@color/event_border_default_network_and_automation_track</color>
+    <color name="event_border_accent_highlight_new_horizons">@color/event_border_default_new_horizons</color>
+    <color name="event_border_accent_highlight_security">@color/event_border_default_security</color>
+    <color name="event_border_accent_highlight_smart_home">@color/event_border_default_smart_home</color>
+    <color name="event_border_accent_highlight_software_defined_anything">@color/event_border_default_software_defined_anything</color>
+    <color name="event_border_accent_highlight_system_administration">@color/event_border_default_system_administration</color>
+    <color name="event_border_accent_highlight_web_development">@color/event_border_default_web_development</color>
+    <color name="event_border_accent_highlight_other">@color/event_border_default_other</color>
+
+
+    <!-- Track color -->
+    <color name="track_name">#beffffff</color>
+
+    <!-- Title color -->
+    <color name="event_title">#a0ffffff</color>
+    <color name="event_title_highlight">#fff</color>
+
+    <color name="event_drawable_selection_stroke">@android:color/white</color>
+
+</resources>
