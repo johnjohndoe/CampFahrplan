@@ -25,8 +25,8 @@ android {
     buildToolsVersion Android.buildToolsVersion
 
     defaultConfig {
-        versionCode 58
-        versionName "1.39.1"
+        versionCode 59
+        versionName "1.39.2"
         minSdkVersion Android.minSdkVersion
         targetSdkVersion Android.targetSdkVersion
         archivesBaseName = "Fahrplan-$versionName"
@@ -122,7 +122,7 @@ android {
         }
         froscon2019 {
             applicationId "info.metadude.android.froscon.schedule"
-            versionName "1.39.1 (FrOSCon Edition)"
+            versionName "1.39.2 (FrOSCon Edition)"
             signingConfig signingConfigs.froscon2019
             buildConfigField "String", "SCHEDULE_URL", '"https://programm.froscon.de/2019/schedule.xml"'
             buildConfigField "String", "EVENT_URL", '"https://programm.froscon.de/2019/events/%1$s.html"'
