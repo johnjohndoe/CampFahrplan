@@ -7,3 +7,8 @@ signing.cccamp2019-release.keystoreFilePath=/home/USERNAME/.android/cccamp2019-r
 signing.cccamp2019-release.keystorePassword="PASSWORD"
 signing.cccamp2019-release.keyAlias="cccamp2019"
 signing.cccamp2019-release.keyPassword="ANOTHERPASSWORD"
+
+signing.mrmcd-release.keystoreFilePath=/home/USERNAME/.android/mrmcd-release-key.keystore
+signing.mrmcd-release.keystorePassword="PASSWORD"
+signing.mrmcd-release.keyAlias="mrmcd"
+signing.mrmcd-release.keyPassword="ANOTHERPASSWORD"
