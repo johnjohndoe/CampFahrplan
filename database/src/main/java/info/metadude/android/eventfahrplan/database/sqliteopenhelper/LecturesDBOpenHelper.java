@@ -12,7 +12,7 @@ import info.metadude.android.eventfahrplan.database.contract.FahrplanContract.Le
 
 public class LecturesDBOpenHelper extends SQLiteOpenHelper {
 
-    private static final int DATABASE_VERSION = 8;
+    private static final int DATABASE_VERSION = 10;
 
     private static final String DATABASE_NAME = "lectures";
 
@@ -103,6 +103,11 @@ public class LecturesDBOpenHelper extends SQLiteOpenHelper {
         }
         if (oldVersion < 8) {
             // Clear database from 34C3.
+            db.execSQL("DROP TABLE IF EXISTS " + LecturesTable.NAME);
+            onCreate(db);
+        }
+        if (oldVersion < 10) {
+            // Clear database from MRMCD 2018.
             db.execSQL("DROP TABLE IF EXISTS " + LecturesTable.NAME);
             onCreate(db);
         }
