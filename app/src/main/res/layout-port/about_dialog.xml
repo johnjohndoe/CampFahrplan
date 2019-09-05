@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/layout_root"
     android:layout_width="match_parent"
@@ -23,7 +24,7 @@
                 android:layout_marginTop="16dp"
                 android:contentDescription="@string/about_logo_content_description"
                 android:paddingBottom="15dp"
-                android:src="@drawable/dialog_logo">
+                app:srcCompat="@drawable/ic_dialog_logo">
         </ImageView>
 
         <TextView

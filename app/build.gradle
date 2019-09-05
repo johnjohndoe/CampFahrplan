@@ -35,6 +35,8 @@ android {
         buildConfigField "String", "BUILD_TIME", "\"${buildTime()}\""
         buildConfigField "String", "GIT_SHA", "\"${gitSha()}\""
         buildConfigField "String", "C3NAV_URL", "\"https://35c3.c3nav.de/l/\""
+
+        vectorDrawables.useSupportLibrary = true
     }
 
     buildTypes {
