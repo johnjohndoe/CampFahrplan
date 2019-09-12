@@ -67,6 +67,12 @@ android {
             keyAlias props['signing.cccamp2019-release.keyAlias']
             keyPassword props['signing.cccamp2019-release.keyPassword']
         }
+        datenspuren2019 {
+            storeFile file(props['signing.datenspuren-release.keystoreFilePath'])
+            storePassword props['signing.datenspuren-release.keystorePassword']
+            keyAlias props['signing.datenspuren-release.keyAlias']
+            keyPassword props['signing.datenspuren-release.keyPassword']
+        }
     }
 
     def defaultDimension = "default"
@@ -113,6 +119,26 @@ android {
             buildConfigField "boolean", "ENGAGE_GOOGLE_PLAY_RATING", "true"
             buildConfigField "String", "TRACE_DROID_EMAIL_ADDRESS", '"tobias.preuss+camp2019@googlemail.com"'
             buildConfigField "String", "SCHEDULE_FEEDBACK_URL", '"https://frab.cccv.de/en/camp2019/public/events/%s/feedback/new"'
+        }
+        datenspuren2019 {
+            applicationId "info.metadude.android.datenspuren.schedule"
+            versionName "1.40.0-Datenspuren-Edition"
+            signingConfig signingConfigs.datenspuren2019
+            buildConfigField "String", "SCHEDULE_URL", '"https://datenspuren.de/2019/fahrplan/schedule.xml"'
+            buildConfigField "String", "EVENT_URL", '"https://datenspuren.de/2019/fahrplan/events/%1$s.html"'
+            buildConfigField "String", "SERVER_BACKEND_TYPE", '"frab"'
+            buildConfigField "int", "SCHEDULE_FIRST_DAY_START_YEAR", "2019"
+            buildConfigField "int", "SCHEDULE_FIRST_DAY_START_MONTH", "9"
+            buildConfigField "int", "SCHEDULE_FIRST_DAY_START_DAY", "20"
+            buildConfigField "int", "SCHEDULE_LAST_DAY_END_YEAR", "2019"
+            buildConfigField "int", "SCHEDULE_LAST_DAY_END_MONTH", "9"
+            buildConfigField "int", "SCHEDULE_LAST_DAY_END_DAY", "23"
+            buildConfigField "boolean", "SHOW_APP_DISCLAIMER", "true"
+            buildConfigField "boolean", "ENGAGE_C3NAV_APP_INSTALLATION", "false"
+            buildConfigField "boolean", "ENGAGE_GOOGLE_BETA_TESTING", "true"
+            buildConfigField "boolean", "ENGAGE_GOOGLE_PLAY_RATING", "true"
+            buildConfigField "String", "TRACE_DROID_EMAIL_ADDRESS", '"tobias.preuss+datenspuren@googlemail.com"'
+            buildConfigField "String", "SCHEDULE_FEEDBACK_URL", '""'
         }
     }
 
