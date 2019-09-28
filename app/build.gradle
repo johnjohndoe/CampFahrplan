@@ -67,6 +67,12 @@ android {
             keyAlias props['signing.cccamp2019-release.keyAlias']
             keyPassword props['signing.cccamp2019-release.keyPassword']
         }
+        hackover2019 {
+            storeFile file(props['signing.hackover-release.keystoreFilePath'])
+            storePassword props['signing.hackover-release.keystorePassword']
+            keyAlias props['signing.hackover-release.keyAlias']
+            keyPassword props['signing.hackover-release.keyPassword']
+        }
     }
 
     def defaultDimension = "default"
@@ -113,6 +119,26 @@ android {
             buildConfigField "boolean", "ENGAGE_GOOGLE_PLAY_RATING", "true"
             buildConfigField "String", "TRACE_DROID_EMAIL_ADDRESS", '"tobias.preuss+camp2019@googlemail.com"'
             buildConfigField "String", "SCHEDULE_FEEDBACK_URL", '"https://frab.cccv.de/en/camp2019/public/events/%s/feedback/new"'
+        }
+        hackover2019 {
+            applicationId "info.metadude.android.hackover.schedule"
+            versionName "${defaultConfig.versionName}-Hackover-Edition"
+            signingConfig signingConfigs.hackover2019
+            buildConfigField "String", "SCHEDULE_URL", '"https://talks.hackover.de/ho19/schedule/export/schedule.xml"'
+            buildConfigField "String", "EVENT_URL", '""'
+            buildConfigField "String", "SERVER_BACKEND_TYPE", '"pretalx"'
+            buildConfigField "int", "SCHEDULE_FIRST_DAY_START_YEAR", "2019"
+            buildConfigField "int", "SCHEDULE_FIRST_DAY_START_MONTH", "10"
+            buildConfigField "int", "SCHEDULE_FIRST_DAY_START_DAY", "18"
+            buildConfigField "int", "SCHEDULE_LAST_DAY_END_YEAR", "2019"
+            buildConfigField "int", "SCHEDULE_LAST_DAY_END_MONTH", "10"
+            buildConfigField "int", "SCHEDULE_LAST_DAY_END_DAY", "21"
+            buildConfigField "boolean", "SHOW_APP_DISCLAIMER", "true"
+            buildConfigField "boolean", "ENGAGE_C3NAV_APP_INSTALLATION", "false"
+            buildConfigField "boolean", "ENGAGE_GOOGLE_BETA_TESTING", "true"
+            buildConfigField "boolean", "ENGAGE_GOOGLE_PLAY_RATING", "true"
+            buildConfigField "String", "TRACE_DROID_EMAIL_ADDRESS", '"tobias.preuss+hackover@googlemail.com"'
+            buildConfigField "String", "SCHEDULE_FEEDBACK_URL", '""'
         }
     }
 
