@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Hackover 2019 Fahrplan</string>
+    <string name="app_hardcoded_subtitle">18.-20. Oktober 2019, Bürgerschule Nordstadt, Hannover</string>
+    <string name="conference_url">
+        <![CDATA[<a href="https://hackover.de">https://hackover.de</a>]]>
+    </string>
+    <string name="source_code">
+        <![CDATA[<a href="https://github.com/johnjohndoe/CampFahrplan/tree/hackover-2019">Quellcode</a>]]>
+    </string>
+    <string name="google_play_store">
+        <![CDATA[<a href="https://play.google.com/store/apps/details?id=info.metadude.android.hackover.schedule">Eintrag im Google PlayStore</a>]]>
+    </string>
+    <string name="copyright_logo">
+        Gestaltung des Hackover-Logos: Jedi
+    </string>
+    <string name="about_logo_content_description">
+        Hackover Logo
+    </string>
+</resources>
