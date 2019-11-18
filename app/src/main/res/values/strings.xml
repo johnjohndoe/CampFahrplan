@@ -87,8 +87,8 @@
     <string name="usage">Note:\n\nLong-press on a lecture to set an alarm.</string>
 	<string name="libraries">
 		This application uses the following libraries:
-		Kotlin, Google Support Library, Email Intent Builder,
-		Espresso, OkHttp, SnackEngage, TraceDroid
+		Kotlin, Google Support Library, Email Intent Builder, Espresso,
+        Kotlin Coroutines for Retrofit, OkHttp, Sessionize, SnackEngage, TraceDroid
 	</string>
     <string name="about_data_privacy_statement">
         <![CDATA[<a href="https://github.com/EventFahrplan/EventFahrplan/blob/master/DATA-PRIVACY-DE.md">Data privacy statement (German)</a>]]>

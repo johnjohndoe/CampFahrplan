@@ -15,6 +15,7 @@ import java.security.KeyManagementException;
 import java.security.NoSuchAlgorithmException;
 import java.util.List;
 
+import nerd.tuxmobil.fahrplan.congress.BuildConfig;
 import nerd.tuxmobil.fahrplan.congress.MyApp;
 import nerd.tuxmobil.fahrplan.congress.MyApp.TASKS;
 import nerd.tuxmobil.fahrplan.congress.R;
@@ -95,12 +96,11 @@ public class UpdateService extends JobIntentService {
     private void fetchFahrplan() {
         if (MyApp.task_running == TASKS.NONE) {
             MyApp.task_running = TASKS.FETCH;
-            String url = appRepository.readScheduleUrl();
-            String hostName = CustomHttpClient.getHostName(url);
+            String hostName = BuildConfig.SESSIONIZE_HOST;
             OkHttpClient okHttpClient;
             try {
                 okHttpClient = CustomHttpClient.createHttpClient(hostName);
-                appRepository.loadSchedule(url, MyApp.meta.getETag(),
+                appRepository.loadSchedule(hostName,
                         okHttpClient,
                         fetchScheduleResult -> {
                             onGotResponse(fetchScheduleResult);
@@ -131,6 +131,12 @@ public class UpdateService extends JobIntentService {
         }, true);
         appRepository = AppRepository.INSTANCE;
         connectivityObserver.start();
+    }
+
+    @Override
+    public void onDestroy() {
+        // Do not appRepository.cancelLoading() here - it stops the jobs from MainActivity.
+        super.onDestroy();
     }
 
     private void fetchSchedule() {

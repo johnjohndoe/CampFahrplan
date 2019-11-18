@@ -16,8 +16,16 @@ data class FetchScheduleResult(
     companion object {
 
         @JvmStatic
+        fun createSuccess(hostName: String) =
+                FetchScheduleResult(httpStatus = HttpStatus.HTTP_OK, hostName = hostName)
+
+        @JvmStatic
         fun createError(httpStatus: HttpStatus, hostName: String) =
                 FetchScheduleResult(httpStatus = httpStatus, hostName = hostName)
+
+        @JvmStatic
+        fun createException(httpStatus: HttpStatus, hostName: String, exceptionMessage: String?) =
+                FetchScheduleResult(httpStatus = httpStatus, hostName = hostName, exceptionMessage = exceptionMessage ?: "")
 
     }
 

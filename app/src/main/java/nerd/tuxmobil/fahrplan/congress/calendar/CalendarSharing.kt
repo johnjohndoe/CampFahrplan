@@ -55,7 +55,7 @@ private fun Event.getCalendarDescription(context: Context): String = with(String
         val eventOnline = context.getString(R.string.event_online)
         append(eventOnline)
         append(": ")
-        val eventUrl = EventUrlComposer(this@getCalendarDescription).getEventUrl()
+        val eventUrl = EventUrlComposer().getEventUrl()
         append(eventUrl)
     }
     return toString()

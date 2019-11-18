@@ -33,6 +33,7 @@ import java.util.List;
 
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
+import nerd.tuxmobil.fahrplan.congress.BuildConfig;
 import nerd.tuxmobil.fahrplan.congress.MyApp;
 import nerd.tuxmobil.fahrplan.congress.MyApp.TASKS;
 import nerd.tuxmobil.fahrplan.congress.R;
@@ -254,12 +255,11 @@ public class MainActivity extends BaseActivity implements
         if (MyApp.task_running == TASKS.NONE) {
             MyApp.task_running = TASKS.FETCH;
             showFetchingStatus();
-            String url = appRepository.readScheduleUrl();
-            String hostName = CustomHttpClient.getHostName(url);
+            String hostName = BuildConfig.SESSIONIZE_HOST;
             OkHttpClient okHttpClient;
             try {
                 okHttpClient = CustomHttpClient.createHttpClient(hostName);
-                appRepository.loadSchedule(url, MyApp.meta.getETag(),
+                appRepository.loadSchedule(hostName,
                         okHttpClient,
                         fetchScheduleResult -> {
                             onGotResponse(fetchScheduleResult);
@@ -280,6 +280,8 @@ public class MainActivity extends BaseActivity implements
     @Override
     protected void onDestroy() {
         super.onDestroy();
+        onGotResponse(FetchScheduleResult.createError(HttpStatus.HTTP_COULD_NOT_CONNECT, BuildConfig.SESSIONIZE_HOST));
+        appRepository.cancelLoading();
         hideProgressDialog();
     }
 

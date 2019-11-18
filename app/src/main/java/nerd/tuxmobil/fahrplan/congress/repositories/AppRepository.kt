@@ -12,13 +12,22 @@ import info.metadude.android.eventfahrplan.database.sqliteopenhelper.HighlightDB
 import info.metadude.android.eventfahrplan.database.sqliteopenhelper.LecturesDBOpenHelper
 import info.metadude.android.eventfahrplan.database.sqliteopenhelper.MetaDBOpenHelper
 import info.metadude.android.eventfahrplan.network.repositories.ScheduleNetworkRepository
+import info.metadude.android.eventfahrplan.sessionize.SessionizeNetworkRepository
+import info.metadude.android.eventfahrplan.sessionize.SessionizeResult
+import info.metadude.kotlin.library.sessionize.ApiModule
+import info.metadude.kotlin.library.sessionize.gridtable.models.ConferenceDay
+import kotlinx.coroutines.CoroutineExceptionHandler
+import kotlinx.coroutines.Job
+import kotlinx.coroutines.SupervisorJob
 import nerd.tuxmobil.fahrplan.congress.BuildConfig
 import nerd.tuxmobil.fahrplan.congress.dataconverters.*
+import nerd.tuxmobil.fahrplan.congress.exceptions.ExceptionHandling
 import nerd.tuxmobil.fahrplan.congress.logging.Logging
 import nerd.tuxmobil.fahrplan.congress.models.Alarm
 import nerd.tuxmobil.fahrplan.congress.models.Lecture
 import nerd.tuxmobil.fahrplan.congress.models.Meta
 import nerd.tuxmobil.fahrplan.congress.net.FetchScheduleResult
+import nerd.tuxmobil.fahrplan.congress.net.HttpStatus
 import nerd.tuxmobil.fahrplan.congress.net.ParseScheduleResult
 import nerd.tuxmobil.fahrplan.congress.preferences.SharedPreferencesRepository
 import nerd.tuxmobil.fahrplan.congress.serialization.ScheduleChanges
@@ -31,6 +40,12 @@ object AppRepository {
     private lateinit var context: Context
 
     private lateinit var logging: Logging
+
+    private val parentJob = SupervisorJob()
+    private val parentJobs = mutableMapOf<String, Job>()
+    private lateinit var executionContext: ExecutionContext
+    private lateinit var exceptionHandling: ExceptionHandling
+    private lateinit var networkScope: NetworkScope
 
     private lateinit var alarmsDBOpenHelper: AlarmsDBOpenHelper
     private lateinit var alarmsDatabaseRepository: AlarmsDatabaseRepository
@@ -46,15 +61,26 @@ object AppRepository {
 
     private lateinit var scheduleNetworkRepository: ScheduleNetworkRepository
     private lateinit var sharedPreferencesRepository: SharedPreferencesRepository
+    private var sessionizeNetworkRepository: SessionizeNetworkRepository? = null
 
     fun initialize(
             context: Context,
-            logging: Logging
+            logging: Logging,
+            executionContext: ExecutionContext,
+            exceptionHandling: ExceptionHandling
     ) {
         this.context = context
         this.logging = logging
+        this.executionContext = executionContext
+        this.exceptionHandling = exceptionHandling
+        initializeScopes()
         initializeDatabases()
         initializeRepositories()
+    }
+
+    private fun initializeScopes() {
+        val defaultExceptionHandler = CoroutineExceptionHandler(exceptionHandling::onExceptionHandling)
+        networkScope = NetworkScope(executionContext, parentJob, defaultExceptionHandler)
     }
 
     private fun initializeDatabases() {
@@ -71,6 +97,80 @@ object AppRepository {
     private fun initializeRepositories() {
         scheduleNetworkRepository = ScheduleNetworkRepository()
         sharedPreferencesRepository = SharedPreferencesRepository(context)
+    }
+
+    private fun loadingFailed(@Suppress("SameParameterValue") requestIdentifier: String) {
+        parentJobs.remove(requestIdentifier)
+    }
+
+    fun cancelLoading() {
+        parentJobs.values.forEach(Job::cancel)
+        parentJobs.clear()
+    }
+
+    fun loadSchedule(hostName: String,
+                     okHttpClient: OkHttpClient,
+                     onFetchingDone: (fetchScheduleResult: FetchScheduleResult) -> Unit,
+                     onParsingDone: (parseScheduleResult: ParseScheduleResult) -> Unit) {
+
+        if (sessionizeNetworkRepository == null) {
+            val sessionizeService = ApiModule.provideSessionizeService(hostName, okHttpClient)
+            sessionizeNetworkRepository = SessionizeNetworkRepository(sessionizeService, BuildConfig.SESSIONIZE_API_KEY)
+        }
+        val requestIdentifier = "loadSchedule"
+        if (sessionizeNetworkRepository == null) {
+            onFetchingDone(FetchScheduleResult.createError(HttpStatus.HTTP_COULD_NOT_CONNECT, hostName))
+            loadingFailed(requestIdentifier)
+            return
+        }
+
+        parentJobs[requestIdentifier] = networkScope.launchNamed(requestIdentifier) {
+
+            suspend fun notifyFetchingDone(fetchScheduleResult: FetchScheduleResult) {
+                executionContext.withUiContext {
+                    onFetchingDone(fetchScheduleResult)
+                }
+            }
+
+            suspend fun notifyParsingDone(parseScheduleResult: ParseScheduleResult) {
+                executionContext.withUiContext {
+                    onParsingDone(parseScheduleResult)
+                }
+            }
+
+            when (val result = sessionizeNetworkRepository!!.loadConferenceDays()) {
+                is SessionizeResult.Values -> {
+                    val version = "${result.conferenceDays.hashCode()}"
+                    storeConferenceDays(result.conferenceDays, version)
+                    notifyFetchingDone(FetchScheduleResult.createSuccess(hostName))
+                    notifyParsingDone(ParseScheduleResult(true, version))
+                }
+                is SessionizeResult.Error -> {
+                    logging.e(javaClass.name, result.toString())
+                    loadingFailed(requestIdentifier)
+                    notifyFetchingDone(FetchScheduleResult(httpStatus = result.httpStatus, hostName = hostName))
+                }
+                is SessionizeResult.Exception -> {
+                    logging.e(javaClass.name, result.toString())
+                    loadingFailed(requestIdentifier)
+                    result.throwable.printStackTrace()
+                    notifyFetchingDone(FetchScheduleResult.createException(
+                            result.throwable.toHttpStatus(), hostName, result.throwable.message))
+                }
+            }
+        }
+    }
+
+    private fun storeConferenceDays(conferenceDays: List<ConferenceDay>, version: String) {
+        val metaAppModel = conferenceDays.toMetaAppModel()
+        updateMeta(metaAppModel.copy(version = version))
+        val eventAppModels = conferenceDays.toEventAppModels()
+        val oldLectures = loadLecturesForAllDays()
+        val hasChanged = ScheduleChanges.hasScheduleChanged(eventAppModels, oldLectures)
+        if (hasChanged) {
+            resetChangesSeenFlag()
+        }
+        updateLectures(eventAppModels)
     }
 
     fun loadSchedule(url: String,

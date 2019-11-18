@@ -9,6 +9,7 @@ buildscript {
     dependencies {
         classpath GradlePlugins.androidGradle
         classpath GradlePlugins.gradleVersions
+        classpath GradlePlugins.proguardGradle
         classpath GradlePlugins.sonarQubeGradle
         classpath GradlePlugins.kotlinGradle
     }
