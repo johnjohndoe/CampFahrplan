@@ -27,8 +27,6 @@ import android.widget.ProgressBar;
 
 import org.ligi.tracedroid.logging.Log;
 
-import java.security.KeyManagementException;
-import java.security.NoSuchAlgorithmException;
 import java.util.List;
 
 import kotlin.Unit;
@@ -256,22 +254,17 @@ public class MainActivity extends BaseActivity implements
             MyApp.task_running = TASKS.FETCH;
             showFetchingStatus();
             String hostName = BuildConfig.SESSIONIZE_HOST;
-            OkHttpClient okHttpClient;
-            try {
-                okHttpClient = CustomHttpClient.createHttpClient(hostName);
-                appRepository.loadSchedule(hostName,
-                        okHttpClient,
-                        fetchScheduleResult -> {
-                            onGotResponse(fetchScheduleResult);
-                            return null;
-                        },
-                        parseScheduleResult -> {
-                            onParseDone(parseScheduleResult);
-                            return null;
-                        });
-            } catch (KeyManagementException | NoSuchAlgorithmException e) {
-                onGotResponse(FetchScheduleResult.createError(HttpStatus.HTTP_SSL_SETUP_FAILURE, hostName));
-            }
+            OkHttpClient okHttpClient = CustomHttpClient.createHttpClient();
+            appRepository.loadSchedule(hostName,
+                    okHttpClient,
+                    fetchScheduleResult -> {
+                        onGotResponse(fetchScheduleResult);
+                        return null;
+                    },
+                    parseScheduleResult -> {
+                        onParseDone(parseScheduleResult);
+                        return null;
+                    });
         } else {
             Log.d(LOG_TAG, "Fetching schedule already in progress.");
         }

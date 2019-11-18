@@ -11,8 +11,6 @@ import android.support.v4.app.JobIntentService;
 import android.support.v4.app.NotificationCompat;
 import android.text.TextUtils;
 
-import java.security.KeyManagementException;
-import java.security.NoSuchAlgorithmException;
 import java.util.List;
 
 import nerd.tuxmobil.fahrplan.congress.BuildConfig;
@@ -97,22 +95,17 @@ public class UpdateService extends JobIntentService {
         if (MyApp.task_running == TASKS.NONE) {
             MyApp.task_running = TASKS.FETCH;
             String hostName = BuildConfig.SESSIONIZE_HOST;
-            OkHttpClient okHttpClient;
-            try {
-                okHttpClient = CustomHttpClient.createHttpClient(hostName);
-                appRepository.loadSchedule(hostName,
-                        okHttpClient,
-                        fetchScheduleResult -> {
-                            onGotResponse(fetchScheduleResult);
-                            return null;
-                        },
-                        parseScheduleResult -> {
-                            onParseDone(parseScheduleResult);
-                            return null;
-                        });
-            } catch (KeyManagementException | NoSuchAlgorithmException e) {
-                onGotResponse(FetchScheduleResult.createError(HttpStatus.HTTP_SSL_SETUP_FAILURE, hostName));
-            }
+            OkHttpClient okHttpClient = CustomHttpClient.createHttpClient();
+            appRepository.loadSchedule(hostName,
+                    okHttpClient,
+                    fetchScheduleResult -> {
+                        onGotResponse(fetchScheduleResult);
+                        return null;
+                    },
+                    parseScheduleResult -> {
+                        onParseDone(parseScheduleResult);
+                        return null;
+                    });
         } else {
             MyApp.LogDebug(LOG_TAG, "Fetching already in progress.");
         }
