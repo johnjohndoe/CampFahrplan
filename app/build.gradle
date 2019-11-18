@@ -67,6 +67,12 @@ android {
             keyAlias props['signing.cccamp2019-release.keyAlias']
             keyPassword props['signing.cccamp2019-release.keyPassword']
         }
+        kotlinconf2019 {
+            storeFile file(props['signing.kotlinconf-release.keystoreFilePath'])
+            storePassword props['signing.kotlinconf-release.keystorePassword']
+            keyAlias props['signing.kotlinconf-release.keyAlias']
+            keyPassword props['signing.kotlinconf-release.keyPassword']
+        }
     }
 
     def defaultDimension = "default"
@@ -113,6 +119,28 @@ android {
             buildConfigField "boolean", "ENGAGE_GOOGLE_PLAY_RATING", "true"
             buildConfigField "String", "TRACE_DROID_EMAIL_ADDRESS", '"tobias.preuss+camp2019@googlemail.com"'
             buildConfigField "String", "SCHEDULE_FEEDBACK_URL", '"https://frab.cccv.de/en/camp2019/public/events/%s/feedback/new"'
+        }
+        kotlinconf2019 {
+            applicationId "info.metadude.android.kotlinconf.schedule"
+            versionName "${defaultConfig.versionName}-KotlinConf-Edition"
+            signingConfig signingConfigs.kotlinconf2019
+            buildConfigField "String", "SCHEDULE_URL", '"https://kotlinconf.com/schedule/"'
+            buildConfigField "String", "EVENT_URL", '"https://kotlinconf.com/schedule/"'
+            buildConfigField "String", "SERVER_BACKEND_TYPE", '""'
+            buildConfigField "int", "SCHEDULE_FIRST_DAY_START_YEAR", "2019"
+            buildConfigField "int", "SCHEDULE_FIRST_DAY_START_MONTH", "12"
+            buildConfigField "int", "SCHEDULE_FIRST_DAY_START_DAY", "4"
+            buildConfigField "int", "SCHEDULE_LAST_DAY_END_YEAR", "2019"
+            buildConfigField "int", "SCHEDULE_LAST_DAY_END_MONTH", "12"
+            buildConfigField "int", "SCHEDULE_LAST_DAY_END_DAY", "7"
+            buildConfigField "boolean", "SHOW_APP_DISCLAIMER", "true"
+            buildConfigField "boolean", "ENGAGE_C3NAV_APP_INSTALLATION", "false"
+            buildConfigField "boolean", "ENGAGE_GOOGLE_BETA_TESTING", "true"
+            buildConfigField "boolean", "ENGAGE_GOOGLE_PLAY_RATING", "true"
+            buildConfigField "String", "TRACE_DROID_EMAIL_ADDRESS", '"tobias.preuss+kotlinconf@googlemail.com"'
+            buildConfigField "String", "SCHEDULE_FEEDBACK_URL", '""'
+            buildConfigField "String", "SESSIONIZE_HOST", '"https://sessionize.com"'
+            buildConfigField "String", "SESSIONIZE_API_KEY", '"9ws8rxlv"'
         }
     }
 
