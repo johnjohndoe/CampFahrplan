@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<map linked="true">
+
+    <entry key="Conference">conference</entry>
+    <entry key="Introductory">introductory</entry>
+    <entry key="Intermediate">intermediate</entry>
+    <entry key="Advanced">advanced</entry>
+    <entry key=""></entry>
+
+</map>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">KotlinConf 2019 Fahrplan</string>
+    <string name="app_hardcoded_subtitle">4.-6. Dezember 2019, Kopenhagen</string>
+    <string name="conference_url">
+        <![CDATA[<a href="https://kotlinconf.com">https://kotlinconf.com</a>]]>
+    </string>
+    <string name="source_code">
+        <![CDATA[<a href="https://github.com/johnjohndoe/CampFahrplan/tree/kotlinconf-2019">Quellcode</a>]]>
+    </string>
+    <string name="google_play_store">
+        <![CDATA[<a href="https://play.google.com/store/apps/details?id=info.metadude.android.kotlinconf.schedule">Eintrag im Google PlayStore</a>]]>
+    </string>
+    <string name="copyright_logo">
+        <![CDATA[KotlinConf-Logo: <a href="https://www.jetbrains.com">JetBrains</a>]]>
+    </string>
+    <string name="about_logo_content_description">
+        KotlinConf Logo
+    </string>
+</resources>
