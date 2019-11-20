@@ -102,7 +102,7 @@ public class LecturesDBOpenHelper extends SQLiteOpenHelper {
             db.execSQL("ALTER TABLE " + LecturesTable.NAME + " ADD COLUMN " + Columns.URL + " TEXT DEFAULT ''");
         }
         if (oldVersion < 8) {
-            // Clear database from 34C3.
+            // Clear database from 34C3 && KotlinConf 2018.
             db.execSQL("DROP TABLE IF EXISTS " + LecturesTable.NAME);
             onCreate(db);
         }
