@@ -6,6 +6,7 @@
     <!-- Default state -->
     <color name="event_border_default">#656B6E</color>
     <color name="event_border_default_conference">#6E656E</color>
+    <color name="event_border_default_hands_on">#686E65</color>
     <color name="event_border_default_introductory">#948001</color>
     <color name="event_border_default_intermediate">#01940E</color>
     <color name="event_border_default_advanced">#940163</color>
@@ -13,6 +14,7 @@
     <!-- Accent color -->
     <color name="event_border_accent">#A0B5BD</color>
     <color name="event_border_accent_conference">#BBA0BD</color>
+    <color name="event_border_accent_hands_on">#ABBDA0</color>
     <color name="event_border_accent_introductory">#C8AE03</color>
     <color name="event_border_accent_intermediate">#03C813</color>
     <color name="event_border_accent_advanced">#C80386</color>
@@ -20,6 +22,7 @@
     <!-- Highlight state -->
     <color name="event_border_highlight">@color/event_border_accent</color>
     <color name="event_border_highlight_conference">@color/event_border_accent_conference</color>
+    <color name="event_border_highlight_hands_on">@color/event_border_accent_hands_on</color>
     <color name="event_border_highlight_introductory">@color/event_border_accent_introductory</color>
     <color name="event_border_highlight_intermediate">@color/event_border_accent_intermediate</color>
     <color name="event_border_highlight_advanced">@color/event_border_accent_advanced</color>
@@ -27,6 +30,7 @@
     <!-- Accent color highlight -->
     <color name="event_border_accent_highlight">@color/event_border_default</color>
     <color name="event_border_accent_highlight_conference">@color/event_border_default_conference</color>
+    <color name="event_border_accent_highlight_hands_on">@color/event_border_default_hands_on</color>
     <color name="event_border_accent_highlight_introductory">@color/event_border_default_introductory</color>
     <color name="event_border_accent_highlight_intermediate">@color/event_border_default_intermediate</color>
     <color name="event_border_accent_highlight_advanced">@color/event_border_default_advanced</color>

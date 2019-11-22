@@ -10,7 +10,8 @@ import nerd.tuxmobil.fahrplan.congress.models.Lecture as EventAppModel
 fun Session.toEventAppModel(sortedDates: List<LocalDate>) = EventAppModel(idHash).apply {
     date = startsAtLocalDateString
     dateUTC = dateUtcMs
-    day = oneBasedDayIndex(sortedDates, startsAtLocalDate)
+    val oneBasedDayIndex = oneBasedDayIndex(sortedDates, startsAtLocalDate)
+    day = oneBasedDayIndex
     description = descriptionText
     duration = durationValue
     relStartTime = minuteOfDay
@@ -18,7 +19,7 @@ fun Session.toEventAppModel(sortedDates: List<LocalDate>) = EventAppModel(idHash
     speakers = speakersNames
     startTime = minuteOfDay
     title = titleText
-    track = trackName
+    track = trackName(oneBasedDayIndex)
     url = ""
 }
 
@@ -45,7 +46,7 @@ private val Session.minuteOfDay
     get() = startsAtUtc.get(ChronoField.MINUTE_OF_DAY)
 
 private val Session.roomName
-    get() = room
+    get() = room.trim()
 
 private val Session.speakersNames
     get() = speakers.joinToString { it.name }
@@ -62,17 +63,19 @@ private val Session.startsAtUtc
 private val Session.titleText
     get() = title.trim()
 
-private val Session.trackName
-    get() = when {
+private fun Session.trackName(dayIndex: Int): String {
+    return when {
         "Lunch".equals(titleText, ignoreCase = true) -> "Conference"
         "Party".equals(titleText, ignoreCase = true) -> "Conference"
         titleText.contains("Registration", ignoreCase = true) -> "Conference"
+        roomName.contains("Hands On", ignoreCase = true) && dayIndex > 1 -> "Hands On"
         else -> categories
                 .filter { it.name != "Tags" }
                 .flatMap { it.categoryItems }
                 .joinToString { it.name }
                 .replace("Introductory and overview", "Introductory")
     }
+}
 
 private val Long.milliseconds
     get() = this * 1000
