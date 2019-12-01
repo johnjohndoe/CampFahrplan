@@ -76,7 +76,7 @@ public class ChangesDialog extends DialogFragment {
         SpannableStringBuilder span = new SpannableStringBuilder();
         span.append(getString(R.string.schedule_changes_dialog_updated_to_text));
         int spanStart = span.length();
-        span.append(version);
+        span.append(version.replace("-", ""));
         Resources resources = getResources();
         int spanColor = ContextCompat.getColor(activity, R.color.schedule_changes_dialog_new_version_text);
         span.setSpan(new ForegroundColorSpan(spanColor),
