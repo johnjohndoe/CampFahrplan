@@ -3,6 +3,7 @@
 
     <entry key="Conference">conference</entry>
     <entry key="Hands On">hands_on</entry>
+    <entry key="Interviews">interviews</entry>
     <entry key="Introductory">introductory</entry>
     <entry key="Intermediate">intermediate</entry>
     <entry key="Advanced">advanced</entry>

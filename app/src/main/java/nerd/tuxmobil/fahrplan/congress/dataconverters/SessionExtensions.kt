@@ -69,6 +69,7 @@ private fun Session.trackName(dayIndex: Int): String {
         "Party".equals(titleText, ignoreCase = true) -> "Conference"
         titleText.contains("Registration", ignoreCase = true) -> "Conference"
         roomName.contains("Hands On", ignoreCase = true) && dayIndex > 1 -> "Hands On"
+        roomName.contains("Interviews", ignoreCase = true) -> "Interviews"
         else -> categories
                 .filter { it.name != "Tags" }
                 .flatMap { it.categoryItems }
