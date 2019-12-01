@@ -16,12 +16,10 @@ import info.metadude.android.eventfahrplan.sessionize.SessionizeNetworkRepositor
 import info.metadude.android.eventfahrplan.sessionize.SessionizeResult
 import info.metadude.kotlin.library.sessionize.ApiModule
 import info.metadude.kotlin.library.sessionize.gridtable.models.ConferenceDay
-import kotlinx.coroutines.CoroutineExceptionHandler
 import kotlinx.coroutines.Job
-import kotlinx.coroutines.SupervisorJob
 import nerd.tuxmobil.fahrplan.congress.BuildConfig
 import nerd.tuxmobil.fahrplan.congress.dataconverters.*
-import nerd.tuxmobil.fahrplan.congress.exceptions.ExceptionHandling
+import nerd.tuxmobil.fahrplan.congress.exceptions.AppExceptionHandler
 import nerd.tuxmobil.fahrplan.congress.logging.Logging
 import nerd.tuxmobil.fahrplan.congress.models.Alarm
 import nerd.tuxmobil.fahrplan.congress.models.Lecture
@@ -41,10 +39,7 @@ object AppRepository {
 
     private lateinit var logging: Logging
 
-    private val parentJob = SupervisorJob()
     private val parentJobs = mutableMapOf<String, Job>()
-    private lateinit var executionContext: ExecutionContext
-    private lateinit var exceptionHandling: ExceptionHandling
     private lateinit var networkScope: NetworkScope
 
     private lateinit var alarmsDBOpenHelper: AlarmsDBOpenHelper
@@ -63,24 +58,17 @@ object AppRepository {
     private lateinit var sharedPreferencesRepository: SharedPreferencesRepository
     private var sessionizeNetworkRepository: SessionizeNetworkRepository? = null
 
+    @JvmOverloads
     fun initialize(
             context: Context,
             logging: Logging,
-            executionContext: ExecutionContext,
-            exceptionHandling: ExceptionHandling
+            networkScope: NetworkScope = NetworkScope.of(AppExecutionContext, AppExceptionHandler(logging))
     ) {
         this.context = context
         this.logging = logging
-        this.executionContext = executionContext
-        this.exceptionHandling = exceptionHandling
-        initializeScopes()
+        this.networkScope = networkScope
         initializeDatabases()
         initializeRepositories()
-    }
-
-    private fun initializeScopes() {
-        val defaultExceptionHandler = CoroutineExceptionHandler(exceptionHandling::onExceptionHandling)
-        networkScope = NetworkScope(executionContext, parentJob, defaultExceptionHandler)
     }
 
     private fun initializeDatabases() {
@@ -127,13 +115,13 @@ object AppRepository {
         parentJobs[requestIdentifier] = networkScope.launchNamed(requestIdentifier) {
 
             suspend fun notifyFetchingDone(fetchScheduleResult: FetchScheduleResult) {
-                executionContext.withUiContext {
+                networkScope.withUiContext {
                     onFetchingDone(fetchScheduleResult)
                 }
             }
 
             suspend fun notifyParsingDone(parseScheduleResult: ParseScheduleResult) {
-                executionContext.withUiContext {
+                networkScope.withUiContext {
                     onParsingDone(parseScheduleResult)
                 }
             }

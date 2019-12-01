@@ -12,12 +12,10 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.TimeZone;
 
-import nerd.tuxmobil.fahrplan.congress.exceptions.AppExceptionHandler;
 import nerd.tuxmobil.fahrplan.congress.logging.Logging;
 import nerd.tuxmobil.fahrplan.congress.models.DateInfos;
 import nerd.tuxmobil.fahrplan.congress.models.Lecture;
 import nerd.tuxmobil.fahrplan.congress.models.Meta;
-import nerd.tuxmobil.fahrplan.congress.repositories.AppExecutionContext;
 import nerd.tuxmobil.fahrplan.congress.repositories.AppRepository;
 import nerd.tuxmobil.fahrplan.congress.utils.ConferenceTimeFrame;
 
@@ -79,12 +77,9 @@ public class MyApp extends Application {
         app = this;
         task_running = TASKS.NONE;
         lectureList = null;
-        Logging logging = Logging.Companion.get();
         AppRepository.INSTANCE.initialize(
                 getApplicationContext(),
-                logging,
-                AppExecutionContext.INSTANCE,
-                new AppExceptionHandler(logging)
+                Logging.Companion.get()
         );
     }
 
