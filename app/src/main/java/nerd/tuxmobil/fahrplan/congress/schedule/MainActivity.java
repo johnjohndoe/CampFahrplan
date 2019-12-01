@@ -259,11 +259,11 @@ public class MainActivity extends BaseActivity implements
                     okHttpClient,
                     fetchScheduleResult -> {
                         onGotResponse(fetchScheduleResult);
-                        return null;
+                        return Unit.INSTANCE;
                     },
                     parseScheduleResult -> {
                         onParseDone(parseScheduleResult);
-                        return null;
+                        return Unit.INSTANCE;
                     });
         } else {
             Log.d(LOG_TAG, "Fetching schedule already in progress.");
