@@ -65,11 +65,9 @@ private val Session.titleText
 
 private fun Session.trackName(dayIndex: Int): String {
     return when {
-        "Lunch".equals(titleText, ignoreCase = true) -> "Conference"
-        "Party".equals(titleText, ignoreCase = true) -> "Conference"
-        titleText.contains("Registration", ignoreCase = true) -> "Conference"
-        roomName.contains("Hands On", ignoreCase = true) && dayIndex > 1 -> "Hands On"
-        roomName.contains("Interviews", ignoreCase = true) -> "Interviews"
+        isConferenceSession -> "Conference"
+        isHandsOnSession && dayIndex > 1 -> "Hands On"
+        isInterviewSession -> "Interviews"
         else -> categories
                 .filter { it.name != "Tags" }
                 .flatMap { it.categoryItems }
@@ -77,6 +75,17 @@ private fun Session.trackName(dayIndex: Int): String {
                 .replace("Introductory and overview", "Introductory")
     }
 }
+
+private val Session.isConferenceSession
+    get() = "Lunch".equals(titleText, ignoreCase = true) ||
+            "Party".equals(titleText, ignoreCase = true) ||
+            titleText.contains("Registration", ignoreCase = true)
+
+private val Session.isHandsOnSession
+    get() = roomName.contains("Hands On", ignoreCase = true)
+
+private val Session.isInterviewSession
+    get() = roomName.contains("Interviews", ignoreCase = true)
 
 private val Long.milliseconds
     get() = this * 1000
