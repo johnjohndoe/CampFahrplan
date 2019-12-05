@@ -8,7 +8,6 @@ import android.provider.CalendarContract
 import android.widget.Toast
 import nerd.tuxmobil.fahrplan.congress.R
 import nerd.tuxmobil.fahrplan.congress.extensions.startActivity
-import nerd.tuxmobil.fahrplan.congress.utils.EventUrlComposer
 import nerd.tuxmobil.fahrplan.congress.utils.FahrplanMisc
 import nerd.tuxmobil.fahrplan.congress.utils.StringUtils
 import nerd.tuxmobil.fahrplan.congress.wiki.containsWikiLink
@@ -55,8 +54,7 @@ private fun Event.getCalendarDescription(context: Context): String = with(String
         val eventOnline = context.getString(R.string.event_online)
         append(eventOnline)
         append(": ")
-        val eventUrl = EventUrlComposer().getEventUrl()
-        append(eventUrl)
+        append(url)
     }
     return toString()
 }

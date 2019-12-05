@@ -1,6 +1,7 @@
 package nerd.tuxmobil.fahrplan.congress.dataconverters
 
 import info.metadude.kotlin.library.sessionize.gridtable.models.Session
+import nerd.tuxmobil.fahrplan.congress.BuildConfig
 import org.threeten.bp.Duration
 import org.threeten.bp.LocalDate
 import org.threeten.bp.ZoneOffset
@@ -20,7 +21,7 @@ fun Session.toEventAppModel(sortedDates: List<LocalDate>) = EventAppModel(idHash
     startTime = minuteOfDay
     title = titleText
     track = trackName(oneBasedDayIndex)
-    url = ""
+    url = urlText
 }
 
 private fun oneBasedDayIndex(eventDates: List<LocalDate>, date: LocalDate): Int {
@@ -62,6 +63,17 @@ private val Session.startsAtUtc
 
 private val Session.titleText
     get() = title.trim()
+
+val Session.urlText: String
+    get() = if (isConferenceSession || isInterviewSession) {
+        BuildConfig.EVENT_URL
+    } else {
+        buildString {
+            val day = startsAt.dayOfMonth
+            append("https://kotlinconf.com/talks/")
+            append("$day-dec/$id")
+        }
+    }
 
 private fun Session.trackName(dayIndex: Int): String {
     return when {

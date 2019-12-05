@@ -7,7 +7,6 @@ import java.util.List;
 
 import nerd.tuxmobil.fahrplan.congress.models.Lecture;
 import nerd.tuxmobil.fahrplan.congress.utils.DateHelper;
-import nerd.tuxmobil.fahrplan.congress.utils.EventUrlComposer;
 import nerd.tuxmobil.fahrplan.congress.utils.FahrplanMisc;
 import nerd.tuxmobil.fahrplan.congress.wiki.WikiEventUtils;
 
@@ -58,8 +57,7 @@ public class SimpleLectureFormat {
         if (!WikiEventUtils.containsWikiLink(lecture.getLinks())) {
             builder.append(LINE_BREAK);
             builder.append(LINE_BREAK);
-            String eventUrl = new EventUrlComposer().getEventUrl();
-            builder.append(eventUrl);
+            builder.append(lecture.url);
         }
     }
 
