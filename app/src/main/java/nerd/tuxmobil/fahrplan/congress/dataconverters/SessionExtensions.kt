@@ -81,4 +81,4 @@ private fun Session.trackName(dayIndex: Int): String {
 private val Long.milliseconds
     get() = this * 1000
 
-private const val TIME_ZONE_OFFSET = 2L
+private const val TIME_ZONE_OFFSET = 1L
