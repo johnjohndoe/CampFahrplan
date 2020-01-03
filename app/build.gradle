@@ -52,6 +52,7 @@ android {
     signingConfigs {
         cccamp2019
         ccc36c3
+        fosdem
     }
 
     def defaultDimension = "default"
@@ -97,6 +98,27 @@ android {
             buildConfigField "boolean", "ENABLE_ENGELSYSTEM_SHIFTS", "true"
             buildConfigField "String", "TRACE_DROID_EMAIL_ADDRESS", '"tobias.preuss+36c3@googlemail.com"'
             buildConfigField "String", "SCHEDULE_FEEDBACK_URL", '"https://frab.cccv.de/en/36C3/public/events/%s/feedback/new"'
+        }
+        fosdem {
+            dimension defaultDimension
+            applicationId "info.metadude.android.fosdem.schedule"
+            versionName "${defaultConfig.versionName}-FOSDEM-Edition"
+            buildConfigField "String", "SCHEDULE_URL", '"https://opentree.cygnus.uberspace.de/fosdem2020/schedule.xml"'
+            buildConfigField "String", "EVENT_URL", '"https://fosdem.org/2020/schedule/event/%1$s/"'
+            buildConfigField "String", "SERVER_BACKEND_TYPE", '"pentabarf"'
+            buildConfigField "int", "SCHEDULE_FIRST_DAY_START_YEAR", "2020"
+            buildConfigField "int", "SCHEDULE_FIRST_DAY_START_MONTH", "1"
+            buildConfigField "int", "SCHEDULE_FIRST_DAY_START_DAY", "6"
+            buildConfigField "int", "SCHEDULE_LAST_DAY_END_YEAR", "2020"
+            buildConfigField "int", "SCHEDULE_LAST_DAY_END_MONTH", "2"
+            buildConfigField "int", "SCHEDULE_LAST_DAY_END_DAY", "3"
+            buildConfigField "boolean", "SHOW_APP_DISCLAIMER", "true"
+            buildConfigField "boolean", "ENABLE_ALTERNATIVE_SCHEDULE_URL", "false"
+            buildConfigField "boolean", "ENGAGE_C3NAV_APP_INSTALLATION", "false"
+            buildConfigField "boolean", "ENGAGE_GOOGLE_BETA_TESTING", "true"
+            buildConfigField "boolean", "ENGAGE_GOOGLE_PLAY_RATING", "true"
+            buildConfigField "String", "TRACE_DROID_EMAIL_ADDRESS", '"tobias.preuss+fosdem@googlemail.com"'
+            buildConfigField "String", "SCHEDULE_FEEDBACK_URL", '"https://submission.fosdem.org/feedback/%1$s.php"'
         }
     }
 
