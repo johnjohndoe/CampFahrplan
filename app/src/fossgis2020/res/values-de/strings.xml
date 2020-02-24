@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">FOSSGIS 2020 Fahrplan</string>
+    <string name="app_hardcoded_subtitle">Konferenz für Freie und Open Source Software, Geo-Software und OpenStreetMap, 11.-14. März 2020, Freiburg</string>
+    <string name="conference_url">
+        <![CDATA[<a href="https://www.fossgis-konferenz.de/2020/">http://www.fossgis-konferenz.de/2020/</a>]]>
+    </string>
+    <string name="source_code">
+        <![CDATA[<a href="https://github.com/johnjohndoe/CampFahrplan/tree/fossgis-2020">Quellcode</a>]]>
+    </string>
+    <string name="google_play_store">
+        <![CDATA[<a href="https://play.google.com/store/apps/details?id=info.metadude.android.fossgis.schedule">Eintrag im Google PlayStore</a>]]>
+    </string>
+    <string name="copyright_logo">
+        Design des FOSSGIS-Logos: FOSSGIS e.V.
+    </string>
+    <string name="about_logo_content_description">
+        FOSSGIS 2020 Logo
+    </string>
+</resources>
