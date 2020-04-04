@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">DiVOC Fahrplan</string>
+    <string name="app_hardcoded_subtitle">11.-12. April 2020, in deinem Wohnzimmer</string>
+    <string name="conference_url">
+        <![CDATA[<a href="https://di.c3voc.de">https://di.c3voc.de</a>]]>
+    </string>
+    <string name="source_code">
+        <![CDATA[<a href="href="https://github.com/johnjohndoe/CampFahrplan/tree/divoc-2020">Quellcode</a>]]>
+    </string>
+    <string name="google_play_store">
+        <![CDATA[<a href="https://play.google.com/store/apps/details?id=info.metadude.android.divoc.schedule">Eintrag im Google PlayStore</a>]]>
+    </string>
+    <string name="copyright_logo">
+        <![CDATA[DiVOC - Digital Verteiltes Online-Chaos - Hidden Service. Design von <a href="https://twitter.com/faab_e">faab_e</a>]]>
+    </string>
+    <string name="about_logo_content_description">
+        DiVOC Logo - Digital Verteiltes Online-Chaos - Hidden Service
+    </string>
+</resources>
