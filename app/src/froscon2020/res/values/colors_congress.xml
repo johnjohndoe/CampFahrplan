@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="pressed_congress">#CC0099AB</color>
+
+    <!-- Default state -->
+    <color name="track_background_default">#7d7d7d</color>
+    <color name="track_background_default_cloud">#005454</color>
+    <color name="track_background_default_culture">#0036cc</color>
+    <color name="track_background_default_databases">#00b300</color>
+    <color name="track_background_default_development">#8C8C00</color>
+    <color name="track_background_default_infrastructure">#49228f</color>
+    <color name="track_background_default_network_track">#5f0087</color>
+    <color name="track_background_default_new_horizons">#545400</color>
+    <color name="track_background_default_privacy">#7A0404</color>
+    <color name="track_background_default_security">#a600a6</color>
+    <color name="track_background_default_science">#B34D00</color>
+    <color name="track_background_default_smart_home">#99994d</color>
+    <color name="track_background_default_software_defined_anything">#8a6969</color>
+    <color name="track_background_default_system_administration">#42657A</color>
+    <color name="track_background_default_web_development">#1f4c80</color>
+    <color name="track_background_default_working_from_home">#007A33</color>
+    <color name="track_background_default_other">#bf4c4c</color>
+
+    <!-- Highlight color -->
+    <color name="track_background_highlight">#b0b0b0</color>
+    <color name="track_background_highlight_cloud">#008888</color>
+    <color name="track_background_highlight_culture">#285df1</color>
+    <color name="track_background_highlight_databases">#00e600</color>
+    <color name="track_background_highlight_development">#bebe05</color>
+    <color name="track_background_highlight_infrastructure">#6731cc</color>
+    <color name="track_background_highlight_network_track">#9400d3</color>
+    <color name="track_background_highlight_new_horizons">#888800</color>
+    <color name="track_background_highlight_privacy">#c80606</color>
+    <color name="track_background_highlight_security">#d900d9</color>
+    <color name="track_background_highlight_science">#ff6d00</color>
+    <color name="track_background_highlight_smart_home">#cccc66</color>
+    <color name="track_background_highlight_software_defined_anything">#bc8f8f</color>
+    <color name="track_background_highlight_system_administration">#6ba4c7</color>
+    <color name="track_background_highlight_web_development">#2b6ab3</color>
+    <color name="track_background_highlight_working_from_home">#00c853</color>
+    <color name="track_background_highlight_other">#FF6666</color>
+
+
+    <!-- Track color -->
+    <color name="track_name">#beffffff</color>
+
+    <!-- Title color -->
+    <color name="session_title_on_default_background">#a0ffffff</color>
+    <color name="session_title_on_highlight_background">#fff</color>
+
+</resources>

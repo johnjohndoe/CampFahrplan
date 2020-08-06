@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<map linked="true">
+
+    <entry key="Cloud">cloud</entry>
+    <entry key="Clouds on the horizon - What happens when there's no space left in the cloud">cloud</entry>
+    <entry key="Culture">culture</entry>
+    <entry key="Databases">databases</entry>
+    <entry key="Development">development</entry>
+    <entry key="FrOSCon meets Science">science</entry>
+    <entry key="Infrastruktur as a Scalability-Issue - Need more bandwidth, VPNs and everything">infrastructure</entry>
+    <entry key="Network Track">network_track</entry>
+    <entry key="New horizons">new_horizons</entry>
+    <entry key="Privacy vs. pandemic response - Who's protecting our data from the virus">privacy</entry>
+    <entry key="Security">security</entry>
+    <entry key="Smart Home">smart_home</entry>
+    <entry key="Software Defined Anything">software_defined_anything</entry>
+    <entry key="System Administration">system_administration</entry>
+    <entry key="Web Development">web_development</entry>
+    <entry key="Working (together) in spite of Corona - Lessons learned on the journey to working from home">working_from_home</entry>
+    <entry key="other">other</entry>
+    <entry key=""></entry>
+
+</map>
