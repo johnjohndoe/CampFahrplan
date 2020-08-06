@@ -7,3 +7,8 @@ signing.ccc36c3-release.keystoreFilePath=/home/USERNAME/.android/ccc36c3-release
 signing.ccc36c3-release.keystorePassword="PASSWORD"
 signing.ccc36c3-release.keyAlias="ccc36c3"
 signing.ccc36c3-release.keyPassword="ANOTHERPASSWORD"
+
+signing.froscon2020-release.keystoreFilePath=/home/USERNAME/.android/froscon-release-key.keystore
+signing.froscon2020-release.keystorePassword="PASSWORD"
+signing.froscon2020-release.keyAlias="froscon"
+signing.froscon2020-release.keyPassword="ANOTHERPASSWORD"
