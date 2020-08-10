@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/layout_root"
     android:layout_width="match_parent"
@@ -23,7 +24,7 @@
                 android:layout_marginTop="16dp"
                 android:contentDescription="@string/about_logo_content_description"
                 android:paddingBottom="15dp"
-                android:src="@drawable/dialog_logo">
+                app:srcCompat="@drawable/ic_dialog_logo">
         </ImageView>
 
         <TextView
@@ -33,7 +34,6 @@
                 android:layout_gravity="center"
                 android:gravity="center|top"
                 android:paddingBottom="5dp"
-                android:textColor="#FFF"
                 android:textSize="16sp"
                 android:textStyle="bold"
                 tools:text="33. Chaos Communication Congress"/>
@@ -45,7 +45,6 @@
                 android:layout_gravity="center"
                 android:gravity="center"
                 android:paddingBottom="10dp"
-                android:textColor="#FFF"
                 android:textStyle="italic"
                 android:typeface="serif"
                 tools:text="Works for me">
