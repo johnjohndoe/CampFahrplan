@@ -53,6 +53,7 @@ android {
     signingConfigs {
         cccamp2019
         ccc36c3
+        divoc2020
     }
 
     def defaultDimension = "default"
@@ -98,6 +99,27 @@ android {
             buildConfigField "boolean", "ENABLE_ENGELSYSTEM_SHIFTS", "true"
             buildConfigField "String", "TRACE_DROID_EMAIL_ADDRESS", '"tobias.preuss+36c3@googlemail.com"'
             buildConfigField "String", "SCHEDULE_FEEDBACK_URL", '"https://frab.cccv.de/en/36C3/public/events/%s/feedback/new"'
+        }
+        divoc2020 {
+            dimension defaultDimension
+            applicationId "info.metadude.android.divoc.schedule"
+            versionName "${defaultConfig.versionName}-DiVOC-Edition"
+            buildConfigField "String", "SCHEDULE_URL", '"https://data.c3voc.de/divoc/schedule.xml"'
+            buildConfigField "String", "EVENT_URL", '"https://di.c3voc.de/fahrplan:%1$s"'
+            buildConfigField "String", "SERVER_BACKEND_TYPE", '""'
+            buildConfigField "int", "SCHEDULE_FIRST_DAY_START_YEAR", "2020"
+            buildConfigField "int", "SCHEDULE_FIRST_DAY_START_MONTH", "9"
+            buildConfigField "int", "SCHEDULE_FIRST_DAY_START_DAY", "4"
+            buildConfigField "int", "SCHEDULE_LAST_DAY_END_YEAR", "2020"
+            buildConfigField "int", "SCHEDULE_LAST_DAY_END_MONTH", "9"
+            buildConfigField "int", "SCHEDULE_LAST_DAY_END_DAY", "7"
+            buildConfigField "boolean", "SHOW_APP_DISCLAIMER", "true"
+            buildConfigField "boolean", "ENGAGE_C3NAV_APP_INSTALLATION", "false"
+            buildConfigField "boolean", "ENGAGE_GOOGLE_BETA_TESTING", "true"
+            buildConfigField "boolean", "ENGAGE_GOOGLE_PLAY_RATING", "true"
+            buildConfigField "boolean", "ENABLE_ALTERNATIVE_SCHEDULE_URL", "false"
+            buildConfigField "String", "TRACE_DROID_EMAIL_ADDRESS", '"tobias.preuss+divoc@googlemail.com"'
+            buildConfigField "String", "SCHEDULE_FEEDBACK_URL", '""'
         }
     }
 
