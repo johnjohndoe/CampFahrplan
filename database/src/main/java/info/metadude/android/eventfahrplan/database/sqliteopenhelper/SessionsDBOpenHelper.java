@@ -13,7 +13,7 @@ import info.metadude.android.eventfahrplan.database.contract.FahrplanContract.Se
 
 public class SessionsDBOpenHelper extends SQLiteOpenHelper {
 
-    private static final int DATABASE_VERSION = 9;
+    private static final int DATABASE_VERSION = 10;
 
     private static final String DATABASE_NAME = "lectures"; // Keep table name to avoid database migration.
 
@@ -109,6 +109,11 @@ public class SessionsDBOpenHelper extends SQLiteOpenHelper {
         }
         if (oldVersion < 9) {
             // Clear database from 35C3.
+            db.execSQL("DROP TABLE IF EXISTS " + SessionsTable.NAME);
+            onCreate(db);
+        }
+        if (oldVersion < 10) {
+            // Clear database from DiVOC 04/2020 Hidden Service.
             db.execSQL("DROP TABLE IF EXISTS " + SessionsTable.NAME);
             onCreate(db);
         }
