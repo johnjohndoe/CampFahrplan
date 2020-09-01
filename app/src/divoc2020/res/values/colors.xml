@@ -2,7 +2,7 @@
 <resources>
 
     <color name="colorPrimary">#bbb</color>
-    <color name="colorPrimaryDark">#999</color>
+    <color name="colorPrimaryDark">#777</color>
     <color name="colorAccent">#56a5ba</color>
     <color name="colorActionBar">@color/colorPrimary</color>
     <color name="text_link_pressed_background_on_dark">#aafec700</color>
