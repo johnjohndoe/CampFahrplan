@@ -32,7 +32,7 @@
     </string>
     <string name="preference_engelsystem_json_export_url_default_value" translatable="false"/>
     <string name="preference_engelsystem_json_export_url_hint" translatable="false">
-        https://engelsystem.de/36c3/shifts-json-export?key=YOUR_KEY
+        https://engelsystem.de/ptt/shifts-json-export?key=YOUR_KEY
     </string>
     <string name="preference_engelsystem_json_export_url_summary">
         <![CDATA[In order to see your shifts please enter your <u>personal</u> URL here.<br/><br/>
