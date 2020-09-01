@@ -3,6 +3,7 @@
 
     <!-- Defined in AppRepository.ENGELSYSTEM_ROOM_NAME -->
     <entry key="Engelshifts">engelshifts</entry>
+    <entry key="Workshop">self_organized_sessions</entry>
 
     <entry key=""></entry>
 
