@@ -117,6 +117,7 @@ android {
             buildConfigField "boolean", "ENGAGE_C3NAV_APP_INSTALLATION", "false"
             buildConfigField "boolean", "ENGAGE_GOOGLE_BETA_TESTING", "true"
             buildConfigField "boolean", "ENGAGE_GOOGLE_PLAY_RATING", "true"
+            buildConfigField "boolean", "ENABLE_ENGELSYSTEM_SHIFTS", "true"
             buildConfigField "boolean", "ENABLE_ALTERNATIVE_SCHEDULE_URL", "false"
             buildConfigField "String", "TRACE_DROID_EMAIL_ADDRESS", '"tobias.preuss+divoc@googlemail.com"'
             buildConfigField "String", "SCHEDULE_FEEDBACK_URL", '""'
