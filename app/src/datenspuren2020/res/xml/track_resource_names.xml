@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<map linked="true">
+    <entry key="Unterhaltung">entertainment</entry>
+    <entry key="Gesellschaft">society</entry>
+    <entry key="Technik">technology</entry>
+    <entry key="">other</entry>
+</map>
