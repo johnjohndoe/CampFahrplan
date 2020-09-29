@@ -115,6 +115,7 @@ android {
             buildConfigField "int", "SCHEDULE_LAST_DAY_END_DAY", "3"
             buildConfigField "boolean", "SHOW_APP_DISCLAIMER", "true"
             buildConfigField "boolean", "ENGAGE_C3NAV_APP_INSTALLATION", "false"
+            buildConfigField "String", "C3NAV_URL", "\"https://nav.fosdem.org/l/\""
             buildConfigField "boolean", "ENGAGE_GOOGLE_BETA_TESTING", "true"
             buildConfigField "boolean", "ENGAGE_GOOGLE_PLAY_RATING", "true"
             buildConfigField "boolean", "ENABLE_CHAOSFLIX_EXPORT", "false"
