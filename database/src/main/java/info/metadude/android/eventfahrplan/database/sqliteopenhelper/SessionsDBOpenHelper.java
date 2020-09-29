@@ -13,7 +13,7 @@ import info.metadude.android.eventfahrplan.database.contract.FahrplanContract.Se
 
 public class SessionsDBOpenHelper extends SQLiteOpenHelper {
 
-    private static final int DATABASE_VERSION = 9;
+    private static final int DATABASE_VERSION = 11;
 
     private static final String DATABASE_NAME = "lectures"; // Keep table name to avoid database migration.
 
@@ -109,6 +109,11 @@ public class SessionsDBOpenHelper extends SQLiteOpenHelper {
         }
         if (oldVersion < 9) {
             // Clear database from 35C3.
+            db.execSQL("DROP TABLE IF EXISTS " + SessionsTable.NAME);
+            onCreate(db);
+        }
+        if (oldVersion < 11) {
+            // Clear database from FOSDEM 2019.
             db.execSQL("DROP TABLE IF EXISTS " + SessionsTable.NAME);
             onCreate(db);
         }
