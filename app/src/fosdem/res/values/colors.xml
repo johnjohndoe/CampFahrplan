@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorPrimary">#892a6f</color>
+    <color name="colorPrimaryDark">#8e2879</color>
+    <color name="colorAccent">#ad3192</color>
+    <color name="colorActionBar">#74255c</color>
+    <color name="windowBackground">#140612</color>
+    <color name="multi_choice_background">#40ad3192</color>
+    <color name="alarm_list_icon_default_fill_color">@color/colorPrimaryDark</color>
+    <color name="alarm_list_icon_default_stroke_color">@color/colorAccent</color>
+    <color name="alarm_list_icon_text_color">#fff</color>
+    <color name="session_background">#ffffff</color>
+    <color name="session_detailbar_background">#eee</color>
+    <color name="session_detailbar_text">#4f4f4f</color>
+
+</resources>

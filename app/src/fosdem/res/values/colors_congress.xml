@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="pressed_congress">#CC0099AB</color>
+
+    <!-- Default state -->
+    <color name="track_background_default_bofs">#adb879</color>
+    <color name="track_background_default_keynotes">#4db6b0</color>
+    <color name="track_background_default_workshops">#7a3300</color>
+
+    <color name="track_background_default">@color/colorPrimary</color>
+    <color name="track_background_default_bsd">#1d9bb4</color>
+    <color name="track_background_default_collaborative_information_and_content_management_applications">#4db6b0</color>
+    <color name="track_background_default_community_devroom">#adb879</color>
+    <color name="track_background_default_containers">#7a3300</color>
+    <color name="track_background_default_continuous_integration_and_continuous_deployment">#4db6b0</color>
+    <color name="track_background_default_declarative_and_minimalistic_computing">#974510</color>
+    <color name="track_background_default_dependency_management">#a16316</color>
+    <color name="track_background_default_embedded_mobile_and_automotive">#5f523c</color>
+    <color name="track_background_default_emulator_development">#7a3300</color>
+    <color name="track_background_default_free_software_radio">#7bb065</color>
+    <color name="track_background_default_friends_of_openjdk">#9b4909</color>
+    <color name="track_background_default_geospatial">#4db6b0</color>
+    <color name="track_background_default_hpc_big_data_and_data_science">#adb879</color>
+    <color name="track_background_default_hardware_aided_trusted_computing">#a16316</color>
+    <color name="track_background_default_javascript">#7bb065</color>
+    <color name="track_background_default_kotlin">#7a3300</color>
+    <color name="track_background_default_libreoffice">#974510</color>
+    <color name="track_background_default_mariadb">#1d9bb4</color>
+    <color name="track_background_default_microkernel">#4db6b0</color>
+    <color name="track_background_default_mysql">#a16316</color>
+    <color name="track_background_default_network_monitoring_discovery_and_inventory">#adb879</color>
+    <color name="track_background_default_open_research_tools_and_technologies">#974510</color>
+    <color name="track_background_default_open_source_design">#ee9105</color>
+    <color name="track_background_default_open_source_firmware_bmc_and_bootloader">#1d9bb4</color>
+    <color name="track_background_default_openchain">#1d9bb4</color>
+    <color name="track_background_default_perl_and_raku_programming">#9b4909</color>
+    <color name="track_background_default_postgresql">#ee9105</color>
+    <color name="track_background_default_retrocomputing">#5f523c</color>
+    <color name="track_background_default_software_composition">#9b4909</color>
+    <color name="track_background_default_software_defined_networking">#1d9bb4</color>
+    <color name="track_background_default_software_defined_storage">#a16316</color>
+    <color name="track_background_default_testing_and_automation">#ee9105</color>
+    <color name="track_background_default_tool_the_docs">#7bb065</color>
+    <color name="track_background_default_virtualization_and_iaas">#7bb065</color>
+    <color name="track_background_default_web_performance">#4db6b0</color>
+    <color name="track_background_default_zig_programming_language">#5f523c</color>
+
+    <!-- Highlight state -->
+    <color name="track_background_highlight_bofs">#E0E4CC</color>
+    <color name="track_background_highlight_keynotes">#A7DBD8</color>
+    <color name="track_background_highlight_workshops">#FA6900</color>
+
+    <color name="track_background_highlight">@color/colorPrimaryDark</color>
+    <color name="track_background_highlight_bsd">#69d2e7</color>
+    <color name="track_background_highlight_collaborative_information_and_content_management_applications">#a7dbd8</color>
+    <color name="track_background_highlight_community_devroom">#e0e4cc</color>
+    <color name="track_background_highlight_containers">#fa6900</color>
+    <color name="track_background_highlight_continuous_integration_and_continuous_deployment">#a7dbd8</color>
+    <color name="track_background_highlight_declarative_and_minimalistic_computing">#ea813d</color>
+    <color name="track_background_highlight_dependency_management">#e7a350</color>
+    <color name="track_background_highlight_embedded_mobile_and_automotive">#a79474</color>
+    <color name="track_background_highlight_emulator_development">#fa6900</color>
+    <color name="track_background_highlight_free_software_radio">#c3dbb9</color>
+    <color name="track_background_highlight_friends_of_openjdk">#f38630</color>
+    <color name="track_background_highlight_geospatial">#a7dbd8</color>
+    <color name="track_background_highlight_hpc_big_data_and_data_science">#e0e4cc</color>
+    <color name="track_background_highlight_hardware_aided_trusted_computing">#e7a350</color>
+    <color name="track_background_highlight_javascript">#c3dbb9</color>
+    <color name="track_background_highlight_kotlin">#fa6900</color>
+    <color name="track_background_highlight_libreoffice">#ea813d</color>
+    <color name="track_background_highlight_mariadb">#69d2e7</color>
+    <color name="track_background_highlight_microkernel">#a7dbd8</color>
+    <color name="track_background_highlight_mysql">#e7a350</color>
+    <color name="track_background_highlight_network_monitoring_discovery_and_inventory">#e0e4cc</color>
+    <color name="track_background_highlight_open_research_tools_and_technologies">#ea813d</color>
+    <color name="track_background_highlight_open_source_design">#fcc777</color>
+    <color name="track_background_highlight_open_source_firmware_bmc_and_bootloader">#69d2e7</color>
+    <color name="track_background_highlight_openchain">#69d2e7</color>
+    <color name="track_background_highlight_perl_and_raku_programming">#f38630</color>
+    <color name="track_background_highlight_postgresql">#fcc777</color>
+    <color name="track_background_highlight_retrocomputing">#a79474</color>
+    <color name="track_background_highlight_software_composition">#f38630</color>
+    <color name="track_background_highlight_software_defined_networking">#69d2e7</color>
+    <color name="track_background_highlight_software_defined_storage">#e7a350</color>
+    <color name="track_background_highlight_testing_and_automation">#fcc777</color>
+    <color name="track_background_highlight_tool_the_docs">#c3dbb9</color>
+    <color name="track_background_highlight_virtualization_and_iaas">#c3dbb9</color>
+    <color name="track_background_highlight_web_performance">#a7dbd8</color>
+    <color name="track_background_highlight_zig_programming_language">#a79474</color>
+
+    <!-- Track color -->
+    <color name="track_name">#beffffff</color>
+
+    <!--Title color-->
+    <color name="session_title_on_default_background">#a0ffffff</color>
+    <color name="session_title_on_highlight_background">#a0000000</color>
+
+</resources>

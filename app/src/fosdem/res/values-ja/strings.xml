@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">FOSDEM 2021 Schedule</string>
+    <string name="app_hardcoded_subtitle">2021年2月6日〜7日, online</string>
+</resources>
