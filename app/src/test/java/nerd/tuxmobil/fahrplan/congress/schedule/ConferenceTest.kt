@@ -15,6 +15,15 @@ class ConferenceTest {
     }
 
     @Test
+    fun `calculateTimeFrame throws exception if empty list is passed`() {
+        try {
+            createConference(*emptyList<Session>().toTypedArray())
+        } catch (e: IllegalArgumentException) {
+            assertThat(e.message).isEqualTo("Empty list of sessions.")
+        }
+    }
+
+    @Test
     fun `calculateTimeFrame with frab data spanning multiple days`() {
         val opening = createSession("Opening", duration = 30, dateUtc = 1536332400000L) // 2018-09-07T17:00:00+02:00
         val closing = createSession("Closing", duration = 30, dateUtc = 1536504300000L) // 2018-09-09T16:45:00+02:00
