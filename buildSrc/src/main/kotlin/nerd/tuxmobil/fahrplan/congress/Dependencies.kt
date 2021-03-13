@@ -4,9 +4,9 @@ package nerd.tuxmobil.fahrplan.congress
 
 object Android {
     const val buildToolsVersion = "29.0.3"
-    const val compileSdkVersion = 29
+    const val compileSdkVersion = 30
     const val minSdkVersion = 14
-    const val targetSdkVersion = 29
+    const val targetSdkVersion = 30
 }
 
 object Plugins {
@@ -14,8 +14,8 @@ object Plugins {
     private object Versions {
         const val android = "4.1.2"
         const val androidJunitJacoco = "0.16.0"
-        const val kotlin = "1.4.21"
-        const val sonarQube = "3.0"
+        const val kotlin = "1.4.31"
+        const val sonarQube = "3.1.1"
         const val unMock = "0.7.6"
         const val versions = "0.36.0"
     }
@@ -40,21 +40,21 @@ object Libs {
         const val emailIntentBuilder = "2.0.0"
         const val engelsystem = "5.0.0"
         const val espresso = "3.3.0"
-        const val junit = "4.13.1"
-        const val kotlinCoroutines = "1.4.2"
-        const val material = "1.2.1"
-        const val mockito = "3.7.0"
+        const val junit = "4.13.2"
+        const val kotlinCoroutines = "1.4.3"
+        const val material = "1.3.0"
+        const val mockito = "3.8.0"
         const val mockitoKotlin = "2.2.0"
         const val moshi = "1.11.0"
-        const val okhttp = "3.12.12"
+        const val okhttp = "3.12.13"
         const val preference = "1.1.1"
         const val retrofit = "2.6.4"
         const val robolectric = "4.3_r2-robolectric-0"
-        const val snackengage = "0.27"
+        const val snackengage = "0.28"
         const val testExtJunit = "1.1.2"
         const val threeTenBp = "1.5.0"
         const val tracedroid = "1.4"
-        const val truth = "1.1"
+        const val truth = "1.1.2"
     }
 
     const val annotation = "androidx.annotation:annotation:${Versions.annotation}"

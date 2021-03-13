@@ -252,14 +252,16 @@ class ParserTask extends AsyncTask<String, Void, Boolean> {
                                             session.setStartTime(DateParser.getMinutes(XmlPullParsers.getSanitizedText(parser)));
                                             session.setRelativeStartTime(session.getStartTime());
                                             if (session.getRelativeStartTime() < dayChangeTime) {
-                                                session.setRelativeStartTime((int) (session.getRelativeStartTime() + MINUTES_OF_ONE_DAY));
+                                                session.setRelativeStartTime(session.getRelativeStartTime() + MINUTES_OF_ONE_DAY);
                                             }
                                         } else if (name.equals("duration")) {
                                             parser.next();
                                             session.setDuration(DateParser.getMinutes(XmlPullParsers.getSanitizedText(parser)));
                                         } else if (name.equals("date")) {
                                             parser.next();
-                                            session.setDateUTC(DateParser.getDateTime(XmlPullParsers.getSanitizedText(parser)));
+                                            String sanitizedText = XmlPullParsers.getSanitizedText(parser);
+                                            session.setDateUTC(DateParser.getDateTime(sanitizedText));
+                                            session.setTimeZoneOffset(info.metadude.android.eventfahrplan.commons.temporal.DateParser.parseTimeZoneOffset(sanitizedText));
                                         } else if (name.equals("recording")) {
                                             eventType = parser.next();
                                             boolean recordingDone = false;

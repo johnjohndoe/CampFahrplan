@@ -10,7 +10,6 @@ import org.junit.Test
 import org.threeten.bp.LocalDate
 import org.threeten.bp.ZoneOffset
 import org.threeten.bp.ZonedDateTime
-import java.util.TimeZone
 
 class MomentTest {
 
@@ -121,9 +120,19 @@ class MomentTest {
         val momentOne = Moment.now()
         val momentTwo = Moment.now().plusSeconds(1)
 
-        assertThat(momentOne.isBefore(momentTwo)).isTrue()
-        assertThat(momentTwo.isBefore(momentOne)).isFalse()
-        assertThat(momentOne.isBefore(momentOne)).isFalse()
+        assertThat(momentOne.isBefore(momentTwo)).isTrue
+        assertThat(momentTwo.isBefore(momentOne)).isFalse
+        assertThat(momentOne.isBefore(momentOne)).isFalse
+    }
+
+    @Test
+    fun durationUntil() {
+        val momentOne = Moment.now()
+        val momentTwo = momentOne.plusMinutes(1)
+
+        assertThat(momentOne.minutesUntil(momentOne)).isEqualTo(0)
+        assertThat(momentOne.minutesUntil(momentTwo)).isEqualTo(1)
+        assertThat(momentTwo.minutesUntil(momentOne)).isEqualTo(-1)
     }
 
     @Test
@@ -146,7 +155,7 @@ class MomentTest {
 
     @Test
     fun minusHours() {
-        val momentOne = Moment.ofEpochMilli(MILLISECONDS_OF_ONE_HOUR.toLong()).minusHours(1)
+        val momentOne = Moment.ofEpochMilli(MILLISECONDS_OF_ONE_HOUR).minusHours(1)
         assertThat(momentOne.toMilliseconds()).isEqualTo(0)
 
         val momentTwo = Moment.ofEpochMilli(0).minusHours(-1)
@@ -160,28 +169,6 @@ class MomentTest {
 
         val momentTwo = Moment.ofEpochMilli(0).minusMinutes(-1)
         assertThat(momentTwo.toMilliseconds()).isEqualTo(MILLISECONDS_OF_ONE_MINUTE.toLong())
-    }
-
-    @Test
-    fun getSystemOffsetMinutesWithGmtPlus1() = withTimeZone("GMT+1") {
-        assertThat(Moment.getSystemOffsetMinutes()).isEqualTo(60)
-    }
-
-    @Test
-    fun getSystemOffsetMinutesWithGmt() = withTimeZone("GMT") {
-        assertThat(Moment.getSystemOffsetMinutes()).isEqualTo(0)
-    }
-
-    @Test
-    fun getSystemOffsetMinutesWithGmtMinus1() = withTimeZone("GMT-1") {
-        assertThat(Moment.getSystemOffsetMinutes()).isEqualTo(-60)
-    }
-
-    private fun withTimeZone(temporaryTimeZoneId: String, block: () -> Unit) {
-        val systemTimezone = TimeZone.getDefault()
-        TimeZone.setDefault(TimeZone.getTimeZone(temporaryTimeZoneId))
-        block()
-        TimeZone.setDefault(systemTimezone)
     }
 
 }

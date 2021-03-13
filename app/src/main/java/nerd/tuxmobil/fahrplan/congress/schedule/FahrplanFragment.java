@@ -36,7 +36,6 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import org.ligi.tracedroid.logging.Log;
-import org.threeten.bp.Duration;
 import org.threeten.bp.ZoneId;
 
 import java.util.Arrays;
@@ -90,7 +89,6 @@ public class FahrplanFragment extends Fragment implements SessionViewEventsHandl
     private static final int CONTEXT_MENU_ITEM_ID_SHARE_TEXT = 5;
     private static final int CONTEXT_MENU_ITEM_ID_SHARE_JSON = 6;
 
-    public static final int ONE_DAY = (int) Duration.ofDays(1).toMinutes();
     public static final int FIFTEEN_MINUTES = 15;
     public static final int BOX_HEIGHT_MULTIPLIER = 3;
 
@@ -98,15 +96,13 @@ public class FahrplanFragment extends Fragment implements SessionViewEventsHandl
 
     private LayoutInflater inflater;
 
-    private final Conference conference = new Conference();
+    private Conference conference;
 
     private AppRepository appRepository;
 
     private int mDay = 1;
 
-    public static Context context = null;
-
-    public static final String[] rooms = {
+    private static final String[] rooms = {
             "Saal 1",
             "Saal 2",
             "Saal G",
@@ -131,6 +127,8 @@ public class FahrplanFragment extends Fragment implements SessionViewEventsHandl
     private SessionViewDrawer sessionViewDrawer;
 
     private final Map<Integer, SessionViewColumnAdapter> adapterByRoomIndex = new HashMap<>();
+
+    private ScrollAmountCalculator scrollAmountCalculator;
 
     private final OnSessionsChangeListener onSessionsChangeListener = new OnSessionsChangeListener() {
         @Override
@@ -162,7 +160,7 @@ public class FahrplanFragment extends Fragment implements SessionViewEventsHandl
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setHasOptionsMenu(true);
-        context = requireContext();
+        Context context = requireContext();
         light = TypefaceFactory.getNewInstance(context).getRobotoLight();
         sessionViewDrawer = new SessionViewDrawer(context, this::getSessionPadding);
     }
@@ -259,7 +257,9 @@ public class FahrplanFragment extends Fragment implements SessionViewEventsHandl
             }
             intent.removeExtra(BundleKeys.BUNDLE_KEY_SESSION_ALARM_SESSION_ID); // jump to given sessionId only once
         }
-        fillTimes();
+        if (conference != null) {
+            fillTimes();
+        }
 
         appRepository.setOnSessionsChangeListener(onSessionsChangeListener);
     }
@@ -285,7 +285,7 @@ public class FahrplanFragment extends Fragment implements SessionViewEventsHandl
 
         if (!sessionsOfDay.isEmpty()) {
             // TODO: Move this to AppRepository and include the result in ScheduleData
-            conference.calculateTimeFrame(sessionsOfDay);
+            conference = Conference.ofSessions(sessionsOfDay);
             MyApp.LogDebug(LOG_TAG, "Conference = " + conference);
         }
 
@@ -345,6 +345,7 @@ public class FahrplanFragment extends Fragment implements SessionViewEventsHandl
         int boxHeight = getNormalizedBoxHeight(displayDensityScale);
         LayoutCalculator layoutCalculator = new LayoutCalculator(boxHeight);
 
+        Context context = horizontalScroller.getContext();
         List<RoomData> roomDataList = scheduleData.getRoomDataList();
         for (int roomIndex = 0; roomIndex < roomDataList.size(); roomIndex++) {
             RoomData roomData = roomDataList.get(roomIndex);
@@ -381,6 +382,7 @@ public class FahrplanFragment extends Fragment implements SessionViewEventsHandl
                 columnWidth, LayoutParams.WRAP_CONTENT, 1);
         params.gravity = Gravity.CENTER;
         int paddingRight = getSessionPadding();
+        Context context = roomTitlesRowLayout.getContext();
         for (String roomName : roomNames) {
             TextView roomTitle = new TextView(context);
             roomTitle.setLayoutParams(params);
@@ -417,8 +419,8 @@ public class FahrplanFragment extends Fragment implements SessionViewEventsHandl
         }
 
         Moment nowMoment = Moment.now();
-        ScrollAmountCalculator calculator = new ScrollAmountCalculator(Logging.get(), MyApp.dateInfos, scheduleData, conference);
-        int scrollAmount = calculator.calculateScrollAmount(nowMoment, currentDayIndex, boxHeight, columnIndex);
+        int scrollAmount = scrollAmountCalculator.calculateScrollAmount(
+                conference, MyApp.dateInfos, scheduleData, nowMoment, currentDayIndex, boxHeight, columnIndex);
 
         final int pos = scrollAmount;
         final ScrollView scrollView = requireViewByIdCompat(layoutRootView, R.id.scrollView1);
@@ -448,16 +450,11 @@ public class FahrplanFragment extends Fragment implements SessionViewEventsHandl
     }
 
     private void scrollTo(@NonNull Session session) {
+        int height = getNormalizedBoxHeight(displayDensityScale);
+        int pos = scrollAmountCalculator.calculateScrollAmount(conference, session, height);
+        MyApp.LogDebug(LOG_TAG, "position is " + pos);
         View layoutRootView = requireView();
         final ScrollView parent = requireViewByIdCompat(layoutRootView, R.id.scrollView1);
-        int height = getNormalizedBoxHeight(displayDensityScale);
-        // TODO Replace with proper Moment based implementation as soon as possible. See code review in https://github.com/EventFahrplan/EventFahrplan/pull/347
-        int startsAtMinuteUtc = session.relStartTime - conference.getFirstSessionStartsAt();
-        int systemOffsetMinutes = Moment.getSystemOffsetMinutes();
-        // Translate start time minutes from UTC to system time zone rendered to the user.
-        int startsAtMinuteSystem = startsAtMinuteUtc - systemOffsetMinutes;
-        final int pos = startsAtMinuteSystem / TimeSegment.TIME_GRID_MINIMUM_SEGMENT_HEIGHT * height;
-        MyApp.LogDebug(LOG_TAG, "position is " + pos);
         parent.post(() -> parent.scrollTo(0, pos));
         final HorizontalSnapScrollView horiz = layoutRootView.findViewById(R.id.horizScroller);
         if (horiz != null) {
@@ -478,12 +475,14 @@ public class FahrplanFragment extends Fragment implements SessionViewEventsHandl
 
     private void fillTimes() {
         int normalizedBoxHeight = getNormalizedBoxHeight(displayDensityScale);
+        boolean useDeviceTimeZone = appRepository.readUseDeviceTimeZoneEnabled();
         List<TimeTextViewParameter> parameters = TimeTextViewParameter.parametersOf(
                 Moment.now(),
                 conference,
                 BuildConfig.SCHEDULE_FIRST_DAY_START_DAY,
                 mDay,
-                normalizedBoxHeight
+                normalizedBoxHeight,
+                useDeviceTimeZone
         );
         LinearLayout timeTextColumn = requireViewByIdCompat(requireView(), R.id.times_layout);
         timeTextColumn.removeAllViews();
@@ -515,8 +514,8 @@ public class FahrplanFragment extends Fragment implements SessionViewEventsHandl
         }
 
         List<Session> sessions = appRepository.loadUncanceledSessionsForDayIndex(day);
-
         scheduleData = sessionsTransformer.transformSessions(day, sessions);
+        scrollAmountCalculator = new ScrollAmountCalculator(Logging.get());
     }
 
     private void reloadAlarms() {

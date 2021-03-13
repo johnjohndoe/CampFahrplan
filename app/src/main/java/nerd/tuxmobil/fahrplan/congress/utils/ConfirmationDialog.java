@@ -17,9 +17,9 @@ import nerd.tuxmobil.fahrplan.congress.R;
 public class ConfirmationDialog extends DialogFragment {
 
     public interface OnConfirmationDialogClicked {
+
         void onAccepted(int dlgRequestCode);
 
-        void onDenied(int dlgRequestCode);
     }
 
     public static final String BUNDLE_DLG_TITLE = "ConfirmationDialog.DLG_TITLE";
@@ -62,10 +62,8 @@ public class ConfirmationDialog extends DialogFragment {
                         listener.onAccepted(dlgRequestCode);
                     }
                 })
-                .setNegativeButton(android.R.string.no, (dialog, which) -> {
-                    if (listener != null) {
-                        listener.onDenied(dlgRequestCode);
-                    }
+                .setNegativeButton(android.R.string.cancel, (dialog, which) -> {
+                    // Do nothing.
                 });
         return builder.create();
     }

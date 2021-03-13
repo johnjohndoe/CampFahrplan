@@ -3,6 +3,7 @@ package nerd.tuxmobil.fahrplan.congress.schedule
 import info.metadude.android.eventfahrplan.commons.temporal.DateFormatter
 import info.metadude.android.eventfahrplan.commons.temporal.Moment
 import nerd.tuxmobil.fahrplan.congress.schedule.TimeSegment.Companion.TIME_GRID_MINIMUM_SEGMENT_HEIGHT
+import org.threeten.bp.ZoneOffset
 
 /**
  * Holds the minutes of the day which represent a time segment (hours and minutes).
@@ -26,12 +27,6 @@ internal class TimeSegment private constructor(
          */
         const val TIME_GRID_MINIMUM_SEGMENT_HEIGHT = 5
 
-        @Deprecated("Use TimeSegment.ofMoment", replaceWith = ReplaceWith("TimeSegment.ofMoment()"))
-        @JvmStatic
-        fun ofMinutesOfTheDay(minutesOfTheDay: Int): TimeSegment {
-            return ofMoment(Moment.now().startOfDay().plusMinutes(minutesOfTheDay.toLong()))
-        }
-
         @JvmStatic
         fun ofMoment(moment: Moment) = TimeSegment(moment)
 
@@ -47,9 +42,11 @@ internal class TimeSegment private constructor(
     /**
      * Returns the normalized and formatted text representing the given minutes of the day.
      * This text is ready to be displayed in the time column.
+     *
+     * See [DateFormatter.getFormattedTime24Hour].
      */
-    val formattedText: String
-        get() = DateFormatter.newInstance().getFormattedTime24Hour(roundedMoment)
+    fun getFormattedText(sessionZoneOffset: ZoneOffset?, useDeviceTimeZone: Boolean): String =
+        DateFormatter.newInstance(useDeviceTimeZone).getFormattedTime24Hour(roundedMoment, sessionZoneOffset)
 
     /**
      * Returns true if the given [otherMoment] matches the internal rounded moment taken the
