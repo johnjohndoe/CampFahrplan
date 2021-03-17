@@ -131,8 +131,10 @@ public class SessionsDBOpenHelper extends SQLiteOpenHelper {
         if (oldVersion < 10 && newVersion >= 10) {
             db.execSQL(SESSION_BY_NOTIFICATION_ID_TABLE_CREATE);
         }
-        if (oldVersion < 11 && newVersion >= 11) {
-            db.execSQL("ALTER TABLE " + SessionsTable.NAME + " ADD COLUMN " + Columns.TIME_ZONE_OFFSET + " INTEGER DEFAULT NULL");
+        if (oldVersion < 11) {
+            // Clear database from DiVOC 09/2020 Push to talk.
+            db.execSQL("DROP TABLE IF EXISTS " + SessionsTable.NAME);
+            onCreate(db);
         }
     }
 }
