@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<map linked="true">
+
+    <!-- Defined in AppRepository.ENGELSYSTEM_ROOM_NAME -->
+    <entry key="Engelshifts">engelshifts</entry>
+
+    <entry key="Arts &amp; Culture">arts_culture</entry>
+    <entry key="Economy">economy</entry>
+    <entry key="Other">other</entry>
+    <entry key="Politics">politics</entry>
+    <entry key="Society">society</entry>
+    <entry key="Technology">technology</entry>
+    <entry key="Workshop">self_organized_sessions</entry>
+
+    <entry key=""></entry>
+
+</map>

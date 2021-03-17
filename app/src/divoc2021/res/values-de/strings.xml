@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">DiVOC Fahrplan</string>
+    <string name="app_hardcoded_subtitle">2.–5. April 2021, online</string>
+    <string name="copyright_logo">
+        <![CDATA[DiVOC Reboot to Respawn Design von <a href="https://twitter.com/faab_e">faab_e</a>]]>
+    </string>
+    <string name="about_logo_content_description">
+        DiVOC Reboot to Respawn Logo
+    </string>
+</resources>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">DiVOC Schedule</string>
+    <string name="app_hardcoded_subtitle">April 2–5 2021, online</string>
+    <string name="conference_name" translatable="false">DiVOC</string>
+    <string name="copyright_logo">
+        <![CDATA[DiVOC Reboot to Respawn design by <a href="https://twitter.com/faab_e">faab_e</a>]]>
+    </string>
+    <string name="about_logo_content_description">
+        DiVOC Reboot to Respawn logo
+    </string>
+</resources>
