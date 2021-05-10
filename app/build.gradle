@@ -58,6 +58,7 @@ android {
         cccamp2019
         ccc36c3
         rc3
+        fossgis2021
     }
 
     def defaultDimension = "default"
@@ -133,6 +134,32 @@ android {
             resValue("string", "preference_hint_engelsystem_json_export_url", "\"https://engelsystem.de/rc3/shifts-json-export?key=YOUR_KEY\"")
             buildConfigField "String", "TRACE_DROID_EMAIL_ADDRESS", '"tobias.preuss+rc3@googlemail.com"'
             buildConfigField "String", "SCHEDULE_FEEDBACK_URL", '"https://frab.cccv.de/en/rc3/public/events/%s/feedback/new"'
+        }
+        fossgis2021 {
+            dimension defaultDimension
+            applicationId "info.metadude.android.fossgis.schedule"
+            versionName "${defaultConfig.versionName}-FOSSGIS-Edition"
+            buildConfigField "String", "GOOGLE_PLAY_URL", '"https://play.google.com/store/apps/details?id=info.metadude.android.fossgis.schedule"'
+            buildConfigField "String", "SOURCE_CODE_URL", "\"https://github.com/johnjohndoe/CampFahrplan/tree/fossgis-2021\""
+            buildConfigField "String", "SCHEDULE_URL", '"https://pretalx.com/fossgis2021/schedule/export/schedule.xml"'
+            buildConfigField "String", "EVENT_URL", '"https://pretalx.com/fossgis2021/talk/%1$s"'
+            buildConfigField "String", "EVENT_WEBSITE_URL", '"https://fossgis-konferenz.de"'
+            buildConfigField "String", "SERVER_BACKEND_TYPE", '"pretalx"'
+            buildConfigField "int", "SCHEDULE_FIRST_DAY_START_YEAR", "2021"
+            buildConfigField "int", "SCHEDULE_FIRST_DAY_START_MONTH", "6"
+            buildConfigField "int", "SCHEDULE_FIRST_DAY_START_DAY", "6"
+            buildConfigField "int", "SCHEDULE_LAST_DAY_END_YEAR", "2021"
+            buildConfigField "int", "SCHEDULE_LAST_DAY_END_MONTH", "6"
+            buildConfigField "int", "SCHEDULE_LAST_DAY_END_DAY", "10"
+            buildConfigField "boolean", "SHOW_APP_DISCLAIMER", "true"
+            buildConfigField "boolean", "ENGAGE_C3NAV_APP_INSTALLATION", "false"
+            buildConfigField "boolean", "ENGAGE_GOOGLE_BETA_TESTING", "true"
+            buildConfigField "boolean", "ENGAGE_GOOGLE_PLAY_RATING", "true"
+            buildConfigField "boolean", "ENABLE_ENGELSYSTEM_SHIFTS", "true"
+            buildConfigField "boolean", "ENABLE_ALTERNATIVE_SCHEDULE_URL", "false"
+            resValue("string", "preference_hint_engelsystem_json_export_url", "\"https://helfer.fossgis.de/shifts-json-export?key=YOUR_KEY\"")
+            buildConfigField "String", "TRACE_DROID_EMAIL_ADDRESS", '"tobias.preuss+fossgis@googlemail.com"'
+            buildConfigField "String", "SCHEDULE_FEEDBACK_URL", '"https://pretalx.com/fossgis2021/talk/%s/feedback/"'
         }
     }
 
