@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="pressed_congress">#CCeb7f00</color>
+
+    <!-- Default state -->
+    <color name="track_background_default">#FBEFE6</color>
+    <color name="track_background_default_3d_drohnen_lidar">#ebc52d</color>
+    <color name="track_background_default_ausbildung_und_lehre">#d64f84</color>
+    <color name="track_background_default_daten_und_datenprozessierung">#774d9f</color>
+    <color name="track_background_default_grundlagen_open_source_gis_und_openstreetmap">#884C06</color>
+    <color name="track_background_default_kartographie_und_visualisierung">#126C3E</color>
+    <color name="track_background_default_neuigkeiten_aus_den_open_source_projekten">#834721</color>
+    <color name="track_background_default_offene_standards_zb_inspire_ogc">#4589bb</color>
+    <color name="track_background_default_open_data_und_lizenzen">#676329</color>
+    <color name="track_background_default_openstreetmap">#1c8d6d</color>
+    <color name="track_background_default_praxisberichte">#aeb514</color>
+    <color name="track_background_default_rasterdaten_und_fernerkundung">#31aec9</color>
+    <color name="track_background_default_routing_und_mobilitaet">#57a22d</color>
+
+
+    <!-- Highlight state -->
+    <color name="track_background_highlight">#f3b271</color>
+    <color name="track_background_highlight_3d_drohnen_lidar">#f6e5a1</color>
+    <color name="track_background_highlight_ausbildung_und_lehre">#eeb6cc</color>
+    <color name="track_background_highlight_daten_und_datenprozessierung">#b69ccf</color>
+    <color name="track_background_highlight_grundlagen_open_source_gis_und_openstreetmap">#ee7f00</color>
+    <color name="track_background_highlight_kartographie_und_visualisierung">#0CAA59</color>
+    <color name="track_background_highlight_neuigkeiten_aus_den_open_source_projekten">#d38351</color>
+    <color name="track_background_highlight_offene_standards_zb_inspire_ogc">#a2c4dd</color>
+    <color name="track_background_highlight_open_data_und_lizenzen">#bbb554</color>
+    <color name="track_background_highlight_openstreetmap">#1CBC8F</color>
+    <color name="track_background_highlight_praxisberichte">#e7ed5b</color>
+    <color name="track_background_highlight_rasterdaten_und_fernerkundung">#94d7e5</color>
+    <color name="track_background_highlight_routing_und_mobilitaet">#99d976</color>
+
+    <!-- Track color -->
+    <color name="track_name">#be000000</color>
+
+    <!-- Title color -->
+    <color name="session_title_on_default_background">#a0000000</color>
+    <color name="session_title_on_highlight_background">@android:color/black</color>
+
+</resources>

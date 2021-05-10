@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">FOSSGIS 2021 Schedule</string>
+    <string name="app_hardcoded_subtitle">Conference for free and open source software, geo-software and OpenStreetMap, June 6.-9. 2021, online</string>
+    <string name="conference_name" translatable="false">FOSSGIS</string>
+    <string name="copyright_logo">
+        Design of the FOSSGIS logo: FOSSGIS e.V. resp. Jane Eder.
+    </string>
+    <string name="about_logo_content_description">
+        FOSSGIS 2021 logo
+    </string>
+</resources>
