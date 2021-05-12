@@ -81,5 +81,11 @@
             android:label="@string/starred_sessions"
             android:resizeableActivity="true" >
         </activity>
+        <activity
+            android:name="nerd.tuxmobil.fahrplan.congress.sponsors.SponsorsActivity"
+            android:theme="@style/Theme.Congress.NoActionBar"
+            android:label="@string/sponsors"
+            android:resizeableActivity="true" >
+        </activity>
     </application>
 </manifest>

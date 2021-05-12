@@ -106,6 +106,7 @@
 
     <string name="general_settings">Allgemein</string>
     <string name="starred_sessions">Favoriten</string>
+    <string name="sponsors">Sponsoren</string>
     <string name="invalid_url">Ungültige URL</string>
     <string name="no_favorites">Keine favorisierten Vorträge</string>
     <string name="choose_to_delete">Wähle Vorträge</string>
@@ -215,5 +216,11 @@
     <string name="validation_error_url_without_api_key">
         <xliff:g example="Engelsystem" id="urlType">%s</xliff:g> URL ohne API-Schlüssel.
     </string>
+
+    <!-- Sponsors -->
+    <string name="sponsor_category_platinum">Platinsponsoren</string>
+    <string name="sponsor_category_gold">Goldsponsoren</string>
+    <string name="sponsor_category_silver">Silbersponsoren</string>
+    <string name="sponsor_category_bronze">Bronzesponsoren</string>
 
 </resources>

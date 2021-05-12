@@ -30,6 +30,13 @@
             android:titleCondensed="@string/menu_item_title_schedule_changes">
     </item>
     <item
+        android:id="@+id/menu_item_sponsors"
+        android:orderInCategory="79"
+        app:showAsAction="never"
+        android:title="@string/menu_item_title_sponsors"
+        android:titleCondensed="@string/menu_item_title_sponsors">
+    </item>
+    <item
             android:id="@+id/menu_item_settings"
             android:icon="@drawable/ic_settings_white_24dp"
             android:orderInCategory="80"

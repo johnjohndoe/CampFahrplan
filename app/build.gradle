@@ -13,6 +13,10 @@ android {
     compileSdkVersion Android.compileSdkVersion
     buildToolsVersion Android.buildToolsVersion
 
+    buildFeatures {
+        viewBinding true
+    }
+
     defaultConfig {
         versionCode 83
         versionName "1.51.0"

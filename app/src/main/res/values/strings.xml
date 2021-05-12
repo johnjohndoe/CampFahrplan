@@ -18,6 +18,7 @@
     <string name="menu_item_title_refresh">Refresh</string>
     <string name="menu_item_title_schedule_changes" translatable="false">@string/schedule_changes</string>
     <string name="menu_item_title_settings" translatable="false">@string/settings</string>
+    <string name="menu_item_title_sponsors" translatable="false">@string/sponsors</string>
     <string name="menu_item_title_share_session">Share event</string>
     <string name="menu_item_title_share_favorites">Share favorites</string>
     <string name="menu_item_title_share_session_text">as text</string>
@@ -119,6 +120,7 @@
     <string name="dash" translatable="false"><xliff:g id="dash">—</xliff:g></string>
     <string name="general_settings">General</string>
     <string name="starred_sessions">Favorites</string>
+    <string name="sponsors">Sponsors</string>
     <string name="invalid_url">Invalid URL</string>
     <string name="choose_to_delete">Select lectures</string>
     <string name="day_separator">Day <xliff:g example="2" id="day_of_congress">%1$d</xliff:g> - <xliff:g example="29.12.2014" id="date_of_congress_day">%2$s</xliff:g></string>
@@ -232,5 +234,11 @@
     <string name="validation_error_url_without_api_key">
         <xliff:g example="Engelsystem" id="urlType">%s</xliff:g> URL without API key.
     </string>
+
+    <!-- Sponsors -->
+    <string name="sponsor_category_platinum">Platinum sponsors</string>
+    <string name="sponsor_category_gold">Gold sponsors</string>
+    <string name="sponsor_category_silver">Silver sponsors</string>
+    <string name="sponsor_category_bronze">Bronze sponsors</string>
 
 </resources>

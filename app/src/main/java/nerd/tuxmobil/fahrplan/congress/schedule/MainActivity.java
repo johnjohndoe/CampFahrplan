@@ -64,6 +64,8 @@ import nerd.tuxmobil.fahrplan.congress.reporting.TraceDroidEmailSender;
 import nerd.tuxmobil.fahrplan.congress.repositories.AppRepository;
 import nerd.tuxmobil.fahrplan.congress.settings.SettingsActivity;
 import nerd.tuxmobil.fahrplan.congress.sidepane.OnSidePaneCloseListener;
+import nerd.tuxmobil.fahrplan.congress.sponsors.SponsorsActivity;
+import nerd.tuxmobil.fahrplan.congress.sponsors.SponsorsFragment;
 import nerd.tuxmobil.fahrplan.congress.utils.ConfirmationDialog;
 import nerd.tuxmobil.fahrplan.congress.utils.FahrplanMisc;
 import okhttp3.OkHttpClient;
@@ -367,6 +369,9 @@ public class MainActivity extends BaseActivity implements
                 intent = new Intent(this, AlarmList.class);
                 startActivityForResult(intent, MyApp.ALARMLIST);
                 return true;
+            case R.id.menu_item_sponsors:
+                openSponsors();
+                return true;
             case R.id.menu_item_settings:
                 intent = new Intent(this, SettingsActivity.class);
                 startActivityForResult(intent, MyApp.SETTINGS);
@@ -496,6 +501,18 @@ public class MainActivity extends BaseActivity implements
             ((StarredListFragment) fragment).onRefresh();
         }
         invalidateOptionsMenu();
+    }
+
+    private void openSponsors() {
+        FrameLayout sidePane = findViewById(R.id.detail);
+        if (sidePane == null) {
+            Intent intent = new Intent(this, SponsorsActivity.class);
+            startActivity(intent);
+        } else {
+            sidePane.setVisibility(View.VISIBLE);
+            replaceFragment(R.id.detail, SponsorsFragment.newInstance(),
+                    SponsorsFragment.FRAGMENT_TAG, SponsorsFragment.FRAGMENT_TAG);
+        }
     }
 
     private void openFavorites() {
