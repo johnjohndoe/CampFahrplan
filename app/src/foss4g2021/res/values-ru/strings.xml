@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Pасписание FOSS4G</string>
+    <string name="copyright_logo">
+        FOSS4G дизайн логотипа от Pablo de la Cruz
+    </string>
+    <string name="about_logo_content_description">
+        FOSS4G логотипа
+    </string>
+</resources>

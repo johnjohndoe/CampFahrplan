@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="pressed_congress">#CCa41c31</color>
+
+    <!-- Default state -->
+    <color name="track_background_default">#a18c64</color>
+    <color name="track_background_default_academic">#694714</color>
+    <color name="track_background_default_community_osgeo">#26572d</color>
+    <color name="track_background_default_education_and_research">#4A2510</color>
+    <color name="track_background_default_environmental_sustainability">#2d5b58</color>
+    <color name="track_background_default_indigenous_mapping">#52183E</color>
+    <color name="track_background_default_live_coding">#3B0033</color>
+    <color name="track_background_default_open_data">#152469</color>
+    <color name="track_background_default_panel">#641616</color>
+    <color name="track_background_default_social_gathering">#7f0078</color>
+    <color name="track_background_default_software">#354F1A</color>
+    <color name="track_background_default_state_of_the_art">#373B09</color>
+    <color name="track_background_default_transition_to_foss4g">#8a309c</color>
+    <color name="track_background_default_use_cases_and_applications">#4d3699</color>
+
+    <!-- Highlight state -->
+    <color name="track_background_highlight">#ccb37e</color>
+    <color name="track_background_highlight_academic">#d48f29</color>
+    <color name="track_background_highlight_community_osgeo">#4db05b</color>
+    <color name="track_background_highlight_education_and_research">#9a4c20</color>
+    <color name="track_background_highlight_environmental_sustainability">#5aada8</color>
+    <color name="track_background_highlight_indigenous_mapping">#9a2d75</color>
+    <color name="track_background_highlight_live_coding">#800874</color>
+    <color name="track_background_highlight_open_data">#2542b9</color>
+    <color name="track_background_highlight_panel">#cd2d2d</color>
+    <color name="track_background_highlight_social_gathering">#ff00f1</color>
+    <color name="track_background_highlight_software">#54824A</color>
+    <color name="track_background_highlight_state_of_the_art">#848f17</color>
+    <color name="track_background_highlight_transition_to_foss4g">#c577d5</color>
+    <color name="track_background_highlight_use_cases_and_applications">#917dd1</color>
+
+    <!-- Track color -->
+    <color name="track_name">#beffffff</color>
+
+    <!-- Title color -->
+    <color name="session_title_on_default_background">#a0ffffff</color>
+    <color name="session_title_on_highlight_background">#fff</color>
+
+</resources>

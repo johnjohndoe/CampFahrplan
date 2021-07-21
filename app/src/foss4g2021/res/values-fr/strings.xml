@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Programme du FOSS4G</string>
+    <string name="copyright_logo">
+        FOSS4G conception de logo par Pablo de la Cruz
+    </string>
+    <string name="about_logo_content_description">
+        FOSS4G logo
+    </string>
+</resources>

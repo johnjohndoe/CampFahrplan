@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<map linked="true">
+
+    <entry key="Academic">academic</entry>
+    <entry key="Community / OSGeo">community_osgeo</entry>
+    <entry key="Education and Research">education_and_research</entry>
+    <entry key="Environmental Sustainability">environmental_sustainability</entry>
+    <entry key="Indigenous Mapping">indigenous_mapping</entry>
+    <entry key="Live Coding">live_coding</entry>
+    <entry key="Open Data">open_data</entry>
+    <entry key="Panel">panel</entry>
+    <entry key="Social Gathering">social_gathering</entry>
+    <entry key="Software">software</entry>
+    <entry key="State of the Art">state_of_the_art</entry>
+    <entry key="Transition to FOSS4G">transition_to_foss4g</entry>
+    <entry key="Use Cases and Applications">use_cases_and_applications</entry>
+    <entry key=""></entry>
+
+</map>

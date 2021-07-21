@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">FOSS4G Calendario</string>
+    <string name="app_hardcoded_subtitle">27 de septiembre - 2 de octubre de 2021. online</string>
+    <string name="copyright_logo">
+        FOSS4G diseño de logo por Pablo de la Cruz
+    </string>
+    <string name="about_logo_content_description">
+        FOSS4G logo
+    </string>
+</resources>

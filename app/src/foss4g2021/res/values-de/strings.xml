@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">FOSS4G Fahrplan</string>
+    <string name="app_hardcoded_subtitle">27. September - 2. October 2021, online</string>
+    <string name="copyright_logo">
+        FOSS4G Logo-Design von Pablo de la Cruz
+    </string>
+    <string name="about_logo_content_description">
+        FOSS4G Logo
+    </string>
+</resources>

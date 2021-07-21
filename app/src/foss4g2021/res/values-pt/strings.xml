@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Cronograma FOSS4G</string>
+    <string name="app_hardcoded_subtitle">27 de setembro - 2 de outubro de 2021. online</string>
+    <string name="copyright_logo">
+        FOSS4G design do logotipo por Pablo de la Cruz
+    </string>
+    <string name="about_logo_content_description">
+        FOSS4G logotipo
+    </string>
+</resources>

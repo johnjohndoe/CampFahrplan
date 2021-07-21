@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">FOSS4G Schedule</string>
+    <string name="copyright_logo">
+        FOSS4G logotypdesign av Pablo de la Cruz
+    </string>
+    <string name="about_logo_content_description">
+        FOSS4G logotyp
+    </string>
+</resources>
