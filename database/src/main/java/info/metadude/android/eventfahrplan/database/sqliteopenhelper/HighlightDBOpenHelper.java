@@ -11,7 +11,7 @@ import info.metadude.android.eventfahrplan.database.contract.FahrplanContract.Hi
 
 public class HighlightDBOpenHelper extends SQLiteOpenHelper {
 
-    private static final int DATABASE_VERSION = 3;
+    private static final int DATABASE_VERSION = 2;
 
     private static final String DATABASE_NAME = "highlight";
 
@@ -32,6 +32,7 @@ public class HighlightDBOpenHelper extends SQLiteOpenHelper {
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
+        // Clear database from FOSS4G 2016.
         db.execSQL("DROP TABLE IF EXISTS " + HighlightsTable.NAME);
         onCreate(db);
     }
