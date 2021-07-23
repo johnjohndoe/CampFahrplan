@@ -14,7 +14,7 @@ android {
     buildToolsVersion Android.buildToolsVersion
 
     defaultConfig {
-        versionCode 84
+        versionCode 85
         versionName "1.52.0"
         minSdkVersion Android.minSdkVersion
         targetSdkVersion Android.targetSdkVersion
