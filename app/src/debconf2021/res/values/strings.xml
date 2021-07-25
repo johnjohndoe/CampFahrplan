@@ -4,7 +4,7 @@
     <string name="app_hardcoded_subtitle">August 15.-29. 2021, online</string>
     <string name="conference_name" translatable="false">DebConf</string>
     <string name="copyright_logo">
-        <![CDATA[DebConf design]]>
+        DebConf logo design by Yao Wei and Jefferson Maier
     </string>
     <string name="about_logo_content_description">
         DebConf logo
