@@ -5,9 +5,31 @@
 
     <!-- Default state -->
     <color name="track_background_default">#595959</color>
+    <color name="track_background_default_introduction_to_free_software_debian">#999999</color>
+    <color name="track_background_default_packaging_policy_and_debian_infrastructure">#909990</color>
+    <color name="track_background_default_systems_administration_automation_and_orchestration">#00CCCC</color>
+    <color name="track_background_default_cloud_and_containers">#918A99</color>
+    <color name="track_background_default_security">#00B300</color>
+    <color name="track_background_default_community_diversity_local_outreach_and_social_context">#9E876A</color>
+    <color name="track_background_default_internationalization_localization_and_accessibility">#CCAD00</color>
+    <color name="track_background_default_embedded_kernel">#A6A6A6</color>
+    <color name="track_background_default_debian_blends_and_debian_derived_distributions">#8FA3B8</color>
+    <color name="track_background_default_debian_in_arts_science">#D3D3DE</color>
+    <color name="track_background_default_other">#0099CC</color>
 
     <!-- Highlight state -->
     <color name="track_background_highlight">#8c8c8c</color>
+    <color name="track_background_highlight_introduction_to_free_software_debian">#CCCCCC</color>
+    <color name="track_background_highlight_packaging_policy_and_debian_infrastructure">#C0CCC0</color>
+    <color name="track_background_highlight_systems_administration_automation_and_orchestration">#00ffff</color>
+    <color name="track_background_highlight_cloud_and_containers">#C2B8CC</color>
+    <color name="track_background_highlight_security">#00ff00</color>
+    <color name="track_background_highlight_community_diversity_local_outreach_and_social_context">#d2b48c</color>
+    <color name="track_background_highlight_internationalization_localization_and_accessibility">#ffd700</color>
+    <color name="track_background_highlight_embedded_kernel">#d3d3d3</color>
+    <color name="track_background_highlight_debian_blends_and_debian_derived_distributions">#b0c4de</color>
+    <color name="track_background_highlight_debian_in_arts_science">#e6e6fa</color>
+    <color name="track_background_highlight_other">#00bfff</color>
 
     <!-- Track color -->
     <color name="track_name">#be000000</color>

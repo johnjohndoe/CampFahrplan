@@ -1,6 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 <map linked="true">
 
+
+    <!--
+
+https://salsa.debian.org/debconf-team/public/websites/dc21/-/blob/master/tracks.yml
+
+1|Introduction to Free Software &amp; Debian
+2|Packaging, policy, and Debian infrastructure
+3|Systems administration, automation and orchestration
+4|Cloud and containers
+5|Security
+6|Community, diversity, local outreach and social context
+7|Internationalization, Localization and Accessibility
+8|Embedded &amp; Kernel
+9|Debian Blends and Debian derived distributions
+10|Debian in Arts &amp; Science
+11|Other
+
+    -->
+
+    <entry key="Introduction to Free Software &amp; Debian">introduction_to_free_software_debian</entry>
+    <entry key="Packaging, policy, and Debian infrastructure">packaging_policy_and_debian_infrastructure</entry>
+    <entry key="Systems administration, automation and orchestration">systems_administration_automation_and_orchestration</entry>
+    <entry key="Cloud and containers">cloud_and_containers</entry>
+    <entry key="Security">security</entry>
+    <entry key="Community, diversity, local outreach and social context">community_diversity_local_outreach_and_social_context</entry>
+    <entry key="Internationalization, Localization and Accessibility">internationalization_localization_and_accessibility</entry>
+    <entry key="Embedded &amp; Kernel">embedded_kernel</entry>
+    <entry key="Debian Blends and Debian derived distributions">debian_blends_and_debian_derived_distributions</entry>
+    <entry key="Debian in Arts &amp; Science">debian_in_arts_science</entry>
+    <entry key="Other">other</entry>
+
+<!--
+    <entry key="Malayalam Language Miniconf">malayalam_language_miniconf</entry>
+    <entry key="No Track">no_track</entry>
+    <entry key="Spanish Language Miniconf">spanish_language_miniconf</entry>
+-->
+
     <entry key=""></entry>
 
 </map>
