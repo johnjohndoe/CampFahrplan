@@ -3,7 +3,7 @@
 
     <color name="colorPrimary">#a80030</color>
     <color name="colorPrimaryDark">#750021</color>
-    <color name="colorAccent">#006400</color>
+    <color name="colorAccent">#007D00</color>
     <color name="colorActionBar">@color/colorPrimary</color>
     <color name="windowBackground">#222</color>
     <color name="multi_choice_background">#fec700</color>
