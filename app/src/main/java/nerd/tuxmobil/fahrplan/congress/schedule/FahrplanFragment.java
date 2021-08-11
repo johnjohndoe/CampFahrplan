@@ -39,7 +39,6 @@ import androidx.recyclerview.widget.RecyclerView;
 import org.ligi.tracedroid.logging.Log;
 import org.threeten.bp.ZoneId;
 
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -67,6 +66,7 @@ import nerd.tuxmobil.fahrplan.congress.repositories.SessionsTransformer;
 import nerd.tuxmobil.fahrplan.congress.sharing.JsonSessionFormat;
 import nerd.tuxmobil.fahrplan.congress.sharing.SessionSharer;
 import nerd.tuxmobil.fahrplan.congress.sharing.SimpleSessionFormat;
+import nerd.tuxmobil.fahrplan.congress.utils.AlertDialogHelper;
 import nerd.tuxmobil.fahrplan.congress.utils.FahrplanMisc;
 import nerd.tuxmobil.fahrplan.congress.utils.TypefaceFactory;
 
@@ -103,17 +103,8 @@ public class FahrplanFragment extends Fragment implements SessionViewEventsHandl
 
     private int mDay = 1;
 
-    private static final String[] rooms = {
-            "Saal 1",
-            "Saal 2",
-            "Saal G",
-            "Saal 6",
-            "Saal 17",
-            "Lounge"
-    };
-
     private static final SessionsTransformer sessionsTransformer =
-            new SessionsTransformer(() -> Arrays.asList(rooms));
+            SessionsTransformer.createSessionsTransformer();
 
     private Typeface light;
 
@@ -290,7 +281,9 @@ public class FahrplanFragment extends Fragment implements SessionViewEventsHandl
         loadSessions(appRepository, mDay, forceReload);
         List<Session> sessionsOfDay = scheduleData.getAllSessions();
 
-        if (!sessionsOfDay.isEmpty()) {
+        if (sessionsOfDay.isEmpty()) {
+            showEmptyScheduleError();
+        } else {
             // TODO: Move this to AppRepository and include the result in ScheduleData
             conference = Conference.ofSessions(sessionsOfDay);
             MyApp.LogDebug(LOG_TAG, "Conference = " + conference);
@@ -612,7 +605,11 @@ public class FahrplanFragment extends Fragment implements SessionViewEventsHandl
                     mDay = 1;
                 }
                 viewDay(true);
-                fillTimes();
+                if (conference == null) {
+                    Log.e(getClass().getSimpleName(), "Error displaying schedule. Conference is null.");
+                } else {
+                    fillTimes();
+                }
             } else {
                 viewDay(false);
             }
@@ -651,6 +648,29 @@ public class FahrplanFragment extends Fragment implements SessionViewEventsHandl
         }
         return message;
     }
+
+    /**
+     * Shows an error message indicating that the loaded schedule does not contain any sessions
+     * to be displayed. If present the schedule version is included in the error message.
+     */
+    private void showEmptyScheduleError() {
+        String scheduleVersion = appRepository.readMeta().getVersion();
+        if (TextUtils.isEmpty(scheduleVersion)) {
+            AlertDialogHelper.showErrorDialog(
+                    requireContext(),
+                    R.string.dlg_err_schedule_data,
+                    R.string.dlg_err_schedule_data_empty_without_version
+            );
+        } else {
+            AlertDialogHelper.showErrorDialog(
+                    requireContext(),
+                    R.string.dlg_err_schedule_data,
+                    R.string.dlg_err_schedule_data_empty,
+                    scheduleVersion
+            );
+        }
+    }
+
 
     @Override
     public void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
