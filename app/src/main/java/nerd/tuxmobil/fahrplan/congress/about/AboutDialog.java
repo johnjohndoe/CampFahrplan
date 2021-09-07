@@ -88,6 +88,7 @@ public class AboutDialog extends DialogFragment {
             titleText = getString(R.string.app_name);
         }
         text.setText(titleText);
+        text.setVisibility(View.GONE);
         text = requireViewByIdCompat(view, R.id.about_session_subtitle_view);
         if (subtitleText.isEmpty()) {
             subtitleText = getString(R.string.app_hardcoded_subtitle);

@@ -19,9 +19,7 @@
 
 <resources xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
 
-    <style name="Theme.Congress" parent="Theme.AppCompat">
-        <!-- Set AppCompat’s actionBarStyle -->
-        <!--<item name="actionBarStyle">@style/MyActionBarStyle</item>-->
+    <style name="Theme.Congress" parent="Theme.AppCompat.Light">
 
         <!-- Set AppCompat’s color theming attrs -->
         <item name="colorPrimary">@color/colorPrimary</item>
@@ -38,22 +36,23 @@
         <item name="alertDialogTheme">@style/AlertDialog</item>
         <item name="android:windowBackground">@color/windowBackground</item>
         <item name="android:spinnerItemStyle">@style/SpinnerItemStyle</item>
+        <item name="android:spinnerDropDownItemStyle">@style/SpinnerDropDownItemStyle</item>
     </style>
 
-    <style name="Theme.Congress.NoActionBar" parent="Theme.AppCompat.NoActionBar">
-        <!-- Set AppCompat’s actionBarStyle -->
-        <!--<item name="actionBarStyle">@style/MyActionBarStyle</item>-->
-
+    <style name="Theme.Congress.NoActionBar" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Set AppCompat’s color theming attrs -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:textColorSecondary">#78a672</item>
+
 
         <!-- The rest of your attributes -->
         <item name="android:textColorHighlight">@color/text_link_pressed_background_on_light</item>
         <item name="actionOverflowMenuStyle">@style/PopupMenuOverflowStyle</item>
         <item name="android:contextPopupMenuStyle" tools:targetApi="N">@style/ContextPopupMenuStyle</item>
         <item name="android:spinnerItemStyle">@style/SpinnerItemStyle</item>
+        <item name="android:spinnerDropDownItemStyle">@style/SpinnerDropDownItemStyle</item>
         <item name="actionDropDownStyle">@style/MyActionDropDownStyle</item>
         <item name="windowActionModeOverlay">true</item>
         <item name="actionModeBackground">@color/colorPrimary</item>
@@ -62,16 +61,24 @@
     </style>
 
     <style name="ContextPopupMenuStyle" parent="@style/Widget.AppCompat.Light.PopupMenu.Overflow">
+        <item name="android:textColorPrimary">@color/popupText</item>
         <item name="android:popupBackground">@color/popupBackground</item>
     </style>
 
     <style name="SpinnerItemStyle" parent="Widget.AppCompat.DropDownItem.Spinner">
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
         <item name="android:paddingBottom">12dp</item>
         <item name="android:paddingTop">12dp</item>
         <item name="android:foreground">?android:attr/selectableItemBackground</item>
     </style>
 
-    <style name="Dialog" parent="Theme.AppCompat.Dialog">
+    <style name="SpinnerDropDownItemStyle" parent="Widget.AppCompat.DropDownItem.Spinner">
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
+        <item name="android:background">@color/windowBackground</item>
+        <item name="android:foreground">?android:attr/selectableItemBackground</item>
+    </style>
+
+    <style name="Dialog" parent="Theme.AppCompat.Light.Dialog">
         <item name="android:textAppearance">@style/TextAppearance.AppCompat.Title</item>
         <item name="android:textColorHighlight">@color/text_link_pressed_background_on_dark</item>
         <item name="android:windowBackground">@color/windowBackground</item>
@@ -87,6 +94,7 @@
     </style>
 
     <style name="PopupMenuOverflowStyle" parent="@style/Widget.AppCompat.Light.PopupMenu.Overflow">
+        <item name="android:textColorPrimary">@color/popupText</item>
         <item name="android:popupBackground">@color/popupBackground</item>
     </style>
 
@@ -99,7 +107,7 @@
         <item name="android:visibility">gone</item>
     </style>
 
-    <style name="AlertDialog" parent="Theme.AppCompat.Dialog.Alert">
+    <style name="AlertDialog" parent="Theme.AppCompat.Light.Dialog.Alert">
         <item name="colorAccent">@color/alert_dialog_button_text</item>
         <item name="android:textAppearance">@style/TextAppearance.AppCompat.Title</item>
         <item name="android:windowBackground">@color/windowBackground</item>

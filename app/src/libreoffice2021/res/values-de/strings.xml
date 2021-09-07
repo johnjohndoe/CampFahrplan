@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">LibreOffice 2021 Fahrplan</string>
+    <string name="app_hardcoded_subtitle">23.-25. September 2021, online</string>
+    <string name="copyright_logo">
+        Konferenz Logo von Alan Ward, lizenziert bei The Document Foundation
+    </string>
+    <string name="about_logo_content_description">
+        LibreOffice Conference 2021 Logo
+    </string>
+</resources>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">LibreOffice 2021 Schedule</string>
+    <string name="app_hardcoded_subtitle">September 23.-25. 2021, online</string>
+    <string name="conference_name" translatable="false">LibreOffice</string>
+    <string name="copyright_logo">
+        Conference logo by Alan Ward, licensed to The Document Foundation
+    </string>
+    <string name="about_logo_content_description">
+        LibreOffice Conference 2021 logo
+    </string>
+</resources>

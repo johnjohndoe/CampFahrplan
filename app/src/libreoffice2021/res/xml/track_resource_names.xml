@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<map linked="true">
+
+    <!--suppress CheckTagEmptyBody -->
+    <entry key=""></entry>
+    <entry key="a) Development, APIs, Extensions, Future Technology">
+        a_development_apis_extensions_future_technology
+    </entry>
+    <entry key="b) Quality Assurance">
+        b_quality_assurance
+    </entry>
+    <entry key="c) Localization, Documentation and Native Language Projects">
+        c_localization_documentation_and_native_language_projects
+    </entry>
+    <entry key="d) Appealing Libreoffice: Ease of Use, Design and Accessibility">
+        d_appealing_libreoffice_ease_of_use_design_and_accessibility
+    </entry>
+    <entry key="e) Open Document Format, Document Liberation and Interoperability">
+        e_open_document_format_document_liberation_and_interoperability
+    </entry>
+    <entry key="f) Advocating, Promoting, Marketing LibreOffice">
+        f_advocating_promoting_marketing_libreoffice
+    </entry>
+    <entry key="Lightning talks">lightning_talks</entry>
+    <entry key="Talk">talk</entry>
+    <entry key="Workshop">workshop</entry>
+
+</map>

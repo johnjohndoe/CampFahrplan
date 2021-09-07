@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="pressed_congress">#CCa41c31</color>
+
+    <!-- Default state -->
+    <color name="track_background_default">@color/colorPrimary</color>
+    <color name="track_background_default_a_development_apis_extensions_future_technology">#801919</color>
+    <color name="track_background_default_b_quality_assurance">#8C8212</color>
+    <color name="track_background_default_c_localization_documentation_and_native_language_projects">#164675</color>
+    <color name="track_background_default_d_appealing_libreoffice_ease_of_use_design_and_accessibility">#6E166E</color>
+    <color name="track_background_default_e_open_document_format_document_liberation_and_interoperability">#631932</color>
+    <color name="track_background_default_f_advocating_promoting_marketing_libreoffice">#093620</color>
+    <!-- type -->
+    <color name="track_background_default_lightning_talks">#1DA186</color>
+    <color name="track_background_default_talk">#174D46</color>
+    <color name="track_background_default_workshop">#7D9438</color>
+
+    <!-- Highlight state -->
+    <color name="track_background_highlight">@color/colorPrimaryDark</color>
+    <color name="track_background_highlight_a_development_apis_extensions_future_technology">#990F0F</color>
+    <color name="track_background_highlight_b_quality_assurance">#a59e04</color>
+    <color name="track_background_highlight_c_localization_documentation_and_native_language_projects">#0d6c8e</color>
+    <color name="track_background_highlight_d_appealing_libreoffice_ease_of_use_design_and_accessibility">#860c76</color>
+    <color name="track_background_highlight_e_open_document_format_document_liberation_and_interoperability">#7c0a33</color>
+    <color name="track_background_highlight_f_advocating_promoting_marketing_libreoffice">#064F17</color>
+    <!-- type -->
+    <color name="track_background_highlight_lightning_talks">#0eba99</color>
+    <color name="track_background_highlight_talk">#16705E</color>
+    <color name="track_background_highlight_workshop">#99ba34</color>
+
+    <!-- Track color -->
+    <color name="track_name">#beffffff</color>
+
+    <!-- Title color -->
+    <color name="session_title_on_default_background">#ccffffff</color>
+    <color name="session_title_on_highlight_background">#fff</color>
+
+</resources>
