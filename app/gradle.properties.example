@@ -12,3 +12,8 @@ signing.rc3-release.keystoreFilePath=/home/USERNAME/.android/rc3-release-key.key
 signing.rc3-release.keystorePassword="PASSWORD"
 signing.rc3-release.keyAlias=rc3
 signing.rc3-release.keyPassword="ANOTHERPASSWORD"
+
+signing.datenspuren2021-release.keystoreFilePath=/home/USERNAME/.android/datenspuren-release-key.keystore
+signing.datenspuren2021-release.keystorePassword="PASSWORD"
+signing.datenspuren2021-release.keyAlias="datenspuren"
+signing.datenspuren2021-release.keyPassword="ANOTHERPASSWORD"
