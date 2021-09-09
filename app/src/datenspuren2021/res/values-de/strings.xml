@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Datenspuren 2021</string>
+    <string name="app_hardcoded_subtitle">Log-Down Light, 18.-19. September 2021</string>
+    <string name="conference_url">
+        <![CDATA[<a href="https://datenspuren.de">https://datenspuren.de</a>]]>
+    </string>
+    <string name="source_code">
+        <![CDATA[<a href="https://github.com/johnjohndoe/CampFahrplan/tree/datenspuren-2021">Quellcode</a>]]>
+    </string>
+    <string name="google_play_store">
+        <![CDATA[<a href="https://play.google.com/store/apps/details?id=info.metadude.android.datenspuren.schedule">Eintrag im Google PlayStore</a>]]>
+    </string>
+    <string name="copyright_logo">
+        Gestaltung des Datenspuren-Logos: C3D2
+    </string>
+    <string name="about_logo_content_description">
+        Datenspuren 2021 Logo
+    </string>
+</resources>
