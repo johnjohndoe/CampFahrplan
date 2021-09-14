@@ -22,7 +22,6 @@ class SessionsTransformer @VisibleForTesting constructor(
                     "Saal G",
                     "Saal 6",
                     "Saal 17",
-                    "Lounge"
                 )
                 override val deprioritizedRooms: List<String> = emptyList()
             }
