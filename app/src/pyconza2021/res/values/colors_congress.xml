@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="pressed_congress">#CC0099AB</color>
+
+    <!-- Default state -->
+    <color name="track_background_default">#808080</color>
+    <color name="track_background_default_data_science">#596580</color>
+    <color name="track_background_default_infrastructure_devops">#4d5c2e</color>
+    <color name="track_background_default_other">#6F4373</color>
+    <color name="track_background_default_scientific_computing">#BF9039</color>
+    <color name="track_background_default_teaching_and_learning_with_python">#39662B</color>
+    <color name="track_background_default_testing">#66412B</color>
+    <color name="track_background_default_web">#60662B</color>
+
+    <!-- Highlight state -->
+    <color name="track_background_highlight">#959595</color>
+    <color name="track_background_highlight_data_science">#859BCC</color>
+    <color name="track_background_highlight_infrastructure_devops">#97b34b</color>
+    <color name="track_background_highlight_other">#b873bf</color>
+    <color name="track_background_highlight_scientific_computing">#e6a535</color>
+    <color name="track_background_highlight_teaching_and_learning_with_python">#63B34B</color>
+    <color name="track_background_highlight_testing">#B3714B</color>
+    <color name="track_background_highlight_web">#A8B34B</color>
+
+    <!-- Track color -->
+    <color name="track_name">#c8ffffff</color>
+
+    <!--Title color-->
+    <color name="session_title_on_default_background">#a0ffffff</color>
+    <color name="session_title_on_highlight_background">#fff</color>
+
+</resources>

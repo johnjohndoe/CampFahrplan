@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">PyConZA 2021</string>
+    <string name="app_hardcoded_subtitle">7.-8. Oktober 2021, online</string>
+    <string name="copyright_logo">
+        Gestaltung des PyConZA-Logos: Python Software Society of South Africa.
+    </string>
+    <string name="about_logo_content_description">
+        PyConZA 2021 Logo
+    </string>
+</resources>

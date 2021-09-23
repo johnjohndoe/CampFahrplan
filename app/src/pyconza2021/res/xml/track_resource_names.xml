@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<map linked="true">
+
+    <entry key="Data Science">data_science</entry>
+    <entry key="Infrastructure / DevOps">infrastructure_devops</entry>
+    <entry key="Other">other</entry>
+    <entry key="Scientific Computing">scientific_computing</entry>
+    <entry key="Teaching and Learning with Python">teaching_and_learning_with_python</entry>
+    <entry key="Testing">testing</entry>
+    <entry key="Web">web</entry>
+    <entry key="">other</entry>
+
+</map>
