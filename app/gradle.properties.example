@@ -12,3 +12,8 @@ signing.rc3-release.keystoreFilePath=/home/USERNAME/.android/rc3-release-key.key
 signing.rc3-release.keystorePassword="PASSWORD"
 signing.rc3-release.keyAlias=rc3
 signing.rc3-release.keyPassword="ANOTHERPASSWORD"
+
+signing.fosdem-release.keystoreFilePath=/home/USERNAME/.android/fosdem-release-key.keystore
+signing.fosdem-release.keystorePassword="PASSWORD"
+signing.fosdem-release.keyAlias="fosdem"
+signing.fosdem-release.keyPassword="ANOTHERPASSWORD"
