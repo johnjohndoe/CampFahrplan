@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">CLT Fahrplan</string>
+    <string name="app_hardcoded_subtitle">12.-13. März 2022, online</string>
+    <string name="copyright_logo">
+        CLT-Design von Sebastian Pettke
+    </string>
+    <string name="about_logo_content_description">
+        CLT Logo
+    </string>
+</resources>

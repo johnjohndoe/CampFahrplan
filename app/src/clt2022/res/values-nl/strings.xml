@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">CLT Schedule</string>
+    <string name="app_hardcoded_subtitle">Maart 12.-13. 2022, Online</string>
+    <string name="copyright_logo">
+        CLT Ontwerp door Sebastian Pettke
+    </string>
+    <string name="about_logo_content_description">
+        CLT
+    </string>
+</resources>

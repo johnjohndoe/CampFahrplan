@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="pressed_congress">#CCa41c31</color>
+
+    <!-- Default state -->
+
+    <color name="track_background_default">#757575</color>
+    <color name="track_background_default_addon">#03324f</color>
+    <color name="track_background_default_demo">#2a729c</color>
+    <color name="track_background_default_firma">#9e5700</color>
+    <color name="track_background_default_junior">#8f6900</color>
+    <color name="track_background_default_vortrag">#a67a00</color>
+    <color name="track_background_default_workshop">#3535a1</color>
+
+    <!-- Highlight state -->
+
+    <color name="track_background_highlight">#8c8c8c</color>
+    <color name="track_background_highlight_addon">#043e63</color>
+    <color name="track_background_highlight_demo">#3281b3</color>
+    <color name="track_background_highlight_firma">#c56e00</color>
+    <color name="track_background_highlight_junior">#b88803</color>
+    <color name="track_background_highlight_vortrag">#cc9600</color>
+    <color name="track_background_highlight_workshop">#3d43b6</color>
+
+</resources>

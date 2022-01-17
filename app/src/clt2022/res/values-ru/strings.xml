@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Pасписание CLT</string>
+    <string name="app_hardcoded_subtitle">12.-13-го марш 2022, Online</string>
+    <string name="copyright_logo">
+        CLT дизайн от Sebastian Pettke
+    </string>
+    <string name="about_logo_content_description">
+        CLT
+    </string>
+</resources>
