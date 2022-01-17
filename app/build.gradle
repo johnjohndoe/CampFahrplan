@@ -60,6 +60,7 @@ android {
         cccamp2019
         ccc36c3
         rc3
+        clt2022
     }
 
     def defaultDimension = "default"
@@ -141,6 +142,33 @@ android {
             buildConfigField "String", "SOCIAL_MEDIA_HASHTAGS_HANDLES", '"#rC3 #fahrplan #nowhere"'
             buildConfigField "String", "TRACE_DROID_EMAIL_ADDRESS", '"tobias.preuss+rc3@googlemail.com"'
             buildConfigField "String", "SCHEDULE_FEEDBACK_URL", '"https://frab.cccv.de/en/rc3/public/events/%s/feedback/new"'
+        }
+        clt2022 {
+            dimension defaultDimension
+            applicationId "info.metadude.android.clt.schedule"
+            versionName "${defaultConfig.versionName}-CLT-Edition"
+            buildConfigField "String", "GOOGLE_PLAY_URL", '"https://play.google.com/store/apps/details?id=info.metadude.android.clt.schedule"'
+            buildConfigField "String", "F_DROID_URL", '"https://f-droid.org/packages/info.metadude.android.clt.schedule"'
+            buildConfigField "String", "SCHEDULE_URL", '"https://chemnitzer.linux-tage.de/2022/api/eventfahrplan/schedule.xml"'
+            buildConfigField "String", "EVENT_URL", '""'
+            buildConfigField "String", "EVENT_WEBSITE_URL", '"https://chemnitzer.linux-tage.de"'
+            buildConfigField "String", "SERVER_BACKEND_TYPE", '"pretalx"'
+            buildConfigField "int", "SCHEDULE_FIRST_DAY_START_YEAR", "2022"
+            buildConfigField "int", "SCHEDULE_FIRST_DAY_START_MONTH", "3"
+            buildConfigField "int", "SCHEDULE_FIRST_DAY_START_DAY", "12"
+            buildConfigField "int", "SCHEDULE_LAST_DAY_END_YEAR", "2022"
+            buildConfigField "int", "SCHEDULE_LAST_DAY_END_MONTH", "3"
+            buildConfigField "int", "SCHEDULE_LAST_DAY_END_DAY", "14"
+            buildConfigField "boolean", "SHOW_APP_DISCLAIMER", "true"
+            buildConfigField "boolean", "ENGAGE_C3NAV_APP_INSTALLATION", "false"
+            buildConfigField "boolean", "ENGAGE_GOOGLE_BETA_TESTING", "true"
+            buildConfigField "boolean", "ENGAGE_GOOGLE_PLAY_RATING", "true"
+            buildConfigField "boolean", "ENABLE_ALTERNATIVE_SCHEDULE_URL", "false"
+            buildConfigField "boolean", "ENABLE_CHAOSFLIX_EXPORT", "false"
+            buildConfigField "boolean", "ENABLE_ENGELSYSTEM_SHIFTS", "false"
+            buildConfigField "String", "SOCIAL_MEDIA_HASHTAGS_HANDLES", '"#clt2022"'
+            buildConfigField "String", "TRACE_DROID_EMAIL_ADDRESS", '"tobias.preuss+clt@googlemail.com"'
+            buildConfigField "String", "SCHEDULE_FEEDBACK_URL", '""'
         }
     }
 

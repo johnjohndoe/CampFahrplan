@@ -12,3 +12,8 @@ signing.rc3-release.keystoreFilePath=/home/USERNAME/.android/rc3-release-key.key
 signing.rc3-release.keystorePassword="PASSWORD"
 signing.rc3-release.keyAlias=rc3
 signing.rc3-release.keyPassword="ANOTHERPASSWORD"
+
+signing.clt2022-release.keystoreFilePath=/home/USERNAME/.android/clt-release-key.keystore
+signing.clt2022-release.keystorePassword="PASSWORD"
+signing.clt2022-release.keyAlias=clt
+signing.clt2022-release.keyPassword="ANOTHERPASSWORD"
