@@ -136,6 +136,7 @@ class FetchFahrplanTask extends AsyncTask<String, Void, HttpStatus> {
         Log.d("Fetch", url);
         Log.d("Fetch", "ETag: " + eTag);
         Request.Builder requestBuilder = new Request.Builder()
+                .addHeader("Connection", "close")
                 .url(url);
 
         if (!TextUtils.isEmpty(eTag)) {
