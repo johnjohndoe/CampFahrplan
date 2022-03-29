@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="pressed_congress">#CCa41c31</color>
+
+    <!-- Default state -->
+    <color name="track_background_default">#666</color>
+    <color name="track_background_default_art_culture">#AD6632</color>
+    <color name="track_background_default_ccc">#756D0F</color>
+    <color name="track_background_default_engelshifts">#523023</color>
+    <color name="track_background_default_entertainment">#336B22</color>
+    <color name="track_background_default_ethics_society_politics">#21615C</color>
+    <color name="track_background_default_hardware_making">#29728C</color>
+    <color name="track_background_default_lightning_talks">#6B750F</color>
+    <color name="track_background_default_music">#004D40</color>
+    <color name="track_background_default_queer">#6B2447</color>
+    <color name="track_background_default_resilience">#566299</color>
+    <color name="track_background_default_science">#86578C</color>
+    <color name="track_background_default_security">#914452</color>
+    <color name="track_background_default_self_organized_sessions">#3056bf</color>
+
+    <!-- Default state: Pretalx -->
+    <color name="track_background_default_arts_culture">#00517f</color>
+    <color name="track_background_default_economy">#008309</color>
+    <color name="track_background_default_other">#863502</color>
+    <color name="track_background_default_politics">#7f0000</color>
+    <color name="track_background_default_resiliency_intelligence">#174925</color>
+    <color name="track_background_default_society">#007f46</color>
+    <color name="track_background_default_technology">#00107f</color>
+
+    <!-- Highlight state -->
+    <color name="track_background_highlight">#888</color>
+    <color name="track_background_highlight_art_culture">#e08241</color>
+    <color name="track_background_highlight_ccc">#c2b519</color>
+    <color name="track_background_highlight_engelshifts">#9F5E45</color>
+    <color name="track_background_highlight_entertainment">#57b73a</color>
+    <color name="track_background_highlight_ethics_society_politics">#3caea5</color>
+    <color name="track_background_highlight_hardware_making">#3fafd8</color>
+    <color name="track_background_highlight_lightning_talks">#B1C219</color>
+    <color name="track_background_highlight_music">#007360</color>
+    <color name="track_background_highlight_queer">#B83E78</color>
+    <color name="track_background_highlight_resilience">#8194e6</color>
+    <color name="track_background_highlight_science">#cf87d9</color>
+    <color name="track_background_highlight_security">#de697e</color>
+    <color name="track_background_highlight_self_organized_sessions">#4174ff</color>
+
+    <!-- Highlight state: Pretalx -->
+    <color name="track_background_highlight_arts_culture">#0079BF</color>
+    <color name="track_background_highlight_economy">#00C20D</color>
+    <color name="track_background_highlight_other">#C74D02</color>
+    <color name="track_background_highlight_politics">#BF0000</color>
+    <color name="track_background_highlight_resiliency_intelligence">#24703A</color>
+    <color name="track_background_highlight_society">#00BF69</color>
+    <color name="track_background_highlight_technology">#0019BF</color>
+
+</resources>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">DiVOC Schedule</string>
+    <string name="app_hardcoded_subtitle">April 15–18 2022, online</string>
+    <string name="conference_name" translatable="false">DiVOC</string>
+    <string name="copyright_logo">
+        DiVOC Bridging Bubbles design by betalars and Evlii, translation by kimera7790 and pliess
+    </string>
+    <string name="about_logo_content_description">
+        DiVOC Bridging Bubbles logo
+    </string>
+</resources>

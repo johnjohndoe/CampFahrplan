@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">DiVOC Fahrplan</string>
+    <string name="app_hardcoded_subtitle">15.–18. April 2022, online</string>
+    <string name="copyright_logo">
+        DiVOC Bridging Bubbles Design von betalars und Evlii, Übersetzung kimera7790 und pliess
+    </string>
+    <string name="about_logo_content_description">
+        DiVOC Bridging Bubbles Logo
+    </string>
+</resources>

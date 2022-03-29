@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorPrimary">#57c0a2</color>
+    <color name="colorPrimaryDark">#F3A61C</color>
+    <color name="colorAccent">#9945c5</color>
+    <color name="colorActionBar">@color/colorPrimary</color>
+    <color name="text_link_pressed_background_on_dark">#aafec700</color>
+    <color name="windowBackground">#ded6e5</color>
+    <color name="multi_choice_background">#aaF3A61C</color>
+    <color name="alarm_list_icon_default_fill_color">@color/colorPrimaryDark</color>
+    <color name="alarm_list_icon_default_stroke_color">@color/colorAccent</color>
+    <color name="alarm_list_icon_text_color">@color/colorAccent</color>
+    <color name="alarm_list_empty_text">#000</color>
+    <color name="session_background">@android:color/white</color>
+    <color name="session_detailbar_background">#58B399</color>
+    <color name="session_detailbar_text">#fff</color>
+    <color name="session_detailbar_icon">#FBBE4F</color>
+
+    <!-- Schedule screen -->
+    <color name="schedule_time_column_background">@color/windowBackground</color>
+    <color name="schedule_time_column_item_background_normal">@color/colorPrimaryDark</color>
+    <color name="schedule_time_column_item_background_emphasized">@color/colorAccent</color>
+    <color name="schedule_room_name_header_background">@color/colorPrimaryDark</color>
+    <color name="session_item_text_on_default_background">#fff</color>
+    <color name="session_item_text_on_highlight_background">#fff</color>
+
+</resources>
