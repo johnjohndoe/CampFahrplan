@@ -66,6 +66,7 @@ android {
         cccamp2019
         ccc36c3
         rc3
+        divoc2022
     }
 
     def defaultDimension = "default"
@@ -142,6 +143,28 @@ android {
             buildConfigField "String", "SOCIAL_MEDIA_HASHTAGS_HANDLES", '"#rC3 #fahrplan #nowhere"'
             buildConfigField "String", "TRACE_DROID_EMAIL_ADDRESS", '"tobias.preuss+rc3@googlemail.com"'
             buildConfigField "String", "SCHEDULE_FEEDBACK_URL", '"https://frab.cccv.de/en/rc3/public/events/%s/feedback/new"'
+        }
+        divoc2022 {
+            dimension defaultDimension
+            applicationId "info.metadude.android.divoc.schedule"
+            versionName "${defaultConfig.versionName}-DiVOC-Edition"
+            buildConfigField "String", "GOOGLE_PLAY_URL", '"https://play.google.com/store/apps/details?id=info.metadude.android.divoc.schedule"'
+            buildConfigField "String", "SOURCE_CODE_URL", '"https://github.com/johnjohndoe/CampFahrplan/tree/divoc-2022"'
+            buildConfigField "String", "F_DROID_URL", '"https://f-droid.org/packages/info.metadude.android.divoc.schedule"'
+            buildConfigField "String", "SCHEDULE_URL", '"https://data.c3voc.de/divoc/everything.schedule.xml"'
+            buildConfigField "String", "EVENT_URL", '"https://pretalx.c3voc.de/divoc-bb3/talk/%1$s"'
+            buildConfigField "String", "EVENT_WEBSITE_URL", '"https://di.c3voc.de"'
+            buildConfigField "String", "SERVER_BACKEND_TYPE", '"pretalx"'
+            buildConfigField "int", "SCHEDULE_FIRST_DAY_START_YEAR", "2022"
+            buildConfigField "int", "SCHEDULE_FIRST_DAY_START_MONTH", "4"
+            buildConfigField "int", "SCHEDULE_FIRST_DAY_START_DAY", "15"
+            buildConfigField "int", "SCHEDULE_LAST_DAY_END_YEAR", "2022"
+            buildConfigField "int", "SCHEDULE_LAST_DAY_END_MONTH", "4"
+            buildConfigField "int", "SCHEDULE_LAST_DAY_END_DAY", "19"
+            buildConfigField "boolean", "ENABLE_CHAOSFLIX_EXPORT", "true"
+            buildConfigField "String", "SOCIAL_MEDIA_HASHTAGS_HANDLES", '"#DiVOC #divocbb3 #fahrplan #bridgingbubbles"'
+            buildConfigField "String", "TRACE_DROID_EMAIL_ADDRESS", '"tobias.preuss+divoc@googlemail.com"'
+            buildConfigField "String", "SCHEDULE_FEEDBACK_URL", '"https://pretalx.c3voc.de/divoc-bb3/talk/%s/feedback/"'
         }
     }
 
