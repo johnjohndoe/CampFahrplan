@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">GPN 2022</string>
+    <string name="app_hardcoded_subtitle">19. – 20. Mai / ZKM und HfG, Karlsruhe</string>
+    <string name="copyright_logo">
+        <![CDATA[Logo-Design: <a href="https://entropia.de">Entropia e.V.</a> (CC-BY-ND-NC)]]>
+    </string>
+    <string name="about_logo_content_description">
+        GPN Logo, oranger, kreisförmiger Reset-Pfeil auf türkisem Hintergrund
+    </string>
+</resources>
