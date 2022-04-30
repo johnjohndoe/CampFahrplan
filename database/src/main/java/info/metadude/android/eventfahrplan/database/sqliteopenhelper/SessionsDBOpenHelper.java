@@ -124,20 +124,8 @@ public class SessionsDBOpenHelper extends SQLiteOpenHelper {
             onCreate(db);
         }
         if (oldVersion < 9) {
-            // Clear database from 35C3.
+            // Clear database from 35C3 or GPN 2019.
             db.execSQL("DROP TABLE IF EXISTS " + SessionsTable.NAME);
-            onCreate(db);
-        }
-        if (oldVersion < 10 && newVersion >= 10) {
-            db.execSQL(SESSION_BY_NOTIFICATION_ID_TABLE_CREATE);
-        }
-        if (oldVersion < 11 && newVersion >= 11) {
-            db.execSQL("ALTER TABLE " + SessionsTable.NAME + " ADD COLUMN " + Columns.TIME_ZONE_OFFSET + " INTEGER DEFAULT NULL");
-        }
-        if (oldVersion < 12) {
-            // Clear database from rC3.
-            db.execSQL("DROP TABLE IF EXISTS " + SessionsTable.NAME);
-            db.execSQL("DROP TABLE IF EXISTS " + SessionByNotificationIdTable.NAME);
             onCreate(db);
         }
     }
