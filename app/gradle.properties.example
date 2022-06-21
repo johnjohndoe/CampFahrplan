@@ -12,3 +12,8 @@ signing.rc3-release.keystoreFilePath=/home/USERNAME/.android/rc3-release-key.key
 signing.rc3-release.keystorePassword="PASSWORD"
 signing.rc3-release.keyAlias=rc3
 signing.rc3-release.keyPassword="ANOTHERPASSWORD"
+
+signing.hope2022-release.keystoreFilePath=/home/USERNAME/.android/hope2022-release-key.keystore
+signing.hope2022-release.keystorePassword="PASSWORD"
+signing.hope2022-release.keyAlias=hope2022
+signing.hope2022-release.keyPassword="ANOTHERPASSWORD"

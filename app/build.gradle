@@ -66,6 +66,7 @@ android {
         cccamp2019
         ccc36c3
         rc3
+        hope2022
     }
 
     def defaultDimension = "default"
@@ -142,6 +143,29 @@ android {
             buildConfigField "String", "SOCIAL_MEDIA_HASHTAGS_HANDLES", '"#rC3 #fahrplan #nowhere"'
             buildConfigField "String", "TRACE_DROID_EMAIL_ADDRESS", '"tobias.preuss+rc3@googlemail.com"'
             buildConfigField "String", "SCHEDULE_FEEDBACK_URL", '"https://frab.cccv.de/en/rc3/public/events/%s/feedback/new"'
+        }
+        hope2022 {
+            dimension defaultDimension
+            applicationId "info.metadude.android.hope.schedule"
+            versionName "${defaultConfig.versionName}-HOPE-Edition"
+            buildConfigField "String", "GOOGLE_PLAY_URL", '"https://play.google.com/store/apps/details?id=info.metadude.android.hope.schedule"'
+            buildConfigField "String", "F_DROID_URL", '"https://f-droid.org/packages/info.metadude.android.hope.schedule"'
+            buildConfigField "String", "SCHEDULE_URL", '"https://scheduler.hope.net/new-hope/schedule/export/schedule.xml"'
+            buildConfigField "String", "EVENT_URL", '""'
+            buildConfigField "String", "EVENT_WEBSITE_URL", '"https://hope.net"'
+            buildConfigField "String", "SERVER_BACKEND_TYPE", '"pretalx"'
+            buildConfigField "int", "SCHEDULE_FIRST_DAY_START_YEAR", "2022"
+            buildConfigField "int", "SCHEDULE_FIRST_DAY_START_MONTH", "7"
+            buildConfigField "int", "SCHEDULE_FIRST_DAY_START_DAY", "22"
+            buildConfigField "int", "SCHEDULE_LAST_DAY_END_YEAR", "2022"
+            buildConfigField "int", "SCHEDULE_LAST_DAY_END_MONTH", "7"
+            buildConfigField "int", "SCHEDULE_LAST_DAY_END_DAY", "25"
+            buildConfigField "boolean", "SHOW_APP_DISCLAIMER", "true"
+            buildConfigField "boolean", "ENABLE_ENGELSYSTEM_SHIFTS", "true"
+            resValue("string", "preference_hint_engelsystem_json_export_url", '"https://volunteer.hope.net/shifts-json-export?key=YOUR_KEY"')
+            buildConfigField "String", "SOCIAL_MEDIA_HASHTAGS_HANDLES", '"#hopeconf @hopeconf #fahrplan"'
+            buildConfigField "String", "TRACE_DROID_EMAIL_ADDRESS", '"tobias.preuss+hope@googlemail.com"'
+            buildConfigField "String", "SCHEDULE_FEEDBACK_URL", '""'
         }
     }
 
