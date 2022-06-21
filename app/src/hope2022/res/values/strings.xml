@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">HOPE 2022</string>
+    <string name="app_hardcoded_subtitle">July 22–24 2022, New York City</string>
+    <string name="conference_name" translatable="false">HOPE 2022</string>
+    <string name="copyright_logo">
+        All artwork for A New HOPE is copyright 2022 Stefan Malenski.
+    </string>
+    <string name="about_logo_content_description">
+        HOPE 2022 logo: head of a white owl
+    </string>
+</resources>

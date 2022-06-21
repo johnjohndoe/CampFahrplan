@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">HOPE 2022</string>
+    <string name="app_hardcoded_subtitle">22.-24. Juli 2022, New York City</string>
+    <string name="copyright_logo">
+        Alle Grafiken für A New HOPE unterliegen dem Copyright 2022 von Stefan Malenski.
+    </string>
+    <string name="about_logo_content_description">
+        HOPE 2022 Logo: Kopf einer weißen Eule
+    </string>
+</resources>
