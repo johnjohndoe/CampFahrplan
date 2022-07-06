@@ -12,3 +12,8 @@ signing.rc3-release.keystoreFilePath=/home/USERNAME/.android/rc3-release-key.key
 signing.rc3-release.keystorePassword="PASSWORD"
 signing.rc3-release.keyAlias=rc3
 signing.rc3-release.keyPassword="ANOTHERPASSWORD"
+
+signing.foss4g2022-release.keystoreFilePath=/home/USERNAME/.android/foss4g-release-key.keystore
+signing.foss4g2022-release.keystorePassword="PASSWORD"
+signing.foss4g2022-release.keyAlias=foss4g
+signing.foss4g2022-release.keyPassword="ANOTHERPASSWORD"
