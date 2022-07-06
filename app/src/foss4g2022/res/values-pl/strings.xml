@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">FOSS4G 2022</string>
+    <string name="about_logo_content_description">
+        Logo FOSS4G
+    </string>
+</resources>

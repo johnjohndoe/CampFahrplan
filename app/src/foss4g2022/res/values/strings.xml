@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">FOSS4G 2022</string>
+    <string name="app_hardcoded_subtitle">August 22–28 2022, Florence, Italy</string>
+    <string name="conference_name" translatable="false">FOSS4G 2022</string>
+    <string name="copyright_logo">
+        The FOSS4G logo is a trademark of FOSS4G 2022. Used with permission.
+    </string>
+    <string name="about_logo_content_description">
+        FOSS4G logo, green David head, FOSS4G Firenze 2022
+    </string>
+</resources>
