@@ -84,11 +84,6 @@ public class AboutDialog extends DialogFragment {
             String prefixedScheduleVersionText = getString(R.string.fahrplan) + " " + scheduleVersionText;
             text.setText(prefixedScheduleVersionText);
         }
-        text = requireViewByIdCompat(view, R.id.about_session_title_view);
-        if (titleText.isEmpty()) {
-            titleText = getString(R.string.app_name);
-        }
-        text.setText(titleText);
         text = requireViewByIdCompat(view, R.id.about_session_subtitle_view);
         if (subtitleText.isEmpty()) {
             subtitleText = getString(R.string.app_hardcoded_subtitle);

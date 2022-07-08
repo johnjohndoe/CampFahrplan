@@ -32,7 +32,8 @@
             android:gravity="center|top"
             android:paddingBottom="5dp"
             android:textAppearance="@style/TextAppearance.AppCompat.Title"
-            tools:text="33. Chaos Communication Congress" />
+            tools:text="33. Chaos Communication Congress"
+            android:visibility="gone"/>
 
         <TextView
             android:id="@+id/about_session_subtitle_view"
