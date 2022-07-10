@@ -12,3 +12,8 @@ signing.rc3-release.keystoreFilePath=/home/USERNAME/.android/rc3-release-key.key
 signing.rc3-release.keystorePassword="PASSWORD"
 signing.rc3-release.keyAlias=rc3
 signing.rc3-release.keyPassword="ANOTHERPASSWORD"
+
+signing.froscon2022-release.keystoreFilePath=/home/USERNAME/.android/froscon-release-key.keystore
+signing.froscon2022-release.keystorePassword="PASSWORD"
+signing.froscon2022-release.keyAlias="froscon"
+signing.froscon2022-release.keyPassword="ANOTHERPASSWORD"
