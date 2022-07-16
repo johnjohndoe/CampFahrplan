@@ -82,6 +82,7 @@ class HorizontalSnapScrollView(context: Context?, attrs: AttributeSet?) : Horizo
             columnWidth = 0,
             activeColumnIndex = horizontalSnapScrollState.activeColumnIndex
         )
+        overScrollMode = View.OVER_SCROLL_NEVER
         gestureDetector = GestureDetector(YScrollDetector())
         setOnTouchListener(OnTouchListener())
     }
