@@ -37,6 +37,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.LayoutParams
 import info.metadude.android.eventfahrplan.commons.logging.Logging
+import info.metadude.android.eventfahrplan.commons.temporal.DateFormatter
 import info.metadude.android.eventfahrplan.commons.temporal.Moment
 import nerd.tuxmobil.fahrplan.congress.BuildConfig
 import nerd.tuxmobil.fahrplan.congress.R
@@ -106,7 +107,12 @@ class FahrplanFragment : Fragment(), SessionViewEventsHandler {
         super.onAttach(context)
         val appRepository = AppRepository
         val alarmServices = AlarmServices.newInstance(context, appRepository)
-        val menuEntriesGenerator = NavigationMenuEntriesGenerator(dayString = getString(R.string.day), todayString = getString(R.string.today))
+        val useDeviceTimeZoneEnabled = appRepository.readUseDeviceTimeZoneEnabled()
+        val menuEntriesGenerator = NavigationMenuEntriesGenerator(
+            dayString = getString(R.string.day),
+            todayString = getString(R.string.today),
+            dateFormatter = DateFormatter.newInstance(useDeviceTimeZoneEnabled)
+        )
         val viewModelFactory = FahrplanViewModelFactory(appRepository, alarmServices, menuEntriesGenerator)
         viewModel = ViewModelProvider(this, viewModelFactory).get(FahrplanViewModel::class.java)
         onSessionClickListener = if (context is OnSessionClickListener) {

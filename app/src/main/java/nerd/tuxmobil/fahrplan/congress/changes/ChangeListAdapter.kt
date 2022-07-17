@@ -57,7 +57,7 @@ class ChangeListAdapter internal constructor(
             lang.textOrHide = session.lang
             lang.contentDescription = Session.getLanguageContentDescription(lang.context, session.lang)
 
-            val dayText = DateFormatter.newInstance(useDeviceTimeZone).getFormattedDate(session.dateUTC, session.timeZoneOffset)
+            val dayText = DateFormatter.newInstance(useDeviceTimeZone).getFormattedDateMediumKebap(session.dateUTC, session.timeZoneOffset)
             day.textOrHide = dayText
             val timeText = DateFormatter.newInstance(useDeviceTimeZone).getFormattedTime(session.dateUTC, session.timeZoneOffset)
             time.textOrHide = timeText

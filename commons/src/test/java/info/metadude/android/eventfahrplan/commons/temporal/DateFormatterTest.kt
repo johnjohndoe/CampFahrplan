@@ -75,6 +75,15 @@ class DateFormatterTest {
         assertThat(createDateFormatter().getFormattedDate(timestamp, getTimeZoneOffsetNow())).isEqualTo("22.01.19")
     }
 
+    @Test
+    fun getFormattedDateMediumKebap() {
+        Locale.setDefault(Locale.US)
+        assertThat(createDateFormatter().getFormattedDateMediumKebap(timestamp, getTimeZoneOffsetNow())).isEqualTo("22-01-2019")
+
+        Locale.setDefault(Locale.GERMANY)
+        assertThat(createDateFormatter().getFormattedDateMediumKebap(timestamp, getTimeZoneOffsetNow())).isEqualTo("22-01-2019")
+    }
+
     // This test only passes when being executed in a JDK 9+ environment.
     // See https://stackoverflow.com/questions/65732319/how-to-stabilize-flaky-datetimeformatteroflocalizeddatetime-test
     @Test
@@ -106,6 +115,15 @@ class DateFormatterTest {
 
         Locale.setDefault(Locale.GERMANY)
         assertThat(createDateFormatter().getFormattedDateTimeShort(timestamp, getTimeZoneOffsetNow())).isEqualTo("22.01.19, 01:00")
+    }
+
+    @Test
+    fun getFormattedDateMediumTimeShortKebap() {
+        Locale.setDefault(Locale.US)
+        assertThat(createDateFormatter().getFormattedDateMediumTimeShortKebap(timestamp, getTimeZoneOffsetNow())).isEqualTo("22-01-2019, 01:00 AM")
+
+        Locale.setDefault(Locale.GERMANY)
+        assertThat(createDateFormatter().getFormattedDateMediumTimeShortKebap(timestamp, getTimeZoneOffsetNow())).isEqualTo("22-01-2019, 01:00 vorm.")
     }
 
     // This test only passes when being executed in a JDK 9+ environment.

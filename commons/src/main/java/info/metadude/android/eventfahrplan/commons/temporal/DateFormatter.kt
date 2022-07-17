@@ -7,6 +7,7 @@ import org.threeten.bp.ZoneOffset
 import org.threeten.bp.ZonedDateTime
 import org.threeten.bp.format.DateTimeFormatter
 import org.threeten.bp.format.FormatStyle
+import java.util.Locale
 
 /**
  * Format timestamps according to system locale and system time zone.
@@ -20,6 +21,8 @@ class DateFormatter private constructor(
     private val timeShortNumberOnlyFormatter = DateTimeFormatter.ofPattern("HH:mm")
     private val timeShortFormatter = DateTimeFormatter.ofLocalizedTime(FormatStyle.SHORT)
     private val dateShortFormatter = DateTimeFormatter.ofLocalizedDate(FormatStyle.SHORT)
+    private val dateMediumKebapFormatter = DateTimeFormatter.ofPattern(DATE_MEDIUM_KEBAP_PATTERN, Locale.getDefault())
+    private val dateMediumTimeShortKebapFormatter = DateTimeFormatter.ofPattern(DATE_MEDIUM_TIME_SHORT_KEBAP_PATTERN, Locale.getDefault())
     private val dateShortTimeShortFormatter = DateTimeFormatter.ofLocalizedDateTime(FormatStyle.SHORT, FormatStyle.SHORT)
     private val dateLongTimeShortFormatter = DateTimeFormatter.ofLocalizedDateTime(FormatStyle.LONG, FormatStyle.SHORT)
     private val dateFullTimeShortFormatter = DateTimeFormatter.ofLocalizedDateTime(FormatStyle.FULL, FormatStyle.SHORT)
@@ -65,6 +68,19 @@ class DateFormatter private constructor(
     }
 
     /**
+     * Returns day, month and year separated by hyphens.
+     * E.g. 22-01-2019
+     *
+     * Formatting happens by taking the [original time zone of the associated session][sessionZoneOffset]
+     * into account. If [sessionZoneOffset] is missing then formatting falls back to using the
+     * current time zone offset of the device.
+     */
+    fun getFormattedDateMediumKebap(time: Long, sessionZoneOffset: ZoneOffset?): String {
+        val zoneOffset = getAvailableZoneOffset(sessionZoneOffset)
+        return dateMediumKebapFormatter.withZone(zoneOffset).format(Instant.ofEpochMilli(time))
+    }
+
+    /**
      * Returns a formatted string suitable for sharing it with people worldwide.
      * It consists of day, month, year, time, time zone offset in the time zone of the event or
      * in current system time zone if the former is not provided.
@@ -100,6 +116,20 @@ class DateFormatter private constructor(
     }
 
     /**
+     * Returns day, month, year separated by hyphens and the time in short format. Formatting
+     * happens by taking the [original time zone of the associated session][sessionZoneOffset] into
+     * account. If [sessionZoneOffset] is missing then formatting falls back to using the current
+     * time zone offset of the device.
+     *
+     * E.g. 22-01-2019, 1:00 AM
+     */
+    fun getFormattedDateMediumTimeShortKebap(time: Long, sessionZoneOffset: ZoneOffset?): String {
+        val zoneOffset = getAvailableZoneOffset(sessionZoneOffset)
+        val toZonedDateTime: ZonedDateTime = Moment.ofEpochMilli(time).toZonedDateTime(zoneOffset)
+        return dateMediumTimeShortKebapFormatter.format(toZonedDateTime)
+    }
+
+    /**
      * Returns day, month, year and time in long format. Formatting happens by taking the [original
      * time zone of the associated session][sessionZoneOffset] into account. If [sessionZoneOffset]
      * is missing then formatting falls back to using the current time zone offset of the device.
@@ -123,6 +153,9 @@ class DateFormatter private constructor(
     }
 
     companion object {
+
+        private const val DATE_MEDIUM_KEBAP_PATTERN = "dd-MM-yyyy"
+        private const val DATE_MEDIUM_TIME_SHORT_KEBAP_PATTERN = "dd-MM-yyyy, HH:mm a"
 
         @JvmStatic
         fun newInstance(useDeviceTimeZone: Boolean): DateFormatter {

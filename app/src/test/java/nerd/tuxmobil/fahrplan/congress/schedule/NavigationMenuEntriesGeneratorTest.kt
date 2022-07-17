@@ -1,5 +1,6 @@
 package nerd.tuxmobil.fahrplan.congress.schedule
 
+import info.metadude.android.eventfahrplan.commons.temporal.DateFormatter
 import info.metadude.android.eventfahrplan.commons.temporal.Moment
 import nerd.tuxmobil.fahrplan.congress.NoLogging
 import nerd.tuxmobil.fahrplan.congress.models.DateInfo
@@ -13,11 +14,12 @@ class NavigationMenuEntriesGeneratorTest {
     private val generator = NavigationMenuEntriesGenerator(
         dayString = "Day",
         todayString = "Today",
-        logging = NoLogging
+        logging = NoLogging,
+        dateFormatter = DateFormatter.newInstance(useDeviceTimeZone = true)
     )
 
     @Test
-    fun `getDayMenuEntries returns three day entries with today mark`() {
+    fun `getDayMenuEntries returns three day entries with dates and today mark`() {
         val dateInfoList = DateInfos()
         dateInfoList.add(DateInfo(1, Moment.parseDate("2018-11-18")))
         dateInfoList.add(DateInfo(2, Moment.parseDate("2018-11-19")))
@@ -25,13 +27,13 @@ class NavigationMenuEntriesGeneratorTest {
         val entries = getDayMenuEntries(3, dateInfoList, "2018-11-19")
         assertThat(entries).isNotNull
         assertThat(entries.size).isEqualTo(3)
-        assertThat(entries[0]).isEqualTo("Day 1")
-        assertThat(entries[1]).isEqualTo("Day 2 - Today")
-        assertThat(entries[2]).isEqualTo("Day 3")
+        assertThat(entries[0]).isEqualTo("Day 1 - 18-11-2018")
+        assertThat(entries[1]).isEqualTo("Day 2 - 19-11-2018 - Today")
+        assertThat(entries[2]).isEqualTo("Day 3 - 20-11-2018")
     }
 
     @Test
-    fun `getDayMenuEntries returns five day entries with today mark`() {
+    fun `getDayMenuEntries returns five day entries partially with dates and today mark`() {
         val dateInfoList = DateInfos()
         dateInfoList.add(DateInfo(1, Moment.parseDate("2022-11-18")))
         dateInfoList.add(DateInfo(2, Moment.parseDate("2022-11-19")))
@@ -39,9 +41,9 @@ class NavigationMenuEntriesGeneratorTest {
         val entries = getDayMenuEntries(5, dateInfoList, "2022-11-19")
         assertThat(entries).isNotNull
         assertThat(entries.size).isEqualTo(5)
-        assertThat(entries[0]).isEqualTo("Day 1")
-        assertThat(entries[1]).isEqualTo("Day 2 - Today")
-        assertThat(entries[2]).isEqualTo("Day 3")
+        assertThat(entries[0]).isEqualTo("Day 1 - 18-11-2022")
+        assertThat(entries[1]).isEqualTo("Day 2 - 19-11-2022 - Today")
+        assertThat(entries[2]).isEqualTo("Day 3 - 20-11-2022")
         assertThat(entries[3]).isEqualTo("Day 4")
         assertThat(entries[4]).isEqualTo("Day 5")
     }
@@ -73,7 +75,7 @@ class NavigationMenuEntriesGeneratorTest {
         val entries = getDayMenuEntries(1, dateInfoList, "2018-11-19")
         assertThat(entries).isNotNull
         assertThat(entries.size).isEqualTo(1)
-        assertThat(entries[0]).isEqualTo("Day 1")
+        assertThat(entries[0]).isEqualTo("Day 1 - 18-11-2018")
     }
 
     @Test
