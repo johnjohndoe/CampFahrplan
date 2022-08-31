@@ -53,7 +53,7 @@ public class AlarmsDBOpenHelper extends SQLiteOpenHelper {
             onCreate(db);
         }
         if (oldVersion < 5) {
-            // Clear database from rC3.
+            // Clear database from rC3 and LibreOffice 2021.
             db.execSQL("DROP TABLE IF EXISTS " + AlarmsTable.NAME);
             onCreate(db);
         }

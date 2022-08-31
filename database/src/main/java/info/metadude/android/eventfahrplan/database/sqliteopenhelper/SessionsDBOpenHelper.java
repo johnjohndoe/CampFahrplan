@@ -135,7 +135,7 @@ public class SessionsDBOpenHelper extends SQLiteOpenHelper {
             db.execSQL("ALTER TABLE " + SessionsTable.NAME + " ADD COLUMN " + Columns.TIME_ZONE_OFFSET + " INTEGER DEFAULT NULL");
         }
         if (oldVersion < 12) {
-            // Clear database from rC3.
+            // Clear database from rC3 and LibreOffice 2021.
             db.execSQL("DROP TABLE IF EXISTS " + SessionsTable.NAME);
             db.execSQL("DROP TABLE IF EXISTS " + SessionByNotificationIdTable.NAME);
             onCreate(db);
