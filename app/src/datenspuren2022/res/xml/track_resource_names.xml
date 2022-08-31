@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<map linked="true">
+    <entry key="Other">other</entry>
+    <entry key="Talk">talk</entry>
+    <entry key="Vortrag">talk</entry>
+    <entry key="Workshop">workshop</entry>
+    <entry key="">other</entry>
+</map>

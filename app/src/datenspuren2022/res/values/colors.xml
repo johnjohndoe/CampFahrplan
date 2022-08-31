@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorPrimary">#0088BE</color>
+    <color name="colorPrimaryDark">#017DAE</color>
+    <color name="colorAccent">#6CC349</color>
+    <color name="colorActionBar">@color/colorPrimary</color>
+    <color name="windowBackground">#383838</color>
+    <color name="multi_choice_background">#ffc600</color>
+    <color name="alarm_list_icon_default_fill_color">@android:color/transparent</color>
+    <color name="alarm_list_icon_default_stroke_color">@color/colorAccent</color>
+    <color name="alarm_list_icon_text_color">#ffffff</color>
+    <color name="session_background">#ffffff</color>
+    <color name="session_detailbar_background">#eee</color>
+    <color name="session_detailbar_text">@color/colorAccent</color>
+
+</resources>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Datenspuren 2022</string>
+    <string name="app_hardcoded_subtitle">Calculated world, September 16.-18. 2022</string>
+    <string name="conference_name" translatable="false">Datenspuren 2022</string>
+    <string name="copyright_logo">
+        Design of the Datenspuren logo: nek0
+    </string>
+    <string name="about_logo_content_description">
+        Datenspuren 2022 logo
+    </string>
+</resources>
