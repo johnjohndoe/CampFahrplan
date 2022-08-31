@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">LibreOffice 2022 Fahrplan</string>
+    <string name="app_hardcoded_subtitle">28. September – 01. Oktober 2022, online</string>
+    <string name="copyright_logo">
+        Konferenz Logo von Italo Vignoli, Copyright: The Document Foundation
+    </string>
+    <string name="about_logo_content_description">
+        LibreOffice Conference 2022 Logo
+    </string>
+</resources>

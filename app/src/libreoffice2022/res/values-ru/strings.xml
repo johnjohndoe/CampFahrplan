@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Pасписание LibreOffice 2022</string>
+    <string name="app_hardcoded_subtitle">28-го сентябрь – 1-го октябрь 2022, online</string>
+    <string name="about_logo_content_description">
+        LibreOffice Conference 2022
+    </string>
+</resources>

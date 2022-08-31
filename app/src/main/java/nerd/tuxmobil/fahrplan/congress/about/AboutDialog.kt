@@ -69,6 +69,7 @@ class AboutDialog : DialogFragment() {
             titleText = getString(R.string.app_name)
         }
         title.text = titleText
+        title.isVisible = false
 
         // Session subtitle
         val subtitle = view.requireViewByIdCompat<TextView>(R.id.about_session_subtitle_view)

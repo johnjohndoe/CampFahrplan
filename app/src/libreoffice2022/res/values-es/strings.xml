@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">LibreOffice 2022 Calendario</string>
+    <string name="app_hardcoded_subtitle">28 de septiembre – 1 de octubre de 2022. online</string>
+    <string name="about_logo_content_description">
+        LibreOffice Conference 2022 el logotipo
+    </string>
+</resources>
