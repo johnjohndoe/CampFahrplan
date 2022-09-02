@@ -11,7 +11,7 @@ import info.metadude.android.eventfahrplan.database.contract.FahrplanContract.Hi
 
 public class HighlightDBOpenHelper extends SQLiteOpenHelper {
 
-    private static final int DATABASE_VERSION = 4;
+    private static final int DATABASE_VERSION = 2;
 
     private static final String DATABASE_NAME = "highlight";
 
