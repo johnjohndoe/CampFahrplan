@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="pressed_congress">#CCa41c31</color>
+
+    <!-- Default state -->
+
+    <color name="track_background_default">#81A537</color>
+    <color name="track_background_default_digital_und_nachhaltig_transformative_geschaeftsmodelle">#a09003</color>
+    <color name="track_background_default_digitalisierung_umwelt_und_klimaschutz">#345231</color>
+    <color name="track_background_default_forum_kultur">#941e93</color>
+    <color name="track_background_default_neue_soziale_frage_und_globale_gerechtigkeit">#5f38a6</color>
+    <color name="track_background_default_smarte_neue_oeffentlichkeit_gesellschaft_und_demokratie">#294f76</color>
+    <color name="track_background_default_technikgestaltung_machtverhaeltnisse_und_eigentum">#56060b</color>
+    <color name="track_background_default_oekonomie_und_ressourcen">#8f5600</color>
+
+    <!-- Highlight state -->
+
+    <color name="track_background_highlight">@color/colorPrimaryDark</color>
+    <color name="track_background_highlight_digital_und_nachhaltig_transformative_geschaeftsmodelle">#CEBB0E</color>
+    <color name="track_background_highlight_digitalisierung_umwelt_und_klimaschutz">#578852</color>
+    <color name="track_background_highlight_forum_kultur">#d632d5</color>
+    <color name="track_background_highlight_neue_soziale_frage_und_globale_gerechtigkeit">#8c69cc</color>
+    <color name="track_background_highlight_smarte_neue_oeffentlichkeit_gesellschaft_und_demokratie">#407ab6</color>
+    <color name="track_background_highlight_technikgestaltung_machtverhaeltnisse_und_eigentum">#8E0B13</color>
+    <color name="track_background_highlight_oekonomie_und_ressourcen">#C87902</color>
+
+</resources>

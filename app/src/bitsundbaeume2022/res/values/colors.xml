@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorPrimary">#9cc646</color>
+    <color name="colorPrimaryDark">#78a931</color>
+    <color name="colorAccent">#8e8663</color>
+    <color name="colorActionBar">@color/colorPrimary</color>
+    <color name="windowBackground">#414141</color>
+    <color name="multi_choice_background">@color/colorAccent</color>
+    <color name="alarm_list_icon_default_fill_color">#ddd</color>
+    <color name="alarm_list_icon_default_stroke_color">@color/colorPrimary</color>
+    <color name="alarm_list_icon_text_color">#000000</color>
+    <color name="session_background">@android:color/white</color>
+    <color name="session_detailbar_background">#eee</color>
+    <color name="session_detailbar_text">@color/colorPrimaryDark</color>
+    <color name="session_detailbar_icon">@color/colorAccent</color>
+
+    <!-- Schedule screen -->
+    <color name="session_item_text_on_default_background">#fff</color>
+    <color name="session_item_text_on_highlight_background">#fff</color>
+
+</resources>

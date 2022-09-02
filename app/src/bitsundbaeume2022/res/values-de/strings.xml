@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Bits &#038; Bäume 2022 Fahrplan</string>
+    <string name="app_hardcoded_subtitle">
+        Die Konferenz für Digitalisierung und Nachhaltigkeit, 30. September – 02. Oktober 2022, Berlin (Technische Universität)
+    </string>
+    <string name="copyright_logo">
+        Logo-Design: gemeinfrei
+    </string>
+    <string name="about_logo_content_description">
+        Bits &#038; Bäume Logo: grünes Blatt, halb natürlich, halb gerastert
+    </string>
+</resources>

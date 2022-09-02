@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Bits &#038; Bäume 2022 Schedule</string>
+    <string name="app_hardcoded_subtitle">
+        The Conference for Digitalization and Sustainability, September 30 – October 2 2022, Berlin (Technische Universität)
+    </string>
+    <string name="conference_name" translatable="false">Bits &#038; Bäume</string>
+    <string name="copyright_logo">
+        Logo design: public domain
+    </string>
+    <string name="about_logo_content_description">
+        Bits &#038; Bäume logo: green leave, half natural, half rasterized
+    </string>
+</resources>
