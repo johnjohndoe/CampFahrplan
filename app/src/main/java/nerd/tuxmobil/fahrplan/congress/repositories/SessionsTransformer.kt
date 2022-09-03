@@ -16,14 +16,13 @@ class SessionsTransformer @VisibleForTesting constructor(
         fun createSessionsTransformer(): SessionsTransformer {
             val roomProvider = object : RoomProvider {
                 override val prioritizedRooms: List<String> = listOf(
-                    "Saal 1",
-                    "Saal 2",
-                    "Saal G",
-                    "Saal 6",
-                    "Saal 17",
-                    "Lounge"
+                    "Auditorium",
+                    "Ricci",
+                    "Loyola"
                 )
-                override val deprioritizedRooms: List<String> = emptyList()
+                override val deprioritizedRooms: List<String> = listOf(
+                    "Saverio"
+                )
             }
             return SessionsTransformer(roomProvider)
         }
