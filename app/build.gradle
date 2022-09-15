@@ -158,6 +158,7 @@ android {
             buildConfigField "String", "SCHEDULE_URL", '"https://fahrplan22.bits-und-baeume.org/bitsundbaeume/schedule/export/schedule.xml"'
             buildConfigField "String", "EVENT_URL", '"https://fahrplan22.bits-und-baeume.org/bitsundbaeume/talk/%1$s"'
             buildConfigField "String", "EVENT_WEBSITE_URL", '"https://bits-und-baeume.org"'
+            buildConfigField "String", "EVENT_POSTAL_ADDRESS", '"Technischen Universität Berlin, Straße des 17. Juni 135, 10623 Berlin"'
             buildConfigField "String", "SERVER_BACKEND_TYPE", '"pretalx"'
             buildConfigField "int", "SCHEDULE_FIRST_DAY_START_YEAR", "2022"
             buildConfigField "int", "SCHEDULE_FIRST_DAY_START_MONTH", "9"
