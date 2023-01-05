@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<map linked="true">
+
+    <entry key="BOFs">bofs</entry>
+    <entry key="Keynotes">keynotes</entry>
+    <entry key="Lightning Talks">lightning_talks</entry>
+    <entry key="Miscellaneous">miscellaneous</entry>
+    <entry key="Workshops">workshops</entry>
+
+    <entry key="Binary Tools">binary_tools</entry>
+    <entry key="BSD">bsd</entry>
+    <entry key="Collaboration and Content Management">collaboration_and_content_management</entry>
+    <entry key="Community">community</entry>
+    <entry key="Confidential Computing">confidential_computing</entry>
+    <entry key="Containers">containers</entry>
+    <entry key="Continuous Integration and Continuous Deployment">continuous_integration_and_continuous_deployment</entry>
+    <entry key="Declarative and Minimalistic Computing">declarative_and_minimalistic_computing</entry>
+    <entry key="Distributions">distributions</entry>
+    <entry key="DNS">dns</entry>
+    <entry key="Embedded, Mobile and Automotive">embedded_mobile_and_automotive</entry>
+    <entry key="Emulator Development">emulator_development</entry>
+    <entry key="Energy">energy</entry>
+    <entry key="Erlang, Elixir and Friends">erlang_elixir_and_friends</entry>
+    <entry key="Fast and Streaming Data">fast_and_streaming_data</entry>
+    <entry key="FOSS Educational Programming Languages">foss_educational_programming_languages</entry>
+    <entry key="FOSS on Mobile Devices">foss_on_mobile_devices</entry>
+    <entry key="Friends of OpenJDK">friends_of_openjdk</entry>
+    <entry key="Go">go</entry>
+    <entry key="Graph Systems and Algorithms">graph_systems_and_algorithms</entry>
+    <entry key="Haskell">haskell</entry>
+    <entry key="HPC, Big Data and Data Science">hpc_big_data_and_data_science</entry>
+    <entry key="Image-based Linux and Secure Measured Boot">image_based_linux_and_secure_measured_boot</entry>
+    <entry key="JavaScript">javascript</entry>
+    <entry key="Kernel">kernel</entry>
+    <entry key="Kotlin">kotlin</entry>
+    <entry key="Legal and Policy Issues">legal_and_policy_issues</entry>
+    <entry key="LibreOffice Technology Development Platform">libreoffice_technology_development_platform</entry>
+    <entry key="LLVM">llvm</entry>
+    <entry key="Main Track - Janson">main_track</entry>
+    <entry key="Main Track - K Building">main_track</entry>
+    <entry key="MariaDB, MySQL and Friends">mariadb_mysql_and_friends</entry>
+    <entry key="Matrix">matrix</entry>
+    <entry key="Microkernel and Component-based OS">microkernel_and_component_based_os</entry>
+    <entry key="Monitoring and Observability">monitoring_and_observability</entry>
+    <entry key="Mozilla">mozilla</entry>
+    <entry key="Network">network</entry>
+    <entry key="Nix and NixOS">nix_and_nixos</entry>
+    <entry key="Open Media">open_media</entry>
+    <entry key="Open Research Tools and Technology">open_research_tools_and_technology</entry>
+    <entry key="Open Source Design">open_source_design</entry>
+    <entry key="Open Source Firmware, BMC and Bootloader">open_source_firmware_bmc_and_bootloader</entry>
+    <entry key="PostgreSQL">postgresql</entry>
+    <entry key="Public Code and Digital Public Goods">public_code_and_digital_public_goods</entry>
+    <entry key="Python">python</entry>
+    <entry key="Railways and Open Transport">railways_and_open_transport</entry>
+    <entry key="Real Time Communications">real_time_communications</entry>
+    <entry key="RISC-V">risc_v</entry>
+    <entry key="Rust">rust</entry>
+    <entry key="Security">security</entry>
+    <entry key="Software Bill of Materials">software_bill_of_materials</entry>
+    <entry key="Software Defined Storage">software_defined_storage</entry>
+    <entry key="Sovereign Cloud">sovereign_cloud</entry>
+    <entry key="Testing and Automation">testing_and_automation</entry>
+    <entry key="Translations">translations</entry>
+    <entry key="Virtualization and IaaS">virtualization_and_iaas</entry>
+
+    <entry key=""></entry>
+
+</map>

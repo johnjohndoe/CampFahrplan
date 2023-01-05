@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">FOSDEM 2023 Schedule</string>
+    <string name="app_hardcoded_subtitle">2023年2月4日〜5日, ULB, Campus du Solbosch</string>
+</resources>

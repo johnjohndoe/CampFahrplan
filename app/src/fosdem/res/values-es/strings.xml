@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">FOSDEM 2023 Calendario</string>
+    <string name="app_hardcoded_subtitle">4 – 5 de Febrero de 2023, ULB, Campus du Solbosch</string>
+</resources>
