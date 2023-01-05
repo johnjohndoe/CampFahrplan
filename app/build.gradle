@@ -72,6 +72,7 @@ android {
         cccamp2019
         ccc36c3
         jev2022
+        fosdem
     }
 
     def defaultDimension = "default"
@@ -152,6 +153,30 @@ android {
             buildConfigField "String", "TRACE_DROID_EMAIL_ADDRESS", '"tobias.preuss+jev@googlemail.com"'
             buildConfigField "String", "SCHEDULE_FEEDBACK_URL", '""'
         }
+        fosdem {
+            dimension defaultDimension
+            applicationId "info.metadude.android.fosdem.schedule"
+            versionName "${defaultConfig.versionName}-FOSDEM-Edition"
+            buildConfigField "String", "GOOGLE_PLAY_URL", '"https://play.google.com/store/apps/details?id=info.metadude.android.fosdem.schedule"'
+            buildConfigField "String", "F_DROID_URL", '"https://f-droid.org/packages/info.metadude.android.fosdem.schedule"'
+            buildConfigField "String", "SCHEDULE_URL", '"https://metadude.uber.space/fosdem2023/schedule.xml"'
+            buildConfigField "String", "EVENT_URL", '"https://fosdem.org/2023/schedule/event/%1$s/"'
+            buildConfigField "String", "EVENT_WEBSITE_URL", '"https://fosdem.org"'
+            buildConfigField "String", "EVENT_POSTAL_ADDRESS", '"Av. Franklin Roosevelt 50, 1050 Bruxelles"'
+            buildConfigField "String", "SERVER_BACKEND_TYPE", '"pentabarf"'
+            buildConfigField "int", "SCHEDULE_FIRST_DAY_START_YEAR", "2023"
+            buildConfigField "int", "SCHEDULE_FIRST_DAY_START_MONTH", "2"
+            buildConfigField "int", "SCHEDULE_FIRST_DAY_START_DAY", "4"
+            buildConfigField "int", "SCHEDULE_LAST_DAY_END_YEAR", "2023"
+            buildConfigField "int", "SCHEDULE_LAST_DAY_END_MONTH", "2"
+            buildConfigField "int", "SCHEDULE_LAST_DAY_END_DAY", "6"
+            buildConfigField "boolean", "ENGAGE_C3NAV_APP_INSTALLATION", "true"
+            buildConfigField "String", "C3NAV_URL", '"https://nav.fosdem.org/l/"'
+            buildConfigField "String", "SOCIAL_MEDIA_HASHTAGS_HANDLES", '"#FOSDEM #FOSDEM23 #FOSDEM2023 #fahrplan @fosdem"'
+            buildConfigField "String", "TRACE_DROID_EMAIL_ADDRESS", '"tobias.preuss+fosdem@googlemail.com"'
+            buildConfigField "String", "SCHEDULE_FEEDBACK_URL", '"https://submission.fosdem.org/feedback/%1$s.php"'
+        }
+
     }
 
     productFlavors.all { flavor ->
