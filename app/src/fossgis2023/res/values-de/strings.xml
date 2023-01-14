@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">FOSSGIS 2023 Fahrplan</string>
+    <string name="app_hardcoded_subtitle">Konferenz für Freie und Open Source Software, Geo-Software und OpenStreetMap, 15.-18. März 2023</string>
+    <string name="copyright_logo">
+        Design des FOSSGIS-Logos: FOSSGIS e.V. bzw. dimdle
+    </string>
+    <string name="about_logo_content_description">
+        FOSSGIS 2023 Logo
+    </string>
+</resources>

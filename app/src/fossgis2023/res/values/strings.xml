@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">FOSSGIS 2023 Schedule</string>
+    <string name="app_hardcoded_subtitle">Conference for free and open source software, geo-software and OpenStreetMap, March 15.-18. 2023</string>
+    <string name="conference_name" translatable="false">FOSSGIS</string>
+    <string name="copyright_logo">
+        Design of the FOSSGIS logo: FOSSGIS e.V. resp. dimdle
+    </string>
+    <string name="about_logo_content_description">
+        FOSSGIS 2023 logo
+    </string>
+</resources>

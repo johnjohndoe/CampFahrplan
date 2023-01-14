@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="text_secondary">#D9D9D9</color>
+    <color name="colorPrimary">#ee7f00</color>
+    <color name="colorPrimaryDark">#ffcc6900</color>
+    <color name="colorAccent">@color/colorPrimary</color>
+    <color name="colorActionBar">@color/colorPrimary</color>
+    <color name="windowBackground">#474747</color>
+    <color name="multi_choice_background">@color/colorAccent</color>
+    <color name="alarm_list_icon_default_fill_color">#ddd</color>
+    <color name="alarm_list_icon_default_stroke_color">@color/colorAccent</color>
+    <color name="alarm_list_icon_text_color">#000</color>
+    <color name="lecture_background">@android:color/white</color>
+    <color name="lecture_detailbar_background">#eee</color>
+    <color name="lecture_detailbar_text">#999</color>
+    <color name="session_detailbar_icon">@color/colorAccent</color>
+
+    <!-- About -->
+    <color name="about_horizontal_line">#666666</color>
+
+    <!-- Alarm dialogs -->
+    <color name="alert_dialog_button_text">@color/text_primary</color>
+
+    <!-- Schedule changes dialog -->
+    <color name="schedule_changes_dialog_new_version_text">@color/text_primary</color>
+
+    <!-- Schedule screen -->
+    <color name="session_item_text_on_default_background">#E6E6E6</color>
+    <color name="session_item_text_on_highlight_background">#ffffff</color>
+
+</resources>
