@@ -109,6 +109,7 @@ internal class FetchFahrplanTask(
         logging.d(LOG_TAG, url)
         logging.d(LOG_TAG, "ETag: '$eTag'")
         val requestBuilder = Request.Builder().apply {
+            addHeader("Connection", "close")
             url(url)
             if (eTag.isNotEmpty()) {
                 addHeader("If-None-Match", eTag)
