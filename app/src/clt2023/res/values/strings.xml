@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">CLT 2023 Schedule</string>
+    <string name="app_hardcoded_subtitle">March 11.-12. 2023</string>
+    <string name="conference_name" translatable="false">CLT</string>
+    <string name="copyright_logo">
+        CLT design by Sebastian Pettke
+    </string>
+    <string name="about_logo_content_description">
+        CLT logo
+    </string>
+</resources>

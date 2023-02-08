@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<map linked="true">
+
+    <entry key="Addon">addon</entry>
+    <entry key="Demo">demo</entry>
+    <entry key="Firma">firma</entry>
+    <entry key="Junior">junior</entry>
+    <entry key="Vortrag">vortrag</entry>
+    <entry key="Workshop">workshop</entry>
+
+    <entry key=""></entry>
+
+</map>
