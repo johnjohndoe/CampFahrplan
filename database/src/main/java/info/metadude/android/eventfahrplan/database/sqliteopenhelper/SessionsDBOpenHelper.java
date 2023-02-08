@@ -141,7 +141,7 @@ public class SessionsDBOpenHelper extends SQLiteOpenHelper {
             onCreate(db);
         }
         if (oldVersion < 13) {
-            // Clear database from rC3 NOWHERE 12/2021.
+            // Clear database from rC3 NOWHERE 12/2021 & CLT 2022.
             db.execSQL("DROP TABLE IF EXISTS " + SessionsTable.NAME);
             db.execSQL("DROP TABLE IF EXISTS " + SessionByNotificationIdTable.NAME);
             onCreate(db);
