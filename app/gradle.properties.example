@@ -12,3 +12,8 @@ signing.jev2022-release.keystoreFilePath=/home/USERNAME/.android/jev2022-release
 signing.jev2022-release.keystorePassword="PASSWORD"
 signing.jev2022-release.keyAlias=jev2022
 signing.jev2022-release.keyPassword="ANOTHERPASSWORD"
+
+signing.clt2023-release.keystoreFilePath=/home/USERNAME/.android/clt-release-key.keystore
+signing.clt2023-release.keystorePassword="PASSWORD"
+signing.clt2023-release.keyAlias=clt
+signing.clt2023-release.keyPassword="ANOTHERPASSWORD"
