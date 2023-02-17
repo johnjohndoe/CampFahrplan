@@ -169,8 +169,8 @@ class FahrplanViewModelTest {
     @Test
     fun `fillTimes posts TimeTextViewParameter to timeTextViewParameters property`() {
         val startsAt = 1582963200000L // February 29, 2020 08:00:00 AM GMT
-        val earliestSession = mock<Session> {
-            on { startTimeMoment } doReturn Moment.ofEpochMilli(startsAt)
+        val earliestSession = Session("session-01").apply {
+            dateUTC = startsAt
         }
         val session = Session("session-01").apply {
             dateUTC = startsAt

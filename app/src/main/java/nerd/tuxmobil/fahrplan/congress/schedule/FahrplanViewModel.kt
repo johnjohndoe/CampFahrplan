@@ -11,6 +11,7 @@ import info.metadude.android.eventfahrplan.commons.temporal.Moment
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
 import nerd.tuxmobil.fahrplan.congress.alarms.AlarmServices
+import nerd.tuxmobil.fahrplan.congress.dataconverters.toStartsAtMoment
 import nerd.tuxmobil.fahrplan.congress.models.ScheduleData
 import nerd.tuxmobil.fahrplan.congress.models.Session
 import nerd.tuxmobil.fahrplan.congress.notifications.NotificationHelper
@@ -185,7 +186,7 @@ internal class FahrplanViewModel(
 
     private fun List<Session>.toTimeTextViewParameters(nowMoment: Moment, normalizedBoxHeight: Int): List<TimeTextViewParameter> {
         val earliestSession = repository.loadEarliestSession()
-        val firstDayStartDay = earliestSession.startTimeMoment.monthDay
+        val firstDayStartDay = earliestSession.toStartsAtMoment().monthDay
         val useDeviceTimeZone = repository.readUseDeviceTimeZoneEnabled()
         val dayIndex = repository.readDisplayDayIndex()
         val conference = Conference.ofSessions(this)

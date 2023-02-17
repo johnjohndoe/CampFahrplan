@@ -164,6 +164,10 @@ class ParserTask extends AsyncTask<String, Void, Boolean> {
                             if (end == null) {
                                 throw new MissingXmlAttributeException("day", "end");
                             }
+                            // TODO Consider evaluating both "start" and "end" if "dayChangeTime" is not dropped.
+                            // Scenario 1: last session before midnight: same date for start & end
+                            // Scenario 2: last session after midnight: dates differ for start & end
+                            // Related to Session#setRelativeStartTime!
                             dayChangeTime = DateParser.getDayChange(end);
                             if (day > numdays) {
                                 numdays = day;
