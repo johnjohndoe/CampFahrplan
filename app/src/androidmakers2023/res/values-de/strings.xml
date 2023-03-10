@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">AndroidMakers 2023 Fahrplan</string>
+    <string name="app_hardcoded_subtitle">27.-28. April 2023, The Belfry of Montrouge</string>
+    <string name="copyright_logo">
+        <![CDATA[AndroidMakers-Logo: <a href="https://androidmakers.droidcon.com">AndroidMakers</a>]]>
+    </string>
+    <string name="about_logo_content_description">
+        AndroidMakers Logo
+    </string>
+</resources>
