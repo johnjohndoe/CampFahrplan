@@ -72,6 +72,7 @@ android {
         cccamp2019
         ccc36c3
         jev2022
+        androidmakers2023
     }
 
     def defaultDimension = "default"
@@ -150,6 +151,28 @@ android {
             resValue("string", "preference_hint_engelsystem_json_export_url", '"https://your.engelsystem.de/shifts-json-export?key=YOUR_KEY"')
             buildConfigField "String", "SOCIAL_MEDIA_HASHTAGS_HANDLES", '"#jev #fahrplan #hip #fireshonks #xrelog22 #rtc22 @cbase"'
             buildConfigField "String", "TRACE_DROID_EMAIL_ADDRESS", '"tobias.preuss+jev@googlemail.com"'
+            buildConfigField "String", "SCHEDULE_FEEDBACK_URL", '""'
+        }
+        androidmakers2023 {
+            dimension defaultDimension
+            applicationId "info.metadude.android.androidmakers.schedule"
+            versionName "${defaultConfig.versionName}-AndroidMakers-Edition"
+            buildConfigField "String", "GOOGLE_PLAY_URL", '"https://play.google.com/store/apps/details?id=info.metadude.android.androidmakers.schedule"'
+            buildConfigField "String", "SCHEDULE_URL", '"https://androidmakers.droidcon.com/agenda/"'
+            buildConfigField "String", "EVENT_URL", '"https://androidmakers.droidcon.com/agenda/"'
+            buildConfigField "String", "EVENT_WEBSITE_URL", '"https://androidmakers.droidcon.com"'
+            buildConfigField "String", "EVENT_POSTAL_ADDRESS", '"Av. de la République, 92120 Montrouge"'
+            buildConfigField "String", "SERVER_BACKEND_TYPE", '""'
+            buildConfigField "String", "SESSIONIZE_HOST", '"https://metadude.uber.space"'
+            buildConfigField "String", "SESSIONIZE_API_KEY", '"androidmakers2023"'
+            buildConfigField "int", "SCHEDULE_FIRST_DAY_START_YEAR", "2023"
+            buildConfigField "int", "SCHEDULE_FIRST_DAY_START_MONTH", "4"
+            buildConfigField "int", "SCHEDULE_FIRST_DAY_START_DAY", "27"
+            buildConfigField "int", "SCHEDULE_LAST_DAY_END_YEAR", "2023"
+            buildConfigField "int", "SCHEDULE_LAST_DAY_END_MONTH", "4"
+            buildConfigField "int", "SCHEDULE_LAST_DAY_END_DAY", "28"
+            buildConfigField "String", "SOCIAL_MEDIA_HASHTAGS_HANDLES", '"#AMxDC23 #androidmakers #androidmakers23 #androidmakers2023 #fahrplan @AndroidMakersFR"'
+            buildConfigField "String", "TRACE_DROID_EMAIL_ADDRESS", '"tobias.preuss+androidmakers@googlemail.com"'
             buildConfigField "String", "SCHEDULE_FEEDBACK_URL", '""'
         }
     }
