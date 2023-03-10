@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">KotlinConf 2023 Fahrplan</string>
+    <string name="app_hardcoded_subtitle">12.-14. April 2023, Beurs van Berlage</string>
+    <string name="copyright_logo">
+        <![CDATA[KotlinConf-Logo: <a href="https://www.jetbrains.com">JetBrains</a>]]>
+    </string>
+    <string name="about_logo_content_description">
+        KotlinConf Logo
+    </string>
+</resources>

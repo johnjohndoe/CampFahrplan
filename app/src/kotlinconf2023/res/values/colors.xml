@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorPrimary">#ff3f00</color>
+    <color name="colorPrimaryDark">#CC3300</color>
+    <color name="colorAccent">#3B6CFF</color>
+    <color name="colorActionBar">@color/colorPrimary</color>
+    <color name="windowBackground">#282a43</color>
+    <color name="multi_choice_background">@color/colorPrimary</color>
+    <color name="alarm_list_icon_default_fill_color">@color/colorPrimaryDark</color>
+    <color name="alarm_list_icon_default_stroke_color">#fff</color>
+    <color name="alarm_list_icon_text_color">#fff</color>
+    <color name="session_background">#fff</color>
+    <color name="session_detailbar_background">#eee</color>
+    <color name="session_detailbar_text">#777</color>
+
+    <!-- About -->
+    <color name="about_horizontal_line">#898989</color>
+
+    <!-- Alarm dialogs -->
+    <color name="alert_dialog_button_text">#fff</color>
+
+    <!-- Schedule screen -->
+    <color name="schedule_time_column_background">@android:color/transparent</color>
+    <color name="schedule_time_column_item_background_normal">@android:color/transparent</color>
+    <color name="schedule_time_column_item_background_emphasized">@color/colorPrimary</color>
+    <color name="schedule_time_column_item_text_emphasized">#fff</color>
+    <color name="schedule_room_name_header_background">@android:color/transparent</color>
+
+    <!-- Schedule changes dialog -->
+    <color name="schedule_changes_dialog_new_version_text">#91a7ea</color>
+
+</resources>
