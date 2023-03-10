@@ -187,7 +187,7 @@ class MainViewModelTest {
         val repository = createRepository()
         val viewModel = createViewModel(repository)
         viewModel.requestScheduleUpdate(isUserRequest = true)
-        verifyInvokedOnce(repository).loadSchedule(isUserRequest = true, onFetchingDone = {}, onParsingDone = {}, onLoadingShiftsDone = {})
+        verifyInvokedOnce(repository).loadSchedule(hostName = any(), isUserRequest = any(), onFetchingDone = any(), onParsingDone = any())
     }
 
     @Test

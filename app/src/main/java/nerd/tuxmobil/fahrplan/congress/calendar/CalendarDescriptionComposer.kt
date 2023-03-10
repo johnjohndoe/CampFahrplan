@@ -3,8 +3,6 @@ package nerd.tuxmobil.fahrplan.congress.calendar
 import nerd.tuxmobil.fahrplan.congress.models.Session
 import nerd.tuxmobil.fahrplan.congress.utils.MarkdownConversion
 import nerd.tuxmobil.fahrplan.congress.utils.MarkdownConverter
-import nerd.tuxmobil.fahrplan.congress.utils.SessionUrlComposer
-import nerd.tuxmobil.fahrplan.congress.utils.SessionUrlComposition
 import nerd.tuxmobil.fahrplan.congress.wiki.containsWikiLink
 
 /**
@@ -16,7 +14,6 @@ class CalendarDescriptionComposer(
 
     private val sessionOnlineText: String,
     private val markdownConversion: MarkdownConversion = MarkdownConverter,
-    private val sessionUrlComposition: SessionUrlComposition = SessionUrlComposer()
 
 ) : CalendarDescriptionComposition {
 
@@ -66,7 +63,7 @@ class CalendarDescriptionComposer(
     }
 
     private fun StringBuilder.appendSessionOnline(session: Session) {
-        val sessionUrl = sessionUrlComposition.getSessionUrl(session)
+        val sessionUrl = session.url
         if (sessionUrl.isNotEmpty()) {
             append("$sessionOnlineText: $sessionUrl")
         }
