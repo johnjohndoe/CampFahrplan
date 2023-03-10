@@ -9,11 +9,15 @@ import info.metadude.android.eventfahrplan.database.repositories.AlarmsDatabaseR
 import info.metadude.android.eventfahrplan.database.repositories.HighlightsDatabaseRepository
 import info.metadude.android.eventfahrplan.database.repositories.MetaDatabaseRepository
 import info.metadude.android.eventfahrplan.database.repositories.SessionsDatabaseRepository
-import info.metadude.android.eventfahrplan.network.repositories.ScheduleNetworkRepository
+import info.metadude.android.eventfahrplan.sessionize.SessionizeNetworkRepository
+import info.metadude.android.eventfahrplan.sessionize.SessionizeResult
+import info.metadude.android.eventfahrplan.sessionize.SessionizeResult.Values
+import info.metadude.kotlin.library.sessionize.gridtable.models.ConferenceDay
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.test.runTest
 import nerd.tuxmobil.fahrplan.congress.TestExecutionContext
 import nerd.tuxmobil.fahrplan.congress.dataconverters.toAppFetchScheduleResult
+import nerd.tuxmobil.fahrplan.congress.exceptions.ExceptionHandling
 import nerd.tuxmobil.fahrplan.congress.models.ScheduleData
 import nerd.tuxmobil.fahrplan.congress.net.FetchScheduleResult
 import nerd.tuxmobil.fahrplan.congress.net.HttpStatus
@@ -23,10 +27,7 @@ import nerd.tuxmobil.fahrplan.congress.preferences.SharedPreferencesRepository
 import nerd.tuxmobil.fahrplan.congress.repositories.LoadScheduleState.FetchFailure
 import nerd.tuxmobil.fahrplan.congress.repositories.LoadScheduleState.Fetching
 import nerd.tuxmobil.fahrplan.congress.repositories.LoadScheduleState.InitialFetching
-import nerd.tuxmobil.fahrplan.congress.repositories.LoadScheduleState.InitialParsing
-import nerd.tuxmobil.fahrplan.congress.repositories.LoadScheduleState.ParseFailure
 import nerd.tuxmobil.fahrplan.congress.repositories.LoadScheduleState.ParseSuccess
-import nerd.tuxmobil.fahrplan.congress.repositories.LoadScheduleState.Parsing
 import okhttp3.OkHttpClient
 import org.junit.Rule
 import org.junit.Test
@@ -37,18 +38,18 @@ import org.mockito.kotlin.mock
 import org.mockito.kotlin.times
 import org.mockito.kotlin.verify
 import org.mockito.kotlin.whenever
+import org.threeten.bp.LocalDateTime
+import org.threeten.bp.Month.JANUARY
+import kotlin.coroutines.CoroutineContext
 import info.metadude.android.eventfahrplan.database.models.Highlight as DatabaseHighlight
 import info.metadude.android.eventfahrplan.database.models.Meta as DatabaseMeta
 import info.metadude.android.eventfahrplan.database.models.Session as DatabaseSession
 import info.metadude.android.eventfahrplan.network.fetching.FetchScheduleResult as NetworkFetchScheduleResult
 import info.metadude.android.eventfahrplan.network.fetching.HttpStatus as NetworkHttpStatus
-import info.metadude.android.eventfahrplan.network.models.Meta as NetworkMeta
-import info.metadude.android.eventfahrplan.network.models.Session as NetworkSession
 import nerd.tuxmobil.fahrplan.congress.models.Session as AppSession
 
 private typealias OnFetchingDone = (fetchScheduleResult: FetchScheduleResult) -> Unit
 private typealias OnParsingDone = (parseScheduleResult: ParseResult) -> Unit
-private typealias OnFetchScheduleFinished = (fetchScheduleResult: NetworkFetchScheduleResult) -> Unit
 
 /**
  * Covers [AppRepository.loadSchedule] and the private `parseSchedule` function.
@@ -65,7 +66,6 @@ class AppRepositoryLoadAndParseScheduleTest {
 
     private companion object {
         const val HOST_NAME = "https://example.com"
-        const val SCHEDULE_URL = "https://example.com/schedule.xml"
         const val EMPTY_ENGELSYSTEM_URL = ""
     }
 
@@ -76,24 +76,28 @@ class AppRepositoryLoadAndParseScheduleTest {
     private val highlightsDatabaseRepository = mock<HighlightsDatabaseRepository>()
     private val sessionsDatabaseRepository = mock<SessionsDatabaseRepository>()
     private val metaDatabaseRepository = mock<MetaDatabaseRepository>()
-    private val scheduleNetworkRepository = TestScheduleNetworkRepository()
+    private val sessionizeNetworkRepository = mock<SessionizeNetworkRepository>()
     private val sharedPreferencesRepository = mock<SharedPreferencesRepository>()
     private val sessionsTransformer = mock<SessionsTransformer>()
 
     private val testableAppRepository: AppRepository
         get() = with(AppRepository) {
+            val exceptionHandler = object : ExceptionHandling {
+                override fun onExceptionHandling(context: CoroutineContext, throwable: Throwable) {}
+            }
             initialize(
                 context = mock(),
                 logging = mock(),
                 executionContext = TestExecutionContext,
                 databaseScope = mock(),
-                networkScope = mock(),
-                okHttpClient = mock(),
+                networkScope = NetworkScope.of(TestExecutionContext, exceptionHandler),
+                okHttpClient = OkHttpClient(),
                 alarmsDatabaseRepository = alarmsDatabaseRepository,
                 highlightsDatabaseRepository = highlightsDatabaseRepository,
                 sessionsDatabaseRepository = sessionsDatabaseRepository,
                 metaDatabaseRepository = metaDatabaseRepository,
-                scheduleNetworkRepository = scheduleNetworkRepository,
+                scheduleNetworkRepository = mock(),
+                sessionizeNetworkRepository = sessionizeNetworkRepository,
                 engelsystemNetworkRepository = mock(),
                 sharedPreferencesRepository = sharedPreferencesRepository,
                 sessionsTransformer = sessionsTransformer
@@ -124,34 +128,23 @@ class AppRepositoryLoadAndParseScheduleTest {
         }
 
     @Test
-    fun `loadScheduleState emits InitialParsing HTTP 200 when schedule has been loaded for the first time`() =
-        runTest {
-            whenever(metaDatabaseRepository.query()) doReturn DatabaseMeta(numDays = 0)
-            val success = createFetchScheduleResult(NetworkHttpStatus.HTTP_OK)
-            val onFetchingDone: OnFetchingDone = { result ->
-                assertThat(result).isEqualTo(success.toAppFetchScheduleResult())
-            }
-            testableAppRepository.loadSchedule(isUserRequest = false, onFetchingDone)
-            scheduleNetworkRepository.onFetchScheduleFinished(success)
-            testableAppRepository.loadScheduleState.test {
-                assertThat(awaitItem()).isEqualTo(InitialParsing)
-            }
-            verifyInvokedOnce(sharedPreferencesRepository).setScheduleLastFetchedAt(any())
-            verifyInvokedOnce(metaDatabaseRepository).insert(any())
-        }
-
-    @Test
-    fun `loadScheduleState emits InitialParsing HTTP 200 when schedule has been loaded and stored`() =
+    fun `loadScheduleState emits ParseSuccess HTTP 200 when schedule has been loaded and parsed`() =
         runTest {
             whenever(metaDatabaseRepository.query()) doReturn DatabaseMeta(numDays = 1)
             val success = createFetchScheduleResult(NetworkHttpStatus.HTTP_OK)
             val onFetchingDone: OnFetchingDone = { result ->
                 assertThat(result).isEqualTo(success.toAppFetchScheduleResult())
             }
-            testableAppRepository.loadSchedule(isUserRequest = false, onFetchingDone)
-            scheduleNetworkRepository.onFetchScheduleFinished(success)
+            val onParsingDone: OnParsingDone = { result ->
+                assertThat(result).isEqualTo(ParseScheduleResult(true, "1"))
+            }
+            whenever(sessionizeNetworkRepository.loadConferenceDays(any(), any())) doReturn Values(
+                emptyList(),
+                ""
+            )
+            testableAppRepository.loadSchedule(isUserRequest = false, onFetchingDone, onParsingDone)
             testableAppRepository.loadScheduleState.test {
-                assertThat(awaitItem()).isEqualTo(Parsing)
+                assertThat(awaitItem()).isEqualTo(ParseSuccess)
             }
             verifyInvokedOnce(sharedPreferencesRepository).setScheduleLastFetchedAt(any())
             verifyInvokedOnce(metaDatabaseRepository).insert(any())
@@ -166,8 +159,13 @@ class AppRepositoryLoadAndParseScheduleTest {
             val onFetchingDone: OnFetchingDone = { result ->
                 assertThat(result).isEqualTo(notModified.toAppFetchScheduleResult())
             }
+            whenever(
+                sessionizeNetworkRepository.loadConferenceDays(
+                    any(),
+                    any()
+                )
+            ) doReturn SessionizeResult.Error(304, "")
             testableAppRepository.loadSchedule(isUserRequest = false, onFetchingDone)
-            scheduleNetworkRepository.onFetchScheduleFinished(notModified)
             testableAppRepository.loadScheduleState.test {
                 val expected =
                     createFetchFailure(HttpStatus.HTTP_NOT_MODIFIED, isUserRequest = false)
@@ -184,8 +182,13 @@ class AppRepositoryLoadAndParseScheduleTest {
         val onFetchingDone: OnFetchingDone = { result ->
             assertThat(result).isEqualTo(notFound.toAppFetchScheduleResult())
         }
+        whenever(
+            sessionizeNetworkRepository.loadConferenceDays(
+                any(),
+                any()
+            )
+        ) doReturn SessionizeResult.Error(404, "")
         testableAppRepository.loadSchedule(isUserRequest = true, onFetchingDone)
-        scheduleNetworkRepository.onFetchScheduleFinished(notFound)
         testableAppRepository.loadScheduleState.test {
             val expectedResult = createFetchFailure(HttpStatus.HTTP_NOT_FOUND, isUserRequest = true)
             assertThat(awaitItem()).isEqualTo(expectedResult)
@@ -201,12 +204,17 @@ class AppRepositoryLoadAndParseScheduleTest {
     fun `loadScheduleState emits ParseSuccess when parsing finished successfully`() =
         runTest {
             whenever(metaDatabaseRepository.query()) doReturn DatabaseMeta(numDays = 1)
-            val success = createFetchScheduleResult(NetworkHttpStatus.HTTP_OK)
+            whenever(sessionsDatabaseRepository.querySessionsWithoutRoom(any())) doReturn listOf(
+                DatabaseSession("67")
+            )
             val onParsingDone: OnParsingDone = { result ->
                 assertThat(result).isEqualTo(ParseScheduleResult(isSuccess = true, "1.0.0"))
             }
+            whenever(sessionizeNetworkRepository.loadConferenceDays(any(), any())) doReturn Values(
+                conferenceDays = createConferenceDays(),
+                eTag = "1.0.1"
+            )
             testableAppRepository.loadSchedule(isUserRequest = false, onParsingDone = onParsingDone)
-            scheduleNetworkRepository.onFetchScheduleFinished(success)
 
             // onUpdateSessions
             whenever(sessionsDatabaseRepository.querySessionsOrderedByDateUtc()) doReturn listOf(
@@ -214,8 +222,6 @@ class AppRepositoryLoadAndParseScheduleTest {
             )
             whenever(highlightsDatabaseRepository.query()) doReturn emptyList()
             whenever(alarmsDatabaseRepository.query()) doReturn emptyList()
-
-            scheduleNetworkRepository.onUpdateSessions(emptyList())
 
             verifyInvokedOnce(sharedPreferencesRepository).setChangesSeen(any())
             verifyInvokedOnce(sessionsDatabaseRepository).updateSessions(any(), any())
@@ -226,16 +232,23 @@ class AppRepositoryLoadAndParseScheduleTest {
             assertUncanceledSessionsForDayIndexProperty()
 
             // onUpdateMeta
-            scheduleNetworkRepository.onUpdateMeta(NetworkMeta())
-            verify(metaDatabaseRepository, times(2)).insert(any())
+            verify(metaDatabaseRepository, times(1)).insert(any())
 
             // onParsingDone
             whenever(sharedPreferencesRepository.getEngelsystemShiftsUrl()) doReturn EMPTY_ENGELSYSTEM_URL // early exit to bypass here
-            scheduleNetworkRepository.onParsingDone(true, "1.0.0")
             testableAppRepository.loadScheduleState.test {
                 assertThat(awaitItem()).isEqualTo(ParseSuccess)
             }
         }
+
+    private fun createConferenceDays() = listOf(
+        ConferenceDay(
+            date = LocalDateTime.of(2023, JANUARY, 1, 10, 0, 0),
+        ),
+        ConferenceDay(
+            date = LocalDateTime.of(2023, JANUARY, 2, 10, 0, 0),
+        )
+    )
 
     private suspend fun assertStarredSessionsProperty() {
         testableAppRepository.starredSessions.test {
@@ -284,25 +297,6 @@ class AppRepositoryLoadAndParseScheduleTest {
         }
     }
 
-    @Test
-    fun `loadScheduleState emits ParseFailure when parsing finished with an error`() =
-        runTest {
-            whenever(metaDatabaseRepository.query()) doReturn DatabaseMeta(numDays = 1)
-            val success = createFetchScheduleResult(NetworkHttpStatus.HTTP_OK)
-            val onParsingDone: OnParsingDone = { result ->
-                assertThat(result).isEqualTo(ParseScheduleResult(isSuccess = false, "1.0.0"))
-            }
-            testableAppRepository.loadSchedule(isUserRequest = false, onParsingDone = onParsingDone)
-            scheduleNetworkRepository.onFetchScheduleFinished(success)
-
-            // onParsingDone
-            whenever(sharedPreferencesRepository.getEngelsystemShiftsUrl()) doReturn EMPTY_ENGELSYSTEM_URL // early exit to bypass here
-            scheduleNetworkRepository.onParsingDone(false, "1.0.0")
-            testableAppRepository.loadScheduleState.test {
-                assertThat(awaitItem()).isEqualTo(ParseFailure(ParseScheduleResult(false, "1.0.0")))
-            }
-        }
-
     private fun createFetchScheduleResult(httpStatus: NetworkHttpStatus) =
         NetworkFetchScheduleResult(httpStatus, "some fahrplan xml", eTag = "a1b2bc3", HOST_NAME)
 
@@ -319,43 +313,6 @@ class AppRepositoryLoadAndParseScheduleTest {
         onFetchingDone: OnFetchingDone = {},
         onParsingDone: OnParsingDone = {},
     ) =
-        loadSchedule(SCHEDULE_URL, isUserRequest, onFetchingDone, onParsingDone, mock())
-
-    private class TestScheduleNetworkRepository : ScheduleNetworkRepository {
-
-        lateinit var onFetchScheduleFinished: OnFetchScheduleFinished
-            private set
-
-        lateinit var onUpdateSessions: (sessions: List<NetworkSession>) -> Unit
-            private set
-
-        lateinit var onUpdateMeta: (meta: NetworkMeta) -> Unit
-            private set
-
-        lateinit var onParsingDone: (result: Boolean, version: String) -> Unit
-            private set
-
-        override fun fetchSchedule(
-            okHttpClient: OkHttpClient,
-            url: String,
-            eTag: String,
-            onFetchScheduleFinished: OnFetchScheduleFinished
-        ) {
-            this.onFetchScheduleFinished = onFetchScheduleFinished
-        }
-
-        override fun parseSchedule(
-            scheduleXml: String,
-            eTag: String,
-            onUpdateSessions: (sessions: List<NetworkSession>) -> Unit,
-            onUpdateMeta: (meta: NetworkMeta) -> Unit,
-            onParsingDone: (result: Boolean, version: String) -> Unit
-        ) {
-            this.onUpdateSessions = onUpdateSessions
-            this.onUpdateMeta = onUpdateMeta
-            this.onParsingDone = onParsingDone
-        }
-
-    }
+        loadSchedule(HOST_NAME, isUserRequest, onFetchingDone, onParsingDone)
 
 }

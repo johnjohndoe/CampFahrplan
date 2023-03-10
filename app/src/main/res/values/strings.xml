@@ -105,7 +105,7 @@
     </string>
     <string name="about_libraries_names" translatable="false">
 		Kotlin, Google AndroidX library, BetterLinkMovementMethod, Email Intent Builder,
-		Engelsystem, Espresso, Markwon, OkHttp, SnackEngage, TraceDroid
+		Engelsystem, Espresso, Markwon, OkHttp, Sessionize, SnackEngage, TraceDroid
 	</string>
     <string name="about_data_privacy_statement_german">Data privacy statement (German)</string>
     <string name="about_f_droid_listing">F-Droid listing</string>

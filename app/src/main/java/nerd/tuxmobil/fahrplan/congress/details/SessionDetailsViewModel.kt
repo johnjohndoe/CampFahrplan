@@ -25,7 +25,6 @@ import nerd.tuxmobil.fahrplan.congress.sharing.SimpleSessionFormat
 import nerd.tuxmobil.fahrplan.congress.utils.FeedbackUrlComposer
 import nerd.tuxmobil.fahrplan.congress.utils.Font
 import nerd.tuxmobil.fahrplan.congress.utils.MarkdownConversion
-import nerd.tuxmobil.fahrplan.congress.utils.SessionUrlComposition
 import nerd.tuxmobil.fahrplan.congress.wiki.containsWikiLink
 import org.threeten.bp.ZoneOffset
 
@@ -39,7 +38,6 @@ internal class SessionDetailsViewModel(
     private val simpleSessionFormat: SimpleSessionFormat,
     private val jsonSessionFormat: JsonSessionFormat,
     private val feedbackUrlComposer: FeedbackUrlComposer,
-    private val sessionUrlComposition: SessionUrlComposition,
     private val roomForC3NavConverter: RoomForC3NavConverter,
     private val markdownConversion: MarkdownConversion,
     private val formattingDelegate: FormattingDelegate = DateFormattingDelegate(),
@@ -124,7 +122,7 @@ internal class SessionDetailsViewModel(
         val formattedDescription = markdownConversion.markdownLinksToHtmlLinks(description)
         val linksHtml = sessionFormatter.getFormattedLinks(getLinks())
         val formattedLinks = markdownConversion.markdownLinksToHtmlLinks(linksHtml)
-        val sessionUrl = sessionUrlComposition.getSessionUrl(this)
+        val sessionUrl = url
         val sessionLink = sessionFormatter.getFormattedUrl(sessionUrl)
         val isFeedbackUrlEmpty = feedbackUrlComposer.getFeedbackUrl(this).isEmpty()
         val isC3NavRoomNameEmpty = roomForC3NavConverter.convert(room).isEmpty()
