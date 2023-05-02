@@ -7,6 +7,7 @@ import org.threeten.bp.ZoneOffset
 import org.threeten.bp.ZonedDateTime
 import org.threeten.bp.format.DateTimeFormatter
 import org.threeten.bp.format.FormatStyle
+import java.util.Locale
 
 /**
  * Format timestamps according to system locale and system time zone.
@@ -20,6 +21,7 @@ class DateFormatter private constructor(
     private val timeShortNumberOnlyFormatter = DateTimeFormatter.ofPattern("HH:mm")
     private val timeShortFormatter = DateTimeFormatter.ofLocalizedTime(FormatStyle.SHORT)
     private val dateShortFormatter = DateTimeFormatter.ofLocalizedDate(FormatStyle.SHORT)
+    private val dateMediumKebapFormatter = DateTimeFormatter.ofPattern(DATE_MEDIUM_KEBAP_PATTERN, Locale.getDefault())
     private val dateShortTimeShortFormatter = DateTimeFormatter.ofLocalizedDateTime(FormatStyle.SHORT, FormatStyle.SHORT)
     private val dateLongTimeShortFormatter = DateTimeFormatter.ofLocalizedDateTime(FormatStyle.LONG, FormatStyle.SHORT)
     private val dateFullTimeShortFormatter = DateTimeFormatter.ofLocalizedDateTime(FormatStyle.FULL, FormatStyle.SHORT)
@@ -62,6 +64,19 @@ class DateFormatter private constructor(
     fun getFormattedDate(time: Long, sessionZoneOffset: ZoneOffset?): String {
         val zoneOffset = getAvailableZoneOffset(sessionZoneOffset)
         return dateShortFormatter.withZone(zoneOffset).format(Instant.ofEpochMilli(time))
+    }
+
+    /**
+     * Returns day, month and year separated by hyphens.
+     * E.g. 22-01-2019
+     *
+     * Formatting happens by taking the [original time zone of the associated session][sessionZoneOffset]
+     * into account. If [sessionZoneOffset] is missing then formatting falls back to using the
+     * current time zone offset of the device.
+     */
+    fun getFormattedDateMediumKebap(time: Long, sessionZoneOffset: ZoneOffset?): String {
+        val zoneOffset = getAvailableZoneOffset(sessionZoneOffset)
+        return dateMediumKebapFormatter.withZone(zoneOffset).format(Instant.ofEpochMilli(time))
     }
 
     /**
@@ -124,6 +139,7 @@ class DateFormatter private constructor(
 
     companion object {
 
+        private const val DATE_MEDIUM_KEBAP_PATTERN = "dd-MM-yyyy"
         @JvmStatic
         fun newInstance(useDeviceTimeZone: Boolean): DateFormatter {
             return DateFormatter(useDeviceTimeZone)

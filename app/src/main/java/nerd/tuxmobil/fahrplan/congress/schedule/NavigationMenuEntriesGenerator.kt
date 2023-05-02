@@ -1,6 +1,7 @@
 package nerd.tuxmobil.fahrplan.congress.schedule
 
 import info.metadude.android.eventfahrplan.commons.logging.Logging
+import info.metadude.android.eventfahrplan.commons.temporal.DateFormatter
 import info.metadude.android.eventfahrplan.commons.temporal.Moment
 import nerd.tuxmobil.fahrplan.congress.models.DateInfo
 import nerd.tuxmobil.fahrplan.congress.models.DateInfos
@@ -15,6 +16,8 @@ internal class NavigationMenuEntriesGenerator @JvmOverloads constructor(
      * The word "Today" in the language of choice.
      */
     private val todayString: String,
+
+    private val dateFormatter: DateFormatter,
 
     private val logging: Logging = Logging.get()
 
@@ -56,6 +59,7 @@ internal class NavigationMenuEntriesGenerator @JvmOverloads constructor(
             var entry = "$dayString ${dayIndex + 1}"
             for (dateInfo in dateInfos) {
                 if (dateInfo.dayIndex == dayIndex + 1) {
+                    entry += " - ${dateInfo.formattedDate}"
                     if (currentDate == dateInfo.date) {
                         entry += " - $todayString"
                     }
@@ -66,5 +70,12 @@ internal class NavigationMenuEntriesGenerator @JvmOverloads constructor(
         }
         return entries.toList()
     }
+
+    /**
+     * The [DateInfo.date] formatted in kebap style.
+     * TODO The sessionZoneOffset could be provided by collecting the first session of each day in DateInfos (rough idea).
+     */
+    private val DateInfo.formattedDate
+        get() = dateFormatter.getFormattedDateMediumKebap(date.toMilliseconds(), sessionZoneOffset = null)
 
 }

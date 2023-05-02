@@ -41,6 +41,7 @@ import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.LayoutParams
 import info.metadude.android.eventfahrplan.commons.flow.observe
 import info.metadude.android.eventfahrplan.commons.logging.Logging
+import info.metadude.android.eventfahrplan.commons.temporal.DateFormatter
 import info.metadude.android.eventfahrplan.commons.temporal.Moment
 import nerd.tuxmobil.fahrplan.congress.BuildConfig
 import nerd.tuxmobil.fahrplan.congress.R
@@ -113,7 +114,12 @@ class FahrplanFragment : Fragment(), SessionViewEventsHandler {
         val notificationHelper = NotificationHelper(context)
         val appRepository = AppRepository
         val alarmServices = AlarmServices.newInstance(context, appRepository)
-        val menuEntriesGenerator = NavigationMenuEntriesGenerator(dayString = getString(R.string.day), todayString = getString(R.string.today))
+        val useDeviceTimeZoneEnabled = appRepository.readUseDeviceTimeZoneEnabled()
+        val menuEntriesGenerator = NavigationMenuEntriesGenerator(
+            dayString = getString(R.string.day),
+            todayString = getString(R.string.today),
+            dateFormatter = DateFormatter.newInstance(useDeviceTimeZoneEnabled)
+        )
         val defaultEngelsystemRoomName = AppRepository.ENGELSYSTEM_ROOM_NAME
         val customEngelsystemRoomName = getString(R.string.engelsystem_alias)
         val viewModelFactory = FahrplanViewModelFactory(
