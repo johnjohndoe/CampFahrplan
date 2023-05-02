@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="pressed_congress">#CC0099AB</color>
+
+    <!-- Default state -->
+    <color name="track_background_default">#996E23</color>
+    <color name="track_background_default_a_european_approach_to_geospatial_open_source">#1051fa</color>
+    <color name="track_background_default_ai4eo_challenges_opportunities">#123279</color>
+    <color name="track_background_default_community_foundation">#524747</color>
+    <color name="track_background_default_education">#912a65</color>
+    <color name="track_background_default_open_data">#6F4373</color>
+    <color name="track_background_default_open_source_geospatial_made_in_europe">#106aa5</color>
+    <color name="track_background_default_open_standard">#7d8004</color>
+    <color name="track_background_default_state_of_software">#103e0a</color>
+    <color name="track_background_default_transition_to_foss4g">#1a344c</color>
+    <color name="track_background_default_use_cases_applications">#a8072c</color>
+
+    <!-- Highlight state -->
+    <color name="track_background_highlight">#e6a535</color>
+    <color name="track_background_highlight_a_european_approach_to_geospatial_open_source">#658ffc</color>
+    <color name="track_background_highlight_ai4eo_challenges_opportunities">#1844a6</color>
+    <color name="track_background_highlight_community_foundation">#726f6f</color>
+    <color name="track_background_highlight_education">#b93580</color>
+    <color name="track_background_highlight_open_data">#b873bf</color>
+    <color name="track_background_highlight_open_source_geospatial_made_in_europe">#1588d3</color>
+    <color name="track_background_highlight_open_standard">#9ea105</color>
+    <color name="track_background_highlight_state_of_software">#1b6a11</color>
+    <color name="track_background_highlight_transition_to_foss4g">#274e72</color>
+    <color name="track_background_highlight_use_cases_applications">#c70835</color>
+
+</resources>

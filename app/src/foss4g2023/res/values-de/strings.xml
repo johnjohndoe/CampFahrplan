@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_hardcoded_subtitle">26.Juni - 2. Juli 2023, Innovation and Training Park (ITP)</string>
+    <string name="copyright_logo">
+        FOSS4G 2023 Logo von Albert Lekaj.
+    </string>
+    <string name="about_logo_content_description">
+        FOSS4G Logo, Karte vom Kosovo
+    </string>
+</resources>
