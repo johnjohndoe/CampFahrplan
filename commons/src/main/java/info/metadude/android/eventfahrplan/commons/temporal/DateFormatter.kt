@@ -22,6 +22,7 @@ class DateFormatter private constructor(
     private val timeShortFormatter = DateTimeFormatter.ofLocalizedTime(FormatStyle.SHORT)
     private val dateShortFormatter = DateTimeFormatter.ofLocalizedDate(FormatStyle.SHORT)
     private val dateMediumKebapFormatter = DateTimeFormatter.ofPattern(DATE_MEDIUM_KEBAP_PATTERN, Locale.getDefault())
+    private val dateMediumTimeShortKebapFormatter = DateTimeFormatter.ofPattern(DATE_MEDIUM_TIME_SHORT_KEBAP_PATTERN, Locale.getDefault())
     private val dateShortTimeShortFormatter = DateTimeFormatter.ofLocalizedDateTime(FormatStyle.SHORT, FormatStyle.SHORT)
     private val dateLongTimeShortFormatter = DateTimeFormatter.ofLocalizedDateTime(FormatStyle.LONG, FormatStyle.SHORT)
     private val dateFullTimeShortFormatter = DateTimeFormatter.ofLocalizedDateTime(FormatStyle.FULL, FormatStyle.SHORT)
@@ -115,6 +116,20 @@ class DateFormatter private constructor(
     }
 
     /**
+     * Returns day, month, year separated by hyphens and the time in short format. Formatting
+     * happens by taking the [original time zone of the associated session][sessionZoneOffset] into
+     * account. If [sessionZoneOffset] is missing then formatting falls back to using the current
+     * time zone offset of the device.
+     *
+     * E.g. 22-01-2019, 1:00 AM
+     */
+    fun getFormattedDateMediumTimeShortKebap(time: Long, sessionZoneOffset: ZoneOffset?): String {
+        val zoneOffset = getAvailableZoneOffset(sessionZoneOffset)
+        val toZonedDateTime: ZonedDateTime = Moment.ofEpochMilli(time).toZonedDateTime(zoneOffset)
+        return dateMediumTimeShortKebapFormatter.format(toZonedDateTime)
+    }
+
+    /**
      * Returns day, month, year and time in long format. Formatting happens by taking the [original
      * time zone of the associated session][sessionZoneOffset] into account. If [sessionZoneOffset]
      * is missing then formatting falls back to using the current time zone offset of the device.
@@ -140,6 +155,8 @@ class DateFormatter private constructor(
     companion object {
 
         private const val DATE_MEDIUM_KEBAP_PATTERN = "dd-MM-yyyy"
+        private const val DATE_MEDIUM_TIME_SHORT_KEBAP_PATTERN = "dd-MM-yyyy, HH:mm a"
+
         @JvmStatic
         fun newInstance(useDeviceTimeZone: Boolean): DateFormatter {
             return DateFormatter(useDeviceTimeZone)

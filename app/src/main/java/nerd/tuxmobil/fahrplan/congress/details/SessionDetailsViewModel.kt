@@ -65,7 +65,7 @@ internal class SessionDetailsViewModel(
     private class DateFormattingDelegate : FormattingDelegate {
 
         override fun getFormattedDateTimeShort(useDeviceTimeZone: Boolean, dateUtc: Long, sessionTimeZoneOffset: ZoneOffset?): String {
-            return DateFormatter.newInstance(useDeviceTimeZone).getFormattedDateTimeShort(dateUtc, sessionTimeZoneOffset)
+            return DateFormatter.newInstance(useDeviceTimeZone).getFormattedDateMediumTimeShortKebap(dateUtc, sessionTimeZoneOffset)
         }
 
         override fun getFormattedDateTimeLong(useDeviceTimeZone: Boolean, dateUtc: Long, sessionTimeZoneOffset: ZoneOffset?): String {

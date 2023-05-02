@@ -157,7 +157,7 @@ abstract class SessionsAdapter protected constructor(
             val session = list[index]
             day = session.day
             val formattedDate = DateFormatter.newInstance(useDeviceTimeZone)
-                .getFormattedDate(session.dateUTC, session.timeZoneOffset)
+                .getFormattedDateMediumKebap(session.dateUTC, session.timeZoneOffset)
 
             if (day != lastDay) {
                 lastDay = day

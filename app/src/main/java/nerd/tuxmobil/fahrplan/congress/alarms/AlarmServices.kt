@@ -93,7 +93,7 @@ class AlarmServices @VisibleForTesting constructor(
      */
     private object DateFormatterDelegate : FormattingDelegate {
         override fun getFormattedDateTimeShort(useDeviceTimeZone: Boolean, alarmTime: Long, timeZoneOffset: ZoneOffset?): String {
-            return DateFormatter.newInstance(useDeviceTimeZone).getFormattedDateTimeShort(alarmTime, timeZoneOffset)
+            return DateFormatter.newInstance(useDeviceTimeZone).getFormattedDateMediumTimeShortKebap(alarmTime, timeZoneOffset)
         }
     }
 
