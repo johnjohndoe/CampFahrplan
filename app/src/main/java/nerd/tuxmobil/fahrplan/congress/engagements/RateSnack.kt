@@ -15,7 +15,7 @@ class RateSnack(val context: Context) : LibraryRateSnack() {
         overrideActionText(context.getString(R.string.snack_engage_rate_action))
         withConditions(
                 NeverAgainWhenClickedOnce(),
-                AfterNumberOfOpportunities(13),
+                AfterNumberOfOpportunities(7),
                 IsConnectedViaWiFiOrUnknown()
         )
         setActionColor(ContextCompat.getColor(context, R.color.colorAccent))

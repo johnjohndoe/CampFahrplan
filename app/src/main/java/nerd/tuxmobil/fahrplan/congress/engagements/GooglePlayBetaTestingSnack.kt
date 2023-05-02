@@ -15,7 +15,7 @@ class GooglePlayBetaTestingSnack(val context: Context) : GooglePlayOpenBetaTestS
         overrideActionText(context.getString(R.string.snack_engage_google_play_beta_testing_action))
         withConditions(
                 NeverAgainWhenClickedOnce(),
-                AfterNumberOfOpportunities(21),
+                AfterNumberOfOpportunities(13),
                 IsConnectedViaWiFiOrUnknown()
         )
         setActionColor(ContextCompat.getColor(context, R.color.colorAccent))
