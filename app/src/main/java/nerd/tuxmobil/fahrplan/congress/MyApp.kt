@@ -19,14 +19,14 @@ class MyApp : MultiDexApplication() {
     companion object {
 
         private val FIRST_DAY_START = getMilliseconds(
-            "Europe/Paris",
+            "Europe/Belgrade",
             BuildConfig.SCHEDULE_FIRST_DAY_START_YEAR,
             BuildConfig.SCHEDULE_FIRST_DAY_START_MONTH,
             BuildConfig.SCHEDULE_FIRST_DAY_START_DAY
         )
 
         private val LAST_DAY_END = getMilliseconds(
-            "Europe/Paris",
+            "Europe/Belgrade",
             BuildConfig.SCHEDULE_LAST_DAY_END_YEAR,
             BuildConfig.SCHEDULE_LAST_DAY_END_MONTH,
             BuildConfig.SCHEDULE_LAST_DAY_END_DAY
