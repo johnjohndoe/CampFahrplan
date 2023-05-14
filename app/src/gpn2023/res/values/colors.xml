@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorPrimary">#463453</color>
+    <color name="colorPrimaryDark">#362840</color>
+    <color name="colorAccent">#6e6daf</color>
+    <color name="colorActionBar">@color/colorPrimary</color>
+    <color name="windowBackground">#1a1a1a</color>
+    <color name="multi_choice_background">#4F3E02</color>
+    <color name="session_alarm_item_bell_icon_fill">@color/colorAccent</color>
+    <color name="session_alarm_item_bell_icon_text">#ffffff</color>
+    <color name="session_background">#ffffff</color>
+    <color name="session_detailbar_background">#eee</color>
+    <color name="session_detailbar_text">@color/colorPrimary</color>
+
+</resources>

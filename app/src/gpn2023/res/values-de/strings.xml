@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">GPN 2023</string>
+    <string name="app_hardcoded_subtitle">8. – 11. Juni / ZKM und HfG</string>
+    <string name="copyright_logo">
+        <![CDATA[Logo-Design: <a href="https://entropia.de">Entropia e.V.</a> (CC-BY-ND-NC)]]>
+    </string>
+    <string name="about_logo_content_description">
+        GPN21 Logo, "ch(ea|i)p alternatives", Darstellung dreier elektronischen Chips,
+        die von links nach rechts mehr und mehr visuell verzerrt sind.
+    </string>
+</resources>
