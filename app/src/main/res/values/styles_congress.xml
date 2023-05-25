@@ -36,6 +36,8 @@
         <item name="android:textColorPrimary">@color/text_primary</item>
         <item name="android:textColorSecondary">@color/text_secondary</item>
         <item name="android:textColorHint">@color/text_secondary</item>
+        <item name="android:actionOverflowButtonStyle">@style/OverflowMenuIcon</item>
+        <item name="android:textAppearanceLargePopupMenu">@style/OverflowMenuTextAppearance</item>
 
         <!-- The rest of your attributes -->
         <item name="android:textColorHighlight">@color/text_link_pressed_background_on_light</item>
@@ -55,6 +57,14 @@
         <item name="android:scrollbarThumbHorizontal">@drawable/scrollbar_thumb</item>
     </style>
 
+    <style name="OverflowMenuIcon" parent="@style/Widget.AppCompat.ActionButton.Overflow">
+        <item name="android:tint">@color/tool_bar_overflow_menu_icon</item>
+    </style>
+
+    <style name="OverflowMenuTextAppearance" parent="TextAppearance.AppCompat.Widget.PopupMenu.Large">
+        <item name="android:textColor">@color/tool_bar_overflow_menu_item_text</item>
+    </style>
+
     <style name="ContextPopupMenuStyle" parent="@style/Widget.AppCompat.Light.PopupMenu.Overflow">
         <item name="android:popupBackground">@color/popupBackground</item>
     </style>
@@ -68,7 +78,7 @@
 
     <style name="SpinnerDropDownItemStyle" parent="Widget.AppCompat.DropDownItem.Spinner">
         <item name="android:textColor">@color/text_primary</item>
-        <item name="android:background">@color/popupBackground</item>
+        <item name="android:background">#d4d4d4</item>
         <item name="android:foreground">?android:attr/selectableItemBackground</item>
     </style>
 
@@ -83,13 +93,18 @@
         <item name="android:scrollbarThumbHorizontal">@drawable/scrollbar_thumb</item>
     </style>
 
-    <style name="ToolBar">
+    <style name="ToolBar" parent="Widget.AppCompat.Toolbar">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_alignParentTop">true</item>
         <item name="android:background">@color/tool_bar_background</item>
         <item name="android:elevation" tools:targetApi="lollipop">@dimen/tool_bar_elevation</item>
         <item name="android:minHeight">?attr/actionBarSize</item>
+        <item name="titleTextAppearance">@style/ToolbarTitleTextAppearance</item>
+    </style>
+
+    <style name="ToolbarTitleTextAppearance" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textColor">@color/tool_bar_text</item>
     </style>
 
     <style name="PopupMenuOverflowStyle" parent="@style/Widget.AppCompat.Light.PopupMenu.Overflow">
@@ -110,7 +125,7 @@
         <item name="android:textColorSecondary">@color/text_secondary</item>
         <item name="colorAccent">@color/alert_dialog_button_text</item>
         <item name="android:textAppearance">@style/TextAppearance.AppCompat.Title</item>
-        <item name="android:windowBackground">@color/popupBackground</item>
+        <item name="android:windowBackground">#f2f2f2</item>
         <item name="textColorAlertDialogListItem">@color/text_secondary</item>
     </style>
 
@@ -122,9 +137,12 @@
     </style>
 
     <style name="MySpinnerDropDownItemStyle" parent="Widget.AppCompat.DropDownItem.Spinner">
-        <item name="android:textAppearance">
-            @style/TextAppearance.AppCompat.Widget.ActionBar.Title
-        </item>
+        <item name="android:textAppearance">@style/MySpinnerDropDownItemTextAppearance</item>
+    </style>
+
+    <style name="MySpinnerDropDownItemTextAppearance" parent="TextAppearance.AppCompat.Widget.DropDownItem">
+        <item name="android:textColor">@color/day_menu_text</item>
+        <item name="android:textSize">@dimen/abc_text_size_title_material_toolbar</item>
     </style>
 
     <style name="MySpinnerDropDownItemListStyle" parent="Widget.AppCompat.DropDownItem.Spinner">
