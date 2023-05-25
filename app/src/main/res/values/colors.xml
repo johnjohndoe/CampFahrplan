@@ -80,4 +80,7 @@
     <color name="session_details_text">@android:color/black</color>
     <color name="session_detailbar_icon">@color/colorAccent</color>
 
+    <!-- Sponsors -->
+    <color name="sponsor_item_ripple">#33004bff</color>
+
 </resources>

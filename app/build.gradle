@@ -17,6 +17,10 @@ android {
     compileSdk Android.compileSdkVersion
     buildToolsVersion = Android.buildToolsVersion
 
+    buildFeatures {
+        viewBinding true
+    }
+
     defaultConfig {
         versionCode 93
         versionName "1.58.0"
