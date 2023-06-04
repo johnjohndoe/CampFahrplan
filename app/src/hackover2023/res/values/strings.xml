@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Hackover 2023 Schedule</string>
+    <string name="app_hardcoded_subtitle">July 14 – 16, 2023 - Stadtteilzentrum Bürgerschule Nordstadt</string>
+    <string name="conference_name" translatable="false">Hackover 2023</string>
+    <string name="copyright_logo">
+        Design of the Hackover logo: Jedi
+    </string>
+    <string name="about_logo_content_description">
+        Hackover logo
+    </string>
+</resources>
