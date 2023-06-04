@@ -81,6 +81,7 @@ android {
         cccamp2019
         ccc36c3
         jev2022
+        hackover2023
     }
 
     def defaultDimension = "default"
@@ -159,6 +160,28 @@ android {
             resValue("string", "preference_hint_engelsystem_json_export_url", '"https://your.engelsystem.de/shifts-json-export?key=YOUR_KEY"')
             buildConfigField "String", "SOCIAL_MEDIA_HASHTAGS_HANDLES", '"#jev #fahrplan #hip #fireshonks #xrelog22 #rtc22 @cbase"'
             buildConfigField "String", "TRACE_DROID_EMAIL_ADDRESS", '"tobias.preuss+jev@googlemail.com"'
+            buildConfigField "String", "SCHEDULE_FEEDBACK_URL", '""'
+        }
+        hackover2023 {
+            dimension defaultDimension
+            applicationId "info.metadude.android.hackover.schedule"
+            versionName "${defaultConfig.versionName}-Hackover-Edition"
+            buildConfigField "String", "GOOGLE_PLAY_URL", '"https://play.google.com/store/apps/details?id=info.metadude.android.hackover.schedule"'
+            buildConfigField "String", "F_DROID_URL", '"https://f-droid.org/packages/info.metadude.android.hackover.schedule"'
+            buildConfigField "String", "SCHEDULE_URL", '"https://talks.hackover.de/ho-2023/schedule/export/schedule.xml"'
+            buildConfigField "String", "EVENT_URL", '""'
+            buildConfigField "String", "EVENT_WEBSITE_URL", '"https://hackover.de"'
+            buildConfigField "String", "EVENT_POSTAL_ADDRESS", '"Klaus-Müller-Kilian Weg 2, 30167 Hannover"'
+            buildConfigField "String", "SERVER_BACKEND_TYPE", '"pretalx"'
+            buildConfigField "int", "SCHEDULE_FIRST_DAY_START_YEAR", "2023"
+            buildConfigField "int", "SCHEDULE_FIRST_DAY_START_MONTH", "7"
+            buildConfigField "int", "SCHEDULE_FIRST_DAY_START_DAY", "14"
+            buildConfigField "int", "SCHEDULE_LAST_DAY_END_YEAR", "2023"
+            buildConfigField "int", "SCHEDULE_LAST_DAY_END_MONTH", "7"
+            buildConfigField "int", "SCHEDULE_LAST_DAY_END_DAY", "17"
+            buildConfigField "boolean", "ENABLE_CHAOSFLIX_EXPORT", "true"
+            buildConfigField "String", "SOCIAL_MEDIA_HASHTAGS_HANDLES", '"#hackover #fahrplan @leitstelle511"'
+            buildConfigField "String", "TRACE_DROID_EMAIL_ADDRESS", '"tobias.preuss+hackover@googlemail.com"'
             buildConfigField "String", "SCHEDULE_FEEDBACK_URL", '""'
         }
     }

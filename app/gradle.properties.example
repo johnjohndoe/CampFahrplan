@@ -12,3 +12,8 @@ signing.jev2022-release.keystoreFilePath=/home/USERNAME/.android/jev2022-release
 signing.jev2022-release.keystorePassword="PASSWORD"
 signing.jev2022-release.keyAlias=jev2022
 signing.jev2022-release.keyPassword="ANOTHERPASSWORD"
+
+signing.hackover2023-release.keystoreFilePath=/home/USERNAME/.android/hackover-release-key.keystore
+signing.hackover2023-release.keystorePassword="PASSWORD"
+signing.hackover2023-release.keyAlias="hackover"
+signing.hackover2023-release.keyPassword="ANOTHERPASSWORD"
