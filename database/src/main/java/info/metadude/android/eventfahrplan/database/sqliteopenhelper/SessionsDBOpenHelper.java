@@ -15,7 +15,7 @@ import info.metadude.android.eventfahrplan.database.contract.FahrplanContract.Se
 
 public class SessionsDBOpenHelper extends SQLiteOpenHelper {
 
-    private static final int DATABASE_VERSION = 13;
+    private static final int DATABASE_VERSION = 11;
 
     private static final String DATABASE_NAME = "lectures"; // Keep table name to avoid database migration.
 
@@ -131,17 +131,9 @@ public class SessionsDBOpenHelper extends SQLiteOpenHelper {
         if (oldVersion < 10 && newVersion >= 10) {
             db.execSQL(SESSION_BY_NOTIFICATION_ID_TABLE_CREATE);
         }
-        if (oldVersion < 11 && newVersion >= 11) {
+        if (oldVersion < 11) {
             db.execSQL("ALTER TABLE " + SessionsTable.NAME + " ADD COLUMN " + Columns.TIME_ZONE_OFFSET + " INTEGER DEFAULT NULL");
-        }
-        if (oldVersion < 12) {
-            // Clear database from rC3 12/2020.
-            db.execSQL("DROP TABLE IF EXISTS " + SessionsTable.NAME);
-            db.execSQL("DROP TABLE IF EXISTS " + SessionByNotificationIdTable.NAME);
-            onCreate(db);
-        }
-        if (oldVersion < 13) {
-            // Clear database from rC3 NOWHERE 12/2021.
+            // Clear database from Hackover 2019.
             db.execSQL("DROP TABLE IF EXISTS " + SessionsTable.NAME);
             db.execSQL("DROP TABLE IF EXISTS " + SessionByNotificationIdTable.NAME);
             onCreate(db);
