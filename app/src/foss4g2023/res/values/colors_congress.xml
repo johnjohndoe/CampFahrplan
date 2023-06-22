@@ -6,6 +6,7 @@
     <!-- Default state -->
     <color name="track_background_default">#996E23</color>
     <color name="track_background_default_a_european_approach_to_geospatial_open_source">#1051fa</color>
+    <color name="track_background_default_academic">#8022ab</color>
     <color name="track_background_default_ai4eo_challenges_opportunities">#123279</color>
     <color name="track_background_default_community_foundation">#524747</color>
     <color name="track_background_default_education">#912a65</color>
@@ -19,6 +20,7 @@
     <!-- Highlight state -->
     <color name="track_background_highlight">#e6a535</color>
     <color name="track_background_highlight_a_european_approach_to_geospatial_open_source">#658ffc</color>
+    <color name="track_background_highlight_academic">#a22bd9</color>
     <color name="track_background_highlight_ai4eo_challenges_opportunities">#1844a6</color>
     <color name="track_background_highlight_community_foundation">#726f6f</color>
     <color name="track_background_highlight_education">#b93580</color>
