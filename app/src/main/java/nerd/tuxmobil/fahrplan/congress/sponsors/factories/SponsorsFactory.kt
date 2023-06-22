@@ -62,9 +62,12 @@ object SponsorsFactory {
         Sponsor(SUPPORTERS, R.drawable.sponsor_supporter_107_geodatalab, "GeoDataLab", "https://2023.foss4g.org/sponsors/supporter_geodatalab"),
         Sponsor(SUPPORTERS, R.drawable.sponsor_supporter_108_sourcepole, "Sourcepole", "http://2023.foss4g.org/sponsors/supporter_sourcepole"),
 
-        Sponsor(PARTNERS, R.drawable.sponsor_partner_101_eu, "European Commission", "https://2023.foss4g.org/sponsors/partner_european_commission"),
-        Sponsor(PARTNERS, R.drawable.sponsor_partner_102_kdwv, "The German-Kosovar Business Association", "https://2023.foss4g.org/sponsors/partner_kdwv"),
-        Sponsor(PARTNERS, R.drawable.sponsor_partner_103_giz, "GIZ", "https://www.giz.de/en/worldwide/298.html"),
+        Sponsor(PARTNERS, R.drawable.sponsor_partner_101_ministry_economy, "Ministry of Economy", "https://me.rks-gov.net/"),
+        Sponsor(PARTNERS, R.drawable.sponsor_partner_102_eu, "European Commission", "https://2023.foss4g.org/sponsors/partner_european_commission"),
+        Sponsor(PARTNERS, R.drawable.sponsor_partner_103_kdwv, "The German-Kosovar Business Association", "https://2023.foss4g.org/sponsors/partner_kdwv"),
+        Sponsor(PARTNERS, R.drawable.sponsor_partner_104_giz, "GIZ", "https://www.giz.de/en/worldwide/298.html"),
+        Sponsor(PARTNERS, R.drawable.sponsor_partner_105_prizren_municipality, "Prizren Municipality", "https://www.giz.de/en/worldwide/298.html"),
+        Sponsor(PARTNERS, R.drawable.sponsor_partner_106_geological_service, "Geological Service of Kosovo", "https://me.rks-gov.net/sherbimi-gjeologjik-i-kosoves-2/"),
 
         Sponsor(ORGANIZING_PARTNERS, R.drawable.sponsor_organizing_partner_101_opsin, "OpS-IN", "https://2023.foss4g.org/sponsors/partner_ops_in"),
         Sponsor(ORGANIZING_PARTNERS, R.drawable.sponsor_organizing_partner_102_spacesyntaks, "SpaceSyntaks", "https://2023.foss4g.org/sponsors/partner_spacesyntaks"),
