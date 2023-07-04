@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="pressed_congress">#CC0099AB</color>
+
+    <!-- Default state -->
+
+    <color name="track_background_default">@color/colorPrimary</color>
+    <color name="track_background_default_cloud">#7f000c</color>
+    <color name="track_background_default_commercial_backdoors_security_of_closed_source_software">#ab6200</color>
+    <color name="track_background_default_culture">#806C00</color>
+    <color name="track_background_default_databases">#004D0E</color>
+    <color name="track_background_default_development">#000079</color>
+    <color name="track_background_default_dumb_smarthome_raspberrypi_projects_in_homeoffice">#3B0037</color>
+    <color name="track_background_default_froscon_meets_science">#8c1500</color>
+    <color name="track_background_default_from_smoke_till_down_availability_if_the_cloud_goes_down">#733900</color>
+    <color name="track_background_default_getting_to_the_source_vulnerabilities_in_the_mirror_are_closer_than_they_appear">#ab6200</color>
+    <color name="track_background_default_home_office365_days_later_lessons_learned_in_the_1st_year_working_from_home">#808000</color>
+    <color name="track_background_default_network_track">#560087</color>
+    <color name="track_background_default_security">#7f0000</color>
+    <color name="track_background_default_system_administration">#458A8A</color>
+    <color name="track_background_default_the_postman_always_rings_twice_exchange_your_groupware">#444302</color>
+    <color name="track_background_default_web_development">#021D4D</color>
+    <color name="track_background_default_wood_work_instead_of_it_leisure_activities_you_developed_during_lock_down">#351706</color>
+
+    <!-- Highlight state -->
+
+    <color name="track_background_highlight">@color/colorPrimaryDark</color>
+    <color name="track_background_highlight_cloud">#CC0014</color>
+    <color name="track_background_highlight_commercial_backdoors_security_of_closed_source_software">#ffa52c</color>
+    <color name="track_background_highlight_culture">#A68A00</color>
+    <color name="track_background_highlight_databases">#008018</color>
+    <color name="track_background_highlight_development">#0000E0</color>
+    <color name="track_background_highlight_dumb_smarthome_raspberrypi_projects_in_homeoffice">#86007d</color>
+    <color name="track_background_highlight_froscon_meets_science">#ff310d</color>
+    <color name="track_background_highlight_from_smoke_till_down_availability_if_the_cloud_goes_down">#cc6804</color>
+    <color name="track_background_highlight_getting_to_the_source_vulnerabilities_in_the_mirror_are_closer_than_they_appear">#ffa52c</color>
+    <color name="track_background_highlight_home_office365_days_later_lessons_learned_in_the_1st_year_working_from_home">#999926</color>
+    <color name="track_background_highlight_network_track">#9400d3</color>
+    <color name="track_background_highlight_security">#ff0000</color>
+    <color name="track_background_highlight_system_administration">#55BDB9</color>
+    <color name="track_background_highlight_the_postman_always_rings_twice_exchange_your_groupware">#bfbc07</color>
+    <color name="track_background_highlight_web_development">#00368C</color>
+    <color name="track_background_highlight_wood_work_instead_of_it_leisure_activities_you_developed_during_lock_down">#542509</color>
+
+</resources>

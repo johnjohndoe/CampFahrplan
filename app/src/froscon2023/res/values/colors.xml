@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="text_primary">#fff</color>
+    <color name="text_secondary">#deebfd</color>
+    <color name="text_tertiary">#c6c</color>
+    <color name="colorPrimary">#41afff</color>
+    <color name="colorPrimaryDark">#378bcc</color>
+    <color name="colorAccent">#41afff</color>
+    <color name="colorActionBar">@color/colorPrimary</color>
+    <color name="windowBackground">#4d4d4d</color>
+    <color name="text_link_color">@color/colorAccent</color>
+    <color name="multi_choice_background">#41afff</color>
+    <color name="text_link_color_dark">@color/colorAccent</color>
+    <color name="alarm_list_icon_default_fill_color">@color/colorAccent</color>
+    <color name="alarm_list_icon_default_stroke_color">#fff</color>
+    <color name="session_detailbar_text">#444</color>
+    <color name="session_item_text_on_default_background">#e6e6e6</color>
+    <color name="session_item_text_on_highlight_background">#fff</color>
+
+    <!-- Alarm dialogs -->
+    <color name="alert_dialog_button_text">#fff</color>
+
+    <!-- Favorites -->
+    <color name="favorites_past_session_text">#a6a6a6</color>
+
+</resources>
