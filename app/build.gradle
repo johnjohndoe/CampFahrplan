@@ -180,6 +180,8 @@ android {
             buildConfigField "int", "SCHEDULE_LAST_DAY_END_MONTH", "7"
             buildConfigField "int", "SCHEDULE_LAST_DAY_END_DAY", "17"
             buildConfigField "boolean", "ENABLE_CHAOSFLIX_EXPORT", "true"
+            buildConfigField "boolean", "ENABLE_ENGELSYSTEM_SHIFTS", "true"
+            resValue("string", "preference_hint_engelsystem_json_export_url", '"https://engel.hackover.de/shifts-json-export?key=YOUR_KEY"')
             buildConfigField "String", "SOCIAL_MEDIA_HASHTAGS_HANDLES", '"#hackover #fahrplan @leitstelle511"'
             buildConfigField "String", "TRACE_DROID_EMAIL_ADDRESS", '"tobias.preuss+hackover@googlemail.com"'
             buildConfigField "String", "SCHEDULE_FEEDBACK_URL", '""'
