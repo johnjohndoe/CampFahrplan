@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MRMCD 2023 Fahrplan</string>
+    <string name="app_hardcoded_subtitle">1.&#8211;3. September 2023, Robert-Piloty-Gebäude der TU-Darmstadt</string>
+    <string name="copyright_logo">
+        <![CDATA[Der Name MRMCD ist ein registriertes Markenzeichen des
+        <a href="https://2023.mrmcd.net">MRMCD e.V.</a> Das Design zur MRMCD 2023
+        wurde von caro, MRMCD e.V. gestaltet.
+        Die Nutzung erfolgt mit Erlaubnis.]]>
+    </string>
+    <string name="about_logo_content_description">
+        MRMCD 2023 Logo: Kopf einer Person mit Augmented Reality Brille
+    </string>
+</resources>

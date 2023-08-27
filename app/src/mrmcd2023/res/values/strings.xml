@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MRMCD 2023 Schedule</string>
+    <string name="app_hardcoded_subtitle">September 1&#8211;3, 2023, Robert-Piloty building at TU-Darmstadt</string>
+    <string name="conference_name" translatable="false">MRMCD</string>
+    <string name="copyright_logo">
+        <![CDATA[The name MRMCD is a registered trademark of
+        <a href="https://2023.mrmcd.net">MRMCD e.V.</a> The MRMCD 2023 design was crafted by
+        caro, MRMCD e.V. Used with permission.]]>
+    </string>
+    <string name="about_logo_content_description">
+        MRMCD 2023 logo: person\'s head with augmented reality goggles
+    </string>
+</resources>
