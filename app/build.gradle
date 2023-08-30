@@ -81,6 +81,7 @@ android {
         cccamp2023
         ccc36c3
         jev2022
+        datenspuren2023
     }
 
     def defaultDimension = "default"
@@ -165,6 +166,32 @@ android {
             buildConfigField "String", "SOCIAL_MEDIA_HASHTAGS_HANDLES", '"#jev #fahrplan #hip #fireshonks #xrelog22 #rtc22 @cbase"'
             buildConfigField "String", "TRACE_DROID_EMAIL_ADDRESS", '"tobias.preuss+jev@googlemail.com"'
             buildConfigField "String", "SCHEDULE_FEEDBACK_URL", '""'
+        }
+        datenspuren2023 {
+            dimension defaultDimension
+            applicationId "info.metadude.android.datenspuren.schedule"
+            versionName "${defaultConfig.versionName}-Datenspuren-Edition"
+            buildConfigField "String", "GOOGLE_PLAY_URL", '"https://play.google.com/store/apps/details?id=info.metadude.android.datenspuren.schedule"'
+            buildConfigField "String", "F_DROID_URL", '"https://f-droid.org/packages/info.metadude.android.datenspuren.schedule/"'
+            buildConfigField "String", "SCHEDULE_URL", '"https://talks.datenspuren.de/ds23/schedule/export/schedule.xml"'
+            buildConfigField "String", "EVENT_URL", '"https://talks.datenspuren.de/ds23/talk/%1$s"'
+            buildConfigField "String", "EVENT_WEBSITE_URL", '"https://datenspuren.de/2023/"'
+            buildConfigField "String", "EVENT_POSTAL_ADDRESS", '"Riesaer Straße 32, 01127 Dresden"'
+            buildConfigField "String", "SERVER_BACKEND_TYPE", '"pretalx"'
+            buildConfigField "int", "SCHEDULE_FIRST_DAY_START_YEAR", "2023"
+            buildConfigField "int", "SCHEDULE_FIRST_DAY_START_MONTH", "9"
+            buildConfigField "int", "SCHEDULE_FIRST_DAY_START_DAY", "15"
+            buildConfigField "int", "SCHEDULE_LAST_DAY_END_YEAR", "2023"
+            buildConfigField "int", "SCHEDULE_LAST_DAY_END_MONTH", "9"
+            buildConfigField "int", "SCHEDULE_LAST_DAY_END_DAY", "18"
+            buildConfigField "boolean", "ENABLE_CHAOSFLIX_EXPORT", "true"
+            buildConfigField "boolean", "ENABLE_ENGELSYSTEM_SHIFTS", "true"
+            resValue("string", "engelsystem_alias", "Zengelsystem")
+            resValue("string", "engelsystem_shifts_alias", "Zengelshifts")
+            resValue("string", "preference_hint_engelsystem_json_export_url", "https://zengelsystem.c3d2.space/shifts-json-export?key=YOUR_KEY")
+            buildConfigField "String", "SOCIAL_MEDIA_HASHTAGS_HANDLES", '"#datenspuren #datenspuren2023 #fahrplan @datenspuren"'
+            buildConfigField "String", "TRACE_DROID_EMAIL_ADDRESS", '"tobias.preuss+datenspuren@googlemail.com"'
+            buildConfigField "String", "SCHEDULE_FEEDBACK_URL", '"https://talks.datenspuren.de/ds23/talk/%s/feedback/"'
         }
     }
 

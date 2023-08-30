@@ -12,3 +12,8 @@ signing.jev2022-release.keystoreFilePath=/home/USERNAME/.android/jev2022-release
 signing.jev2022-release.keystorePassword="PASSWORD"
 signing.jev2022-release.keyAlias=jev2022
 signing.jev2022-release.keyPassword="ANOTHERPASSWORD"
+
+signing.datenspuren2023-release.keystoreFilePath=/home/USERNAME/.android/datenspuren-release-key.keystore
+signing.datenspuren2023-release.keystorePassword="PASSWORD"
+signing.datenspuren2023-release.keyAlias="datenspuren"
+signing.datenspuren2023-release.keyPassword="ANOTHERPASSWORD"
