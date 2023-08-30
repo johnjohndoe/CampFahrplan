@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Datenspuren 2023</string>
+    <string name="app_hardcoded_subtitle">Über morgen™, 15.-17. September 2023, Zentralwerk</string>
+    <string name="copyright_logo">
+        Gestaltung des Datenspuren-Logos: nek0
+    </string>
+    <string name="about_logo_content_description">
+        Datenspuren 2023 Logo: Schiff aus weißem Papier mit Menschen, die Ausschau halten
+    </string>
+</resources>

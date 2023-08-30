@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="pressed_congress">#CC0099AB</color>
+
+    <!-- Default state -->
+    <color name="track_background_default">#666666</color>
+
+    <color name="track_background_default_andere">#6F4373</color>
+    <color name="track_background_default_gesellschaft">#1889b3</color>
+    <color name="track_background_default_junghackende">#39662B</color>
+    <color name="track_background_default_sicherheit">#533508</color>
+    <color name="track_background_default_technik">#073b66</color>
+
+    <color name="track_background_default_jounghax">#39662B</color>
+    <color name="track_background_default_lita">#7775c9</color>
+    <color name="track_background_default_other">#6F4373</color>
+    <color name="track_background_default_security">#533508</color>
+    <color name="track_background_default_society">#1889b3</color>
+    <color name="track_background_default_talk">#545F78</color>
+    <color name="track_background_default_technical">#073b66</color>
+    <color name="track_background_default_workshop">#211070</color>
+
+
+    <!-- Highlight state -->
+    <color name="track_background_highlight">#999999</color>
+
+    <color name="track_background_highlight_andere">#b873bf</color>
+    <color name="track_background_highlight_gesellschaft">#1eace0</color>
+    <color name="track_background_highlight_junghackende">#63B34B</color>
+    <color name="track_background_highlight_sicherheit">#81520d</color>
+    <color name="track_background_highlight_technik">#0b5795</color>
+
+    <color name="track_background_highlight_jounghax">#63B34B</color>
+    <color name="track_background_highlight_lita">#9b9ad7</color>
+    <color name="track_background_highlight_other">#b873bf</color>
+    <color name="track_background_highlight_security">#81520d</color>
+    <color name="track_background_highlight_society">#1eace0</color>
+    <color name="track_background_highlight_talk">#859BCC</color>
+    <color name="track_background_highlight_technical">#0b5795</color>
+    <color name="track_background_highlight_workshop">#2e179c</color>
+
+</resources>
