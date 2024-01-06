@@ -174,6 +174,9 @@ fun Session.sanitize(): Session {
     if (abstractt == description) {
         abstractt = ""
     }
+    abstractt = abstractt.replace("<p>", "")
+    abstractt = abstractt.replace("</p>", "")
+    abstractt = abstractt.replace("\n", "<br>")
     if (createSpeakersString(speakers) == subtitle) {
         subtitle = ""
     }
@@ -181,6 +184,9 @@ fun Session.sanitize(): Session {
         description = abstractt
         abstractt = ""
     }
+    description = description.replace("<p>", "")
+    description = description.replace("</p>", "")
+    description = description.replace("\n", "<br>")
     if (!lang.isNullOrEmpty()) {
         lang = lang.lowercase()
     }
