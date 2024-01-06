@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">FOSDEM 2024 Calendario</string>
+    <string name="app_hardcoded_subtitle">3 – 4 de Febrero de 2024, ULB, Campus du Solbosch</string>
+</resources>

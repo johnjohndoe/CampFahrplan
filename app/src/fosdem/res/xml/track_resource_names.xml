@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<map linked="true">
+
+    <entry key="BOFs">bofs</entry>
+    <entry key="Keynotes">keynotes</entry>
+    <entry key="Lightning Talks">lightning_talks</entry>
+    <entry key="Lightning talks">lightning_talks</entry>
+    <entry key="Miscellaneous">miscellaneous</entry>
+    <entry key="Workshops">workshops</entry>
+
+    <entry key="AI and Machine Learning">ai_and_machine_learning</entry>
+    <entry key="APIs &amp; friends">apis_friends</entry>
+    <entry key="Collaboration and Content Management">collaboration_and_content_management</entry>
+    <entry key="Community">community</entry>
+    <entry key="Confidential Computing">confidential_computing</entry>
+    <entry key="Containers">containers</entry>
+    <entry key="Debuggers and analysis tools">debuggers_and_analysis_tools</entry>
+    <entry key="Declarative and Minimalistic Computing">declarative_and_minimalistic_computing</entry>
+    <entry key="Designing Futures of FOSS Content Management with the Open Website Alliance">designing_futures_of_foss_content_management_with_the_open_website_alliance</entry>
+    <entry key="Distributions">distributions</entry>
+    <entry key="DNS">dns</entry>
+    <entry key="Embedded, Mobile and Automotive">embedded_mobile_and_automotive</entry>
+    <entry key="Emulator">emulator</entry>
+    <entry key="Energy: Reimagining this Ecosystem through Open Source">energy_reimagining_this_ecosystem_through_open_source</entry>
+    <entry key="Erlang, Elixir, Gleam and Friends">erlang_elixir_gleam_and_friends</entry>
+    <entry key="FOSDEM junior">fosdem_junior</entry>
+    <entry key="FOSS Educational Programming Languages">foss_educational_programming_languages</entry>
+    <entry key="FOSS on Mobile Devices">foss_on_mobile_devices</entry>
+    <entry key="Free Java">free_java</entry>
+    <entry key="GCC">gcc</entry>
+    <entry key="Go">go</entry>
+    <entry key="Graphics">graphics</entry>
+    <entry key="HPC, Big Data &amp; Data Science">hpc_big_data_data_science</entry>
+    <entry key="Identity and Access Management">identity_and_access_management</entry>
+    <entry key="JavaScript">javascript</entry>
+    <entry key="Kernel">kernel</entry>
+    <entry key="Legal and Policy Issues">legal_and_policy_issues</entry>
+    <entry key="Libre-SOC, FPGA and VLSI">libre_soc_fpga_and_vlsi</entry>
+    <entry key="LLVM">llvm</entry>
+    <entry key="Matrix">matrix</entry>
+    <entry key="Microkernel and Component-based OS">microkernel_and_component_based_os</entry>
+    <entry key="Modern Email">modern_email</entry>
+    <entry key="Monitoring &amp; Observability">monitoring_observability</entry>
+    <entry key="Mozilla">mozilla</entry>
+    <entry key="Network">network</entry>
+    <entry key="Nix and NixOS">nix_and_nixos</entry>
+    <entry key="Open Hardware and CAD/CAM">open_hardware_and_cad_cam</entry>
+    <entry key="Open Media">open_media</entry>
+    <entry key="Open Research">open_research</entry>
+    <entry key="Open Source Design">open_source_design</entry>
+    <entry key="Open Source Firmware, BMC and Bootloader">open_source_firmware_bmc_and_bootloader</entry>
+    <entry key="Open Source In The European Legislative Landscape">open_source_in_the_european_legislative_landscape</entry>
+    <entry key="Perl and Raku">perl_and_raku</entry>
+    <entry key="PostgreSQL">postgresql</entry>
+    <entry key="Public Code and Digital Public Goods">public_code_and_digital_public_goods</entry>
+    <entry key="Python">python</entry>
+    <entry key="Railways and Open Transport">railways_and_open_transport</entry>
+    <entry key="Real Time Communications (RTC)">real_time_communications_rtc</entry>
+    <entry key="Retrocomputing">retrocomputing</entry>
+    <entry key="RISC-V">risc_v</entry>
+    <entry key="Ruby">ruby</entry>
+    <entry key="Rust">rust</entry>
+    <entry key="Software Bill of Materials">software_bill_of_materials</entry>
+    <entry key="Software Defined Storage">software_defined_storage</entry>
+    <entry key="Software-Defined Radio and Amateur Radio">software_defined_radio_and_amateur_radio</entry>
+    <entry key="Testing and Continuous delivery">testing_and_continuous_delivery</entry>
+    <entry key="Tool the docs">tool_the_docs</entry>
+    <entry key="Translations">translations</entry>
+    <entry key="Virtualization and Cloud Infrastructure">virtualization_and_cloud_infrastructure</entry>
+    <entry key="Web Performance">web_performance</entry>
+
+    <entry key=""></entry>
+
+</map>
