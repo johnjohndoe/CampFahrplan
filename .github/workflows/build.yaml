@@ -13,13 +13,13 @@ jobs:
           java-version: '11'
             
       - name: Build the app
-        run: ./gradlew assembleCcc37c3
+        run: ./gradlew assembleFosdem
 
       - name: Unit Tests
         uses: reactivecircus/android-emulator-runner@v2
         with:
           api-level: 21
-          script: ./gradlew testDebug :engelsystem:test testCcc37c3DebugUnitTest assembleCcc37c3Debug lintAnalyzeCcc37c3Debug
+          script: ./gradlew testDebug :engelsystem:test testFosdemDebugUnitTest assembleFosdemDebug lintAnalyzeFosdemDebug
 
       - name: Publish unit-test results
         uses: EnricoMi/publish-unit-test-result-action@v1
@@ -46,7 +46,7 @@ jobs:
         uses: reactivecircus/android-emulator-runner@v2
         with:
           api-level: 21
-          script: ./gradlew connectedCcc37c3DebugAndroidTest
+          script: ./gradlew connectedFosdemDebugAndroidTest
 
       - name: Publish unit-test results
         uses: EnricoMi/publish-unit-test-result-action/composite@v1
