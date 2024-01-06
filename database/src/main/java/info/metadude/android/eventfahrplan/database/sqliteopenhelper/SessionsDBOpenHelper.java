@@ -159,10 +159,10 @@ public class SessionsDBOpenHelper extends SQLiteOpenHelper {
             }
         }
         if (oldVersion < 15) {
-            boolean columnExists = SQLiteDatabaseExtensions.columnExists(db, SessionsTable.NAME, Columns.FEEDBACK_URL);
-            if (!columnExists) {
-                db.execSQL("ALTER TABLE " + SessionsTable.NAME + " ADD COLUMN " + Columns.FEEDBACK_URL + " TEXT DEFAULT NULL");
-            }
+            // Clear database from FOSDEM 2023.
+            db.execSQL("DROP TABLE IF EXISTS " + SessionsTable.NAME);
+            db.execSQL("DROP TABLE IF EXISTS " + SessionByNotificationIdTable.NAME);
+            onCreate(db);
         }
 
 

@@ -13,7 +13,7 @@ import info.metadude.android.eventfahrplan.database.extensions.SQLiteDatabaseExt
 
 public class MetaDBOpenHelper extends SQLiteOpenHelper {
 
-    private static final int DATABASE_VERSION = 9;
+    private static final int DATABASE_VERSION = 12;
 
     private static final String DATABASE_NAME = "meta";
 
@@ -72,6 +72,11 @@ public class MetaDBOpenHelper extends SQLiteOpenHelper {
                 db.execSQL("ALTER TABLE " + MetasTable.NAME + " ADD COLUMN " +
                         Columns.SCHEDULE_LAST_MODIFIED + " TEXT DEFAULT ''");
             }
+        }
+        if (oldVersion < 12) {
+            // Clear database from FOSDEM 2023.
+            db.execSQL("DROP TABLE IF EXISTS " + MetasTable.NAME);
+            onCreate(db);
         }
     }
 }
