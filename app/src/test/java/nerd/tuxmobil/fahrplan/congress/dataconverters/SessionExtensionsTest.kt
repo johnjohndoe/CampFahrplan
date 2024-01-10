@@ -322,4 +322,17 @@ class SessionExtensionsTest {
         assertThat(session).isEqualTo(expected)
     }
 
+    @Test
+    fun sanitizeWithTrackWithTypeSuffix() {
+        val session = Session("").apply {
+            track = "Kotlin devroom"
+            type = "devroom"
+        }.sanitize()
+        val expected = Session("").apply {
+            track = "Kotlin"
+            type = "devroom"
+        }
+        assertThat(session).isEqualTo(expected)
+    }
+
 }

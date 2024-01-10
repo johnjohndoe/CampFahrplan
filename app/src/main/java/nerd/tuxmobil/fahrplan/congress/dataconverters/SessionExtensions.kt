@@ -190,6 +190,11 @@ fun Session.sanitize(): Session {
     if (!lang.isNullOrEmpty()) {
         lang = lang.lowercase()
     }
+    if (!track.isNullOrEmpty() && !type.isNullOrEmpty() && track.endsWith(type, ignoreCase = true)) {
+        track = track
+            .replace(type, "", ignoreCase = true)
+            .trim()
+    }
     if (("Sendezentrum-Bühne" == track || "Sendezentrum Bühne" == track || "xHain Berlin" == track) && !type.isNullOrEmpty()) {
         track = type
     }
