@@ -10,7 +10,7 @@ import info.metadude.android.eventfahrplan.database.contract.FahrplanContract.Al
 
 public class AlarmsDBOpenHelper extends SQLiteOpenHelper {
 
-    private static final int DATABASE_VERSION = 6;
+    private static final int DATABASE_VERSION = 11;
 
     private static final String DATABASE_NAME = "alarms";
 
@@ -59,6 +59,11 @@ public class AlarmsDBOpenHelper extends SQLiteOpenHelper {
         }
         if (oldVersion < 6) {
             // Clear database from rC3 NOWHERE 12/2021 & 36C3 2019.
+            db.execSQL("DROP TABLE IF EXISTS " + AlarmsTable.NAME);
+            onCreate(db);
+        }
+        if (oldVersion < 11) {
+            // Clear database from FOSSGIS 2023.
             db.execSQL("DROP TABLE IF EXISTS " + AlarmsTable.NAME);
             onCreate(db);
         }
