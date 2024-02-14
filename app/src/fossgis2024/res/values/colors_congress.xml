@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="pressed_congress">#CCeb7f00</color>
+
+    <!-- Default state -->
+    <color name="track_background_default">#BF7F3F</color>
+    <color name="track_background_default_ausbildung_lehre_open_science">#622446</color>
+    <color name="track_background_default_barrierefreiheit_und_inklusion">#658300</color>
+    <color name="track_background_default_daten_datenbanken_und_datenprozessierung">#A67C00</color>
+    <color name="track_background_default_geodatenmanagement">#A67C00</color>
+    <color name="track_background_default_grundlagen_open_source_gis_und_openstreetmap">#be1826</color>
+    <color name="track_background_default_kartographie_und_visualisierung">#001630</color>
+    <color name="track_background_default_neuigkeiten_aus_den_open_source_projekten">#004d00</color>
+    <color name="track_background_default_offene_standards_zb_inspire_ogc">#A67C00</color>
+    <color name="track_background_default_open_data_datenschutz_und_lizenzen">#A67C00</color>
+    <color name="track_background_default_openstreetmap">#006A00</color>
+    <color name="track_background_default_praxisberichte">#496f89</color>
+    <color name="track_background_default_rasterdaten_und_fernerkundung">#3693A8</color>
+    <color name="track_background_default_raum_zeitliche_analysen_und_modelle">#658300</color>
+    <color name="track_background_default_routing_und_mobilitaet">#658300</color>
+
+    <!-- Highlight state -->
+    <color name="track_background_highlight">#E69545</color>
+    <color name="track_background_highlight_ausbildung_lehre_open_science">#873260</color>
+    <color name="track_background_highlight_barrierefreiheit_und_inklusion">#8db600</color>
+    <color name="track_background_highlight_daten_datenbanken_und_datenprozessierung">#cc9900</color>
+    <color name="track_background_highlight_geodatenmanagement">#cc9900</color>
+    <color name="track_background_highlight_grundlagen_open_source_gis_und_openstreetmap">#e32636</color>
+    <color name="track_background_highlight_kartographie_und_visualisierung">#002e63</color>
+    <color name="track_background_highlight_neuigkeiten_aus_den_open_source_projekten">#008000</color>
+    <color name="track_background_highlight_offene_standards_zb_inspire_ogc">#cc9900</color>
+    <color name="track_background_highlight_open_data_datenschutz_und_lizenzen">#cc9900</color>
+    <color name="track_background_highlight_openstreetmap">#009900</color>
+    <color name="track_background_highlight_praxisberichte">#5d8aa8</color>
+    <color name="track_background_highlight_rasterdaten_und_fernerkundung">#41B3CC</color>
+    <color name="track_background_highlight_raum_zeitliche_analysen_und_modelle">#8db600</color>
+    <color name="track_background_highlight_routing_und_mobilitaet">#8db600</color>
+
+</resources>

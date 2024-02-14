@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">FOSSGIS 2024 Fahrplan</string>
+    <string name="app_hardcoded_subtitle">Konferenz für Freie und Open Source Software, Geo-Software und OpenStreetMap, 20.-23. März 2024</string>
+    <string name="copyright_logo">
+        Design des FOSSGIS-Logos: FOSSGIS e.V. bzw. dimdle
+    </string>
+    <string name="about_logo_content_description">
+        FOSSGIS 2024 Logo
+    </string>
+</resources>
