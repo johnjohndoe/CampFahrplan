@@ -79,6 +79,7 @@ android {
         ccc37c3
         cccamp2023
         jev2022
+        fossgis2024
     }
 
     def defaultDimension = "default"
@@ -164,6 +165,31 @@ android {
             buildConfigField "String", "SOCIAL_MEDIA_HASHTAGS_HANDLES", '"#jev #fahrplan #hip #fireshonks #xrelog22 #rtc22 @cbase"'
             buildConfigField "String", "TRACE_DROID_EMAIL_ADDRESS", '"tobias.preuss+jev@googlemail.com"'
             buildConfigField "String", "SCHEDULE_FEEDBACK_URL", '""'
+        }
+        fossgis2024 {
+            dimension defaultDimension
+            applicationId "info.metadude.android.fossgis.schedule"
+            versionName "${defaultConfig.versionName}-FOSSGIS-Edition"
+            buildConfigField "String", "GOOGLE_PLAY_URL", '"https://play.google.com/store/apps/details?id=info.metadude.android.fossgis.schedule"'
+            buildConfigField "String", "SOURCE_CODE_URL", '"https://github.com/johnjohndoe/CampFahrplan/tree/fossgis-2024"'
+            buildConfigField "String", "SCHEDULE_URL", '"https://pretalx.com/fossgis2024/schedule/export/schedule.xml"'
+            buildConfigField "String", "EVENT_URL", '"https://pretalx.com/fossgis2024/talk/%1$s"'
+            buildConfigField "String", "EVENT_WEBSITE_URL", '"https://fossgis-konferenz.de"'
+            buildConfigField "String", "EVENT_POSTAL_ADDRESS", '"Am Schwarzenberg-Campus 5, Gebäude H, 21073 Hamburg"'
+            buildConfigField "String", "SERVER_BACKEND_TYPE", '"pretalx"'
+            buildConfigField "int", "SCHEDULE_FIRST_DAY_START_YEAR", "2024"
+            buildConfigField "int", "SCHEDULE_FIRST_DAY_START_MONTH", "3"
+            buildConfigField "int", "SCHEDULE_FIRST_DAY_START_DAY", "20"
+            buildConfigField "int", "SCHEDULE_LAST_DAY_END_YEAR", "2024"
+            buildConfigField "int", "SCHEDULE_LAST_DAY_END_MONTH", "3"
+            buildConfigField "int", "SCHEDULE_LAST_DAY_END_DAY", "24"
+            buildConfigField "boolean", "ENABLE_ENGELSYSTEM_SHIFTS", "true"
+            resValue("string", "engelsystem_alias", "Helfersystem")
+            resValue("string", "engelsystem_shifts_alias", "Helferschichten")
+            resValue("string", "preference_hint_engelsystem_json_export_url", "\"https://helfen.fossgis.de/shifts-json-export?key=YOUR_KEY\"")
+            buildConfigField "String", "SOCIAL_MEDIA_HASHTAGS_HANDLES", '"#FOSSGIS2024 @FOSSGIS_Konf @FOSSGISeV@mastadon.online"'
+            buildConfigField "String", "TRACE_DROID_EMAIL_ADDRESS", '"tobias.preuss+fossgis@googlemail.com"'
+            buildConfigField "String", "SCHEDULE_FEEDBACK_URL", '"https://pretalx.com/fossgis2024/talk/%s/feedback/"'
         }
     }
 

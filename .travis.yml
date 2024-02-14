@@ -89,4 +89,4 @@ before_script:
   - echo "org.gradle.caching=true" >> $HOME/.gradle/gradle.properties
 
 script:
-  - ./gradlew testDebug :engelsystem:test testCcc37C3DebugUnitTest assembleCcc37C3Debug
+  - ./gradlew testDebugUnitTest :engelsystem:test testFossgis2024DebugUnitTest assembleFossgis2024Debug

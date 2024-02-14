@@ -12,3 +12,8 @@ signing.jev2022-release.keystoreFilePath=/home/USERNAME/.android/jev2022-release
 signing.jev2022-release.keystorePassword="PASSWORD"
 signing.jev2022-release.keyAlias=jev2022
 signing.jev2022-release.keyPassword="ANOTHERPASSWORD"
+
+signing.fossgis2024-release.keystoreFilePath=/home/USERNAME/.android/fossgis2024-release-key.keystore
+signing.fossgis2024-release.keystorePassword="PASSWORD"
+signing.fossgis2024-release.keyAlias="fossgis2024"
+signing.fossgis2023-release.keyPassword="ANOTHERPASSWORD"

@@ -14,10 +14,10 @@ jobs:
           java-version: '11'
             
       - name: Build the app
-        run: ./gradlew assembleCcc37c3
+        run: ./gradlew assembleFossgis2024
 
       - name: Unit Tests
-        run: ./gradlew testDebug :engelsystem:test testCcc37c3DebugUnitTest assembleCcc37c3Debug lintAnalyzeCcc37c3Debug
+        run: ./gradlew testDebugUnitTest :engelsystem:test testFossgis2024DebugUnitTest assembleFossgis2024Debug lintAnalyzeFossgis2024Debug
 
       - name: Publish unit-test results
         uses: EnricoMi/publish-unit-test-result-action@v2
