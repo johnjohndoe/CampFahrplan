@@ -11,6 +11,7 @@ import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
+import android.widget.FrameLayout
 import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.annotation.IdRes
@@ -54,6 +55,8 @@ import nerd.tuxmobil.fahrplan.congress.schedule.FahrplanFragment.OnSessionClickL
 import nerd.tuxmobil.fahrplan.congress.schedule.observables.LoadScheduleUiState
 import nerd.tuxmobil.fahrplan.congress.settings.SettingsActivity
 import nerd.tuxmobil.fahrplan.congress.sidepane.OnSidePaneCloseListener
+import nerd.tuxmobil.fahrplan.congress.sponsors.SponsorsActivity
+import nerd.tuxmobil.fahrplan.congress.sponsors.SponsorsFragment
 import nerd.tuxmobil.fahrplan.congress.utils.ConfirmationDialog.OnConfirmationDialogClicked
 import nerd.tuxmobil.fahrplan.congress.utils.showWhenLockedCompat
 
@@ -260,7 +263,8 @@ class MainActivity : BaseActivity(),
             R.id.menu_item_alarms to { openAlarms() },
             R.id.menu_item_settings to { SettingsActivity.startForResult(this) },
             R.id.menu_item_schedule_changes to { openSessionChanges() },
-            R.id.menu_item_favorites to { openFavorites() }
+            R.id.menu_item_favorites to { openFavorites() },
+            R.id.menu_item_sponsors to { openSponsors() }
         )
         return when (val function = functionByOptionItemId[item.itemId]) {
             null -> {
@@ -379,6 +383,16 @@ class MainActivity : BaseActivity(),
             sidePaneView.isVisible = true
             isAlarmsInSidePane = true
             AlarmsFragment.replace(supportFragmentManager, R.id.detail, true)
+        }
+    }
+
+    private fun openSponsors() {
+        val sidePaneView = findViewById<FrameLayout>(R.id.detail)
+        if (sidePaneView == null) {
+            SponsorsActivity.start(this)
+        } else {
+            sidePaneView.isVisible = true
+            SponsorsFragment.replace(supportFragmentManager, R.id.detail, true)
         }
     }
 
