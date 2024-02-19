@@ -3,7 +3,7 @@ package nerd.tuxmobil.fahrplan.congress.schedule
 import app.cash.turbine.test
 import com.google.common.truth.Truth.assertThat
 import info.metadude.android.eventfahrplan.commons.temporal.Moment
-import info.metadude.android.eventfahrplan.commons.testing.MainDispatcherTestRule
+import info.metadude.android.eventfahrplan.commons.testing.MainDispatcherTestExtension
 import info.metadude.android.eventfahrplan.commons.testing.verifyInvokedNever
 import info.metadude.android.eventfahrplan.commons.testing.verifyInvokedOnce
 import kotlinx.coroutines.flow.Flow
@@ -30,9 +30,9 @@ import nerd.tuxmobil.fahrplan.congress.schedule.observables.ScrollToSessionParam
 import nerd.tuxmobil.fahrplan.congress.schedule.observables.TimeTextViewParameter
 import nerd.tuxmobil.fahrplan.congress.sharing.JsonSessionFormat
 import nerd.tuxmobil.fahrplan.congress.sharing.SimpleSessionFormat
-import org.junit.Ignore
-import org.junit.Rule
-import org.junit.Test
+import org.junit.jupiter.api.Disabled
+import org.junit.jupiter.api.Test
+import org.junit.jupiter.api.extension.ExtendWith
 import org.mockito.kotlin.any
 import org.mockito.kotlin.anyOrNull
 import org.mockito.kotlin.doReturn
@@ -41,10 +41,8 @@ import org.mockito.kotlin.times
 import org.mockito.kotlin.verify
 import org.threeten.bp.ZoneOffset
 
+@ExtendWith(MainDispatcherTestExtension::class)
 class FahrplanViewModelTest {
-
-    @get:Rule
-    val mainDispatcherTestRule = MainDispatcherTestRule()
 
     private val simpleSessionFormat = mock<SimpleSessionFormat>()
     private val jsonSessionFormat = mock<JsonSessionFormat>()
@@ -222,9 +220,6 @@ class FahrplanViewModelTest {
     @Test
     fun `fillTimes posts TimeTextViewParameter to timeTextViewParameters property`() = runTest {
         val startsAt = 1582963200000L // February 29, 2020 08:00:00 AM GMT
-        val earliestSession = mock<Session> {
-            on { this@on.startsAt } doReturn Moment.ofEpochMilli(startsAt)
-        }
         val session = Session("session-01").apply {
             dateUTC = startsAt
             duration = 30
@@ -232,7 +227,6 @@ class FahrplanViewModelTest {
         }
         val repository = createRepository(
             uncanceledSessionsForDayIndexFlow = flowOf(createScheduleData(session)),
-            earliestSession = earliestSession
         )
         val viewModel = createViewModel(repository)
         viewModel.fillTimes(nowMoment = mock(), normalizedBoxHeight = 42)
@@ -243,9 +237,7 @@ class FahrplanViewModelTest {
         viewModel.timeTextViewParameters.test {
             assertThat(awaitItem()).isEqualTo(expected)
         }
-        verifyInvokedOnce(repository).loadEarliestSession()
         verifyInvokedOnce(repository).readUseDeviceTimeZoneEnabled()
-        verify(repository, times(1)).readDisplayDayIndex()
     }
 
     @Test
@@ -435,7 +427,7 @@ class FahrplanViewModelTest {
         }
     }
 
-    @Ignore("Flaky, see https://github.com/EventFahrplan/EventFahrplan/issues/526")
+    @Disabled("Flaky, see https://github.com/EventFahrplan/EventFahrplan/issues/526")
     @Test
     fun `scrollToCurrentSession posts to scrollToCurrentSessionParameter property when session is present and day indices match`() = runTest {
         val scheduleData = createScheduleData(Session("session-31"), dayIndex = 3)
@@ -509,7 +501,6 @@ class FahrplanViewModelTest {
         meta: Meta = Meta(numDays = 0, version = "test-version"),
         isAutoUpdateEnabled: Boolean = true,
         displayDayIndex: Int = 0,
-        earliestSession: Session = Session(""),
     ) = mock<AppRepository> {
         on { uncanceledSessionsForDayIndex } doReturn uncanceledSessionsForDayIndexFlow
         on { sessionsWithoutShifts } doReturn sessionsWithoutShiftsFlow
@@ -518,7 +509,6 @@ class FahrplanViewModelTest {
         on { readMeta() } doReturn meta
         on { readAutoUpdateEnabled() } doReturn isAutoUpdateEnabled
         on { readDisplayDayIndex() } doReturn displayDayIndex
-        on { loadEarliestSession() } doReturn earliestSession
     }
 
     private fun createScheduleData(sessionId: String? = null, hasAlarm: Boolean = false): ScheduleData {

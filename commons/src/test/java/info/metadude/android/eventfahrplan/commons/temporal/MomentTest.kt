@@ -1,13 +1,13 @@
 package info.metadude.android.eventfahrplan.commons.temporal
 
+import com.google.common.truth.Truth.assertThat
 import info.metadude.android.eventfahrplan.commons.temporal.Moment.Companion.MILLISECONDS_OF_ONE_DAY
 import info.metadude.android.eventfahrplan.commons.temporal.Moment.Companion.MILLISECONDS_OF_ONE_HOUR
 import info.metadude.android.eventfahrplan.commons.temporal.Moment.Companion.MILLISECONDS_OF_ONE_MINUTE
 import info.metadude.android.eventfahrplan.commons.temporal.Moment.Companion.MILLISECONDS_OF_ONE_SECOND
 import info.metadude.android.eventfahrplan.commons.temporal.Moment.Companion.MINUTES_OF_ONE_DAY
 import info.metadude.android.eventfahrplan.commons.temporal.Moment.Companion.toMoment
-import org.assertj.core.api.Assertions.assertThat
-import org.junit.Test
+import org.junit.jupiter.api.Test
 import org.threeten.bp.LocalDate
 import org.threeten.bp.ZoneOffset
 import org.threeten.bp.ZonedDateTime
@@ -37,7 +37,7 @@ class MomentTest {
         val momentOne = Moment.ofEpochMilli(DEC_30_22_47_2019)
         val momentTwo = Moment.ofEpochMilli(DEC_30_22_47_2019)
 
-        assertThat(momentOne == momentTwo).isTrue
+        assertThat(momentOne == momentTwo).isTrue()
     }
 
     @Test
@@ -89,7 +89,7 @@ class MomentTest {
     }
 
     @Test
-    fun dateTimeFieldsAreCorrectlyMapped() {
+    fun `date and time properties are correctly mapped`() {
         val moment = Moment.ofEpochMilli(DEC_30_22_47_2019)
 
         assertThat(moment.year).isEqualTo(2019)
@@ -100,7 +100,7 @@ class MomentTest {
     }
 
     @Test
-    fun startOfDay() {
+    fun `startOfDay sets hour and minute properties to 0`() {
         val moment = Moment.ofEpochMilli(DEC_30_22_47_2019)
         val startOfDay = moment.startOfDay()
 
@@ -112,7 +112,7 @@ class MomentTest {
     }
 
     @Test
-    fun endOfDay() {
+    fun `endOfDay sets hour property to 23 and minute property to 59`() {
         val moment = Moment.ofEpochMilli(DEC_30_22_47_2019)
         val endOfDayUTC = moment.endOfDay().toUtcDateTime()
 
@@ -124,25 +124,25 @@ class MomentTest {
     }
 
     @Test
-    fun getMinuteOfDayZonedInput() {
+    fun `minuteOfDay returns correct minutes value derived from ZonedDateTime`() {
         val startsAtDate = ZonedDateTime.of(2019, 8, 27, 6, 30, 0, 0, ZoneOffset.ofHours(4))
         assertThat(startsAtDate.toMoment().minuteOfDay).isEqualTo((6 - 4) * 60 + 30)
     }
 
     @Test
-    fun getDayOfMonthWithLeapYearDay() {
+    fun `monthDay returns correct day value for leap year day`() {
         // Thursday, February 28, 2019 11:59:59 PM UTC
         assertThat(Moment.ofEpochMilli(1551312000000).monthDay).isEqualTo(28)
     }
 
     @Test
-    fun getDayOfMonthWithDayAfterLeapYear() {
+    fun `monthDay returns correct day value for day after leap year day`() {
         // Friday, March 1, 2019 12:00:00 AM UTC
         assertThat(Moment.ofEpochMilli(1551398400000).monthDay).isEqualTo(1)
     }
 
     @Test
-    fun startOfDayVsLocalDate() {
+    fun `startOfDay and toUtcDateTime allow conversion to LocalDate`() {
         val localDateString = "2019-12-30"
         val localDate = LocalDate.parse(localDateString)
 
@@ -152,7 +152,7 @@ class MomentTest {
     }
 
     @Test
-    fun timeZoneHasNoEffectOnMilliseconds() {
+    fun `toZonedDateTime leaves epoch milliseconds unchanged`() {
         val nowUTC = Moment.now()
         val utcMillis = nowUTC.toMilliseconds()
         val utcSeconds = utcMillis / MILLISECONDS_OF_ONE_SECOND
@@ -164,7 +164,7 @@ class MomentTest {
     }
 
     @Test
-    fun toLocalDate() {
+    fun `parseDate and toUtcDateTime allow conversion to LocalDate`() {
         val localDateString = "2019-12-31"
         val localDate = LocalDate.parse(localDateString)
 
@@ -176,35 +176,35 @@ class MomentTest {
     @Test
     fun isBefore() {
         val momentOne = Moment.now()
-        val momentTwo = Moment.now().plusSeconds(1)
+        val momentTwo = momentOne.plusSeconds(1)
 
-        assertThat(momentOne.isBefore(momentTwo)).isTrue
-        assertThat(momentTwo.isBefore(momentOne)).isFalse
-        assertThat(momentOne.isBefore(momentOne)).isFalse
+        assertThat(momentOne.isBefore(momentTwo)).isTrue()
+        assertThat(momentTwo.isBefore(momentOne)).isFalse()
+        assertThat(momentOne.isBefore(momentOne)).isFalse()
     }
 
     @Test
     fun isSimultaneousWith() {
         val momentOne = Moment.now()
-        val momentTwo = Moment.now().plusSeconds(1)
+        val momentTwo = momentOne.plusSeconds(1)
 
         assertThat(momentOne.isSimultaneousWith(momentTwo)).isFalse()
-        assertThat(momentTwo.isSimultaneousWith(momentOne)).isFalse
+        assertThat(momentTwo.isSimultaneousWith(momentOne)).isFalse()
         assertThat(momentOne.plusSeconds(1).isSimultaneousWith(momentTwo)).isTrue()
     }
 
     @Test
     fun isAfter() {
         val momentOne = Moment.now()
-        val momentTwo = Moment.now().plusSeconds(1)
+        val momentTwo = momentOne.plusSeconds(1)
 
-        assertThat(momentOne.isAfter(momentTwo)).isFalse
-        assertThat(momentTwo.isAfter(momentOne)).isTrue
-        assertThat(momentOne.isAfter(momentOne)).isFalse
+        assertThat(momentOne.isAfter(momentTwo)).isFalse()
+        assertThat(momentTwo.isAfter(momentOne)).isTrue()
+        assertThat(momentOne.isAfter(momentOne)).isFalse()
     }
 
     @Test
-    fun durationUntil() {
+    fun minutesUntil() {
         val momentOne = Moment.now()
         val momentTwo = momentOne.plusMinutes(1)
 
