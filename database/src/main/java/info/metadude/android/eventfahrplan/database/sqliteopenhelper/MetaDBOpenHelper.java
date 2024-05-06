@@ -67,11 +67,9 @@ public class MetaDBOpenHelper extends SQLiteOpenHelper {
             onCreate(db);
         }
         if (oldVersion < 9) {
-            boolean columnExists = SQLiteDatabaseExtensions.columnExists(db, MetasTable.NAME, Columns.SCHEDULE_LAST_MODIFIED);
-            if (!columnExists) {
-                db.execSQL("ALTER TABLE " + MetasTable.NAME + " ADD COLUMN " +
-                        Columns.SCHEDULE_LAST_MODIFIED + " TEXT DEFAULT ''");
-            }
+            // Clear database from GPN 2023.
+            db.execSQL("DROP TABLE IF EXISTS " + MetasTable.NAME);
+            onCreate(db);
         }
     }
 }

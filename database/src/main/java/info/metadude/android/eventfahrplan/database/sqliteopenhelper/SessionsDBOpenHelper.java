@@ -16,7 +16,7 @@ import info.metadude.android.eventfahrplan.database.extensions.SQLiteDatabaseExt
 
 public class SessionsDBOpenHelper extends SQLiteOpenHelper {
 
-    private static final int DATABASE_VERSION = 15;
+    private static final int DATABASE_VERSION = 14;
 
     private static final String DATABASE_NAME = "lectures"; // Keep table name to avoid database migration.
 
@@ -153,18 +153,11 @@ public class SessionsDBOpenHelper extends SQLiteOpenHelper {
             onCreate(db);
         }
         if (oldVersion < 14) {
-            boolean columnExists = SQLiteDatabaseExtensions.columnExists(db, SessionsTable.NAME, Columns.ROOM_IDENTIFIER);
-            if (!columnExists) {
-                db.execSQL("ALTER TABLE " + SessionsTable.NAME + " ADD COLUMN " + Columns.ROOM_IDENTIFIER + " TEXT DEFAULT ''");
-            }
+            // Clear database from GPN 2023.
+            db.execSQL("DROP TABLE IF EXISTS " + SessionsTable.NAME);
+            db.execSQL("DROP TABLE IF EXISTS " + SessionByNotificationIdTable.NAME);
+            onCreate(db);
         }
-        if (oldVersion < 15) {
-            boolean columnExists = SQLiteDatabaseExtensions.columnExists(db, SessionsTable.NAME, Columns.FEEDBACK_URL);
-            if (!columnExists) {
-                db.execSQL("ALTER TABLE " + SessionsTable.NAME + " ADD COLUMN " + Columns.FEEDBACK_URL + " TEXT DEFAULT NULL");
-            }
-        }
-
 
     }
 }
