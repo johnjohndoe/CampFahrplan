@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">GPN 2024</string>
+    <string name="app_hardcoded_subtitle">30. Mai – 2. Juni / ZKM und HfG</string>
+    <string name="copyright_logo">
+        <![CDATA[Logo-Design: <a href="https://entropia.de">Entropia e.V.</a> (CC-BY-ND-NC)]]>
+    </string>
+    <string name="about_logo_content_description">
+        GPN22 Logo, "common code, different rooms"
+    </string>
+</resources>

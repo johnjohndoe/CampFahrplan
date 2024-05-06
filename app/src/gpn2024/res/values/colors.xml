@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorPrimary">#27524d</color>
+    <color name="colorPrimaryDark">#183b35</color>
+    <color name="colorAccent">#00BC86</color>
+    <color name="colorActionBar">@color/colorPrimary</color>
+    <color name="windowBackground">#1a1a1a</color>
+    <color name="multi_choice_background">#00fdb4</color>
+    <color name="text_link_pressed_background_on_light">#2CFFC3</color>
+    <color name="session_alarm_item_bell_icon_fill">@color/colorAccent</color>
+    <color name="session_alarm_item_bell_icon_text">#ffffff</color>
+
+    <!-- Schedule screen -->
+    <color name="schedule_time_column_item_background_emphasized">#00feb5</color>
+    <color name="schedule_room_name_header_text">#00feb5</color>
+
+    <!-- Session details -->
+    <color name="session_details_list_item">@color/colorPrimary</color>
+    <color name="session_detailbar_background">#eee</color>
+    <color name="session_detailbar_text">@color/colorPrimary</color>
+
+</resources>
