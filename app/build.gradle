@@ -80,6 +80,7 @@ android {
         ccc37c3
         cccamp2023
         jev2022
+        kotlinconf2024
     }
 
     def defaultDimension = "default"
@@ -146,6 +147,23 @@ android {
             resValue("string", "preference_hint_engelsystem_json_export_url", '"https://your.engelsystem.de/shifts-json-export?key=YOUR_KEY"')
             buildConfigField "String", "SOCIAL_MEDIA_HASHTAGS_HANDLES", '"#jev #fahrplan #hip #fireshonks #xrelog22 #rtc22 @cbase"'
             buildConfigField "String", "TRACE_DROID_EMAIL_ADDRESS", '"tobias.preuss+jev@googlemail.com"'
+            buildConfigField "String", "SCHEDULE_FEEDBACK_URL", '""'
+        }
+        kotlinconf2024 {
+            dimension defaultDimension
+            applicationId "info.metadude.android.kotlinconf.schedule"
+            versionName "${defaultConfig.versionName}-KotlinConf-Edition"
+            buildConfigField "String", "GOOGLE_PLAY_URL", '"https://play.google.com/store/apps/details?id=info.metadude.android.kotlinconf.schedule"'
+            buildConfigField "String", "SOURCE_CODE_URL", '"https://github.com/johnjohndoe/CampFahrplan/tree/kotlinconf-2024"'
+            buildConfigField "String", "SCHEDULE_URL", '"https://kotlinconf.com/schedule/"'
+            buildConfigField "String", "EVENT_URL", '"https://kotlinconf.com/schedule/"'
+            buildConfigField "String", "EVENT_WEBSITE_URL", '"https://kotlinconf.com"'
+            buildConfigField "String", "EVENT_POSTAL_ADDRESS", '"Martha Christensens Vej 8, Copenhagen"'
+            buildConfigField "String", "SERVER_BACKEND_TYPE", '""'
+            buildConfigField "String", "SESSIONIZE_HOST", '"https://metadude.uber.space"'
+            buildConfigField "String", "SESSIONIZE_API_KEY", '"kotlinconf2024"'
+            buildConfigField "String", "SOCIAL_MEDIA_HASHTAGS_HANDLES", '"#kotlinconf #kotlinconf24 #kotlinconf2024 #fahrplan @kotlinconf"'
+            buildConfigField "String", "TRACE_DROID_EMAIL_ADDRESS", '"tobias.preuss+kotlinconf@googlemail.com"'
             buildConfigField "String", "SCHEDULE_FEEDBACK_URL", '""'
         }
     }
