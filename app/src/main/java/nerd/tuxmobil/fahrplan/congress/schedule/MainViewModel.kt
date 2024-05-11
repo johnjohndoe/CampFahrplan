@@ -128,7 +128,6 @@ internal class MainViewModel(
                 isUserRequest = isUserRequest,
                 onFetchingDone = {},
                 onParsingDone = {},
-                onLoadingShiftsDone = {}
             )
         }
     }

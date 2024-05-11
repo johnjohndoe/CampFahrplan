@@ -219,6 +219,7 @@ dependencies {
     implementation project(":database")
     implementation project(":network")
     implementation project(":engelsystem")
+    implementation project(":sessionize")
 
     def composeBom = platform(Compose.bom)
     implementation composeBom

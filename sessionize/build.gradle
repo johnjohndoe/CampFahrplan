@@ -1,0 +1,12 @@
+import nerd.tuxmobil.fahrplan.congress.Libs
+
+apply plugin: "java-library"
+apply plugin: "kotlin"
+
+dependencies {
+    api Libs.sessionizeBase
+    api Libs.kotlinCoroutinesRetrofit
+}
+
+sourceCompatibility = JavaVersion.VERSION_17
+targetCompatibility = JavaVersion.VERSION_17

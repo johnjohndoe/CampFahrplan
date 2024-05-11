@@ -26,7 +26,6 @@ import nerd.tuxmobil.fahrplan.congress.sharing.SimpleSessionFormat
 import nerd.tuxmobil.fahrplan.congress.utils.FeedbackUrlComposer
 import nerd.tuxmobil.fahrplan.congress.utils.MarkdownConversion
 import nerd.tuxmobil.fahrplan.congress.utils.SessionPropertiesFormatter
-import nerd.tuxmobil.fahrplan.congress.utils.SessionUrlComposition
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.extension.ExtendWith
 import org.mockito.kotlin.any
@@ -50,9 +49,6 @@ class SessionDetailsViewModelTest {
             on { getFormattedLinks(any()) } doReturn "not relevant"
             on { getFormattedUrl(any()) } doReturn """<a href="$SAMPLE_SESSION_URL">$SAMPLE_SESSION_URL</a>"""
         }
-        val fakeSessionUrlComposition = mock<SessionUrlComposition> {
-            on { getSessionUrl(any()) } doReturn SAMPLE_SESSION_URL
-        }
         val fakeFormattingDelegate = mock<FormattingDelegate> {
             on { getFormattedDateTimeShort(any(), any(), anyOrNull()) } doReturn "01.11.2021 13:00"
             on { getFormattedDateTimeLong(any(), any(), anyOrNull()) } doReturn "November 1, 2021 13:00"
@@ -66,7 +62,6 @@ class SessionDetailsViewModelTest {
         val viewModel = createViewModel(
             repository = repository,
             sessionPropertiesFormatter = fakePropertiesFormatter,
-            sessionUrlComposition = fakeSessionUrlComposition,
             formattingDelegate = fakeFormattingDelegate,
             markdownConversion = fakeMarkdownConversion,
             feedbackUrlComposer = fakeFeedbackUrlComposer,
@@ -94,15 +89,13 @@ class SessionDetailsViewModelTest {
             track = "Session track",
             links = "[VOC projects](https://www.voc.com/projects/),[POC](https://poc.com/QXut1XBymAk)",
             highlight = true,
+            url = "", // not relevant, see fakeSessionFormatter
         )
         val repository = createRepository(selectedSessionFlow = flowOf(session))
         val fakeSessionPropertiesFormatter = mock<SessionPropertiesFormatter> {
             on { getFormattedLinks(any()) } doReturn "not relevant"
             on { getFormattedUrl(any()) } doReturn """<a href="$SAMPLE_SESSION_URL">$SAMPLE_SESSION_URL</a>"""
             on { getFormattedSpeakers(any()) } doReturn "Jane Doe, John Doe"
-        }
-        val fakeSessionUrlComposition = mock<SessionUrlComposition> {
-            on { getSessionUrl(any()) } doReturn SAMPLE_SESSION_URL
         }
         val fakeFormattingDelegate = mock<FormattingDelegate> {
             on { getFormattedDateTimeShort(any(), any(), anyOrNull()) } doReturn "01.11.2021 13:00"
@@ -117,7 +110,6 @@ class SessionDetailsViewModelTest {
         val viewModel = createViewModel(
             repository = repository,
             sessionPropertiesFormatter = fakeSessionPropertiesFormatter,
-            sessionUrlComposition = fakeSessionUrlComposition,
             formattingDelegate = fakeFormattingDelegate,
             markdownConversion = fakeMarkdownConversion,
             feedbackUrlComposer = fakeFeedbackUrlComposer,
@@ -170,15 +162,13 @@ class SessionDetailsViewModelTest {
             track = "",
             links = "",
             highlight = false,
+            url = "",
         )
         val repository = createRepository(selectedSessionFlow = flowOf(session))
         val fakeSessionPropertiesFormatter = mock<SessionPropertiesFormatter> {
             on { getFormattedLinks(any()) } doReturn "not relevant"
             on { getFormattedUrl(any()) } doReturn ""
             on { getFormattedSpeakers(any()) } doReturn ""
-        }
-        val fakeSessionUrlComposition = mock<SessionUrlComposition> {
-            on { getSessionUrl(any()) } doReturn ""
         }
         val fakeFormattingDelegate = mock<FormattingDelegate> {
             on { getFormattedDateTimeShort(any(), any(), anyOrNull()) } doReturn ""
@@ -193,7 +183,6 @@ class SessionDetailsViewModelTest {
         val viewModel = createViewModel(
             repository = repository,
             sessionPropertiesFormatter = fakeSessionPropertiesFormatter,
-            sessionUrlComposition = fakeSessionUrlComposition,
             formattingDelegate = fakeFormattingDelegate,
             markdownConversion = fakeMarkdownConversion,
             feedbackUrlComposer = fakeFeedbackUrlComposer,
@@ -462,9 +451,6 @@ class SessionDetailsViewModelTest {
             on { getFormattedUrl(any()) } doReturn ""
             on { getFormattedSpeakers(any()) } doReturn "not relevant"
         }
-        val fakeSessionUrlComposition = mock<SessionUrlComposition> {
-            on { getSessionUrl(any()) } doReturn ""
-        }
         val fakeFormattingDelegate = mock<FormattingDelegate> {
             on { getFormattedDateTimeShort(any(), any(), anyOrNull()) } doReturn ""
             on { getFormattedDateTimeLong(any(), any(), anyOrNull()) } doReturn ""
@@ -478,7 +464,6 @@ class SessionDetailsViewModelTest {
         val viewModel = createViewModel(
             repository = repository,
             sessionPropertiesFormatter = fakeSessionPropertiesFormatter,
-            sessionUrlComposition = fakeSessionUrlComposition,
             formattingDelegate = fakeFormattingDelegate,
             markdownConversion = fakeMarkdownConversion,
             feedbackUrlComposer = fakeFeedbackUrlComposer,
@@ -514,7 +499,6 @@ class SessionDetailsViewModelTest {
         simpleSessionFormat: SimpleSessionFormat = mock(),
         jsonSessionFormat: JsonSessionFormat = mock(),
         feedbackUrlComposer: FeedbackUrlComposer = mock(),
-        sessionUrlComposition: SessionUrlComposition = mock(),
         markdownConversion: MarkdownConversion = mock(),
         formattingDelegate: FormattingDelegate = mock(),
         indoorNavigation: IndoorNavigation = mock(),
@@ -530,7 +514,6 @@ class SessionDetailsViewModelTest {
         simpleSessionFormat = simpleSessionFormat,
         jsonSessionFormat = jsonSessionFormat,
         feedbackUrlComposer = feedbackUrlComposer,
-        sessionUrlComposition = sessionUrlComposition,
         indoorNavigation = indoorNavigation,
         markdownConversion = markdownConversion,
         formattingDelegate = formattingDelegate,
