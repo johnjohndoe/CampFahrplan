@@ -277,6 +277,8 @@ class SessionDetailsFragment : Fragment() {
         textView = view.requireViewByIdCompat(R.id.session_details_content_title_view)
         var typeface = typefaceFactory.getTypeface(viewModel.titleFont)
         textView.applyText(typeface, model.title)
+        val titleTextColor = ContextCompat.getColor(textView.context, R.color.colorPrimary)
+        textView.setTextColor(titleTextColor)
 
         // Subtitle
         textView = view.requireViewByIdCompat(R.id.session_details_content_subtitle_view)
