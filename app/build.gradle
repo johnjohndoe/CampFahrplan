@@ -80,6 +80,7 @@ android {
         ccc37c3
         cccamp2023
         jev2022
+        foss4g2024
     }
 
     def defaultDimension = "default"
@@ -147,6 +148,21 @@ android {
             buildConfigField "String", "SOCIAL_MEDIA_HASHTAGS_HANDLES", '"#jev #fahrplan #hip #fireshonks #xrelog22 #rtc22 @cbase"'
             buildConfigField "String", "TRACE_DROID_EMAIL_ADDRESS", '"tobias.preuss+jev@googlemail.com"'
             buildConfigField "String", "SCHEDULE_FEEDBACK_URL", '""'
+        }
+        foss4g2024 {
+            dimension defaultDimension
+            applicationId "info.metadude.android.foss4g.schedule"
+            versionName "${defaultConfig.versionName}-FOSS4G-Edition"
+            buildConfigField "String", "GOOGLE_PLAY_URL", '"https://play.google.com/store/apps/details?id=info.metadude.android.foss4g.schedule"'
+            buildConfigField "String", "F_DROID_URL", '"https://f-droid.org/packages/info.metadude.android.foss4g.schedule"'
+            buildConfigField "String", "SCHEDULE_URL", '"https://talks.osgeo.org/foss4g-europe-2024/schedule/export/schedule.xml"'
+            buildConfigField "String", "EVENT_URL", '""'
+            buildConfigField "String", "EVENT_WEBSITE_URL", '"https://2024.foss4g.org"'
+            buildConfigField "String", "EVENT_POSTAL_ADDRESS", '"Vanemuise 46, Tartu, Estonia"'
+            buildConfigField "String", "SERVER_BACKEND_TYPE", '"pretalx"'
+            buildConfigField "String", "SOCIAL_MEDIA_HASHTAGS_HANDLES", '"#FOSS4G #FOSS4GE @foss4g @foss4geurope@fosstodon.org #fahrplan"'
+            buildConfigField "String", "TRACE_DROID_EMAIL_ADDRESS", '"tobias.preuss+foss4g@googlemail.com"'
+            buildConfigField "String", "SCHEDULE_FEEDBACK_URL", '"https://talks.osgeo.org/foss4g-europe-2024/schedule/%s/feedback/"'
         }
     }
 
