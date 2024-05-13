@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_hardcoded_subtitle">1. - 7. Juli 2024, , Institut für Geographie, Universität von Tartu</string>
+    <string name="copyright_logo">
+        FOSS4G Europe 2024 Logo von Raivo Aunap, CC-BY-ND 4.0.
+    </string>
+    <string name="about_logo_content_description">
+        FOSS4G Europe 2024 Logo
+    </string>
+</resources>

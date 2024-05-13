@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="pressed_congress">#CC0099AB</color>
+
+    <!-- Default state -->
+    <color name="track_background_default">#996E23</color>
+    <color name="track_background_default_academic_track">#240E8F</color>
+    <color name="track_background_default_birds_of_a_feather_bof">#CC4B18</color>
+    <color name="track_background_default_building_a_business_with_foss4g">#990a71</color>
+    <color name="track_background_default_community_foundation">#585656</color>
+    <color name="track_background_default_foss4g_in_education_and_research">#912a65</color>
+    <color name="track_background_default_foss4g_made_in_europe">#106aa5</color>
+    <color name="track_background_default_keynote">#CC4B18</color>
+    <color name="track_background_default_open_data">#6F4373</color>
+    <color name="track_background_default_open_standards_and_interoperability_for_geospatial">#9ea105</color>
+    <color name="track_background_default_plenary">#CC4B18</color>
+    <color name="track_background_default_state_of_software">#103e0a</color>
+    <color name="track_background_default_transition_to_foss4g">#1a344c</color>
+    <color name="track_background_default_use_cases_applications">#B32445</color>
+
+    <!-- Highlight state -->
+    <color name="track_background_highlight">#e6a535</color>
+    <color name="track_background_highlight_academic_track">#2100c2</color>
+    <color name="track_background_highlight_birds_of_a_feather_bof">#f06a36</color>
+    <color name="track_background_highlight_building_a_business_with_foss4g">#c90d95</color>
+    <color name="track_background_highlight_community_foundation">#726f6f</color>
+    <color name="track_background_highlight_foss4g_in_education_and_research">#b93580</color>
+    <color name="track_background_highlight_foss4g_made_in_europe">#1588d3</color>
+    <color name="track_background_highlight_keynote">#f06a36</color>
+    <color name="track_background_highlight_open_data">#b873bf</color>
+    <color name="track_background_highlight_open_standards_and_interoperability_for_geospatial">#ced306</color>
+    <color name="track_background_highlight_plenary">#f06a36</color>
+    <color name="track_background_highlight_state_of_software">#1b6a11</color>
+    <color name="track_background_highlight_transition_to_foss4g">#274e72</color>
+    <color name="track_background_highlight_use_cases_applications">#f61449</color>
+
+</resources>

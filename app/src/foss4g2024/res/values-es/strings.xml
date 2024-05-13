@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="copyright_logo">
+        Logotipo de FOSS4G Europe 2024 de Raivo Aunap, CC-BY-ND 4.0.
+    </string>
+    <string name="about_logo_content_description">
+        Logotipo de FOSS4G Europe 2024
+    </string>
+</resources>
