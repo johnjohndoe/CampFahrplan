@@ -126,6 +126,7 @@ internal class SessionViewDrawer(
                 R.color.session_item_text_on_default_background
             val textColor = ContextCompat.getColor(view.context, colorResId)
             title.setTextColor(textColor)
+            title.textSize = 17f
             subtitle.setTextColor(textColor)
             speakers.setTextColor(textColor)
             track.setTextColor(textColor)
