@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <color name="text_secondary">#ddd</color>
     <color name="colorPrimary">#f16a36</color>
     <color name="colorPrimaryDark">#B34F27</color>
     <color name="colorAccent">#36CCF1</color>
@@ -35,5 +36,8 @@
     <color name="session_detailbar_background">#eee</color>
     <color name="session_detailbar_text">#444</color>
     <color name="session_details_list_item">@color/colorPrimaryDark</color>
+
+    <!-- Tool bar -->
+    <color name="day_menu_text">#fff</color>
 
 </resources>
