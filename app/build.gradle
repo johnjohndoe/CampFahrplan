@@ -157,7 +157,7 @@ android {
             buildConfigField "String", "F_DROID_URL", '"https://f-droid.org/packages/info.metadude.android.foss4g.schedule"'
             buildConfigField "String", "SCHEDULE_URL", '"https://talks.osgeo.org/foss4g-europe-2024/schedule/export/schedule.xml"'
             buildConfigField "String", "EVENT_URL", '""'
-            buildConfigField "String", "EVENT_WEBSITE_URL", '"https://2024.foss4g.org"'
+            buildConfigField "String", "EVENT_WEBSITE_URL", '"https://2024.europe.foss4g.org"'
             buildConfigField "String", "EVENT_POSTAL_ADDRESS", '"Vanemuise 46, Tartu, Estonia"'
             buildConfigField "String", "SERVER_BACKEND_TYPE", '"pretalx"'
             buildConfigField "String", "SOCIAL_MEDIA_HASHTAGS_HANDLES", '"#FOSS4G #FOSS4GE @foss4g @foss4geurope@fosstodon.org #fahrplan"'
