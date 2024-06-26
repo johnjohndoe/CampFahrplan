@@ -12,3 +12,8 @@ signing.jev2022-release.keystoreFilePath=/home/USERNAME/.android/jev2022-release
 signing.jev2022-release.keystorePassword="PASSWORD"
 signing.jev2022-release.keyAlias=jev2022
 signing.jev2022-release.keyPassword="ANOTHERPASSWORD"
+
+signing.hope2024-release.keystoreFilePath=/home/USERNAME/.android/hope2024-release-key.keystore
+signing.hope2024-release.keystorePassword="PASSWORD"
+signing.hope2024-release.keyAlias=hope2024
+signing.hope2024-release.keyPassword="ANOTHERPASSWORD"
