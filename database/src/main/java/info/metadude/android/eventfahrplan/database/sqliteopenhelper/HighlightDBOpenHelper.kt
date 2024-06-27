@@ -33,7 +33,7 @@ internal class HighlightDBOpenHelper(context: Context) : SQLiteOpenHelper(
     }
 
     override fun onUpgrade(db: SQLiteDatabase, oldVersion: Int, newVersion: Int) = with(db) {
-        // Clear database from 36C3 2019.
+        // Clear database from 36C3 2019 & HOPE 2022.
         dropTableIfExist(NAME)
         onCreate(this)
     }
