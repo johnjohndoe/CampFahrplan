@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">HOPE 2024</string>
+    <string name="app_hardcoded_subtitle">July 12–14 2024, New York City</string>
+    <string name="conference_name" translatable="false">HOPE 2024</string>
+    <string name="copyright_logo">
+        All artwork for HOPE XV is copyright 2024 Stefan Malenski.
+    </string>
+    <string name="about_logo_content_description">
+        HOPE 2024 logo: head of a white owl
+    </string>
+</resources>

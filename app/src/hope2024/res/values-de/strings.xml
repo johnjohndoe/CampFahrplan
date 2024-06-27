@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">HOPE 2024</string>
+    <string name="app_hardcoded_subtitle">12.-14. Juli 2024, New York City</string>
+    <string name="copyright_logo">
+        Alle Grafiken für HOPE XV unterliegen dem Copyright 2024 von Stefan Malenski.
+    </string>
+    <string name="about_logo_content_description">
+        HOPE 2024 Logo: Kopf einer weißen Eule
+    </string>
+</resources>
