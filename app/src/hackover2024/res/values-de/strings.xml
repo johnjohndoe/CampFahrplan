@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Hackover 2024 Fahrplan</string>
+    <string name="app_hardcoded_subtitle">2. – 4. August 2024, Stadtteilzentrum Bürgerschule Nordstadt</string>
+    <string name="copyright_logo">
+        Gestaltung des Hackover-Logos: tbsprs
+    </string>
+    <string name="about_logo_content_description">
+        Hackover Logo
+    </string>
+</resources>
