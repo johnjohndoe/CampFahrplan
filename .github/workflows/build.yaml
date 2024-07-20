@@ -14,10 +14,10 @@ jobs:
           java-version: '17'
             
       - name: Build the app
-        run: ./gradlew assembleCcc37c3
+        run: ./gradlew assembleHackover2024
 
       - name: Unit Tests
-        run: ./gradlew testDebugUnitTest :engelsystem:test testCcc37c3DebugUnitTest assembleCcc37c3Debug lintAnalyzeCcc37c3Debug
+        run: ./gradlew testDebugUnitTest :engelsystem:test testHackover2024DebugUnitTest assembleHackover2024Debug lintAnalyzeHackover2024Debug
 
       - name: Publish unit-test results
         uses: EnricoMi/publish-unit-test-result-action@v2
