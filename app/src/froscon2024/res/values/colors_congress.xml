@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="pressed_congress">#CC0099AB</color>
+
+    <!-- Default state -->
+
+    <color name="track_background_default">@color/colorPrimary</color>
+    <color name="track_background_default_ai_ai_captain_llm_machine_learning_co">#CC3D61</color>
+    <color name="track_background_default_bridging_the_gap_between_politics_and_reality_open_source_lobbying">#4D942C</color>
+    <color name="track_background_default_cloud">#3CA4C7</color>
+    <color name="track_background_default_culture">#CC803D</color>
+    <color name="track_background_default_database">#b75c5c</color>
+    <color name="track_background_default_development">#af4cfb</color>
+    <color name="track_background_default_grow_your_own_open_source_plant_management">#42B52B</color>
+    <color name="track_background_default_in_rust_we_trust_memory_safe_languages">#755f4f</color>
+    <color name="track_background_default_lecture">#0043A0</color>
+    <color name="track_background_default_lightning_talk">#A06500</color>
+    <color name="track_background_default_network_track">#7000a0</color>
+    <color name="track_background_default_other">#737373</color>
+    <color name="track_background_default_sbom_who_supplies_your_software_chain">#b2243b</color>
+    <color name="track_background_default_security">#B31414</color>
+    <color name="track_background_default_system_administration">#737122</color>
+    <color name="track_background_default_thinking_outside_the_stack_ebpf_and_friends">#3CC768</color>
+    <color name="track_background_default_web_development">#224754</color>
+    <color name="track_background_default_workshop">#542251</color>
+
+    <!-- Highlight state -->
+
+    <color name="track_background_highlight">@color/colorPrimaryDark</color>
+    <color name="track_background_highlight_ai_ai_captain_llm_machine_learning_co">#fb4c77</color>
+    <color name="track_background_highlight_bridging_the_gap_between_politics_and_reality_open_source_lobbying">#68C73C</color>
+    <color name="track_background_highlight_cloud">#4ccefb</color>
+    <color name="track_background_highlight_culture">#fb9e4c</color>
+    <color name="track_background_highlight_database">#c77f7f</color>
+    <color name="track_background_highlight_development">#c57efc</color>
+    <color name="track_background_highlight_grow_your_own_open_source_plant_management">#56e838</color>
+    <color name="track_background_highlight_in_rust_we_trust_memory_safe_languages">#947863</color>
+    <color name="track_background_highlight_lecture">#0055CC</color>
+    <color name="track_background_highlight_lightning_talk">#CC8500</color>
+    <color name="track_background_highlight_network_track">#9400d3</color>
+    <color name="track_background_highlight_other">#a8a8a8</color>
+    <color name="track_background_highlight_sbom_who_supplies_your_software_chain">#d6334e</color>
+    <color name="track_background_highlight_security">#e82a2a</color>
+    <color name="track_background_highlight_system_administration">#99972E</color>
+    <color name="track_background_highlight_thinking_outside_the_stack_ebpf_and_friends">#4cfb84</color>
+    <color name="track_background_highlight_web_development">#316678</color>
+    <color name="track_background_highlight_workshop">#732E6E</color>
+
+</resources>

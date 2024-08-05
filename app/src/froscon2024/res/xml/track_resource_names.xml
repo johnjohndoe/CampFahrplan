@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<map linked="true">
+
+    <entry key="AI AI, captain - LLM, machine learning &amp; Co">ai_ai_captain_llm_machine_learning_co</entry>
+    <entry key="Bridging the Gap between politics and reality - Open Source Lobbying">bridging_the_gap_between_politics_and_reality_open_source_lobbying</entry>
+    <entry key="Cloud">cloud</entry>
+    <entry key="Culture">culture</entry>
+    <entry key="Database">database</entry>
+    <entry key="Development">development</entry>
+    <entry key="Grow your own - Open Source Plant management">grow_your_own_open_source_plant_management</entry>
+    <entry key="In Rust we trust - Memory safe languages">in_rust_we_trust_memory_safe_languages</entry>
+    <entry key="lecture">lecture</entry>
+    <entry key="lightning_talk">lightning_talk</entry>
+    <entry key="Network Track">network_track</entry>
+    <entry key="other">other</entry>
+    <entry key="SBOM - Who supplies your software chain?">sbom_who_supplies_your_software_chain</entry>
+    <entry key="Security">security</entry>
+    <entry key="System Administration">system_administration</entry>
+    <entry key="Web Development">web_development</entry>
+    <entry key="workshop">workshop</entry>
+    <entry key=""></entry>
+
+</map>
