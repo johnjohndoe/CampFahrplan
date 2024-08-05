@@ -15,7 +15,7 @@ class RateSnack(val context: Context) : LibraryRateSnack() {
         overrideActionText(context.getString(R.string.snack_engage_rate_action))
         withConditions(
                 NeverAgainWhenClickedOnce(),
-                AfterNumberOfOpportunities(13),
+                AfterNumberOfOpportunities(5),
                 IsConnectedViaWiFiOrUnknown(),
                 IsInstalledViaGooglePlay(), // Prevents the snack from being shown for local installs, too!
         )
