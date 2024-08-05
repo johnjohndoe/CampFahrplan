@@ -109,7 +109,7 @@ internal class SessionsDBOpenHelper(context: Context) : SQLiteOpenHelper(
 ) {
 
     private companion object {
-        const val DATABASE_VERSION = 16
+        const val DATABASE_VERSION = 15
         const val DATABASE_NAME = "lectures" // Keep table name to avoid database migration.
 
         // language=sql
@@ -291,12 +291,10 @@ internal class SessionsDBOpenHelper(context: Context) : SQLiteOpenHelper(
             }
         }
         if (oldVersion < 15) {
-            if (!columnExists(SessionsTable.NAME, FEEDBACK_URL)) {
-                addTextColumn(FEEDBACK_URL, default = null)
-            }
-        }
-        if (oldVersion < 16) {
-            execSQL(SCHEDULE_STATISTIC_VIEW_CREATE)
+            // Clear database from FrOSCon 2023.
+            dropTableIfExist(SessionsTable.NAME)
+            dropTableIfExist(SessionByNotificationIdTable.NAME)
+            onCreate(this)
         }
     }
 
