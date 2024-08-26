@@ -17,7 +17,7 @@ internal class HighlightDBOpenHelper(context: Context) : SQLiteOpenHelper(
 ) {
 
     private companion object {
-        const val DATABASE_VERSION = 5
+        const val DATABASE_VERSION = 11
         const val DATABASE_NAME = "highlight"
 
         // language=sql
