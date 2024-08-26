@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Datenspuren 2024</string>
+    <string name="app_hardcoded_subtitle">Was nun? Was tun! 20.-22. September 2024, Zentralwerk</string>
+    <string name="copyright_logo">
+        Gestaltung des Datenspuren-Logos: nek0
+    </string>
+    <string name="about_logo_content_description">
+        Datenspuren 2024 Logo
+    </string>
+</resources>
