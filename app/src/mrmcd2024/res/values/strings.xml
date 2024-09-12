@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MRMCD 2024 Schedule</string>
+    <string name="app_hardcoded_subtitle">October 3&#8211;6, 2024, Robert-Piloty building at TU-Darmstadt</string>
+    <string name="conference_name" translatable="false">MRMCD</string>
+    <string name="copyright_logo">
+        <![CDATA[The name MRMCD is a registered trademark of
+        <a href="https://2024.mrmcd.net">MRMCD e.V.</a> The MRMCD 2024 design was crafted by
+        fleaz, MRMCD e.V. Used with permission.]]>
+    </string>
+    <string name="about_logo_content_description">
+        MRMCD 2024 logo: Land in sight. A ship is heading for an iceberg. On the ship, two ducks
+        imitate the Titantic scene at the railing. A whale swims in the water. In front of the ship,
+        an enter rows in a small boat. A wave foams.
+    </string>
+</resources>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MRMCD 2024 Fahrplan</string>
+    <string name="app_hardcoded_subtitle">3.&#8211;6. Oktober 2024, Robert-Piloty-Gebäude der TU-Darmstadt</string>
+    <string name="copyright_logo">
+        <![CDATA[Der Name MRMCD ist ein registriertes Markenzeichen des
+        <a href="https://2024.mrmcd.net">MRMCD e.V.</a> Das Design zur MRMCD 2024
+        wurde von fleaz, MRMCD e.V. gestaltet.
+        Die Nutzung erfolgt mit Erlaubnis.]]>
+    </string>
+    <string name="about_logo_content_description">
+        MRMCD 2024 Logo: Land in Sicht. Ein Schiff fährt auf einen Eisberg zu. Auf dem Schiff ahmen
+        zwei Enten die Titantic-Szene an der Railing nach. Ein Wal schwimmt im Wasser. Vor dem Schiff
+        rudert eine Enter in einem kleinen Boot. Eine Welle schäumt.
+    </string>
+</resources>
