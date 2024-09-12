@@ -77,6 +77,7 @@ android {
         ccc37c3
         cccamp2023
         jev2022
+        mrmcd2024
     }
 
     def defaultDimension = "default"
@@ -143,6 +144,26 @@ android {
             resValue("string", "preference_hint_engelsystem_json_export_url", '"https://your.engelsystem.de/shifts-json-export?key=YOUR_KEY"')
             buildConfigField "String", "SOCIAL_MEDIA_HASHTAGS_HANDLES", '"#jev #fahrplan #hip #fireshonks #xrelog22 #rtc22 @cbase"'
             buildConfigField "String", "TRACE_DROID_EMAIL_ADDRESS", '"tobias.preuss+jev@googlemail.com"'
+            buildConfigField "String", "SCHEDULE_FEEDBACK_URL", '""'
+        }
+        mrmcd2024 {
+            dimension defaultDimension
+            applicationId "info.metadude.android.mrmcd.schedule"
+            versionName "${defaultConfig.versionName}-MRMCD-Edition"
+            buildConfigField "String", "GOOGLE_PLAY_URL", '"https://play.google.com/store/apps/details?id=info.metadude.android.mrmcd.schedule"'
+            buildConfigField "String", "F_DROID_URL", '"https://f-droid.org/packages/info.metadude.android.mrmcd.schedule"'
+            buildConfigField "String", "SCHEDULE_URL", '"https://talks.mrmcd.net/2024/schedule/export/schedule.xml"'
+            buildConfigField "String", "EVENT_URL", '""'
+            buildConfigField "String", "EVENT_WEBSITE_URL", '"https://2024.mrmcd.net"'
+            buildConfigField "String", "EVENT_POSTAL_ADDRESS", '"Hochschulstraße 10, 64283 Darmstadt"'
+            buildConfigField "String", "SERVER_BACKEND_TYPE", '"pretalx"'
+            buildConfigField "boolean", "ENABLE_CHAOSFLIX_EXPORT", "true"
+            buildConfigField "boolean", "ENABLE_ENGELSYSTEM_SHIFTS", "true"
+            resValue("string", "engelsystem_alias", "Matrosensystem")
+            resValue("string", "engelsystem_shifts_alias", "Matrosenschichten")
+            resValue("string", "preference_hint_engelsystem_json_export_url", '"https://engel.mrmcd.net/shifts-json-export?key=YOUR_KEY"')
+            buildConfigField "String", "SOCIAL_MEDIA_HASHTAGS_HANDLES", '"#mrmcd #mrmcd24 #fahrplan @mrmcd2024"'
+            buildConfigField "String", "TRACE_DROID_EMAIL_ADDRESS", '"tobias.preuss+mrmcd@googlemail.com"'
             buildConfigField "String", "SCHEDULE_FEEDBACK_URL", '""'
         }
     }
