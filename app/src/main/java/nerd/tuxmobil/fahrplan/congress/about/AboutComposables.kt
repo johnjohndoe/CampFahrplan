@@ -1,7 +1,6 @@
 package nerd.tuxmobil.fahrplan.congress.about
 
 import androidx.compose.foundation.Image
-import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
@@ -15,6 +14,9 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment.Companion.CenterHorizontally
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.paint
+import androidx.compose.ui.graphics.ColorFilter.Companion.tint
+import androidx.compose.ui.layout.ContentScale.Companion.FillBounds
 import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.painterResource
@@ -45,7 +47,11 @@ internal fun AboutScreen(
         Scaffold { contentPadding ->
             Box(
                 Modifier
-                    .background(colorResource(R.color.about_window_background))
+                    .paint(
+                        painter = painterResource(R.drawable.noise),
+                        colorFilter = tint(colorResource(R.color.windowBackground)),
+                        contentScale = FillBounds,
+                    )
                     .padding(contentPadding)
                     .fillMaxSize() // Prevent background flickering on load
                     .verticalScroll(rememberScrollState())

@@ -18,6 +18,9 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment.Companion.CenterHorizontally
 import androidx.compose.ui.Alignment.Companion.CenterVertically
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.paint
+import androidx.compose.ui.graphics.ColorFilter.Companion.tint
+import androidx.compose.ui.layout.ContentScale.Companion.FillBounds
 import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
@@ -59,6 +62,11 @@ internal fun ScheduleStatisticScreen(
             content = { contentPadding ->
                 Box(
                     Modifier
+                        .paint(
+                            painter = painterResource(R.drawable.noise),
+                            colorFilter = tint(colorResource(R.color.windowBackground)),
+                            contentScale = FillBounds,
+                        )
                         .padding(contentPadding)
                 ) {
                     when (state) {

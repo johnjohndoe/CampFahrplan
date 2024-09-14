@@ -11,12 +11,14 @@ import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.ListItem
+import androidx.compose.material3.ListItemDefaults
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.paint
+import androidx.compose.ui.graphics.ColorFilter.Companion.tint
 import androidx.compose.ui.layout.ContentScale.Companion.FillBounds
 import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.painterResource
@@ -47,6 +49,11 @@ internal fun AlarmsScreen(
         Scaffold { contentPadding ->
             Box(
                 Modifier
+                    .paint(
+                        painter = painterResource(R.drawable.noise),
+                        colorFilter = tint(colorResource(R.color.windowBackground)),
+                        contentScale = FillBounds,
+                    )
                     .padding(contentPadding)
             ) {
                 when (state) {
@@ -119,6 +126,9 @@ private fun SessionAlarmItem(
                 onClickLabel = stringResource(R.string.alarms_item_on_click_label),
                 onClick = { onClick(parameter) }
             ),
+        colors = ListItemDefaults.colors(
+            containerColor = colorResource(android.R.color.transparent),
+        ),
         leadingContent = {
             AlarmIcon(parameter.alarmOffsetInMin, parameter.alarmOffsetContentDescription)
         },
