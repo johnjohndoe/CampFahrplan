@@ -20,16 +20,13 @@ class AboutParameterFactory(
         val scheduleVersionText = if (scheduleVersion.isEmpty()) ""
         else "${resourceResolving.getString(R.string.fahrplan)} $scheduleVersion"
 
-        val title = meta.title
-        val titleText = title.ifEmpty { resourceResolving.getString(R.string.app_name) }
-
         val subtitle = meta.subtitle
         val subtitleText = subtitle.ifEmpty {
             resourceResolving.getString(R.string.app_hardcoded_subtitle).ifEmpty { "" }
         }
 
         return AboutParameter(
-            title = titleText,
+            title = "",
             subtitle = subtitleText,
             eventLocation = PostalAddress(buildConfig.eventPostalAddress),
             eventUrl = textResourceOf(url = buildConfig.eventWebsiteUrl),
