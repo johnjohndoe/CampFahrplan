@@ -77,6 +77,7 @@ android {
         ccc37c3
         cccamp2023
         jev2022
+        libreoffice2024
     }
 
     def defaultDimension = "default"
@@ -143,6 +144,21 @@ android {
             resValue("string", "preference_hint_engelsystem_json_export_url", '"https://your.engelsystem.de/shifts-json-export?key=YOUR_KEY"')
             buildConfigField "String", "SOCIAL_MEDIA_HASHTAGS_HANDLES", '"#jev #fahrplan #hip #fireshonks #xrelog22 #rtc22 @cbase"'
             buildConfigField "String", "TRACE_DROID_EMAIL_ADDRESS", '"tobias.preuss+jev@googlemail.com"'
+            buildConfigField "String", "SCHEDULE_FEEDBACK_URL", '""'
+        }
+        libreoffice2024 {
+            dimension defaultDimension
+            applicationId "info.metadude.android.libreoffice.schedule"
+            versionName "${defaultConfig.versionName}-LibreOffice-Edition"
+            buildConfigField "String", "GOOGLE_PLAY_URL", '"https://play.google.com/store/apps/details?id=info.metadude.android.libreoffice.schedule"'
+            buildConfigField "String", "F_DROID_URL", '"https://f-droid.org/packages/info.metadude.android.libreoffice.schedule/"'
+            buildConfigField "String", "SCHEDULE_URL", '"https://events.documentfoundation.org/libreoffice-conference-2024/schedule/export/schedule.xml"'
+            buildConfigField "String", "EVENT_URL", '"https://events.documentfoundation.org/libocon2024/talk/%1$s/"'
+            buildConfigField "String", "EVENT_WEBSITE_URL", '"https://conference.libreoffice.org/2024/"'
+            buildConfigField "String", "EVENT_POSTAL_ADDRESS", '"14 Prte de France, 2441 Esch-Belval Esch-sur-Alzette, Luxembourg"'
+            buildConfigField "String", "SERVER_BACKEND_TYPE", '"pretalx"'
+            buildConfigField "String", "SOCIAL_MEDIA_HASHTAGS_HANDLES", '"#libocon2024 #libreoffice2024 #fahrplan @libreoffice @libreoffice@fosstodon.org @LibreOfficeDE@social.tchncs.de"'
+            buildConfigField "String", "TRACE_DROID_EMAIL_ADDRESS", '"tobias.preuss+libreoffice@googlemail.com"'
             buildConfigField "String", "SCHEDULE_FEEDBACK_URL", '""'
         }
     }
