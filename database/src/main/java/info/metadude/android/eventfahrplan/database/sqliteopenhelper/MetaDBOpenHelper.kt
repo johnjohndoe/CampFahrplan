@@ -24,7 +24,7 @@ internal class MetaDBOpenHelper(context: Context) : SQLiteOpenHelper(
 ) {
 
     private companion object {
-        const val DATABASE_VERSION = 9
+        const val DATABASE_VERSION = 8
         const val DATABASE_NAME = "meta"
 
         // language=sql
@@ -66,14 +66,9 @@ internal class MetaDBOpenHelper(context: Context) : SQLiteOpenHelper(
             onCreate(this)
         }
         if (oldVersion < 8) {
-            // Clear database from rC3 NOWHERE 12/2021 & 36C3 2019.
+            // Clear database from rC3 NOWHERE 12/2021 & 36C3 2019 & LibreOffice 2022.
             dropTableIfExist(NAME)
             onCreate(this)
-        }
-        if (oldVersion < 9) {
-            if (!columnExists(NAME, SCHEDULE_LAST_MODIFIED)) {
-                addTextColumn(SCHEDULE_LAST_MODIFIED, default = "")
-            }
         }
     }
 }

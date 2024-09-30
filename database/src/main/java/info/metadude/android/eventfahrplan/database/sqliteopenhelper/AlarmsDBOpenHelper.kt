@@ -64,7 +64,7 @@ internal class AlarmsDBOpenHelper(context: Context) : SQLiteOpenHelper(
             onCreate(this)
         }
         if (oldVersion < 6) {
-            // Clear database from rC3 NOWHERE 12/2021 & 36C3 2019.
+            // Clear database from rC3 NOWHERE 12/2021 & 36C3 2019 & LibreOffice 2022.
             dropTableIfExist(NAME)
             onCreate(this)
         }
