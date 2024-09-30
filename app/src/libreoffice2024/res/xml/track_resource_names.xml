@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<map linked="true">
+
+    <!--suppress CheckTagEmptyBody -->
+    <entry key=""></entry>
+    <entry key="Cybersecurity Track">cybersecurity_track</entry>
+    <entry key="EdTech Track">edtech_track</entry>
+    <entry key="EdTech Workshops">edtech_workshops</entry>
+    <entry key="LibreOffice Design and Accessibility">libreoffice_design_and_accessibility</entry>
+    <entry key="LibreOffice Development">libreoffice_development</entry>
+    <entry key="LibreOffice Documentation and NLPs">libreoffice_documentation_and_nlps</entry>
+    <entry key="LibreOffice Marketing">libreoffice_marketing</entry>
+    <entry key="LibreOffice Workshop">libreoffice_workshop</entry>
+    <entry key="LibreOffice in Business">libreoffice_in_business</entry>
+    <entry key="NO SESSION">no_session</entry>
+    <entry key="ODF and Interoperability">odf_and_interoperability</entry>
+    <entry key="OSPO Track">ospo_track</entry>
+    <entry key="Open Source Workshops">open_source_workshops</entry>
+    <entry key="Opening Session">opening_session</entry>
+
+    <entry key="Lightning talks">lightning_talks</entry>
+    <entry key="Talk">talk</entry>
+    <entry key="Workshop">workshop</entry>
+
+</map>

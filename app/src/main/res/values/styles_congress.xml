@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
 
-    <style name="Theme.Congress" parent="Theme.AppCompat">
+    <style name="Theme.Congress" parent="Theme.AppCompat.Light">
+
         <!-- Set AppCompat’s color theming attrs -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
@@ -27,14 +28,14 @@
         <item name="android:scrollbarThumbHorizontal">@drawable/scrollbar_thumb</item>
     </style>
 
-    <style name="Theme.Congress.NoActionBar" parent="Theme.AppCompat.NoActionBar">
+    <style name="Theme.Congress.NoActionBar" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Set AppCompat’s color theming attrs -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
         <item name="android:colorForeground">@color/foreground</item>
         <item name="android:textColorPrimary">@color/text_primary</item>
-        <item name="android:textColorSecondary">@color/text_secondary</item>
+        <item name="android:textColorSecondary">#78a672</item>
         <item name="android:textColorHint">@color/text_secondary</item>
 
         <!-- The rest of your attributes -->
@@ -56,19 +57,20 @@
     </style>
 
     <style name="ContextPopupMenuStyle" parent="@style/Widget.AppCompat.Light.PopupMenu.Overflow">
+        <item name="android:textColorPrimary">@color/popupText</item>
         <item name="android:popupBackground">@drawable/popup_background</item>
     </style>
 
     <style name="SpinnerItemStyle" parent="Widget.AppCompat.DropDownItem.Spinner">
-        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
         <item name="android:paddingBottom">12dp</item>
         <item name="android:paddingTop">12dp</item>
         <item name="android:foreground">?android:attr/selectableItemBackground</item>
     </style>
 
     <style name="SpinnerDropDownItemStyle" parent="Widget.AppCompat.DropDownItem.Spinner">
-        <item name="android:textColor">@color/text_primary</item>
-        <item name="android:background">@color/popupBackground</item>
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
+        <item name="android:background">@color/windowBackground</item>
         <item name="android:foreground">?android:attr/selectableItemBackground</item>
     </style>
 
@@ -82,6 +84,7 @@
     </style>
 
     <style name="PopupMenuOverflowStyle" parent="@style/Widget.AppCompat.Light.PopupMenu.Overflow">
+        <item name="android:textColorPrimary">@color/popupText</item>
         <item name="android:popupBackground">@drawable/popup_background</item>
     </style>
 
@@ -94,7 +97,7 @@
         <item name="android:visibility">gone</item>
     </style>
 
-    <style name="AlertDialog" parent="Theme.AppCompat.Dialog.Alert">
+    <style name="AlertDialog" parent="Theme.AppCompat.Light.Dialog.Alert">
         <item name="android:textColorPrimary">@color/text_primary</item>
         <item name="android:textColorSecondary">@color/text_secondary</item>
         <item name="colorAccent">@color/alert_dialog_button_text</item>

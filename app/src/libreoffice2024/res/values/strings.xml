@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">LibreOffice 2024 Schedule</string>
+    <string name="app_hardcoded_subtitle">October 10. – 12. 2024, Terres Rouges</string>
+    <string name="conference_name" translatable="false">LibreOffice</string>
+    <string name="copyright_logo">
+        Conference logo by Italo Vignoli, copyright by The Document Foundation
+    </string>
+    <string name="about_logo_content_description">
+        LibreOffice Conference 2024 logo
+    </string>
+</resources>

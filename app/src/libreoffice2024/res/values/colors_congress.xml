@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="pressed_congress">#CCa41c31</color>
+
+    <!-- Default state -->
+
+    <color name="track_background_default">@color/colorPrimary</color>
+    <color name="track_background_default_cybersecurity_track">#990000</color>
+    <color name="track_background_default_edtech_track">#664D00</color>
+    <color name="track_background_default_edtech_workshops">#664D00</color>
+    <color name="track_background_default_libreoffice_design_and_accessibility">#B33B14</color>
+    <color name="track_background_default_libreoffice_development">#00665C</color>
+    <color name="track_background_default_libreoffice_documentation_and_nlps">#083300</color>
+    <color name="track_background_default_libreoffice_in_business">#666666</color>
+    <color name="track_background_default_libreoffice_marketing">#631970</color>
+    <color name="track_background_default_libreoffice_workshop">#0000ff</color>
+    <color name="track_background_default_no_session">#3F51B5</color>
+    <color name="track_background_default_odf_and_interoperability">#146EB3</color>
+    <color name="track_background_default_open_source_workshops">#990099</color>
+    <color name="track_background_default_opening_session">#006622</color>
+    <color name="track_background_default_ospo_track">#B39200</color>
+    <!-- type -->
+    <color name="track_background_default_lightning_talks">#1DA186</color>
+    <color name="track_background_default_talk">#174D46</color>
+    <color name="track_background_default_workshop">#7D9438</color>
+
+    <!-- Highlight state -->
+
+    <color name="track_background_highlight">@color/colorPrimaryDark</color>
+    <color name="track_background_highlight_cybersecurity_track">#cc0000</color>
+    <color name="track_background_highlight_edtech_track">#997300</color>
+    <color name="track_background_highlight_edtech_workshops">#997300</color>
+    <color name="track_background_highlight_libreoffice_design_and_accessibility">#D1461B</color>
+    <color name="track_background_highlight_libreoffice_development">#009688</color>
+    <color name="track_background_highlight_libreoffice_documentation_and_nlps">#116600</color>
+    <color name="track_background_highlight_libreoffice_in_business">#404040</color>
+    <color name="track_background_highlight_libreoffice_marketing">#711C80</color>
+    <color name="track_background_highlight_libreoffice_workshop">#3333ff</color>
+    <color name="track_background_highlight_no_session">#495ED1</color>
+    <color name="track_background_highlight_odf_and_interoperability">#2196F3</color>
+    <color name="track_background_highlight_open_source_workshops">#cc00cc</color>
+    <color name="track_background_highlight_opening_session">#009933</color>
+    <color name="track_background_highlight_ospo_track">#E0B700</color>
+    <!-- type -->
+    <color name="track_background_highlight_lightning_talks">#0eba99</color>
+    <color name="track_background_highlight_talk">#16705E</color>
+    <color name="track_background_highlight_workshop">#99ba34</color>
+
+</resources>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">LibreOffice 2024 Schedule</string>
+    <string name="app_hardcoded_subtitle">Oktober 10. – 12, 2024, Terres Rouges</string>
+    <string name="about_logo_content_description">
+        LibreOffice Conference 2024
+    </string>
+</resources>

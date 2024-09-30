@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="text_primary">#000</color>
+    <color name="text_primary_inverted">#ffffff</color>
+    <color name="text_secondary">#ffffff</color>
+    <color name="text_tertiary">#ffffff</color>
+    <color name="colorPrimary">#a3da9b</color>
+    <color name="colorPrimaryDark">#95cd8d</color>
+    <color name="colorAccent">#00a500</color>
+    <color name="colorActionBar">@color/colorPrimary</color>
+    <color name="windowBackground">#eee</color>
+    <color name="multi_choice_background">#fec700</color>
+    <color name="session_alarm_item_bell_icon_fill">@color/colorPrimaryDark</color>
+    <color name="session_alarm_item_bell_icon_text">#fff</color>
+    <color name="session_background">@android:color/white</color>
+
+    <!-- About -->
+    <color name="about_window_background">@color/windowBackground</color>
+    <color name="about_horizontal_line">#a0a0a0</color>
+    <color name="about_title">@color/text_primary</color>
+    <color name="about_subtitle">@color/text_primary</color>
+    <color name="about_text">@color/text_primary</color>
+    <color name="about_text_link">@color/text_link_on_light</color>
+
+    <!-- Schedule screen -->
+    <color name="schedule_time_column_background">@color/windowBackground</color>
+    <color name="schedule_time_column_item_background_normal">@color/colorPrimaryDark</color>
+    <color name="schedule_time_column_item_background_emphasized">@color/colorAccent</color>
+    <color name="schedule_time_column_item_text_emphasized">#fff</color>
+    <color name="schedule_room_name_header_background">@color/colorPrimaryDark</color>
+    <color name="session_drawable_selection_stroke">#000</color>
+    <color name="session_item_text_on_default_background">#ffffff</color>
+    <color name="session_item_text_on_highlight_background">#ffffff</color>
+
+    <!-- Session item (favorites + schedule changes) -->
+    <color name="session_list_header_text_inverted">@color/text_primary</color>
+
+    <!-- Schedule changes -->
+    <color name="schedule_changes_background">@color/windowBackground</color>
+    <color name="schedule_change">#F57C00</color>
+    <color name="schedule_change_new">#689F38</color>
+    <color name="schedule_change_canceled">#D32F2F</color>
+
+    <!-- Session details -->
+    <color name="session_detailbar_background">@color/colorPrimaryDark</color>
+    <color name="session_detailbar_text">#fff</color>
+    <color name="session_detailbar_icon">@color/colorAccent</color>
+
+</resources>
