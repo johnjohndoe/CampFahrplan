@@ -54,7 +54,7 @@ internal fun SessionChangesScreen(
     showInSidePane: Boolean,
     onViewEvent: (SessionChangeViewEvent) -> Unit,
 ) {
-    val darkMode = true
+    val darkMode = false
     EventFahrplanTheme(darkMode = darkMode) {
         Scaffold { contentPadding ->
             Box(
