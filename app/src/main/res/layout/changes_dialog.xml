@@ -12,13 +12,15 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="@string/schedule_changes_dialog_updated_to_text"
         android:id="@+id/schedule_changes_dialog_updated_to_text_view"
-        android:layout_marginBottom="8dp"/>
+        android:layout_marginBottom="8dp"
+        android:textColor="@color/schedule_changes_dialog_text" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="@string/schedule_changes_dialog_affected_text"
-        android:id="@+id/schedule_changes_dialog_changes_text_view" />
+        android:id="@+id/schedule_changes_dialog_changes_text_view"
+        android:textColor="@color/schedule_changes_dialog_text" />
 
 </LinearLayout>

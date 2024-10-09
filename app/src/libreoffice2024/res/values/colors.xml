@@ -26,6 +26,9 @@
     <!-- Alarm dialogs -->
     <color name="alert_dialog_button_text">#fff</color>
 
+    <!-- Schedule changes dialog -->
+    <color name="schedule_changes_dialog_new_version_text">#116600</color>
+
     <!-- Schedule screen -->
     <color name="schedule_time_column_background">@color/windowBackground</color>
     <color name="schedule_time_column_item_background_normal">@color/colorPrimaryDark</color>
