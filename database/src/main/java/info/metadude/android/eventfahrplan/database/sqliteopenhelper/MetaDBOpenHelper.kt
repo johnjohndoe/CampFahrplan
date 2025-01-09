@@ -24,7 +24,7 @@ internal class MetaDBOpenHelper(context: Context) : SQLiteOpenHelper(
 ) {
 
     private companion object {
-        const val DATABASE_VERSION = 10
+        const val DATABASE_VERSION = 13
         const val DATABASE_NAME = "meta"
 
         // language=sql
@@ -77,6 +77,11 @@ internal class MetaDBOpenHelper(context: Context) : SQLiteOpenHelper(
         }
         if (oldVersion < 10) {
             // Clear database from Camp 2023 & 37C3 2023.
+            dropTableIfExist(NAME)
+            onCreate(this)
+        }
+        if (oldVersion < 13) {
+            // Clear database from FOSDEM 2024.
             dropTableIfExist(NAME)
             onCreate(this)
         }
