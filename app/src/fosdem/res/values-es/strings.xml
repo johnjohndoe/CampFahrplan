@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">FOSDEM 2025 Calendario</string>
+    <string name="app_hardcoded_subtitle">1 – 2 de Febrero de 2025, ULB, Campus du Solbosch</string>
+</resources>
