@@ -64,3 +64,5 @@
 -keep public class * extends androidx.core.view.ActionProvider {
     public <init>(android.content.Context);
 }
+
+-keep public class kotlin.Result { *; }
