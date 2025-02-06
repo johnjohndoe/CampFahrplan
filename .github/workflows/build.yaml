@@ -15,10 +15,10 @@ jobs:
           cache: 'gradle'
             
       - name: Build the app
-        run: ./gradlew assembleCcc38c3
+        run: ./gradlew assembleClt2025
 
       - name: Unit Tests
-        run: ./gradlew testDebugUnitTest :engelsystem:test testCcc38c3DebugUnitTest assembleCcc38c3Debug lintAnalyzeCcc38c3Debug
+        run: ./gradlew testDebugUnitTest :engelsystem:test testClt2025DebugUnitTest assembleClt2025Debug lintAnalyzeClt2025Debug
 
       - name: Publish unit-test results
         uses: EnricoMi/publish-unit-test-result-action@v2
