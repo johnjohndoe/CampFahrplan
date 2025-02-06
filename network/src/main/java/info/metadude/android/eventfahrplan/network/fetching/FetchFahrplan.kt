@@ -117,6 +117,7 @@ internal class FetchFahrplanTask(
         logging.d(LOG_TAG, "$HTTP_HEADER_NAME_ETAG: '$eTag'")
         logging.d(LOG_TAG, "$HTTP_HEADER_NAME_LAST_MODIFIED: '$lastModified'")
         val requestBuilder = Request.Builder().apply {
+            addHeader("Connection", "close")
             url(url)
             if (eTag.isNotEmpty()) {
                 addHeader(HTTP_HEADER_NAME_IF_NONE_MATCH, eTag)
