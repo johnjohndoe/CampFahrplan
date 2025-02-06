@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">CLT 2025 Fahrplan</string>
+    <string name="app_hardcoded_subtitle">22.-23. März 2025</string>
+    <string name="copyright_logo">
+        CLT-Design von Sebastian Pettke
+    </string>
+    <string name="about_logo_content_description">
+        CLT Logo
+    </string>
+</resources>

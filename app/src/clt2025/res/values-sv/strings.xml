@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">CLT 2025 Schedule</string>
+    <string name="app_hardcoded_subtitle">22–23 mars 2025</string>
+    <string name="copyright_logo">
+        CLT Design av Sebastian Pettke
+    </string>
+    <string name="about_logo_content_description">
+        CLT logotyp
+    </string>
+</resources>

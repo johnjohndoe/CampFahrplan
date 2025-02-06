@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorPrimary">#002478</color>
+    <color name="colorPrimaryDark">#0a276b</color>
+    <color name="colorAccent">#ffcc00</color>
+    <color name="text_primary">#fff</color>
+    <color name="text_primary_inverted">@color/text_primary</color>
+    <color name="text_secondary">#ddd</color>
+    <color name="text_secondary_inverted">@color/text_secondary</color>
+    <color name="text_tertiary">#ddd</color>
+    <color name="text_tertiary_inverted">@color/text_tertiary</color>
+    <color name="windowBackground">@color/colorPrimary</color>
+    <color name="window_background_inverted">@color/windowBackground</color>
+    <color name="multi_choice_background">#aafec700</color>
+
+    <!-- Scrollbar -->
+    <color name="scrollbar_background">#77ffffff</color>
+
+    <!-- Tool bar -->
+    <color name="tool_bar_icon">@color/colorAccent</color>
+    <color name="day_menu_text">@color/colorAccent</color>
+
+    <!-- Alarms -->
+    <color name="session_alarm_item_bell_icon_text">@color/colorPrimaryDark</color>
+
+    <!-- Schedule changes -->
+    <color name="schedule_change_on_dark">#fa952d</color>
+    <color name="schedule_change_on_light">@color/schedule_change_on_dark</color>
+    <color name="schedule_change_new_on_dark">#9be35d</color>
+    <color name="schedule_change_new_on_light">@color/schedule_change_new_on_dark</color>
+    <color name="schedule_change_canceled_on_dark">#d15656</color>
+    <color name="schedule_change_canceled_on_light">@color/schedule_change_canceled_on_dark</color>
+
+    <!-- Favorites -->
+    <color name="favorites_past_session_text">#88ffffff</color>
+
+    <!-- Schedule screen -->
+    <color name="schedule_time_column_background">@android:color/transparent</color>
+    <color name="schedule_time_column_item_background_normal">#22000000</color>
+    <color name="schedule_time_column_item_background_emphasized">@color/colorAccent</color>
+    <color name="schedule_time_column_item_text_normal">#fff</color>
+    <color name="schedule_time_column_item_text_emphasized">#000</color>
+    <color name="schedule_room_name_header_background">#22000000</color>
+    <color name="session_item_text_on_default_background">#fff</color>
+
+    <!-- Session item (favorites + schedule changes) -->
+    <color name="session_list_header_text">#ffffff</color>
+    <color name="session_list_item_text">#ffffff</color>
+    <color name="session_list_empty_text">#ffffff</color>
+
+    <!-- Session details -->
+    <color name="session_details_text">#ccffffff</color>
+    <color name="session_details_list_item">@color/colorAccent</color>
+    <color name="session_detailbar_background">@color/colorPrimaryDark</color>
+    <color name="session_detailbar_text">#fff</color>
+    <color name="session_detailbar_icon">@color/colorAccent</color>
+
+</resources>
