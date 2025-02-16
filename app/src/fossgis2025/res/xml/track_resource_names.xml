@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<map linked="true">
+
+    <entry key="25 Jahre FOSSGIS e.V.">25_jahre_fossgis_ev</entry>
+    <entry key="3D, Drohnen, LIDAR, Geo-AR/VR">3d_drohnen_lidar_geo_ar_vr</entry>
+    <entry key="Ausbildung, Lehre, Open Science">ausbildung_lehre_open_science</entry>
+    <entry key="Daten, Datenbanken und Datenprozessierung">daten_datenbanken_und_datenprozessierung</entry>
+    <entry key="Geodatenmanagement">geodatenmanagement</entry>
+    <entry key="Grundlagen Open-Source-GIS und OpenStreetMap">grundlagen_open_source_gis_und_openstreetmap</entry>
+    <entry key="Kartographie und Visualisierung">kartographie_und_visualisierung</entry>
+    <entry key="Neuigkeiten und Interessantes aus den Open-Source-Projekten">neuigkeiten_und_interessantes_aus_den_open_source_projekten</entry>
+    <entry key="Offene Standards, z.B. INSPIRE, OGC">offene_standards_zb_inspire_ogc</entry>
+    <entry key="Open Data, Datenschutz und Lizenzen">open_data_datenschutz_und_lizenzen</entry>
+    <entry key="OpenStreetMap">openstreetmap</entry>
+    <entry key="Praxisberichte">praxisberichte</entry>
+    <entry key="Rasterdaten und Fernerkundung">rasterdaten_und_fernerkundung</entry>
+    <entry key="Raum-zeitliche Analysen und Modelle">raum_zeitliche_analysen_und_modelle</entry>
+    <entry key="Routing und Mobilität">routing_und_mobilitaet</entry>
+    <entry key=""></entry>
+
+</map>

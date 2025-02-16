@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">FOSSGIS 2025 Schedule</string>
+    <string name="app_hardcoded_subtitle">Conference for free and open source software, geo-software and OpenStreetMap, March 26.-29. 2025</string>
+    <string name="conference_name" translatable="false">FOSSGIS</string>
+    <string name="copyright_logo">
+        Design of the FOSSGIS 2025 logo: Jane Eder
+    </string>
+    <string name="about_logo_content_description">
+        FOSSGIS 2025 logo
+    </string>
+</resources>
