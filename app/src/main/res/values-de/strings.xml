@@ -277,6 +277,14 @@
         <xliff:g example="Engelsystem" id="urlType">%s</xliff:g> URL ohne API-Schlüssel.
     </string>
 
+    <!-- Sponsors -->
+    <string name="sponsors_screen_name">Sponsoren</string>
+    <string name="sponsor_category_platinum">Platinsponsoren</string>
+    <string name="sponsor_category_gold">Goldsponsoren</string>
+    <string name="sponsor_category_silver">Silbersponsoren</string>
+    <string name="sponsor_category_bronze">Bronzesponsoren</string>
+    <string name="sponsor_category_media_partners">Medienpartner</string>
+
     <!-- Schedule statistic -->
     <string name="schedule_statistic_no_statistic_data_title">Noch keine Fahrplan-Statistik verfügbar</string>
     <string name="schedule_statistic_title">Fahrplan-Statistik</string>

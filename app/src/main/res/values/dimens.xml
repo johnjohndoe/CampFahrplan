@@ -92,4 +92,10 @@
     <dimen name="empty_screen_drawable_padding">16dp</dimen>
     <dimen name="empty_screen_padding">16dp</dimen>
 
+    <!-- Sponsors -->
+    <dimen name="sponsors_category_item_text">18sp</dimen>
+    <dimen name="sponsors_sponsor_image_width">600dp</dimen>
+    <dimen name="sponsors_sponsor_image_height">200dp</dimen>
+    <dimen name="sponsors_sponsor_item_corner_radius">8dp</dimen>
+
 </resources>

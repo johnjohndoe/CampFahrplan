@@ -25,6 +25,7 @@
     <string name="menu_item_title_share_session_json">as JSON (for Chaosflix)</string>
     <string name="share_as_text">Share as text</string>
     <string name="share_as_json">Share as JSON (for Chaosflix)</string>
+    <string name="menu_item_title_sponsors" translatable="false">@string/sponsors_screen_name</string>
 
     <!-- AlertDialog -->
     <string name="OK">OK</string>
@@ -309,6 +310,14 @@
     <string name="validation_error_url_without_api_key">
         <xliff:g example="Engelsystem" id="urlType">%s</xliff:g> URL without API key.
     </string>
+
+    <!-- Sponsors -->
+    <string name="sponsors_screen_name">Sponsors</string>
+    <string name="sponsor_category_platinum">Platinum sponsors</string>
+    <string name="sponsor_category_gold">Gold sponsors</string>
+    <string name="sponsor_category_silver">Silver sponsors</string>
+    <string name="sponsor_category_bronze">Bronze sponsors</string>
+    <string name="sponsor_category_media_partners">Media partners</string>
 
     <!-- Schedule statistic -->
     <string name="schedule_statistic_no_statistic_data_title">No schedule statistic available yet</string>

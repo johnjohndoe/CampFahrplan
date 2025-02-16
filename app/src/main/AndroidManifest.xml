@@ -102,5 +102,11 @@
             android:label="@string/search_title"
             android:resizeableActivity="true" >
         </activity>
+        <activity
+            android:name="nerd.tuxmobil.fahrplan.congress.sponsors.SponsorsActivity"
+            android:theme="@style/Theme.Congress.NoActionBar"
+            android:label="@string/sponsors_screen_name"
+            android:resizeableActivity="true" >
+        </activity>
     </application>
 </manifest>
