@@ -13,7 +13,7 @@
      limitations under the License.
 -->
 <resources>
-    <item name="box_height" type="integer">13</item>
+    <item name="box_height" type="integer">26</item>
     <item name="max_cols" type="integer">1</item>
     <dimen name="time_width">38dp</dimen>
     <item name="min_width_dip" type="integer">160</item>
