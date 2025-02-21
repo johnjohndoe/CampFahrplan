@@ -138,7 +138,7 @@ android {
             buildConfigField "String", "SCHEDULE_URL", '"https://pretalx.com/fossgis2025/schedule/export/schedule.xml"'
             buildConfigField "String", "EVENT_URL", '"https://pretalx.com/fossgis2025/talk/%1$s"'
             buildConfigField "String", "EVENT_WEBSITE_URL", '"https://fossgis-konferenz.de"'
-            buildConfigField "String", "EVENT_POSTAL_ADDRESS", '"Am Schwarzenberg-Campus 5, Gebäude H, 21073 Hamburg"'
+            buildConfigField "String", "EVENT_POSTAL_ADDRESS", '"Schlossplatz 2, 48149 Münster"'
             buildConfigField "String", "SERVER_BACKEND_TYPE", '"pretalx"'
             buildConfigField "boolean", "ENABLE_ENGELSYSTEM_SHIFTS", "true"
             resValue("string", "engelsystem_alias", "Helfersystem")
