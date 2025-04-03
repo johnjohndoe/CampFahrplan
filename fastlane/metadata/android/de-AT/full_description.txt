@@ -9,6 +9,7 @@ App-Funktionen:
    * Programm nach Tag und Räumen anzeigen (nebeneinander)
    * Benutzerdefiniertes Rasterlayout für Smartphones (im Querformat) und Tablets
    * Lies detaillierte Beschreibungen (Referentennamen, Startzeit, Raumname, Links, ...) von Veranstaltungen
+   * Alle Veranstaltungen durchsuchen
    * Erstellen deinen eigenen individuellen Zeitplan mit Favoriten
    * Teile die Veranstaltung per E-Mail, Twitter usw. mit Ihren Kollegen und Freunden
    * Erinnerung an Ihre Lieblingsvorträge
@@ -20,17 +21,22 @@ App-Funktionen:
 
 🔤 Unterstützte Sprachen:
 (Veranstaltungsbeschreibungen ausgenommen)
-* Niederländisch
-* Englisch
-* Französisch
+* Dänisch
 * Deutsch
+* Englisch
+* Finnisch
+* Französisch
 * Italienisch
 * Japanisch
-* Polieren
-* Portugiesisch
+* Litauisch
+* Niederländisch
+* Polnisch
+* Portugiesisch, Brasilien
+* Portugiesisch, Portugal
 * Russisch
 * Spanisch
 * Schwedisch
+* Türkisch
 
 💡 Fragen zum Inhalt können ausschließlich vom Content-Team der Grazer Linuxtage (GLT) beantwortet werden. Diese App bietet einfach eine Möglichkeit, den Konferenzplan zu nutzen und zu personalisieren.
 
