@@ -24,7 +24,7 @@ internal class MetaDBOpenHelper(context: Context) : SQLiteOpenHelper(
 ) {
 
     private companion object {
-        const val DATABASE_VERSION = 10
+        const val DATABASE_VERSION = 7
         const val DATABASE_NAME = "meta"
 
         // language=sql
@@ -61,22 +61,7 @@ internal class MetaDBOpenHelper(context: Context) : SQLiteOpenHelper(
             onCreate(this)
         }
         if (oldVersion < 7) {
-            // Clear database from rC3 12/2020.
-            dropTableIfExist(NAME)
-            onCreate(this)
-        }
-        if (oldVersion < 8) {
-            // Clear database from rC3 NOWHERE 12/2021 & 36C3 2019.
-            dropTableIfExist(NAME)
-            onCreate(this)
-        }
-        if (oldVersion < 9) {
-            if (!columnExists(NAME, SCHEDULE_LAST_MODIFIED)) {
-                addTextColumn(SCHEDULE_LAST_MODIFIED, default = "")
-            }
-        }
-        if (oldVersion < 10) {
-            // Clear database from Camp 2023 & 37C3 2023.
+            // Clear database from rC3 12/2020 & KotlinConf 2024.
             dropTableIfExist(NAME)
             onCreate(this)
         }
