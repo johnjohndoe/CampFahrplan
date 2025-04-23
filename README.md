@@ -3,9 +3,10 @@
 # EventFahrplan
 
 EventFahrplan is a viewer for event schedules such as
-[Chaos Computer Club e.V. events][ccc-events] like [Chaos Communication Camp][camp-website]
+[KotlinConf][kotlinconf-website], [Chaos Computer Club e.V. events][ccc-events] like [Chaos Communication Camp][camp-website]
 or [Chaos Communication Congress][congress-website].
 
+- KotlinConf Schedule app: [Google Play][kotlinconf-google-play]
 - Chaos Communication Camp Schedule app: [F-Droid][camp-app-fdroid], [Google Play][camp-app-google-play]
 - Chaos Communication Congress Schedule app: [F-Droid][congress-app-fdroid], [Google Play][congress-app-google-play]
 
@@ -188,6 +189,8 @@ limitations under the License.
 [fosdem-room-status-website]: https://api.fosdem.org
 [issues-github]: https://github.com/EventFahrplan/EventFahrplan/issues
 [johnjohndoe-github]: https://github.com/johnjohndoe
+[kotlinconf-google-play]: https://play.google.com/store/apps/details?id=info.metadude.android.kotlinconf.schedule
+[kotlinconf-website]: https://kotlinconf.com
 [pentabarf-github]: https://github.com/nevs/pentabarf
 [pretalx-website]: https://pretalx.com
 [tuxmobil-github]: https://github.com/tuxmobil
