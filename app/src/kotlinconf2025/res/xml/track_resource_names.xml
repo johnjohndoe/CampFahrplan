@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<map linked="true">
+
+    <entry key="Conference">conference</entry>
+    <entry key="Hands On">hands_on</entry>
+    <entry key="Workshop">hands_on</entry>
+    <entry key="Interviews">interviews</entry>
+    <entry key="Introductory">introductory</entry>
+    <entry key="Introductory, Regular Session">introductory</entry>
+    <entry key="Regular Session, Introductory">introductory</entry>
+    <entry key="Intermediate">intermediate</entry>
+    <entry key="Workshop, Intermediate">intermediate</entry>
+    <entry key="Intermediate, Regular Session">intermediate</entry>
+    <entry key="Regular Session, Intermediate">intermediate</entry>
+    <entry key="Advanced">advanced</entry>
+    <entry key="Workshop, Advanced">advanced</entry>
+    <entry key="Advanced, Regular Session">advanced</entry>
+    <entry key="Regular Session, Advanced">advanced</entry>
+    <entry key="Introductory, Lightning Talk">lightning_talk</entry>
+    <entry key="Intermediate, Lightning Talk">lightning_talk</entry>
+    <entry key="Advanced, Lightning Talk">lightning_talk</entry>
+    <entry key=""></entry>
+
+</map>

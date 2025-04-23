@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="pressed_congress">#CC0099AB</color>
+
+    <!-- Default state -->
+    <color name="track_background_default">#4D5254</color>
+    <color name="track_background_default_conference">#6E656E</color>
+    <color name="track_background_default_hands_on">#686E65</color>
+    <color name="track_background_default_interviews">#6E6C65</color>
+    <color name="track_background_default_introductory">#948001</color>
+    <color name="track_background_default_intermediate">#01940E</color>
+    <color name="track_background_default_advanced">#940163</color>
+    <color name="track_background_default_lightning_talk">#008799</color>
+
+    <!-- Highlight state -->
+    <color name="track_background_highlight">#6C7A80</color>
+    <color name="track_background_highlight_conference">#BBA0BD</color>
+    <color name="track_background_highlight_hands_on">#ABBDA0</color>
+    <color name="track_background_highlight_interviews">#BDB7A0</color>
+    <color name="track_background_highlight_introductory">#C8AE03</color>
+    <color name="track_background_highlight_intermediate">#03C813</color>
+    <color name="track_background_highlight_advanced">#C80386</color>
+    <color name="track_background_highlight_lightning_talk">#00BCD4</color>
+
+</resources>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">KotlinConf 2025 Fahrplan</string>
+    <string name="app_hardcoded_subtitle">21.-23. Mai 2025, Bella Center Kopenhagen</string>
+    <string name="copyright_logo">
+        <![CDATA[KotlinConf-Logo: <a href="https://www.jetbrains.com">JetBrains</a>]]>
+    </string>
+    <string name="about_logo_content_description">
+        KotlinConf Logo
+    </string>
+</resources>
