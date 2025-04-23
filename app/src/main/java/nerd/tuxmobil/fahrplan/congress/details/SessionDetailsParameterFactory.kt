@@ -9,7 +9,6 @@ import nerd.tuxmobil.fahrplan.congress.models.Session
 import nerd.tuxmobil.fahrplan.congress.utils.ContentDescriptionFormatting
 import nerd.tuxmobil.fahrplan.congress.utils.MarkdownConversion
 import nerd.tuxmobil.fahrplan.congress.utils.SessionPropertiesFormatting
-import nerd.tuxmobil.fahrplan.congress.utils.SessionUrlComposition
 import nerd.tuxmobil.fahrplan.congress.wiki.containsWikiLink
 
 class SessionDetailsParameterFactory(
@@ -19,7 +18,6 @@ class SessionDetailsParameterFactory(
     private val contentDescriptionFormatting: ContentDescriptionFormatting,
     private val formattingDelegate: FormattingDelegate,
     private val markdownConversion: MarkdownConversion,
-    private val sessionUrlComposition: SessionUrlComposition,
     private val defaultEngelsystemRoomName: String,
     private val customEngelsystemRoomName: String,
 ) {
@@ -49,10 +47,7 @@ class SessionDetailsParameterFactory(
         )
         val sessionLink = when (session.links.containsWikiLink()) {
             true -> "" // Session link is one of the wiki links.
-            false -> {
-                val sessionUrl = sessionUrlComposition.getSessionUrl(session)
-                sessionPropertiesFormatting.getFormattedUrl(sessionUrl)
-            }
+            false -> sessionPropertiesFormatting.getFormattedUrl(session.url)
         }
 
         return SessionDetails(

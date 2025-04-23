@@ -81,6 +81,7 @@ class UpdateService : SafeJobIntentService() {
         MyApp.taskRunning = MyApp.TASKS.PARSE
     }
 
+    // Not used at this event
     private fun onLoadShiftsDone(result: LoadShiftsResult) {
         onParseDone(ParseShiftsResult.of(result))
     }
@@ -89,14 +90,10 @@ class UpdateService : SafeJobIntentService() {
         if (MyApp.taskRunning == MyApp.TASKS.NONE) {
             MyApp.taskRunning = MyApp.TASKS.FETCH
 
-            val url = appRepository.readScheduleUrl()
-
             appRepository.loadSchedule(
-                url = url,
                 isUserRequest = false,
                 onFetchingDone = ::onGotResponse,
                 onParsingDone = ::onParseDone,
-                onLoadingShiftsDone = ::onLoadShiftsDone
             )
         } else {
             logging.d(LOG_TAG, "Fetching already in progress.")

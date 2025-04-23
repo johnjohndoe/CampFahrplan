@@ -3,7 +3,6 @@ package nerd.tuxmobil.fahrplan.congress.sharing
 import info.metadude.android.eventfahrplan.commons.temporal.DateFormatter
 import nerd.tuxmobil.fahrplan.congress.BuildConfig
 import nerd.tuxmobil.fahrplan.congress.models.Session
-import nerd.tuxmobil.fahrplan.congress.utils.SessionUrlComposer
 import nerd.tuxmobil.fahrplan.congress.wiki.containsWikiLink
 import org.threeten.bp.ZoneId
 
@@ -64,8 +63,7 @@ class SimpleSessionFormat {
         if (!session.links.containsWikiLink()) {
             append(LINE_BREAK)
             append(LINE_BREAK)
-            val sessionUrl = SessionUrlComposer().getSessionUrl(session)
-            append(sessionUrl)
+            append(session.url)
         }
     }
 

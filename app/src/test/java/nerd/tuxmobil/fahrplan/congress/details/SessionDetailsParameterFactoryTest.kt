@@ -8,7 +8,6 @@ import nerd.tuxmobil.fahrplan.congress.models.Session
 import nerd.tuxmobil.fahrplan.congress.utils.ContentDescriptionFormatting
 import nerd.tuxmobil.fahrplan.congress.utils.MarkdownConversion
 import nerd.tuxmobil.fahrplan.congress.utils.SessionPropertiesFormatting
-import nerd.tuxmobil.fahrplan.congress.utils.SessionUrlComposition
 import org.junit.jupiter.api.Test
 import org.mockito.Mockito.mock
 import org.threeten.bp.ZoneOffset
@@ -28,7 +27,6 @@ class SessionDetailsParameterFactoryTest {
             contentDescriptionFormatting = EmptyContentDescriptionFormatter(),
             formattingDelegate = FakeFormattingDelegate(),
             markdownConversion = FakeMarkdownConversion(),
-            sessionUrlComposition = FakeSessionUrlComposition(),
             defaultEngelsystemRoomName = "Engelshifts",
             customEngelsystemRoomName = "Trollshifts",
         )
@@ -84,10 +82,6 @@ class SessionDetailsParameterFactoryTest {
             """<a href="https://www.voc.com/projects/">VOC projects</a>,<a href="https://poc.com/QXut1XBymAk">POC</a>"""
 
         override fun markdownLinksToPlainTextLinks(markdown: String) = ""
-    }
-
-    private class FakeSessionUrlComposition : SessionUrlComposition {
-        override fun getSessionUrl(session: Session) = ""
     }
 
     private class FakeSessionPropertiesFormatting : SessionPropertiesFormatting {

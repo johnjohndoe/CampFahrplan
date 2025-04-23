@@ -21,7 +21,6 @@ import nerd.tuxmobil.fahrplan.congress.utils.FeedbackUrlComposer
 import nerd.tuxmobil.fahrplan.congress.utils.MarkdownConverter
 import nerd.tuxmobil.fahrplan.congress.utils.ServerBackendType
 import nerd.tuxmobil.fahrplan.congress.utils.SessionPropertiesFormatter
-import nerd.tuxmobil.fahrplan.congress.utils.SessionUrlComposer
 
 internal class SessionDetailsViewModelFactory(
 
@@ -52,7 +51,6 @@ internal class SessionDetailsViewModelFactory(
                 contentDescriptionFormatting = ContentDescriptionFormatter(resourceResolving),
                 formattingDelegate = DateFormatterDelegate,
                 markdownConversion = MarkdownConverter,
-                sessionUrlComposition = SessionUrlComposer(),
                 defaultEngelsystemRoomName = defaultEngelsystemRoomName,
                 customEngelsystemRoomName = customEngelsystemRoomName,
             ),

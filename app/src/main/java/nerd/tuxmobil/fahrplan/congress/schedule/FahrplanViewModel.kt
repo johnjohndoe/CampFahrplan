@@ -233,7 +233,6 @@ internal class FahrplanViewModel(
                 isUserRequest = isUserRequest,
                 onFetchingDone = {},
                 onParsingDone = {},
-                onLoadingShiftsDone = {}
             )
         }
     }
