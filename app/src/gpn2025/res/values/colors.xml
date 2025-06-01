@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorPrimary">#9b090d</color>
+    <color name="colorPrimaryDark">#800A0A</color>
+    <color name="colorAccent">#d17709</color>
+    <color name="windowBackground">#1a1a1a</color>
+    <color name="outline_variant">#449b090d</color>
+
+    <!-- Alarms -->
+    <color name="session_alarm_item_bell_icon_text">#ffffff</color>
+
+    <!-- Session details -->
+    <color name="session_detailbar_text">@color/colorPrimary</color>
+
+</resources>

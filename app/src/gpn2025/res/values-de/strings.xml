@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">GPN 2025 Fahrplan</string>
+    <string name="app_hardcoded_subtitle">19. – 22. Juni / ZKM und HfG</string>
+    <string name="copyright_logo">
+        Logo-Design von Thilo Billerbeck
+    </string>
+    <string name="about_logo_content_description">
+        GPN23 Logo, stilisierter Buchstabe G
+    </string>
+</resources>

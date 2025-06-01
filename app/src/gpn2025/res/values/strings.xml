@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">GPN 2025 Schedule</string>
+    <string name="app_hardcoded_subtitle">June 19 – 22 / ZKM and HfG</string>
+    <string name="conference_name" translatable="false">GPN 2025</string>
+    <string name="copyright_logo">
+        Logo design by Thilo Billerbeck
+    </string>
+    <string name="about_logo_content_description">
+        GPN23 logo, stylized character G
+    </string>
+</resources>
