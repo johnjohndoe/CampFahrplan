@@ -84,6 +84,7 @@ android {
     signingConfigs {
         cccamp2023
         ccc38c3
+        protocolberg2025
     }
 
     def defaultDimension = "default"
@@ -131,6 +132,20 @@ android {
             resValue("string", "preference_hint_engelsystem_json_export_url", '"https://engel.events.ccc.de/shifts-json-export?key=YOUR_KEY"')
             buildConfigField "String", "SOCIAL_MEDIA_HASHTAGS_HANDLES", '"#38c3 #fahrplan"'
             buildConfigField "String", "TRACE_DROID_EMAIL_ADDRESS", '"tobias.preuss+38c3@googlemail.com"'
+            buildConfigField "String", "SCHEDULE_FEEDBACK_URL", '""'
+        }
+        protocolberg2025 {
+            dimension defaultDimension
+            applicationId "info.metadude.android.protocolberg.schedule"
+            buildConfigField "String", "GOOGLE_PLAY_URL", '"https://play.google.com/store/apps/details?id=info.metadude.android.protocolberg.schedule"'
+            buildConfigField "String", "F_DROID_URL", '"https://f-droid.org/packages/info.metadude.android.protocolberg.schedule"'
+            buildConfigField "String", "SCHEDULE_URL", '"https://cfp.protocol.berlin/protocol-berg-v2/schedule/export/schedule.xml"'
+            buildConfigField "String", "EVENT_URL", '""'
+            buildConfigField "String", "EVENT_WEBSITE_URL", '"https://protocol.berlin"'
+            buildConfigField "String", "EVENT_POSTAL_ADDRESS", '"Gleimstraße 30, 10437 Berlin"'
+            buildConfigField "String", "SERVER_BACKEND_TYPE", '"pretalx"'
+            buildConfigField "String", "SOCIAL_MEDIA_HASHTAGS_HANDLES", '"#protocolberg #fahrplan @protocol_berg"'
+            buildConfigField "String", "TRACE_DROID_EMAIL_ADDRESS", '"tobias.preuss+protocolberg@googlemail.com"'
             buildConfigField "String", "SCHEDULE_FEEDBACK_URL", '""'
         }
     }
