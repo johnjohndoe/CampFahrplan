@@ -84,6 +84,7 @@ android {
     signingConfigs {
         cccamp2023
         ccc38c3
+        gpn2025
     }
 
     def defaultDimension = "default"
@@ -132,6 +133,27 @@ android {
             buildConfigField "String", "SOCIAL_MEDIA_HASHTAGS_HANDLES", '"#38c3 #fahrplan"'
             buildConfigField "String", "TRACE_DROID_EMAIL_ADDRESS", '"tobias.preuss+38c3@googlemail.com"'
             buildConfigField "String", "SCHEDULE_FEEDBACK_URL", '""'
+        }
+        gpn2025 {
+            dimension defaultDimension
+            applicationId "info.metadude.android.gpn.schedule"
+            versionName "${defaultConfig.versionName}-GPN-Edition"
+            buildConfigField "String", "GOOGLE_PLAY_URL", '"https://play.google.com/store/apps/details?id=info.metadude.android.gpn.schedule"'
+            buildConfigField "String", "F_DROID_URL", '"https://f-droid.org/packages/info.metadude.android.gpn.schedule"'
+            buildConfigField "String", "SCHEDULE_URL", '"https://cfp.gulas.ch/merged/gpn23/schedule.xml"'
+            buildConfigField "String", "EVENT_URL", '""'
+            buildConfigField "String", "EVENT_WEBSITE_URL", '"https://gulas.ch"'
+            buildConfigField "String", "EVENT_POSTAL_ADDRESS", '"Lorenzstraße 15, 76135 Karlsruhe"'
+            buildConfigField "String", "SERVER_BACKEND_TYPE", '"pretalx"'
+            buildConfigField "String", "SOURCE_CODE_URL", '"https://github.com/johnjohndoe/CampFahrplan/tree/gpn-2025"'
+            buildConfigField "boolean", "ENABLE_CHAOSFLIX_EXPORT", "true"
+            buildConfigField "boolean", "ENABLE_ENGELSYSTEM_SHIFTS", "true"
+            resValue("string", "engelsystem_alias", "Trollsystem")
+            resValue("string", "engelsystem_shifts_alias", "Trollshifts")
+            resValue("string", "preference_hint_engelsystem_json_export_url", '"https://troll.gulas.ch/shifts-json-export?key=YOUR_KEY"')
+            buildConfigField "String", "SOCIAL_MEDIA_HASHTAGS_HANDLES", '"#gpn23 #fahrplan @entropiagpn @gulasch@gulas.ch @gulasch@social.gulas.ch @entropia@chaos.social"'
+            buildConfigField "String", "TRACE_DROID_EMAIL_ADDRESS", '"tobias.preuss+gpn@googlemail.com"'
+            buildConfigField "String", "SCHEDULE_FEEDBACK_URL", '"https://cfp.gulas.ch/gpn23/talk/%s/feedback/"'
         }
     }
 
