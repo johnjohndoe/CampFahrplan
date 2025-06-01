@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="pressed_congress">#cc6430bb</color>
+
+    <!-- Default state -->
+    <color name="track_background_default">#1a237e</color>
+    <color name="track_background_default_talk">#006064</color>
+    <color name="track_background_default_workshop">#1b5e20</color>
+
+    <!-- Highlight color -->
+    <color name="track_background_highlight">#2531b0</color>
+    <color name="track_background_highlight_talk">#009196</color>
+    <color name="track_background_highlight_workshop">#2a9131</color>
+
+</resources>

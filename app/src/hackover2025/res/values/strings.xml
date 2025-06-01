@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Hackover 2025 Schedule</string>
+    <string name="app_hardcoded_subtitle">July 4 – 6, 2025 - Stadtteilzentrum Bürgerschule Nordstadt</string>
+    <string name="conference_name" translatable="false">Hackover 2025</string>
+    <string name="copyright_logo">
+        Design of the Hackover logo: werti
+    </string>
+    <string name="about_logo_content_description">
+        Hackover logo: person sitting at a rainbow, cloud in the foreground
+    </string>
+</resources>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Hackover 2025 Fahrplan</string>
+    <string name="app_hardcoded_subtitle">4. – 6. Juli 2025, Stadtteilzentrum Bürgerschule Nordstadt</string>
+    <string name="copyright_logo">
+        Gestaltung des Hackover-Logos: werti
+    </string>
+    <string name="about_logo_content_description">
+        Hackover Logo: Person im Regenbogen sitzend, Wolke im Vordergrund
+    </string>
+</resources>
