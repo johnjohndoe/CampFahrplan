@@ -34,7 +34,7 @@ class AboutParameterFactory(
             builtAt
         )
         return AboutParameter(
-            title = titleText,
+            title = "",
             subtitle = subtitleText,
             eventLocation = PostalAddress(buildConfig.eventPostalAddress),
             eventUrl = textResourceOf(url = buildConfig.eventWebsiteUrl),
