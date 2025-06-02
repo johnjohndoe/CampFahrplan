@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Protocol Berg Fahrplan</string>
+    <string name="app_hardcoded_subtitle">
+        12.-13. Juni 2025, Colosseum, Berlin
+    </string>
+    <string name="copyright_logo">
+        Protocol Berg v2 Logo: CC BY-NC-SA 4.0 Department of Decentralization
+    </string>
+    <string name="about_logo_content_description">
+        Protocol Berg v2 Logo
+    </string>
+</resources>

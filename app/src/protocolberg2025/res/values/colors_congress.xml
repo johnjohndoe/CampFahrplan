@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="pressed_congress">#CC0099AB</color>
+
+    <!-- Default state -->
+
+    <color name="track_background_default">#666</color>
+    <color name="track_background_default_consensus">#353a0d</color>
+    <color name="track_background_default_cryptography">#cc6600</color>
+    <color name="track_background_default_general">#b61516</color>
+    <color name="track_background_default_infrastructure">#f451a7</color>
+    <color name="track_background_default_miscellaneous">#48138A</color>
+    <color name="track_background_default_networking">#783d81</color>
+    <color name="track_background_default_philosophy">#3d8b3b</color>
+    <color name="track_background_default_storage">#2b6391</color>
+
+    <!-- Highlight state -->
+
+    <color name="track_background_highlight">#888</color>
+    <color name="track_background_highlight_consensus">#5b6317</color>
+    <color name="track_background_highlight_cryptography">#ff7f00</color>
+    <color name="track_background_highlight_general">#e41a1c</color>
+    <color name="track_background_highlight_infrastructure">#f781bf</color>
+    <color name="track_background_highlight_miscellaneous">#5E19B3</color>
+    <color name="track_background_highlight_networking">#984ea3</color>
+    <color name="track_background_highlight_philosophy">#4daf4a</color>
+    <color name="track_background_highlight_storage">#377eb8</color>
+
+</resources>

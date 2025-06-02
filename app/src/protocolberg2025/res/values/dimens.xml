@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="schedule_time_column_box_height">40dp</dimen>
+
+</resources>

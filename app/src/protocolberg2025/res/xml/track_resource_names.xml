@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<map linked="true">
+
+    <entry key="Consensus">consensus</entry>
+    <entry key="Cryptography">cryptography</entry>
+    <entry key="General">general</entry>
+    <entry key="Infrastructure">infrastructure</entry>
+    <entry key="Miscellaneous">miscellaneous</entry>
+    <entry key="Networking">networking</entry>
+    <entry key="Philosophy">philosophy</entry>
+    <entry key="Storage">storage</entry>
+    <entry key=""></entry>
+
+</map>

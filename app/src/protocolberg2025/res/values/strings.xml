@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Protocol Berg Schedule</string>
+    <string name="app_hardcoded_subtitle">
+        June 12 – 13 2025, Colosseum, Berlin
+    </string>
+    <string name="conference_name" translatable="false">Protocol Berg</string>
+    <string name="copyright_logo">
+        Protocol Berg v2 logo: CC BY-NC-SA 4.0 Department of Decentralization
+    </string>
+    <string name="about_logo_content_description">
+        Protocol Berg v2 logo
+    </string>
+</resources>
