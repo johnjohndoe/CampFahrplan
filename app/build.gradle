@@ -20,8 +20,8 @@ android {
     buildToolsVersion = Android.buildToolsVersion
 
     defaultConfig {
-        versionCode 108
-        versionName "1.70.0"
+        versionCode 109
+        versionName "1.70.1"
         minSdk Android.minSdkVersion
         targetSdk Android.targetSdkVersion
         base.archivesName = "Fahrplan-$versionName"
@@ -137,6 +137,7 @@ android {
         protocolberg2025 {
             dimension defaultDimension
             applicationId "info.metadude.android.protocolberg.schedule"
+            versionName "${defaultConfig.versionName}-Protocol-Berg-Edition"
             buildConfigField "String", "GOOGLE_PLAY_URL", '"https://play.google.com/store/apps/details?id=info.metadude.android.protocolberg.schedule"'
             buildConfigField "String", "F_DROID_URL", '"https://f-droid.org/packages/info.metadude.android.protocolberg.schedule"'
             buildConfigField "String", "SCHEDULE_URL", '"https://cfp.protocol.berlin/protocol-berg-v2/schedule/export/schedule.xml"'
