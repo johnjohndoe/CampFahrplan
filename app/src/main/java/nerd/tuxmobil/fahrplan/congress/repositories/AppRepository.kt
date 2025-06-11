@@ -1179,6 +1179,7 @@ object AppRepository : SearchRepository,
     fun updateDisplayDayIndex(displayDayIndex: Int) {
         sharedPreferencesRepository.setDisplayDayIndex(displayDayIndex)
         refreshUncanceledSessions()
+        refreshSessionsWithoutShifts()
     }
 
     fun readInsistentAlarmsEnabled() =
