@@ -84,6 +84,7 @@ android {
     signingConfigs {
         cccamp2023
         ccc38c3
+        foss4g2025
     }
 
     def defaultDimension = "default"
@@ -132,6 +133,21 @@ android {
             buildConfigField "String", "SOCIAL_MEDIA_HASHTAGS_HANDLES", '"#38c3 #fahrplan"'
             buildConfigField "String", "TRACE_DROID_EMAIL_ADDRESS", '"tobias.preuss+38c3@googlemail.com"'
             buildConfigField "String", "SCHEDULE_FEEDBACK_URL", '""'
+        }
+        foss4g2025 {
+            dimension defaultDimension
+            applicationId "info.metadude.android.foss4g.schedule"
+            versionName "${defaultConfig.versionName}-FOSS4G-Europe-Edition"
+            buildConfigField "String", "GOOGLE_PLAY_URL", '"https://play.google.com/store/apps/details?id=info.metadude.android.foss4g.schedule"'
+            buildConfigField "String", "F_DROID_URL", '"https://f-droid.org/packages/info.metadude.android.foss4g.schedule"'
+            buildConfigField "String", "SCHEDULE_URL", '"https://talks.osgeo.org/foss4g-europe-2025/schedule/export/schedule.xml"'
+            buildConfigField "String", "EVENT_URL", '""'
+            buildConfigField "String", "EVENT_WEBSITE_URL", '"https://2025.europe.foss4g.org"'
+            buildConfigField "String", "EVENT_POSTAL_ADDRESS", '"Filozofski fakultet, Matice hrvatske b.b. 88000 Mostar"'
+            buildConfigField "String", "SERVER_BACKEND_TYPE", '"pretalx"'
+            buildConfigField "String", "SOCIAL_MEDIA_HASHTAGS_HANDLES", '"#FOSS4G #FOSS4GE #fahrplan @foss4geurope@fosstodon.org @foss4ge"'
+            buildConfigField "String", "TRACE_DROID_EMAIL_ADDRESS", '"tobias.preuss+foss4ge@googlemail.com"'
+            buildConfigField "String", "SCHEDULE_FEEDBACK_URL", '"https://talks.osgeo.org/foss4g-europe-2025/talk/%s/feedback/"'
         }
     }
 
