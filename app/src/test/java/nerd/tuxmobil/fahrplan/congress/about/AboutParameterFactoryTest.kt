@@ -22,7 +22,7 @@ class AboutParameterFactoryTest {
             subtitle = "Unlocked",
         )
         val expected = AboutParameter(
-            title = "37th Chaos Communication Congress",
+            title = "",
             subtitle = "Unlocked",
             eventLocation = PostalAddress("Congressplatz 1, 20355 Hamburg"),
             eventUrl = Html.of("https://events.ccc.de/congress/2023/"),
@@ -56,7 +56,7 @@ class AboutParameterFactoryTest {
             subtitle = "",
         )
         val expected = AboutParameter(
-            title = "37C3 Schedule",
+            title = "",
             subtitle = "December 27–30 2023, Congress Center Hamburg",
             eventLocation = PostalAddress("Congressplatz 1, 20355 Hamburg"),
             eventUrl = Html.of("https://events.ccc.de/congress/2023/"),
@@ -90,7 +90,7 @@ class AboutParameterFactoryTest {
             subtitle = "",
         )
         val expected = AboutParameter(
-            title = "37C3 Schedule",
+            title = "",
             subtitle = "",
             eventLocation = PostalAddress("Congressplatz 1, 20355 Hamburg"),
             eventUrl = Html.of("https://events.ccc.de/congress/2023/"),
