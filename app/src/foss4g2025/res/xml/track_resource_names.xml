@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<map linked="true">
+
+    <entry key="">other</entry>
+    <entry key="Academic track">academic_track</entry>
+    <entry key="Birds of a Feather (BoF)">birds_of_a_feather_bof</entry>
+    <entry key="Building a business with FOSS4G">building_a_business_with_foss4g</entry>
+    <entry key="Community &amp; Foundation">community_foundation</entry>
+    <entry key="FOSS4G in education and research">foss4g_in_education_and_research</entry>
+    <entry key="FOSS4G ‘Made in Europe’">foss4g_made_in_europe</entry>
+    <entry key="Keynote">keynote</entry>
+    <entry key="Open Data">open_data</entry>
+    <entry key="Open community">open_community</entry>
+    <entry key="Open standards and interoperability for geospatial">open_standards_and_interoperability_for_geospatial</entry>
+    <entry key="Plenary">plenary</entry>
+    <entry key="State of software">state_of_software</entry>
+    <entry key="Transition to FOSS4G">transition_to_foss4g</entry>
+    <entry key="Use cases &amp; applications">use_cases_applications</entry>
+
+</map>

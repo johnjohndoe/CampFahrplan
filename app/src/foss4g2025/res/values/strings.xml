@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">FOSS4G Europe 2025</string>
+    <string name="app_hardcoded_subtitle">July 20 – 14 2025, University of Mostar</string>
+    <string name="conference_name" translatable="false">FOSS4G Europe 2025</string>
+    <string name="copyright_logo">
+        FOSS4G Europe Mostar 2025 logo: Creative Commons, CC0
+    </string>
+    <string name="about_logo_content_description">
+        FOSS4G Europe Mostar 2025 logo
+    </string>
+</resources>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="text_primary">#000</color>
+    <color name="text_primary_inverted">#000</color>
+    <color name="text_secondary">#1A1A1A</color>
+    <color name="text_secondary_inverted">#1A1A1A</color>
+    <color name="colorPrimary">#88ccc5</color>
+    <color name="colorPrimaryDark">#78B3A9</color>
+    <color name="colorAccent">#2b6057</color>
+    <color name="colorActionBar">@color/colorPrimary</color>
+    <color name="windowBackground">#efece7</color>
+    <color name="multi_choice_background">#ffc600</color>
+    <color name="text_link_on_light">@color/colorAccent</color>
+    <color name="session_alarm_item_bell_icon_fill">@color/colorAccent</color>
+    <color name="session_alarm_item_bell_icon_text">#fff</color>
+
+    <!-- Tool bar -->
+    <color name="tool_bar_icon">@color/colorAccent</color>
+
+    <!-- Schedule screen -->
+    <color name="schedule_time_column_background">@color/windowBackground</color>
+    <color name="schedule_time_column_item_background_normal">@color/colorPrimary</color>
+    <color name="schedule_time_column_item_background_emphasized">@color/colorAccent</color>
+    <color name="schedule_time_column_item_text_normal">@color/colorAccent</color>
+    <color name="schedule_time_column_item_text_emphasized">#fff</color>
+    <color name="schedule_horizontal_time_line">#4dbdaf9c</color>
+    <color name="schedule_room_name_header_background">@color/colorPrimary</color>
+    <color name="schedule_room_name_header_text">@color/colorAccent</color>
+    <color name="session_drawable_selection_stroke">#bdaf9c</color>
+    <color name="session_item_text_on_default_background">#fff</color>
+    <color name="session_item_text_on_highlight_background">#fff</color>
+
+    <!-- Favorites -->
+    <color name="favorites_past_session_text">#b8b8b8</color>
+
+    <!-- Session details -->
+    <color name="session_details_list_item">@color/colorAccent</color>
+    <color name="session_detailbar_background">@color/colorPrimaryDark</color>
+    <color name="session_detailbar_text">#444</color>
+    <color name="session_detailbar_icon">#fff</color>
+
+</resources>

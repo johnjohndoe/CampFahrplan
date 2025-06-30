@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="copyright_logo">
+        FOSS4G Europe Mostar 2025 logo: Creative Commons, CC0
+    </string>
+    <string name="about_logo_content_description">
+        FOSS4G Europe Mostar 2025 logo
+    </string>
+</resources>
