@@ -39,7 +39,6 @@ import androidx.core.net.toUri
 import androidx.core.view.MenuProvider
 import androidx.core.view.isInvisible
 import androidx.core.view.isVisible
-import androidx.core.view.size
 import androidx.core.view.updatePadding
 import androidx.core.widget.NestedScrollView
 import androidx.core.widget.NestedScrollView.OnScrollChangeListener
@@ -122,12 +121,6 @@ class FahrplanFragment : Fragment(), MenuProvider {
     private var onSessionClickListener: OnSessionClickListener? = null
     private var lastSelectedSession: Session? = null
     private var displayDensityScale = 0f
-
-    /**
-     * Cache of the already rendered RoomData
-     * Used to redraw only the rooms that visually change (e.g. because a session is favored)
-     */
-    private val renderedRoomHashByRoomName = mutableMapOf<String, Int>()
 
     override fun onAttach(context: Context) {
         super.onAttach(context)
@@ -391,6 +384,7 @@ class FahrplanFragment : Fragment(), MenuProvider {
         useDeviceTimeZone: Boolean,
     ) {
         val columnsLayout = horizontalScroller.getChildAt(0) as LinearLayout
+        columnsLayout.removeAllViews()
         val context = horizontalScroller.context
         val roomDataList = scheduleData.roomDataList
 
@@ -404,8 +398,6 @@ class FahrplanFragment : Fragment(), MenuProvider {
 
         for (roomIndex in roomDataList.indices) {
             val roomData = roomDataList[roomIndex]
-            if (renderedRoomHashByRoomName[roomData.roomName] == roomData.hashCode()) continue
-
             val layoutParamsBySession = layoutCalculator.calculateLayoutParams(roomData, conference)
 
             // Prepare the room column data with all necessary conversions done up front
@@ -438,12 +430,7 @@ class FahrplanFragment : Fragment(), MenuProvider {
                     )
                 }
             }
-
-            if (columnsLayout.size > roomIndex) {
-                columnsLayout.removeViewAt(roomIndex)
-            }
-            columnsLayout.addView(roomColumnView, roomIndex)
-            renderedRoomHashByRoomName[roomData.roomName] = roomData.hashCode()
+            columnsLayout.addView(roomColumnView)
         }
     }
 
