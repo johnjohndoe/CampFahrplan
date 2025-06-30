@@ -76,7 +76,7 @@ internal class MetaDBOpenHelper(context: Context) : SQLiteOpenHelper(
             }
         }
         if (oldVersion < 10) {
-            // Clear database from Camp 2023 & 37C3 2023.
+            // Clear database from Camp 2023 & 37C3 2023 & FOSS4GE Mostar 2025.
             dropTableIfExist(NAME)
             onCreate(this)
         }
