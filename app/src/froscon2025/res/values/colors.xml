@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="text_primary">#fff</color>
+    <color name="text_secondary">#eef5fe</color>
+    <color name="text_tertiary">#c6c</color>
+    <color name="colorPrimary">#41afff</color>
+    <color name="colorPrimaryDark">#378bcc</color>
+    <color name="colorAccent">#41afff</color>
+    <color name="colorActionBar">@color/colorPrimary</color>
+    <color name="windowBackground">#4d4d4d</color>
+    <color name="multi_choice_background">#41afff</color>
+    <color name="session_alarm_item_bell_icon_text">#fff</color>
+
+    <!-- Alarm dialogs -->
+    <color name="alert_dialog_button_text">#fff</color>
+
+    <!-- Schedule screen -->
+    <color name="schedule_horizontal_scrolling_progress_line">#fff</color>
+    <color name="session_item_text_on_default_background">#e6e6e6</color>
+
+    <!-- Favorites -->
+    <color name="favorites_past_session_text">#a6a6a6</color>
+
+    <!-- Session details -->
+    <color name="session_detailbar_text">#444</color>
+
+</resources>

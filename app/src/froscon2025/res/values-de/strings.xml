@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">FrOSCon 2025 Fahrplan</string>
+    <string name="app_hardcoded_subtitle">Free and Open Source Software Conference, 16. + 17. August, Hochschule Bonn-Rhein-Sieg</string>
+    <string name="copyright_logo">
+        <![CDATA[<a href="https://www.froscon.org">Das FrOSCon-Logo steht unter der Creative Commons License.]]>
+    </string>
+    <string name="about_logo_content_description">
+        FrOSCon Frosch Logo
+    </string>
+</resources>

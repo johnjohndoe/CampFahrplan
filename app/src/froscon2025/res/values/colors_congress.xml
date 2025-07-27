@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Default state -->
+
+    <color name="track_background_default">@color/colorPrimaryDark</color>
+    <color name="track_background_default_cloud">#800509</color>
+    <color name="track_background_default_clouds_over_europe_digital_soverignty_and_broken_promises">#904000</color>
+    <color name="track_background_default_culture">#8e5c00</color>
+    <color name="track_background_default_database">#866300</color>
+    <color name="track_background_default_development">#417000</color>
+    <color name="track_background_default_devops">#00702c</color>
+    <color name="track_background_default_does_it_matter_smart_home_in_2025">#006241</color>
+    <color name="track_background_default_education">#00615b</color>
+    <color name="track_background_default_eingeschraenkt_nutzbar_european_accessibility_act">#00627a</color>
+    <color name="track_background_default_gis">#005c85</color>
+    <color name="track_background_default_lecture">#00306e</color>
+    <color name="track_background_default_lightning_talk">#704500</color>
+    <color name="track_background_default_mobile">#0044b0</color>
+    <color name="track_background_default_network">#211f70</color>
+    <color name="track_background_default_other">#4d178f</color>
+    <color name="track_background_default_reproducible_papers_open_source_in_computer_science">#6b13b2</color>
+    <color name="track_background_default_retro_computing_vaxination_becoming_cool_again">#6b13b2</color>
+    <color name="track_background_default_security">#9303a6</color>
+    <color name="track_background_default_system_administration">#a5075a</color>
+    <color name="track_background_default_web_development">#8A0022</color>
+    <color name="track_background_default_when_the_autopilot_fails_risks_and_side_effects_of_ai">#413e39</color>
+    <color name="track_background_default_workshop">#3b1840</color>
+
+    <!-- Highlight state -->
+
+    <color name="track_background_highlight">@color/colorPrimary</color>
+    <color name="track_background_highlight_cloud">#99060b</color>
+    <color name="track_background_highlight_clouds_over_europe_digital_soverignty_and_broken_promises">#ad4d00</color>
+    <color name="track_background_highlight_culture">#ac6f00</color>
+    <color name="track_background_highlight_database">#9a7600</color>
+    <color name="track_background_highlight_development">#4e8500</color>
+    <color name="track_background_highlight_devops">#008a36</color>
+    <color name="track_background_highlight_does_it_matter_smart_home_in_2025">#00744e</color>
+    <color name="track_background_highlight_education">#00716d</color>
+    <color name="track_background_highlight_eingeschraenkt_nutzbar_european_accessibility_act">#00748e</color>
+    <color name="track_background_highlight_gis">#006ea1</color>
+    <color name="track_background_highlight_lecture">#003d85</color>
+    <color name="track_background_highlight_lightning_talk">#855600</color>
+    <color name="track_background_highlight_mobile">#0053d2</color>
+    <color name="track_background_highlight_network">#28239a</color>
+    <color name="track_background_highlight_other">#5c1cae</color>
+    <color name="track_background_highlight_reproducible_papers_open_source_in_computer_science">#8016d6</color>
+    <color name="track_background_highlight_retro_computing_vaxination_becoming_cool_again">#8016d6</color>
+    <color name="track_background_highlight_security">#ae04c2</color>
+    <color name="track_background_highlight_system_administration">#c0086d</color>
+    <color name="track_background_highlight_web_development">#a60029</color>
+    <color name="track_background_highlight_when_the_autopilot_fails_risks_and_side_effects_of_ai">#4e473f</color>
+    <color name="track_background_highlight_workshop">#461e4d</color>
+
+</resources>
