@@ -15,7 +15,7 @@ class GooglePlayBetaTestingSnack(val context: Context) : GooglePlayOpenBetaTestS
         overrideActionText(context.getString(R.string.snack_engage_google_play_beta_testing_action))
         withConditions(
                 NeverAgainWhenClickedOnce(),
-                AfterNumberOfOpportunities(21),
+                AfterNumberOfOpportunities(9),
                 IsConnectedViaWiFiOrUnknown(),
                 IsInstalledViaGooglePlay(), // Prevents the snack from being shown for local installs, too!
         )
