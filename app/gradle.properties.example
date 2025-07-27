@@ -7,3 +7,8 @@ signing.ccc38c3-release.keystoreFilePath=/home/USERNAME/.android/ccc38c3-release
 signing.ccc38c3-release.keystorePassword="PASSWORD"
 signing.ccc38c3-release.keyAlias="ccc38c3"
 signing.ccc38c3-release.keyPassword="ANOTHERPASSWORD"
+
+signing.froscon2025-release.keystoreFilePath=/home/USERNAME/.android/froscon-release-key.keystore
+signing.froscon2025-release.keystorePassword="PASSWORD"
+signing.froscon2025-release.keyAlias="froscon"
+signing.froscon2025-release.keyPassword="ANOTHERPASSWORD"
