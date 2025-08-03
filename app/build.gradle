@@ -84,6 +84,7 @@ android {
     signingConfigs {
         cccamp2023
         ccc38c3
+        hope2025
     }
 
     def defaultDimension = "default"
@@ -131,6 +132,23 @@ android {
             resValue("string", "preference_hint_engelsystem_json_export_url", '"https://engel.events.ccc.de/shifts-json-export?key=YOUR_KEY"')
             buildConfigField "String", "SOCIAL_MEDIA_HASHTAGS_HANDLES", '"#38c3 #fahrplan"'
             buildConfigField "String", "TRACE_DROID_EMAIL_ADDRESS", '"tobias.preuss+38c3@googlemail.com"'
+            buildConfigField "String", "SCHEDULE_FEEDBACK_URL", '""'
+        }
+        hope2025 {
+            dimension defaultDimension
+            applicationId "info.metadude.android.hope.schedule"
+            versionName "${defaultConfig.versionName}-HOPE-Edition"
+            buildConfigField "String", "GOOGLE_PLAY_URL", '"https://play.google.com/store/apps/details?id=info.metadude.android.hope.schedule"'
+            buildConfigField "String", "F_DROID_URL", '"https://f-droid.org/packages/info.metadude.android.hope.schedule"'
+            buildConfigField "String", "SCHEDULE_URL", '"https://schedule.hope.net/hope16/schedule/export/schedule.xml"'
+            buildConfigField "String", "EVENT_URL", '""'
+            buildConfigField "String", "EVENT_WEBSITE_URL", '"https://hope.net"'
+            buildConfigField "String", "EVENT_POSTAL_ADDRESS", '"St. John\'s University, Queens, New York City"'
+            buildConfigField "String", "SERVER_BACKEND_TYPE", '"pretalx"'
+            buildConfigField "boolean", "ENABLE_ENGELSYSTEM_SHIFTS", "true"
+            resValue("string", "preference_hint_engelsystem_json_export_url", '"https://volunteer.hope.net/shifts-json-export?key=YOUR_KEY"')
+            buildConfigField "String", "SOCIAL_MEDIA_HASHTAGS_HANDLES", '"#HOPE_16 #hopeconf #hacktheplanet #fahrplan @hopeconf@mastodon.online"'
+            buildConfigField "String", "TRACE_DROID_EMAIL_ADDRESS", '"tobias.preuss+hope@googlemail.com"'
             buildConfigField "String", "SCHEDULE_FEEDBACK_URL", '""'
         }
     }
