@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">HOPE_16</string>
+    <string name="app_hardcoded_subtitle">August 15–17 2025</string>
+    <string name="conference_name" translatable="false">HOPE 16</string>
+    <string name="copyright_logo">
+        The HOPE owl artwork is copyright Stefan Malenski.
+    </string>
+    <string name="about_logo_content_description">
+        HOPE logo: head of an owl
+    </string>
+</resources>

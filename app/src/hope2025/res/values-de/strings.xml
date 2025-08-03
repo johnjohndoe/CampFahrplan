@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">HOPE_16</string>
+    <string name="app_hardcoded_subtitle">15.-17. August 2025</string>
+    <string name="copyright_logo">
+        Die Eulen-Grafik für HOPE unterliegt dem Copyright von Stefan Malenski.
+    </string>
+    <string name="about_logo_content_description">
+        HOPE Logo: Kopf einer Eule
+    </string>
+</resources>

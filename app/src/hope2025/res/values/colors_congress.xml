@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Default state -->
+    <color name="track_background_default">#4D4D4D</color>
+    <color name="track_background_default_art_culture">#596580</color>
+    <color name="track_background_default_ccc">#996E23</color>
+    <color name="track_background_default_entertainment">#663414</color>
+    <color name="track_background_default_ethics_society_politics">#596580</color>
+    <color name="track_background_default_event">#a96f00</color>
+    <color name="track_background_default_hardware_making">#4d5c2e</color>
+    <color name="track_background_default_music">#454973</color>
+    <color name="track_background_default_performances">#587A2C</color>
+    <color name="track_background_default_science">#6F4373</color>
+    <color name="track_background_default_security">#4d5c2e</color>
+    <color name="track_background_default_sos">#39662B</color>
+    <color name="track_background_default_talks_panels">#29665C</color>
+    <color name="track_background_default_workshops">#2B188C</color>
+    <color name="track_background_default_villages">#8F1B47</color>
+
+    <!-- Highlight state -->
+    <color name="track_background_highlight">#808080</color>
+    <color name="track_background_highlight_art_culture">#859BCC</color>
+    <color name="track_background_highlight_ccc">#e6a535</color>
+    <color name="track_background_highlight_entertainment">#cc8352</color>
+    <color name="track_background_highlight_ethics_society_politics">#859BCC</color>
+    <color name="track_background_highlight_event">#dc9000</color>
+    <color name="track_background_highlight_hardware_making">#97b34b</color>
+    <color name="track_background_highlight_music">#737ABF</color>
+    <color name="track_background_highlight_performances">#7DAD3E</color>
+    <color name="track_background_highlight_science">#b873bf</color>
+    <color name="track_background_highlight_security">#97b34b</color>
+    <color name="track_background_highlight_sos">#63B34B</color>
+    <color name="track_background_highlight_talks_panels">#3D998E</color>
+    <color name="track_background_highlight_villages">#C22561</color>
+    <color name="track_background_highlight_workshops">#3d21c8</color>
+
+</resources>

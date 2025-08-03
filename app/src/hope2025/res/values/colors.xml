@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorPrimary">#303030</color>
+    <color name="colorPrimaryDark">#262626</color>
+    <color name="colorAccent">#2be51d</color>
+    <color name="colorActionBar">@color/colorPrimary</color>
+    <color name="windowBackground">#1a1a1a</color>
+    <color name="multi_choice_background">#ffc600</color>
+    <color name="session_alarm_item_bell_icon_text">#fff</color>
+    <color name="text_link_on_light">#188011</color>
+
+    <!-- Tool bar -->
+    <color name="tool_bar_icon">@color/colorAccent</color>
+
+    <!-- Schedule screen -->
+    <color name="session_item_text_on_default_background">#fff</color>
+
+    <!-- Session details -->
+    <color name="session_detailbar_background">@color/colorPrimaryDark</color>
+    <color name="session_detailbar_text">@color/colorAccent</color>
+    <color name="session_detailbar_icon">#ffbf00</color>
+
+</resources>
