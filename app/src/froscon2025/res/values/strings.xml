@@ -4,9 +4,10 @@
     <string name="app_hardcoded_subtitle">Free and Open Source Software Conference, August 16-17, Hochschule Bonn-Rhein-Sieg</string>
     <string name="conference_name" translatable="false">FrOSCon</string>
     <string name="copyright_logo">
-        <![CDATA[<a href="https://www.froscon.org">The FrOSCon logo is published under the Creative Commons License.]]>
+        The FrOSCon logo is published under the <![CDATA[<a href="https://creativecommons.org/licenses/by-nd/3.0/de/">Creative Commons License (CC BY-ND 3.0 DE)]]>.
     </string>
     <string name="about_logo_content_description">
-        FrOSCon frog logo
+        FrOSCon logo: The word froscon with a frog stanced into the first "o" letter.
+        Below: Free and Open Source Software Conference
     </string>
 </resources>
