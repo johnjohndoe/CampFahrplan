@@ -85,14 +85,10 @@ internal class MetaDBOpenHelper(context: Context) : SQLiteOpenHelper(
             onCreate(this)
         }
         if (oldVersion < 11) {
-            if (!columnExists(NAME, SCHEDULE_GENERATOR_NAME)) {
-                addTextColumn(SCHEDULE_GENERATOR_NAME, default = null)
-            }
-            if (!columnExists(NAME, SCHEDULE_GENERATOR_VERSION)) {
-                addTextColumn(SCHEDULE_GENERATOR_VERSION, default = null)
-            }
+            // Clear database from MRMCD 2024.
+            dropTableIfExist(NAME)
+            onCreate(this)
         }
-
     }
 }
 
