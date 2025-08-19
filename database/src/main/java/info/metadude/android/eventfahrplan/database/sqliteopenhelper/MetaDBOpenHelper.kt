@@ -26,7 +26,7 @@ internal class MetaDBOpenHelper(context: Context) : SQLiteOpenHelper(
 ) {
 
     private companion object {
-        const val DATABASE_VERSION = 11
+        const val DATABASE_VERSION = 14
         const val DATABASE_NAME = "meta"
 
         // language=sql
@@ -92,7 +92,11 @@ internal class MetaDBOpenHelper(context: Context) : SQLiteOpenHelper(
                 addTextColumn(SCHEDULE_GENERATOR_VERSION, default = null)
             }
         }
-
+        if (oldVersion < 14) {
+            // Clear database from MRMCD 2024.
+            dropTableIfExist(NAME)
+            onCreate(this)
+        }
     }
 }
 
