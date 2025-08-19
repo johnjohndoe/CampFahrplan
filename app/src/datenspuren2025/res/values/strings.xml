@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Datenspuren 2025</string>
+    <string name="app_hardcoded_subtitle">Under Construction! September 19.-21. 2025, Zentralwerk</string>
+    <string name="conference_name" translatable="false">Datenspuren 2025</string>
+    <string name="copyright_logo">
+        Design of the Datenspuren logo: nek0
+    </string>
+    <string name="about_logo_content_description">
+        Datenspuren 2025 logo
+    </string>
+</resources>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<map linked="true">
+
+    <entry key="Andere">other</entry>
+    <entry key="Gesellschaft">gesellschaft</entry>
+    <entry key="JungHackende">junghackende</entry>000000
+    <entry key="Ki">ki</entry>
+    <entry key="Kunst">kunst</entry>
+    <entry key="Kunst, Musik, Installationen">kunst</entry>
+    <entry key="Other">other</entry>
+    <entry key="Sicherheit">sicherheit</entry>
+    <entry key="Technik">technik</entry>
+    <entry key="Treffen">treffen</entry>
+    <entry key="Unterhaltung">unterhaltung</entry>
+    <entry key="Vortrag">talk</entry>
+    <entry key="Workshop">workshop</entry>
+    <entry key="Zeitenwende">zeitenwende</entry>
+    <entry key="">other</entry>
+
+</map>
