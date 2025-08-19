@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MRMCD 2025 Schedule</string>
+    <string name="app_hardcoded_subtitle">September 12&#8211;14, 2025, Robert-Piloty building at TU-Darmstadt</string>
+    <string name="conference_name" translatable="false">MRMCD</string>
+    <string name="copyright_logo">
+        <![CDATA[The name MRMCD is a registered trademark of
+        <a href="https://2025.mrmcd.net">MRMCD e.V.</a> The MRMCD 2025 design was crafted by
+        <a href="https://leifs.website">Leif Niemczik</a>. Used with permission.]]>
+    </string>
+    <string name="about_logo_content_description">
+        MRMCD 2025 logo: A transparent, open folder icon.
+    </string>
+</resources>

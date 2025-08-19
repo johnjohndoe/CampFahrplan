@@ -102,7 +102,7 @@ fun RoomColumn(
 @Composable
 fun SessionCard(
     data: SessionCardData,
-    contextMenuTextColor: Color = LocalColorScheme.current.inverseOnSurface,
+    contextMenuTextColor: Color = LocalColorScheme.current.onSurface,
     sessionCardLayout: @Composable ColumnScope.() -> Unit,
     onClick: () -> Unit,
     onMenuItemClick: (SessionInteractionType) -> Unit,

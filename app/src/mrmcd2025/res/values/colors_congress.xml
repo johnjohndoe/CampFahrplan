@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Default state -->
+    <color name="track_background_default">#777</color>
+    <color name="track_background_default_kunst_kultur">#00ad79</color>
+    <color name="track_background_default_talk">#cc9200</color>
+    <color name="track_background_default_workshop">#0067c2</color>
+
+    <!-- Highlight state -->
+    <color name="track_background_highlight">#999</color>
+    <color name="track_background_highlight_kunst_kultur">#00c88d</color>
+    <color name="track_background_highlight_talk">#ffb600</color>
+    <color name="track_background_highlight_workshop">#0082f4</color>
+
+</resources>

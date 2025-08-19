@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MRMCD 2025 Fahrplan</string>
+    <string name="app_hardcoded_subtitle">12.&#8211;14. September 2025, Robert-Piloty-Gebäude der TU-Darmstadt</string>
+    <string name="copyright_logo">
+        <![CDATA[Der Name MRMCD ist ein registriertes Markenzeichen des
+        <a href="https://2025.mrmcd.net">MRMCD e.V.</a> Das Design zur MRMCD 2025
+        wurde von <a href="https://leifs.website">Leif Niemczik</a> gestaltet.
+        Die Nutzung erfolgt mit Erlaubnis.]]>
+    </string>
+    <string name="about_logo_content_description">
+        MRMCD 2025 Logo: Ein transparentes, geöffnetes Dateiordner-Symbol.
+    </string>
+</resources>
