@@ -191,6 +191,9 @@ fun SessionNetworkModel.sanitize(): SessionNetworkModel {
     if (tempAbstract == tempDescription) {
         tempAbstract = ""
     }
+    tempAbstract = tempAbstract.replace("<p>", "")
+    tempAbstract = tempAbstract.replace("</p>", "")
+    tempAbstract = tempAbstract.replace("\n", "<br>")
     if (tempDescription.startsWith(tempAbstract)) {
         tempDescription = tempDescription
             .substring(tempAbstract.length)
@@ -210,6 +213,10 @@ fun SessionNetworkModel.sanitize(): SessionNetworkModel {
         tempDescription = tempAbstract
         tempAbstract = ""
     }
+    tempDescription = tempDescription.replace("<p>", "")
+    tempDescription = tempDescription.replace("</p>", "")
+    tempDescription = tempDescription.replace("\n", "<br>")
+    tempDescription = tempDescription.replace("</li><br>", "</li>")
     if (tempLanguage.isNotEmpty()) {
         tempLanguage = tempLanguage.lowercase()
     }
