@@ -84,6 +84,7 @@ android {
     signingConfigs {
         cccamp2023
         ccc39c3
+        fosdem
     }
 
     def defaultDimension = "default"
@@ -133,6 +134,26 @@ android {
             buildConfigField "String", "TRACE_DROID_EMAIL_ADDRESS", '"tobias.preuss+39c3@googlemail.com"'
             buildConfigField "String", "SCHEDULE_FEEDBACK_URL", '""'
         }
+        fosdem {
+            dimension defaultDimension
+            applicationId "info.metadude.android.fosdem.schedule"
+            versionName "${defaultConfig.versionName}-FOSDEM-Edition"
+            buildConfigField "String", "GOOGLE_PLAY_URL", '"https://play.google.com/store/apps/details?id=info.metadude.android.fosdem.schedule"'
+            buildConfigField "String", "F_DROID_URL", '"https://f-droid.org/packages/info.metadude.android.fosdem.schedule"'
+            buildConfigField "String", "SCHEDULE_URL", '"https://fosdem.org/2026/schedule/xml"'
+            buildConfigField "String", "EVENT_URL", '"https://fosdem.org/2026/schedule/event/%1$s/"'
+            buildConfigField "String", "EVENT_WEBSITE_URL", '"https://fosdem.org"'
+            buildConfigField "String", "EVENT_POSTAL_ADDRESS", '"Av. Franklin Roosevelt 50, 1050 Bruxelles"'
+            buildConfigField "String", "SERVER_BACKEND_TYPE", '"pentabarf"'
+            buildConfigField "String", "C3NAV_URL", '"https://nav.fosdem.org/l/"'
+            buildConfigField "String", "SOCIAL_MEDIA_HASHTAGS_HANDLES", '"#FOSDEM #FOSDEM25 #FOSDEM2026 #fahrplan @fosdem@fosstodon.org @fosdem"'
+            buildConfigField "String", "TRACE_DROID_EMAIL_ADDRESS", '"tobias.preuss+fosdem@googlemail.com"'
+            buildConfigField "String", "SCHEDULE_FEEDBACK_URL", '"https://submission.fosdem.org/feedback/%1$s.php"'
+            buildConfigField "boolean", "ENABLE_FOSDEM_ROOM_STATES", "true"
+            buildConfigField "String", "FOSDEM_ROOM_STATES_URL", '"https://api.fosdem.org"'
+            buildConfigField "String", "FOSDEM_ROOM_STATES_PATH", '"/roomstatus/v1/listrooms"'
+        }
+
     }
 
     productFlavors.configureEach { flavor ->
