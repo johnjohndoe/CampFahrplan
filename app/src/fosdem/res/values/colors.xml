@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="text_primary">#000</color>
+    <color name="text_primary_inverted">@color/text_primary</color>
+    <color name="text_secondary">#1A1A1A</color>
+    <color name="text_secondary_inverted">@color/text_secondary</color>
+    <color name="colorPrimary">#CC3F9D</color>
+    <color name="colorPrimaryDark">#FA4DC0</color>
+    <color name="colorAccent">#ad3192</color>
+    <color name="windowBackground">#E6E6E6</color>
+    <color name="multi_choice_background">#40ad3192</color>
+
+    <!-- App bar -->
+    <color name="app_bar_action_icon">@color/text_primary</color>
+
+    <!-- Alarms -->
+    <color name="session_alarm_item_bell_icon_text">#fff</color>
+
+    <!-- Alarm dialogs -->
+    <color name="alert_dialog_button_text">@color/text_primary</color>
+
+    <!-- Schedule screen -->
+    <color name="schedule_time_column_background">@color/colorPrimary</color>
+    <color name="schedule_time_column_item_background_normal">@color/windowBackground</color>
+    <color name="schedule_time_column_item_background_emphasized">@color/colorPrimary</color>
+    <color name="schedule_time_column_item_text_normal">@color/text_primary</color>
+    <color name="schedule_time_column_item_text_emphasized">@color/text_primary</color>
+    <color name="schedule_room_name_header_background">@color/windowBackground</color>
+    <color name="schedule_room_name_header_text">@color/text_primary</color>
+    <color name="session_drawable_selection_stroke">#000</color>
+    <color name="schedule_horizontal_time_line">#338A2B70</color>
+    <color name="schedule_horizontal_scrolling_progress_line">@color/text_primary</color>
+    <color name="session_item_alarm_icon">@color/windowBackground</color>
+    <color name="session_item_text_on_default_background">#000</color>
+    <color name="session_item_text_on_highlight_background">#000</color>
+
+    <!-- Session details -->
+    <color name="session_details_room_state_info_text">@color/windowBackground</color>
+    <color name="session_detailbar_text">@color/text_secondary</color>
+
+</resources>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">FOSDEM 2026 Schedule</string>
+    <string name="app_hardcoded_subtitle">January 31. - February 1. 2026, ULB, Campus du Solbosch</string>
+    <string name="conference_name" translatable="false">FOSDEM</string>
+    <string name="copyright_logo">
+        The name FOSDEM and the gear logo are registered trademarks of
+        FOSDEM VZW. Used with permission.
+    </string>
+    <string name="about_logo_content_description">
+        FOSDEM gear logo, purple
+    </string>
+</resources>

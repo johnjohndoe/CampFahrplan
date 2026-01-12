@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Schedule screen -->
+    <dimen name="schedule_time_column_box_height">35dp</dimen>
+
+</resources>

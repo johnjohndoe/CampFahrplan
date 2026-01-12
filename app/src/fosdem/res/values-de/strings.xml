@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">FOSDEM 2026 Fahrplan</string>
+    <string name="app_hardcoded_subtitle">31. Januar - 1. Februar 2026, ULB, Campus du Solbosch</string>
+    <string name="copyright_logo">
+        Der Name FOSDEM und das Zahnrad-Logo sind registrierte Markenzeichen der
+        FOSDEM VZW. Die Nutzung erfolgt mit Erlaubnis.
+    </string>
+    <string name="about_logo_content_description">
+        FOSDEM Zahnrad Logo, lila
+    </string>
+</resources>

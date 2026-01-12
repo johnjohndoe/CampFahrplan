@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">FOSDEM 2026 Calendario</string>
+    <string name="app_hardcoded_subtitle">31 de enero – 1 de febrero de 2026, ULB, Campus du Solbosch</string>
+</resources>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="text_primary">#faf5f5</color>
+    <color name="text_secondary">#d4cfcf</color>
+    <color name="colorPrimary">#892a6f</color>
+    <color name="colorPrimaryDark">#73245E</color>
+    <color name="windowBackground">#140612</color>
+
+    <!-- Schedule screen -->
+    <color name="session_drawable_selection_stroke">#fff</color>
+
+    <!-- Session details -->
+    <color name="session_detailbar_background">#260B22</color>
+
+
+</resources>
