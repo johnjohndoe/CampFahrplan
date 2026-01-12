@@ -220,6 +220,11 @@ fun SessionNetworkModel.sanitize(): SessionNetworkModel {
     if (tempLanguage.isNotEmpty()) {
         tempLanguage = tempLanguage.lowercase()
     }
+    if (tempTrack.isNotEmpty() && type.isNotEmpty() && tempTrack.endsWith(type, ignoreCase = true)) {
+        tempTrack = tempTrack
+            .replace(type, "", ignoreCase = true)
+            .trim()
+    }
     if (("Sendezentrum-Bühne" == tempTrack || "Sendezentrum Bühne" == tempTrack || "xHain Berlin" == tempTrack) && type.isNotEmpty()) {
         tempTrack = type
     }
