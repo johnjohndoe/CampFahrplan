@@ -287,7 +287,11 @@ public class ParserTask extends AsyncTask<String, Void, Boolean> {
                         session.setUrl(XmlPullParsers.getSanitizedText(parser));
                     } else if (name.equals("track")) {
                         parser.next();
-                        session.setTrack(XmlPullParsers.getSanitizedText(parser));
+                        String trackText = XmlPullParsers.getSanitizedText(parser);
+                        if (trackText.startsWith("BOFs")) {
+                            trackText = "BOFs";
+                        }
+                        session.setTrack(trackText);
                     } else if (name.equals("type")) {
                         parser.next();
                         session.setType(XmlPullParsers.getSanitizedText(parser));
