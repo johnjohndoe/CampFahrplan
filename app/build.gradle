@@ -146,7 +146,7 @@ android {
             buildConfigField "String", "EVENT_POSTAL_ADDRESS", '"Av. Franklin Roosevelt 50, 1050 Bruxelles"'
             buildConfigField "String", "SERVER_BACKEND_TYPE", '"pentabarf"'
             buildConfigField "String", "C3NAV_URL", '"https://nav.fosdem.org/l/"'
-            buildConfigField "String", "SOCIAL_MEDIA_HASHTAGS_HANDLES", '"#FOSDEM #FOSDEM25 #FOSDEM2026 #fahrplan @fosdem@fosstodon.org @fosdem"'
+            buildConfigField "String", "SOCIAL_MEDIA_HASHTAGS_HANDLES", '"#FOSDEM #FOSDEM26 #FOSDEM2026 #fahrplan @fosdem@fosstodon.org"'
             buildConfigField "String", "TRACE_DROID_EMAIL_ADDRESS", '"tobias.preuss+fosdem@googlemail.com"'
             buildConfigField "String", "SCHEDULE_FEEDBACK_URL", '"https://submission.fosdem.org/feedback/%1$s.php"'
             buildConfigField "boolean", "ENABLE_FOSDEM_ROOM_STATES", "true"
