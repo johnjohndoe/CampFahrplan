@@ -41,7 +41,7 @@ in order to contribute to this project.
 * Share a link to a session with others
 * Keep track of program changes
 * Automatic program updates (configurable in settings)
-* Automatically open session URLs in the app. (only enabled for 39C3)
+* Automatically open session URLs in the app. (only enabled for 39C3 and FOSDEM)
 
 
 ### Supported languages

@@ -6,6 +6,13 @@ class SlugFactory {
 
     fun getSlug(uri: Uri): Slug? {
         when {
+            isFosdemPretalxUri(uri.pathSegments) -> {
+                val slug = getSlug(uri, index = 3)
+                if (!slug.isNullOrEmpty()) {
+                    return Slug.FosdemPretalxSlug(slug)
+                }
+            }
+
             isPretalxUri(uri.pathSegments) -> {
                 val slug = getSlug(uri, index = 4)
                 if (!slug.isNullOrEmpty()) {
@@ -39,6 +46,10 @@ class SlugFactory {
 
     private fun getSlug(uri: Uri, index: Int): String? {
         return uri.pathSegments[index]?.trim()
+    }
+
+    private fun isFosdemPretalxUri(pathSegments: List<String>?): Boolean {
+        return pathSegments != null && pathSegments.size == 4 && pathSegments[1] == "schedule" && pathSegments[2] == "event"
     }
 
     private fun isPretalxUri(pathSegments: List<String>?): Boolean {

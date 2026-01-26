@@ -923,6 +923,7 @@ object AppRepository : SearchRepository,
         val sessions = when (slug) {
             is Slug.HubSlug -> sessionsDatabaseRepository.querySessionsBySlugInSlug(slug.value)
             is Slug.PretalxSlug -> sessionsDatabaseRepository.querySessionsBySlugInFeedbackUrl(slug.value)
+            is Slug.FosdemPretalxSlug -> sessionsDatabaseRepository.querySessionsBySlugInSlug(slug.value)
         }
         return sessions.map(::enrichSession)
     }

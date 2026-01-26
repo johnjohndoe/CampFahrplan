@@ -45,6 +45,12 @@ class SlugFactoryTest {
     }
 
     @Test
+    fun `getSlug returns Pretalx slug for FOSDEM url`() {
+        val slug = factory.getSlug("https://fosdem.org/2026/schedule/event/SFKNTZ-welcome_to_fosdem_2026/".toUri())
+        assertThat(slug).isEqualTo(Slug.FosdemPretalxSlug("SFKNTZ-welcome_to_fosdem_2026"))
+    }
+
+    @Test
     fun `getSlug returns null when uri is neither Hub nor Pretalx`() {
         val slug = factory.getSlug("https://ccc.de".toUri())
         assertThat(slug).isNull()

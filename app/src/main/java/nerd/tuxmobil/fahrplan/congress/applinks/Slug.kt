@@ -6,5 +6,6 @@ sealed interface Slug {
 
     data class PretalxSlug(override val value: String) : Slug
     data class HubSlug(override val value: String) : Slug
+    data class FosdemPretalxSlug(override val value: String) : Slug
 
 }
