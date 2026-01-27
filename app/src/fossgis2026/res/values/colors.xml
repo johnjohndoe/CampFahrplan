@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorPrimary">#EE9939</color>
+    <color name="colorPrimaryDark">#D48933</color>
+    <color name="colorAccent">#0288D1</color>
+    <color name="background_primary">#D9D9D9</color>
+
+    <!-- Schedule screen -->
+    <color name="schedule_time_column_background">@color/colorPrimaryDark</color>
+    <color name="schedule_time_column_item_background_normal">@color/background_primary</color>
+    <color name="schedule_time_column_item_background_emphasized">@color/colorAccent</color>
+    <color name="schedule_time_column_item_text_normal">@color/text_primary</color>
+    <color name="schedule_time_column_item_text_emphasized">@color/colorPrimary</color>
+    <color name="schedule_room_name_header_background">#fff</color>
+    <color name="schedule_room_name_header_text">@color/text_primary</color>
+
+</resources>

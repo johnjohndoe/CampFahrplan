@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">FOSSGIS 2026 Fahrplan</string>
+    <string name="app_hardcoded_subtitle">Konferenz für Freie und Open Source Software, Geo-Software und OpenStreetMap, 25.-28. März 2026</string>
+    <string name="copyright_logo">
+        Design des FOSSGIS 2026 Logos: Jane Eder
+    </string>
+    <string name="about_logo_content_description">
+        FOSSGIS 2026 Logo
+    </string>
+</resources>

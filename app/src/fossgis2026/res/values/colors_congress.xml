@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Default state -->
+    <color name="track_background_default">#bf7f3f</color>
+    <color name="track_background_default_3d_drohnen_lidar_geo_ar_vr">#3591a6</color>
+    <color name="track_background_default_ausbildung_lehre_open_science">#9c768b</color>
+    <color name="track_background_default_daten_datenbanken_und_datenprozessierung">#b38000</color>
+    <color name="track_background_default_geodatenmanagement">#b38000</color>
+    <color name="track_background_default_grundlagen_open_source_gis_und_openstreetmap">#d05b65</color>
+    <color name="track_background_default_kartographie_und_visualisierung">#768290</color>
+    <color name="track_background_default_neuigkeiten_und_interessantes_aus_den_open_source_projekten">#5b8c5b</color>
+    <color name="track_background_default_offene_standards_zb_inspire_ogc">#b38000</color>
+    <color name="track_background_default_open_data_datenschutz_und_lizenzen">#b38000</color>
+    <color name="track_background_default_openstreetmap">#5b8c5b</color>
+    <color name="track_background_default_praxisberichte">#65859b</color>
+    <color name="track_background_default_rasterdaten_und_fernerkundung">#5184bd</color>
+    <color name="track_background_default_raum_zeitliche_analysen_und_modelle">#658300</color>
+    <color name="track_background_default_routing_und_mobilitaet">#658300</color>
+
+    <color name="track_background_default_anwendertreffen_bof">#d47100</color>
+    <color name="track_background_default_demo_session">#85851e</color>
+    <color name="track_background_default_expert_innen_fragestunde">#ba668a</color>
+    <color name="track_background_default_lightning_talk">#8777b6</color>
+    <color name="track_background_default_sonstiges">#388c93</color>
+    <color name="track_background_default_studierende_stellen_ihre_arbeit_vor">#d66000</color>
+    <color name="track_background_default_workshop">#568a84</color>
+
+    <!-- Highlight state -->
+    <color name="track_background_highlight">#e69545</color>
+    <color name="track_background_highlight_3d_drohnen_lidar_geo_ar_vr">#62aebf</color>
+    <color name="track_background_highlight_ausbildung_lehre_open_science">#aa6f8f</color>
+    <color name="track_background_highlight_daten_datenbanken_und_datenprozessierung">#cc9900</color>
+    <color name="track_background_highlight_geodatenmanagement">#cc9900</color>
+    <color name="track_background_highlight_grundlagen_open_source_gis_und_openstreetmap">#e32636</color>
+    <color name="track_background_highlight_kartographie_und_visualisierung">#6883a2</color>
+    <color name="track_background_highlight_neuigkeiten_und_interessantes_aus_den_open_source_projekten">#299429</color>
+    <color name="track_background_highlight_offene_standards_zb_inspire_ogc">#cc9900</color>
+    <color name="track_background_highlight_open_data_datenschutz_und_lizenzen">#cc9900</color>
+    <color name="track_background_highlight_openstreetmap">#299429</color>
+    <color name="track_background_highlight_praxisberichte">#5d8aa8</color>
+    <color name="track_background_highlight_rasterdaten_und_fernerkundung">#4383cc</color>
+    <color name="track_background_highlight_raum_zeitliche_analysen_und_modelle">#8db600</color>
+    <color name="track_background_highlight_routing_und_mobilitaet">#8db600</color>
+
+    <color name="track_background_highlight_anwendertreffen_bof">#ee7f00</color>
+    <color name="track_background_highlight_demo_session">#9e9d24</color>
+    <color name="track_background_highlight_expert_innen_fragestunde">#c65d8b</color>
+    <color name="track_background_highlight_lightning_talk">#8875c2</color>
+    <color name="track_background_highlight_sonstiges">#00838f</color>
+    <color name="track_background_highlight_studierende_stellen_ihre_arbeit_vor">#ef6c00</color>
+    <color name="track_background_highlight_workshop">#3e8d84</color>
+
+</resources>
