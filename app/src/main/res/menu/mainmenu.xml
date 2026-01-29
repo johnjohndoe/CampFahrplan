@@ -27,6 +27,12 @@
         android:titleCondensed="@string/menu_item_title_search"
         app:showAsAction="always" />
     <item
+        android:id="@+id/menu_item_sponsors"
+        android:orderInCategory="79"
+        android:title="@string/menu_item_title_sponsors"
+        android:titleCondensed="@string/menu_item_title_sponsors"
+        app:showAsAction="never" />
+    <item
         android:id="@+id/menu_item_settings"
         android:icon="@drawable/ic_settings"
         android:orderInCategory="80"

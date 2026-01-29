@@ -86,6 +86,15 @@
             android:resizeableActivity="true"
             tools:targetApi="33" />
         <activity
+            android:name="nerd.tuxmobil.fahrplan.congress.sponsors.SponsorsActivity"
+            android:label="@string/sponsors_screen_name"
+            android:resizeableActivity="true"
+            tools:targetApi="24">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="nerd.tuxmobil.fahrplan.congress.schedule.MainActivity" />
+        </activity>
+        <activity
             android:name="nerd.tuxmobil.fahrplan.congress.settings.SettingsActivity"
             android:label="@string/settings"
             android:resizeableActivity="true"

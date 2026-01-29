@@ -11,6 +11,7 @@ import android.view.Menu
 import android.view.MenuInflater
 import android.view.MenuItem
 import android.view.View
+import android.widget.FrameLayout
 import androidx.activity.viewModels
 import androidx.annotation.IdRes
 import androidx.annotation.StringRes
@@ -64,6 +65,8 @@ import nerd.tuxmobil.fahrplan.congress.search.SearchActivity
 import nerd.tuxmobil.fahrplan.congress.search.SearchFragment
 import nerd.tuxmobil.fahrplan.congress.settings.SettingsActivity
 import nerd.tuxmobil.fahrplan.congress.sidepane.OnSidePaneCloseListener
+import nerd.tuxmobil.fahrplan.congress.sponsors.SponsorsActivity
+import nerd.tuxmobil.fahrplan.congress.sponsors.SponsorsFragment
 import nerd.tuxmobil.fahrplan.congress.utils.ConfirmationDialog.OnConfirmationDialogClicked
 import nerd.tuxmobil.fahrplan.congress.utils.setShowWhenLockedCompat
 
@@ -316,6 +319,7 @@ class MainActivity : BaseActivity(),
             R.id.menu_item_search -> openSearch()
             R.id.menu_item_schedule_changes -> openSessionChanges()
             R.id.menu_item_favorites -> openFavorites()
+            R.id.menu_item_sponsors -> openSponsors()
             else -> return false
         }
         return true
@@ -440,6 +444,16 @@ class MainActivity : BaseActivity(),
             sidePaneView.isVisible = true
             isAlarmsInSidePane = true
             AlarmsFragment.replaceAtBackStack(supportFragmentManager, R.id.detail, true)
+        }
+    }
+
+    private fun openSponsors() {
+        val sidePaneView = findViewById<FrameLayout>(R.id.detail)
+        if (sidePaneView == null) {
+            SponsorsActivity.start(this)
+        } else {
+            sidePaneView.isVisible = true
+            SponsorsFragment.replace(supportFragmentManager, R.id.detail, true)
         }
     }
 
