@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Default state -->
+
+    <color name="track_background_default">#9E9E9E</color>
+    <color name="track_background_default_addon">#ED7758</color>
+    <color name="track_background_default_demo">#66A3C6</color>
+    <color name="track_background_default_firma">#D28D36</color>
+    <color name="track_background_default_junior">#D87DB7</color>
+    <color name="track_background_default_vortrag">#DBA723</color>
+    <color name="track_background_default_workshop">#77A964</color>
+
+    <!-- Highlight state -->
+
+    <color name="track_background_highlight">#B6B6B6</color>
+    <color name="track_background_highlight_addon">#FF7040</color>
+    <color name="track_background_highlight_demo">#53AAE0</color>
+    <color name="track_background_highlight_firma">#F49420</color>
+    <color name="track_background_highlight_junior">#F463B2</color>
+    <color name="track_background_highlight_vortrag">#FBC01F</color>
+    <color name="track_background_highlight_workshop">#79C74C</color>
+
+
+</resources>

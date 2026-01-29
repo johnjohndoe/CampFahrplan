@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorPrimary">#C4EBFC</color>
+    <color name="colorPrimaryDark">#B1D4E3</color>
+    <color name="colorAccent">#E08D04</color>
+    <color name="main_background">@color/colorPrimary</color>
+    <color name="background_primary">#C4EBFC</color>
+    <color name="background_secondary">#BBE0F0</color>
+    <color name="background_tertiary">#B1D4E3</color>
+    <color name="background_pattern_stroke">@color/colorPrimaryDark</color>
+
+    <!-- Scrollbar -->
+    <color name="scrollbar_background">#77ffffff</color>
+
+    <!-- Schedule changes -->
+    <color name="schedule_change_on_dark">#fa952d</color>
+    <color name="schedule_change_on_light">#E65100</color>
+    <color name="schedule_change_new_on_dark">#9be35d</color>
+    <color name="schedule_change_new_on_light">#118C32</color>
+    <color name="schedule_change_canceled_on_dark">#EE6E64</color>
+    <color name="schedule_change_canceled_on_light">#B71C1C</color>
+
+    <!-- Favorites -->
+    <color name="favorites_past_session_text">#88ffffff</color>
+
+</resources>
