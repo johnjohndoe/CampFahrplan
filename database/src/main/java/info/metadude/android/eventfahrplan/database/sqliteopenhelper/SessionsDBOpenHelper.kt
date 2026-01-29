@@ -110,7 +110,7 @@ internal class SessionsDBOpenHelper(context: Context) : SQLiteOpenHelper(
 ) {
 
     private companion object {
-        const val DATABASE_VERSION = 19
+        const val DATABASE_VERSION = 16
         const val DATABASE_NAME = "lectures" // Keep table name to avoid database migration.
 
         // language=sql
@@ -298,24 +298,10 @@ internal class SessionsDBOpenHelper(context: Context) : SQLiteOpenHelper(
             }
         }
         if (oldVersion < 16) {
-            execSQL(SCHEDULE_STATISTIC_VIEW_CREATE)
-        }
-        if (oldVersion < 17) {
-            // Clear database from Camp 2023 & 37C3 2023.
+            // Clear database from FOSSGIS 2025.
             dropTableIfExist(SessionsTable.NAME)
             dropTableIfExist(SessionByNotificationIdTable.NAME)
             onCreate(this)
-        }
-        if (oldVersion < 18) {
-            // Clear database from 38C3 2024.
-            dropTableIfExist(SessionsTable.NAME)
-            dropTableIfExist(SessionByNotificationIdTable.NAME)
-            onCreate(this)
-        }
-        if (oldVersion < 19) {
-            if (!columnExists(SessionsTable.NAME, SESSION_GUID)) {
-                addTextColumn(SESSION_GUID, default = null)
-            }
         }
     }
 

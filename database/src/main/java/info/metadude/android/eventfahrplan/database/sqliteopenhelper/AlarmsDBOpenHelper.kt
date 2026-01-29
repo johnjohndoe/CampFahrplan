@@ -19,7 +19,7 @@ internal class AlarmsDBOpenHelper(context: Context) : SQLiteOpenHelper(
 ) {
 
     private companion object {
-        const val DATABASE_VERSION = 8
+        const val DATABASE_VERSION = 13
         const val DATABASE_NAME = "alarms"
 
         // language=sql
@@ -67,6 +67,12 @@ internal class AlarmsDBOpenHelper(context: Context) : SQLiteOpenHelper(
             dropTableIfExist(NAME)
             onCreate(this)
         }
+        if (oldVersion < 13) {
+            // Clear database from FOSSGIS 2025.
+            dropTableIfExist(NAME)
+            onCreate(this)
+        }
+
     }
 
 }
