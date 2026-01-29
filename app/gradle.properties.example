@@ -7,3 +7,8 @@ signing.ccc39c3-release.keystoreFilePath=/home/USERNAME/.android/ccc39c3-release
 signing.ccc39c3-release.keystorePassword="PASSWORD"
 signing.ccc39c3-release.keyAlias="ccc39c3"
 signing.ccc39c3-release.keyPassword="ANOTHERPASSWORD"
+
+signing.clt2026-release.keystoreFilePath=/home/USERNAME/.android/clt-release-key.keystore
+signing.clt2026-release.keystorePassword="PASSWORD"
+signing.clt2026-release.keyAlias=clt
+signing.clt2026-release.keyPassword="ANOTHERPASSWORD"
