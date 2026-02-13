@@ -668,8 +668,9 @@ class FahrplanFragment : Fragment(), MenuProvider {
             timeLinesLayout.addView(timeLineView, MATCH_PARENT, height)
             val textColorRes = if (isNow) R.color.schedule_time_column_item_text_emphasized else R.color.schedule_time_column_item_text_normal
             val textColor = ContextCompat.getColor(timeTextView.context, textColorRes)
+            val formattedTitleText = titleText.replace(":", "\n")
             timeTextView.requireViewByIdCompat<TextView>(R.id.schedule_time_column_time_text_view).apply {
-                text = titleText
+                text = formattedTitleText
                 setTextColor(textColor)
                 updateLayoutParams {
                     width = resources.getDimensionPixelSize(R.dimen.schedule_time_column_layout_width) + timeTextColumnEdgeToEdge.leftWindowInset
