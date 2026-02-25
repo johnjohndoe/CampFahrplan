@@ -139,6 +139,7 @@ android {
             applicationId "info.metadude.android.fossgis.schedule"
             versionName "${defaultConfig.versionName}-FOSSGIS-Edition"
             buildConfigField "String", "GOOGLE_PLAY_URL", '"https://play.google.com/store/apps/details?id=info.metadude.android.fossgis.schedule"'
+            buildConfigField "String", "F_DROID_URL", '"https://f-droid.org/packages/info.metadude.android.fossgis.schedule"'
             buildConfigField "String", "SOURCE_CODE_URL", '"https://github.com/johnjohndoe/CampFahrplan/tree/fossgis-2026"'
             buildConfigField "String", "SCHEDULE_URL", '"https://pretalx.com/fossgis2026/schedule/export/schedule.xml"'
             buildConfigField "String", "EVENT_URL", '"https://pretalx.com/fossgis2026/talk/%1$s"'
