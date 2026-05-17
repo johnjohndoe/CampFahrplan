@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Default state -->
+
+    <color name="track_background_default">#666666</color>
+    <color name="track_background_default_art_culture_and_games">#360E66</color>
+    <color name="track_background_default_cyber_security">#00838F</color>
+    <color name="track_background_default_entertainment">#990000</color>
+    <color name="track_background_default_entropia_ccc">#e07b00</color>
+    <color name="track_background_default_hardware_and_making">#283593</color>
+    <color name="track_background_default_lounge_music">#0277BD</color>
+    <color name="track_background_default_lounge_visuals">#004ae7</color>
+    <color name="track_background_default_meetup">#710000</color>
+    <color name="track_background_default_mobility_energy_and_transformation">#421712</color>
+    <color name="track_background_default_outdoor_music">#AD2323</color>
+    <color name="track_background_default_politics_society_and_ethics">#B300B3</color>
+    <color name="track_background_default_science">#1f4028</color>
+    <color name="track_background_default_software_and_infrastructure">#429945</color>
+
+    <!-- Highlight state -->
+
+    <color name="track_background_highlight">#8a8a8a</color>
+    <color name="track_background_highlight_art_culture_and_games">#4A148C</color>
+    <color name="track_background_highlight_cyber_security">#00A4B3</color>
+    <color name="track_background_highlight_entertainment">#BF0000</color>
+    <color name="track_background_highlight_entropia_ccc">#ff9514</color>
+    <color name="track_background_highlight_hardware_and_making">#303EB0</color>
+    <color name="track_background_highlight_lounge_music">#0285D1</color>
+    <color name="track_background_highlight_lounge_visuals">#1b64ff</color>
+    <color name="track_background_highlight_meetup">#a40000</color>
+    <color name="track_background_highlight_mobility_energy_and_transformation">#63231B</color>
+    <color name="track_background_highlight_outdoor_music">#C62828</color>
+    <color name="track_background_highlight_politics_society_and_ethics">#E600E6</color>
+    <color name="track_background_highlight_science">#2f633d</color>
+    <color name="track_background_highlight_software_and_infrastructure">#50BA54</color>
+
+</resources>

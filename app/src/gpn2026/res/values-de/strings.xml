@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">GPN 2026 Fahrplan</string>
+    <string name="app_hardcoded_subtitle">4. – 7. Juni / ZKM und HfG</string>
+    <string name="copyright_logo">
+        Logo-Design von Thilo Billerbeck (avocadoom) &amp; GPN Design Team
+    </string>
+    <string name="about_logo_content_description">
+        GPN24 Logo
+    </string>
+</resources>

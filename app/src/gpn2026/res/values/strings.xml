@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">GPN 2026 Schedule</string>
+    <string name="app_hardcoded_subtitle">June 4 – 7 / ZKM and HfG</string>
+    <string name="conference_name" translatable="false">GPN 2026</string>
+    <string name="copyright_logo">
+        Logo design by Thilo Billerbeck (avocadoom) &amp; GPN Design Team
+    </string>
+    <string name="about_logo_content_description">
+        GPN24 logo
+    </string>
+</resources>
