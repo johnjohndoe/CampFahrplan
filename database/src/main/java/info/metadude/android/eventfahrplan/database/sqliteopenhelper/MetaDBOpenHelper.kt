@@ -26,7 +26,7 @@ internal class MetaDBOpenHelper(context: Context) : SQLiteOpenHelper(
 ) {
 
     private companion object {
-        const val DATABASE_VERSION = 12
+        const val DATABASE_VERSION = 11
         const val DATABASE_NAME = "meta"
 
         // language=sql
@@ -85,15 +85,7 @@ internal class MetaDBOpenHelper(context: Context) : SQLiteOpenHelper(
             onCreate(this)
         }
         if (oldVersion < 11) {
-            if (!columnExists(NAME, SCHEDULE_GENERATOR_NAME)) {
-                addTextColumn(SCHEDULE_GENERATOR_NAME, default = null)
-            }
-            if (!columnExists(NAME, SCHEDULE_GENERATOR_VERSION)) {
-                addTextColumn(SCHEDULE_GENERATOR_VERSION, default = null)
-            }
-        }
-        if (oldVersion < 12) {
-            // Clear database from 38C3 2024.
+            // Clear database from GPN 2025.
             dropTableIfExist(NAME)
             onCreate(this)
         }

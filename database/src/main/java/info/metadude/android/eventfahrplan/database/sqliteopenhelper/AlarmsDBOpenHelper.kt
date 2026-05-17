@@ -19,7 +19,7 @@ internal class AlarmsDBOpenHelper(context: Context) : SQLiteOpenHelper(
 ) {
 
     private companion object {
-        const val DATABASE_VERSION = 8
+        const val DATABASE_VERSION = 9
         const val DATABASE_NAME = "alarms"
 
         // language=sql
@@ -64,6 +64,11 @@ internal class AlarmsDBOpenHelper(context: Context) : SQLiteOpenHelper(
         }
         if (oldVersion < 8) {
             // Clear database from 38C3 2024.
+            dropTableIfExist(NAME)
+            onCreate(this)
+        }
+        if (oldVersion < 9) {
+            // Clear database from GPN 2025.
             dropTableIfExist(NAME)
             onCreate(this)
         }
