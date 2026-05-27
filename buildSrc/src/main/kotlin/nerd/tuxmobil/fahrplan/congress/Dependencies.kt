@@ -79,7 +79,7 @@ object Libs {
         const val okhttp = "5.3.2"
         const val robolectric = "4.3_r2-robolectric-0"
         const val roomStates = "2.0.0"
-        const val schedule = "1.0.0"
+        const val schedule = "2.0.0"
         const val snackengage = "0.30"
         const val threeTenBp = "1.7.3"
         const val tracedroid = "3.1"
