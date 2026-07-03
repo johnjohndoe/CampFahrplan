@@ -93,7 +93,7 @@ internal class MetaDBOpenHelper(context: Context) : SQLiteOpenHelper(
             }
         }
         if (oldVersion < 12) {
-            // Clear database from 38C3 2024.
+            // Clear database from 38C3 2024 & Hackover 2025.
             dropTableIfExist(NAME)
             onCreate(this)
         }
