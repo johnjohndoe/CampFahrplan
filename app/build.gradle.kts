@@ -92,6 +92,7 @@ android {
     signingConfigs {
         create("cccamp2023")
         create("ccc39c3")
+        create("hackover2026")
     }
 
     val defaultDimension = "default"
@@ -143,6 +144,25 @@ android {
             buildConfigField("String", "TRACE_DROID_EMAIL_ADDRESS", """"tobias.preuss+39c3@googlemail.com"""")
             buildConfigField("String", "SCHEDULE_FEEDBACK_URL", """""""")
         }
+        create("hackover2026") {
+            dimension = defaultDimension
+            applicationId = "info.metadude.android.hackover.schedule"
+            versionName = "${defaultConfig.versionName}-Hackover-Edition"
+            buildConfigField("String", "GOOGLE_PLAY_URL", """"https://play.google.com/store/apps/details?id=info.metadude.android.hackover.schedule"""")
+            buildConfigField("String", "SCHEDULE_URL", """"https://talks.hackover.de/ho26/schedule/export/schedule.json"""")
+            buildConfigField("String", "SCHEDULE_FILE_FORMAT", """"schedule_v1_json"""")
+            buildConfigField("String", "EVENT_URL", """""""")
+            buildConfigField("String", "EVENT_WEBSITE_URL", """"https://hackover.de"""")
+            buildConfigField("String", "EVENT_POSTAL_ADDRESS", """"Klaus-Müller-Kilian Weg 2, 30167 Hannover"""")
+            buildConfigField("String", "SERVER_BACKEND_TYPE", """"pretalx"""")
+            buildConfigField("boolean", "ENABLE_CHAOSFLIX_EXPORT", "true")
+            buildConfigField("boolean", "ENABLE_ENGELSYSTEM_SHIFTS", "true")
+            resValue("string", "preference_hint_engelsystem_json_export_url", """"https://engel.hackover.de/shifts-json-export?key=YOUR_KEY"""")
+            buildConfigField("String", "SOCIAL_MEDIA_HASHTAGS_HANDLES", """"#hackover #hackover26 #fahrplan @hackover@chaos.social @leitstelle511"""")
+            buildConfigField("String", "TRACE_DROID_EMAIL_ADDRESS", """"tobias.preuss+hackover@googlemail.com"""")
+            buildConfigField("String", "SCHEDULE_FEEDBACK_URL", """""""")
+        }
+
     }
 
     productFlavors.configureEach {
