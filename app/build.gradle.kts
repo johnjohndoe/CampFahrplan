@@ -149,6 +149,7 @@ android {
             applicationId = "info.metadude.android.hackover.schedule"
             versionName = "${defaultConfig.versionName}-Hackover-Edition"
             buildConfigField("String", "GOOGLE_PLAY_URL", """"https://play.google.com/store/apps/details?id=info.metadude.android.hackover.schedule"""")
+            buildConfigField("String", "F_DROID_URL", """"https://f-droid.org/packages/info.metadude.android.hackover.schedule"""")
             buildConfigField("String", "SCHEDULE_URL", """"https://talks.hackover.de/ho26/schedule/export/schedule.json"""")
             buildConfigField("String", "SCHEDULE_FILE_FORMAT", """"schedule_v1_json"""")
             buildConfigField("String", "EVENT_URL", """""""")
