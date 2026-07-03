@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<map linked="true">
+
+    <entry key="kurzer Talk">talk_short</entry>
+    <entry key="langer Talk">talk_long</entry>
+    <entry key="Talk - 30 Minuten">talk_short</entry>
+    <entry key="Talk - 60 Minuten">talk_long</entry>
+    <entry key="Talk">talk</entry>
+    <entry key="Workshop">workshop</entry>
+
+</map>

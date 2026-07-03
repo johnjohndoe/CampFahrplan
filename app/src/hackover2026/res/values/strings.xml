@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Hackover 2026 Schedule</string>
+    <string name="app_hardcoded_subtitle">July 16 – 19, 2026 - Stadtteilzentrum Bürgerschule Nordstadt</string>
+    <string name="conference_name" translatable="false">Hackover 2026</string>
+    <string name="copyright_logo">
+        Design of the Hackover logo: Zichy
+    </string>
+    <string name="about_logo_content_description">
+        Hackover logo
+    </string>
+</resources>
