@@ -92,6 +92,7 @@ android {
     signingConfigs {
         create("cccamp2023")
         create("ccc39c3")
+        create("hope2026")
     }
 
     val defaultDimension = "default"
@@ -141,6 +142,24 @@ android {
             resValue("string", "preference_hint_engelsystem_json_export_url", """"https://engel.events.ccc.de/shifts-json-export?key=YOUR_KEY"""")
             buildConfigField("String", "SOCIAL_MEDIA_HASHTAGS_HANDLES", """"#39c3 #fahrplan"""")
             buildConfigField("String", "TRACE_DROID_EMAIL_ADDRESS", """"tobias.preuss+39c3@googlemail.com"""")
+            buildConfigField("String", "SCHEDULE_FEEDBACK_URL", """""""")
+        }
+        create("hope2026") {
+            dimension = defaultDimension
+            applicationId = "info.metadude.android.hope.schedule"
+            versionName = "${defaultConfig.versionName}-HOPE-Edition"
+            buildConfigField("String", "GOOGLE_PLAY_URL", """"https://play.google.com/store/apps/details?id=info.metadude.android.hope.schedule"""")
+            buildConfigField("String", "F_DROID_URL", """"https://f-droid.org/packages/info.metadude.android.hope.schedule"""")
+            buildConfigField("String", "SCHEDULE_URL", """"https://schedule.hope.net/hope26/schedule/export/schedule.json"""")
+            buildConfigField("String", "SCHEDULE_FILE_FORMAT", """"schedule_v1_json"""")
+            buildConfigField("String", "EVENT_URL", """""""")
+            buildConfigField("String", "EVENT_WEBSITE_URL", """"https://hope.net"""")
+            buildConfigField("String", "EVENT_POSTAL_ADDRESS", """"481 8th Ave, New York, NY 10001"""")
+            buildConfigField("String", "SERVER_BACKEND_TYPE", """"pretalx"""")
+            buildConfigField("boolean", "ENABLE_ENGELSYSTEM_SHIFTS", "true")
+            resValue("string", "preference_hint_engelsystem_json_export_url", """"https://volunteer.hope.net/shifts-json-export?key=YOUR_KEY"""")
+            buildConfigField("String", "SOCIAL_MEDIA_HASHTAGS_HANDLES", """"#hope #hope26 #hopeconf #hacktheplanet #fahrplan @hopeconf@mastodon.online"""")
+            buildConfigField("String", "TRACE_DROID_EMAIL_ADDRESS", """"tobias.preuss+hope@googlemail.com"""")
             buildConfigField("String", "SCHEDULE_FEEDBACK_URL", """""""")
         }
     }
