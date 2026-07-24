@@ -18,6 +18,7 @@ internal fun darkColorScheme() = androidx.compose.material3.darkColorScheme(
     onSurfaceVariant = colorResource(R.color.text_secondary), // used by SearchBarDefaults.InputField placeholder, ListItem -> overlineContent
     surfaceContainer = colorResource(R.color.colorPrimaryDark), // used by DropdownMenu
     surfaceContainerHigh = colorResource(R.color.background_secondary), // used by AlertDialog background
+    surfaceContainerHighest = colorResource(R.color.colorPrimaryDark), // used by ButtonBox background -> ButtonNavigation
 ).toColorScheme(
     listItemPrefixSymbol = colorResource(R.color.session_details_list_item_prefix_symbol),
     divider = colorResource(R.color.divider),
@@ -74,6 +75,7 @@ internal fun lightColorScheme() = androidx.compose.material3.lightColorScheme(
     onSurfaceVariant = colorResource(R.color.text_secondary_inverted),
     surfaceContainer = colorResource(R.color.colorPrimaryDark),
     surfaceContainerHigh = colorResource(R.color.background_secondary),
+    surfaceContainerHighest = colorResource(R.color.colorPrimaryDark),
 ).toColorScheme(
     listItemPrefixSymbol = colorResource(R.color.session_details_list_item_prefix_symbol),
     divider = colorResource(R.color.divider),
