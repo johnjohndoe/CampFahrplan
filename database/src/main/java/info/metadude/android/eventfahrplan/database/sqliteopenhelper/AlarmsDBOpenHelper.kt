@@ -63,7 +63,7 @@ internal class AlarmsDBOpenHelper(context: Context) : SQLiteOpenHelper(
             onCreate(this)
         }
         if (oldVersion < 8) {
-            // Clear database from 38C3 2024.
+            // Clear database from 38C3 2024 & HOPE 26.
             dropTableIfExist(NAME)
             onCreate(this)
         }
