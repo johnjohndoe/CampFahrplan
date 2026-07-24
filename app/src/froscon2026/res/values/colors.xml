@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorPrimary">#daffc7</color>
+    <color name="colorPrimaryDark">#bbf59a</color>
+    <color name="colorAccent">#2525bd</color>
+    <color name="background_primary">#effafb</color>
+    <color name="multi_choice_background">#cce7fe</color>
+    <color name="schedule_time_column_background">#aecc9f</color>
+    <color name="schedule_horizontal_time_line">#aecc9f</color>
+
+    <!-- Default state -->
+    <color name="track_background_default">#C3CBD4</color>
+    <color name="track_background_default_cloud">#7DB5F8</color>
+    <color name="track_background_default_culture">#7FD4A2</color>
+    <color name="track_background_default_databases">#EDD57A</color>
+    <color name="track_background_default_development">#F6A67B</color>
+    <color name="track_background_default_devops">#E7929C</color>
+    <color name="track_background_default_education">#B89AE6</color>
+    <color name="track_background_default_gis">#C8A98A</color>
+    <color name="track_background_default_its_the_end_of_the_world_as_we_know_it_prepping_for_crisis_with_floss">#D3D2CF</color>
+    <color name="track_background_default_lower_the_barriers_how_to_make_oss_accessible_for_everyone">#E29AD8</color>
+    <color name="track_background_default_network">#8FD8E8</color>
+    <color name="track_background_default_other">#C5C0D1</color>
+    <color name="track_background_default_patch_it_fix_it_print_it_right_to_repair_for_software_and_hardware">#ABA5B7</color>
+    <color name="track_background_default_security">#CDCDD1</color>
+    <color name="track_background_default_someone_gonna_pay_is_it_you_funding_for_open_source">#FFD793</color>
+    <color name="track_background_default_system_administration">#F0BEF2</color>
+    <color name="track_background_default_unbreak_your_phone_a_life_without_ios_and_android">#E5C7AE</color>
+    <color name="track_background_default_web_development">#CDCDD1</color>
+    <color name="track_background_default_who_can_you_trust_making_and_accepting_contributions_in_2026">#93E5B1</color>
+
+    <!-- Highlight state -->
+    <color name="track_background_highlight">#8b95a1</color>
+    <color name="track_background_highlight_cloud">#5FA0F5</color>
+    <color name="track_background_highlight_culture">#55C985</color>
+    <color name="track_background_highlight_databases">#D2AE32</color>
+    <color name="track_background_highlight_development">#ED7B3F</color>
+    <color name="track_background_highlight_devops">#D96373</color>
+    <color name="track_background_highlight_education">#A478D8</color>
+    <color name="track_background_highlight_gis">#B98550</color>
+    <color name="track_background_highlight_its_the_end_of_the_world_as_we_know_it_prepping_for_crisis_with_floss">#BDBBB5</color>
+    <color name="track_background_highlight_lower_the_barriers_how_to_make_oss_accessible_for_everyone">#D66BC5</color>
+    <color name="track_background_highlight_network">#65C8DF</color>
+    <color name="track_background_highlight_other">#AAA3BD</color>
+    <color name="track_background_highlight_patch_it_fix_it_print_it_right_to_repair_for_software_and_hardware">#8A7EA5</color>
+    <color name="track_background_highlight_security">#AAA9B0</color>
+    <color name="track_background_highlight_someone_gonna_pay_is_it_you_funding_for_open_source">#FFC35E</color>
+    <color name="track_background_highlight_system_administration">#E39AE7</color>
+    <color name="track_background_highlight_unbreak_your_phone_a_life_without_ios_and_android">#D9AF82</color>
+    <color name="track_background_highlight_web_development">#AAA9B0</color>
+    <color name="track_background_highlight_who_can_you_trust_making_and_accepting_contributions_in_2026">#5ED68A</color>
+
+</resources>

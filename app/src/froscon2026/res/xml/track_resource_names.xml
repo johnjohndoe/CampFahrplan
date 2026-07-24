@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<map linked="true">
+
+    <entry key="Cloud">cloud</entry>
+    <entry key="Culture">culture</entry>
+    <entry key="Databases">databases</entry>
+    <entry key="DevOps">devops</entry>
+    <entry key="Development">development</entry>
+    <entry key="Education">education</entry>
+    <entry key="GIS">gis</entry>
+    <entry key="It’s the end of the world as we know it – Prepping for crisis with FLOSS">its_the_end_of_the_world_as_we_know_it_prepping_for_crisis_with_floss</entry>
+    <entry key="Lower the barriers – How to make OSS accessible for everyone">lower_the_barriers_how_to_make_oss_accessible_for_everyone</entry>
+    <entry key="Network">network</entry>
+    <entry key="Other">other</entry>
+    <entry key="Patch it, fix it, print it – Right to repair for software and hardware">patch_it_fix_it_print_it_right_to_repair_for_software_and_hardware</entry>
+    <entry key="Security">security</entry>
+    <entry key="Someone gonna pay - is it you? – Funding for Open Source">someone_gonna_pay_is_it_you_funding_for_open_source</entry>
+    <entry key="System Administration">system_administration</entry>
+    <entry key="Unbreak your phone – A life without iOS and Android">unbreak_your_phone_a_life_without_ios_and_android</entry>
+    <entry key="Web Development">web_development</entry>
+    <entry key="Who can you trust? – Making and accepting contributions in 2026">who_can_you_trust_making_and_accepting_contributions_in_2026</entry>
+
+</map>

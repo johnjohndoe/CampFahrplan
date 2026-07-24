@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">FrOSCon 2026 Fahrplan</string>
+    <string name="app_hardcoded_subtitle">Free and Open Source Software Conference, 15. + 16. August, Hochschule Bonn-Rhein-Sieg</string>
+    <string name="copyright_logo">
+        Das FrOSCon-Logo steht unter der <![CDATA[<a href="https://creativecommons.org/licenses/by-nd/3.0/de/">Creative Commons License (CC BY-ND 3.0 DE)]]>.
+    </string>
+    <string name="about_logo_content_description">
+        FrOSCon Logo: Das Wort froscon mit einem Frosch, der in den Buchstaben "o" gestanzt ist.
+        Darunter: Free and Open Source Software Conference
+    </string>
+</resources>
