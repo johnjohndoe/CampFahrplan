@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">HOPE 26</string>
+    <string name="app_hardcoded_subtitle">Hackers On Planet Earth, 14.-16. August 2026</string>
+    <string name="copyright_logo">
+        Die HOPE-Barrikaden-Grafik unterliegt dem Copyright von kyle und mojomonger.
+    </string>
+    <string name="about_logo_content_description">
+        Rautenförmiges Warnschild mit einer Straßenabsperrung und dem Schriftzug "HOPE" in der Mitte.
+    </string>
+</resources>

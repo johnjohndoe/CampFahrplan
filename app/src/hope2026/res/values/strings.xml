@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">HOPE 26</string>
+    <string name="app_hardcoded_subtitle">Hackers On Planet Earth, August 14–16 2026</string>
+    <string name="conference_name" translatable="false">HOPE 26</string>
+    <string name="copyright_logo">
+        The HOPE barricade artwork is copyrighted by kyle and mojomonger.
+    </string>
+    <string name="about_logo_content_description">
+        A diamond-shaped warning sign featuring a street barricade with the word "HOPE" across the center.
+    </string>
+</resources>

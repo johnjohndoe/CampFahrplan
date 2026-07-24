@@ -1,6 +1,7 @@
 package nerd.tuxmobil.fahrplan.congress.about
 
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
@@ -9,11 +10,14 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.Alignment.Companion.CenterHorizontally
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
+import androidx.compose.foundation.shape.GenericShape
+import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
@@ -33,6 +37,14 @@ import nerd.tuxmobil.fahrplan.congress.designsystem.texts.Text
 import nerd.tuxmobil.fahrplan.congress.designsystem.texts.TextClickable
 import nerd.tuxmobil.fahrplan.congress.designsystem.themes.EventFahrplanTheme
 import nerd.tuxmobil.fahrplan.congress.extensions.toTextUnit
+
+private val RotatedSquareShape = GenericShape { size, _ ->
+    moveTo(size.width / 2f, 0f)
+    lineTo(size.width, size.height / 2f)
+    lineTo(size.width / 2f, size.height)
+    lineTo(0f, size.height / 2f)
+    close()
+}
 
 @Composable
 internal fun AboutContent(
@@ -76,7 +88,10 @@ private fun EventInfo(parameter: AboutParameter, onViewEvent: (AboutViewEvent) -
         val horizontalTextAlign = TextAlign.Center
         Image(
             modifier = Modifier
-                .padding(vertical = 16.dp),
+                .padding(vertical = 16.dp)
+                .clip(RotatedSquareShape)
+                .background(colorResource(R.color.info_dialog_logo_background))
+                .padding(10.dp),
             painter = painterResource(R.drawable.dialog_logo),
             contentDescription = stringResource(R.string.about_logo_content_description)
         )
