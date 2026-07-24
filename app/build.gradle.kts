@@ -92,6 +92,7 @@ android {
     signingConfigs {
         create("cccamp2023")
         create("ccc39c3")
+        create("froscon2026")
     }
 
     val defaultDimension = "default"
@@ -143,6 +144,27 @@ android {
             buildConfigField("String", "TRACE_DROID_EMAIL_ADDRESS", """"tobias.preuss+39c3@googlemail.com"""")
             buildConfigField("String", "SCHEDULE_FEEDBACK_URL", """""""")
         }
+        create("froscon2026") {
+            dimension = defaultDimension
+            applicationId = "info.metadude.android.froscon.schedule"
+            versionName = "${defaultConfig.versionName}-FrOSCon-Edition"
+            buildConfigField("String", "GOOGLE_PLAY_URL", """"https://play.google.com/store/apps/details?id=info.metadude.android.froscon.schedule"""")
+            buildConfigField("String", "SCHEDULE_URL", """"https://programm.froscon.org/2026/schedule.xml"""")
+            buildConfigField("String", "SCHEDULE_FILE_FORMAT", """"schedule_v1_xml"""")
+            buildConfigField("String", "EVENT_URL", $$""""https://programm.froscon.org/2026/events/%1$s.html"""")
+            buildConfigField("String", "EVENT_WEBSITE_URL", """"https://froscon.org"""")
+            buildConfigField("String", "EVENT_POSTAL_ADDRESS", """"Grantham-Allee 20, 53757 Sankt Augustin"""")
+            buildConfigField("String", "SERVER_BACKEND_TYPE", """"frab"""")
+            buildConfigField("boolean", "ENABLE_CHAOSFLIX_EXPORT", "true")
+            buildConfigField("boolean", "ENABLE_ENGELSYSTEM_SHIFTS", "true")
+            resValue("string", "engelsystem_alias", "HelferInnen-System")
+            resValue("string", "engelsystem_shifts_alias", "HelferIn-Schicht")
+            resValue("string", "preference_hint_engelsystem_json_export_url", """"https://helfen.froscon.org/shifts-json-export?key=YOUR_KEY"""")
+            buildConfigField("String", "SOCIAL_MEDIA_HASHTAGS_HANDLES", """"#FrOSCon #FrOSCon21 #FrOSCon2026 #fahrplan @FrOSCon@bonn.social @froscon"""")
+            buildConfigField("String", "TRACE_DROID_EMAIL_ADDRESS", """"tobias.preuss+froscon@googlemail.com"""")
+            buildConfigField("String", "SCHEDULE_FEEDBACK_URL", """"https://frab.froscon.org/froscon2026/public/events/%s/feedback/new"""")
+        }
+
     }
 
     productFlavors.configureEach {
