@@ -293,8 +293,8 @@ private fun CheckableItem(
     onClick: () -> Unit,
     content: @Composable () -> Unit,
 ) {
-    val backgroundColor = if (checked) EventFahrplanTheme.colorScheme.multiChoiceBackground else EventFahrplanTheme.colorScheme.background
-    val selectionIndicatorColor = EventFahrplanTheme.colorScheme.primary
+    val backgroundColor = if (checked) EventFahrplanTheme.colorScheme.multiChoiceBackground.copy(alpha = 0.7f) else EventFahrplanTheme.colorScheme.background
+    val selectionIndicatorColor = EventFahrplanTheme.colorScheme.onPrimary
     val selectionIndicatorWidth by animateDpAsState(
         targetValue = if (checked) 6.dp else 0.dp,
         label = "selectionIndicatorWidth",
