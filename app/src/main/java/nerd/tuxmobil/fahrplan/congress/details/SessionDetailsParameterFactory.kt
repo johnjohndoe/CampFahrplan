@@ -105,9 +105,15 @@ class SessionDetailsParameterFactory(
         )
     }
 
-    fun getMarkupProperty(text: String) = when (markupLanguage) {
-        MarkupLanguage.Html -> Html(text)
-        MarkupLanguage.Markdown -> Markdown(text)
+    fun getMarkupProperty(text: String) = when (
+        text.startsWith("<html>") ||
+                text.startsWith("<p>") ||
+                text.startsWith("<ul>") ||
+                text.startsWith("<ol>") ||
+                text.startsWith("<li>")
+    ) {
+        true -> Html(text)
+        false -> Markdown(text)
     }
 
 }
