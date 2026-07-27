@@ -83,7 +83,8 @@ android {
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules/proguard-project.txt",
                 "proguard-rules/okhttp3.pro",
-                "proguard-rules/okio.pro"
+                "proguard-rules/okio.pro",
+                "proguard-rules/zstd.pro",
             )
         }
     }
