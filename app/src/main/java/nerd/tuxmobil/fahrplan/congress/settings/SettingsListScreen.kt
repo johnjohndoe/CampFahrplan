@@ -9,8 +9,10 @@ import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalWindowInfo
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.PreviewLightDark
+import androidx.compose.ui.unit.dp
 import nerd.tuxmobil.fahrplan.congress.R
 import nerd.tuxmobil.fahrplan.congress.commons.alarmTimeToUiString
 import nerd.tuxmobil.fahrplan.congress.designsystem.bars.TopBar
@@ -57,12 +59,13 @@ internal fun SettingsListScreen(
                 .verticalScroll(rememberScrollState())
                 .padding(contentPadding)
         ) {
+            val showDivider = LocalWindowInfo.current.containerDpSize.width > 1000.dp
             if (state.isDevelopmentCategoryVisible) {
-                CategoryDevelopment(state, onViewEvent)
+                CategoryDevelopment(state, showDivider, onViewEvent)
             }
 
-            CategoryGeneral(state, onViewEvent)
-            CategoryAlarms(state, onViewEvent)
+            CategoryGeneral(state, showDivider, onViewEvent)
+            CategoryAlarms(state, showDivider, onViewEvent)
 
             if (state.isEngelsystemCategoryVisible) {
                 CategoryEngelsystem(state, onViewEvent)
@@ -74,12 +77,14 @@ internal fun SettingsListScreen(
 @Composable
 private fun CategoryDevelopment(
     state: SettingsUiState,
+    showDivider: Boolean,
     onViewEvent: (SettingsEvent) -> Unit,
 ) {
     PreferenceCategory(stringResource(R.string.development_settings)) {
         ClickPreference(
             title = stringResource(R.string.preference_title_schedule_refresh_interval),
             subtitle = state.settings.scheduleRefreshIntervalToUiString(),
+            showDivider = showDivider,
             onClick = { onViewEvent(ScheduleRefreshIntervalClicked) },
         )
 
@@ -94,12 +99,14 @@ private fun CategoryDevelopment(
 @Composable
 private fun CategoryGeneral(
     state: SettingsUiState,
+    showDivider: Boolean,
     onViewEvent: (SettingsEvent) -> Unit,
 ) {
     PreferenceCategory(stringResource(R.string.general_settings)) {
         EnableAutomaticUpdatesPreference(
             isAutoUpdateEnabled = state.settings.isAutoUpdateEnabled,
             nextFetch = state.nextFetch,
+            showDivider = showDivider,
             onViewEvent = onViewEvent,
         )
 
@@ -107,6 +114,7 @@ private fun CategoryGeneral(
             title = stringResource(R.string.preference_title_show_schedule_update_dialog_enabled),
             subtitle = stringResource(R.string.preference_summary_show_schedule_update_dialog_enabled),
             checked = state.settings.isShowScheduleUpdateDialogEnabled,
+            showDivider = showDivider,
             onCheckedChange = { onViewEvent(ShowScheduleUpdateDialogClicked) },
         )
 
@@ -114,6 +122,7 @@ private fun CategoryGeneral(
             title = stringResource(R.string.preference_title_use_device_time_zone_enabled),
             subtitle = stringResource(R.string.preference_summary_use_device_time_zone_enabled),
             checked = state.settings.isUseDeviceTimeZoneEnabled,
+            showDivider = showDivider,
             onCheckedChange = { onViewEvent(DeviceTimezoneClicked) },
         )
 
@@ -121,6 +130,7 @@ private fun CategoryGeneral(
             ExternalClickPreference(
                 title = stringResource(R.string.preference_title_app_notification_settings),
                 subtitle = stringResource(R.string.preference_summary_app_notification_settings),
+                showDivider = showDivider,
                 onClick = { onViewEvent(CustomizeNotificationsClicked) },
             )
         }
@@ -128,6 +138,7 @@ private fun CategoryGeneral(
         if (state.isAlternativeScheduleUrlVisible) {
             AlternativeScheduleUrlPreference(
                 alternativeScheduleUrl = state.settings.alternativeScheduleUrl,
+                showDivider = showDivider,
                 onViewEvent = onViewEvent,
             )
         }
@@ -136,6 +147,7 @@ private fun CategoryGeneral(
             title = stringResource(R.string.preference_title_alternative_highlighting_enabled),
             subtitle = stringResource(R.string.preference_summary_alternative_highlighting_enabled),
             checked = state.settings.isAlternativeHighlightingEnabled,
+            showDivider = showDivider,
             onCheckedChange = { onViewEvent(AlternativeHighlightingClicked) },
         )
 
@@ -143,6 +155,7 @@ private fun CategoryGeneral(
             title = stringResource(R.string.preference_title_fast_swiping_enabled),
             subtitle = stringResource(R.string.preference_summary_fast_swiping_enabled),
             checked = state.settings.isFastSwipingEnabled,
+            showDivider = showDivider,
             onCheckedChange = { onViewEvent(FastSwipingClicked) },
         )
 
@@ -158,12 +171,14 @@ private fun CategoryGeneral(
 @Composable
 private fun CategoryAlarms(
     state: SettingsUiState,
+    showDivider: Boolean,
     onViewEvent: (SettingsEvent) -> Unit,
 ) {
     PreferenceCategory(stringResource(R.string.reminders)) {
         ExternalClickPreference(
             title = stringResource(R.string.preference_title_alarm_tone),
             subtitle = stringResource(R.string.preference_summary_alarm_tone),
+            showDivider = showDivider,
             onClick = { onViewEvent(AlarmToneClicked) },
         )
 
@@ -171,6 +186,7 @@ private fun CategoryAlarms(
             title = stringResource(R.string.preference_title_insistent_alarms_enabled),
             subtitle = stringResource(R.string.preference_summary_insistent_alarms_enabled),
             checked = state.settings.isInsistentAlarmsEnabled,
+            showDivider = showDivider,
             onCheckedChange = { onViewEvent(InsistentAlarmClicked) },
         )
 
