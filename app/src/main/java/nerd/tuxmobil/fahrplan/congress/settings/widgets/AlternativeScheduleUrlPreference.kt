@@ -9,6 +9,7 @@ import nerd.tuxmobil.fahrplan.congress.settings.SettingsEvent.AlternativeSchedul
 @Composable
 internal fun AlternativeScheduleUrlPreference(
     alternativeScheduleUrl: String,
+    showDivider: Boolean = false,
     onViewEvent: (SettingsEvent) -> Unit,
 ) {
     val subtitle = alternativeScheduleUrl.ifEmpty {
@@ -18,6 +19,7 @@ internal fun AlternativeScheduleUrlPreference(
     ClickPreference(
         title = stringResource(R.string.preference_title_alternative_schedule_url),
         subtitle = subtitle,
+        showDivider = showDivider,
         onClick = { onViewEvent(AlternativeScheduleUrlClicked) },
     )
 }

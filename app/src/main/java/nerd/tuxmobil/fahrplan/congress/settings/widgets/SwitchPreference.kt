@@ -23,41 +23,47 @@ internal fun SwitchPreference(
     onCheckedChange: (Boolean) -> Unit,
     modifier: Modifier = Modifier,
     subtitle: String? = null,
+    showDivider: Boolean = false,
 ) {
     val interactionSource = remember { MutableInteractionSource() }
 
-    Row(
-        verticalAlignment = CenterVertically,
-        modifier = modifier
-            .fillMaxWidth()
-            .minimumInteractiveComponentSize()
-            .toggleable(
-                value = checked,
-                interactionSource = interactionSource,
-                indication = ripple(),
-                role = Role.Switch,
-                onValueChange = onCheckedChange,
-            )
-            .padding(
-                horizontal = PREFERENCE_HORIZONTAL_PADDING_DP.dp,
-                vertical = PREFERENCE_VERTICAL_PADDING_DP.dp,
-            )
+    PreferenceItemContainer(
+        modifier = modifier,
+        showDivider = showDivider,
     ) {
-        PreferenceText(
-            title = title,
-            subtitle = subtitle,
-            modifier = Modifier.weight(1f),
-        )
-
-        // The ripple effect is displayed on the Row. Don't show a separate one on the Switch.
-        WithoutRipple {
-            Switch(
-                checked = checked,
-                onCheckedChange = null,
-                // Clicks on the row will highlight the switch thumb
-                interactionSource = interactionSource,
-                modifier = Modifier.padding(start = 16.dp),
+        Row(
+            verticalAlignment = CenterVertically,
+            modifier = Modifier
+                .fillMaxWidth()
+                .minimumInteractiveComponentSize()
+                .toggleable(
+                    value = checked,
+                    interactionSource = interactionSource,
+                    indication = ripple(),
+                    role = Role.Switch,
+                    onValueChange = onCheckedChange,
+                )
+                .padding(
+                    horizontal = PREFERENCE_HORIZONTAL_PADDING_DP.dp,
+                    vertical = PREFERENCE_VERTICAL_PADDING_DP.dp,
+                )
+        ) {
+            PreferenceText(
+                title = title,
+                subtitle = subtitle,
+                modifier = Modifier.weight(1f),
             )
+
+            // The ripple effect is displayed on the Row. Don't show a separate one on the Switch.
+            WithoutRipple {
+                Switch(
+                    checked = checked,
+                    onCheckedChange = null,
+                    // Clicks on the row will highlight the switch thumb
+                    interactionSource = interactionSource,
+                    modifier = Modifier.padding(start = 16.dp),
+                )
+            }
         }
     }
 }

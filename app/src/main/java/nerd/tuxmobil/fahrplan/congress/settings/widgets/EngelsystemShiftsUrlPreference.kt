@@ -18,36 +18,39 @@ import nerd.tuxmobil.fahrplan.congress.designsystem.themes.EventFahrplanTheme
 @Composable
 internal fun EngelsystemShiftsUrlPreference(
     engelsystemShiftsUrl: String,
+    showDivider: Boolean = false,
     onClick: () -> Unit,
 ) {
-    Column(
-        modifier = Modifier
-            .fillMaxWidth()
-            .minimumInteractiveComponentSize()
-            .clickable(onClick = onClick)
-            .padding(
-                horizontal = PREFERENCE_HORIZONTAL_PADDING_DP.dp,
-                vertical = PREFERENCE_VERTICAL_PADDING_DP.dp,
-            )
-    ) {
-        Text(
-            text = stringResource(R.string.preference_title_engelsystem_json_export_url),
-            style = EventFahrplanTheme.typography.preferenceTitle,
-        )
-
-        Text(
-            text = if (engelsystemShiftsUrl.isEmpty()) {
-                AnnotatedString.fromHtml(
-                    stringResource(
-                        R.string.preference_summary_engelsystem_json_export_url,
-                        stringResource(R.string.engelsystem_alias)
-                    )
+    PreferenceItemContainer(showDivider = showDivider) {
+        Column(
+            modifier = Modifier
+                .fillMaxWidth()
+                .minimumInteractiveComponentSize()
+                .clickable(onClick = onClick)
+                .padding(
+                    horizontal = PREFERENCE_HORIZONTAL_PADDING_DP.dp,
+                    vertical = PREFERENCE_VERTICAL_PADDING_DP.dp,
                 )
-            } else {
-                // Truncate to keep the key private.
-                AnnotatedString("${engelsystemShiftsUrl.dropLast(23)}…")
-            },
-            style = EventFahrplanTheme.typography.bodyMedium,
-        )
+        ) {
+            Text(
+                text = stringResource(R.string.preference_title_engelsystem_json_export_url),
+                style = EventFahrplanTheme.typography.preferenceTitle,
+            )
+
+            Text(
+                text = if (engelsystemShiftsUrl.isEmpty()) {
+                    AnnotatedString.fromHtml(
+                        stringResource(
+                            R.string.preference_summary_engelsystem_json_export_url,
+                            stringResource(R.string.engelsystem_alias)
+                        )
+                    )
+                } else {
+                    // Truncate to keep the key private.
+                    AnnotatedString("${engelsystemShiftsUrl.dropLast(23)}…")
+                },
+                style = EventFahrplanTheme.typography.bodyMedium,
+            )
+        }
     }
 }

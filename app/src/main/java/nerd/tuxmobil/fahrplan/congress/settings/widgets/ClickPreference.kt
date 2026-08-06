@@ -13,18 +13,24 @@ internal fun ClickPreference(
     title: String,
     modifier: Modifier = Modifier,
     subtitle: String? = null,
+    showDivider: Boolean = false,
     onClick: () -> Unit,
 ) {
-    PreferenceText(
-        title = title,
-        subtitle = subtitle,
-        modifier = modifier
-            .fillMaxWidth()
-            .minimumInteractiveComponentSize()
-            .clickable(onClick = onClick)
-            .padding(
-                horizontal = PREFERENCE_HORIZONTAL_PADDING_DP.dp,
-                vertical = PREFERENCE_VERTICAL_PADDING_DP.dp,
-            )
-    )
+    PreferenceItemContainer(
+        modifier = modifier,
+        showDivider = showDivider,
+    ) {
+        PreferenceText(
+            title = title,
+            subtitle = subtitle,
+            modifier = Modifier
+                .fillMaxWidth()
+                .minimumInteractiveComponentSize()
+                .clickable(onClick = onClick)
+                .padding(
+                    horizontal = PREFERENCE_HORIZONTAL_PADDING_DP.dp,
+                    vertical = PREFERENCE_VERTICAL_PADDING_DP.dp,
+                )
+        )
+    }
 }

@@ -14,6 +14,7 @@ import nerd.tuxmobil.fahrplan.congress.settings.SettingsEvent.AutoUpdateClicked
 internal fun EnableAutomaticUpdatesPreference(
     isAutoUpdateEnabled: Boolean,
     nextFetch: NextFetch,
+    showDivider: Boolean = false,
     onViewEvent: (SettingsEvent) -> Unit,
 ) {
     val context = LocalContext.current
@@ -29,6 +30,7 @@ internal fun EnableAutomaticUpdatesPreference(
         title = stringResource(R.string.preference_title_auto_update_enabled),
         subtitle = subtitle,
         checked = isAutoUpdateEnabled,
+        showDivider = showDivider,
         onCheckedChange = { onViewEvent(AutoUpdateClicked) },
     )
 }
