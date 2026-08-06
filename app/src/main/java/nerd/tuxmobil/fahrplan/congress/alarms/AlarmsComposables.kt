@@ -15,6 +15,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment.Companion.BottomCenter
 import androidx.compose.ui.Alignment.Companion.CenterEnd
+import androidx.compose.ui.Alignment.Companion.TopCenter
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.semantics.contentDescription
@@ -35,6 +36,8 @@ import nerd.tuxmobil.fahrplan.congress.commons.MultiDevicePreview
 import nerd.tuxmobil.fahrplan.congress.commons.ScreenMetrics
 import nerd.tuxmobil.fahrplan.congress.commons.ToolbarMetrics
 import nerd.tuxmobil.fahrplan.congress.commons.useVerticalFloatingToolbar
+import nerd.tuxmobil.fahrplan.congress.designsystem.bars.NavigationBarProtection
+import nerd.tuxmobil.fahrplan.congress.designsystem.bars.StatusBarProtection
 import nerd.tuxmobil.fahrplan.congress.designsystem.buttons.ButtonIcon
 import nerd.tuxmobil.fahrplan.congress.designsystem.dividers.DividerHorizontal
 import nerd.tuxmobil.fahrplan.congress.designsystem.headers.HeaderSessionList
@@ -168,6 +171,10 @@ private fun SessionAlarmsList(
                 )
             }
         }
+        if (!showInSidePane) {
+            StatusBarProtection(Modifier.align(TopCenter))
+        }
+        NavigationBarProtection(Modifier.align(BottomCenter))
         AlarmsToolbar(
             modifier = Modifier
                 .align(if (useVerticalToolbar) CenterEnd else BottomCenter),

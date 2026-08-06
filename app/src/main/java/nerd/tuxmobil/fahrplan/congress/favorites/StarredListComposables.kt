@@ -24,6 +24,7 @@ import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment.Companion.BottomCenter
 import androidx.compose.ui.Alignment.Companion.CenterEnd
+import androidx.compose.ui.Alignment.Companion.TopCenter
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.drawBehind
 import androidx.compose.ui.res.stringResource
@@ -36,6 +37,8 @@ import nerd.tuxmobil.fahrplan.congress.commons.MultiDevicePreview
 import nerd.tuxmobil.fahrplan.congress.commons.ToolbarMetrics
 import nerd.tuxmobil.fahrplan.congress.commons.createSearchResultPreviewData
 import nerd.tuxmobil.fahrplan.congress.commons.useVerticalFloatingToolbar
+import nerd.tuxmobil.fahrplan.congress.designsystem.bars.NavigationBarProtection
+import nerd.tuxmobil.fahrplan.congress.designsystem.bars.StatusBarProtection
 import nerd.tuxmobil.fahrplan.congress.designsystem.headers.HeaderDayDate
 import nerd.tuxmobil.fahrplan.congress.designsystem.headers.HeaderSessionList
 import nerd.tuxmobil.fahrplan.congress.designsystem.screenstates.Loading
@@ -219,6 +222,10 @@ private fun StarredSessionsList(
                 },
             )
         }
+        if (!showInSidePane) {
+            StatusBarProtection(Modifier.align(TopCenter))
+        }
+        NavigationBarProtection(Modifier.align(BottomCenter))
         StarredListToolbar(
             modifier = Modifier
                 .align(if (useVerticalToolbar) CenterEnd else BottomCenter),
