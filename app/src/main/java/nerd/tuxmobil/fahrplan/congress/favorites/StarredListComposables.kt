@@ -11,6 +11,7 @@ import androidx.compose.foundation.layout.WindowInsets
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.statusBars
 import androidx.compose.foundation.layout.widthIn
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyListScope
@@ -24,8 +25,10 @@ import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment.Companion.BottomCenter
 import androidx.compose.ui.Alignment.Companion.CenterEnd
+import androidx.compose.ui.Alignment.Companion.TopCenter
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.drawBehind
+import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.semantics.paneTitle
 import androidx.compose.ui.semantics.semantics
@@ -36,6 +39,8 @@ import nerd.tuxmobil.fahrplan.congress.commons.MultiDevicePreview
 import nerd.tuxmobil.fahrplan.congress.commons.ToolbarMetrics
 import nerd.tuxmobil.fahrplan.congress.commons.createSearchResultPreviewData
 import nerd.tuxmobil.fahrplan.congress.commons.useVerticalFloatingToolbar
+import nerd.tuxmobil.fahrplan.congress.designsystem.bars.NavigationBarProtection
+import nerd.tuxmobil.fahrplan.congress.designsystem.bars.StatusBarProtection
 import nerd.tuxmobil.fahrplan.congress.designsystem.headers.HeaderDayDate
 import nerd.tuxmobil.fahrplan.congress.designsystem.headers.HeaderSessionList
 import nerd.tuxmobil.fahrplan.congress.designsystem.screenstates.Loading
@@ -161,6 +166,8 @@ private fun StarredSessionsList(
         enabled = !useVerticalToolbar,
     )
     val hasStarredSessions = sessions.isNotEmpty()
+    val density = LocalDensity.current
+    val statusBarHeight = if (showInSidePane) 0 else WindowInsets.statusBars.getTop(density)
 
     LaunchedEffect(sessions, hasAutoScrolled, listState) {
         if (sessions.isEmpty()) return@LaunchedEffect
@@ -168,7 +175,7 @@ private fun StarredSessionsList(
             val firstFutureIndex = firstFutureItemIndex(sessions)
             if (firstFutureIndex in 1 until sessions.size) {
                 // Lazy list item 0 is the top bar; session rows start at index 1.
-                listState.scrollToItem(firstFutureIndex + 1)
+                listState.scrollToItem(firstFutureIndex + 1, scrollOffset = -statusBarHeight)
             }
             hasAutoScrolled = true
         }
@@ -219,6 +226,10 @@ private fun StarredSessionsList(
                 },
             )
         }
+        if (!showInSidePane) {
+            StatusBarProtection(Modifier.align(TopCenter))
+        }
+        NavigationBarProtection(Modifier.align(BottomCenter))
         StarredListToolbar(
             modifier = Modifier
                 .align(if (useVerticalToolbar) CenterEnd else BottomCenter),

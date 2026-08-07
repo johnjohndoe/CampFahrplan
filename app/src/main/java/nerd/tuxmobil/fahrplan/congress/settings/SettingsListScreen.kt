@@ -1,13 +1,16 @@
 package nerd.tuxmobil.fahrplan.congress.settings
 
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.WindowInsets
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.safeDrawing
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment.Companion.BottomCenter
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalWindowInfo
 import androidx.compose.ui.res.stringResource
@@ -15,6 +18,7 @@ import androidx.compose.ui.tooling.preview.PreviewLightDark
 import androidx.compose.ui.unit.dp
 import nerd.tuxmobil.fahrplan.congress.R
 import nerd.tuxmobil.fahrplan.congress.commons.alarmTimeToUiString
+import nerd.tuxmobil.fahrplan.congress.designsystem.bars.NavigationBarProtection
 import nerd.tuxmobil.fahrplan.congress.designsystem.bars.TopBar
 import nerd.tuxmobil.fahrplan.congress.designsystem.templates.Scaffold
 import nerd.tuxmobil.fahrplan.congress.designsystem.themes.EventFahrplanTheme
@@ -53,23 +57,26 @@ internal fun SettingsListScreen(
         },
         contentWindowInsets = WindowInsets.safeDrawing,
     ) { contentPadding ->
-        Column(
-            modifier = Modifier
-                .fillMaxWidth()
-                .verticalScroll(rememberScrollState())
-                .padding(contentPadding)
-        ) {
-            val showDivider = LocalWindowInfo.current.containerDpSize.width > 1000.dp
-            if (state.isDevelopmentCategoryVisible) {
-                CategoryDevelopment(state, showDivider, onViewEvent)
-            }
+        Box(Modifier.fillMaxSize()) {
+            Column(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .verticalScroll(rememberScrollState())
+                    .padding(contentPadding)
+            ) {
+                val showDivider = LocalWindowInfo.current.containerDpSize.width > 1000.dp
+                if (state.isDevelopmentCategoryVisible) {
+                    CategoryDevelopment(state, showDivider, onViewEvent)
+                }
 
-            CategoryGeneral(state, showDivider, onViewEvent)
-            CategoryAlarms(state, showDivider, onViewEvent)
+                CategoryGeneral(state, showDivider, onViewEvent)
+                CategoryAlarms(state, showDivider, onViewEvent)
 
-            if (state.isEngelsystemCategoryVisible) {
-                CategoryEngelsystem(state, onViewEvent)
+                if (state.isEngelsystemCategoryVisible) {
+                    CategoryEngelsystem(state, onViewEvent)
+                }
             }
+            NavigationBarProtection(Modifier.align(BottomCenter))
         }
     }
 }

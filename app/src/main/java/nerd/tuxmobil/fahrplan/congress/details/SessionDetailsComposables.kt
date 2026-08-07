@@ -6,17 +6,12 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.WindowInsets
-import androidx.compose.foundation.layout.WindowInsetsSides.Companion.Bottom
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.navigationBars
-import androidx.compose.foundation.layout.only
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.widthIn
-import androidx.compose.foundation.layout.windowInsetsPadding
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.text.selection.SelectionContainer
 import androidx.compose.foundation.verticalScroll
@@ -28,6 +23,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Alignment.Companion.BottomCenter
 import androidx.compose.ui.Alignment.Companion.CenterEnd
 import androidx.compose.ui.Alignment.Companion.CenterVertically
+import androidx.compose.ui.Alignment.Companion.TopCenter
 import androidx.compose.ui.Alignment.Companion.TopStart
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -70,6 +66,8 @@ import nerd.tuxmobil.fahrplan.congress.commons.MultiDevicePreview
 import nerd.tuxmobil.fahrplan.congress.commons.ScreenMetrics
 import nerd.tuxmobil.fahrplan.congress.commons.ToolbarMetrics
 import nerd.tuxmobil.fahrplan.congress.commons.useVerticalFloatingToolbar
+import nerd.tuxmobil.fahrplan.congress.designsystem.bars.NavigationBarProtection
+import nerd.tuxmobil.fahrplan.congress.designsystem.bars.StatusBarProtection
 import nerd.tuxmobil.fahrplan.congress.designsystem.buttons.ButtonBox
 import nerd.tuxmobil.fahrplan.congress.designsystem.icons.IconDecorative
 import nerd.tuxmobil.fahrplan.congress.designsystem.resources.floatResource
@@ -183,6 +181,10 @@ internal fun SessionDetailsContent(
                 source = ScrollPosition.Scroll(scrollState),
                 enabled = toolbarActions.isNotEmpty() && !useVerticalToolbar,
             )
+            if (!showInSidePane) {
+                StatusBarProtection(Modifier.align(TopCenter))
+            }
+            NavigationBarProtection(Modifier.align(BottomCenter))
             if (toolbarActions.isNotEmpty()) {
                 SessionDetailsToolbar(
                     modifier = Modifier

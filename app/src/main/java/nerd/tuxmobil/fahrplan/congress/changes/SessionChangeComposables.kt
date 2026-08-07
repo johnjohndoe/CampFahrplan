@@ -14,7 +14,9 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment.Companion.BottomCenter
 import androidx.compose.ui.Alignment.Companion.CenterVertically
+import androidx.compose.ui.Alignment.Companion.TopCenter
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.semantics.contentDescription
@@ -41,6 +43,8 @@ import nerd.tuxmobil.fahrplan.congress.commons.MultiDevicePreview
 import nerd.tuxmobil.fahrplan.congress.commons.ScreenMetrics
 import nerd.tuxmobil.fahrplan.congress.commons.VideoRecordingState.Drawable.Available
 import nerd.tuxmobil.fahrplan.congress.commons.VideoRecordingState.Drawable.Unavailable
+import nerd.tuxmobil.fahrplan.congress.designsystem.bars.NavigationBarProtection
+import nerd.tuxmobil.fahrplan.congress.designsystem.bars.StatusBarProtection
 import nerd.tuxmobil.fahrplan.congress.designsystem.dividers.DividerHorizontal
 import nerd.tuxmobil.fahrplan.congress.designsystem.headers.HeaderDayDate
 import nerd.tuxmobil.fahrplan.congress.designsystem.headers.HeaderSessionList
@@ -135,47 +139,53 @@ private fun SessionChangesList(
     onBack: () -> Unit,
     onViewEvent: (SessionChangeViewEvent) -> Unit,
 ) {
-    LazyColumn(
-        modifier = Modifier.fillMaxSize(),
-        state = rememberLazyListState(),
-        contentPadding = WindowInsets.navigationBarsImeBottomPaddingValues(),
-    ) {
-        item {
-            NavigationSection(
-                showInSidePane = showInSidePane,
-                navigationTitle = navigationTitle,
-                onNavClick = onBack,
-            )
-        }
-        itemsIndexed(
-            items = parameters,
-            key = { _, parameter -> parameter.hashCode() },
-        ) { index, parameter ->
-            when (parameter) {
-                is Separator -> HeaderDayDate(
-                    modifier = Modifier.animateItem(),
-                    text = parameter.daySeparator.value,
-                    contentDescription = parameter.daySeparator.contentDescription,
+    Box(Modifier.fillMaxSize()) {
+        LazyColumn(
+            modifier = Modifier.fillMaxSize(),
+            state = rememberLazyListState(),
+            contentPadding = WindowInsets.navigationBarsImeBottomPaddingValues(),
+        ) {
+            item {
+                NavigationSection(
+                    showInSidePane = showInSidePane,
+                    navigationTitle = navigationTitle,
+                    onNavClick = onBack,
                 )
-
-                is SessionChange -> {
-                    val next = parameters.getOrNull(index + 1)
-                    val showDivider = index < parameters.size - 1 && next is SessionChange
-                    SessionChangeItem(
-                        session = parameter,
-                        showDivider = showDivider,
-                        modifier = Modifier
-                            .animateItem()
-                            .safeContentHorizontalPadding()
-                            .clickable {
-                                if (!parameter.isCanceled) {
-                                    onViewEvent(OnSessionChangeItemClick(parameter.id))
-                                }
-                            }
+            }
+            itemsIndexed(
+                items = parameters,
+                key = { _, parameter -> parameter.hashCode() },
+            ) { index, parameter ->
+                when (parameter) {
+                    is Separator -> HeaderDayDate(
+                        modifier = Modifier.animateItem(),
+                        text = parameter.daySeparator.value,
+                        contentDescription = parameter.daySeparator.contentDescription,
                     )
+
+                    is SessionChange -> {
+                        val next = parameters.getOrNull(index + 1)
+                        val showDivider = index < parameters.size - 1 && next is SessionChange
+                        SessionChangeItem(
+                            session = parameter,
+                            showDivider = showDivider,
+                            modifier = Modifier
+                                .animateItem()
+                                .safeContentHorizontalPadding()
+                                .clickable {
+                                    if (!parameter.isCanceled) {
+                                        onViewEvent(OnSessionChangeItemClick(parameter.id))
+                                    }
+                                }
+                        )
+                    }
                 }
             }
         }
+        if (!showInSidePane) {
+            StatusBarProtection(Modifier.align(TopCenter))
+        }
+        NavigationBarProtection(Modifier.align(BottomCenter))
     }
 }
 

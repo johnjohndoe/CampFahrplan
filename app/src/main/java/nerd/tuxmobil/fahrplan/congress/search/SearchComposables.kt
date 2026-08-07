@@ -6,6 +6,7 @@ import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.WindowInsets
@@ -25,6 +26,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.remember
+import androidx.compose.ui.Alignment.Companion.BottomCenter
 import androidx.compose.ui.Alignment.Companion.CenterVertically
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.focus.FocusRequester
@@ -49,6 +51,7 @@ import nerd.tuxmobil.fahrplan.congress.R
 import nerd.tuxmobil.fahrplan.congress.commons.MultiDevicePreview
 import nerd.tuxmobil.fahrplan.congress.commons.ScreenMetrics
 import nerd.tuxmobil.fahrplan.congress.commons.createSearchResultPreviewData
+import nerd.tuxmobil.fahrplan.congress.designsystem.bars.NavigationBarProtection
 import nerd.tuxmobil.fahrplan.congress.designsystem.buttons.ButtonIcon
 import nerd.tuxmobil.fahrplan.congress.designsystem.buttons.ButtonOutlined
 import nerd.tuxmobil.fahrplan.congress.designsystem.chips.FilterChip
@@ -190,7 +193,7 @@ private fun SearchBarContent(
     onViewEvent: (SearchViewEvent) -> Unit,
 ) {
     Crossfade(targetState = state) { state ->
-        Column {
+        Column(Modifier.fillMaxSize()) {
             when (state) {
                 is Loading -> Loading()
                 is NoSearchResults -> NoSearchResult(onBack = { onViewEvent(state.backEvent) })
@@ -293,35 +296,38 @@ private fun SearchResultList(
     parameters: ImmutableList<SearchResultParameter>,
     onViewEvent: (SearchViewEvent) -> Unit,
 ) {
-    LazyColumn(
-        state = rememberLazyListState(),
-        contentPadding = WindowInsets.navigationBarsImeBottomPaddingValues(),
-    ) {
-        itemsIndexed(
-            items = parameters,
-            key = { _, parameter -> parameter.hashCode() },
-        ) { index, parameter ->
-            when (parameter) {
-                is Separator -> HeaderDayDate(
-                    modifier = Modifier.animateItem(),
-                    text = parameter.daySeparator.value,
-                    contentDescription = parameter.daySeparator.contentDescription,
-                )
-
-                is SearchResult -> {
-                    val next = parameters.getOrNull(index + 1)
-                    val showDivider = index < parameters.size - 1 && next is SearchResult
-                    SearchResultItem(
-                        searchResult = parameter,
-                        modifier = Modifier
-                            .animateItem()
-                            .clickable { onViewEvent(OnSearchResultItemClick(parameter.id)) }
-                            .safeContentHorizontalPadding(),
-                        showDivider = showDivider,
+    Box(Modifier.fillMaxSize()) {
+        LazyColumn(
+            state = rememberLazyListState(),
+            contentPadding = WindowInsets.navigationBarsImeBottomPaddingValues(),
+        ) {
+            itemsIndexed(
+                items = parameters,
+                key = { _, parameter -> parameter.hashCode() },
+            ) { index, parameter ->
+                when (parameter) {
+                    is Separator -> HeaderDayDate(
+                        modifier = Modifier.animateItem(),
+                        text = parameter.daySeparator.value,
+                        contentDescription = parameter.daySeparator.contentDescription,
                     )
+
+                    is SearchResult -> {
+                        val next = parameters.getOrNull(index + 1)
+                        val showDivider = index < parameters.size - 1 && next is SearchResult
+                        SearchResultItem(
+                            searchResult = parameter,
+                            modifier = Modifier
+                                .animateItem()
+                                .clickable { onViewEvent(OnSearchResultItemClick(parameter.id)) }
+                                .safeContentHorizontalPadding(),
+                            showDivider = showDivider,
+                        )
+                    }
                 }
             }
         }
+        NavigationBarProtection(Modifier.align(BottomCenter))
     }
     BackHandler {
         onViewEvent(OnSearchSubScreenBackPress)
@@ -460,43 +466,49 @@ private fun SearchHistoryList(
     searchQueries: ImmutableList<String>,
     onViewEvent: (SearchViewEvent) -> Unit,
 ) {
-    Row(
-        Modifier
-            .fillMaxWidth()
-            .padding(horizontal = 16.dp, vertical = 8.dp)
-            .safeContentHorizontalPadding(),
-        verticalAlignment = CenterVertically,
-    ) {
-        Text(
-            text = stringResource(R.string.search_history_title),
-            fontWeight = Bold,
-            modifier = Modifier.weight(1f),
-        )
-        ButtonOutlined(
-            border = BorderStroke(1.dp, EventFahrplanTheme.colorScheme.primary),
-            onClick = { onViewEvent(OnSearchHistoryClear) }
-        ) {
-            Text(
-                stringResource(R.string.search_history_clear),
-            )
-        }
-    }
-    LazyColumn(
-        state = rememberLazyListState(),
-        contentPadding = WindowInsets.navigationBarsImeBottomPaddingValues(),
-    ) {
-        itemsIndexed(searchQueries) { index, searchQuery ->
-            SearchHistoryItem(
-                searchQuery = searchQuery,
-                modifier = Modifier
-                    .clickable { onViewEvent(OnSearchHistoryItemClick(searchQuery)) }
-                    .safeContentHorizontalPadding()
-            )
-            val next = searchQueries.getOrNull(index + 1)
-            if (index < searchQueries.size - 1 && (next != null)) {
-                DividerHorizontal(Modifier.padding(horizontal = 12.dp))
+    Box(Modifier.fillMaxSize()) {
+        Column {
+            Row(
+                Modifier
+                    .fillMaxWidth()
+                    .padding(horizontal = 16.dp, vertical = 8.dp)
+                    .safeContentHorizontalPadding(),
+                verticalAlignment = CenterVertically,
+            ) {
+                Text(
+                    text = stringResource(R.string.search_history_title),
+                    fontWeight = Bold,
+                    modifier = Modifier.weight(1f),
+                )
+                ButtonOutlined(
+                    border = BorderStroke(1.dp, EventFahrplanTheme.colorScheme.primary),
+                    onClick = { onViewEvent(OnSearchHistoryClear) }
+                ) {
+                    Text(
+                        stringResource(R.string.search_history_clear),
+                    )
+                }
+            }
+            LazyColumn(
+                modifier = Modifier.weight(1f),
+                state = rememberLazyListState(),
+                contentPadding = WindowInsets.navigationBarsImeBottomPaddingValues(),
+            ) {
+                itemsIndexed(searchQueries) { index, searchQuery ->
+                    SearchHistoryItem(
+                        searchQuery = searchQuery,
+                        modifier = Modifier
+                            .clickable { onViewEvent(OnSearchHistoryItemClick(searchQuery)) }
+                            .safeContentHorizontalPadding()
+                    )
+                    val next = searchQueries.getOrNull(index + 1)
+                    if (index < searchQueries.size - 1 && (next != null)) {
+                        DividerHorizontal(Modifier.padding(horizontal = 12.dp))
+                    }
+                }
             }
         }
+        NavigationBarProtection(Modifier.align(BottomCenter))
     }
 }
 
