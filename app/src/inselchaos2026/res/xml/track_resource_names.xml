@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<map linked="true">
+    <entry key="DJ-Set">music</entry>
+    <entry key="Live-Musik">music</entry>
+    <entry key="Music">music</entry>
+    <entry key="Performance">performance</entry>
+    <entry key="Sonstiges">other</entry>
+    <entry key="Talk">talks</entry>
+    <entry key="Vortrag">talks</entry>
+    <entry key="Workshop">workshops</entry>
+    <entry key="">other</entry>
+</map>

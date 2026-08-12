@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">InselChaos 2026</string>
+    <string name="app_hardcoded_subtitle">InselChaos, September 4–6, 2026, Bergen auf Rügen</string>
+    <string name="conference_name" translatable="false">InselChaos 2026</string>
+    <string name="copyright_logo">
+        The InselChaos logo is provided by the InselChaos organizers.
+    </string>
+    <string name="about_logo_content_description">
+        InselChaos logo: A crab with raised claws and the words “Insel Chaos” on its shell.
+    </string>
+</resources>

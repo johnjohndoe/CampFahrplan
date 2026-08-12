@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorPrimary">#7A3900</color>
+    <color name="colorPrimaryDark">#A34D00</color>
+    <color name="colorAccent">#FF9A3D</color>
+    <color name="color_accent_inverted">#E57373</color>
+    <color name="background_primary">#12100E</color>
+    <color name="multi_choice_background">#713600</color>
+    <color name="schedule_time_column_background">#542800</color>
+    <color name="schedule_horizontal_time_line">#542800</color>
+    <color name="schedule_room_name_header_background">#301700</color>
+
+    <!-- Default state -->
+    <color name="track_background_default">#4D4D4D</color>
+    <color name="track_background_default_music">#454973</color>
+    <color name="track_background_default_other">#3A3542</color>
+    <color name="track_background_default_performance">#403542</color>
+    <color name="track_background_default_talks">#663414</color>
+    <color name="track_background_default_workshops">#4D5C2E</color>
+
+    <!-- Highlight state -->
+    <color name="track_background_highlight">#676767</color>
+    <color name="track_background_highlight_music">#737ABF</color>
+    <color name="track_background_highlight_other">#5A5266</color>
+    <color name="track_background_highlight_performance">#625166</color>
+    <color name="track_background_highlight_talks">#9B5830</color>
+    <color name="track_background_highlight_workshops">#748B45</color>
+</resources>

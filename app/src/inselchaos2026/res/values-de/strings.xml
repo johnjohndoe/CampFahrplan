@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">InselChaos 2026</string>
+    <string name="app_hardcoded_subtitle">InselChaos, 4.–6. September 2026, Bergen auf Rügen</string>
+    <string name="copyright_logo">
+        Das InselChaos-Logo wird von den InselChaos-Veranstaltenden bereitgestellt.
+    </string>
+    <string name="about_logo_content_description">
+        InselChaos-Logo: Eine Krabbe mit erhobenen Scheren und dem Schriftzug „Insel Chaos“ auf ihrem Panzer.
+    </string>
+</resources>

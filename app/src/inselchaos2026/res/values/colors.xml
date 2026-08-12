@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorPrimary">#FFB74D</color>
+    <color name="colorPrimaryDark">#E6A545</color>
+    <color name="colorAccent">#E57373</color>
+    <color name="color_accent_inverted">#FF9A3D</color>
+    <color name="background_primary">#FFF9F4</color>
+    <color name="multi_choice_background">#FFD2AD</color>
+    <color name="schedule_time_column_background">#F4A052</color>
+    <color name="schedule_horizontal_time_line">#F4A052</color>
+
+    <!-- Default state -->
+    <color name="track_background_default">#C7C7C7</color>
+    <color name="track_background_default_music">#B0B6E8</color>
+    <color name="track_background_default_other">#C5C0D1</color>
+    <color name="track_background_default_performance">#CEC0D1</color>
+    <color name="track_background_default_talks">#E2A47D</color>
+    <color name="track_background_default_workshops">#B5CC7A</color>
+
+    <!-- Highlight state -->
+    <color name="track_background_highlight">#DEDEDE</color>
+    <color name="track_background_highlight_music">#D0D6FF</color>
+    <color name="track_background_highlight_other">#DDD8E7</color>
+    <color name="track_background_highlight_performance">#E2D3E6</color>
+    <color name="track_background_highlight_talks">#F7BF9C</color>
+    <color name="track_background_highlight_workshops">#D1E59A</color>
+
+</resources>
