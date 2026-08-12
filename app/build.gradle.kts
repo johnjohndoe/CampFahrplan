@@ -92,6 +92,7 @@ android {
     signingConfigs {
         create("cccamp2023")
         create("ccc39c3")
+        create("inselchaos2026")
     }
 
     val defaultDimension = "default"
@@ -141,6 +142,23 @@ android {
             resValue("string", "preference_hint_engelsystem_json_export_url", """"https://engel.events.ccc.de/shifts-json-export?key=YOUR_KEY"""")
             buildConfigField("String", "SOCIAL_MEDIA_HASHTAGS_HANDLES", """"#39c3 #fahrplan"""")
             buildConfigField("String", "TRACE_DROID_EMAIL_ADDRESS", """"tobias.preuss+39c3@googlemail.com"""")
+            buildConfigField("String", "SCHEDULE_FEEDBACK_URL", """""""")
+        }
+        create("inselchaos2026") {
+            dimension = defaultDimension
+            applicationId = "info.metadude.android.inselchaos.schedule"
+            versionName = "${defaultConfig.versionName}-InselChaos-Edition"
+            buildConfigField("String", "GOOGLE_PLAY_URL", """""""")
+            buildConfigField("String", "F_DROID_URL", """"https://f-droid.org/packages/info.metadude.android.inselchaos.schedule"""")
+            buildConfigField("String", "SCHEDULE_URL", """"https://talks.inselchaos.de/inselchaos-2026/schedule/export/schedule.json"""")
+            buildConfigField("String", "SCHEDULE_FILE_FORMAT", """"schedule_v1_json"""")
+            buildConfigField("String", "EVENT_URL", """""""")
+            buildConfigField("String", "EVENT_WEBSITE_URL", """"https://inselchaos.de"""")
+            buildConfigField("String", "EVENT_POSTAL_ADDRESS", """"Gingster Chaussee 6, 18528 Bergen auf Rügen"""")
+            buildConfigField("String", "SERVER_BACKEND_TYPE", """"pretalx"""")
+            buildConfigField("boolean", "ENABLE_CHAOSFLIX_EXPORT", "true")
+            buildConfigField("String", "SOCIAL_MEDIA_HASHTAGS_HANDLES", """"#inselchaos #inselchaos26 #inselchaos2026 #fahrplan @inselchaos@chaos.social"""")
+            buildConfigField("String", "TRACE_DROID_EMAIL_ADDRESS", """"tobias.preuss+inselchaos@googlemail.com"""")
             buildConfigField("String", "SCHEDULE_FEEDBACK_URL", """""""")
         }
     }
