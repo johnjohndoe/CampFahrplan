@@ -1,6 +1,7 @@
 package nerd.tuxmobil.fahrplan.congress.engagements
 
 import android.content.Context
+import androidx.core.content.ContextCompat
 import nerd.tuxmobil.fahrplan.congress.R
 import org.ligi.snackengage.conditions.AfterNumberOfOpportunities
 import org.ligi.snackengage.conditions.NeverAgainWhenClickedOnce
@@ -17,6 +18,9 @@ class LandscapeOrientationSnack(
 ) : BaseSnack() {
 
     init {
+        setBackgroundColor(ContextCompat.getColor(context, R.color.engagement_snack_background))
+        setActionColor(ContextCompat.getColor(context, R.color.engagement_snack_action))
+        setTitleColor(ContextCompat.getColor(context, R.color.engagement_snack_title))
         withConditions(
             NeverAgainWhenClickedOnce(),
             AfterNumberOfOpportunities(2),
