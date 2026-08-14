@@ -9,7 +9,6 @@ import info.metadude.android.eventfahrplan.database.contract.FahrplanContract.Al
 import info.metadude.android.eventfahrplan.database.contract.FahrplanContract.AlarmsTable.Columns.SESSION_TITLE
 import info.metadude.android.eventfahrplan.database.contract.FahrplanContract.AlarmsTable.Columns.TIME
 import info.metadude.android.eventfahrplan.database.contract.FahrplanContract.AlarmsTable.NAME
-import info.metadude.android.eventfahrplan.database.extensions.dropTableIfExist
 
 internal class AlarmsDBOpenHelper(context: Context) : SQLiteOpenHelper(
     context.applicationContext,
@@ -19,7 +18,7 @@ internal class AlarmsDBOpenHelper(context: Context) : SQLiteOpenHelper(
 ) {
 
     private companion object {
-        const val DATABASE_VERSION = 8
+        const val DATABASE_VERSION = 1
         const val DATABASE_NAME = "alarms"
 
         // language=sql
@@ -36,37 +35,6 @@ internal class AlarmsDBOpenHelper(context: Context) : SQLiteOpenHelper(
         execSQL(ALARMS_TABLE_CREATE)
     }
 
-    override fun onUpgrade(db: SQLiteDatabase, oldVersion: Int, newVersion: Int) = with(db) {
-        if (oldVersion < 3) {
-            // Clear database from 34C3.
-            dropTableIfExist(NAME)
-            onCreate(this)
-        }
-        if (oldVersion < 4) {
-            // Clear database from 35C3 & Camp 2019.
-            dropTableIfExist(NAME)
-            onCreate(this)
-        }
-        if (oldVersion < 5) {
-            // Clear database from rC3 12/2020.
-            dropTableIfExist(NAME)
-            onCreate(this)
-        }
-        if (oldVersion < 6) {
-            // Clear database from rC3 NOWHERE 12/2021 & 36C3 2019.
-            dropTableIfExist(NAME)
-            onCreate(this)
-        }
-        if (oldVersion < 7) {
-            // Clear database from Camp 2023 & 37C3 2023.
-            dropTableIfExist(NAME)
-            onCreate(this)
-        }
-        if (oldVersion < 8) {
-            // Clear database from 38C3 2024.
-            dropTableIfExist(NAME)
-            onCreate(this)
-        }
-    }
+    override fun onUpgrade(db: SQLiteDatabase, oldVersion: Int, newVersion: Int) = Unit
 
 }

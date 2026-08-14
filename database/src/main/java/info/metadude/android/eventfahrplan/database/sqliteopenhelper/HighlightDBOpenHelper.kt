@@ -7,7 +7,6 @@ import info.metadude.android.eventfahrplan.database.contract.FahrplanContract.Hi
 import info.metadude.android.eventfahrplan.database.contract.FahrplanContract.HighlightsTable.Columns.ID
 import info.metadude.android.eventfahrplan.database.contract.FahrplanContract.HighlightsTable.Columns.SESSION_ID
 import info.metadude.android.eventfahrplan.database.contract.FahrplanContract.HighlightsTable.NAME
-import info.metadude.android.eventfahrplan.database.extensions.dropTableIfExist
 
 internal class HighlightDBOpenHelper(context: Context) : SQLiteOpenHelper(
     context.applicationContext,
@@ -17,7 +16,7 @@ internal class HighlightDBOpenHelper(context: Context) : SQLiteOpenHelper(
 ) {
 
     private companion object {
-        const val DATABASE_VERSION = 7
+        const val DATABASE_VERSION = 1
         const val DATABASE_NAME = "highlight"
 
         // language=sql
@@ -32,10 +31,6 @@ internal class HighlightDBOpenHelper(context: Context) : SQLiteOpenHelper(
         execSQL(HIGHLIGHT_TABLE_CREATE)
     }
 
-    override fun onUpgrade(db: SQLiteDatabase, oldVersion: Int, newVersion: Int) = with(db) {
-        // Clear database from Camp 2023 & 38C3 2024.
-        dropTableIfExist(NAME)
-        onCreate(this)
-    }
+    override fun onUpgrade(db: SQLiteDatabase, oldVersion: Int, newVersion: Int) = Unit
 
 }
