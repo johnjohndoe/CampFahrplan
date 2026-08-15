@@ -4,6 +4,7 @@
     <color name="colorPrimary">#fff176</color>
     <color name="colorPrimaryDark">#ffd54f</color>
     <color name="colorAccent">#BF360C</color>
+    <color name="color_accent_inverted">#ffab91</color>
     <color name="on_primary">@color/colorPrimary</color>
     <color name="text_primary">#000</color>
     <color name="text_primary_inverted">@color/text_primary</color>
@@ -106,5 +107,10 @@
     <color name="search_filter_chip_selected_container">@color/colorAccent</color>
     <color name="search_filter_chip_selected_label">@color/background_primary</color>
     <color name="search_filter_chip_border">@color/colorAccent</color>
+
+    <!-- Engagement snacks -->
+    <color name="engagement_snack_background">@color/text_secondary</color>
+    <color name="engagement_snack_action">@color/color_accent_inverted</color>
+    <color name="engagement_snack_title">@color/background_secondary</color>
 
 </resources>

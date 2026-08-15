@@ -13,13 +13,15 @@ class RateSnack(val context: Context) : LibraryRateSnack() {
     init {
         overrideTitleText(context.getString(R.string.snack_engage_rate_title))
         overrideActionText(context.getString(R.string.snack_engage_rate_action))
+        setBackgroundColor(ContextCompat.getColor(context, R.color.engagement_snack_background))
+        setActionColor(ContextCompat.getColor(context, R.color.engagement_snack_action))
+        setTitleColor(ContextCompat.getColor(context, R.color.engagement_snack_title))
         withConditions(
                 NeverAgainWhenClickedOnce(),
                 AfterNumberOfOpportunities(13),
                 IsConnectedViaWiFiOrUnknown(),
                 IsInstalledViaGooglePlay(), // Prevents the snack from being shown for local installs, too!
         )
-        setActionColor(ContextCompat.getColor(context, R.color.colorAccent))
     }
 
 }

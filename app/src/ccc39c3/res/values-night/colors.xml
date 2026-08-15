@@ -7,6 +7,7 @@
     <color name="colorPrimary">#9673ff</color>
     <color name="colorPrimaryDark">#7952fe</color>
     <color name="colorAccent">#00ff00</color>
+    <color name="color_accent_inverted">#9673ff</color>
     <color name="background_primary">#141414</color>
     <color name="multi_choice_background">#003C00</color>
 

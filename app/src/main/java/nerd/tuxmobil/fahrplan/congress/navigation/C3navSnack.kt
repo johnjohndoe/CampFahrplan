@@ -2,6 +2,7 @@ package nerd.tuxmobil.fahrplan.congress.navigation
 
 import android.content.Context
 import android.widget.TextView
+import androidx.core.content.ContextCompat
 import com.google.android.material.snackbar.Snackbar
 import nerd.tuxmobil.fahrplan.congress.R
 import nerd.tuxmobil.fahrplan.congress.extensions.requireViewByIdCompat
@@ -22,6 +23,9 @@ class C3navSnack(private val context: Context) : OpenURLSnack(
         val conferenceName = context.getString(R.string.conference_name)
         overrideTitleText(context.getString(R.string.snack_engage_c3nav_title, conferenceName))
         overrideActionText(context.getString(R.string.snack_engage_c3nav_action))
+        setBackgroundColor(ContextCompat.getColor(context, R.color.engagement_snack_background))
+        setActionColor(ContextCompat.getColor(context, R.color.engagement_snack_action))
+        setTitleColor(ContextCompat.getColor(context, R.color.engagement_snack_title))
         withConditions(
                 NeverAgainWhenClickedOnce(),
                 AfterNumberOfOpportunities(7),

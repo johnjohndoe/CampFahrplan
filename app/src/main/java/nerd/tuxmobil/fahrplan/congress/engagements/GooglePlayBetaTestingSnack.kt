@@ -13,13 +13,15 @@ class GooglePlayBetaTestingSnack(val context: Context) : GooglePlayOpenBetaTestS
     init {
         overrideTitleText(context.getString(R.string.snack_engage_google_play_beta_testing_title))
         overrideActionText(context.getString(R.string.snack_engage_google_play_beta_testing_action))
+        setBackgroundColor(ContextCompat.getColor(context, R.color.engagement_snack_background))
+        setActionColor(ContextCompat.getColor(context, R.color.engagement_snack_action))
+        setTitleColor(ContextCompat.getColor(context, R.color.engagement_snack_title))
         withConditions(
                 NeverAgainWhenClickedOnce(),
                 AfterNumberOfOpportunities(21),
                 IsConnectedViaWiFiOrUnknown(),
                 IsInstalledViaGooglePlay(), // Prevents the snack from being shown for local installs, too!
         )
-        setActionColor(ContextCompat.getColor(context, R.color.colorAccent))
     }
 
 }
