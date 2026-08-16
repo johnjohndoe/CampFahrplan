@@ -1,0 +1,56 @@
+https://inselchaos.de
+
+  Auf der wunderschönen Insel Rügen bieten wir Workshops, Talks und Happiness
+  in einer der schönsten Locations in Mecklenburg-Vorpommern. Ganz im Spirit
+  des Chaos dreht sich dabei alles um Technologie, Gesellschaft und
+  Kreativität – und alles, was ihr daraus macht.
+
+  <b>Funktionen:</b>
+  * Tagesüberblick über alle Programmpunkte (Vorträge, Workshop, Lounge)
+  * Detaillierte Beschreibung von Veranstaltungen lesen
+  * Veranstaltungen in persönlicher Favoritenliste verwalten
+  * Alle Veranstaltungen durchsuchen und filtern
+  * Favoritenliste exportieren
+  * Alarm für Veranstaltungen setzen
+  * Veranstaltungen in Kalender eintragen
+  * Beschreibung und Link zu Veranstaltungen mit anderen teilen
+  * Automatische, regelmäßige Aktualisierung des Programms
+  * Programmänderungen einsehen
+  * Bewertungen und Kommentare für Vorträge und Workshops hinterlassen
+  * Integration mit Chaosflix https://github.com/NiciDieNase/chaosflix - Android App für https://media.ccc.de, teile Fahrplan-Favoriten mit Chaosflix und importiere sie als Bookmarks
+
+  🔤 <b>Unterstützte Sprachen</b>
+  (Programmtexte ausgenommen)
+  * Dänisch
+  * Deutsch
+  * Deutsch, Österreich
+  * Englisch
+  * Finnisch
+  * Französisch
+  * Italienisch
+  * Japanisch
+  * Litauisch
+  * Niederländisch
+  * Polnisch
+  * Portugiesisch, Brasilien
+  * Portugiesisch, Portugal
+  * Russisch
+  * Spanisch
+  * Schwedisch
+  * Türkisch
+
+  🤝 Du kannst mithelfen, die App zu übersetzen. Siehe Link hier.
+
+  💡 Inhaltliche Fragen zum Programm kann nur das inselchaos-Content-Team
+  beantworten. Diese App stellt lediglich das Programm zur Verfügung.
+
+  💣 Fehlerberichte sind herzlich willkommen, aber achte darauf,
+  dass du erklärst, wie man den Fehler reproduzieren kann. Bitte
+  nutze den Issue-Tracker: https://github.com/EventFahrplan/EventFahrplan/issues.
+
+  🏆 Die App basiert auf der <b>EventFahrplan-App</b>
+  https://play.google.com/store/apps/details?id=info.metadude.android.congress.schedule
+  für den Kongress des Chaos Computer Clubs. Der Quellcode der Anwendung ist auf GitHub
+  https://github.com/johnjohndoe/CampFahrplan/tree/inselchaos-2026 zu finden.
+
+  🎨 Das InselChaos-Logo wird von den InselChaos-Veranstaltenden bereitgestellt.
