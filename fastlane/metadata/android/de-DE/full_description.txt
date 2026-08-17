@@ -1,0 +1,63 @@
+https://berlinfedi.day
+
+  Der 3. Berliner FediDay ist ein Netzwerk-Event für Menschen im Fediversum.
+  Mit Vorträgen, Workshops und Networking-Gelegenheiten verbreitet die
+  Konferenz Wissen über das Fediverse, fördert kreative Lösungen und
+  stärkt den Austausch zwischen Entwickler_innen, Admins, Wissenschaft,
+  Zivilgesellschaft und Content-Creators.
+
+  Mit über 70 Sessions in drei Sälen, einem Workshopraum und mehreren
+  Treffpunkten vom Spreeufer zur Dachterrasse ist der FediDay eine Konferenz
+  rund um alternative soziale Netzwerke. Sie findet vom 11. bis 13. September
+  2026 auf der Berliner c-base statt.
+
+  <b>Funktionen:</b>
+  * Tagesüberblick über alle Programmpunkte
+  * Detaillierte Beschreibung von Veranstaltungen lesen
+  * Veranstaltungen in persönlicher Favoritenliste verwalten
+  * Alle Veranstaltungen durchsuchen und filtern
+  * Favoritenliste exportieren
+  * Alarm für Veranstaltungen setzen
+  * Veranstaltungen in Kalender eintragen
+  * Beschreibung und Link zu Veranstaltungen mit anderen teilen
+  * Automatische, regelmäßige Aktualisierung des Programms
+  * Programmänderungen einsehen
+  * Bewertungen und Kommentare für Vorträge und Workshops hinterlassen
+  * Integration mit dem Engelsystem-Projekt https://engelsystem.anoxinon.de - Online-Tool zur Koordination von Helfern und Schichten bei großen Veranstaltungen
+  * Integration mit Chaosflix https://github.com/NiciDieNase/chaosflix - Android-App für https://media.ccc.de, teile Fahrplan-Favoriten mit Chaosflix und importiere sie als Bookmarks
+
+  <b>Unterstützte Sprachen</b>
+  (Programmtexte ausgenommen)
+  * Dänisch
+  * Deutsch
+  * Deutsch, Österreich
+  * Englisch
+  * Finnisch
+  * Französisch
+  * Italienisch
+  * Japanisch
+  * Litauisch
+  * Niederländisch
+  * Polnisch
+  * Portugiesisch, Brasilien
+  * Portugiesisch, Portugal
+  * Russisch
+  * Spanisch
+  * Schwedisch
+  * Türkisch
+
+  Du kannst mithelfen, die App zu übersetzen. Siehe Link hier.
+
+  Inhaltliche Fragen zum Programm kann nur das Berlin FediDay Content-Team
+  beantworten. Diese App stellt lediglich das Programm zur Verfügung.
+
+  Fehlerberichte sind herzlich willkommen, aber achte darauf,
+  dass du erklärst, wie man den Fehler reproduzieren kann. Bitte
+  nutze den Issue-Tracker: https://github.com/EventFahrplan/EventFahrplan/issues.
+
+  Die App basiert auf der <b>EventFahrplan-App</b>
+  https://play.google.com/store/apps/details?id=info.metadude.android.congress.schedule
+  für den Kongress des Chaos Computer Clubs. Der Quellcode der Anwendung ist auf GitHub
+  https://github.com/johnjohndoe/CampFahrplan/tree/fediday-2026 zu finden.
+
+  Gestaltung des Berlin FediDay Logos: e-punc
