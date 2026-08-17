@@ -44,9 +44,6 @@ import info.metadude.android.eventfahrplan.database.contract.FahrplanContract.Se
 import info.metadude.android.eventfahrplan.database.contract.FahrplanContract.SessionsTable.Columns.TRACK
 import info.metadude.android.eventfahrplan.database.contract.FahrplanContract.SessionsTable.Columns.TYPE
 import info.metadude.android.eventfahrplan.database.contract.FahrplanContract.SessionsTable.Columns.URL
-import info.metadude.android.eventfahrplan.database.contract.FahrplanContract.SessionsTable.Defaults.DATE_UTC_DEFAULT
-import info.metadude.android.eventfahrplan.database.contract.FahrplanContract.SessionsTable.Defaults.ROOM_IDX_DEFAULT
-import info.metadude.android.eventfahrplan.database.contract.FahrplanContract.SessionsTable.Values.REC_OPT_OUT_OFF
 import info.metadude.android.eventfahrplan.database.contract.FahrplanContract.StatisticsView
 import info.metadude.android.eventfahrplan.database.contract.FahrplanContract.StatisticsView.Columns.ABSTRACT_NONE
 import info.metadude.android.eventfahrplan.database.contract.FahrplanContract.StatisticsView.Columns.ABSTRACT_PRESENT
@@ -94,11 +91,6 @@ import info.metadude.android.eventfahrplan.database.contract.FahrplanContract.St
 import info.metadude.android.eventfahrplan.database.contract.FahrplanContract.StatisticsView.Columns.TYPE_PRESENT
 import info.metadude.android.eventfahrplan.database.contract.FahrplanContract.StatisticsView.Columns.URL_NONE
 import info.metadude.android.eventfahrplan.database.contract.FahrplanContract.StatisticsView.Columns.URL_PRESENT
-import info.metadude.android.eventfahrplan.database.extensions.addIntegerColumn
-import info.metadude.android.eventfahrplan.database.extensions.addTextColumn
-import info.metadude.android.eventfahrplan.database.extensions.columnExists
-import info.metadude.android.eventfahrplan.database.extensions.dropTableIfExist
-import info.metadude.android.eventfahrplan.database.extensions.dropViewIfExist
 
 internal class SessionsDBOpenHelper(context: Context) : SQLiteOpenHelper(
     context.applicationContext,
@@ -108,7 +100,7 @@ internal class SessionsDBOpenHelper(context: Context) : SQLiteOpenHelper(
 ) {
 
     private companion object {
-        const val DATABASE_VERSION = 19
+        const val DATABASE_VERSION = 1
         const val DATABASE_NAME = "lectures" // Keep table name to avoid database migration.
 
         // language=sql
@@ -222,108 +214,7 @@ internal class SessionsDBOpenHelper(context: Context) : SQLiteOpenHelper(
         }
     }
 
-    override fun onUpgrade(db: SQLiteDatabase, oldVersion: Int, newVersion: Int) = with(db) {
-        if (oldVersion < 2 && newVersion >= 2) {
-            addIntegerColumn(DATE_UTC, default = DATE_UTC_DEFAULT)
-        }
-        if (oldVersion < 3 && newVersion >= 3) {
-            addIntegerColumn(ROOM_INDEX, default = ROOM_IDX_DEFAULT)
-        }
-        if (oldVersion < 4 && newVersion >= 4) {
-            addTextColumn(REC_LICENSE, default = "")
-            addIntegerColumn(REC_OPTOUT, default = REC_OPT_OUT_OFF)
-        }
-        if (oldVersion < 5 && newVersion >= 5) {
-            addIntegerColumn(CHANGED_TITLE, default = 0)
-            addIntegerColumn(CHANGED_SUBTITLE, default = 0)
-            addIntegerColumn(CHANGED_ROOM_NAME, default = 0)
-            addIntegerColumn(CHANGED_DAY_INDEX, default = 0)
-            addIntegerColumn(CHANGED_SPEAKERS, default = 0)
-            addIntegerColumn(CHANGED_RECORDING_OPTOUT, default = 0)
-            addIntegerColumn(CHANGED_LANGUAGE, default = 0)
-            addIntegerColumn(CHANGED_TRACK, default = 0)
-            addIntegerColumn(CHANGED_IS_NEW, default = 0)
-            addIntegerColumn(CHANGED_DATE_UTC, default = 0)
-            addIntegerColumn(CHANGED_DURATION, default = 0)
-            addIntegerColumn(CHANGED_IS_CANCELED, default = 0)
-        }
-        if (oldVersion < 6 && newVersion >= 6) {
-            addTextColumn(SLUG, default = "")
-        }
-        if (oldVersion < 7 && newVersion >= 7) {
-            addTextColumn(URL, default = "")
-        }
-        if (oldVersion < 8) {
-            // Clear database from 34C3.
-            dropTableIfExist(SessionsTable.NAME)
-            onCreate(this)
-        }
-        if (oldVersion < 9) {
-            // Clear database from 35C3 & Camp 2019.
-            dropTableIfExist(SessionsTable.NAME)
-            onCreate(this)
-        }
-        if (oldVersion < 10 && newVersion >= 10) {
-            execSQL(SESSION_BY_NOTIFICATION_ID_TABLE_CREATE)
-        }
-        if (oldVersion < 11 && newVersion >= 11) {
-            if (!columnExists(SessionsTable.NAME, TIME_ZONE_OFFSET)) {
-                addIntegerColumn(TIME_ZONE_OFFSET, default = null)
-            }
-        }
-        if (oldVersion < 12) {
-            // Clear database from rC3 12/2020.
-            dropTableIfExist(SessionsTable.NAME)
-            dropTableIfExist(SessionByNotificationIdTable.NAME)
-            onCreate(this)
-        }
-        if (oldVersion < 13) {
-            // Clear database from rC3 NOWHERE 12/2021 & 36C3 2019.
-            dropTableIfExist(SessionsTable.NAME)
-            dropTableIfExist(SessionByNotificationIdTable.NAME)
-            onCreate(this)
-        }
-        if (oldVersion < 14) {
-            if (!columnExists(SessionsTable.NAME, ROOM_IDENTIFIER)) {
-                addTextColumn(ROOM_IDENTIFIER, default = "")
-            }
-        }
-        if (oldVersion < 15) {
-            if (!columnExists(SessionsTable.NAME, FEEDBACK_URL)) {
-                addTextColumn(FEEDBACK_URL, default = null)
-            }
-        }
-        if (oldVersion < 16) {
-            execSQL(SCHEDULE_STATISTIC_VIEW_CREATE)
-        }
-        if (oldVersion < 17) {
-            // Clear database from Camp 2023 & 37C3 2023.
-            dropTableIfExist(SessionsTable.NAME)
-            dropTableIfExist(SessionByNotificationIdTable.NAME)
-            dropViewIfExist(StatisticsView.NAME)
-            onCreate(this)
-        }
-        if (oldVersion < 18) {
-            // Clear database from 38C3 2024.
-            dropTableIfExist(SessionsTable.NAME)
-            dropTableIfExist(SessionByNotificationIdTable.NAME)
-            dropViewIfExist(StatisticsView.NAME)
-            onCreate(this)
-        }
-        if (oldVersion < 19) {
-            if (!columnExists(SessionsTable.NAME, SESSION_GUID)) {
-                addTextColumn(SESSION_GUID, default = null)
-            }
-        }
-    }
+    override fun onUpgrade(db: SQLiteDatabase, oldVersion: Int, newVersion: Int) = Unit
 
-}
-
-private fun SQLiteDatabase.addIntegerColumn(columnName: String, default: Int?) {
-    addIntegerColumn(tableName = SessionsTable.NAME, columnName = columnName, default = default)
-}
-
-private fun SQLiteDatabase.addTextColumn(columnName: String, default: String?) {
-    addTextColumn(tableName = SessionsTable.NAME, columnName = columnName, default = default)
 }
 
