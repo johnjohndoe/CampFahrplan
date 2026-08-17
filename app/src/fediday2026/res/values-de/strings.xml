@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">FediDay 2026</string>
+    <string name="app_hardcoded_subtitle">FediDay, 11.-13. September 2026, c-base Berlin</string>
+    <string name="copyright_logo">
+        Gestaltung des Berlin FediDay Logos: e-punc
+    </string>
+    <string name="about_logo_content_description">
+        Farbiges Fediday-2026-Logo mit verbundenen Knoten auf schwarzem Hintergrund.
+    </string>
+</resources>

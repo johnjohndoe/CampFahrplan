@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<map linked="true">
+
+    <entry key="#Introduction">introduction</entry>
+    <entry key="Introduction">introduction</entry>
+    <entry key="#Neuhier">neuhier</entry>
+    <entry key="Neuhier">neuhier</entry>
+    <entry key="Communities">communities</entry>
+    <entry key="Engagementmessung">measuring_engagement</entry>
+    <entry key="Forschung">research</entry>
+    <entry key="Lightning Talk">lightning_talk</entry>
+    <entry key="Lightning Talk: 5 Minuten (stellt Eure Ideen oder Projekte kurz vor)">lightning_talk</entry>
+    <entry key="Live Gig">live_gig</entry>
+    <entry key="measuring engagement">measuring_engagement</entry>
+    <entry key="Platforms">platforms</entry>
+    <entry key="Politik">politics</entry>
+    <entry key="Politics">politics</entry>
+    <entry key="Research">research</entry>
+    <entry key="Tech">tech</entry>
+    <entry key="Vortrag">vortrag</entry>
+    <entry key="Vortrag: 30 Minuten (20 Minuten Vortrag, 5 Minuten Fragen und Antworten, 5 Minuten Umbau)">vortrag</entry>
+    <entry key="Workshop">workshop</entry>
+    <entry key="Workshop / kleine Podiumsdiskussion / Diskussion: 1 Stunde (50 Minuten Workshop, 10 Minuten Umbau)">workshop</entry>
+
+</map>

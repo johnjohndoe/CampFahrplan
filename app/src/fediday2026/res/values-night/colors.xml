@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorPrimary">#000E89</color>
+    <color name="colorPrimaryDark">#000A66</color>
+    <color name="colorAccent">#835325</color>
+    <color name="color_accent_inverted">#000E89</color>
+    <color name="background_primary">#121216</color>
+    <color name="text_primary">#F2F2F2</color>
+    <color name="schedule_time_column_background">#1AFFFFFF</color>
+    <color name="schedule_horizontal_time_line">#1AFFFFFF</color>
+
+    <!-- Default state -->
+    <color name="track_background_default">#878787</color>
+    <color name="track_background_default_introduction">#0d5255</color>
+    <color name="track_background_default_communities">#325922</color>
+    <color name="track_background_default_lightning_talk">#6f6821</color>
+    <color name="track_background_default_live_gig">#383838</color>
+    <color name="track_background_default_measuring_engagement">#303a7d</color>
+    <color name="track_background_default_neuhier">#741b4b</color>
+    <color name="track_background_default_platforms">#472075</color>
+    <color name="track_background_default_politics">#d07b30</color>
+    <color name="track_background_default_research">#602783</color>
+    <color name="track_background_default_tech">#9b2b2b</color>
+    <color name="track_background_default_vortrag">#0a4138</color>
+    <color name="track_background_default_workshop">#a94022</color>
+
+    <!-- Highlight state -->
+    <color name="track_background_highlight">#646464</color>
+    <color name="track_background_highlight_introduction">#12717a</color>
+    <color name="track_background_highlight_communities">#4f7734</color>
+    <color name="track_background_highlight_lightning_talk">#87862e</color>
+    <color name="track_background_highlight_live_gig">#525252</color>
+    <color name="track_background_highlight_measuring_engagement">#3f4b91</color>
+    <color name="track_background_highlight_neuhier">#922452</color>
+    <color name="track_background_highlight_platforms">#602783</color>
+    <color name="track_background_highlight_politics">#d98920</color>
+    <color name="track_background_highlight_research">#7c3091</color>
+    <color name="track_background_highlight_tech">#a93636</color>
+    <color name="track_background_highlight_vortrag">#0e5a50</color>
+    <color name="track_background_highlight_workshop">#b94b2b</color>
+
+</resources>
