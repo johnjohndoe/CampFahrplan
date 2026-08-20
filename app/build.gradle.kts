@@ -92,6 +92,7 @@ android {
     signingConfigs {
         create("cccamp2023")
         create("ccc39c3")
+        create("datenspuren2026")
     }
 
     val defaultDimension = "default"
@@ -142,6 +143,27 @@ android {
             buildConfigField("String", "SOCIAL_MEDIA_HASHTAGS_HANDLES", """"#39c3 #fahrplan"""")
             buildConfigField("String", "TRACE_DROID_EMAIL_ADDRESS", """"tobias.preuss+39c3@googlemail.com"""")
             buildConfigField("String", "SCHEDULE_FEEDBACK_URL", """""""")
+        }
+        create("datenspuren2026") {
+            dimension = defaultDimension
+            applicationId = "info.metadude.android.datenspuren.schedule"
+            versionName = "${defaultConfig.versionName}-Datenspuren-Edition"
+            buildConfigField("String", "GOOGLE_PLAY_URL", """"https://play.google.com/store/apps/details?id=info.metadude.android.datenspuren.schedule"""")
+            buildConfigField("String", "F_DROID_URL", """"https://f-droid.org/packages/info.metadude.android.datenspuren.schedule"""")
+            buildConfigField("String", "SCHEDULE_URL", """"https://talks.datenspuren.de/ds26/schedule/export/schedule.xml"""")
+            buildConfigField("String", "SCHEDULE_FILE_FORMAT", """"schedule_v1_xml"""")
+            buildConfigField("String", "EVENT_URL", $$""""https://talks.datenspuren.de/ds26/talk/%1$s"""")
+            buildConfigField("String", "EVENT_WEBSITE_URL", """"https://datenspuren.de/2026/"""")
+            buildConfigField("String", "EVENT_POSTAL_ADDRESS", """"Riesaer Straße 32, 01127 Dresden"""")
+            buildConfigField("String", "SERVER_BACKEND_TYPE", """"pretalx"""")
+            buildConfigField("boolean", "ENABLE_CHAOSFLIX_EXPORT", "true")
+            buildConfigField("boolean", "ENABLE_ENGELSYSTEM_SHIFTS", "true")
+            resValue("string", "engelsystem_alias", "Zengelsystem")
+            resValue("string", "engelsystem_shifts_alias", "Zengelshifts")
+            resValue("string", "preference_hint_engelsystem_json_export_url", """"https://engel.datenspuren.de/shifts-json-export?key=YOUR_KEY"""")
+            buildConfigField("String", "SOCIAL_MEDIA_HASHTAGS_HANDLES", """"#datenspuren #datenspuren2026 #ds26 #fahrplan @datenspuren@c3d2.social @datenspuren"""")
+            buildConfigField("String", "TRACE_DROID_EMAIL_ADDRESS", """"tobias.preuss+datenspuren@googlemail.com"""")
+            buildConfigField("String", "SCHEDULE_FEEDBACK_URL", """"https://talks.datenspuren.de/ds26/talk/%s/feedback/"""")
         }
     }
 
