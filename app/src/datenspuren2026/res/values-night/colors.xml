@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorPrimary">#ff095c</color>
+    <color name="colorPrimaryDark">#550a23</color>
+    <color name="colorAccent">#4dd0e1</color>
+    <color name="color_accent_inverted">#1eace0</color>
+    <color name="background_primary">#1a030a</color>
+    <color name="background_secondary">#1f040c</color>
+
+    <!-- Default state -->
+
+    <color name="track_background_default_andere">#262626</color>
+    <color name="track_background_default_gesellschaft">#16476b</color>
+    <color name="track_background_default_junghackende">#99331a</color>
+    <color name="track_background_default_ki">#3d541f</color>
+    <color name="track_background_default_kunst">#6d183f</color>
+    <color name="track_background_default_technik">#2f226b</color>
+    <color name="track_background_default_treffen">#3d541f</color>
+    <color name="track_background_default_unterhaltung">#481b70</color>
+    <color name="track_background_default_vortrag">#C7923C</color>
+    <color name="track_background_default_zeitenwende">#302420</color>
+
+    <!-- Highlight state -->
+
+    <color name="track_background_highlight_andere">#353535</color>
+    <color name="track_background_highlight_gesellschaft">#026096</color>
+    <color name="track_background_highlight_junghackende">#ad360f</color>
+    <color name="track_background_highlight_ki">#446e25</color>
+    <color name="track_background_highlight_kunst">#8a1046</color>
+    <color name="track_background_highlight_technik">#361f80</color>
+    <color name="track_background_highlight_treffen">#446e25</color>
+    <color name="track_background_highlight_unterhaltung">#55157b</color>
+    <color name="track_background_highlight_vortrag">#E09722</color>
+    <color name="track_background_highlight_zeitenwende">#3e2a24</color>
+
+</resources>

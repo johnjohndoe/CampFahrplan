@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Datenspuren 2026</string>
+    <string name="app_hardcoded_subtitle">Lasst uns gemeinsam aufbrechen: Kisten, Systeme und in neue Welten!\n18.-20. September 2026, Zentralwerk</string>
+    <string name="copyright_logo">
+        <![CDATA[Gestaltung des Datenspuren-2026-Logos: <a href="https://aviac.dev">Aviac</a>. Die Nutzung erfolgt mit Erlaubnis.]]>
+    </string>
+    <string name="about_logo_content_description">
+        Datenspuren 2026 Logo mit Sonne und Brecheisen.
+    </string>
+</resources>

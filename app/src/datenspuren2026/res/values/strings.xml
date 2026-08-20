@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Datenspuren 2026</string>
+    <string name="app_hardcoded_subtitle">Let\'s \"aufbrechen\" together: boxes, systems and into new worlds!\nSeptember 18.-20. 2026, Zentralwerk</string>
+    <string name="conference_name" translatable="false">Datenspuren 2026</string>
+    <string name="copyright_logo">
+        <![CDATA[Design of the Datenspuren 2026 logo: <a href="https://aviac.dev">Aviac</a>. Used with permission.]]>
+    </string>
+    <string name="about_logo_content_description">
+        Datenspuren 2026 logo with a sun and crowbar.
+    </string>
+</resources>

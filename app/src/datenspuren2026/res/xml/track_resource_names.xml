@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<map linked="true">
+
+    <entry key="Andere">andere</entry>
+    <entry key="Gesellschaft">gesellschaft</entry>
+    <entry key="JungHackende">junghackende</entry>
+    <entry key="Ki">ki</entry>
+    <entry key="Kunst">kunst</entry>
+    <entry key="Other">andere</entry>
+    <entry key="Technik">technik</entry>
+    <entry key="Treffen">treffen</entry>
+    <entry key="Unterhaltung">unterhaltung</entry>
+    <entry key="Vortrag">vortrag</entry>
+    <entry key="Zeitenwende">zeitenwende</entry>
+
+</map>
