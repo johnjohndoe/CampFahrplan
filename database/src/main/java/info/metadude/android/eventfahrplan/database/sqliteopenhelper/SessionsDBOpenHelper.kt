@@ -108,7 +108,7 @@ internal class SessionsDBOpenHelper(context: Context) : SQLiteOpenHelper(
 ) {
 
     private companion object {
-        const val DATABASE_VERSION = 19
+        const val DATABASE_VERSION = 14
         const val DATABASE_NAME = "lectures" // Keep table name to avoid database migration.
 
         // language=sql
@@ -284,36 +284,10 @@ internal class SessionsDBOpenHelper(context: Context) : SQLiteOpenHelper(
             onCreate(this)
         }
         if (oldVersion < 14) {
-            if (!columnExists(SessionsTable.NAME, ROOM_IDENTIFIER)) {
-                addTextColumn(ROOM_IDENTIFIER, default = "")
-            }
-        }
-        if (oldVersion < 15) {
-            if (!columnExists(SessionsTable.NAME, FEEDBACK_URL)) {
-                addTextColumn(FEEDBACK_URL, default = null)
-            }
-        }
-        if (oldVersion < 16) {
-            execSQL(SCHEDULE_STATISTIC_VIEW_CREATE)
-        }
-        if (oldVersion < 17) {
-            // Clear database from Camp 2023 & 37C3 2023.
+            // Clear database from MRCMD 2025.
             dropTableIfExist(SessionsTable.NAME)
             dropTableIfExist(SessionByNotificationIdTable.NAME)
-            dropViewIfExist(StatisticsView.NAME)
             onCreate(this)
-        }
-        if (oldVersion < 18) {
-            // Clear database from 38C3 2024.
-            dropTableIfExist(SessionsTable.NAME)
-            dropTableIfExist(SessionByNotificationIdTable.NAME)
-            dropViewIfExist(StatisticsView.NAME)
-            onCreate(this)
-        }
-        if (oldVersion < 19) {
-            if (!columnExists(SessionsTable.NAME, SESSION_GUID)) {
-                addTextColumn(SESSION_GUID, default = null)
-            }
         }
     }
 
