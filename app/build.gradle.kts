@@ -92,6 +92,7 @@ android {
     signingConfigs {
         create("cccamp2023")
         create("ccc39c3")
+        create("mrmcd2026")
     }
 
     val defaultDimension = "default"
@@ -141,6 +142,25 @@ android {
             resValue("string", "preference_hint_engelsystem_json_export_url", """"https://engel.events.ccc.de/shifts-json-export?key=YOUR_KEY"""")
             buildConfigField("String", "SOCIAL_MEDIA_HASHTAGS_HANDLES", """"#39c3 #fahrplan"""")
             buildConfigField("String", "TRACE_DROID_EMAIL_ADDRESS", """"tobias.preuss+39c3@googlemail.com"""")
+            buildConfigField("String", "SCHEDULE_FEEDBACK_URL", """""""")
+        }
+        create("mrmcd2026") {
+            dimension = defaultDimension
+            applicationId = "info.metadude.android.mrmcd.schedule"
+            versionName = "${defaultConfig.versionName}-MRMCD-Edition"
+            buildConfigField("String", "GOOGLE_PLAY_URL", """"https://play.google.com/store/apps/details?id=info.metadude.android.mrmcd.schedule"""")
+            buildConfigField("String", "F_DROID_URL", """"https://f-droid.org/packages/info.metadude.android.mrmcd.schedule"""")
+            buildConfigField("String", "SCHEDULE_URL", """"https://talks.mrmcd.net/2026/schedule/export/schedule.json"""")
+            buildConfigField("String", "SCHEDULE_FILE_FORMAT", """"schedule_v1_json"""")
+            buildConfigField("String", "EVENT_URL", """""""")
+            buildConfigField("String", "EVENT_WEBSITE_URL", """"https://2026.mrmcd.net"""")
+            buildConfigField("String", "EVENT_POSTAL_ADDRESS", """"Hochschulstraße 10, 64289 Darmstadt"""")
+            buildConfigField("String", "SERVER_BACKEND_TYPE", """"pretalx"""")
+            buildConfigField("boolean", "ENABLE_CHAOSFLIX_EXPORT", "true")
+            buildConfigField("boolean", "ENABLE_ENGELSYSTEM_SHIFTS", "true")
+            resValue("string", "preference_hint_engelsystem_json_export_url", """"https://engel.mrmcd.net/shifts-json-export?key=YOUR_KEY"""")
+            buildConfigField("String", "SOCIAL_MEDIA_HASHTAGS_HANDLES", """"#mrmcd #mrmcd26 #fahrplan @mrmcd2026"""")
+            buildConfigField("String", "TRACE_DROID_EMAIL_ADDRESS", """"tobias.preuss+mrmcd@googlemail.com"""")
             buildConfigField("String", "SCHEDULE_FEEDBACK_URL", """""""")
         }
     }
