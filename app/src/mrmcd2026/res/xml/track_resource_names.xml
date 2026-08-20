@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<map linked="true">
+
+    <entry key="Art and Culture">art_and_culture</entry>
+    <entry key="CCC and Community">ccc_and_community</entry>
+    <entry key="Entertainment">entertainment</entry>
+    <entry key="Environment, Energy and Mobility">environment_energy_and_mobility</entry>
+    <entry key="Hardware and Making">hardware_and_making</entry>
+    <entry key="Infrastructure and Software">infrastructure_and_software</entry>
+    <entry key="Kunst&amp;Kultur">kunst_kultur</entry>
+    <entry key="Kunst &amp; Kultur">kunst_kultur</entry>
+    <entry key="Meetup">meetup</entry>
+    <entry key="Politics, Society and Ethics">politics_society_and_ethics</entry>
+    <entry key="Science and Education">science_and_education</entry>
+    <entry key="Security">security</entry>
+    <entry key="Talk">talk</entry>
+    <entry key="Workshop">workshop</entry>
+
+</map>

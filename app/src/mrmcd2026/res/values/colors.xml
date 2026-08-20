@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorPrimary">#d0e2fc</color>
+    <color name="colorPrimaryDark">#dfe9f8</color>
+    <color name="colorAccent">#39733a</color>
+    <color name="color_accent_inverted">#7af67d</color>
+    <color name="multi_choice_background">#7af67d</color>
+    <color name="background_primary">#f7f9fc</color>
+    <color name="app_bar_action_icon">@color/colorAccent</color>
+
+    <!-- Default state -->
+
+    <color name="track_background_default">#777</color>
+    <color name="track_background_default_art_and_culture">#b5a3d5</color>
+    <color name="track_background_default_ccc_and_community">#c99ad1</color>
+    <color name="track_background_default_entertainment">#f2ca8d</color>
+    <color name="track_background_default_environment_energy_and_mobility">#aad1ac</color>
+    <color name="track_background_default_hardware_and_making">#f2da8e</color>
+    <color name="track_background_default_infrastructure_and_software">#9ac9ee</color>
+    <color name="track_background_default_kunst_kultur">#87c3be</color>
+    <color name="track_background_default_meetup">#c5dbab</color>
+    <color name="track_background_default_politics_society_and_ethics">#dfe6a4</color>
+    <color name="track_background_default_science_and_education">#8dd0ee</color>
+    <color name="track_background_default_security">#e7a2a2</color>
+    <color name="track_background_default_talk">#f2ca8d</color>
+    <color name="track_background_default_workshop">#9ac9ee</color>
+
+    <!-- Highlight state -->
+
+    <color name="track_background_highlight">#999</color>
+    <color name="track_background_highlight_art_and_culture">#977ec4</color>
+    <color name="track_background_highlight_ccc_and_community">#b372be</color>
+    <color name="track_background_highlight_entertainment">#edb45f</color>
+    <color name="track_background_highlight_environment_energy_and_mobility">#88c08a</color>
+    <color name="track_background_highlight_hardware_and_making">#edcc61</color>
+    <color name="track_background_highlight_infrastructure_and_software">#73b3e7</color>
+    <color name="track_background_highlight_kunst_kultur">#57aca4</color>
+    <color name="track_background_highlight_meetup">#9bc26f</color>
+    <color name="track_background_highlight_politics_society_and_ethics">#c9d365</color>
+    <color name="track_background_highlight_science_and_education">#60bde6</color>
+    <color name="track_background_highlight_security">#da7e7e</color>
+    <color name="track_background_highlight_talk">#edb45f</color>
+    <color name="track_background_highlight_workshop">#73b3e7</color>
+
+</resources>

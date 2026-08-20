@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MRMCD 2026 Fahrplan</string>
+    <string name="app_hardcoded_subtitle">11.-13. September 2026, Robert-Piloty-Gebäude an der TU Darmstadt</string>
+    <string name="copyright_logo">
+        <![CDATA[Der Name MRMCD ist ein registriertes Markenzeichen des
+        <a href="https://2026.mrmcd.net">MRMCD e.V.</a> Das Design zur MRMCD 2026
+        wurde von <a href="https://leifs.website">Leif Niemczik</a> gestaltet.
+        Die Nutzung erfolgt mit Erlaubnis.]]>
+    </string>
+    <string name="about_logo_content_description">
+        Rundes MRMCD-2026-Logo, einem stilisierten Monitor und einem bunten Kabel; schwarzer Hintergrund.
+    </string>
+</resources>

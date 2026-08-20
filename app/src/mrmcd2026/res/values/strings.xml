@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MRMCD 2026 Schedule</string>
+    <string name="app_hardcoded_subtitle">September 11-13, 2026, Robert-Piloty building at TU Darmstadt</string>
+    <string name="conference_name" translatable="false">MRMCD 2026</string>
+    <string name="copyright_logo">
+        <![CDATA[The name MRMCD is a registered trademark of
+        <a href="https://2026.mrmcd.net">MRMCD e.V.</a> The MRMCD 2026 design was crafted by
+        <a href="https://leifs.website">Leif Niemczik</a>. Used with permission.]]>
+    </string>
+    <string name="about_logo_content_description">
+        Round MRMCD 2026 logo, featuring a stylized monitor and colorful cable on a black background.
+    </string>
+</resources>
