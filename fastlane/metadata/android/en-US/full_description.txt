@@ -1,0 +1,70 @@
+  Program for the Datenspuren conference
+
+  The Chaos Computer Club Dresden invites you to its annual hacker meeting under
+  the motto "aufbrechen". For the 22nd time, Datenspuren will take place in
+  Dresden from 18 to 20 September 2026.
+
+  Let's "aufbrechen" together: boxes, systems and into new worlds!
+
+  If you're ready to break out digitally and socially, then join us for talks,
+  workshops, music, art and anything else you want to contribute to Datenspuren.
+
+  As in previous years, there will again be activities for children.
+
+  And always remember: All creatures welcome!
+
+  https://datenspuren.de
+
+  <b>Features</b>
+  * View program by day and rooms (side by side)
+  * Custom grid layout for smartphones (try landscape mode 🙃) and tablets
+  * Read detailed descriptions (speaker names, start time, room name, links, ...) of sessions
+  * Search and filter through all sessions
+  * Add sessions to favorites list
+  * Export favorites list
+  * Setup alarms for individual sessions
+  * Add sessions to your personal calendar
+  * Share a website link to a session with others
+  * Keep track of program changes
+  * Automatic program updates (configurable in settings)
+  * Integration with the Zengelsystem project https://engel.datenspuren.de - Online tool for coordinating helpers and shifts on large events
+  * Integration with Chaosflix https://github.com/NiciDieNase/chaosflix - Android App for https://media.ccc.de, share schedule favorites with Chaosflix and import them as bookmarks
+
+  <b>🔤 Supported languages</b>
+  (Session descriptions excluded)
+  * Danish
+  * Dutch
+  * English
+  * Finnish
+  * French
+  * German
+  * German (Austria)
+  * Italian
+  * Japanese
+  * Lithuanian
+  * Polish
+  * Portuguese (Brazil)
+  * Portuguese (Portugal)
+  * Russian
+  * Spanish
+  * Swedish
+  * Turkish
+
+  🤝 You can help translate the app. See the link here.
+
+  💡 Questions regarding the content can only be answered by the
+  Datenspuren conference content team. This app simply offers a
+  way to consume and personalize the conference schedule.
+
+  💣 Bug reports are very welcome. It would be awesome if you
+  can describe how to reproduce the particular error in the
+  issue tracker at https://github.com/EventFahrplan/EventFahrplan/issues.
+
+  🏆 The app is based on the EventFahrplan app
+  which was initially built for the camp and annual congress of
+  the Chaos Computer Club. The source code of the app is publicly
+  available on GitHub at:
+  https://github.com/johnjohndoe/CampFahrplan/tree/datenspuren-2026.
+
+  🎨 The Datenspuren artwork is copyrighted by Aviac.
+

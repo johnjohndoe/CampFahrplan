@@ -1,0 +1,67 @@
+  Programm zur Datenspuren Konferenz
+
+  Der Chaos Computer Club Dresden lädt zum alljährigen Hackertreffen unter
+  dem Motto "aufbrechen" ein. Zum 22. mal finden vom 18. bis 20. September 2026
+  die Datenspuren in Dresden statt.
+
+  Lasst uns gemeinsam aufbrechen: Kisten, Systeme und in neue Welten!
+
+  Wenn du bereit bist zum digitalen und gesellschaftlichen Aufbrechen, dann
+  komme vorbei zu Talks, Workshops, Musik, Kunst und alles, was du noch zu
+  den Datenspuren beitragen willst.
+
+  Wie in den letzten Jahren wird es auch wieder Angebote für Kinder geben.
+
+  And always remember: All creatures welcome!
+
+  https://datenspuren.de
+
+  <b>Funktionen</b>
+  * Tagesüberblick über alle Programmpunkte
+  * Beschreibung von Veranstaltungen lesen
+  * Veranstaltungen in persönlicher Favoritenliste verwalten
+  * Alle Veranstaltungen durchsuchen und filtern
+  * Favoritenliste exportieren
+  * Alarm für Veranstaltungen setzen
+  * Veranstaltungen in Kalender eintragen
+  * Link zu Veranstaltungen mit anderen teilen
+  * Programmänderungen einsehen
+  * Veranstaltungen bewerten
+  * Integration mit dem Zengelsystem-Projekt https://engel.datenspuren.de - Online-Tool für Helfer- und Schichtplanung auf großen Events
+  * Integration mit Chaosflix https://github.com/NiciDieNase/chaosflix - Android App für https://media.ccc.de, teile Fahrplan-Favoriten mit Chaosflix und importiere sie als Bookmarks
+
+  🔤 <b>Unterstützte Sprachen</b>
+  (Programmtexte ausgenommen)
+  * Dänisch
+  * Deutsch
+  * Deutsch, Österreich
+  * Englisch
+  * Finnisch
+  * Französisch
+  * Italienisch
+  * Japanisch
+  * Litauisch
+  * Niederländisch
+  * Polnisch
+  * Portugiesisch, Brasilien
+  * Portugiesisch, Portugal
+  * Russisch
+  * Spanisch
+  * Schwedisch
+  * Türkisch
+
+  🤝 Du kannst mithelfen, die App zu übersetzen. Siehe Link hier.
+
+  💡 Inhaltliche Fragen zum Programm kann nur das Datenspuren-Team
+  beantworten. Diese App stellt lediglich die Programmpunkte zur Verfügung.
+
+  💣 Fehlerberichte sind herzlich willkommen, aber achte darauf, dass
+  du erklärst, wie man den Fehler reproduzieren kann. Der Issue-Tracker
+  findet sich hier: https://github.com/EventFahrplan/EventFahrplan/issues
+
+  🏆 Die App basiert auf der <b>EventFahrplan-App</b>
+  https://f-droid.org/packages/info.metadude.android.congress.schedule/
+  für den Kongress des Chaos Computer Clubs. Der Quellcode der Anwendung ist auf GitHub
+  https://github.com/johnjohndoe/CampFahrplan/tree/datenspuren-2026 zu finden.
+
+  🎨 Datenspuren-Design von Aviac
