@@ -1,0 +1,66 @@
+Fahrplan zur MRMCD-Konferenz
+
+Die MRMCD e.V. ist ein gemeinnütziger Verein, der jährlich die Meta Rhein-Main Chaos Days
+organisiert – eines der traditionsreichsten Chaos-Events im deutschsprachigen Raum.
+
+Seit 2004 versammeln sich Hacker*innen, Netzaktivist*innen, Datenschützer*innen, Künstler*innen
+und neugierige Menschen in Darmstadt, um über Technologie, Gesellschaft, Sicherheit und digitale
+Freiheiten zu diskutieren, zu lernen und zu basteln.
+
+Die MRMCD stehen jedes Jahr unter einem neuen Motto. Neben Vorträgen und Workshops steht das
+offene, gemeinschaftliche Miteinander im Mittelpunkt. Der Verein ist dem Chaos Computer Club (CCC)
+nahestehend und teilt dessen Grundsätze: Informationsfreiheit, öffentlicher Zugang zu Computern
+und Netzen sowie ein verantwortungsvoller Umgang mit Daten.
+
+🔍 https://2026.mrmcd.net
+
+<b>Funktionen</b>
+* Tagesüberblick über alle Programmpunkte
+* Detaillierte Beschreibung von Veranstaltungen lesen
+* Veranstaltungen in persönlicher Favoritenliste verwalten
+* Alle Veranstaltungen durchsuchen und filtern
+* Favoritenliste exportieren
+* Alarm für Veranstaltungen setzen
+* Veranstaltungen in Kalender eintragen
+* Beschreibung und Link zu Veranstaltungen mit anderen teilen
+* Automatische, regelmäßige Aktualisierung des Programms
+* Programmänderungen einsehen
+* Bewertungen und Kommentare für Vorträge und Workshops hinterlassen
+* Integration mit dem Engelsystem-Projekt https://engel.mrmcd.net - Online-Tool für Helfer- und Schichtplanung auf großen Events
+* Integration mit Chaosflix https://github.com/NiciDieNase/chaosflix - Android App für https://media.ccc.de, teile Fahrplan-Favoriten mit Chaosflix und importiere sie als Bookmarks (RIP NiciDieNase)
+
+🔤 <b>Unterstützte Sprachen</b>
+(Programmtexte ausgenommen)
+* Dänisch
+* Deutsch
+* Deutsch, Österreich
+* Englisch
+* Finnisch
+* Französisch
+* Italienisch
+* Japanisch
+* Litauisch
+* Niederländisch
+* Polnisch
+* Portugiesisch, Brasilien
+* Portugiesisch, Portugal
+* Russisch
+* Spanisch
+* Schwedisch
+* Türkisch
+
+🤝 Du kannst mithelfen, die App zu übersetzen. Siehe Link hier.
+
+💡 Inhaltliche Fragen zum Programm kann nur das MRMCD-Team
+beantworten. Diese App stellt lediglich die Programmpunkte zur Verfügung.
+
+💣 Fehlerberichte sind herzlich willkommen, aber achte darauf, dass
+du erklärst, wie man den Fehler reproduzieren kann. Der Issue-Tracker
+findet sich hier: https://github.com/EventFahrplan/EventFahrplan/issues
+
+🏆 Die App basiert auf der <b>EventFahrplan-App</b>
+https://f-droid.org/packages/info.metadude.android.congress.schedule/
+für den Kongress des Chaos Computer Clubs. Der Quellcode der Anwendung ist auf GitHub
+https://github.com/johnjohndoe/CampFahrplan/tree/mrmcd-2026 zu finden.
+
+🎨 MRMCD-Design von Leif Niemczik, https://leifs.website
