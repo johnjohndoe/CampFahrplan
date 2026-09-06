@@ -27,7 +27,7 @@
   * Share a website link to a session with others
   * Keep track of program changes
   * Automatic program updates (configurable in settings)
-  * Integration with the Zengelsystem project https://engel.datenspuren.de - Online tool for coordinating helpers and shifts on large events
+  * Integration with the Engelsystem project https://engel.datenspuren.de - Online tool for coordinating helpers and shifts on large events
   * Integration with Chaosflix https://github.com/NiciDieNase/chaosflix - Android App for https://media.ccc.de, share schedule favorites with Chaosflix and import them as bookmarks
 
   <b>🔤 Supported languages</b>
