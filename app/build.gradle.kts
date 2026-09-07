@@ -158,8 +158,6 @@ android {
             buildConfigField("String", "SERVER_BACKEND_TYPE", """"pretalx"""")
             buildConfigField("boolean", "ENABLE_CHAOSFLIX_EXPORT", "true")
             buildConfigField("boolean", "ENABLE_ENGELSYSTEM_SHIFTS", "true")
-            resValue("string", "engelsystem_alias", "Zengelsystem")
-            resValue("string", "engelsystem_shifts_alias", "Zengelshifts")
             resValue("string", "preference_hint_engelsystem_json_export_url", """"https://engel.datenspuren.de/shifts-json-export?key=YOUR_KEY"""")
             buildConfigField("String", "SOCIAL_MEDIA_HASHTAGS_HANDLES", """"#datenspuren #datenspuren2026 #ds26 #fahrplan @datenspuren@c3d2.social @datenspuren"""")
             buildConfigField("String", "TRACE_DROID_EMAIL_ADDRESS", """"tobias.preuss+datenspuren@googlemail.com"""")

@@ -27,7 +27,7 @@
   * Link zu Veranstaltungen mit anderen teilen
   * Programmänderungen einsehen
   * Veranstaltungen bewerten
-  * Integration mit dem Zengelsystem-Projekt https://engel.datenspuren.de - Online-Tool für Helfer- und Schichtplanung auf großen Events
+  * Integration mit dem Engelsystem-Projekt https://engel.datenspuren.de - Online-Tool für Helfer- und Schichtplanung auf großen Events
   * Integration mit Chaosflix https://github.com/NiciDieNase/chaosflix - Android App für https://media.ccc.de, teile Fahrplan-Favoriten mit Chaosflix und importiere sie als Bookmarks
 
   🔤 <b>Unterstützte Sprachen</b>
