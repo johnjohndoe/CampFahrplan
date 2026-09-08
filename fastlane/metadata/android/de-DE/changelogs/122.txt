@@ -1,0 +1,3 @@
+* App-Seite bei F-Droid mit Texten und Bildern vervollständigt.
+* URL zu Videoaufzeichnungen der Teilen-Nachricht hinzufügt.
+* Anpassung von Social-Media-Tags und Handles im Einstellungsbildschirm ist jetzt möglich.

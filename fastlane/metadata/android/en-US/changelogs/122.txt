@@ -1,0 +1,3 @@
+* Completed F-Droid app page with texts and images.
+* Add video recordings URL to share message.
+* Allow to customize social media tags and handles in settings screen.
