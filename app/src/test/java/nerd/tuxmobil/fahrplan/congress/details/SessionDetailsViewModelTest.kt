@@ -173,7 +173,7 @@ class SessionDetailsViewModelTest {
         fun `OnShareClick emits ShareSimple effect with formatted session`() = runTest {
             val repository = createRepository()
             val fakeSessionFormat = mock<SimpleSessionFormat> {
-                on { format(any(), anyOrNull(), any()) } doReturn "An example session"
+                on { format(any(), anyOrNull(), any(), any(), any()) } doReturn "An example session"
             }
             val viewModel = createViewModel(repository, simpleSessionFormat = fakeSessionFormat)
             viewModel.onViewEvent(OnShareClick)
@@ -642,6 +642,7 @@ class SessionDetailsViewModelTest {
         settingsStream: Flow<Settings> = emptyFlow(),
     ) = mock<SettingsRepository> {
         on { this.settingsStream } doReturn settingsStream
+        on { getSocialMediaHashtagsHandles() } doReturn ""
     }
 
     private fun createViewModel(

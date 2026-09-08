@@ -9,7 +9,7 @@ This list is for your preparation. Step 3 guides you through where to enter the 
 
 - Schedule URL which provides Frab compatible XML or JSON
 - Session URL template, e.g. `https://awesome-event.com/2021/events/%1$s.html`
-- Server backend type, one of: `pentabarf`, `frab`, `pretalx`
+- Server backend type, one of: `pentabarf`, `frab`, `pretalx`, `wafer`, `openki`
 - Google Play URL, e.g. `https://play.google.com/store/apps/details?id=com.awesome.event.schedule`
 - F-Droid URL, e.g. `https://f-droid.org/packages/com.awesome.event.schedule`
 - Event URL, e.g. `https://awesome-event.com/2021`
@@ -90,7 +90,7 @@ associated [README](../assets/empty-states/README.md).
 The following options can be enabled via a `buildConfigField` and configured in *app/build.gradle.kts* as needed.
 
 - Event postal address for easy map navigation via `EVENT_POSTAL_ADDRESS`
-- Social media hashtags/handles for the event via `SOCIAL_MEDIA_HASHTAGS_HANDLES`
+- Social media hashtags/handles for the event via `SOCIAL_MEDIA_HASHTAGS_HANDLES`, users can override this value in the app's settings
 - Alternative schedule URL via `ENABLE_ALTERNATIVE_SCHEDULE_URL`
 - c3nav integration via `C3NAV_URL`
 - Chaosflix export via `ENABLE_CHAOSFLIX_EXPORT`
@@ -100,6 +100,8 @@ The following options can be enabled via a `buildConfigField` and configured in 
   - Customize Engelsystem shifts JSON export URL hint via `preference_hint_engelsystem_json_export_url`
 - Feedback system via `SCHEDULE_FEEDBACK_URL`
 - FOSDEM room status via `ENABLE_FOSDEM_ROOM_STATUS`, `FOSDEM_ROOM_STATES_URL`
+- Live streams URL via `LIVE_STREAMS_URL`, inserted when sharing a single session
+- Video recording URL via `VIDEO_RECORDINGS_URL`, inserted when sharing a single session
 
 ## 5. Optional engagements
 
