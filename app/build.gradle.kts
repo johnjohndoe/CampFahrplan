@@ -166,6 +166,7 @@ android {
             buildConfigField("String", "SOCIAL_MEDIA_HASHTAGS_HANDLES", """"#fediday #fediday26 #fedi #fediverse #fahrplan @berlinfediday@berlin.social"""")
             buildConfigField("String", "TRACE_DROID_EMAIL_ADDRESS", """"tobias.preuss+fediday@googlemail.com"""")
             buildConfigField("String", "SCHEDULE_FEEDBACK_URL", """""""")
+            buildConfigField("String", "VIDEO_RECORDINGS_URL", """"📼 https://fair.tube/c/fediday/videos"""")
         }
     }
 
