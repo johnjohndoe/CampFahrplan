@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">FIfFKon 2026</string>
+    <string name="app_hardcoded_subtitle">October 30 – November 1, 2026, Theater im Delphi Berlin</string>
+    <string name="conference_name" translatable="false">FIfFKon42</string>
+    <string name="copyright_logo">
+        FIfFKon42 logo: FIfF e.V.
+    </string>
+    <string name="about_logo_content_description">
+        Round FIfFKon42 logo with a dove and the number 42 drawn as white circuit traces in front of flames on a blue background.
+    </string>
+</resources>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorPrimary">#c4a804</color>
+    <color name="colorPrimaryDark">#DEBD04</color>
+    <color name="colorAccent">#cb0c02</color>
+    <color name="color_accent_inverted">#c4a804</color>
+    <color name="background_primary">#fffaeb</color>
+
+    <!-- Schedule changes -->
+    <color name="schedule_change_new_on_light">#1C7320</color>
+
+    <!-- Default state -->
+    <color name="track_background_default">#bdbdbd</color>
+    <color name="track_background_default_kultur">#ff8a65</color>
+    <color name="track_background_default_pause">#d7ccc8</color>
+    <color name="track_background_default_programm">#9fa8da</color>
+
+    <!-- Highlight state -->
+    <color name="track_background_highlight">#eeeeee</color>
+    <color name="track_background_highlight_kultur">#ffab91</color>
+    <color name="track_background_highlight_pause">#efebe9</color>
+    <color name="track_background_highlight_programm">#c5cae9</color>
+
+</resources>

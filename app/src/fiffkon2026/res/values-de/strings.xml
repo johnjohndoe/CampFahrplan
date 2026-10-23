@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">FIfFKon 2026</string>
+    <string name="app_hardcoded_subtitle">30.10.–01.11.2026, Theater im Delphi Berlin</string>
+    <string name="copyright_logo">
+        FIfFKon42-Logo: FIfF e.V.
+    </string>
+    <string name="about_logo_content_description">
+        Rundes FIfFKon42-Logo mit einer Taube und der Zahl 42 als weiße Leiterbahnen vor Flammen auf blauem Hintergrund.
+    </string>
+</resources>
