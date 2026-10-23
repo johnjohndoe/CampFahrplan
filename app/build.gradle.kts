@@ -99,6 +99,7 @@ android {
     signingConfigs {
         create("cccamp2023")
         create("ccc39c3")
+        create("fiffkon2026")
     }
 
     val defaultDimension = "default"
@@ -151,6 +152,23 @@ android {
             buildConfigField("String", "TRACE_DROID_EMAIL_ADDRESS", """"tobias.preuss+39c3@googlemail.com"""")
             buildConfigField("String", "SCHEDULE_FEEDBACK_URL", """""""")
             buildConfigField("String", "VIDEO_RECORDINGS_URL", """"📼 https://media.ccc.de/c/39c3"""")
+        }
+        create("fiffkon2026") {
+            dimension = defaultDimension
+            applicationId = "info.metadude.android.fiffkon.schedule"
+            versionName = "${defaultConfig.versionName}-FIfFKon-Edition"
+            buildConfigField("String", "GOOGLE_PLAY_URL", """"https://play.google.com/store/apps/details?id=info.metadude.android.fiffkon.schedule"""")
+            buildConfigField("String", "F_DROID_URL", """"https://f-droid.org/packages/info.metadude.android.fiffkon.schedule"""")
+            buildConfigField("String", "SCHEDULE_URL", """"https://fahrplan.2026.fiffkon.de/fiffkon26/schedule/export/schedule.xml"""")
+            buildConfigField("String", "SCHEDULE_FILE_FORMAT", """"schedule_v1_xml"""")
+            buildConfigField("String", "EVENT_URL", """"https://fahrplan.2026.fiffkon.de/fiffkon26/talk/%s/"""")
+            buildConfigField("String", "EVENT_WEBSITE_URL", """"https://2026.fiffkon.de"""")
+            buildConfigField("String", "EVENT_POSTAL_ADDRESS", """"Gustav-Adolf-Straße 2, 13086 Berlin"""")
+            buildConfigField("String", "SERVER_BACKEND_TYPE", """"pretalx"""")
+            buildConfigField("String", "SOCIAL_MEDIA_HASHTAGS_HANDLES", """"#FIfFKon42 #panik #polykrise #fahrplan @fiff_de@mastodon.bits-und-baeume.org"""")
+            buildConfigField("String", "TRACE_DROID_EMAIL_ADDRESS", """"tobias.preuss+fiffkon@googlemail.com"""")
+            buildConfigField("String", "SCHEDULE_FEEDBACK_URL", """""""")
+            buildConfigField("String", "LIVE_STREAMS_URL", """"📺 https://streaming.media.ccc.de/fiffkon42/"""")
         }
     }
 
