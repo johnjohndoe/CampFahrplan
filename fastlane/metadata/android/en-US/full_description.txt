@@ -1,0 +1,68 @@
+  Program for the FIfFKon42 conference
+
+  The Forum of Computer Scientists for Peace and Social Responsibility (FIfF)
+  invites you to FIfFKon42 under the motto "Keine Panik! Resilienz in der
+  Polykrise" (Don't panic! Resilience in the polycrisis). The conference takes
+  place from 30 October to 1 November 2026 at Theater im Delphi in Berlin.
+
+  42 years after the founding of FIfF, it is more urgent than ever to stay calm
+  and to discuss together, thoughtfully, ways out of the crises and how to deal
+  with them – and to leave the comfort zone while doing so.
+
+  Coffeehouse-style seating invites you to discuss the theses and questions
+  raised by the speakers further in small groups. It will be a conference in
+  which everyone gets a say.
+
+  https://2026.fiffkon.de
+
+  <b>Features</b>
+  * View program by day and rooms (side by side)
+  * Custom grid layout for smartphones (try landscape mode 🙃) and tablets
+  * Read detailed descriptions (speaker names, start time, room name, links, ...) of sessions
+  * Search and filter through all sessions
+  * Add sessions to favorites list
+  * Export favorites list
+  * Setup alarms for individual sessions
+  * Add sessions to your personal calendar
+  * Share a website link to a session with others
+  * Keep track of program changes
+  * Automatic program updates (configurable in settings)
+
+  <b>🔤 Supported languages</b>
+  (Session descriptions excluded)
+  * Danish
+  * Dutch
+  * English
+  * Finnish
+  * French
+  * German
+  * German (Austria)
+  * Italian
+  * Japanese
+  * Lithuanian
+  * Polish
+  * Portuguese (Brazil)
+  * Portuguese (Portugal)
+  * Russian
+  * Spanish
+  * Swedish
+  * Turkish
+
+  🤝 You can help translate the app. See the link here.
+
+  💡 Questions regarding the content can only be answered by the
+  FIfFKon conference content team. This app simply offers a
+  way to consume and personalize the conference schedule.
+
+  💣 Bug reports are very welcome. It would be awesome if you
+  can describe how to reproduce the particular error in the
+  issue tracker at https://github.com/EventFahrplan/EventFahrplan/issues.
+
+  🏆 The app is based on the EventFahrplan app
+  which was initially built for the camp and annual congress of
+  the Chaos Computer Club. The source code of the app is publicly
+  available on GitHub at:
+  https://github.com/johnjohndoe/CampFahrplan/tree/fiffkon-2026.
+
+  🎨 The FIfFKon42 logo is copyrighted by FIfF e.V.
+

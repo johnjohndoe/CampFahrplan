@@ -1,0 +1,62 @@
+  Programm zur FIfFKon42
+
+  Das Forum InformatikerInnen für Frieden und gesellschaftliche Verantwortung
+  (FIfF) lädt vom 30. Oktober bis 1. November 2026 zur FIfFKon42 unter dem
+  Motto "Keine Panik! Resilienz in der Polykrise" ins Theater im Delphi Berlin ein.
+
+  42 Jahre nach Gründung des FIfF ist es dringender denn je, Ruhe zu bewahren,
+  besonnen und gemeinsam über Auswege aus den Krisen und den Umgang mit ihnen
+  zu diskutieren – und dabei auch die Komfortzone zu verlassen.
+
+  Eine Kaffeehaus-Bestuhlung lädt ein, die von den Vortragenden entwickelten
+  Thesen und Fragen in Kleingruppen weiter zu diskutieren. Es wird also eine
+  Konferenz, in der Jede:r zu Wort kommt.
+
+  https://2026.fiffkon.de
+
+  <b>Funktionen</b>
+  * Tagesüberblick über alle Programmpunkte
+  * Beschreibung von Veranstaltungen lesen
+  * Veranstaltungen in persönlicher Favoritenliste verwalten
+  * Alle Veranstaltungen durchsuchen und filtern
+  * Favoritenliste exportieren
+  * Alarm für Veranstaltungen setzen
+  * Veranstaltungen in Kalender eintragen
+  * Link zu Veranstaltungen mit anderen teilen
+  * Programmänderungen einsehen
+
+  🔤 <b>Unterstützte Sprachen</b>
+  (Programmtexte ausgenommen)
+  * Dänisch
+  * Deutsch
+  * Deutsch, Österreich
+  * Englisch
+  * Finnisch
+  * Französisch
+  * Italienisch
+  * Japanisch
+  * Litauisch
+  * Niederländisch
+  * Polnisch
+  * Portugiesisch, Brasilien
+  * Portugiesisch, Portugal
+  * Russisch
+  * Spanisch
+  * Schwedisch
+  * Türkisch
+
+  🤝 Du kannst mithelfen, die App zu übersetzen. Siehe Link hier.
+
+  💡 Inhaltliche Fragen zum Programm kann nur das FIfFKon-Team
+  beantworten. Diese App stellt lediglich die Programmpunkte zur Verfügung.
+
+  💣 Fehlerberichte sind herzlich willkommen, aber achte darauf, dass
+  du erklärst, wie man den Fehler reproduzieren kann. Der Issue-Tracker
+  findet sich hier: https://github.com/EventFahrplan/EventFahrplan/issues
+
+  🏆 Die App basiert auf der <b>EventFahrplan-App</b>
+  https://f-droid.org/packages/info.metadude.android.congress.schedule/
+  für den Kongress des Chaos Computer Clubs. Der Quellcode der Anwendung ist auf GitHub
+  https://github.com/johnjohndoe/CampFahrplan/tree/fiffkon-2026 zu finden.
+
+  🎨 FIfFKon42-Logo: FIfF e.V.
