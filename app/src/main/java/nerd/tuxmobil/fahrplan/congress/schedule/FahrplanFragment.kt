@@ -150,6 +150,7 @@ class FahrplanFragment : Fragment(), MenuProvider {
     private val renderedAlarmState = RenderedAlarmState()
 
     private var currentDayIndex = -1
+    private var hasMultipleRooms = true
 
     override fun onAttach(context: Context) {
         super.onAttach(context)
@@ -382,6 +383,9 @@ class FahrplanFragment : Fragment(), MenuProvider {
     }
 
     private fun updateHorizontalScrollingProgressLine(scrollX: Int) {
+        if (!hasMultipleRooms) {
+            return
+        }
         val roomNameView = requireView().requireViewByIdCompat<LinearLayout>(R.id.roomNameLandscape)
         val horizontalScrollView = requireView().requireViewByIdCompat<HorizontalSnapScrollView>(R.id.horizScroller)
         val lineView = requireView().requireViewByIdCompat<View>(R.id.horizontalScrollingProgressLine)
@@ -405,7 +409,11 @@ class FahrplanFragment : Fragment(), MenuProvider {
 
     private fun updateHorizontalScrollingProgressLine(visible: Boolean) {
         val lineView = requireView().requireViewByIdCompat<View>(R.id.horizontalScrollingProgressLine)
-        lineView.isInvisible = !visible
+        if (hasMultipleRooms) {
+            lineView.isInvisible = !visible
+        } else {
+            lineView.isVisible = false
+        }
     }
 
     /**
@@ -418,6 +426,10 @@ class FahrplanFragment : Fragment(), MenuProvider {
         horizontalScroller.scrollTo(0, 0)
         val roomCount = scheduleData.roomCount
         horizontalScroller.setRoomsCount(roomCount)
+
+        hasMultipleRooms = roomCount > 1
+        layoutRoot.requireViewByIdCompat<LinearLayout>(R.id.roomNameLandscape).isVisible = hasMultipleRooms
+        layoutRoot.requireViewByIdCompat<View>(R.id.horizontalScrollingProgressLine).isVisible = hasMultipleRooms
 
         // Clear the room hash cache when the day changes to ensure fresh data is loaded
         // fixes https://github.com/EventFahrplan/EventFahrplan/issues/767
