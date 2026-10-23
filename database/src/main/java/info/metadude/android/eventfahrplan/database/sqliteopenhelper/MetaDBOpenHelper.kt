@@ -15,7 +15,6 @@ import info.metadude.android.eventfahrplan.database.contract.FahrplanContract.Me
 import info.metadude.android.eventfahrplan.database.contract.FahrplanContract.MetasTable.Defaults.ETAG_DEFAULT
 import info.metadude.android.eventfahrplan.database.contract.FahrplanContract.MetasTable.NAME
 import info.metadude.android.eventfahrplan.database.extensions.addTextColumn
-import info.metadude.android.eventfahrplan.database.extensions.columnExists
 import info.metadude.android.eventfahrplan.database.extensions.dropTableIfExist
 
 internal class MetaDBOpenHelper(context: Context) : SQLiteOpenHelper(
@@ -26,7 +25,7 @@ internal class MetaDBOpenHelper(context: Context) : SQLiteOpenHelper(
 ) {
 
     private companion object {
-        const val DATABASE_VERSION = 12
+        const val DATABASE_VERSION = 5
         const val DATABASE_NAME = "meta"
 
         // language=sql
@@ -60,40 +59,7 @@ internal class MetaDBOpenHelper(context: Context) : SQLiteOpenHelper(
             onCreate(this)
         }
         if (oldVersion < 5) {
-            // Clear database from 35C3 & Camp 2019.
-            dropTableIfExist(NAME)
-            onCreate(this)
-        }
-        if (oldVersion < 7) {
-            // Clear database from rC3 12/2020.
-            dropTableIfExist(NAME)
-            onCreate(this)
-        }
-        if (oldVersion < 8) {
-            // Clear database from rC3 NOWHERE 12/2021 & 36C3 2019.
-            dropTableIfExist(NAME)
-            onCreate(this)
-        }
-        if (oldVersion < 9) {
-            if (!columnExists(NAME, SCHEDULE_LAST_MODIFIED)) {
-                addTextColumn(SCHEDULE_LAST_MODIFIED, default = "")
-            }
-        }
-        if (oldVersion < 10) {
-            // Clear database from Camp 2023 & 37C3 2023.
-            dropTableIfExist(NAME)
-            onCreate(this)
-        }
-        if (oldVersion < 11) {
-            if (!columnExists(NAME, SCHEDULE_GENERATOR_NAME)) {
-                addTextColumn(SCHEDULE_GENERATOR_NAME, default = null)
-            }
-            if (!columnExists(NAME, SCHEDULE_GENERATOR_VERSION)) {
-                addTextColumn(SCHEDULE_GENERATOR_VERSION, default = null)
-            }
-        }
-        if (oldVersion < 12) {
-            // Clear database from 38C3 2024.
+            // Clear database from 35C3 & Camp 2019 & FIfFKon 2018.
             dropTableIfExist(NAME)
             onCreate(this)
         }

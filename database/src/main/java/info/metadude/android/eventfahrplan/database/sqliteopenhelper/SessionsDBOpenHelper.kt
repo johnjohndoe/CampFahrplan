@@ -96,7 +96,6 @@ import info.metadude.android.eventfahrplan.database.contract.FahrplanContract.St
 import info.metadude.android.eventfahrplan.database.contract.FahrplanContract.StatisticsView.Columns.URL_PRESENT
 import info.metadude.android.eventfahrplan.database.extensions.addIntegerColumn
 import info.metadude.android.eventfahrplan.database.extensions.addTextColumn
-import info.metadude.android.eventfahrplan.database.extensions.columnExists
 import info.metadude.android.eventfahrplan.database.extensions.dropTableIfExist
 import info.metadude.android.eventfahrplan.database.extensions.dropViewIfExist
 
@@ -108,7 +107,7 @@ internal class SessionsDBOpenHelper(context: Context) : SQLiteOpenHelper(
 ) {
 
     private companion object {
-        const val DATABASE_VERSION = 19
+        const val DATABASE_VERSION = 9
         const val DATABASE_NAME = "lectures" // Keep table name to avoid database migration.
 
         // language=sql
@@ -259,61 +258,11 @@ internal class SessionsDBOpenHelper(context: Context) : SQLiteOpenHelper(
             onCreate(this)
         }
         if (oldVersion < 9) {
-            // Clear database from 35C3 & Camp 2019.
-            dropTableIfExist(SessionsTable.NAME)
-            onCreate(this)
-        }
-        if (oldVersion < 10 && newVersion >= 10) {
-            execSQL(SESSION_BY_NOTIFICATION_ID_TABLE_CREATE)
-        }
-        if (oldVersion < 11 && newVersion >= 11) {
-            if (!columnExists(SessionsTable.NAME, TIME_ZONE_OFFSET)) {
-                addIntegerColumn(TIME_ZONE_OFFSET, default = null)
-            }
-        }
-        if (oldVersion < 12) {
-            // Clear database from rC3 12/2020.
-            dropTableIfExist(SessionsTable.NAME)
-            dropTableIfExist(SessionByNotificationIdTable.NAME)
-            onCreate(this)
-        }
-        if (oldVersion < 13) {
-            // Clear database from rC3 NOWHERE 12/2021 & 36C3 2019.
-            dropTableIfExist(SessionsTable.NAME)
-            dropTableIfExist(SessionByNotificationIdTable.NAME)
-            onCreate(this)
-        }
-        if (oldVersion < 14) {
-            if (!columnExists(SessionsTable.NAME, ROOM_IDENTIFIER)) {
-                addTextColumn(ROOM_IDENTIFIER, default = "")
-            }
-        }
-        if (oldVersion < 15) {
-            if (!columnExists(SessionsTable.NAME, FEEDBACK_URL)) {
-                addTextColumn(FEEDBACK_URL, default = null)
-            }
-        }
-        if (oldVersion < 16) {
-            execSQL(SCHEDULE_STATISTIC_VIEW_CREATE)
-        }
-        if (oldVersion < 17) {
-            // Clear database from Camp 2023 & 37C3 2023.
+            // Clear database from 35C3 & Camp 2019 &  & FIfFKon 2018.
             dropTableIfExist(SessionsTable.NAME)
             dropTableIfExist(SessionByNotificationIdTable.NAME)
             dropViewIfExist(StatisticsView.NAME)
             onCreate(this)
-        }
-        if (oldVersion < 18) {
-            // Clear database from 38C3 2024.
-            dropTableIfExist(SessionsTable.NAME)
-            dropTableIfExist(SessionByNotificationIdTable.NAME)
-            dropViewIfExist(StatisticsView.NAME)
-            onCreate(this)
-        }
-        if (oldVersion < 19) {
-            if (!columnExists(SessionsTable.NAME, SESSION_GUID)) {
-                addTextColumn(SESSION_GUID, default = null)
-            }
         }
     }
 
